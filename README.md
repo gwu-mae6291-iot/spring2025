@@ -1,2 +1,2 @@
-# Spring2025
+# MAE6291 Spring2025
 Course website for MAE6291: Internet of Things for Engineers
