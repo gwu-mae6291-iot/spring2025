@@ -1,0 +1,69 @@
+---
+title: "Instructor"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+---
+
+:::{.callout-important}
+**Referencing the content on this webpage:**
+
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+:::
+
+## Dr. Kartik Bulusu (Instructor)
+<table>
+  <tr>
+    <td width="70%">
+      
+      Dr. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC. 
+      
+      He designed taught a cross-disciplinary course titled, Internet of Things (IoT) and Edge Computing with applications in cyber-physical systems and speech processing. 
+      
+      In addition, he developed courses for first year engineering students on the engineering applications of Raspberry Pi, Python programming and mobile App development inspired by social innovation potential during the COVID-19 pandemic. 
+      
+      His research interests span the areas of human health and sustainable energy with focus on mechanics of biological fluids, low-cost energy technologies and applications of wavelet transforms. His current research work on biofluid dynamics of the cardiovasculature, rheology of biological fluids and applications of wavelet transforms has been supported by NSF and the Center for Biomimetics and Bioinspired Engineering (CBBE), GWU.  
+      
+      He developed a wavelet transform-based computational code (PIVlet) for the analysis of complex vortical patterns encountered in arterial blood flow. He has extensive knowledge of experimental fluid mechanics and non-invasive measurement techniques such as laser Doppler velocimetry (LDV), particle image velocimetry (PIV), schlieren imagery, magnetic resonance velocimetry (MRV) and molecular tagging velocimetry (MTV). Dr. Bulusu was recognized with the ASME Best Paper Award by the Advanced Energy Systems Division (AESD) Heat Pump Technical Committee and William and Louise Corcoron Award for contributing to the intellectual and social life of the School of Engineering and Applied Science, GWU.
+    </td>
+
+    <td width="30%">
+      <img src="images/20160728facultybioshots_SEAS_GWU_40.jpg" alt="instructor" style="object-fit:contain width:400px;height:400px; margin-right: 10px;" />
+      <!-- <small>Dr. Kartik Bulusu</small><br> -->
+      **Campus Address:** SEH 3640 
+
+      **Email:** bulusu at email dot gwu dot edu
+    </td>
+  </tr>
+</table>
+
+
+
+<!-- 
+### Instructor contacts
+<p>Campus Address: SEH 3640</p>
+<p>E-mail: bulusu at gwu dot edu</p>
+<p>Office hours: On-demand (please reach out via email or Slack!)</p>
+<p>Location: Blackboard Collaborate Course Room</p> -->
+
+<!-- <br><br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</small></small></small></small></p>
+</footer> -->

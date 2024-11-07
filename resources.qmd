@@ -1,0 +1,135 @@
+---
+title: "Resources"
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!--- Example of card -->
+<!-- Tip: use bg-* and text-* utilities to style the card -->
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Report templates</div>
+<div class="card-body">
+<h4 class="card-title">Guest Lecture Report</h4>
+<p>Download: <a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">One-page Guest Lecture Summary Template</a></p> 
+<h4 class="card-title">ACM Conference Paper Template</h4>
+<p>Download: <a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Paper Review / Report</a></p> 
+<h4 class="card-title">Midterm Project Proposal</h4>
+<p>Download: <a href="Downloads/Midterm_Project_Proposal_CS4907.docx" style="color:red;" target="_blank">Midterm Project Proposal</a></p> 
+<p>Source: <a href="https://www.smartsheet.com/" style="color:blue;" target="_blank">SmartSheet</a></p>
+<p>Reference: <a href="https://www.fool.com/the-ascent/small-business/project-management/articles/project-proposal/" style="color:blue;" target="_blank">7 Steps to Writing the Perfect Project Proposal</a></p>
+</div>
+</div>
+
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Graphics and data visualization libraries</div>
+<div class="card-body">
+<h4 class="card-title">Free or Open Source</h4>
+<p>Plotly: <a href="https://plotly.com/javascript/" style="color:blue;" target="_blank">https://plotly.com/javascript/</a></p> 
+<p>stackgl: <a href="http://stack.gl" style="color:blue;" target="_blank">http://stack.gl</a></p>
+<!-- <p>Reference: <a href="https://www.fool.com/the-ascent/small-business/project-management/articles/project-proposal/" style="color:blue;" target="_blank">7 Steps to Writing the Perfect Project Proposal</a></p> -->
+</div>
+</div>
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Ribbit Network</div>
+<div class="card-body">
+<h4 class="card-title">A global network of open-source, low-cost CO2 concentration sensors</h4>
+<p>Ribbit Network <a href="https://www.ribbitnetwork.org" style="color:blue;" target="_blank">Click here to access</a></p>
+<p>Ribbit: Build your own frog sensor <a href="https://github.com/Ribbit-Network/ribbit-network-frog-hardware#build-a-frog" style="color:blue;" target="_blank">Click here to access</a></p>
+</div>
+</div>
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">IoT course hardware resource</div>
+<div class="card-body">
+<h4 class="card-title">Sensor Kits</h4>
+<p>Sundounder: <a href="https://www.sunfounder.com/collections/raspberry-pi-kit-for-expert/products/sensor-kit-v2-for-raspberrypi" style="color:blue;" target="_blank">Expert-level Kit</a></p>
+<p>Note: Raspberry Pi 4B were acquired separately.</p>
+</div>
+</div>
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">IoT & Edge Compute video sources</div>
+<div class="card-body">
+<!-- <h4 class="card-title"></h4> --> 
+<h6 class="card-title">Disclaimer: The instructor has no commercial or personal interest in the companies or individual entities in the videos. These videos showcase IoT and Edge Compute examples for general interest.</h6>
+<p>Talking Tech: Zipcar and iPhone <a href="https://www.youtube.com/watch?v=rCO0jFoJ1xY" style="color:blue;" target="_blank">https://www.youtube.com/watch?v=rCO0jFoJ1xY</a></p>
+<p>Combining AI, 5G, And Machine Vision To Transform Fish Farming <a href="https://youtu.be/PzQ_iWKFsxE" style="color:blue;" target="_blank">https://youtu.be/PzQ_iWKFsxE</a></p>  
+<p>What Is the Internet of Things and Why Should You Care? | MIT Sloan <a href="https://www.youtube.com/watch?v=_l75CrN-hSI" style="color:blue;" target="_blank">https://www.youtube.com/watch?v=_l75CrN-hSI</a></p>
+<p>What is Edge computing?  <a href="https://www.youtube.com/watch?v=3hScMLH7B4o&t=6s" style="color:blue;" target="_blank">https://www.youtube.com/watch?v=3hScMLH7B4o&t=6s</a></p>
+</div>
+</div>
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Featured Python programming video sources</div>
+<div class="card-body">
+<!-- <h4 class="card-title"></h4> --> 
+<h6 class="card-title">Disclaimer: The instructor has no commercial or personal interest in the companies or individual entities in the videos. These videos showcase programming paradigms for general interest.</h6>
+<p>Logging in Python: <a href="https://youtu.be/g8nQ90Hk328" style="color:blue;" target="_blank">https://youtu.be/g8nQ90Hk328</a></p>
+<p>Exceptions in Python: <a href="https://youtu.be/nlCKrKGHSSk" style="color:blue;" target="_blank">https://youtu.be/nlCKrKGHSSk</a></p>
+<p>Python Classes and Objects: <a href="https://youtu.be/apACNr7DC_s" style="color:blue;" target="_blank">https://youtu.be/apACNr7DC_s</a></p>  
+<p>Python and Flask - Getting Started with Flask: <a href="https://youtu.be/7M1MaAPWnYg" style="color:blue;" target="_blank">https://youtu.be/7M1MaAPWnYg</a></p>
+</div>
+</div>
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Basic Python programming video sources</div>
+<div class="card-body">
+<!-- <h4 class="card-title"></h4> --> 
+<h6 class="card-title">Disclaimer: The instructor has no commercial or personal interest in the companies or individual entities in the videos. These videos showcase programming paradigms for general interest.</h6>
+<p>What is a programming language ?<a href="https://www.youtube.com/watch?v=EGQh5SZctaE" style="color:blue;" target="_blank">https://www.youtube.com/watch?v=EGQh5SZctaE</a></p>
+<p>Sequences, Selections, and Loops: <a href="https://youtu.be/eSYeHlwDCNA" style="color:blue;" target="_blank">https://youtu.be/eSYeHlwDCNA</a></p>  
+<p>Loops: <a href="https://youtu.be/wxds6MAtUQ0" style="color:blue;" target="_blank">https://youtu.be/wxds6MAtUQ0</a></p>
+<p>for-loop: <a href="https://youtu.be/EfJVnAHiR4s" style="color:blue;" target="_blank">https://youtu.be/EfJVnAHiR4s</a></p>
+</div>
+</div>
+
+<!-- <div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Cayenne-myDevices</div>
+<div class="card-body">
+<h4 class="card-title">The World's first drag and drop IoT builder</h4>
+<p>Cayenne IoT <a href="https://developers.mydevices.com/cayenne/features" style="color:blue;" target="_blank">Click here to access</a></p>
+<p>Note: We will be using an account created for the course.</p>
+</div>
+</div>  --> 
+
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Report templates</div>
+<div class="card-body">
+<h4 class="card-title">Documents</h4>
+<p>NSF-style proposal template: <a href="https://github.com/jeremygibbs/nsf-proposal-latex" style="color:blue;" target="_blank">An NSF proposal template in LaTeX-WTFPL license</a></p>
+</div>
+</div>
+
+<!-- 
+<div class="card text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Presentation templates</div>
+<div class="card-body">
+<h4 class="card-title">Primary card title</h4>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+-->
+
+<!-- <footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</p>
+</footer> -->

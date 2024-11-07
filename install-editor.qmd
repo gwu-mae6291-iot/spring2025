@@ -1,0 +1,169 @@
+---
+title: Installing a remote access software
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+:::{.callout-important}
+**Referencing the content on this webpage:**
+
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, code and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+:::
+
+
+<!-- :::{.callout-important}
+- The workshop is desinged with active learning modules with limited number of hardware components. 
+- You are strongly encouraged to bring your own personal machine or laptop and participate with the [prerequisites](install-editor.qmd) installed.
+ - Follow the instructions provided carefully and complete the required installations needed for this workshop. ([See prerequisites](install-editor.qmd))
+ - Once you finish the **Steps 1, 2 and 3 in the installation instructions** in [prerequisites](install-editor.qmd), fill out the [Pre-workshop survey form](https://tinyurl.com/yrkacfd9). 
+ - **You will be automatically entered into a raffle in the workshop on 10/12/2024 if you complete the installation check-in form.**
+::: -->
+
+# Installing a remote access software: VNC&reg; Viewer
+
+VNC&reg; Viewer is a remote access software application, that facilitates exchange data over the RFB protocol to allow the Viewer to control the Server's screen remotely.
+
+Source: [Wiki](https://en.wikipedia.org/wiki/RealVNC)
+
+<!-- <small>*Running your First Program*</small> -->
+
+ - **How do I install VNC&reg; Viewer?**
+
+Just run the installer on the device you want to control from and follow the instructions, or there’s MSIs for remote deployment under Windows. If you don’t have permission to install VNC® Viewer on desktop platforms, choose the standalone option.
+
+Source: [Real VNC FAQs](https://www.realvnc.com/en/connect/download/viewer/?lai_vid=1jMrlad4GSrl&lai_sr=10-14&lai_sl=l&lai_p=1)
+
+- **How do I control a remote computer?**
+
+If you have a keyboard and mouse in front of you, use them as you would normally. We don't recommed the use of a mobile device for this workshop. However, if you’re on a mobile device, then your touchscreen acts as a mouse trackpad, with gestures mapped to mouse buttons. 
+
+Source: [Real VNC FAQs](https://www.realvnc.com/en/connect/download/viewer/?lai_vid=1jMrlad4GSrl&lai_sr=10-14&lai_sl=l&lai_p=1)
+
+- **Do I need to license the software?**
+No. VNC &reg; Viewer is always free to use. Just accept the EULA the first time you run.
+
+Source: [Real VNC FAQs](https://www.realvnc.com/en/connect/download/viewer/?lai_vid=1jMrlad4GSrl&lai_sr=10-14&lai_sl=l&lai_p=1)
+
+
+<!-- ## *What is an Editor?*
+
+In the world of programming, an editor is more than just a text processor. It's your creative workspace where you bring your code to life. Here are some key aspects of code editors:
+
+- **Text Editing**: At its core, an editor allows you to write, edit, and organize code in various programming languages. It provides features like syntax highlighting, auto-indentation, and code completion to enhance your coding experience.
+
+- **Code Execution**: Some editors, like Jupyter Notebook, not only allow you to write code but also execute it in an interactive and step-by-step manner. This is especially useful for data analysis and experimentation.
+
+- **Extensions and Plugins**: Code editors are highly customizable. You can enhance their functionality by installing extensions or plugins tailored to your needs. For example, you can add Python-specific tools or themes to make your editor visually appealing.
+
+- **Integrated Development Environments (IDEs)**: Some editors, such as Visual Studio Code (VS Code), go beyond text editing and offer a complete integrated development environment with debugging capabilities, version control integration, and more.
+
+- **Collaboration**: Many editors support collaborative coding, allowing multiple programmers to work on the same codebase simultaneously, which is crucial for group projects.
+
+<!-- In your CSCI1010 class, you'll use a combination of Anaconda, Jupyter, and VS Code:
+
+- **Anaconda**: Anaconda is a Python distribution that simplifies package management and environment setup. It's particularly valuable for data science projects, as it comes with a wide array of pre-installed libraries and tools.
+
+- **Jupyter**: Jupyter Notebook is an interactive environment that enables you to create and share documents containing live code, equations, visualizations, and narrative text. It's an excellent choice for data analysis and presenting your findings.
+
+- **VS Code**: Visual Studio Code (VS Code) is a versatile code editor that supports multiple programming languages and offers a rich ecosystem of extensions. Its user-friendly interface and powerful features make it a great choice for general programming tasks. --> 
+
+
+# Installation instructions 
+The following installation instructions are important for this worshop, helping you connect to the hardware provided and execute programs effectively. 
+<!-- will help you throughout this workshop, helping you write, execute, and code effectively. Select the appropriate option for your operating system, follow the installation instructions, and dive into the world of coding with confidence! -->
+
+
+### **Select an option appropriate for your operating system**
+<!-- <div id="steps"></div> -->
+
+#### **MacOS:**
+
+<!-- - **Step 1**: [Install Anaconda for Mac](anaconda-mac.qmd) -->
+
+- **Step 1:** Install Real VNC Viewer for Mac OS 12+
+  - Donwload the installation file **[here](/Downloads/VNC-Viewer-7.12.1-MacOSX-universal.dmg)**
+  - Follow installation instructions **[here](realvnc-mac.qmd)**
+
+- **Step 2:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
+  - Skip this step if you already have Chrome installed on your laptop.
+
+- **Step 3:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
+  - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
+  - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
+
+<!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd) -->
+
+<!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-mac.qmd) -->
+
+#### **Windows:**
+
+<!-- - **Step 1**: [Install Anaconda for Windows](anaconda-windows.qmd) -->
+
+- **Step 1:** Install Real VNC Viewer for Windows 10+
+  - Donwload the installation file **[here](/Downloads/VNC-Viewer-7.12.1-Windows.exe)**
+  - Follow installation instructions **[here](realvnc-windows.qmd)**
+
+- **Step 2:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
+  - Skip this step if you already have Chrome installed on your laptop.
+
+- **Step 3:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
+  - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
+  - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
+
+<!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
+
+
+
+<!-- # Connecting your laptop to the Raspberry Pi using VNC&reg; Viewer
+
+### **Select an option appropriate for your operating system**
+
+#### **MacOS:**
+- **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd)
+
+#### **Windows:**
+
+- **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
+
+
+
+
+<!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-windows.qmd) -->
+
+<!-- Choose the option that best suits your needs and follow the respective installation instructions. -->
+
+<!-- Once you have an editor installed, you can start writing and running your code. Happy coding! -->
+
+<!-- :::{.callout-important}
+- The workshop is desinged with active learning modules with limited number of hardware components. 
+- You are strongly encouraged to bring your own personal machine or laptop and participate with the [prerequisites](install-editor.qmd) installed.
+ - Follow the instructions provided carefully and complete the required installations needed for this workshop. ([See prerequisites](install-editor.qmd))
+ - Once you finish the **Steps 1, 2 and 3 in the installation instructions** in [prerequisites](install-editor.qmd), fill out the [Pre-workshop survey form](https://tinyurl.com/yrkacfd9). 
+ - **You will be automatically entered into a raffle in the workshop on 10/12/2024 if you complete the installation check-in form.**
+::: -->
+
+
+---
+
+<!-- <small><small>*Content on this webpage was partially generated using ChatGPT.*</small></small> -->
+
+<!-- <br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</small></small></small></small></p>
+</footer> -->

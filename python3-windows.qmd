@@ -1,0 +1,95 @@
+---
+title: "Installing Python on Windows"
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+# Installing Python and Jupyter on Windows
+
+In this guide, we will walk you through the process of installing Python on Windows, configuring the user-specific Python bin path, and exporting it in your system environment variables. Additionally, we will install and launch Jupyter Notebook, a popular tool for interactive Python development.
+
+## Step 1: Download and Install Python
+
+1. Visit the official Python website: [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/).
+2. Download the latest version of Python for Windows by clicking on the "**Download Windows installer**" button.
+3. Open the downloaded installer (e.g., `python-X.Y.Z-amd64.exe`), where X.Y.Z represents the Python version, and follow the installation instructions. Make sure to check the box that says "**Add Python X.Y to PATH**."
+
+## Step 2: Verify Python Installation
+
+To ensure that Python is installed correctly, open your Command Prompt and run the following command:
+
+```bash
+python --version
+```
+This command will display the Python version, confirming that it's successfully installed.
+
+## Step 3: Install Jupyter Notebook
+To install Jupyter Notebook, open your Command Prompt and run the following command:
+
+```bash
+pip install jupyter
+```
+This command will download and install Jupyter Notebook, a powerful tool for interactive Python development.
+
+## Step 4: Find the Path to Python Scripts Folder
+To locate the path to the Python scripts folder through the Command Prompt, follow these steps:
+
+1. Open your Command Prompt.
+
+2. Run the following command to find the Python scripts folder:
+```bash
+python -m site --user-site
+```
+
+This command will display the path to your user-specific Python libraries, including the scripts folder.
+
+## Step 5: Configure Python Bin Path
+Now that you have the path to the Python scripts folder, you can set up the Python bin path and add it to your system environment variables. Follow these steps:
+
+1. Open the Start menu and search for "**Environment Variables**."
+
+2. Click on "**Edit the system environment variables**."
+
+3. In the System Properties window, click the "**Environment Variables**" button.
+
+4. Under the "**System Variables**" section, find and select the "**Path**" variable, then click the "**Edit**" button.
+
+5. Click "**New**" and add the path to your Python scripts folder that you obtained in **Step 4**.
+
+6. Click "**OK**" to save the changes.
+
+## Step 6: Launch Jupyter Notebook
+To start Jupyter Notebook, open your Command Prompt and run the following command:
+
+```bash
+jupyter notebook
+```
+
+This command will launch the Jupyter Notebook in your default web browser, allowing you to create and run Python notebooks for interactive coding and data analysis.
+
+Conclusion
+You have successfully installed Python, configured the user-specific Python bin path, and set up your system environment variables on your Windows system. You can now use Jupyter Notebook for interactive coding and data analysis.
+
+Happy coding!
+
+
+<br><br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer>

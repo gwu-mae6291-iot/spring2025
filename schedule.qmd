@@ -1,0 +1,416 @@
+---
+title: "Sample Schedule"
+format: html
+---
+
+Sample class schedule [*week-by-week*]
+
+::: {.callout-warning appearance="simple"}
+**The course schedule below is from Spring 2024 and is subject to changes during the Spring 2025 semester.**
+:::
+
+<!-- ::: {.callout-important appearance="default" title="Final Project Due Date"}
+The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check-out the schedule to learn more about where to [submit all the deliverables](schedule.qmd#final-project).
+::: -->
+
+<style>
+        .thumbnail {
+            width: 100px; 
+            cursor: pointer;
+        }
+
+        #popupContainer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #popupImage {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
+
+<table class="table table-hover w-auto">
+  <colgroup>
+    <col style="width:3%">
+    <col style="width:50%">
+    <col style="width:47%">
+    <!-- <col style="width:32%"> -->
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Topic(s) and readings </th>
+      <th scope="col">$\mu$-LABs and Assignment(s) due</th>
+      <!--- <th scope="col">Column heading</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-secondary">
+      <th scope="row">Week 0 [01/19/2024]</th>
+      <td>
+        <ul>
+          <li>IoT and Edge Computing [The big pictures]</li> 
+          <li>Introduction to Raspberry Pi and Python programming</li> 
+          <li>Course overview, policies and deliverables</li>
+          <!-- <li><a href="Week0.qmd" style="color:red;" target="_blank">Week-0 Notes</a></li> -->
+        </ul>  
+      </td>
+      <td>
+        <ul>
+          <li>Getting familiar with the Raspberry Pi 4B</li>
+          <li>Python programming using Thonny</li> 
+          <li><strong>No HW assigned in this week</strong></li>
+<!--           <li><a href="https://drive.google.com/drive/folders/1nfW_e6UMP8V1tn20zKAe9_b9Ix1DTEUw?usp=sharing" target="_blank">Lab examples</a></li> 
+          <li><a href="https://drive.google.com/drive/folders/14M0NCkRZcFNnOYdubMGOuJn35kvvJhV2?usp=sharing" target="_blank">HW 1 assigned</li> --> 
+        </ul>
+      </td>
+      <td>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+    <tr class="table-secondary">
+      <th scope="row">Week 1 [01/26/2024]</th>
+      <td>
+        <ul>
+          <li>Overview of computing in IoT</li>
+          <li>Differences in Cloud and Fog computing</li>
+          <li>What is Edge Computing and Edge Compute device</li>
+          <li>Guest lecture: **Edge Cloud** by <a href="https://www.seas.gwu.edu/timothy-wood"
+          target="_blank">Prof. Tim Wood</a>, CS Department, GWU. <a href="http://faculty.cs.gwu.edu/timwood/" target="_blank">Director of GW Cloud Systems Lab</a></li>
+          <!-- <li><a href="Week1.qmd" style="color:red;" target="_blank">Week-1 Notes</a></li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Setting up the Edge Lab</li>
+          <li>Understanding the Python installation on the Raspberry Pi</li>
+          <li>Some basic Python programming constructs</li>
+          <li>First steps in Raspberry Pi programming [Blinking LEDs]</li>
+          <li><strong>No HW assigned in this week</strong></li>
+<!--           <li><a href="https://drive.google.com/drive/folders/1nfW_e6UMP8V1tn20zKAe9_b9Ix1DTEUw?usp=sharing" target="_blank">Lab examples</a></li> 
+          <li><a href="https://drive.google.com/drive/folders/14M0NCkRZcFNnOYdubMGOuJn35kvvJhV2?usp=sharing" target="_blank">HW 1 assigned</li>  -->
+        </ul>
+      </td>
+      <td>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+    <tr class="table-secondary">
+      <th scope="row" style="color:black">Week 2 [02/02/2024]</th>
+      <td>
+        <ul>
+          <li style="color:black">Python skelton code for running programs on the Raspberry Pi</li>
+          <li style="color:black">Recap of some programming constructs</li>
+          <li style="color:black">Using Thonny to blink LEDs</li>
+          <li style="color:black">Using bash script to blink LEDs</li>
+          <!-- <li style="color:black"><a href="Week2.qmd" style="color:red;" target="_blank">Week-2 Notes</a></li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li style="color:black">Configuring the GPIO interface on your Raspberry Pi</li>
+          <li style="color:black">In-class Raspberry Pi Lab (Blinking LEDs)</li> 
+          <li style="color:black">Setting up a Python virtual environment [venv] and it's benefits</li>
+          <li style="color:black">Installing Python GPIO packages with pip in [venv]</li>
+          <li style="color:black"><strong>Blinking LEDs on boot [Graded Lab Activity]</strong></li>
+          <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW1: Guest Lecture Summary [Download Template]</a></strong></li> <strong style="color:black">HW1 Assigned: 02/04/2024; HW1 Due: 02/09/2024</strong> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+    <tr class="table-secondary">
+      <th scope="row">Week 3 [02/09/2024]</th>
+      <td>
+        <ul>
+          <li>IoT Architecture and Ecosystem</li>
+          <li>Layers in IoT systems - 3 level  layer model</li>
+          <li>Sensors</li>
+          <li>Sensor types and considerations</li>
+          <li>Understanding Analog and Digital Signals</li>
+          <li>Fundamentals of signal visualization in time and frequency</li>  
+          <li>Guest lecture: **Designing high-confidence embedded systems -- operating systems and real-time**</a> by <a href="https://faculty.cs.gwu.edu/gparmer/"
+          target="_blank">Prof. Gabe Parmer</a>, CS Department, GWU. <a href="https://composite.seas.gwu.edu" target="_blank">Parmer Lab</a></li>     
+          <!-- <li>Guest lecture: <a href="Week3-Parmer-Lecture.qmd" target="_blank">**Designing high-confidence embedded systems -- operating systems and real-time**</a> by <a href="https://faculty.cs.gwu.edu/gparmer/" target="_blank">Prof. Gabe Parmer</a>, CS Department, GWU. <a href="https://composite.seas.gwu.edu" target="_blank">Parmer Lab</a></li>      -->
+          <!-- <li><a href="Spring2023_MidtermProjects.qmd" style="color:red;" target="_blank">Spring 2023 Midterm Project for Review</a></li> -->
+          <!-- <li style="color:black"><a href="Week3.qmd" style="color:red;" target="_blank">Week-3 Notes</a></li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>In-class Raspberry Pi Lab (Ultrasound sensors)</li>
+          <li>Proxmity sensing using Thonny IDE</li>
+<!--           <li>Proxmity sensing using bash script</li>
+ -->      <li style="color:black"><strong>Proxmity sensing on boot [Graded Lab Activity]</strong></li>
+           <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW2.1: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW2.1 Assigned: 02/09/2024; HW2.1 Due: 02/16/2024</strong> -->
+           <!-- <li><strong><a href="Downloads/Midterm_Project_Proposal_CS4907.docx" style="color:red;" target="_blank">HW2.2: Midterm Project Proposal [Download Template]</a></strong></li> <strong>HW2.2 Assigned: 02/09/2024; HW2.2 Due: 02/18/2024</strong> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row">Week 4 [02/16/2024]</th>
+      <td>
+        <ul>
+          <!-- <li>IoT Architecture and Ecosystem</li>
+          <li>Layers in IoT systems - 3 level  layer model</li>
+          <li>Sensors</li>
+          <li>Sensor types and considerations</li>
+          <li>Understanding Analog and Digital Signals</li>
+          <li>Fundamentals of signal visualization in time and frequency</li>       -->
+          <li>Guest lecture: **Anatomy of a real life IoT attack - Side Channel Attack (SCA) Analysis** by <a href="/Lectures_Speakers/Chowdary-bio-Feb162024.pdf"
+          target="_blank">Chowdary  Yanamadala</a>, Technology Strategist <a href="https://arm.com" target="_blank">ARM</a></li>        
+          <!-- <li>Guest lecture: <a href="Week4-Yanamadala-ARM-Lecture.qmd" target="_blank">**Anatomy of a real life IoT attack - Side Channel Attack (SCA) Analysis**</a> by <a href="/Lectures_Speakers/Chowdary-bio-Feb162024.pdf" target="_blank">Chowdary  Yanamadala</a>, Technology Strategist <a href="https://arm.com" target="_blank">ARM</a></li>      -->
+          <li> Discussion of Midterm Projects and setting course for updates and reporting</li>
+          <!-- <li style="color:black"><a href="Week4.qmd" style="color:red;" target="_blank">Week-4 Notes</a></li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>dweet.io - it's like the Twitter of Things <a href="https://dweet.io"target="_blank"> dweet</a></li>
+          <li>Fetching data from dweet</li>
+          <li style="color:black"><strong>dweet an LED - Your first IoT program [Graded Lab Activity]</strong></li>
+          <li style="color:black"><strong>Raspberry Pi messaging with Python scripts [Graded Lab Activity]</strong></li>
+         <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW3: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW3 Assigned: 02/16/2024; HW3 Due: 02/23/2024</strong> -->
+        </ul>
+      </td>
+    </tr>
+    
+<tr class="table-secondary">
+      <th scope="row">Week 5 [02/23/2024]</th>
+      <td>
+        <ul>
+          <li>Guest lecture: **Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications** by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li> 
+          <li>IoT Taxonomy - 5 layer model</li>         
+          <!-- <li>Guest lecture: <a href="Week5-Mohammad-PrattWhitney-Lecture.qmd" target="_blank">**Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications**</a> by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li>  -->
+          <li>IoT Taxonomy - 5 layer model</li>     
+          <li>Service-oriented model of IoT</li>
+          <li> Discussion of Midterm Projects and setting course for updates and reporting</li>
+          <!-- <li style="color:black"><a href="Week5.qmd" style="color:red;" target="_blank">Week-5 Notes</a></li> -->
+
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li style="color:black"><strong>In-class Flask API development [Graded Lab Activity]</strong></li>       
+         <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW4: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW4 Assigned: 02/23/2024; HW4 Due: 03/01/2024</strong> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row">Week 6 [03/01/2024]</th>
+      <td>
+        <ul>
+          <li>Guest lecture: **Empowering IoT and Edge Computing with Design Thinking** by <a href="/Lectures_Speakers/Nuzum-bio-Feb2024.pdf" target="_blank">Scott Nuzum</a>, Senior Leader, <a href="https://www.innovyzusa.com" target="_blank">Innovyz USA</a></li> 
+          <!-- <li>Guest lecture: <a href="Week6-Nuzum-Innovyz-Lecture.qmd" target="_blank">**Empowering IoT and Edge Computing with Design Thinking**</a> by <a href="/Lectures_Speakers/Nuzum-bio-Feb2024.pdf" target="_blank">Scott Nuzum</a>, Senior Leader, <a href="https://www.innovyzusa.com" target="_blank">Innovyz USA</a></ li>  -->
+           <li>Practical Introduction to Image processing for Edge Compute Applications</li>
+            <!-- <li style="color:black"><a href="Week6.qmd" style="color:red;" target="_blank">Week-6 Notes</a></li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>      
+        <li>Practical Introduction to Picamera2 OpenCV libraries in Python on the Raspberry Pi 4B</li>
+        <li>Sobel, Laplacian, Guassian filtering on Raspberry Pi 4B</li>
+        <li>Edge detection using thresholding and Otsu's method on Raspberry Pi 4B</li>
+        <li><strong>In-class Raspberry Pi Lab with PiCamera using OpenCV library [Graded Lab Activity]</strong></li>
+        <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW5: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW5 Assigned: 03/01/2024; HW5 Due: 02/08/2024</strong> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+<tr class="table-secondary">
+      <th scope="row"> Week 7 [03/08/2024]</th>
+      <td colspan="2" style="text-align: center">Midterm Project Presentations and Live Demos due.
+      <!-- <br><strong><a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Midterm project presentation template [Download Template]</a></strong> -->
+      </td> 
+      <!--- <td>Column content</td> -->
+    </tr>
+<tr class="table-secondary">
+      <th scope="row"> [03/11/2024]</th>
+      <td colspan="2" style="text-align: center">Midterm Project Report due.
+      <!-- <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Midterm project report template [Download Template]</a></strong> -->
+      <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
+      </strong></td>
+      <!--- <td>Column content</td> -->
+    </tr>
+<tr class="table-secondary">
+      <th scope="row"> Week 8 [03/11/2024] to [03/16/2024]</th>
+      <td colspan="2" style="text-align: center">Spring Break. No class this week</td> 
+      <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row">Week 9 [03/22/2024]</th>
+      <td>
+        <ul>
+          <li>Guest lecture: **The Science of Predictive Wisdom** by <a href="/Lectures_Speakers/RJS-bio-Mar2024.pdf"
+          target="_blank">Rob Shaughnessy</a>, CEO, <a href="https://psymetis.com"
+          target="_blank">Psymetis Inc.</a></li> 
+            <li> Discussion on Final Projects and setting course for updates and reporting</li>
+            <li>Pending midterm project demos</li> 
+            <li>Understand key differences between Microprocessors and Microcontrollers</li>
+            <li>Introduction to Micropython</li>
+            <!-- <li style="color:black"><a href="Week9.qmd" style="color:red;" target="_blank">Week-9 Notes</a></li> -->
+<!-- <a href="Week9-Shaughnessy-Pysmetis-Lecture.qmd" target="_blank"></a>  -->
+
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Introduction to the ESP32 microcontroller</li>
+          <li>Setting up Micropython interpreter in Thonny IDE </li>
+          <li>Flashing the ESP32 microcontroller</li>
+          <li><strong>In-class lab set-up of ESP32 microcontroller with the Raspberry Pi 4B [Graded Lab Activity]</strong></li>
+           <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW6.1: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW6.1 Assigned: 03/22/2024; HW6.1 Due: 03/29/2024</strong> -->
+           <!-- <li><strong><a href="Downloads/Final_Project_Proposal_CS4907.docx" style="color:red;" target="_blank">HW6.2: Final Project Proposal [Download Template]</a></strong></li> <strong>HW6.2 Assigned: 03/18/2024; HW6.2 Due: 03/25/2024</strong> -->
+           <!-- <br><strong><a href="Downloads/Sample_FinalProjectProposal.pdf" style="color:red;" target="_blank">Sample final project temaplate</a> -->
+      </strong></td>
+        </ul>
+      </td>
+    </tr>    
+
+    <tr class="table-light">
+      <th scope="row">Week 10 [03/29/2024]</th>
+      <td>
+        <ul>
+          <li>Guest lecture: **Introduction to the Internet of Things** by  <a href="/Lectures_Speakers/RemyPottier-bio-March2024.pdf" target="_blank">Remy Pottier</a>, Director of Innovation, <a href="https://arm.com" target="_blank">ARM</a></li>
+          <!-- <li>Guest lecture: <a href="Week10-Pottier-ARM-Lecture.qmd" target="_blank"> **Introduction to the Internet of Things**</a> by  <a href="/Lectures_Speakers/RemyPottier-bio-March2024.pdf" target="_blank">Remy Pottier</a>, Director of Innovation, <a href="https://arm.com" target="_blank">ARM</a></li> -->
+          <li>Review: Set up ESP32 microcontroller and Micropython interpreter</li>
+          <li>Review: Flashing the ESP32 microcontroller</li>
+          <!-- <li style="color:black"><a href="Week10.qmd" style="color:red;" target="_blank">Week-10 Notes</a></li> -->
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li>In-class Raspberry Pi Lab with ESP32</li>
+          <li>Push-botton LEDs with ESP32 and Raspberry Pi 4B</li>
+          <li><strong>Webserver Accesspoint with ESP32 and Raspberry Pi 4B [Graded Lab Activity]</strong></li>
+          <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW7: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW7 Assigned: 03/29/2024; HW7 Due: 04/05/2024</strong> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+    <tr class="table-light">
+      <th scope="row">Week 11 [04/05/2024]</th>
+      <td>
+        <ul>
+          <li>Working with SciPy</li>
+          <li>Practical introduction to Mosquitto MQTT</li>
+          <li>Practical introduction to linear algebra in the Edge compute framework</li>
+          <!-- <li style="color:black"><a href="Week11.qmd" style="color:red;" target="_blank">Week-11 Notes</a></li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><strong>In-class Raspberry Pi Lab - Mosquitto MQTT with the Raspberry Pi 4B [Graded Lab Activity]</strong></li>
+          <li>Data smoothing with Scipy library in Python</li>
+          <li>Examples: Moving average and Savitzky-Golay filters</li>
+<!--           <li>Working with senseHAT data and matplotlib</li>
+          <li>Writing senseHAT data to CSV files</li>
+          <li>Emails alerts from senseHAT data</li>
+          <li><a href="https://drive.google.com/drive/folders/1nfW_e6UMP8V1tn20zKAe9_b9Ix1DTEUw?usp=sharing" target="_blank">Lab examples</a></li> -->
+          <li><strong>No HW announced and nothing is due on 04/12/2024</strong></li>
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row">Week 12 [04/11/2024]</th>
+      <td>
+        <ul>
+          <li>Implementation of MQTT using ThingSpeak</li>
+          <!-- <li style="color:black"><a href="Week12.qmd" style="color:red;" target="_blank">Week-12 Notes</a></li> -->
+<!--           <li>Working with Scikit</li>
+          <li>Working with SciPy</li>
+          <li>Practical introduction to Mosquitto MQTT</li>
+          <li>Practical introduction to linear algebra in the Edge compute framework</li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>In-class Raspberry Pi Lab - Installation of Paho MQTT</li>
+          <li>Demonstration of SenseHat sensor module</li>
+          <li><strong>In-class Raspberry Pi Lab - Implementation of ThingSpeak MQTT with SenseHat[Graded Lab Activity]</strong></li>
+          <li><strong>No HW announced and nothing is due on 04/19/2024</strong></li>
+ <!--          <li>Working with senseHAT data and matplotlib</li>
+          <li>Writing senseHAT data to CSV files</li>
+          <li>Emails alerts from senseHAT data</li>
+          <li><a href="https://drive.google.com/drive/folders/1nfW_e6UMP8V1tn20zKAe9_b9Ix1DTEUw?usp=sharing" target="_blank">Lab examples</a></li>
+          <li>HW 8 due</li> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row">Week 13 [04/19/2024]</th>
+      <td>
+        <ul>
+        <li>Guest lecture: **Post model Edge AI for Fisheries management** by  <a href="/Lectures_Speakers/ChrisRodley-bio-April2024.pdf" target="_blank">Chris Rodley</a>, CEO and Founder, Snap Information Technologies Ltd., <a href="www.snapcore.co" target="_blank">SnapCore</a></li>      
+        <!-- <li>Guest lecture: <a href="Week13-Rodley-SnapCore-Lecture.qmd" target="_blank"> **Post model Edge AI for Fisheries management**</a> by  <a href="/Lectures_Speakers/ChrisRodley-bio-April2024.pdf" target="_blank">Chris Rodley</a>, CEO and Founder, Snap Information Technologies Ltd., <a href="www.snapcore.co" target="_blank">SnapCore</a></li> -->
+          <li>Implementation of MQTT using Paho</li>
+          <!-- <li style="color:black"><a href="Week13.qmd" style="color:red;" target="_blank">Week-13 Notes</a></li> -->
+<!--           <li>Working with Scikit</li>
+          <li>Working with SciPy</li>
+          <li>Practical introduction to Mosquitto MQTT</li>
+          <li>Practical introduction to linear algebra in the Edge compute framework</li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Installation checks for Paho MQTT</li>
+          <li>Demonstration MQTT using Paho-MQTT </li>
+          <li><strong>In-class Raspberry Pi Lab – Publish and Subscribe Messages using Paho MQTT [Graded Lab Activity]</strong></li>
+          <!-- <li><strong>HW8 Assigned: 04/19/2024; HW8 Due: 05/01/2024</strong></li> -->
+ <!--          <li>Working with senseHAT data and matplotlib</li>
+          <li>Writing senseHAT data to CSV files</li>
+          <li>Emails alerts from senseHAT data</li>
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row"> Week 14 [04/26/2024]</th>
+      <td colspan="2" style="text-align: center">Final Project Presentations and Live Demos due.
+      <!-- <br><strong><a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Final project presentation template [Download Template]</a>
+      </strong> -->
+      </td> 
+      <!--- <td>Column content</td> -->
+    </tr>    
+
+<tr class="table-secondary">
+      <th scope="row"> [05/01/2024]</th>
+      <td colspan="2" style="text-align: center">Final Project Report due.
+      <!-- <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Final project report template [Download Template]</a>
+      </strong> -->
+      <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
+      </strong></td>
+      <!--- <td>Column content</td> -->
+    </tr>
+  </tbody>
+</table>
+
+
+
+<!-- <footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</p>
+</footer> -->

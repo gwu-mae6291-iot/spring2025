@@ -1,0 +1,98 @@
+---
+title: "Installing Python on macOS"
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+# Installing Python on macOS
+
+In this guide, we will walk you through the process of installing Python on macOS, configuring the user-specific Python bin path, and exporting it in your `~/.zshrc` file for easy access.
+
+## Step 1: Download and Install Python
+
+1. Visit the official Python website: [https://www.python.org/downloads/macos/](https://www.python.org/downloads/macos/)
+2. Download the latest version of Python for macOS by clicking on the "**Download Python X.Y.Z**" button (replace **X.Y.Z** with the latest version).
+3. Open the downloaded installer and follow the installation instructions. Make sure to check the box that says "**Add Python X.Y to PATH**."
+
+## Step 2: Verify Python Installation
+
+To ensure that Python is installed correctly, open your terminal and run the following command:
+
+```bash
+python3 --version
+```
+## Step 3: Install Jupyter Notebook
+To install Jupyter Notebook, run the following command in your terminal:
+```bash
+pip3 install jupyter
+```
+This command will download and install Jupyter Notebook, a powerful tool for interactive Python development.
+
+## Step 4: Export Python Bin Path in `~/.zshrc`
+Now, you will export the Python bin path in your `~/.zshrc` file to make it accessible in your terminal sessions. To open `~/.zshrc` for editing, follow these simplified steps:
+
+1. Open your terminal.
+
+2. Type the following command and press Enter:
+```bash
+open -e ~/.zshrc
+```
+This command will open your `~/.zshrc` file in the default text editor.
+
+3. In the text editor, add the following line at the end of the file:
+```bash
+export PATH=$PATH:$(python3 -m site --user-base)/bin
+```
+4. Save the file and close the text editor.
+
+## Step 5: Create `~/.zshrc` if Not Found
+If you receive an error indicating that the `~/.zshrc` file does not exist, you can create it using the following command:
+
+```bash
+touch ~/.zshrc
+```
+This command will create an empty `~/.zshrc` file if it doesn't already exist.
+
+Now repeat **Step 4**.
+
+## Step 6: Apply Changes
+To apply the changes, either restart your terminal or run the following command:
+
+```bash
+source ~/.zshrc
+```
+Your Python installation is now set up and configured for use on macOS.
+
+## Step 7: Launch Jupyter Notebook
+To start Jupyter Notebook, open your terminal and run the following command:
+```bash
+jupyter notebook
+```
+This command will launch the Jupyter Notebook in your default web browser, allowing you to create and run Python notebooks for interactive coding and data analysis.
+
+
+## Conclusion
+You have successfully installed Python and Jupyter Notebook on your macOS system, configured the user-specific Python bin path, and exported it to your `~/.zshrc` file for easy access. You can now use Jupyter Notebook for interactive coding and data analysis.
+
+Happy coding!
+
+<br><br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer>

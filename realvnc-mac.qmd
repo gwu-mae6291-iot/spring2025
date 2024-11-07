@@ -1,0 +1,92 @@
+---
+title: "RealVNC Installation Guide for Mac"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+:::{.callout-important}
+**Referencing the content in this workshop:**
+
+Bulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+:::
+
+<!-- # RealVNC Installation Guide for Mac -->
+
+This guide will walk you through the process of installing and setting up RealVNC on your Macintosh computer to enable remote desktop access.
+
+## Prerequisites
+
+Before you begin, ensure you meet the following requirements:
+
+- A Macintosh computer running a supported version of MacOS (e.g., MacOS 12+).
+- Internet access.
+
+## Installation Steps
+
+<!-- ### 1. Download RealVNC Viewer
+
+Visit the RealVNC Viewer download page at [https://www.realvnc.com/en/connect/download/combined/](https://www.realvnc.com/en/connect/download/combined/) and click on the "Download for macOS" button to download the installer.
+
+![Downlaod RealVNC](images/screenshots/realvnc-mac/screenshot-1.png) -->
+
+### 0. Download the installation file **[here](/Downloads/VNC-Viewer-7.12.1-MacOSX-universal.dmg)**
+
+### 1. Install RealVNC Viewer:
+
+Locate the downloaded installer file (usually in your Downloads folder) and double-click on it to start the installation process and click on "Allow" when prompted.
+
+![Run Installer](screenshots/realvnc_macOS_2024/step_1.png)
+
+<!-- ![Allow Installation](images/screenshots/realvnc-mac/screenshot-3.png) -->
+
+### 2. Follow Installation Wizard
+
+The installation wizard will guide you through the installation process. Move the VNC Viewer to Applications to finish the installation.
+<!-- The installation wizard will guide you through the installation process. Click on "Customize installation" and "Deselect RealVNC Server" and hit "Install". -->
+
+![Move VNC Viewer to Applications](/screenshots/realvnc_macOS_2024/step_2.png)
+
+<!-- ![Customize Installation](images/screenshots/realvnc-mac/screenshot-4.png)
+
+![Deselect RealVNC Server](images/screenshots/realvnc-mac/screenshot-5.png) -->
+
+### 4. Launch RealVNC Viewer
+
+Once the installation is complete, you can launch RealVNC Viewer from Launchpad. 
+
+<!-- ![Open RealVNC using the launch button](images/screenshots/realvnc-mac/screenshot-6.png) -->
+
+![Open RealVNC from Launchpad](screenshots/realvnc_macOS_2024/step_3.png)
+
+If prompted to Log in/Sign Up hit "Cancel", you're **<u>NOT REQUIRED</u>** to sign up.
+
+![Don't Sign up](images/screenshots/realvnc-mac/screenshot-7.png)
+
+<!-- ![Establish a ] -->
+
+## Conclusion
+
+Congratulations! You have successfully installed RealVNC Viewer on your Macintosh machine, allowing you to access and control remote computers with ease.
+
+For more information and support, you can visit the [RealVNC FAQa](https://www.realvnc.com/en/connect/download/viewer/?lai_vid=pXE00z561iP1&lai_sr=0-4&lai_sl=l&lai_p=1).
+<!-- <br><br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer> -->

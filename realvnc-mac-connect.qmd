@@ -1,0 +1,80 @@
+---
+title: "Connect the Raspberry Pi on Macintosh machine"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+:::{.callout-important}
+**Referencing the content in this workshop:**
+
+Bulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+:::
+
+# Connect the Raspberry Pi on Macintosh machine
+
+RealVNC is a remote desktop software that allows you to access your computer from anywhere. Follow the steps below to establish a remote using RealVNC on your Mac computer.
+
+## Prerequisites
+
+Before you begin, ensure that you have already installed RealVNC on your Mac.
+
+## Establish a Connection
+
+### 1. Launch RealVNC Viewer
+
+Launch VNC Viewer from the Launchpad.
+
+![Open RealVNC Viewer](images/screenshots/realvnc-mac/screenshot-11.png)
+
+If prompted to Log in/Sign Up hit "Cancel", you're **<u>NOT REQUIRED</u>** to sign up.
+
+![Don't Sign up](images/screenshots/realvnc-mac/screenshot-7.png)
+
+### 2. Connect to a Raspberry Pi
+
+To connect to a Raspberry Pi, launch RealVNC Viewer, enter the "**raspberrypi.local**" on the box into the address bar, and hit Enter. You may need to enter the login credentials for the Raspberry Pi.
+
+<!-- ![IP Address on the Box](images/screenshots/realvnc-mac/screenshot-12.png) -->
+
+![Connect to the Pi](images/screenshots/realvnc_macOS_2024/step_6.png)
+
+<!-- ![Enter Credentials](images/screenshots/realvnc-mac/screenshot-9.png) -->
+
+### 3. Enjoy Remote Desktop Access
+
+You are now connected to the Raspberry Pi, and you can control it.
+
+![Remote Connection Successfull](images/screenshots/realvnc-mac/screenshot-10.png)
+
+### 4. Disconnect
+
+To disconnect from the Raspberry Pi, simply close the VNC Viewer window.
+
+## Conclusion
+
+You have successfully established connection to the Pi, allowing you to access and control it with ease.
+
+For more information and support, you can visit the [RealVNC website](https://www.realvnc.com/).
+
+<!-- 
+<br><br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer> -->

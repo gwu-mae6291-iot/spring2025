@@ -1,0 +1,178 @@
+---
+title: "Announcements"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+To be updated as and when we get to hear exciting things during the course!
+
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<!--- <div class="card text-white bg-primary mb-3" style="max-width: 18rem;"> --->
+<div class="card-header">Psymetis <a href="https://psymetis.com" target="_blank" title="Psymetis" style="color: #cc0000"> [Click on link]</a> 
+</div>
+<!---<img class="card-img-top" src="/images/IEEE-GHTC2023.png" alt="Card image top"> --->
+<div class="card-body">            
+<h5 class="card-title"> A local northern Virginia start up that builds products integrating embedded AI enabled physical and cyber threat detection.</h5>
+<p class="card-text">
+<p>Interested in working or interning here? <a href="https://psymetis.com/careers" style="color: #cc0000" target="_blank">[Click on link]</a></p> 
+
+</p>
+</div>
+</div>
+
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<!--- <div class="card text-white bg-primary mb-3" style="max-width: 18rem;"> --->
+<div class="card-header">Cyber Truck Challenge <a href="https://www.cybertruckchallenge.org/" target="_blank" title="CYber Truck Challenge" style="color: #cc0000"> [Click on link]</a> 
+</div>
+<!---<img class="card-img-top" src="/images/IEEE-GHTC2023.png" alt="Card image top"> --->
+<div class="card-body">            
+<h5 class="card-title"> Exciting event held each year for cyber security and systems engineering enthusiasts! </h5>
+<p class="card-text">
+Connecting next generation talent with the heavy duty trucking industry to keep vehicles secure.
+
+
+</p>
+</div>
+</div>
+
+
+<!---
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+<div class="card-header">Header</div>
+<img class="card-img-top" src="https://source.unsplash.com/daily" alt="Card image top">
+<div class="card-body">            
+<h5 class="card-title">Primary card title</h5><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+-->
+
+<!--- Example of card -->
+<!---
+<div class="card" style="width:18rem;">
+<img class="card-img-top" src="https://source.unsplash.com/daily" alt="Card image top">
+<div class="card-body">    
+<h3 class="card-title">Card title</h3>
+<h4 class="card-subtitle">Card subtitle</h4>
+<p class="card-text">This is a simple Card example</p>
+</div>
+</div> 
+-->
+
+<!--- Example of card -->
+<!-- Tip: use bg-* and text-* utilities to style the card -->
+<!-- 
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Header</div>
+<img class="card-img-top" src="/images/Working_Style_Workout_for_CS3907_Intro_to_IoT_Edge_Compute.png" alt="Card image top">
+<div class="card-body">
+<h4 class="card-title">Primary card title</h4>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+
+<div class="card text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Header</div>
+<img class="card-img-top" src="/images/Working_Style_Workout_for_CS3907_Intro_to_IoT_Edge_Compute.png" alt="Card image top">
+<div class="card-body">
+<h4 class="card-title">Primary card title</h4>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+-->
+
+<!--- <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h4 class="card-title">Secondary card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h4 class="card-title">Success card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h4 class="card-title">Danger card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h4 class="card-title">Warning card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h4 class="card-title">Info card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card bg-light mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h4 class="card-title">Light card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h4 class="card-title">Dark card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div> -->
+
+
+<!--- Example of card -->
+<!---
+<body>
+<head>
+<style>
+.myDiv {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>The div element</h1>
+
+<div class="myDiv">
+  <h2>This is a heading in a div element</h2>
+  <p>This is some text in a div element.</p>
+</div>
+
+<p>This is some text outside the div element.</p>
+-->
+
+
+<!-- <footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</p>
+</footer> -->

@@ -1,0 +1,124 @@
+---
+title: "Anaconda Installation Guide for macOS"
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+# Anaconda Installation Guide for macOS
+
+## Introduction
+
+This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your macOS computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing.
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+1. A macOS computer.
+2. An internet connection.
+3. Sufficient disk space for the installation.
+
+## Installation Steps
+
+### 1. Download Anaconda
+
+Visit the Anaconda download page at [https://www.anaconda.com/download](https://www.anaconda.com/download).
+
+### 2. Choose the macOS Installer
+
+Click on the "Download" button under the macOS section depending on you System-on-chip (**Intel/M1/M2**) to download the Anaconda installer for macOS.
+
+![Download Anaconda](images/screenshots/anaconda-mac/screenshot-1.png)
+
+### 3. Run the Installer
+
+- Locate the downloaded file (usually in your "Downloads" folder).
+- Double-click the Anaconda disk image (`.dmg`) file to open it and click on "Allow" when prompted.
+
+![Run Installer](images/screenshots/anaconda-mac/screenshot-2.png)
+
+![Allow Installation](images/screenshots/anaconda-mac/screenshot-3.png)
+
+### 4. Follow the Installer Wizard
+
+- Follow the on-screen instructions to begin the installation.
+- Read and accept the license agreement when prompted.
+
+![Read Me](images/screenshots/anaconda-mac/screenshot-4.png)
+
+![License Agreement](images/screenshots/anaconda-mac/screenshot-5.png)
+
+### 5. Install Anaconda
+
+Click the "Install" button to begin the installation process. This may take a few minutes.
+
+![Install](images/screenshots/anaconda-mac/screenshot-6.png)
+
+### 6. Complete the Installation
+
+Once the installation is complete, you will see a confirmation message. Click the "Continue" button and finally close the installation wizard by clicking on the "Close" button.
+
+![Installation Complete](images/screenshots/anaconda-mac/screenshot-7.png)
+
+![Close Installation Wizard](images/screenshots/anaconda-mac/screenshot-8.png)
+
+### 7. Move the Installer file to Trash **(Optional)**
+
+![Move the Installer to Trash](images/screenshots/anaconda-mac/screenshot-9.png)
+
+### 8. If prompted to update the navigator, select "No, don't show again"
+
+![Don't Update](images/screenshots/anaconda-mac/screenshot-10.png)
+
+### 9. You're <u>NOT REQUIRED</u> to Log in/Sign up for Anaconda Cloud, close the prompt by clicking the "x" button
+
+![Don't Log in/Sign up](images/screenshots/anaconda-mac/screenshot-13.png)
+
+### 10. Verify the Installation
+
+<!-- Open the "Terminal" application on your macOS computer and type the following command to verify that Anaconda and Jupyter were installed successfully:
+
+```bash
+jupyter --version
+```
+
+![Open Terminal](images/screenshots/anaconda-mac/screenshot-11.png)
+
+![Verify Jupyter Installation](images/screenshots/anaconda-mac/screenshot-12.png) -->
+
+To verify the installation launch a local Jupyter Server by clicking on the "launch" button for Jupyter Notebook.
+
+![Launch Jupyter Server](images/screenshots/anaconda-mac/screenshot-14.png)
+
+You should see a terminal open and the Jupyter Notebbok server launched in a browser window.
+
+![Jupyter Server Launched](images/screenshots/anaconda-mac/screenshot-15.png)
+
+## Conclusion
+
+Congratulations! You've successfully installed Anaconda and Jupyter on your macOS computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.
+
+For more information on using Anaconda, refer to the official documentation at [https://docs.anaconda.com/](https://docs.anaconda.com/).
+
+If you encounter any issues or have questions, don't hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.
+
+<br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer>

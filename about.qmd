@@ -1,0 +1,80 @@
+---
+title: "About"
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+:::{.callout-important}
+**Referencing the content on this webpage:**
+
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+:::
+
+## Goal 
+The goal of the course is to introduce the students to the building blocks of the IoT ecosystem with emphasis on Edge Computing. 
+
+## Learning objectives
+1. Hands-on knowledge of Raspberry Pi hardware with Python programming language 
+2. Exposure to various sensors and actuators with hands-on exercises and in-class IoT projects
+3. Exposure to IoT automation platforms such as ThingSpeak and IFTTT
+4. Implement Raspberry Pi-based IoT projects 
+5. Implement edge computing strategies with the Raspberry Pi
+6. Gain industry 4.0 exposure via invited speakers and case studies
+ 
+## Learning Outcomes
+As a result of completing this course, students will be able to:
+
+1. Understand the IoT framework and implementation using the Raspberry Pi	.
+2. Perform experiments aimed at collecting and analyzing data.
+3. Design and write Python programs and work with IoT automation platforms.
+4. Work on engineering-innovation group projects.
+
+## Additional Learning Outcomes
+- Ability to apply knowledge of programming and mathematics in the IoT framework
+- Ability to design and conduct experiments, as well as to analyze and interpret IoT data
+- Ability to identify, formulate, and solve physical problems using the IoT framework
+- Ability to use the techniques, skills, and modern computing tools necessary for practical implementation of IoT technologies
+ 
+
+## Course format 
+- Lectures on the fundamentals of Raspberry Pi programming using Python programming language. 
+- Lectures on sensing, actuation and automation and IoT connectivity methods. 
+- Case studies on IoT with Edge computing from a variety of sectors such as Agriculture, Home Automation, Healthcare etc.
+- Guest lectures from Industry 4.0 and academic experts
+- Hands-on in-class work and Project-based deliverables
+- Interactive quizzes and instant concept checks
+- Individual and/or group assignments and projects
+- Midterm and Final projects
+
+## Audience and credit-level
+The course is designed for junior-level undergraduate students as a 3-credit course. 
+
+## Prerequisites
+None
+
+## Workload
+This course will have 150 minutes of lecture time per week, that includes approximately 60-75 minutes of hands-on, microlab work. The course requires between 2-4 hours per week on average for homework assignments or project-based deliverables.
+
+## Textbook, hardware and other course material
+There is no textbook requirement for this course. All reading, hardware and course material will be provided by the instructor.
+
+<!-- <br><br>
+<footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</p>
+</footer> -->

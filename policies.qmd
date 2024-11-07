@@ -1,0 +1,240 @@
+---
+title: "Course policies"
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+:::{.callout-important}
+**Referencing the content on this webpage:**
+
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+:::
+
+## Hardware and Software requirements
+<strong>The attendees will be expected to bring their own laptops with the following requirements: </strong>
+
+- Personal machines or laptops (only) with: 
+    - Mac OS 12+ or Windows 10+ operating system
+    - One USB A or USB C port that is available for use during the workshop
+    - WiFi connectivity
+    - A free version of RealVNC&reg; Viewer software downloaded and installed (See [instructions](install-editor.qmd) for details). 
+    - Chrome web browser downloaded and installed 
+
+<strong>The attendees will be expected to work </strong>
+- in small groups using a limited number of hardware components and WiFi connectivity that will be provided.
+
+
+## Assignments and Grades
+
+### Grading - List of what will be counted and percentages (as used in Spring 2023 and can be changed in Spring 2024).
+**For example:**<br>
+<style>
+* {
+  box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<div class="row">
+ <div class="column">
+- Attendance and/or peer-to-peer and instructor interactions 10%
+- In-class work and/or Weekly Quizzes 10% 
+- Project reports, paper reviews and in-class presentations 10% 
+- Python programming and other Homework 20%
+- Projects (including code, demo, written report and presentation) 50% 
+  - 20% Individual midterm project
+  - 30% Group final project 
+ </div>
+
+
+
+
+
+ <div class="column">
+ <!-- "float: left;  -->
+ <img src="/images/noun-exam-3617082_copy.png" alt="exam icon" style="object-fit:contain width:200px;height:200px; margin-right: 5px;" /><br>
+ <p><font size="1">exam by pongsakorn from <a href="https://thenounproject.com/browse/icons/term/exam/" target="_blank" title="exam Icons">Noun Project</a></font></p>
+ </div>
+</div>
+
+<br>
+
+## Grading Scale
+TBA
+<!-- The following grading scale will be applied at the end of the semester to calculate letter grades: 90-100: A, 84-89: A-, 78-83: B+, 72-77: B, 66-71: B-, 60-65: C+, 56-59: C, 52-55: C-, 46-51: D, 0-45: F.
+
+Grades are "rounded up" to the nearest integer. -->
+
+<br>
+
+## Additional important information about grading policy:
+
+- Late submissions on Homework and projects will not be acceptable.
+- There is no required final exam.
+- There may be instances in the presentations where peer-evaluations may be introduced at the discretion of the instructor.
+- The instructor will seeks inputs from the class and decide if course projects will be done individfually, in groups or in a combination. 
+
+<br>
+
+## Classroom Policies and Student responsibilities
+
+<div class="row">
+  <div class="column">
+<p> **The course is designed with experiential learning modules provided in each session.** </p>
+<p> This course requires a combination of individual and group work entailing hands-on activities and frequent interactions with the instructional team. </p>
+<p> The lectures, labs and office hours are available for interacting with your group and the instructor. We ask that all students adhere to the course policies throughout the duration of the semester. </p>
+ </div>
+
+ <div class="column">
+ <!-- "float: left;  -->
+ <img src="/images/noun-classroom-3973477_copy.png" alt="classroom icon" style="object-fit:contain width:200px;height:200px; margin-right: 5px;" /><br>
+ <p><font size="1">classroom by Chattapat from <a href="https://thenounproject.com/browse/icons/term/classroom/" target="_blank" title="classroom Icons">Noun Project</a></font></p>
+ </div>
+</div>
+<br>
+
+- **Be respectful:** 
+  - Listen to the instructor. Keep an open mind to the course material presented. 
+  - Limit the use of personal devices. 
+  - Be aware that you are working in a group.
+  - Respect each other's opinion during dicusssions.
+
+- **Be responsible:** 
+  - Arrive on time. 
+  - Submit the course deliverables on time. 
+  - Help your team members
+
+- **Be a communicator:** 
+  - **Observe, Ask questions and Try** out the materials presented during the course. 
+  - Communicate with your team effectively and politely. 
+  - An email informing the instructor about your absence is necessary, if you are not planning to attend the lecture and lab session during the course. 
+    - The requests about making up graded-labs or any in-class activities will be considered but with prior initmation and time constraints of the course.
+
+- **Be a problem solver:** 
+  - Explore options to complete hands-on tasks. 
+  - Make your own notes. 
+  - **Stay positive about the course outcomes.**
+
+## Communication during extenuating circumstances
+When you need to communicate with us directly regarding extenuating circumstances, please use [**Blackboard**](https://blackboard.gwu.edu) to send email or email the instructor directly. 
+
+- The instructor will check emails on Mondays and may respond at their earliest convenience. 
+
+## Late work policy
+Late work is not accepted, with the following exceptions:
+
+- Extensions will be granted should there arise due to circumstances beyond your control that impede your ability to complete coursework and turn in a deliverable on time. 
+- Notify your professor as soon as feasible in these cases. Examples of such circumstances include (but are not limited to) illness, death in the family, and loss of housing. 
+- To ensure fairness toward all students, the instructor will request documentation of such circumstances.
+
+## Justice, Equity, Diversity, Inclusion (JEDI) statement
+
+<div class="row">
+  <div class="column">
+  <li> The instructor intends to support the course needs of all students with diverse backgrounds and perspectives in this course. </li>
+  <li> The instructor believes that the diversity that the students bring to this class is a resource, strength, and an asset.</li>
+  <li> The instructor will strive to present material that is respectful of the diverse backgrounds and characteristics of the student body and the instructional team. </li>
+  <li> The course materials and activities presented in this course are intended to be respectful of: age, race, ethnicity, country of origin, language, religion, spiritual practice, sexual orientation, gender identity or expression, introversion/extroversion personality dimensions, and socioeconomic and mental/physical status.</li>
+  <li> Each of us, whether student or instructional team member, is expected to treat all others with respect. </li> 
+  <li> Disrespect in any form will not be tolerated. </li>
+
+ </div>
+<br><br><br>
+
+ <div class="column">
+ <!-- "float: left;  -->
+ <img src="/images/noun-employee-diversity-3989902_copy.png" alt="classroom icon" style="object-fit:contain width:200px;height:200px; margin-right: 5px;" /><br>
+ <p><font size="1">employee diversity by Bold Yellow from <a href="https://thenounproject.com/browse/icons/term/employee-diversity/" target="_blank" title="employee diversity Icons">Noun Project</a></font></p>
+ </div>
+</div>
+
+<br><br><br><br><br><br><br><br>
+ <p> Please let the [instructor](instructor.qmd) know ways to improve the effectiveness of the course. See [JEDI resources](https://www.cs.seas.gwu.edu/justice-equity-diversity-and-inclusion-resources) for student resources. </p>
+
+## Use of chatGPT or any other AI-based models for in-class work and deliverables
+**The use of chatGPT or any other generative AI-based models is not permitted by the instructor.**
+
+- If there are instances where chatGPT or any other generative AI-based models are allowed they will be explicitly communicated by the instructor on select assignments and programming projects. 
+
+- In all other instances where a course deliverable does not entail permitted use of chatGPT or any other AI-based models, the instructors will have the students sign a disclosure form. This form will require that the students document specific prompts used and the outputs generated. 
+
+- Any violations of the aforementioned policy will be reviewed under the [Academic Integrity Code](#academic-integrity-code) and [Student Rights and Responsibities](https://studentconduct.gwu.edu/code-student-conduct)
+
+Furthermore, the ethical issues regarding the use of chatGPT or any other AI-based models will be discussed in-class and course policy will be ammended according to the findings. The findings of any such discussions will be summarized and placed in-context of the [Academic Integrity Code](#academic-integrity-code)
+
+<br>
+**Resources that will guide the course policy changes during the course:**
+<br>
+
+- <p><a href="https://medium.com/@rwatkins_7167/updating-your-course-syllabus-for-chatgpt-965f4b57b003" target="_blank" title="Ryan Watkins-Medium">chatGPT Course policy formulation</a></p>
+- <p><a href="https://openai.com/blog/chatgpt/" target="_blank" title="OpenAI portal">chatGPT chatbot</a></p>
+- <p><a href="https://www.socialsciencespace.com/2022/12/how-chatgpt-could-transform-higher-education/" title="chatGPT to transform higher ed">How ChatGPT Could Transform Higher Education</a></p>
+
+
+# University Policies
+
+## Use of Electronic Course Materials and Class Recordings
+Students are encouraged to use electronic course materials, including recorded class sessions (if any), for private personal use in connection with their academic program of study. Electronic course materials and recorded class sessions should not be shared or used for non-course related purposes unless express permission has been granted by the instructor. Students who impermissibly share any electronic course materials are subject to discipline under the Student Code of Conduct. Please contact the instructor if you have questions regarding what constitutes permissible or impermissible use of electronic course materials and/or recorded class sessions. Please contact [Disability Support Services](https://disabilitysupport.gwu.edu) if you have questions or need assistance in accessing electronic course materials.
+
+## University Policy on Religious Holidays 
+
+1.	Students should notify faculty during the first week of the semester of their intention to be absent from class on their day(s) of religious observance.
+2.	Faculty should extend to these students the courtesy of absence without penalty on such occasions, including permission to make up examinations.
+3.	Faculty who intend to observe a religious holiday should arrange at the beginning of the semester to reschedule missed classes or to make other provisions for their course‐related activities.
+For details and policy, see “Religious Holidays” at <https://provost.gwu.edu/policies-procedures-and-guidelines>
+
+
+
+
+## Support for Students Outside the Classroom 
+
+**Disability Support Services (DSS)**
+Any student who may need an accommodation based on the potential impact of a disability should contact the Disability Support Services office at 202‐994‐8250 in the Rome Hall, Suite 102, to establish eligibility and to coordinate reasonable accommodations. For additional information please refer to: <https://disabilitysupport.gwu.edu/>
+
+**Mental Health Services 202‐994‐5300**
+The University's Mental Health Services offers 24/7 assistance and referral to address students' personal, social, career, and study skills problems. Services for students include: crisis and emergency mental health consultations confidential assessment, counseling services (individual and small group), and referrals. <https://healthcenter.gwu.edu/counseling-and-psychological-services>
+
+<!--- # Contents
+ - [Specification](#specification) 
+ - [Dependencies Title](#dependencies-title) --> 
+## Academic Integrity Code
+
+Academic dishonesty is defined as cheating of any kind, including misrepresenting one's own work, taking credit for the work of others without crediting them and without appropriate authorization, and the fabrication of information. You are not allowed to collaborate on the home works and lab assignments; for programming projects and hardware lab assignments, you can work in teams only if they are designated as team projects (labs). Unless otherwise specified, you cannot search for solutions or code on the web – but you can use any code that is included in the textbook or lecture notes (but please cite them). I will be using a SW tool that checks for program code similarities – any pair of programs or written reports with greater than 10% similarity will be closely examined.
+
+The Office of Academic Integrity maintains a permanent record of the violation.
+More information is available from the Office of Academic Integrity at <https://studentconduct.gwu.edu/academic-integrity>. The University’s “Guide of Academic Integrity in Online Learning Environments” is available at <https://studentconduct.gwu.edu/guide-academic-integrity-online-learning-environments>. Contact information: rights@gwu.edu or 202-994-6757.
+
+
+<!-- <br><br>
+<footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</p>
+</footer> -->

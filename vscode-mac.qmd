@@ -1,0 +1,117 @@
+---
+title: "Visual Studio Code Installation Guide for macOS"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+# Visual Studio Code Installation Guide for macOS
+
+## Introduction
+
+This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages.
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+1. A macOS computer.
+2. An internet connection.
+
+## Installation Steps
+
+### 1. Download Visual Studio Code
+
+Visit the official VS Code download page at [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
+
+### 2. Choose the macOS Installer
+
+Click on the "macOS" download link to download the Visual Studio Code for macOS.
+
+![Download VS Code](images/screenshots/vscode-mac/screenshot-1.png)
+
+![Allow Download](images/screenshots/vscode-mac/screenshot-2.png)
+
+### 3. Install Visual Studio Code
+
+- Locate the downloaded file (usually in your "Downloads" folder).
+- Double-click the VS Code disk image (`.dmg`) file to open it.
+
+![Locate file](images/screenshots/vscode-mac/screenshot-11.png)
+
+![Open DMG](images/screenshots/vscode-mac/screenshot-3.png)
+
+<!-- - Drag the Visual Studio Code application icon to the "Applications" folder to install it.
+
+![Install VS Code](path/to/screenshot-3.png) -->
+
+### 4. Launch Visual Studio Code
+
+Open your "Launchpad" and locate the "Visual Studio Code" application. Double-click it to launch the editor.
+
+![Launch VS Code](images/screenshots/vscode-mac/screenshot-10.png)
+
+### 5. Customize VS Code (Optional)
+
+Upon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (**Optional**)
+
+![Customize VS Code](images/screenshots/vscode-mac/screenshot-4.png)
+
+### 6. Open Extensions Tab
+
+On the sidebar click on the Extensions tab.
+
+![Extensions tab](images/screenshots/vscode-mac/screenshot-5.png)
+
+### 7. Select "Python" Extension
+
+Under the "Popular" select "Python".
+
+![Search Python](images/screenshots/vscode-mac/screenshot-6.png)
+
+### 8. Install Python Extension
+
+On the right panel click on the install button to install the extension.
+
+![Install Python Extension](images/screenshots/vscode-mac/screenshot-7.png)
+
+### 9. Open a New File
+
+Click on the File tab from the toolbar and open a New File.
+
+![Open New File](images/screenshots/vscode-mac/screenshot-8.png)
+
+### 10. Open a Jupyter Notebook
+
+From the drop down menu, select "Jupyter Notebook" as the file type.
+
+![Open Jupyter Notebook](images/screenshots/vscode-mac/screenshot-9.png)
+
+## Conclusion
+
+Congratulations! You've successfully installed Visual Studio Code on your macOS computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.
+
+Feel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!
+
+For more information and documentation on Visual Studio Code, visit [https://code.visualstudio.com/docs](https://code.visualstudio.com/docs).
+
+<br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer>

@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "MAE 6291"
+  page-footer: "The material is sourced from **Prof. Kartik Bulusu's** course titled, 'Introduction to IoT and Edge computng applications'. <br> This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br> Contact: [Kartik Bulusu](mailto:bulusu@email.gwu.edu)<br> &copy; 2024 All rights reserved"
+  navbar:
+    background: primary
+    foreground: secondary
+    # fontcolor: black
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - policies.qmd
+      - text: "Getting Started"
+        menu:
+          - href: install-editor.qmd
+      - schedule.qmd
+      # - text: "Notes"
+      #   menu: 
+      #     - href: Week0.qmd 
+      #     - href: Week1.qmd
+      #     - href: Week2.qmd
+      #     - href: Spring2023_MidtermProjects.qmd
+      #     - href: Week3.qmd
+      #     - href: Week3-Parmer-Lecture.qmd
+      #     - href: Week4.qmd
+      #     - href: Week4-Yanamadala-ARM-Lecture.qmd
+      #     - href: Week5.qmd
+      #     - href: Week5-Mohammad-PrattWhitney-Lecture.qmd
+      #     - href: Week6.qmd          
+      #     - href: Week6-Nuzum-Innovyz-Lecture.qmd
+      #     - href: Week9.qmd    
+      #     - href: Week10.qmd    
+      #     - href: Week10-Pottier-ARM-Lecture.qmd   
+      #     - href: Week11.qmd    
+      #     - href: Week12.qmd  
+      #     - href: Week13.qmd  
+      #     - href: Week13-Rodley-SnapCore-Lecture.qmd   
+      #     - href: Week14-FinalProject_Gallery.qmd          
+
+
+      - weekly.qmd
+      - resources.qmd
+      - instructor.qmd
+
+format:
+  html:
+    theme: Yeti
+    css: styles.css
+    toc: true
+
+
+

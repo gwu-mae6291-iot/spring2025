@@ -1,0 +1,90 @@
+---
+title: "Internet-of-Things for Engineers"
+format: 
+  html: 
+    code-copy: true
+---
+
+<h2>From introduction to interface with the physical world</h2>
+
+:::{.callout-important}
+**Referencing the content on this webpage:**
+
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, code and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+:::
+
+:::{.callout-important}
+**Registartion:**
+Course registation is NOW OPEN.
+<!-- [Registration link](https://events.vtools.ieee.org/event/register/437187) -->
+:::
+
+<style>
+* {
+  box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 350px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+### Course and Contact Information
+
+<div class="row">
+ <div class="column">
+- **MAE 6291:** Introduction to IoT and Edge Computing Applications 
+- **Semester:**  Spring 2025
+- **Credits:** 3
+- **Meeting times:** Wednesday 3:30 PM — 6:00 PM (Lectures and Laboratory every session)
+- **Location:** SEH B2020
+- **Course website:** [https://gwu-csci3907.github.io](https://gwu-csci3907.github.io)
+- **Instructor information** [can be found here](/instructor.qmd)
+ </div>
+
+ <div class="column">
+ <!-- "float: left;  -->
+ <img src="/images/noun-iot-2623360_copy.png" alt="IoT icon" style="object-fit:contain width:250px;height:250px; margin-right: 10px;" /><br>
+ <p><font size="1">IoT by Alla Zaleuska from <a href="https://thenounproject.com/browse/icons/term/iot/" target="_blank" title="IoT Icons">Noun Project</a></font></p>
+ </div>
+</div>
+
+<br>
+
+### Github Repo (updated weekly)
+```python
+TBA
+```
+<!-- ```python
+git clone git@github.com:gwu-csci3907/Spring2024.git
+``` -->
+
+### Course description
+The Internet of Things (IoT) is perceived as a collection of smart, connected devices with the ability to send and receive data; “internet” encapsulates connectivity and “things” are devices (electronic or mechanical) that can be adapted toward connectivity. 
+
+There is an alternative perception of IoT, as a design methodology that facilitates interoperability and connectivity of physical systems. Edge computing is a strategy for localized analysis of data, ahead in the pipeline of powerful data center- or cloud-based post-processing.  
+
+This course explores these aspects of IoT framework and expands it with edge computing ideology via practical and hands-on exposure. Students will be exposed to the IoT framework using a variety of sensors, IoT automation and connectivity in **$\mu$-labs** (micro-labs) that incorporate the Raspberry Pi (single-board computer) and Python programming language. 
+
+The students will learn about how IoT with edge computing capability is going to be the backbone of the Industry 4.0.
+
+
+<!-- 
+<br><br>
+<footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</p>
+</footer> -->
+
