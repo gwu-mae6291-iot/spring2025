@@ -39,7 +39,7 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
 
 ## Assignments and Grades
 
-### Grading - List of what will be counted and percentages (as used in Spring 2023 and can be changed in Spring 2024).
+### Grading - List of what will be counted and percentages (as used in Spring 2024 and can be changed in Spring 2025).
 **For example:**<br>
 <style>
 * {
