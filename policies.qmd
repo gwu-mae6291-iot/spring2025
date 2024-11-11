@@ -83,7 +83,7 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
  </div>
 </div>
 
-<br>
+
 
 ## Grading Scale
 TBA
