@@ -48,7 +48,8 @@ Course registation is NOW OPEN.
 - **Credits:** 3
 - **Meeting times:** Wednesday 3:30 PM — 6:00 PM (Lectures and Laboratory every session)
 - **Location:** SEH B2020
-- **Course website:** [https://gwu-csci3907.github.io](https://gwu-csci3907.github.io)
+- [**Course website**](https://gwu-mae6291-iot.github.io/spring2025/) 
+<!-- [https://gwu-mae6291-iot.github.io/spring2025/] -->
 - **Instructor information** [can be found here](/instructor.qmd)
  </div>
 

@@ -40,7 +40,9 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
 ## Assignments and Grades
 
 ### Grading - List of what will be counted and percentages (as used in Spring 2024 and can be changed in Spring 2025).
-**For example:**<br>
+<br><br><br>
+**For example:**
+
 <style>
 * {
   box-sizing: border-box;
@@ -84,6 +86,7 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
 </div>
 
 
+<br><br><br>
 
 ## Grading Scale
 TBA
@@ -91,7 +94,7 @@ TBA
 
 Grades are "rounded up" to the nearest integer. -->
 
-<br>
+<br><br><br>
 
 ## Additional important information about grading policy:
 
@@ -100,7 +103,7 @@ Grades are "rounded up" to the nearest integer. -->
 - There may be instances in the presentations where peer-evaluations may be introduced at the discretion of the instructor.
 - The instructor will seeks inputs from the class and decide if course projects will be done individfually, in groups or in a combination. 
 
-<br>
+<br><br><br>
 
 ## Classroom Policies and Student responsibilities
 
@@ -117,7 +120,8 @@ Grades are "rounded up" to the nearest integer. -->
  <p><font size="1">classroom by Chattapat from <a href="https://thenounproject.com/browse/icons/term/classroom/" target="_blank" title="classroom Icons">Noun Project</a></font></p>
  </div>
 </div>
-<br>
+
+<br><br><br>
 
 - **Be respectful:** 
   - Listen to the instructor. Keep an open mind to the course material presented. 

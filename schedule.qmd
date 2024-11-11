@@ -1,7 +1,27 @@
 ---
 title: "Sample Schedule"
-format: html
+format: 
+  html:
+    code-copy: false
 ---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+:::{.callout-important}
+**Referencing the content on this webpage:**
+
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, code and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+:::
 
 Sample class schedule [*week-by-week*]
 
