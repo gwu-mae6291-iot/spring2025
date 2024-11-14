@@ -106,9 +106,9 @@ Start coding with Thonny, and if you need more guidance, consult the official do
 For any issues or questions, feel free to seek assistance from the Thonny community or refer to the documentation for troubleshooting tips.
 
 
-<footer>
+<!-- <footer>
   <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
   Author: Kartik Bulusu<br>
   Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
   &copy; 2024 All rights reserved</p>
-</footer>
+</footer> -->

@@ -20,17 +20,23 @@ format:
 :::{.callout-note}
 **Referencing the content on this webpage:**
 
-Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codea and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
 :::
 
 :::{.callout-important}
 **READ ME before you start installations on your personal computer:**
 
 - The course is desinged with active learning modules with limited number of hardware components. It is required that these software be installed and working on your computers so that you may connect to the hardware provided and execute programs effectively. 
+
 - You are strongly encouraged to bring your own personal machine or laptop and participate with the [prerequisites](install-editor.qmd) installed.
-- **Only Windows or Macintosh Computers with QWERTY keyboards are supported for this course.** The instructor has limited time to troubleshoot any OS-related problems.
+
+- **Only Windows 10+ or Macintosh 12+ computers with QWERTY keyboards are supported for this course.** The instructor has limited time to troubleshoot any OS-related problems.
   - The QWERTY (pronounced KWEHR-tee) keyboard is the standard typewriter and computer keyboard in countries that use a Latin-based alphabet.
-- **Linux OS-based laptops / personal computers and mobile /handheld-devices are not recommended or supported this semester.**
+
+- **Linux OS-based laptops / personal computers and mobile /handheld-devices are not supported this semester for in-class usage on your personal machine.**
+
+- **Raspberry Pi 4B with Raspberry Pi OS will be in all devices for IoT applications developed during the course.**
+  - Raspberry Pi OS is a Unix-like operating system based on the Debian Linux distribution for the Raspberry Pi family of compact single-board computers. Source: [wikipedia](https://en.wikipedia.org/wiki/Raspberry_Pi_OS) 
 :::
 
 <!-- :::{.callout-important}

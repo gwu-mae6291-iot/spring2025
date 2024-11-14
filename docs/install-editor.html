@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MAE 6291 - Much Needed Software Installations</title>
+<title>Much Needed Software Installations – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Course policies</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Getting Started</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -196,7 +196,7 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>Referencing the content on this webpage:</strong></p>
-<p>Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codea and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.</p>
+<p>Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -211,13 +211,17 @@ Important
 <div class="callout-body-container callout-body">
 <p><strong>READ ME before you start installations on your personal computer:</strong></p>
 <ul>
-<li>The course is desinged with active learning modules with limited number of hardware components. It is required that these software be installed and working on your computers so that you may connect to the hardware provided and execute programs effectively.</li>
-<li>You are strongly encouraged to bring your own personal machine or laptop and participate with the <a href="./install-editor.html">prerequisites</a> installed.</li>
-<li><strong>Only Windows or Macintosh Computers with QWERTY keyboards are supported for this course.</strong> The instructor has limited time to troubleshoot any OS-related problems.
+<li><p>The course is desinged with active learning modules with limited number of hardware components. It is required that these software be installed and working on your computers so that you may connect to the hardware provided and execute programs effectively.</p></li>
+<li><p>You are strongly encouraged to bring your own personal machine or laptop and participate with the <a href="./install-editor.html">prerequisites</a> installed.</p></li>
+<li><p><strong>Only Windows 10+ or Macintosh 12+ computers with QWERTY keyboards are supported for this course.</strong> The instructor has limited time to troubleshoot any OS-related problems.</p>
 <ul>
 <li>The QWERTY (pronounced KWEHR-tee) keyboard is the standard typewriter and computer keyboard in countries that use a Latin-based alphabet.</li>
 </ul></li>
-<li><strong>Linux OS-based laptops / personal computers and mobile /handheld-devices are not recommended or supported this semester.</strong></li>
+<li><p><strong>Linux OS-based laptops / personal computers and mobile /handheld-devices are not supported this semester for in-class usage on your personal machine.</strong></p></li>
+<li><p><strong>Raspberry Pi 4B with Raspberry Pi OS will be in all devices for IoT applications developed during the course.</strong></p>
+<ul>
+<li>Raspberry Pi OS is a Unix-like operating system based on the Debian Linux distribution for the Raspberry Pi family of compact single-board computers. Source: <a href="https://en.wikipedia.org/wiki/Raspberry_Pi_OS">wikipedia</a></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -383,6 +387,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -417,7 +439,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
