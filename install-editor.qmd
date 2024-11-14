@@ -1,5 +1,5 @@
 ---
-title: Installing a remote access software
+title: Much Needed Software Installations 
 format:
   html:
     code-copy: false
@@ -17,12 +17,21 @@ format:
 </head>
 <body>
 
-:::{.callout-important}
+:::{.callout-note}
 **Referencing the content on this webpage:**
 
-Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, code and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codea and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
 :::
 
+:::{.callout-important}
+**READ ME before you start installations on your personal computer:**
+
+- The course is desinged with active learning modules with limited number of hardware components. It is required that these software be installed and working on your computers so that you may connect to the hardware provided and execute programs effectively. 
+- You are strongly encouraged to bring your own personal machine or laptop and participate with the [prerequisites](install-editor.qmd) installed.
+- **Only Windows or Macintosh Computers with QWERTY keyboards are supported for this course.** The instructor has limited time to troubleshoot any OS-related problems.
+  - The QWERTY (pronounced KWEHR-tee) keyboard is the standard typewriter and computer keyboard in countries that use a Latin-based alphabet.
+- **Linux OS-based laptops / personal computers and mobile /handheld-devices are not recommended or supported this semester.**
+:::
 
 <!-- :::{.callout-important}
 - The workshop is desinged with active learning modules with limited number of hardware components. 
@@ -32,7 +41,94 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
  - **You will be automatically entered into a raffle in the workshop on 10/12/2024 if you complete the installation check-in form.**
 ::: -->
 
-# Installing a remote access software: VNC&reg; Viewer
+# Installation instructions 
+The following installation are required on your personal computers to move forward in this course amd need to be completed on first meeting day: 
+
+
+### **Select an option appropriate for your operating system**
+<!-- <div id="steps"></div> -->
+
+#### **MacOS:**
+
+<!-- - **Step 1**: [Install Anaconda for Mac](anaconda-mac.qmd) -->
+
+- **Step 1:** Install Real VNC Viewer for Mac OS 12+
+  - Donwload the installation file **[here](/Downloads/VNC-Viewer-7.12.1-MacOSX-universal.dmg)**
+  - Follow installation instructions **[here](realvnc-mac.qmd)**
+
+- **Step 2:** Download and install **[Thonny Python IDE for macOS](thonny-mac.qmd)**  
+
+- **Step 3:** Download and install **[VS Code for macOS](vscode-mac.qmd)**  
+
+- **Step 4:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
+  - Skip this step if you already have Chrome installed on your laptop.
+
+- **Step 5:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
+  - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
+  - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
+
+<!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd) -->
+
+<!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-mac.qmd) -->
+
+#### **Windows:**
+
+<!-- - **Step 1**: [Install Anaconda for Windows](anaconda-windows.qmd) -->
+
+- **Step 1:** Install Real VNC Viewer for Windows 10+
+  - Donwload the installation file **[here](/Downloads/VNC-Viewer-7.12.1-Windows.exe)**
+  - Follow installation instructions **[here](realvnc-windows.qmd)**
+
+- **Step 2:** Download and install **[Thonny Python IDE for Windows](thonny-windows.qmd)**
+
+- **Step 3:** Download and install **[VS Code for Windows](vscode-windows.qmd)**
+
+- **Step 4:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
+  - Skip this step if you already have Chrome installed on your laptop.
+
+- **Step 5:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
+  - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
+  - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
+
+<!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
+
+
+
+<!-- # Connecting your laptop to the Raspberry Pi using VNC&reg; Viewer
+
+### **Select an option appropriate for your operating system**
+
+#### **MacOS:**
+- **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd)
+
+#### **Windows:**
+
+- **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
+
+
+
+
+<!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-windows.qmd) -->
+
+<!-- Choose the option that best suits your needs and follow the respective installation instructions. -->
+
+<!-- Once you have an editor installed, you can start writing and running your code. Happy coding! -->
+
+
+<!-- will help you throughout this workshop, helping you write, execute, and code effectively. Select the appropriate option for your operating system, follow the installation instructions, and dive into the world of coding with confidence! 
+
+ - Follow the instructions provided carefully and complete the required installations needed for this workshop. ([See prerequisites](install-editor.qmd))
+ - Once you finish the **Steps 1, 2 and 3 in the installation instructions** in [prerequisites](install-editor.qmd), fill out the [Pre-workshop survey form](https://tinyurl.com/yrkacfd9). 
+ - **You will be automatically entered into a raffle in the workshop on 10/12/2024 if you complete the installation check-in form.**
+::: -->
+
+
+---
+
+
+
+
+# Additional information on remote access software: VNC&reg; Viewer
 
 VNC&reg; Viewer is a remote access software application, that facilitates exchange data over the RFB protocol to allow the Viewer to control the Server's screen remotely.
 
@@ -80,83 +176,6 @@ In the world of programming, an editor is more than just a text processor. It's 
 
 - **VS Code**: Visual Studio Code (VS Code) is a versatile code editor that supports multiple programming languages and offers a rich ecosystem of extensions. Its user-friendly interface and powerful features make it a great choice for general programming tasks. --> 
 
-
-# Installation instructions 
-The following installation instructions are important for this worshop, helping you connect to the hardware provided and execute programs effectively. 
-<!-- will help you throughout this workshop, helping you write, execute, and code effectively. Select the appropriate option for your operating system, follow the installation instructions, and dive into the world of coding with confidence! -->
-
-
-### **Select an option appropriate for your operating system**
-<!-- <div id="steps"></div> -->
-
-#### **MacOS:**
-
-<!-- - **Step 1**: [Install Anaconda for Mac](anaconda-mac.qmd) -->
-
-- **Step 1:** Install Real VNC Viewer for Mac OS 12+
-  - Donwload the installation file **[here](/Downloads/VNC-Viewer-7.12.1-MacOSX-universal.dmg)**
-  - Follow installation instructions **[here](realvnc-mac.qmd)**
-
-- **Step 2:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
-  - Skip this step if you already have Chrome installed on your laptop.
-
-- **Step 3:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
-  - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
-  - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
-
-<!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd) -->
-
-<!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-mac.qmd) -->
-
-#### **Windows:**
-
-<!-- - **Step 1**: [Install Anaconda for Windows](anaconda-windows.qmd) -->
-
-- **Step 1:** Install Real VNC Viewer for Windows 10+
-  - Donwload the installation file **[here](/Downloads/VNC-Viewer-7.12.1-Windows.exe)**
-  - Follow installation instructions **[here](realvnc-windows.qmd)**
-
-- **Step 2:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
-  - Skip this step if you already have Chrome installed on your laptop.
-
-- **Step 3:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
-  - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
-  - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
-
-<!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
-
-
-
-<!-- # Connecting your laptop to the Raspberry Pi using VNC&reg; Viewer
-
-### **Select an option appropriate for your operating system**
-
-#### **MacOS:**
-- **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd)
-
-#### **Windows:**
-
-- **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
-
-
-
-
-<!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-windows.qmd) -->
-
-<!-- Choose the option that best suits your needs and follow the respective installation instructions. -->
-
-<!-- Once you have an editor installed, you can start writing and running your code. Happy coding! -->
-
-<!-- :::{.callout-important}
-- The workshop is desinged with active learning modules with limited number of hardware components. 
-- You are strongly encouraged to bring your own personal machine or laptop and participate with the [prerequisites](install-editor.qmd) installed.
- - Follow the instructions provided carefully and complete the required installations needed for this workshop. ([See prerequisites](install-editor.qmd))
- - Once you finish the **Steps 1, 2 and 3 in the installation instructions** in [prerequisites](install-editor.qmd), fill out the [Pre-workshop survey form](https://tinyurl.com/yrkacfd9). 
- - **You will be automatically entered into a raffle in the workshop on 10/12/2024 if you complete the installation check-in form.**
-::: -->
-
-
----
 
 <!-- <small><small>*Content on this webpage was partially generated using ChatGPT.*</small></small> -->
 

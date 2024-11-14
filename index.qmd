@@ -7,10 +7,10 @@ format:
 
 <h2>From introduction to interface with the physical world</h2>
 
-:::{.callout-important}
+:::{.callout-notes}
 **Referencing the content on this webpage:**
 
-Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, code and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
+Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
 :::
 
 :::{.callout-important}

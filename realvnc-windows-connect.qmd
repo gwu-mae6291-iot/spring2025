@@ -18,7 +18,7 @@ format:
 </head>
 <body>
 
-:::{.callout-important}
+:::{.callout-note}
 **Referencing the content in this workshop:**
 
 Bulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.

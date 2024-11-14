@@ -17,7 +17,7 @@ format:
 </head>
 <body>
 
-:::{.callout-important}
+:::{.callout-note}
 **Referencing the content on this webpage:**
 
 Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.

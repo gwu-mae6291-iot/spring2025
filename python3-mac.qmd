@@ -17,6 +17,14 @@ format:
 </head>
 <body>
 
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+1. A macOS computer.
+2. An internet connection.
+3. Adequate disk space for the installation.
+
 # Installing Python on macOS
 
 In this guide, we will walk you through the process of installing Python on macOS, configuring the user-specific Python bin path, and exporting it in your `~/.zshrc` file for easy access.

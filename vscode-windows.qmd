@@ -18,7 +18,7 @@ format:
 </head>
 <body>
 
-# Visual Studio Code Installation Guide for Windows
+<!-- # Visual Studio Code Installation Guide for Windows -->
 
 ## Introduction
 
@@ -30,6 +30,7 @@ Before you begin, ensure you have the following:
 
 1. A Windows computer.
 2. An internet connection.
+3. Adequate disk space for the installation.
 
 ## Installation Steps
 
