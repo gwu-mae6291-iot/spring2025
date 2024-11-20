@@ -124,8 +124,6 @@ The following installation are required on your personal computers to move forwa
 - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
 
 
-
-
 <!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-windows.qmd) -->
 
 <!-- Choose the option that best suits your needs and follow the respective installation instructions. -->
