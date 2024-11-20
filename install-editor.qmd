@@ -66,14 +66,16 @@ The following installation are required on your personal computers to move forwa
 
 - **Step 3:** Download and install **[VS Code for macOS](vscode-mac.qmd)**  
 
-- **Step 4:** Create a GitHub account 
+- **Step 4:** Install Git for Mac
 
-- **Step 5:** Create a GitHub repo
+- **Step 5:** Create a GitHub account 
 
-- **Step 6:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
+- **Step 6:** Create a GitHub repo
+
+- **Step 7:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
   - Skip this step if you already have Chrome installed on your laptop.
 
-- **Step 7:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
+- **Step 8:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
   - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
   - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
 
@@ -93,14 +95,16 @@ The following installation are required on your personal computers to move forwa
 
 - **Step 3:** Download and install **[VS Code for Windows](vscode-windows.qmd)**
 
-- **Step 4:** Create a GitHub account 
+- **Step 4:** Install Git for Windows
 
-- **Step 5:** Create a GitHub repo
+- **Step 5:** Create a GitHub account 
 
-- **Step 6:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
+- **Step 6:** Create a GitHub repo
+
+- **Step 7:** Download and install **[Chrome web browser](https://www.google.com/chrome/browser-tools/)**
   - Skip this step if you already have Chrome installed on your laptop.
 
-- **Step 7:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
+- **Step 8:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
   - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
   - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
 
