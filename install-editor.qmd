@@ -76,7 +76,7 @@ The following installation are required on your personal computers to move forwa
   - Skip this step if you already have Chrome installed on your laptop.
 
 - **Step 8:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
-  - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
+  - This step requires Step 2 to be completed as some codes involving web applications may work better on the Chrome browser.
   - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
 
 <!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd) -->
@@ -105,7 +105,7 @@ The following installation are required on your personal computers to move forwa
   - Skip this step if you already have Chrome installed on your laptop.
 
 - **Step 8:** Create a **free [ThingSpeak](https://thingspeak.com/login?skipSSOCheck=true) account**
-  - This step requires Step 2 to be completed as it works mostly on the Chrome browser.
+  - This step requires Step 2 to be completed as some codes involving web applications may work better on the Chrome browser.
   - Follow the steps on this page [**ThingSpeak**](thingspeak.qmd) to finish account creation.
 
 <!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
