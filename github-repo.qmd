@@ -1,0 +1,136 @@
+---
+title: "Visual Studio Code Installation Guide for Windows"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- # Visual Studio Code Installation Guide for Windows -->
+
+## Introduction
+
+This guide will walk you through the process of creating a github repo after installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer or Mac computer. 
+
+<!-- VS Code provides a powerful environment for coding and development across various programming languages. -->
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+1. A Windows computer.
+2. An internet connection.
+3. Adequate disk space for the installation.
+4. Completed Github account creation.
+4. Completed installation of VS Code.
+
+## Steps to create a GitHub repo
+
+### 1. Login to your GitHub account 
+
+Visit the official VS Code download page at [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
+
+### 2. Choose the Windows Installer
+
+Click on the "Windows" download link to download the Visual Studio Code installer for Windows.
+
+![Download VS Code](images/screenshots/vscode-windows/screenshot-1.png)
+
+### 3. Run the Installer
+
+- Locate the downloaded installer file (usually in your "Downloads" folder).
+- Double-click the installer executable (`.exe`) file to run it.
+
+![Run Installer](images/screenshots/vscode-windows/screenshot-2.png)
+
+### 4. Start the Installation
+
+- You will see the VS Code Setup Wizard. Click the "Next" button to begin the installation.
+
+![License Agreement](images/screenshots/vscode-windows/screenshot-3.png)
+
+### 5. Choose Installation Options
+
+- Select the installation location (the default is usually fine) and click "Next."
+
+![Installation Location](images/screenshots/vscode-windows/screenshot-4.png)
+
+- Choose additional tasks if desired (e.g., adding VS Code to the PATH). Then, click "Next."
+
+![Additional Tasks](images/screenshots/vscode-windows/screenshot-5.png)
+
+### 6. Install VS Code
+
+Click the "Install" button to begin the installation process. This may take a few moments.
+
+![Install](images/screenshots/vscode-windows/screenshot-6.png)
+
+### 7. Launch Visual Studio Code
+
+After the installation is complete, you can leave the "Launch Visual Studio Code" option checked and click "Finish."
+
+![Launch VS Code](images/screenshots/vscode-windows/screenshot-7.png)
+
+### 8. Customize VS Code (**Optional**)
+
+Upon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (**Optional**) 
+
+![Customize VS Code](images/screenshots/vscode-windows/screenshot-8.png)
+
+### 9. Open Extensions Tab
+
+On the sidebar click on the Extensions tab.
+
+![Extensions tab](images/screenshots/vscode-windows/screenshot-9.png)
+
+### 10. Search "Python"
+
+In the search bar type "Python" and hit Enter.
+
+![Search Python](images/screenshots/vscode-windows/screenshot-10.png)
+
+### 11. Install Python Extension
+
+On the right panel click on the install button to install the extension.
+
+![Install Python Extension](images/screenshots/vscode-windows/screenshot-12.png)
+
+### 12. Open a New File
+
+From the top-right corner click on the three-bars and open a New File.
+
+![Open New File](images/screenshots/vscode-windows/screenshot-13.png)
+
+### 13. Open a Jupyter Notebook
+
+From the drop down menu, select "Jupyter Notebook" as the file type.
+
+![Open Jupyter Notebook](images/screenshots/vscode-windows/screenshot-14.png)
+
+## Conclusion
+
+Congratulations! You've successfully installed Visual Studio Code on your Windows computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.
+
+Feel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!
+
+For more information and documentation on Visual Studio Code, visit [https://code.visualstudio.com/docs](https://code.visualstudio.com/docs).
+
+<!-- <br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer> -->

@@ -109,10 +109,10 @@ Feel free to explore the extensions marketplace and customize VS Code to enhance
 
 For more information and documentation on Visual Studio Code, visit [https://code.visualstudio.com/docs](https://code.visualstudio.com/docs).
 
-<br>
+<!-- <br>
 <footer>
   <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
   Author: Kartik Bulusu<br>
   Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
   &copy; 2023 All rights reserved</small></small></small></small></p>
-</footer>
+</footer> -->
