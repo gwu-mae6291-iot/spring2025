@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Much Needed Software Installations – MAE 6291</title>
+<title>Visual Studio Code Installation Guide for Windows – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,11 +143,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#installation-instructions" id="toc-installation-instructions" class="nav-link active" data-scroll-target="#installation-instructions">Installation instructions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#steps-to-create-a-github-repo" id="toc-steps-to-create-a-github-repo" class="nav-link" data-scroll-target="#steps-to-create-a-github-repo">Steps to create a GitHub repo</a>
   <ul class="collapse">
-  <li><a href="#select-an-option-appropriate-for-your-operating-system" id="toc-select-an-option-appropriate-for-your-operating-system" class="nav-link" data-scroll-target="#select-an-option-appropriate-for-your-operating-system"><strong>Select an option appropriate for your operating system</strong></a></li>
+  <li><a href="#login-to-your-github-account" id="toc-login-to-your-github-account" class="nav-link" data-scroll-target="#login-to-your-github-account">1. Login to your GitHub account</a></li>
+  <li><a href="#choose-the-windows-installer" id="toc-choose-the-windows-installer" class="nav-link" data-scroll-target="#choose-the-windows-installer">2. Choose the Windows Installer</a></li>
+  <li><a href="#run-the-installer" id="toc-run-the-installer" class="nav-link" data-scroll-target="#run-the-installer">3. Run the Installer</a></li>
+  <li><a href="#start-the-installation" id="toc-start-the-installation" class="nav-link" data-scroll-target="#start-the-installation">4. Start the Installation</a></li>
+  <li><a href="#choose-installation-options" id="toc-choose-installation-options" class="nav-link" data-scroll-target="#choose-installation-options">5. Choose Installation Options</a></li>
+  <li><a href="#install-vs-code" id="toc-install-vs-code" class="nav-link" data-scroll-target="#install-vs-code">6. Install VS Code</a></li>
+  <li><a href="#launch-visual-studio-code" id="toc-launch-visual-studio-code" class="nav-link" data-scroll-target="#launch-visual-studio-code">7. Launch Visual Studio Code</a></li>
+  <li><a href="#customize-vs-code-optional" id="toc-customize-vs-code-optional" class="nav-link" data-scroll-target="#customize-vs-code-optional">8. Customize VS Code (<strong>Optional</strong>)</a></li>
+  <li><a href="#open-extensions-tab" id="toc-open-extensions-tab" class="nav-link" data-scroll-target="#open-extensions-tab">9. Open Extensions Tab</a></li>
+  <li><a href="#search-python" id="toc-search-python" class="nav-link" data-scroll-target="#search-python">10. Search “Python”</a></li>
+  <li><a href="#install-python-extension" id="toc-install-python-extension" class="nav-link" data-scroll-target="#install-python-extension">11. Install Python Extension</a></li>
+  <li><a href="#open-a-new-file" id="toc-open-a-new-file" class="nav-link" data-scroll-target="#open-a-new-file">12. Open a New File</a></li>
+  <li><a href="#open-a-jupyter-notebook" id="toc-open-a-jupyter-notebook" class="nav-link" data-scroll-target="#open-a-jupyter-notebook">13. Open a Jupyter Notebook</a></li>
   </ul></li>
-  <li><a href="#additional-information-on-remote-access-software-vnc-viewer" id="toc-additional-information-on-remote-access-software-vnc-viewer" class="nav-link" data-scroll-target="#additional-information-on-remote-access-software-vnc-viewer">Additional information on remote access software: VNC® Viewer</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -156,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Much Needed Software Installations</h1>
+<h1 class="title">Visual Studio Code Installation Guide for Windows</h1>
 </div>
 
 
@@ -185,179 +199,177 @@ ul.task-list li input[type="checkbox"] {
     </style>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Referencing the content on this webpage:</strong></p>
-<p>Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>READ ME before you start installations on your personal computer:</strong></p>
-<ul>
-<li><p>The course is desinged with active learning modules with limited number of hardware components. It is required that these software be installed and working on your computers so that you may connect to the hardware provided and execute programs effectively.</p></li>
-<li><p>You are strongly encouraged to bring your own personal machine or laptop and participate with the <a href="./install-editor.html">prerequisites</a> installed.</p></li>
-<li><p><strong>Only Windows 10+ or Macintosh 12+ computers with QWERTY keyboards are supported for this course.</strong> The instructor has limited time to troubleshoot any OS-related problems.</p>
-<ul>
-<li>The QWERTY (pronounced KWEHR-tee) keyboard is the standard typewriter and computer keyboard in countries that use a Latin-based alphabet.</li>
-</ul></li>
-<li><p><strong>Linux OS-based laptops / personal computers and mobile /handheld-devices are not supported this semester for in-class usage on your personal machine.</strong></p></li>
-<li><p><strong>Raspberry Pi 4B with Raspberry Pi OS will be in all devices for IoT applications developed during the course.</strong></p>
-<ul>
-<li>Raspberry Pi OS is a Unix-like operating system based on the Debian Linux distribution for the Raspberry Pi family of compact single-board computers. Source: <a href="https://en.wikipedia.org/wiki/Raspberry_Pi_OS">wikipedia</a></li>
-</ul></li>
-</ul>
-</div>
-</div>
-<!-- :::{.callout-important}
-- The workshop is desinged with active learning modules with limited number of hardware components. 
-- You are strongly encouraged to bring your own personal machine or laptop and participate with the [prerequisites](install-editor.qmd) installed.
- - Follow the instructions provided carefully and complete the required installations needed for this workshop. ([See prerequisites](install-editor.qmd))
- - Once you finish the **Steps 1, 2 and 3 in the installation instructions** in [prerequisites](install-editor.qmd), fill out the [Pre-workshop survey form](https://tinyurl.com/yrkacfd9). 
- - **You will be automatically entered into a raffle in the workshop on 10/12/2024 if you complete the installation check-in form.**
-::: -->
-<section id="installation-instructions" class="level1">
-<h1>Installation instructions</h1>
-<p>The following installation are required on your personal computers to move forward in this course amd need to be completed on first meeting day:</p>
-<section id="select-an-option-appropriate-for-your-operating-system" class="level3">
-<h3 class="anchored" data-anchor-id="select-an-option-appropriate-for-your-operating-system"><strong>Select an option appropriate for your operating system</strong></h3>
-<!-- <div id="steps"></div> -->
-<section id="macos" class="level4">
-<h4 class="anchored" data-anchor-id="macos"><strong>MacOS:</strong></h4>
-<!-- - **Step 1**: [Install Anaconda for Mac](anaconda-mac.qmd) -->
-<ul>
-<li><p><strong>Step 1:</strong> Install Real VNC Viewer for Mac OS 12+</p>
-<ul>
-<li>Donwload the installation file <strong><a href="./Downloads/VNC-Viewer-7.12.1-MacOSX-universal.dmg">here</a></strong></li>
-<li>Follow installation instructions <strong><a href="./realvnc-mac.html">here</a></strong></li>
-</ul></li>
-<li><p><strong>Step 2:</strong> Download and install <strong><a href="./thonny-mac.html">Thonny Python IDE for macOS</a></strong></p></li>
-<li><p><strong>Step 3:</strong> Download and install <strong><a href="./vscode-mac.html">VS Code for macOS</a></strong></p></li>
-<li><p><strong>Step 4:</strong> Create a GitHub account</p></li>
-<li><p><strong>Step 5:</strong> Create a GitHub repo</p></li>
-<li><p><strong>Step 6:</strong> Download and install <strong><a href="https://www.google.com/chrome/browser-tools/">Chrome web browser</a></strong></p>
-<ul>
-<li>Skip this step if you already have Chrome installed on your laptop.</li>
-</ul></li>
-<li><p><strong>Step 7:</strong> Create a <strong>free <a href="https://thingspeak.com/login?skipSSOCheck=true">ThingSpeak</a> account</strong></p>
-<ul>
-<li>This step requires Step 2 to be completed as it works mostly on the Chrome browser.</li>
-<li>Follow the steps on this page <a href="./thingspeak.html"><strong>ThingSpeak</strong></a> to finish account creation.</li>
-</ul></li>
-</ul>
-<!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd) -->
-<!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-mac.qmd) -->
+<!-- # Visual Studio Code Installation Guide for Windows -->
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This guide will walk you through the process of creating a github repo after installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer or Mac computer.</p>
+<!-- VS Code provides a powerful environment for coding and development across various programming languages. -->
 </section>
-<section id="windows" class="level4">
-<h4 class="anchored" data-anchor-id="windows"><strong>Windows:</strong></h4>
-<!-- - **Step 1**: [Install Anaconda for Windows](anaconda-windows.qmd) -->
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>Before you begin, ensure you have the following:</p>
+<ol type="1">
+<li>A Windows computer.</li>
+<li>An internet connection.</li>
+<li>Adequate disk space for the installation.</li>
+<li>Completed Github account creation.</li>
+<li>Completed installation of VS Code.</li>
+</ol>
+</section>
+<section id="steps-to-create-a-github-repo" class="level2">
+<h2 class="anchored" data-anchor-id="steps-to-create-a-github-repo">Steps to create a GitHub repo</h2>
+<section id="login-to-your-github-account" class="level3">
+<h3 class="anchored" data-anchor-id="login-to-your-github-account">1. Login to your GitHub account</h3>
+<p>Visit the official VS Code download page at <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>.</p>
+</section>
+<section id="choose-the-windows-installer" class="level3">
+<h3 class="anchored" data-anchor-id="choose-the-windows-installer">2. Choose the Windows Installer</h3>
+<p>Click on the “Windows” download link to download the Visual Studio Code installer for Windows.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-1.png" class="img-fluid figure-img"></p>
+<figcaption>Download VS Code</figcaption>
+</figure>
+</div>
+</section>
+<section id="run-the-installer" class="level3">
+<h3 class="anchored" data-anchor-id="run-the-installer">3. Run the Installer</h3>
 <ul>
-<li><p><strong>Step 1:</strong> Install Real VNC Viewer for Windows 10+</p>
-<ul>
-<li>Donwload the installation file <strong><a href="./Downloads/VNC-Viewer-7.12.1-Windows.exe">here</a></strong></li>
-<li>Follow installation instructions <strong><a href="./realvnc-windows.html">here</a></strong></li>
-</ul></li>
-<li><p><strong>Step 2:</strong> Download and install <strong><a href="./thonny-windows.html">Thonny Python IDE for Windows</a></strong></p></li>
-<li><p><strong>Step 3:</strong> Download and install <strong><a href="./vscode-windows.html">VS Code for Windows</a></strong></p></li>
-<li><p><strong>Step 4:</strong> Create a GitHub account</p></li>
-<li><p><strong>Step 5:</strong> Create a GitHub repo</p></li>
-<li><p><strong>Step 6:</strong> Download and install <strong><a href="https://www.google.com/chrome/browser-tools/">Chrome web browser</a></strong></p>
-<ul>
-<li>Skip this step if you already have Chrome installed on your laptop.</li>
-</ul></li>
-<li><p><strong>Step 7:</strong> Create a <strong>free <a href="https://thingspeak.com/login?skipSSOCheck=true">ThingSpeak</a> account</strong></p>
-<ul>
-<li>This step requires Step 2 to be completed as it works mostly on the Chrome browser.</li>
-<li>Follow the steps on this page <a href="./thingspeak.html"><strong>ThingSpeak</strong></a> to finish account creation.</li>
-</ul></li>
+<li>Locate the downloaded installer file (usually in your “Downloads” folder).</li>
+<li>Double-click the installer executable (<code>.exe</code>) file to run it.</li>
 </ul>
-<!-- - **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
-<!-- # Connecting your laptop to the Raspberry Pi using VNC&reg; Viewer
-
-### **Select an option appropriate for your operating system**
-
-#### **MacOS:**
-- **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-mac-connect.qmd)
-
-#### **Windows:**
-
-- **Step 4:** **Laptop connection to the Raspberry Pi** using an [Ethernet cable and VNC Viewer](realvnc-windows-connect.qmd) -->
-<!-- - **Step 5:** [Install Python and Jupyter without Anaconda](python3-windows.qmd) -->
-<!-- Choose the option that best suits your needs and follow the respective installation instructions. -->
-<!-- Once you have an editor installed, you can start writing and running your code. Happy coding! -->
-<!-- will help you throughout this workshop, helping you write, execute, and code effectively. Select the appropriate option for your operating system, follow the installation instructions, and dive into the world of coding with confidence! 
-
- - Follow the instructions provided carefully and complete the required installations needed for this workshop. ([See prerequisites](install-editor.qmd))
- - Once you finish the **Steps 1, 2 and 3 in the installation instructions** in [prerequisites](install-editor.qmd), fill out the [Pre-workshop survey form](https://tinyurl.com/yrkacfd9). 
- - **You will be automatically entered into a raffle in the workshop on 10/12/2024 if you complete the installation check-in form.**
-::: -->
-<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-2.png" class="img-fluid figure-img"></p>
+<figcaption>Run Installer</figcaption>
+</figure>
+</div>
+</section>
+<section id="start-the-installation" class="level3">
+<h3 class="anchored" data-anchor-id="start-the-installation">4. Start the Installation</h3>
+<ul>
+<li>You will see the VS Code Setup Wizard. Click the “Next” button to begin the installation.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-3.png" class="img-fluid figure-img"></p>
+<figcaption>License Agreement</figcaption>
+</figure>
+</div>
+</section>
+<section id="choose-installation-options" class="level3">
+<h3 class="anchored" data-anchor-id="choose-installation-options">5. Choose Installation Options</h3>
+<ul>
+<li>Select the installation location (the default is usually fine) and click “Next.”</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-4.png" class="img-fluid figure-img"></p>
+<figcaption>Installation Location</figcaption>
+</figure>
+</div>
+<ul>
+<li>Choose additional tasks if desired (e.g., adding VS Code to the PATH). Then, click “Next.”</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-5.png" class="img-fluid figure-img"></p>
+<figcaption>Additional Tasks</figcaption>
+</figure>
+</div>
+</section>
+<section id="install-vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="install-vs-code">6. Install VS Code</h3>
+<p>Click the “Install” button to begin the installation process. This may take a few moments.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-6.png" class="img-fluid figure-img"></p>
+<figcaption>Install</figcaption>
+</figure>
+</div>
+</section>
+<section id="launch-visual-studio-code" class="level3">
+<h3 class="anchored" data-anchor-id="launch-visual-studio-code">7. Launch Visual Studio Code</h3>
+<p>After the installation is complete, you can leave the “Launch Visual Studio Code” option checked and click “Finish.”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-7.png" class="img-fluid figure-img"></p>
+<figcaption>Launch VS Code</figcaption>
+</figure>
+</div>
+</section>
+<section id="customize-vs-code-optional" class="level3">
+<h3 class="anchored" data-anchor-id="customize-vs-code-optional">8. Customize VS Code (<strong>Optional</strong>)</h3>
+<p>Upon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (<strong>Optional</strong>)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-8.png" class="img-fluid figure-img"></p>
+<figcaption>Customize VS Code</figcaption>
+</figure>
+</div>
+</section>
+<section id="open-extensions-tab" class="level3">
+<h3 class="anchored" data-anchor-id="open-extensions-tab">9. Open Extensions Tab</h3>
+<p>On the sidebar click on the Extensions tab.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-9.png" class="img-fluid figure-img"></p>
+<figcaption>Extensions tab</figcaption>
+</figure>
+</div>
+</section>
+<section id="search-python" class="level3">
+<h3 class="anchored" data-anchor-id="search-python">10. Search “Python”</h3>
+<p>In the search bar type “Python” and hit Enter.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-10.png" class="img-fluid figure-img"></p>
+<figcaption>Search Python</figcaption>
+</figure>
+</div>
+</section>
+<section id="install-python-extension" class="level3">
+<h3 class="anchored" data-anchor-id="install-python-extension">11. Install Python Extension</h3>
+<p>On the right panel click on the install button to install the extension.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-12.png" class="img-fluid figure-img"></p>
+<figcaption>Install Python Extension</figcaption>
+</figure>
+</div>
+</section>
+<section id="open-a-new-file" class="level3">
+<h3 class="anchored" data-anchor-id="open-a-new-file">12. Open a New File</h3>
+<p>From the top-right corner click on the three-bars and open a New File.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-13.png" class="img-fluid figure-img"></p>
+<figcaption>Open New File</figcaption>
+</figure>
+</div>
+</section>
+<section id="open-a-jupyter-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="open-a-jupyter-notebook">13. Open a Jupyter Notebook</h3>
+<p>From the drop down menu, select “Jupyter Notebook” as the file type.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/screenshots/vscode-windows/screenshot-14.png" class="img-fluid figure-img"></p>
+<figcaption>Open Jupyter Notebook</figcaption>
+</figure>
+</div>
 </section>
 </section>
-</section>
-<section id="additional-information-on-remote-access-software-vnc-viewer" class="level1">
-<h1>Additional information on remote access software: VNC® Viewer</h1>
-<p>VNC® Viewer is a remote access software application, that facilitates exchange data over the RFB protocol to allow the Viewer to control the Server’s screen remotely.</p>
-<p>Source: <a href="https://en.wikipedia.org/wiki/RealVNC">Wiki</a></p>
-<!-- <small>*Running your First Program*</small> -->
-<ul>
-<li><strong>How do I install VNC® Viewer?</strong></li>
-</ul>
-<p>Just run the installer on the device you want to control from and follow the instructions, or there’s MSIs for remote deployment under Windows. If you don’t have permission to install VNC® Viewer on desktop platforms, choose the standalone option.</p>
-<p>Source: <a href="https://www.realvnc.com/en/connect/download/viewer/?lai_vid=1jMrlad4GSrl&amp;lai_sr=10-14&amp;lai_sl=l&amp;lai_p=1">Real VNC FAQs</a></p>
-<ul>
-<li><strong>How do I control a remote computer?</strong></li>
-</ul>
-<p>If you have a keyboard and mouse in front of you, use them as you would normally. We don’t recommed the use of a mobile device for this workshop. However, if you’re on a mobile device, then your touchscreen acts as a mouse trackpad, with gestures mapped to mouse buttons.</p>
-<p>Source: <a href="https://www.realvnc.com/en/connect/download/viewer/?lai_vid=1jMrlad4GSrl&amp;lai_sr=10-14&amp;lai_sl=l&amp;lai_p=1">Real VNC FAQs</a></p>
-<ul>
-<li><strong>Do I need to license the software?</strong> No.&nbsp;VNC ® Viewer is always free to use. Just accept the EULA the first time you run.</li>
-</ul>
-<p>Source: <a href="https://www.realvnc.com/en/connect/download/viewer/?lai_vid=1jMrlad4GSrl&amp;lai_sr=10-14&amp;lai_sl=l&amp;lai_p=1">Real VNC FAQs</a></p>
-<!-- ## *What is an Editor?*
-
-In the world of programming, an editor is more than just a text processor. It's your creative workspace where you bring your code to life. Here are some key aspects of code editors:
-
-- **Text Editing**: At its core, an editor allows you to write, edit, and organize code in various programming languages. It provides features like syntax highlighting, auto-indentation, and code completion to enhance your coding experience.
-
-- **Code Execution**: Some editors, like Jupyter Notebook, not only allow you to write code but also execute it in an interactive and step-by-step manner. This is especially useful for data analysis and experimentation.
-
-- **Extensions and Plugins**: Code editors are highly customizable. You can enhance their functionality by installing extensions or plugins tailored to your needs. For example, you can add Python-specific tools or themes to make your editor visually appealing.
-
-- **Integrated Development Environments (IDEs)**: Some editors, such as Visual Studio Code (VS Code), go beyond text editing and offer a complete integrated development environment with debugging capabilities, version control integration, and more.
-
-- **Collaboration**: Many editors support collaborative coding, allowing multiple programmers to work on the same codebase simultaneously, which is crucial for group projects.
-
-<!-- In your CSCI1010 class, you'll use a combination of Anaconda, Jupyter, and VS Code:
-
-- **Anaconda**: Anaconda is a Python distribution that simplifies package management and environment setup. It's particularly valuable for data science projects, as it comes with a wide array of pre-installed libraries and tools.
-
-- **Jupyter**: Jupyter Notebook is an interactive environment that enables you to create and share documents containing live code, equations, visualizations, and narrative text. It's an excellent choice for data analysis and presenting your findings.
-
-- **VS Code**: Visual Studio Code (VS Code) is a versatile code editor that supports multiple programming languages and offers a rich ecosystem of extensions. Its user-friendly interface and powerful features make it a great choice for general programming tasks. -->
-<!-- <small><small>*Content on this webpage was partially generated using ChatGPT.*</small></small> -->
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Congratulations! You’ve successfully installed Visual Studio Code on your Windows computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.</p>
+<p>Feel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!</p>
+<p>For more information and documentation on Visual Studio Code, visit <a href="https://code.visualstudio.com/docs">https://code.visualstudio.com/docs</a>.</p>
 <!-- <br>
 <footer>
   <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
   Author: Kartik Bulusu<br>
   Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
-  &copy; 2024 All rights reserved</small></small></small></small></p>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
 </footer> -->
 
 

@@ -63,165 +63,368 @@
     "text": "Conclusion\nCongratulations! Thonny is now successfully installed on your macOS system.\nStart coding with Thonny, and if you need more guidance, consult the official documentation at https://docs.thonny.org/.\nFor any issues or questions, feel free to seek assistance from the Thonny community or refer to the documentation for troubleshooting tips."
   },
   {
-    "objectID": "vscode-windows.html",
-    "href": "vscode-windows.html",
+    "objectID": "github-repo.html",
+    "href": "github-repo.html",
     "title": "Visual Studio Code Installation Guide for Windows",
     "section": "",
-    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer. VS Code provides a powerful environment for coding and development across various programming languages."
+    "text": "This guide will walk you through the process of creating a github repo after installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer or Mac computer."
   },
   {
-    "objectID": "vscode-windows.html#introduction",
-    "href": "vscode-windows.html#introduction",
+    "objectID": "github-repo.html#introduction",
+    "href": "github-repo.html#introduction",
     "title": "Visual Studio Code Installation Guide for Windows",
     "section": "",
-    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer. VS Code provides a powerful environment for coding and development across various programming languages."
+    "text": "This guide will walk you through the process of creating a github repo after installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer or Mac computer."
   },
   {
-    "objectID": "vscode-windows.html#prerequisites",
-    "href": "vscode-windows.html#prerequisites",
+    "objectID": "github-repo.html#prerequisites",
+    "href": "github-repo.html#prerequisites",
     "title": "Visual Studio Code Installation Guide for Windows",
     "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
+    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation.\nCompleted Github account creation.\nCompleted installation of VS Code."
   },
   {
-    "objectID": "vscode-windows.html#installation-steps",
-    "href": "vscode-windows.html#installation-steps",
+    "objectID": "github-repo.html#steps-to-create-a-github-repo",
+    "href": "github-repo.html#steps-to-create-a-github-repo",
     "title": "Visual Studio Code Installation Guide for Windows",
-    "section": "Installation Steps",
-    "text": "Installation Steps\n\n1. Download Visual Studio Code\nVisit the official VS Code download page at https://code.visualstudio.com/download.\n\n\n2. Choose the Windows Installer\nClick on the “Windows” download link to download the Visual Studio Code installer for Windows.\n\n\n\nDownload VS Code\n\n\n\n\n3. Run the Installer\n\nLocate the downloaded installer file (usually in your “Downloads” folder).\nDouble-click the installer executable (.exe) file to run it.\n\n\n\n\nRun Installer\n\n\n\n\n4. Start the Installation\n\nYou will see the VS Code Setup Wizard. Click the “Next” button to begin the installation.\n\n\n\n\nLicense Agreement\n\n\n\n\n5. Choose Installation Options\n\nSelect the installation location (the default is usually fine) and click “Next.”\n\n\n\n\nInstallation Location\n\n\n\nChoose additional tasks if desired (e.g., adding VS Code to the PATH). Then, click “Next.”\n\n\n\n\nAdditional Tasks\n\n\n\n\n6. Install VS Code\nClick the “Install” button to begin the installation process. This may take a few moments.\n\n\n\nInstall\n\n\n\n\n7. Launch Visual Studio Code\nAfter the installation is complete, you can leave the “Launch Visual Studio Code” option checked and click “Finish.”\n\n\n\nLaunch VS Code\n\n\n\n\n8. Customize VS Code (Optional)\nUpon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (Optional)\n\n\n\nCustomize VS Code\n\n\n\n\n9. Open Extensions Tab\nOn the sidebar click on the Extensions tab.\n\n\n\nExtensions tab\n\n\n\n\n10. Search “Python”\nIn the search bar type “Python” and hit Enter.\n\n\n\nSearch Python\n\n\n\n\n11. Install Python Extension\nOn the right panel click on the install button to install the extension.\n\n\n\nInstall Python Extension\n\n\n\n\n12. Open a New File\nFrom the top-right corner click on the three-bars and open a New File.\n\n\n\nOpen New File\n\n\n\n\n13. Open a Jupyter Notebook\nFrom the drop down menu, select “Jupyter Notebook” as the file type.\n\n\n\nOpen Jupyter Notebook"
+    "section": "Steps to create a GitHub repo",
+    "text": "Steps to create a GitHub repo\n\n1. Login to your GitHub account\nVisit the official VS Code download page at https://code.visualstudio.com/download.\n\n\n2. Choose the Windows Installer\nClick on the “Windows” download link to download the Visual Studio Code installer for Windows.\n\n\n\nDownload VS Code\n\n\n\n\n3. Run the Installer\n\nLocate the downloaded installer file (usually in your “Downloads” folder).\nDouble-click the installer executable (.exe) file to run it.\n\n\n\n\nRun Installer\n\n\n\n\n4. Start the Installation\n\nYou will see the VS Code Setup Wizard. Click the “Next” button to begin the installation.\n\n\n\n\nLicense Agreement\n\n\n\n\n5. Choose Installation Options\n\nSelect the installation location (the default is usually fine) and click “Next.”\n\n\n\n\nInstallation Location\n\n\n\nChoose additional tasks if desired (e.g., adding VS Code to the PATH). Then, click “Next.”\n\n\n\n\nAdditional Tasks\n\n\n\n\n6. Install VS Code\nClick the “Install” button to begin the installation process. This may take a few moments.\n\n\n\nInstall\n\n\n\n\n7. Launch Visual Studio Code\nAfter the installation is complete, you can leave the “Launch Visual Studio Code” option checked and click “Finish.”\n\n\n\nLaunch VS Code\n\n\n\n\n8. Customize VS Code (Optional)\nUpon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (Optional)\n\n\n\nCustomize VS Code\n\n\n\n\n9. Open Extensions Tab\nOn the sidebar click on the Extensions tab.\n\n\n\nExtensions tab\n\n\n\n\n10. Search “Python”\nIn the search bar type “Python” and hit Enter.\n\n\n\nSearch Python\n\n\n\n\n11. Install Python Extension\nOn the right panel click on the install button to install the extension.\n\n\n\nInstall Python Extension\n\n\n\n\n12. Open a New File\nFrom the top-right corner click on the three-bars and open a New File.\n\n\n\nOpen New File\n\n\n\n\n13. Open a Jupyter Notebook\nFrom the drop down menu, select “Jupyter Notebook” as the file type.\n\n\n\nOpen Jupyter Notebook"
   },
   {
-    "objectID": "vscode-windows.html#conclusion",
-    "href": "vscode-windows.html#conclusion",
+    "objectID": "github-repo.html#conclusion",
+    "href": "github-repo.html#conclusion",
     "title": "Visual Studio Code Installation Guide for Windows",
     "section": "Conclusion",
     "text": "Conclusion\nCongratulations! You’ve successfully installed Visual Studio Code on your Windows computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.\nFeel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!\nFor more information and documentation on Visual Studio Code, visit https://code.visualstudio.com/docs."
   },
   {
-    "objectID": "anaconda-windows.html",
-    "href": "anaconda-windows.html",
-    "title": "Anaconda Installation Guide for Windows",
+    "objectID": "install-editor.html",
+    "href": "install-editor.html",
+    "title": "Much Needed Software Installations",
     "section": "",
-    "text": "This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your Windows computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing.\n\n\n\nBefore you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nSufficient disk space for the installation.\n\n\n\n\n\n\nVisit the Anaconda download page at https://www.anaconda.com/download.\n\n\n\nClick on the “Download” button under the Windows section to download the Anaconda installer for Windows.\n\n\n\nDownload Anaconda\n\n\n\n\n\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the installer executable (.exe) file to run it.\n\n\n\n\nRun Installer\n\n\n\n\n\n\nFollow the on-screen instructions to begin the installation.\nRead and accept the license agreement when prompted.\n\n\n\n\nRead Me\n\n\n\n\n\nLicense Agreement\n\n\n\nChoose the installation type. It’s recommended to select “Just me” unless you have specific reasons for a different choice.\n\n\n\n\nInstallation Type\n\n\n\nSelect the installation location (the default is usually fine).\n\n\n\n\nInstallation Location\n\n\n\n\n\nClick the “Install” button to begin the installation process. This may take a few minutes.\n\n\n\nInstall\n\n\n\n\n\nOnce the installation is complete, you will see a confirmation message. Click the “Next” button and proceed to finish.\n\n\n\nInstallation Complete\n\n\n\n\n\nClose Installation Wizard\n\n\n\n\n\n\n\n\nDon’t Update\n\n\n\n\n\n\n\n\nDon’t Log in/Sign up\n\n\n\n\n\n\nTo verify the installation launch a local Jupyter Server by clicking on the “launch” button for Jupyter Notebook.\n\n\n\nLaunch Jupyter Server\n\n\nYou should see a Jupyter Notebbok server launched in a browser window.\n\n\n\nJupyter Server Launched\n\n\n\n\n\n\nCongratulations! You’ve successfully installed Anaconda on your Windows computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.\nFor more information on using Anaconda, refer to the official documentation at https://docs.anaconda.com/.\nIf you encounter any issues or have questions, don’t hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
+    "text": "Note\n\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nREAD ME before you start installations on your personal computer:\n\nThe course is desinged with active learning modules with limited number of hardware components. It is required that these software be installed and working on your computers so that you may connect to the hardware provided and execute programs effectively.\nYou are strongly encouraged to bring your own personal machine or laptop and participate with the prerequisites installed.\nOnly Windows 10+ or Macintosh 12+ computers with QWERTY keyboards are supported for this course. The instructor has limited time to troubleshoot any OS-related problems.\n\nThe QWERTY (pronounced KWEHR-tee) keyboard is the standard typewriter and computer keyboard in countries that use a Latin-based alphabet.\n\nLinux OS-based laptops / personal computers and mobile /handheld-devices are not supported this semester for in-class usage on your personal machine.\nRaspberry Pi 4B with Raspberry Pi OS will be in all devices for IoT applications developed during the course.\n\nRaspberry Pi OS is a Unix-like operating system based on the Debian Linux distribution for the Raspberry Pi family of compact single-board computers. Source: wikipedia\n\n\n\n\n\n\nInstallation instructions\nThe following installation are required on your personal computers to move forward in this course amd need to be completed on first meeting day:\n\nSelect an option appropriate for your operating system\n\n\nMacOS:\n\n\nStep 1: Install Real VNC Viewer for Mac OS 12+\n\nDonwload the installation file here\nFollow installation instructions here\n\nStep 2: Download and install Thonny Python IDE for macOS\nStep 3: Download and install VS Code for macOS\nStep 4: Create a GitHub account\nStep 5: Create a GitHub repo\nStep 6: Download and install Chrome web browser\n\nSkip this step if you already have Chrome installed on your laptop.\n\nStep 7: Create a free ThingSpeak account\n\nThis step requires Step 2 to be completed as it works mostly on the Chrome browser.\nFollow the steps on this page ThingSpeak to finish account creation.\n\n\n\n\n\n\nWindows:\n\n\nStep 1: Install Real VNC Viewer for Windows 10+\n\nDonwload the installation file here\nFollow installation instructions here\n\nStep 2: Download and install Thonny Python IDE for Windows\nStep 3: Download and install VS Code for Windows\nStep 4: Create a GitHub account\nStep 5: Create a GitHub repo\nStep 6: Download and install Chrome web browser\n\nSkip this step if you already have Chrome installed on your laptop.\n\nStep 7: Create a free ThingSpeak account\n\nThis step requires Step 2 to be completed as it works mostly on the Chrome browser.\nFollow the steps on this page ThingSpeak to finish account creation.\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdditional information on remote access software: VNC® Viewer\nVNC® Viewer is a remote access software application, that facilitates exchange data over the RFB protocol to allow the Viewer to control the Server’s screen remotely.\nSource: Wiki\n\n\nHow do I install VNC® Viewer?\n\nJust run the installer on the device you want to control from and follow the instructions, or there’s MSIs for remote deployment under Windows. If you don’t have permission to install VNC® Viewer on desktop platforms, choose the standalone option.\nSource: Real VNC FAQs\n\nHow do I control a remote computer?\n\nIf you have a keyboard and mouse in front of you, use them as you would normally. We don’t recommed the use of a mobile device for this workshop. However, if you’re on a mobile device, then your touchscreen acts as a mouse trackpad, with gestures mapped to mouse buttons.\nSource: Real VNC FAQs\n\nDo I need to license the software? No. VNC ® Viewer is always free to use. Just accept the EULA the first time you run.\n\nSource: Real VNC FAQs"
   },
   {
-    "objectID": "anaconda-windows.html#introduction",
-    "href": "anaconda-windows.html#introduction",
-    "title": "Anaconda Installation Guide for Windows",
+    "objectID": "realvnc-mac.html",
+    "href": "realvnc-mac.html",
+    "title": "RealVNC Installation Guide for Mac",
     "section": "",
-    "text": "This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your Windows computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing."
+    "text": "Note\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.\nThis guide will walk you through the process of installing and setting up RealVNC on your Macintosh computer to enable remote desktop access."
   },
   {
-    "objectID": "anaconda-windows.html#prerequisites",
-    "href": "anaconda-windows.html#prerequisites",
-    "title": "Anaconda Installation Guide for Windows",
-    "section": "",
-    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nSufficient disk space for the installation."
-  },
-  {
-    "objectID": "anaconda-windows.html#installation-steps",
-    "href": "anaconda-windows.html#installation-steps",
-    "title": "Anaconda Installation Guide for Windows",
-    "section": "",
-    "text": "Visit the Anaconda download page at https://www.anaconda.com/download.\n\n\n\nClick on the “Download” button under the Windows section to download the Anaconda installer for Windows.\n\n\n\nDownload Anaconda\n\n\n\n\n\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the installer executable (.exe) file to run it.\n\n\n\n\nRun Installer\n\n\n\n\n\n\nFollow the on-screen instructions to begin the installation.\nRead and accept the license agreement when prompted.\n\n\n\n\nRead Me\n\n\n\n\n\nLicense Agreement\n\n\n\nChoose the installation type. It’s recommended to select “Just me” unless you have specific reasons for a different choice.\n\n\n\n\nInstallation Type\n\n\n\nSelect the installation location (the default is usually fine).\n\n\n\n\nInstallation Location\n\n\n\n\n\nClick the “Install” button to begin the installation process. This may take a few minutes.\n\n\n\nInstall\n\n\n\n\n\nOnce the installation is complete, you will see a confirmation message. Click the “Next” button and proceed to finish.\n\n\n\nInstallation Complete\n\n\n\n\n\nClose Installation Wizard\n\n\n\n\n\n\n\n\nDon’t Update\n\n\n\n\n\n\n\n\nDon’t Log in/Sign up\n\n\n\n\n\n\nTo verify the installation launch a local Jupyter Server by clicking on the “launch” button for Jupyter Notebook.\n\n\n\nLaunch Jupyter Server\n\n\nYou should see a Jupyter Notebbok server launched in a browser window.\n\n\n\nJupyter Server Launched"
-  },
-  {
-    "objectID": "anaconda-windows.html#conclusion",
-    "href": "anaconda-windows.html#conclusion",
-    "title": "Anaconda Installation Guide for Windows",
-    "section": "",
-    "text": "Congratulations! You’ve successfully installed Anaconda on your Windows computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.\nFor more information on using Anaconda, refer to the official documentation at https://docs.anaconda.com/.\nIf you encounter any issues or have questions, don’t hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
-  },
-  {
-    "objectID": "realvnc-windows.html",
-    "href": "realvnc-windows.html",
-    "title": "RealVNC Installation Guide for Windows",
-    "section": "",
-    "text": "Note\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.\nThis guide will walk you through the process of installing and setting up RealVNC on your Windows computer to enable remote desktop access."
-  },
-  {
-    "objectID": "realvnc-windows.html#prerequisites",
-    "href": "realvnc-windows.html#prerequisites",
-    "title": "RealVNC Installation Guide for Windows",
+    "objectID": "realvnc-mac.html#prerequisites",
+    "href": "realvnc-mac.html#prerequisites",
+    "title": "RealVNC Installation Guide for Mac",
     "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure you meet the following requirements:\n\nA Windows computer running a supported version of Windows (e.g., Windows 10, Windows 8, Windows 7).\nInternet access."
+    "text": "Prerequisites\nBefore you begin, ensure you meet the following requirements:\n\nA Macintosh computer running a supported version of MacOS (e.g., MacOS 12+).\nInternet access."
   },
   {
-    "objectID": "realvnc-windows.html#installation-steps",
-    "href": "realvnc-windows.html#installation-steps",
-    "title": "RealVNC Installation Guide for Windows",
+    "objectID": "realvnc-mac.html#installation-steps",
+    "href": "realvnc-mac.html#installation-steps",
+    "title": "RealVNC Installation Guide for Mac",
     "section": "Installation Steps",
-    "text": "Installation Steps\n\n0. Download the installation file here\n\n\n1. Install VNC Viewer\nLocate the downloaded installer file (e.g., VNC-Viewer-*.exe) and double-click it to run the installer. Once the installation is complete, click “Finish” to exit the installer.\n\n\n\nOpen Installer\n\n\n\n\n\nRun Installer\n\n\n\n\n3. Follow Installation Wizard\nThe installation wizard will guide you through the installation process. Click on “Customize installation” and “Deselect RealVNC Server” and hit “Install”.\n\n\n\nSelect English as the peferred language\n\n\n\n\n\nClick on Next\n\n\n\n\n\nAccept terms and conditions, and click Next.\n\n\n\n\n\nSelect installation location\n\n\n\n\n\nClick on Install\n\n\n\n\n\nFinish installation\n\n\n\n\n\n\n4. Launch RealVNC Viewer\nOnce the installation is complete, you can launch RealVNC Viewer from Start.\n\n\n\nOpen RealVNC\n\n\n\n\n\nWhen prompted click on “Sign in to get Started and hit cancel button\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nHit Cancel button"
+    "text": "Installation Steps\n\n\n0. Download the installation file here\n\n\n1. Install RealVNC Viewer:\nLocate the downloaded installer file (usually in your Downloads folder) and double-click on it to start the installation process and click on “Allow” when prompted.\n\n\n\nRun Installer\n\n\n\n\n\n2. Follow Installation Wizard\nThe installation wizard will guide you through the installation process. Move the VNC Viewer to Applications to finish the installation. \n\n\n\nMove VNC Viewer to Applications\n\n\n\n\n\n4. Launch RealVNC Viewer\nOnce the installation is complete, you can launch RealVNC Viewer from Launchpad.\n\n\n\n\nOpen RealVNC from Launchpad\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nDon’t Sign up"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "realvnc-mac.html#conclusion",
+    "href": "realvnc-mac.html#conclusion",
+    "title": "RealVNC Installation Guide for Mac",
+    "section": "Conclusion",
+    "text": "Conclusion\nCongratulations! You have successfully installed RealVNC Viewer on your Macintosh machine, allowing you to access and control remote computers with ease.\nFor more information and support, you can visit the RealVNC FAQa."
+  },
+  {
+    "objectID": "thonny-windows.html",
+    "href": "thonny-windows.html",
+    "title": "Thonny Installation Guide for Windows",
     "section": "",
-    "text": "Note\n\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University."
+    "text": "This guide provides a step-by-step walkthrough for installing Thonny, a user-friendly Python IDE, on your Windows computer. Thonny simplifies Python programming and is suitable for learners and developers."
   },
   {
-    "objectID": "about.html#goal",
-    "href": "about.html#goal",
-    "title": "About",
-    "section": "Goal",
-    "text": "Goal\nThe goal of the course is to introduce the students to the building blocks of the IoT ecosystem with emphasis on Edge Computing."
+    "objectID": "thonny-windows.html#introduction",
+    "href": "thonny-windows.html#introduction",
+    "title": "Thonny Installation Guide for Windows",
+    "section": "",
+    "text": "This guide provides a step-by-step walkthrough for installing Thonny, a user-friendly Python IDE, on your Windows computer. Thonny simplifies Python programming and is suitable for learners and developers."
   },
   {
-    "objectID": "about.html#learning-objectives",
-    "href": "about.html#learning-objectives",
-    "title": "About",
-    "section": "Learning objectives",
-    "text": "Learning objectives\n\nHands-on knowledge of Raspberry Pi hardware with Python programming language\nExposure to various sensors and actuators with hands-on exercises and in-class IoT projects\nExposure to IoT automation platforms such as ThingSpeak and IFTTT\nImplement Raspberry Pi-based IoT projects\nImplement edge computing strategies with the Raspberry Pi\nGain industry 4.0 exposure via invited speakers and case studies"
-  },
-  {
-    "objectID": "about.html#learning-outcomes",
-    "href": "about.html#learning-outcomes",
-    "title": "About",
-    "section": "Learning Outcomes",
-    "text": "Learning Outcomes\nAs a result of completing this course, students will be able to:\n\nUnderstand the IoT framework and implementation using the Raspberry Pi .\nPerform experiments aimed at collecting and analyzing data.\nDesign and write Python programs and work with IoT automation platforms.\nWork on engineering-innovation group projects."
-  },
-  {
-    "objectID": "about.html#additional-learning-outcomes",
-    "href": "about.html#additional-learning-outcomes",
-    "title": "About",
-    "section": "Additional Learning Outcomes",
-    "text": "Additional Learning Outcomes\n\nAbility to apply knowledge of programming and mathematics in the IoT framework\nAbility to design and conduct experiments, as well as to analyze and interpret IoT data\nAbility to identify, formulate, and solve physical problems using the IoT framework\nAbility to use the techniques, skills, and modern computing tools necessary for practical implementation of IoT technologies"
-  },
-  {
-    "objectID": "about.html#course-format",
-    "href": "about.html#course-format",
-    "title": "About",
-    "section": "Course format",
-    "text": "Course format\n\nLectures on the fundamentals of Raspberry Pi programming using Python programming language.\nLectures on sensing, actuation and automation and IoT connectivity methods.\nCase studies on IoT with Edge computing from a variety of sectors such as Agriculture, Home Automation, Healthcare etc.\nGuest lectures from Industry 4.0 and academic experts\nHands-on in-class work and Project-based deliverables\nInteractive quizzes and instant concept checks\nIndividual and/or group assignments and projects\nMidterm and Final projects"
-  },
-  {
-    "objectID": "about.html#audience-and-credit-level",
-    "href": "about.html#audience-and-credit-level",
-    "title": "About",
-    "section": "Audience and credit-level",
-    "text": "Audience and credit-level\nThe course is designed for junior-level undergraduate students as a 3-credit course."
-  },
-  {
-    "objectID": "about.html#prerequisites",
-    "href": "about.html#prerequisites",
-    "title": "About",
+    "objectID": "thonny-windows.html#prerequisites",
+    "href": "thonny-windows.html#prerequisites",
+    "title": "Thonny Installation Guide for Windows",
     "section": "Prerequisites",
-    "text": "Prerequisites\nNone"
+    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA Windows computer.\nAn active internet connection.\nAdequate disk space for the installation."
   },
   {
-    "objectID": "about.html#workload",
-    "href": "about.html#workload",
-    "title": "About",
-    "section": "Workload",
-    "text": "Workload\nThis course will have 150 minutes of lecture time per week, that includes approximately 60-75 minutes of hands-on, microlab work. The course requires between 2-4 hours per week on average for homework assignments or project-based deliverables."
+    "objectID": "thonny-windows.html#installation-steps",
+    "href": "thonny-windows.html#installation-steps",
+    "title": "Thonny Installation Guide for Windows",
+    "section": "Installation Steps",
+    "text": "Installation Steps\n\n1. Visit Thonny’s Official Website\nGo to https://www.thonny.org/ to access Thonny’s official download page.\n\n\n\nVisit Official Website\n\n\n\n\n2. Select the Windows Download Option\nHover your mouse over the “Windows” option in the “Download version…” box and click to initiate the download.\n\n\n\nDownload Thonny\n\n\n\n\n3. Execute the Installer\nLocate the downloaded file, typically in your “Downloads” folder. Double-click the Thonny installer to run it.\n\n\n\nDownload Thonny\n\n\n\n\n4. Confirm Installation\nClick “Next” to proceed with the installation.\n\n\n\nConfirm Installation\n\n\n\n\n5. Agree to License Agreements\nAccept the license agreements by clicking “Agree.”\n\n\n\nLicense Agreement\n\n\n\n\n6. Choose Installation Location\nSelect a location for installation; the default option is acceptable.\n\n\n\nInstallation Location\n\n\n\n\n7. Select Start Menu Folder\nChoose a start menu folder; the default option is acceptable.\n\n\n\nStart Menu Folder\n\n\n\n\n8. Create Desktop Icon\nOpt to create a desktop icon for easy access. Click “Create Desktop Icon”.\n\n\n\nDesktop Icon\n\n\n\n\n9. Initiate Installation\nClick “Install” to start the installation process.\n\n\n\nInstall Thonny\n\n\n\n\n10. Completion\nOnce the installation is complete, click “Finish.”\n\n\n\nInstallation Complete\n\n\n\n\n11. Optional Cleanup\nConsider moving the installer file to the Recycle bin if desired.\n\n\n\nMove to Recycle bin\n\n\n\n\n12. Launch Thonny\nThonny is now installed on your computer. Open the Thonny editor by clicking on the desktop icon. \n\n\n13. Verification\nConfirm the successful installation by viewing the Thonny screen window.\n\n\n\nVerification"
   },
   {
-    "objectID": "about.html#textbook-hardware-and-other-course-material",
-    "href": "about.html#textbook-hardware-and-other-course-material",
-    "title": "About",
-    "section": "Textbook, hardware and other course material",
-    "text": "Textbook, hardware and other course material\nThere is no textbook requirement for this course. All reading, hardware and course material will be provided by the instructor."
+    "objectID": "thonny-windows.html#conclusion",
+    "href": "thonny-windows.html#conclusion",
+    "title": "Thonny Installation Guide for Windows",
+    "section": "Conclusion",
+    "text": "Conclusion\nCongratulations! Thonny is successfully installed on your Windows computer.\nBegin your coding journey with Thonny, and for additional guidance, consult the official documentation at https://docs.thonny.org/.\nIf you encounter any issues or have questions, feel free to seek assistance from the Thonny community or refer to the documentation for troubleshooting tips."
+  },
+  {
+    "objectID": "vscode-mac.html",
+    "href": "vscode-mac.html",
+    "title": "Visual Studio Code Installation Guide for macOS",
+    "section": "",
+    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages."
+  },
+  {
+    "objectID": "vscode-mac.html#introduction",
+    "href": "vscode-mac.html#introduction",
+    "title": "Visual Studio Code Installation Guide for macOS",
+    "section": "",
+    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages."
+  },
+  {
+    "objectID": "vscode-mac.html#prerequisites",
+    "href": "vscode-mac.html#prerequisites",
+    "title": "Visual Studio Code Installation Guide for macOS",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nAdequate disk space for the installation."
+  },
+  {
+    "objectID": "vscode-mac.html#installation-steps",
+    "href": "vscode-mac.html#installation-steps",
+    "title": "Visual Studio Code Installation Guide for macOS",
+    "section": "Installation Steps",
+    "text": "Installation Steps\n\n1. Download Visual Studio Code\nVisit the official VS Code download page at https://code.visualstudio.com/download.\n\n\n2. Choose the macOS Installer\nClick on the “macOS” download link to download the Visual Studio Code for macOS.\n\n\n\nDownload VS Code\n\n\n\n\n\nAllow Download\n\n\n\n\n3. Install Visual Studio Code\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the VS Code disk image (.dmg) file to open it.\n\n\n\n\nLocate file\n\n\n\n\n\nOpen DMG\n\n\n\n\n\n4. Launch Visual Studio Code\nOpen your “Launchpad” and locate the “Visual Studio Code” application. Double-click it to launch the editor.\n\n\n\nLaunch VS Code\n\n\n\n\n5. Customize VS Code (Optional)\nUpon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (Optional)\n\n\n\nCustomize VS Code\n\n\n\n\n6. Open Extensions Tab\nOn the sidebar click on the Extensions tab.\n\n\n\nExtensions tab\n\n\n\n\n7. Select “Python” Extension\nUnder the “Popular” select “Python”.\n\n\n\nSearch Python\n\n\n\n\n8. Install Python Extension\nOn the right panel click on the install button to install the extension.\n\n\n\nInstall Python Extension\n\n\n\n\n9. Open a New File\nClick on the File tab from the toolbar and open a New File.\n\n\n\nOpen New File\n\n\n\n\n10. Open a Jupyter Notebook\nFrom the drop down menu, select “Jupyter Notebook” as the file type.\n\n\n\nOpen Jupyter Notebook"
+  },
+  {
+    "objectID": "vscode-mac.html#conclusion",
+    "href": "vscode-mac.html#conclusion",
+    "title": "Visual Studio Code Installation Guide for macOS",
+    "section": "Conclusion",
+    "text": "Conclusion\nCongratulations! You’ve successfully installed Visual Studio Code on your macOS computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.\nFeel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!\nFor more information and documentation on Visual Studio Code, visit https://code.visualstudio.com/docs."
+  },
+  {
+    "objectID": "instructor.html#dr.-kartik-bulusu-instructor",
+    "href": "instructor.html#dr.-kartik-bulusu-instructor",
+    "title": "Instructor",
+    "section": "Dr. Kartik Bulusu (Instructor)",
+    "text": "Dr. Kartik Bulusu (Instructor)\n\n\n\nDr. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC.\nHe designed taught a cross-disciplinary course titled, Internet of Things (IoT) and Edge Computing with applications in cyber-physical systems and speech processing.\nIn addition, he developed courses for first year engineering students on the engineering applications of Raspberry Pi, Python programming and mobile App development inspired by social innovation potential during the COVID-19 pandemic.\nHis research interests span the areas of human health and sustainable energy with focus on mechanics of biological fluids, low-cost energy technologies and applications of wavelet transforms. His current research work on biofluid dynamics of the cardiovasculature, rheology of biological fluids and applications of wavelet transforms has been supported by NSF and the Center for Biomimetics and Bioinspired Engineering (CBBE), GWU.\nHe developed a wavelet transform-based computational code (PIVlet) for the analysis of complex vortical patterns encountered in arterial blood flow. He has extensive knowledge of experimental fluid mechanics and non-invasive measurement techniques such as laser Doppler velocimetry (LDV), particle image velocimetry (PIV), schlieren imagery, magnetic resonance velocimetry (MRV) and molecular tagging velocimetry (MTV). Dr. Bulusu was recognized with the ASME Best Paper Award by the Advanced Energy Systems Division (AESD) Heat Pump Technical Committee and William and Louise Corcoron Award for contributing to the intellectual and social life of the School of Engineering and Applied Science, GWU.\n\n\n  Campus Address: SEH 3640\nEmail: bulusu at email dot gwu dot edu"
+  },
+  {
+    "objectID": "python3-windows.html",
+    "href": "python3-windows.html",
+    "title": "Installing Python on Windows",
+    "section": "",
+    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
+  },
+  {
+    "objectID": "python3-windows.html#prerequisites",
+    "href": "python3-windows.html#prerequisites",
+    "title": "Installing Python on Windows",
+    "section": "",
+    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
+  },
+  {
+    "objectID": "python3-windows.html#step-1-download-and-install-python",
+    "href": "python3-windows.html#step-1-download-and-install-python",
+    "title": "Installing Python on Windows",
+    "section": "Step 1: Download and Install Python",
+    "text": "Step 1: Download and Install Python\n\nVisit the official Python website: https://www.python.org/downloads/windows/.\nDownload the latest version of Python for Windows by clicking on the “Download Windows installer” button.\nOpen the downloaded installer (e.g., python-X.Y.Z-amd64.exe), where X.Y.Z represents the Python version, and follow the installation instructions. Make sure to check the box that says “Add Python X.Y to PATH.”"
+  },
+  {
+    "objectID": "python3-windows.html#step-2-verify-python-installation",
+    "href": "python3-windows.html#step-2-verify-python-installation",
+    "title": "Installing Python on Windows",
+    "section": "Step 2: Verify Python Installation",
+    "text": "Step 2: Verify Python Installation\nTo ensure that Python is installed correctly, open your Command Prompt and run the following command:\npython --version\nThis command will display the Python version, confirming that it’s successfully installed."
+  },
+  {
+    "objectID": "python3-windows.html#step-3-install-jupyter-notebook",
+    "href": "python3-windows.html#step-3-install-jupyter-notebook",
+    "title": "Installing Python on Windows",
+    "section": "Step 3: Install Jupyter Notebook",
+    "text": "Step 3: Install Jupyter Notebook\nTo install Jupyter Notebook, open your Command Prompt and run the following command:\npip install jupyter\nThis command will download and install Jupyter Notebook, a powerful tool for interactive Python development."
+  },
+  {
+    "objectID": "python3-windows.html#step-4-find-the-path-to-python-scripts-folder",
+    "href": "python3-windows.html#step-4-find-the-path-to-python-scripts-folder",
+    "title": "Installing Python on Windows",
+    "section": "Step 4: Find the Path to Python Scripts Folder",
+    "text": "Step 4: Find the Path to Python Scripts Folder\nTo locate the path to the Python scripts folder through the Command Prompt, follow these steps:\n\nOpen your Command Prompt.\nRun the following command to find the Python scripts folder:\n\npython -m site --user-site\nThis command will display the path to your user-specific Python libraries, including the scripts folder."
+  },
+  {
+    "objectID": "python3-windows.html#step-5-configure-python-bin-path",
+    "href": "python3-windows.html#step-5-configure-python-bin-path",
+    "title": "Installing Python on Windows",
+    "section": "Step 5: Configure Python Bin Path",
+    "text": "Step 5: Configure Python Bin Path\nNow that you have the path to the Python scripts folder, you can set up the Python bin path and add it to your system environment variables. Follow these steps:\n\nOpen the Start menu and search for “Environment Variables.”\nClick on “Edit the system environment variables.”\nIn the System Properties window, click the “Environment Variables” button.\nUnder the “System Variables” section, find and select the “Path” variable, then click the “Edit” button.\nClick “New” and add the path to your Python scripts folder that you obtained in Step 4.\nClick “OK” to save the changes."
+  },
+  {
+    "objectID": "python3-windows.html#step-6-launch-jupyter-notebook",
+    "href": "python3-windows.html#step-6-launch-jupyter-notebook",
+    "title": "Installing Python on Windows",
+    "section": "Step 6: Launch Jupyter Notebook",
+    "text": "Step 6: Launch Jupyter Notebook\nTo start Jupyter Notebook, open your Command Prompt and run the following command:\njupyter notebook\nThis command will launch the Jupyter Notebook in your default web browser, allowing you to create and run Python notebooks for interactive coding and data analysis.\nConclusion You have successfully installed Python, configured the user-specific Python bin path, and set up your system environment variables on your Windows system. You can now use Jupyter Notebook for interactive coding and data analysis.\nHappy coding!\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
+  },
+  {
+    "objectID": "weekly.html",
+    "href": "weekly.html",
+    "title": "Announcements",
+    "section": "",
+    "text": "To be updated as and when we get to hear exciting things during the course!\n\n\n\nPsymetis  [Click on link]\n\n\n\n\nA local northern Virginia start up that builds products integrating embedded AI enabled physical and cyber threat detection.\n\n\n\nInterested in working or interning here? [Click on link]\n\n\n\n\n\n\n\nCyber Truck Challenge  [Click on link]\n\n\n\n\nExciting event held each year for cyber security and systems engineering enthusiasts!\n\n\nConnecting next generation talent with the heavy duty trucking industry to keep vehicles secure."
+  },
+  {
+    "objectID": "python3-mac.html",
+    "href": "python3-mac.html",
+    "title": "Installing Python on macOS",
+    "section": "",
+    "text": "Before you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nAdequate disk space for the installation."
+  },
+  {
+    "objectID": "python3-mac.html#prerequisites",
+    "href": "python3-mac.html#prerequisites",
+    "title": "Installing Python on macOS",
+    "section": "",
+    "text": "Before you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nAdequate disk space for the installation."
+  },
+  {
+    "objectID": "python3-mac.html#step-1-download-and-install-python",
+    "href": "python3-mac.html#step-1-download-and-install-python",
+    "title": "Installing Python on macOS",
+    "section": "Step 1: Download and Install Python",
+    "text": "Step 1: Download and Install Python\n\nVisit the official Python website: https://www.python.org/downloads/macos/\nDownload the latest version of Python for macOS by clicking on the “Download Python X.Y.Z” button (replace X.Y.Z with the latest version).\nOpen the downloaded installer and follow the installation instructions. Make sure to check the box that says “Add Python X.Y to PATH.”"
+  },
+  {
+    "objectID": "python3-mac.html#step-2-verify-python-installation",
+    "href": "python3-mac.html#step-2-verify-python-installation",
+    "title": "Installing Python on macOS",
+    "section": "Step 2: Verify Python Installation",
+    "text": "Step 2: Verify Python Installation\nTo ensure that Python is installed correctly, open your terminal and run the following command:\npython3 --version"
+  },
+  {
+    "objectID": "python3-mac.html#step-3-install-jupyter-notebook",
+    "href": "python3-mac.html#step-3-install-jupyter-notebook",
+    "title": "Installing Python on macOS",
+    "section": "Step 3: Install Jupyter Notebook",
+    "text": "Step 3: Install Jupyter Notebook\nTo install Jupyter Notebook, run the following command in your terminal:\npip3 install jupyter\nThis command will download and install Jupyter Notebook, a powerful tool for interactive Python development."
+  },
+  {
+    "objectID": "python3-mac.html#step-4-export-python-bin-path-in-.zshrc",
+    "href": "python3-mac.html#step-4-export-python-bin-path-in-.zshrc",
+    "title": "Installing Python on macOS",
+    "section": "Step 4: Export Python Bin Path in ~/.zshrc",
+    "text": "Step 4: Export Python Bin Path in ~/.zshrc\nNow, you will export the Python bin path in your ~/.zshrc file to make it accessible in your terminal sessions. To open ~/.zshrc for editing, follow these simplified steps:\n\nOpen your terminal.\nType the following command and press Enter:\n\nopen -e ~/.zshrc\nThis command will open your ~/.zshrc file in the default text editor.\n\nIn the text editor, add the following line at the end of the file:\n\nexport PATH=$PATH:$(python3 -m site --user-base)/bin\n\nSave the file and close the text editor."
+  },
+  {
+    "objectID": "python3-mac.html#step-5-create-.zshrc-if-not-found",
+    "href": "python3-mac.html#step-5-create-.zshrc-if-not-found",
+    "title": "Installing Python on macOS",
+    "section": "Step 5: Create ~/.zshrc if Not Found",
+    "text": "Step 5: Create ~/.zshrc if Not Found\nIf you receive an error indicating that the ~/.zshrc file does not exist, you can create it using the following command:\ntouch ~/.zshrc\nThis command will create an empty ~/.zshrc file if it doesn’t already exist.\nNow repeat Step 4."
+  },
+  {
+    "objectID": "python3-mac.html#step-6-apply-changes",
+    "href": "python3-mac.html#step-6-apply-changes",
+    "title": "Installing Python on macOS",
+    "section": "Step 6: Apply Changes",
+    "text": "Step 6: Apply Changes\nTo apply the changes, either restart your terminal or run the following command:\nsource ~/.zshrc\nYour Python installation is now set up and configured for use on macOS."
+  },
+  {
+    "objectID": "python3-mac.html#step-7-launch-jupyter-notebook",
+    "href": "python3-mac.html#step-7-launch-jupyter-notebook",
+    "title": "Installing Python on macOS",
+    "section": "Step 7: Launch Jupyter Notebook",
+    "text": "Step 7: Launch Jupyter Notebook\nTo start Jupyter Notebook, open your terminal and run the following command:\njupyter notebook\nThis command will launch the Jupyter Notebook in your default web browser, allowing you to create and run Python notebooks for interactive coding and data analysis."
+  },
+  {
+    "objectID": "python3-mac.html#conclusion",
+    "href": "python3-mac.html#conclusion",
+    "title": "Installing Python on macOS",
+    "section": "Conclusion",
+    "text": "Conclusion\nYou have successfully installed Python and Jupyter Notebook on your macOS system, configured the user-specific Python bin path, and exported it to your ~/.zshrc file for easy access. You can now use Jupyter Notebook for interactive coding and data analysis.\nHappy coding!\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
+  },
+  {
+    "objectID": "anaconda-mac.html",
+    "href": "anaconda-mac.html",
+    "title": "Anaconda Installation Guide for macOS",
+    "section": "",
+    "text": "This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your macOS computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing.\n\n\n\nBefore you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nSufficient disk space for the installation.\n\n\n\n\n\n\nVisit the Anaconda download page at https://www.anaconda.com/download.\n\n\n\nClick on the “Download” button under the macOS section depending on you System-on-chip (Intel/M1/M2) to download the Anaconda installer for macOS.\n\n\n\nDownload Anaconda\n\n\n\n\n\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the Anaconda disk image (.dmg) file to open it and click on “Allow” when prompted.\n\n\n\n\nRun Installer\n\n\n\n\n\nAllow Installation\n\n\n\n\n\n\nFollow the on-screen instructions to begin the installation.\nRead and accept the license agreement when prompted.\n\n\n\n\nRead Me\n\n\n\n\n\nLicense Agreement\n\n\n\n\n\nClick the “Install” button to begin the installation process. This may take a few minutes.\n\n\n\nInstall\n\n\n\n\n\nOnce the installation is complete, you will see a confirmation message. Click the “Continue” button and finally close the installation wizard by clicking on the “Close” button.\n\n\n\nInstallation Complete\n\n\n\n\n\nClose Installation Wizard\n\n\n\n\n\n\n\n\nMove the Installer to Trash\n\n\n\n\n\n\n\n\nDon’t Update\n\n\n\n\n\n\n\n\nDon’t Log in/Sign up\n\n\n\n\n\n\nTo verify the installation launch a local Jupyter Server by clicking on the “launch” button for Jupyter Notebook.\n\n\n\nLaunch Jupyter Server\n\n\nYou should see a terminal open and the Jupyter Notebbok server launched in a browser window.\n\n\n\nJupyter Server Launched\n\n\n\n\n\n\nCongratulations! You’ve successfully installed Anaconda and Jupyter on your macOS computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.\nFor more information on using Anaconda, refer to the official documentation at https://docs.anaconda.com/.\nIf you encounter any issues or have questions, don’t hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
+  },
+  {
+    "objectID": "anaconda-mac.html#introduction",
+    "href": "anaconda-mac.html#introduction",
+    "title": "Anaconda Installation Guide for macOS",
+    "section": "",
+    "text": "This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your macOS computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing."
+  },
+  {
+    "objectID": "anaconda-mac.html#prerequisites",
+    "href": "anaconda-mac.html#prerequisites",
+    "title": "Anaconda Installation Guide for macOS",
+    "section": "",
+    "text": "Before you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nSufficient disk space for the installation."
+  },
+  {
+    "objectID": "anaconda-mac.html#installation-steps",
+    "href": "anaconda-mac.html#installation-steps",
+    "title": "Anaconda Installation Guide for macOS",
+    "section": "",
+    "text": "Visit the Anaconda download page at https://www.anaconda.com/download.\n\n\n\nClick on the “Download” button under the macOS section depending on you System-on-chip (Intel/M1/M2) to download the Anaconda installer for macOS.\n\n\n\nDownload Anaconda\n\n\n\n\n\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the Anaconda disk image (.dmg) file to open it and click on “Allow” when prompted.\n\n\n\n\nRun Installer\n\n\n\n\n\nAllow Installation\n\n\n\n\n\n\nFollow the on-screen instructions to begin the installation.\nRead and accept the license agreement when prompted.\n\n\n\n\nRead Me\n\n\n\n\n\nLicense Agreement\n\n\n\n\n\nClick the “Install” button to begin the installation process. This may take a few minutes.\n\n\n\nInstall\n\n\n\n\n\nOnce the installation is complete, you will see a confirmation message. Click the “Continue” button and finally close the installation wizard by clicking on the “Close” button.\n\n\n\nInstallation Complete\n\n\n\n\n\nClose Installation Wizard\n\n\n\n\n\n\n\n\nMove the Installer to Trash\n\n\n\n\n\n\n\n\nDon’t Update\n\n\n\n\n\n\n\n\nDon’t Log in/Sign up\n\n\n\n\n\n\nTo verify the installation launch a local Jupyter Server by clicking on the “launch” button for Jupyter Notebook.\n\n\n\nLaunch Jupyter Server\n\n\nYou should see a terminal open and the Jupyter Notebbok server launched in a browser window.\n\n\n\nJupyter Server Launched"
+  },
+  {
+    "objectID": "anaconda-mac.html#conclusion",
+    "href": "anaconda-mac.html#conclusion",
+    "title": "Anaconda Installation Guide for macOS",
+    "section": "",
+    "text": "Congratulations! You’ve successfully installed Anaconda and Jupyter on your macOS computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.\nFor more information on using Anaconda, refer to the official documentation at https://docs.anaconda.com/.\nIf you encounter any issues or have questions, don’t hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
+  },
+  {
+    "objectID": "realvnc-mac-connect.html",
+    "href": "realvnc-mac-connect.html",
+    "title": "Connect the Raspberry Pi on Macintosh machine",
+    "section": "",
+    "text": "Note\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University."
+  },
+  {
+    "objectID": "realvnc-mac-connect.html#prerequisites",
+    "href": "realvnc-mac-connect.html#prerequisites",
+    "title": "Connect the Raspberry Pi on Macintosh machine",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nBefore you begin, ensure that you have already installed RealVNC on your Mac."
+  },
+  {
+    "objectID": "realvnc-mac-connect.html#establish-a-connection",
+    "href": "realvnc-mac-connect.html#establish-a-connection",
+    "title": "Connect the Raspberry Pi on Macintosh machine",
+    "section": "Establish a Connection",
+    "text": "Establish a Connection\n\n1. Launch RealVNC Viewer\nLaunch VNC Viewer from the Launchpad.\n\n\n\nOpen RealVNC Viewer\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nDon’t Sign up\n\n\n\n\n2. Connect to a Raspberry Pi\nTo connect to a Raspberry Pi, launch RealVNC Viewer, enter the “raspberrypi.local” on the box into the address bar, and hit Enter. You may need to enter the login credentials for the Raspberry Pi.\n\n\n\n\nConnect to the Pi\n\n\n\n\n\n3. Enjoy Remote Desktop Access\nYou are now connected to the Raspberry Pi, and you can control it.\n\n\n\nRemote Connection Successfull\n\n\n\n\n4. Disconnect\nTo disconnect from the Raspberry Pi, simply close the VNC Viewer window."
+  },
+  {
+    "objectID": "realvnc-mac-connect.html#conclusion",
+    "href": "realvnc-mac-connect.html#conclusion",
+    "title": "Connect the Raspberry Pi on Macintosh machine",
+    "section": "Conclusion",
+    "text": "Conclusion\nYou have successfully established connection to the Pi, allowing you to access and control it with ease.\nFor more information and support, you can visit the RealVNC website."
+  },
+  {
+    "objectID": "thingspeak.html",
+    "href": "thingspeak.html",
+    "title": "Creating a ThingSpeak Account",
+    "section": "",
+    "text": "Note\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University."
+  },
+  {
+    "objectID": "thingspeak.html#steps-to-create-your-thingspeak-account",
+    "href": "thingspeak.html#steps-to-create-your-thingspeak-account",
+    "title": "Creating a ThingSpeak Account",
+    "section": "Steps to Create Your ThingSpeak Account",
+    "text": "Steps to Create Your ThingSpeak Account\nThingSpeak is a platform for the Internet of Things (IoT) that allows you to collect, analyze, and visualize data from sensors. Follow these steps to create your account:\n\n1. Access the MathWorks Sign-In Page\nNavigate to the MathWorks sign-in page. You’ll see a form similar to this:\n\n\n\nMathWorks sign-in page\n\n\n\n\n2. Create a New Account\nIf you don’t have an account, click on “Create one!” to start the account creation process.\n\n\n\nCreate MathWorks Account\n\n\nFill in your details, including your email address, location, and name.\n\n\n3. Use Your Work or University Email\nFor accessing your organization’s MATLAB license, it’s recommended to use your work or university email.\n\n\n\nPersonal Email Detected\n\n\nIf you entered a personal email, you may see a warning. You can choose to continue with your personal email or switch to a work/university email.\n\n\n4. Verify Your Email\nAfter submitting your information, you’ll need to verify your email address.\n\n\n\nVerify Your MathWorks Account\n\n\nCheck your inbox for the verification email and follow the link provided.\n\n\n5. Complete Your Profile\nThe final step is to set up your password and accept the terms of service.\n\n\n\nFinish Your Profile\n\n\nCreate a strong password and make sure to check the box to accept the Online Services Agreement.\n\n\n6. Access ThingSpeak\nOnce your MathWorks account is set up, you can use these credentials to log into ThingSpeak and start your IoT projects!\nRemember, ThingSpeak offers powerful tools for data aggregation and analytics, allowing you to connect smart devices and develop algorithms for sensor analytics using MATLAB."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Internet-of-Things for Engineers",
+    "section": "",
+    "text": "From introduction to interface with the physical world\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n\n\nImportant\n\n\n\nRegistartion: Course registation is NOW OPEN. \n\n\n\n\nCourse and Contact Information\n\n\n\nMAE 6291: Introduction to IoT and Edge Computing Applications\nSemester: Spring 2025\nCredits: 3\nMeeting times: Wednesday 3:30 PM — 6:00 PM (Lectures and Laboratory every session)\nLocation: SEH B2020\nCourse website \nInstructor information can be found here\n\n\n\n \n\nIoT by Alla Zaleuska from Noun Project\n\n\n\n\n\nGithub Repo (updated weekly)\nTBA\n\n\n\nCourse description\nThe Internet of Things (IoT) is perceived as a collection of smart, connected devices with the ability to send and receive data; “internet” encapsulates connectivity and “things” are devices (electronic or mechanical) that can be adapted toward connectivity.\nThere is an alternative perception of IoT, as a design methodology that facilitates interoperability and connectivity of physical systems. Edge computing is a strategy for localized analysis of data, ahead in the pipeline of powerful data center- or cloud-based post-processing.\nThis course explores these aspects of IoT framework and expands it with edge computing ideology via practical and hands-on exposure. Students will be exposed to the IoT framework using a variety of sensors, IoT automation and connectivity in \\(\\mu\\)-labs (micro-labs) that incorporate the Raspberry Pi (single-board computer) and Python programming language.\nThe students will learn about how IoT with edge computing capability is going to be the backbone of the Industry 4.0."
   },
   {
     "objectID": "policies.html",
@@ -322,333 +525,165 @@
     "text": "Academic Integrity Code\nAcademic dishonesty is defined as cheating of any kind, including misrepresenting one’s own work, taking credit for the work of others without crediting them and without appropriate authorization, and the fabrication of information. You are not allowed to collaborate on the home works and lab assignments; for programming projects and hardware lab assignments, you can work in teams only if they are designated as team projects (labs). Unless otherwise specified, you cannot search for solutions or code on the web – but you can use any code that is included in the textbook or lecture notes (but please cite them). I will be using a SW tool that checks for program code similarities – any pair of programs or written reports with greater than 10% similarity will be closely examined.\nThe Office of Academic Integrity maintains a permanent record of the violation. More information is available from the Office of Academic Integrity at https://studentconduct.gwu.edu/academic-integrity. The University’s “Guide of Academic Integrity in Online Learning Environments” is available at https://studentconduct.gwu.edu/guide-academic-integrity-online-learning-environments. Contact information: rights@gwu.edu or 202-994-6757."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Internet-of-Things for Engineers",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "From introduction to interface with the physical world\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n\n\nImportant\n\n\n\nRegistartion: Course registation is NOW OPEN. \n\n\n\n\nCourse and Contact Information\n\n\n\nMAE 6291: Introduction to IoT and Edge Computing Applications\nSemester: Spring 2025\nCredits: 3\nMeeting times: Wednesday 3:30 PM — 6:00 PM (Lectures and Laboratory every session)\nLocation: SEH B2020\nCourse website \nInstructor information can be found here\n\n\n\n \n\nIoT by Alla Zaleuska from Noun Project\n\n\n\n\n\nGithub Repo (updated weekly)\nTBA\n\n\n\nCourse description\nThe Internet of Things (IoT) is perceived as a collection of smart, connected devices with the ability to send and receive data; “internet” encapsulates connectivity and “things” are devices (electronic or mechanical) that can be adapted toward connectivity.\nThere is an alternative perception of IoT, as a design methodology that facilitates interoperability and connectivity of physical systems. Edge computing is a strategy for localized analysis of data, ahead in the pipeline of powerful data center- or cloud-based post-processing.\nThis course explores these aspects of IoT framework and expands it with edge computing ideology via practical and hands-on exposure. Students will be exposed to the IoT framework using a variety of sensors, IoT automation and connectivity in \\(\\mu\\)-labs (micro-labs) that incorporate the Raspberry Pi (single-board computer) and Python programming language.\nThe students will learn about how IoT with edge computing capability is going to be the backbone of the Industry 4.0."
+    "text": "Note\n\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University."
   },
   {
-    "objectID": "thingspeak.html",
-    "href": "thingspeak.html",
-    "title": "Creating a ThingSpeak Account",
-    "section": "",
-    "text": "Note\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University."
+    "objectID": "about.html#goal",
+    "href": "about.html#goal",
+    "title": "About",
+    "section": "Goal",
+    "text": "Goal\nThe goal of the course is to introduce the students to the building blocks of the IoT ecosystem with emphasis on Edge Computing."
   },
   {
-    "objectID": "thingspeak.html#steps-to-create-your-thingspeak-account",
-    "href": "thingspeak.html#steps-to-create-your-thingspeak-account",
-    "title": "Creating a ThingSpeak Account",
-    "section": "Steps to Create Your ThingSpeak Account",
-    "text": "Steps to Create Your ThingSpeak Account\nThingSpeak is a platform for the Internet of Things (IoT) that allows you to collect, analyze, and visualize data from sensors. Follow these steps to create your account:\n\n1. Access the MathWorks Sign-In Page\nNavigate to the MathWorks sign-in page. You’ll see a form similar to this:\n\n\n\nMathWorks sign-in page\n\n\n\n\n2. Create a New Account\nIf you don’t have an account, click on “Create one!” to start the account creation process.\n\n\n\nCreate MathWorks Account\n\n\nFill in your details, including your email address, location, and name.\n\n\n3. Use Your Work or University Email\nFor accessing your organization’s MATLAB license, it’s recommended to use your work or university email.\n\n\n\nPersonal Email Detected\n\n\nIf you entered a personal email, you may see a warning. You can choose to continue with your personal email or switch to a work/university email.\n\n\n4. Verify Your Email\nAfter submitting your information, you’ll need to verify your email address.\n\n\n\nVerify Your MathWorks Account\n\n\nCheck your inbox for the verification email and follow the link provided.\n\n\n5. Complete Your Profile\nThe final step is to set up your password and accept the terms of service.\n\n\n\nFinish Your Profile\n\n\nCreate a strong password and make sure to check the box to accept the Online Services Agreement.\n\n\n6. Access ThingSpeak\nOnce your MathWorks account is set up, you can use these credentials to log into ThingSpeak and start your IoT projects!\nRemember, ThingSpeak offers powerful tools for data aggregation and analytics, allowing you to connect smart devices and develop algorithms for sensor analytics using MATLAB."
+    "objectID": "about.html#learning-objectives",
+    "href": "about.html#learning-objectives",
+    "title": "About",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nHands-on knowledge of Raspberry Pi hardware with Python programming language\nExposure to various sensors and actuators with hands-on exercises and in-class IoT projects\nExposure to IoT automation platforms such as ThingSpeak and IFTTT\nImplement Raspberry Pi-based IoT projects\nImplement edge computing strategies with the Raspberry Pi\nGain industry 4.0 exposure via invited speakers and case studies"
   },
   {
-    "objectID": "realvnc-mac-connect.html",
-    "href": "realvnc-mac-connect.html",
-    "title": "Connect the Raspberry Pi on Macintosh machine",
-    "section": "",
-    "text": "Note\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University."
+    "objectID": "about.html#learning-outcomes",
+    "href": "about.html#learning-outcomes",
+    "title": "About",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nAs a result of completing this course, students will be able to:\n\nUnderstand the IoT framework and implementation using the Raspberry Pi .\nPerform experiments aimed at collecting and analyzing data.\nDesign and write Python programs and work with IoT automation platforms.\nWork on engineering-innovation group projects."
   },
   {
-    "objectID": "realvnc-mac-connect.html#prerequisites",
-    "href": "realvnc-mac-connect.html#prerequisites",
-    "title": "Connect the Raspberry Pi on Macintosh machine",
+    "objectID": "about.html#additional-learning-outcomes",
+    "href": "about.html#additional-learning-outcomes",
+    "title": "About",
+    "section": "Additional Learning Outcomes",
+    "text": "Additional Learning Outcomes\n\nAbility to apply knowledge of programming and mathematics in the IoT framework\nAbility to design and conduct experiments, as well as to analyze and interpret IoT data\nAbility to identify, formulate, and solve physical problems using the IoT framework\nAbility to use the techniques, skills, and modern computing tools necessary for practical implementation of IoT technologies"
+  },
+  {
+    "objectID": "about.html#course-format",
+    "href": "about.html#course-format",
+    "title": "About",
+    "section": "Course format",
+    "text": "Course format\n\nLectures on the fundamentals of Raspberry Pi programming using Python programming language.\nLectures on sensing, actuation and automation and IoT connectivity methods.\nCase studies on IoT with Edge computing from a variety of sectors such as Agriculture, Home Automation, Healthcare etc.\nGuest lectures from Industry 4.0 and academic experts\nHands-on in-class work and Project-based deliverables\nInteractive quizzes and instant concept checks\nIndividual and/or group assignments and projects\nMidterm and Final projects"
+  },
+  {
+    "objectID": "about.html#audience-and-credit-level",
+    "href": "about.html#audience-and-credit-level",
+    "title": "About",
+    "section": "Audience and credit-level",
+    "text": "Audience and credit-level\nThe course is designed for junior-level undergraduate students as a 3-credit course."
+  },
+  {
+    "objectID": "about.html#prerequisites",
+    "href": "about.html#prerequisites",
+    "title": "About",
     "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure that you have already installed RealVNC on your Mac."
+    "text": "Prerequisites\nNone"
   },
   {
-    "objectID": "realvnc-mac-connect.html#establish-a-connection",
-    "href": "realvnc-mac-connect.html#establish-a-connection",
-    "title": "Connect the Raspberry Pi on Macintosh machine",
-    "section": "Establish a Connection",
-    "text": "Establish a Connection\n\n1. Launch RealVNC Viewer\nLaunch VNC Viewer from the Launchpad.\n\n\n\nOpen RealVNC Viewer\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nDon’t Sign up\n\n\n\n\n2. Connect to a Raspberry Pi\nTo connect to a Raspberry Pi, launch RealVNC Viewer, enter the “raspberrypi.local” on the box into the address bar, and hit Enter. You may need to enter the login credentials for the Raspberry Pi.\n\n\n\n\nConnect to the Pi\n\n\n\n\n\n3. Enjoy Remote Desktop Access\nYou are now connected to the Raspberry Pi, and you can control it.\n\n\n\nRemote Connection Successfull\n\n\n\n\n4. Disconnect\nTo disconnect from the Raspberry Pi, simply close the VNC Viewer window."
+    "objectID": "about.html#workload",
+    "href": "about.html#workload",
+    "title": "About",
+    "section": "Workload",
+    "text": "Workload\nThis course will have 150 minutes of lecture time per week, that includes approximately 60-75 minutes of hands-on, microlab work. The course requires between 2-4 hours per week on average for homework assignments or project-based deliverables."
   },
   {
-    "objectID": "realvnc-mac-connect.html#conclusion",
-    "href": "realvnc-mac-connect.html#conclusion",
-    "title": "Connect the Raspberry Pi on Macintosh machine",
-    "section": "Conclusion",
-    "text": "Conclusion\nYou have successfully established connection to the Pi, allowing you to access and control it with ease.\nFor more information and support, you can visit the RealVNC website."
+    "objectID": "about.html#textbook-hardware-and-other-course-material",
+    "href": "about.html#textbook-hardware-and-other-course-material",
+    "title": "About",
+    "section": "Textbook, hardware and other course material",
+    "text": "Textbook, hardware and other course material\nThere is no textbook requirement for this course. All reading, hardware and course material will be provided by the instructor."
   },
   {
-    "objectID": "anaconda-mac.html",
-    "href": "anaconda-mac.html",
-    "title": "Anaconda Installation Guide for macOS",
+    "objectID": "realvnc-windows.html",
+    "href": "realvnc-windows.html",
+    "title": "RealVNC Installation Guide for Windows",
     "section": "",
-    "text": "This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your macOS computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing.\n\n\n\nBefore you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nSufficient disk space for the installation.\n\n\n\n\n\n\nVisit the Anaconda download page at https://www.anaconda.com/download.\n\n\n\nClick on the “Download” button under the macOS section depending on you System-on-chip (Intel/M1/M2) to download the Anaconda installer for macOS.\n\n\n\nDownload Anaconda\n\n\n\n\n\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the Anaconda disk image (.dmg) file to open it and click on “Allow” when prompted.\n\n\n\n\nRun Installer\n\n\n\n\n\nAllow Installation\n\n\n\n\n\n\nFollow the on-screen instructions to begin the installation.\nRead and accept the license agreement when prompted.\n\n\n\n\nRead Me\n\n\n\n\n\nLicense Agreement\n\n\n\n\n\nClick the “Install” button to begin the installation process. This may take a few minutes.\n\n\n\nInstall\n\n\n\n\n\nOnce the installation is complete, you will see a confirmation message. Click the “Continue” button and finally close the installation wizard by clicking on the “Close” button.\n\n\n\nInstallation Complete\n\n\n\n\n\nClose Installation Wizard\n\n\n\n\n\n\n\n\nMove the Installer to Trash\n\n\n\n\n\n\n\n\nDon’t Update\n\n\n\n\n\n\n\n\nDon’t Log in/Sign up\n\n\n\n\n\n\nTo verify the installation launch a local Jupyter Server by clicking on the “launch” button for Jupyter Notebook.\n\n\n\nLaunch Jupyter Server\n\n\nYou should see a terminal open and the Jupyter Notebbok server launched in a browser window.\n\n\n\nJupyter Server Launched\n\n\n\n\n\n\nCongratulations! You’ve successfully installed Anaconda and Jupyter on your macOS computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.\nFor more information on using Anaconda, refer to the official documentation at https://docs.anaconda.com/.\nIf you encounter any issues or have questions, don’t hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
+    "text": "Note\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.\nThis guide will walk you through the process of installing and setting up RealVNC on your Windows computer to enable remote desktop access."
   },
   {
-    "objectID": "anaconda-mac.html#introduction",
-    "href": "anaconda-mac.html#introduction",
-    "title": "Anaconda Installation Guide for macOS",
-    "section": "",
-    "text": "This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your macOS computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing."
-  },
-  {
-    "objectID": "anaconda-mac.html#prerequisites",
-    "href": "anaconda-mac.html#prerequisites",
-    "title": "Anaconda Installation Guide for macOS",
-    "section": "",
-    "text": "Before you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nSufficient disk space for the installation."
-  },
-  {
-    "objectID": "anaconda-mac.html#installation-steps",
-    "href": "anaconda-mac.html#installation-steps",
-    "title": "Anaconda Installation Guide for macOS",
-    "section": "",
-    "text": "Visit the Anaconda download page at https://www.anaconda.com/download.\n\n\n\nClick on the “Download” button under the macOS section depending on you System-on-chip (Intel/M1/M2) to download the Anaconda installer for macOS.\n\n\n\nDownload Anaconda\n\n\n\n\n\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the Anaconda disk image (.dmg) file to open it and click on “Allow” when prompted.\n\n\n\n\nRun Installer\n\n\n\n\n\nAllow Installation\n\n\n\n\n\n\nFollow the on-screen instructions to begin the installation.\nRead and accept the license agreement when prompted.\n\n\n\n\nRead Me\n\n\n\n\n\nLicense Agreement\n\n\n\n\n\nClick the “Install” button to begin the installation process. This may take a few minutes.\n\n\n\nInstall\n\n\n\n\n\nOnce the installation is complete, you will see a confirmation message. Click the “Continue” button and finally close the installation wizard by clicking on the “Close” button.\n\n\n\nInstallation Complete\n\n\n\n\n\nClose Installation Wizard\n\n\n\n\n\n\n\n\nMove the Installer to Trash\n\n\n\n\n\n\n\n\nDon’t Update\n\n\n\n\n\n\n\n\nDon’t Log in/Sign up\n\n\n\n\n\n\nTo verify the installation launch a local Jupyter Server by clicking on the “launch” button for Jupyter Notebook.\n\n\n\nLaunch Jupyter Server\n\n\nYou should see a terminal open and the Jupyter Notebbok server launched in a browser window.\n\n\n\nJupyter Server Launched"
-  },
-  {
-    "objectID": "anaconda-mac.html#conclusion",
-    "href": "anaconda-mac.html#conclusion",
-    "title": "Anaconda Installation Guide for macOS",
-    "section": "",
-    "text": "Congratulations! You’ve successfully installed Anaconda and Jupyter on your macOS computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.\nFor more information on using Anaconda, refer to the official documentation at https://docs.anaconda.com/.\nIf you encounter any issues or have questions, don’t hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
-  },
-  {
-    "objectID": "python3-mac.html",
-    "href": "python3-mac.html",
-    "title": "Installing Python on macOS",
-    "section": "",
-    "text": "Before you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nAdequate disk space for the installation."
-  },
-  {
-    "objectID": "python3-mac.html#prerequisites",
-    "href": "python3-mac.html#prerequisites",
-    "title": "Installing Python on macOS",
-    "section": "",
-    "text": "Before you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nAdequate disk space for the installation."
-  },
-  {
-    "objectID": "python3-mac.html#step-1-download-and-install-python",
-    "href": "python3-mac.html#step-1-download-and-install-python",
-    "title": "Installing Python on macOS",
-    "section": "Step 1: Download and Install Python",
-    "text": "Step 1: Download and Install Python\n\nVisit the official Python website: https://www.python.org/downloads/macos/\nDownload the latest version of Python for macOS by clicking on the “Download Python X.Y.Z” button (replace X.Y.Z with the latest version).\nOpen the downloaded installer and follow the installation instructions. Make sure to check the box that says “Add Python X.Y to PATH.”"
-  },
-  {
-    "objectID": "python3-mac.html#step-2-verify-python-installation",
-    "href": "python3-mac.html#step-2-verify-python-installation",
-    "title": "Installing Python on macOS",
-    "section": "Step 2: Verify Python Installation",
-    "text": "Step 2: Verify Python Installation\nTo ensure that Python is installed correctly, open your terminal and run the following command:\npython3 --version"
-  },
-  {
-    "objectID": "python3-mac.html#step-3-install-jupyter-notebook",
-    "href": "python3-mac.html#step-3-install-jupyter-notebook",
-    "title": "Installing Python on macOS",
-    "section": "Step 3: Install Jupyter Notebook",
-    "text": "Step 3: Install Jupyter Notebook\nTo install Jupyter Notebook, run the following command in your terminal:\npip3 install jupyter\nThis command will download and install Jupyter Notebook, a powerful tool for interactive Python development."
-  },
-  {
-    "objectID": "python3-mac.html#step-4-export-python-bin-path-in-.zshrc",
-    "href": "python3-mac.html#step-4-export-python-bin-path-in-.zshrc",
-    "title": "Installing Python on macOS",
-    "section": "Step 4: Export Python Bin Path in ~/.zshrc",
-    "text": "Step 4: Export Python Bin Path in ~/.zshrc\nNow, you will export the Python bin path in your ~/.zshrc file to make it accessible in your terminal sessions. To open ~/.zshrc for editing, follow these simplified steps:\n\nOpen your terminal.\nType the following command and press Enter:\n\nopen -e ~/.zshrc\nThis command will open your ~/.zshrc file in the default text editor.\n\nIn the text editor, add the following line at the end of the file:\n\nexport PATH=$PATH:$(python3 -m site --user-base)/bin\n\nSave the file and close the text editor."
-  },
-  {
-    "objectID": "python3-mac.html#step-5-create-.zshrc-if-not-found",
-    "href": "python3-mac.html#step-5-create-.zshrc-if-not-found",
-    "title": "Installing Python on macOS",
-    "section": "Step 5: Create ~/.zshrc if Not Found",
-    "text": "Step 5: Create ~/.zshrc if Not Found\nIf you receive an error indicating that the ~/.zshrc file does not exist, you can create it using the following command:\ntouch ~/.zshrc\nThis command will create an empty ~/.zshrc file if it doesn’t already exist.\nNow repeat Step 4."
-  },
-  {
-    "objectID": "python3-mac.html#step-6-apply-changes",
-    "href": "python3-mac.html#step-6-apply-changes",
-    "title": "Installing Python on macOS",
-    "section": "Step 6: Apply Changes",
-    "text": "Step 6: Apply Changes\nTo apply the changes, either restart your terminal or run the following command:\nsource ~/.zshrc\nYour Python installation is now set up and configured for use on macOS."
-  },
-  {
-    "objectID": "python3-mac.html#step-7-launch-jupyter-notebook",
-    "href": "python3-mac.html#step-7-launch-jupyter-notebook",
-    "title": "Installing Python on macOS",
-    "section": "Step 7: Launch Jupyter Notebook",
-    "text": "Step 7: Launch Jupyter Notebook\nTo start Jupyter Notebook, open your terminal and run the following command:\njupyter notebook\nThis command will launch the Jupyter Notebook in your default web browser, allowing you to create and run Python notebooks for interactive coding and data analysis."
-  },
-  {
-    "objectID": "python3-mac.html#conclusion",
-    "href": "python3-mac.html#conclusion",
-    "title": "Installing Python on macOS",
-    "section": "Conclusion",
-    "text": "Conclusion\nYou have successfully installed Python and Jupyter Notebook on your macOS system, configured the user-specific Python bin path, and exported it to your ~/.zshrc file for easy access. You can now use Jupyter Notebook for interactive coding and data analysis.\nHappy coding!\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
-  },
-  {
-    "objectID": "weekly.html",
-    "href": "weekly.html",
-    "title": "Announcements",
-    "section": "",
-    "text": "To be updated as and when we get to hear exciting things during the course!\n\n\n\nPsymetis  [Click on link]\n\n\n\n\nA local northern Virginia start up that builds products integrating embedded AI enabled physical and cyber threat detection.\n\n\n\nInterested in working or interning here? [Click on link]\n\n\n\n\n\n\n\nCyber Truck Challenge  [Click on link]\n\n\n\n\nExciting event held each year for cyber security and systems engineering enthusiasts!\n\n\nConnecting next generation talent with the heavy duty trucking industry to keep vehicles secure."
-  },
-  {
-    "objectID": "python3-windows.html",
-    "href": "python3-windows.html",
-    "title": "Installing Python on Windows",
-    "section": "",
-    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
-  },
-  {
-    "objectID": "python3-windows.html#prerequisites",
-    "href": "python3-windows.html#prerequisites",
-    "title": "Installing Python on Windows",
-    "section": "",
-    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
-  },
-  {
-    "objectID": "python3-windows.html#step-1-download-and-install-python",
-    "href": "python3-windows.html#step-1-download-and-install-python",
-    "title": "Installing Python on Windows",
-    "section": "Step 1: Download and Install Python",
-    "text": "Step 1: Download and Install Python\n\nVisit the official Python website: https://www.python.org/downloads/windows/.\nDownload the latest version of Python for Windows by clicking on the “Download Windows installer” button.\nOpen the downloaded installer (e.g., python-X.Y.Z-amd64.exe), where X.Y.Z represents the Python version, and follow the installation instructions. Make sure to check the box that says “Add Python X.Y to PATH.”"
-  },
-  {
-    "objectID": "python3-windows.html#step-2-verify-python-installation",
-    "href": "python3-windows.html#step-2-verify-python-installation",
-    "title": "Installing Python on Windows",
-    "section": "Step 2: Verify Python Installation",
-    "text": "Step 2: Verify Python Installation\nTo ensure that Python is installed correctly, open your Command Prompt and run the following command:\npython --version\nThis command will display the Python version, confirming that it’s successfully installed."
-  },
-  {
-    "objectID": "python3-windows.html#step-3-install-jupyter-notebook",
-    "href": "python3-windows.html#step-3-install-jupyter-notebook",
-    "title": "Installing Python on Windows",
-    "section": "Step 3: Install Jupyter Notebook",
-    "text": "Step 3: Install Jupyter Notebook\nTo install Jupyter Notebook, open your Command Prompt and run the following command:\npip install jupyter\nThis command will download and install Jupyter Notebook, a powerful tool for interactive Python development."
-  },
-  {
-    "objectID": "python3-windows.html#step-4-find-the-path-to-python-scripts-folder",
-    "href": "python3-windows.html#step-4-find-the-path-to-python-scripts-folder",
-    "title": "Installing Python on Windows",
-    "section": "Step 4: Find the Path to Python Scripts Folder",
-    "text": "Step 4: Find the Path to Python Scripts Folder\nTo locate the path to the Python scripts folder through the Command Prompt, follow these steps:\n\nOpen your Command Prompt.\nRun the following command to find the Python scripts folder:\n\npython -m site --user-site\nThis command will display the path to your user-specific Python libraries, including the scripts folder."
-  },
-  {
-    "objectID": "python3-windows.html#step-5-configure-python-bin-path",
-    "href": "python3-windows.html#step-5-configure-python-bin-path",
-    "title": "Installing Python on Windows",
-    "section": "Step 5: Configure Python Bin Path",
-    "text": "Step 5: Configure Python Bin Path\nNow that you have the path to the Python scripts folder, you can set up the Python bin path and add it to your system environment variables. Follow these steps:\n\nOpen the Start menu and search for “Environment Variables.”\nClick on “Edit the system environment variables.”\nIn the System Properties window, click the “Environment Variables” button.\nUnder the “System Variables” section, find and select the “Path” variable, then click the “Edit” button.\nClick “New” and add the path to your Python scripts folder that you obtained in Step 4.\nClick “OK” to save the changes."
-  },
-  {
-    "objectID": "python3-windows.html#step-6-launch-jupyter-notebook",
-    "href": "python3-windows.html#step-6-launch-jupyter-notebook",
-    "title": "Installing Python on Windows",
-    "section": "Step 6: Launch Jupyter Notebook",
-    "text": "Step 6: Launch Jupyter Notebook\nTo start Jupyter Notebook, open your Command Prompt and run the following command:\njupyter notebook\nThis command will launch the Jupyter Notebook in your default web browser, allowing you to create and run Python notebooks for interactive coding and data analysis.\nConclusion You have successfully installed Python, configured the user-specific Python bin path, and set up your system environment variables on your Windows system. You can now use Jupyter Notebook for interactive coding and data analysis.\nHappy coding!\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
-  },
-  {
-    "objectID": "instructor.html#dr.-kartik-bulusu-instructor",
-    "href": "instructor.html#dr.-kartik-bulusu-instructor",
-    "title": "Instructor",
-    "section": "Dr. Kartik Bulusu (Instructor)",
-    "text": "Dr. Kartik Bulusu (Instructor)\n\n\n\nDr. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC.\nHe designed taught a cross-disciplinary course titled, Internet of Things (IoT) and Edge Computing with applications in cyber-physical systems and speech processing.\nIn addition, he developed courses for first year engineering students on the engineering applications of Raspberry Pi, Python programming and mobile App development inspired by social innovation potential during the COVID-19 pandemic.\nHis research interests span the areas of human health and sustainable energy with focus on mechanics of biological fluids, low-cost energy technologies and applications of wavelet transforms. His current research work on biofluid dynamics of the cardiovasculature, rheology of biological fluids and applications of wavelet transforms has been supported by NSF and the Center for Biomimetics and Bioinspired Engineering (CBBE), GWU.\nHe developed a wavelet transform-based computational code (PIVlet) for the analysis of complex vortical patterns encountered in arterial blood flow. He has extensive knowledge of experimental fluid mechanics and non-invasive measurement techniques such as laser Doppler velocimetry (LDV), particle image velocimetry (PIV), schlieren imagery, magnetic resonance velocimetry (MRV) and molecular tagging velocimetry (MTV). Dr. Bulusu was recognized with the ASME Best Paper Award by the Advanced Energy Systems Division (AESD) Heat Pump Technical Committee and William and Louise Corcoron Award for contributing to the intellectual and social life of the School of Engineering and Applied Science, GWU.\n\n\n  Campus Address: SEH 3640\nEmail: bulusu at email dot gwu dot edu"
-  },
-  {
-    "objectID": "vscode-mac.html",
-    "href": "vscode-mac.html",
-    "title": "Visual Studio Code Installation Guide for macOS",
-    "section": "",
-    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages."
-  },
-  {
-    "objectID": "vscode-mac.html#introduction",
-    "href": "vscode-mac.html#introduction",
-    "title": "Visual Studio Code Installation Guide for macOS",
-    "section": "",
-    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages."
-  },
-  {
-    "objectID": "vscode-mac.html#prerequisites",
-    "href": "vscode-mac.html#prerequisites",
-    "title": "Visual Studio Code Installation Guide for macOS",
+    "objectID": "realvnc-windows.html#prerequisites",
+    "href": "realvnc-windows.html#prerequisites",
+    "title": "RealVNC Installation Guide for Windows",
     "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nAdequate disk space for the installation."
+    "text": "Prerequisites\nBefore you begin, ensure you meet the following requirements:\n\nA Windows computer running a supported version of Windows (e.g., Windows 10, Windows 8, Windows 7).\nInternet access."
   },
   {
-    "objectID": "vscode-mac.html#installation-steps",
-    "href": "vscode-mac.html#installation-steps",
-    "title": "Visual Studio Code Installation Guide for macOS",
+    "objectID": "realvnc-windows.html#installation-steps",
+    "href": "realvnc-windows.html#installation-steps",
+    "title": "RealVNC Installation Guide for Windows",
     "section": "Installation Steps",
-    "text": "Installation Steps\n\n1. Download Visual Studio Code\nVisit the official VS Code download page at https://code.visualstudio.com/download.\n\n\n2. Choose the macOS Installer\nClick on the “macOS” download link to download the Visual Studio Code for macOS.\n\n\n\nDownload VS Code\n\n\n\n\n\nAllow Download\n\n\n\n\n3. Install Visual Studio Code\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the VS Code disk image (.dmg) file to open it.\n\n\n\n\nLocate file\n\n\n\n\n\nOpen DMG\n\n\n\n\n\n4. Launch Visual Studio Code\nOpen your “Launchpad” and locate the “Visual Studio Code” application. Double-click it to launch the editor.\n\n\n\nLaunch VS Code\n\n\n\n\n5. Customize VS Code (Optional)\nUpon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (Optional)\n\n\n\nCustomize VS Code\n\n\n\n\n6. Open Extensions Tab\nOn the sidebar click on the Extensions tab.\n\n\n\nExtensions tab\n\n\n\n\n7. Select “Python” Extension\nUnder the “Popular” select “Python”.\n\n\n\nSearch Python\n\n\n\n\n8. Install Python Extension\nOn the right panel click on the install button to install the extension.\n\n\n\nInstall Python Extension\n\n\n\n\n9. Open a New File\nClick on the File tab from the toolbar and open a New File.\n\n\n\nOpen New File\n\n\n\n\n10. Open a Jupyter Notebook\nFrom the drop down menu, select “Jupyter Notebook” as the file type.\n\n\n\nOpen Jupyter Notebook"
+    "text": "Installation Steps\n\n0. Download the installation file here\n\n\n1. Install VNC Viewer\nLocate the downloaded installer file (e.g., VNC-Viewer-*.exe) and double-click it to run the installer. Once the installation is complete, click “Finish” to exit the installer.\n\n\n\nOpen Installer\n\n\n\n\n\nRun Installer\n\n\n\n\n3. Follow Installation Wizard\nThe installation wizard will guide you through the installation process. Click on “Customize installation” and “Deselect RealVNC Server” and hit “Install”.\n\n\n\nSelect English as the peferred language\n\n\n\n\n\nClick on Next\n\n\n\n\n\nAccept terms and conditions, and click Next.\n\n\n\n\n\nSelect installation location\n\n\n\n\n\nClick on Install\n\n\n\n\n\nFinish installation\n\n\n\n\n\n\n4. Launch RealVNC Viewer\nOnce the installation is complete, you can launch RealVNC Viewer from Start.\n\n\n\nOpen RealVNC\n\n\n\n\n\nWhen prompted click on “Sign in to get Started and hit cancel button\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nHit Cancel button"
   },
   {
-    "objectID": "vscode-mac.html#conclusion",
-    "href": "vscode-mac.html#conclusion",
-    "title": "Visual Studio Code Installation Guide for macOS",
-    "section": "Conclusion",
-    "text": "Conclusion\nCongratulations! You’ve successfully installed Visual Studio Code on your macOS computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.\nFeel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!\nFor more information and documentation on Visual Studio Code, visit https://code.visualstudio.com/docs.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
-  },
-  {
-    "objectID": "thonny-windows.html",
-    "href": "thonny-windows.html",
-    "title": "Thonny Installation Guide for Windows",
+    "objectID": "anaconda-windows.html",
+    "href": "anaconda-windows.html",
+    "title": "Anaconda Installation Guide for Windows",
     "section": "",
-    "text": "This guide provides a step-by-step walkthrough for installing Thonny, a user-friendly Python IDE, on your Windows computer. Thonny simplifies Python programming and is suitable for learners and developers."
+    "text": "This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your Windows computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing.\n\n\n\nBefore you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nSufficient disk space for the installation.\n\n\n\n\n\n\nVisit the Anaconda download page at https://www.anaconda.com/download.\n\n\n\nClick on the “Download” button under the Windows section to download the Anaconda installer for Windows.\n\n\n\nDownload Anaconda\n\n\n\n\n\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the installer executable (.exe) file to run it.\n\n\n\n\nRun Installer\n\n\n\n\n\n\nFollow the on-screen instructions to begin the installation.\nRead and accept the license agreement when prompted.\n\n\n\n\nRead Me\n\n\n\n\n\nLicense Agreement\n\n\n\nChoose the installation type. It’s recommended to select “Just me” unless you have specific reasons for a different choice.\n\n\n\n\nInstallation Type\n\n\n\nSelect the installation location (the default is usually fine).\n\n\n\n\nInstallation Location\n\n\n\n\n\nClick the “Install” button to begin the installation process. This may take a few minutes.\n\n\n\nInstall\n\n\n\n\n\nOnce the installation is complete, you will see a confirmation message. Click the “Next” button and proceed to finish.\n\n\n\nInstallation Complete\n\n\n\n\n\nClose Installation Wizard\n\n\n\n\n\n\n\n\nDon’t Update\n\n\n\n\n\n\n\n\nDon’t Log in/Sign up\n\n\n\n\n\n\nTo verify the installation launch a local Jupyter Server by clicking on the “launch” button for Jupyter Notebook.\n\n\n\nLaunch Jupyter Server\n\n\nYou should see a Jupyter Notebbok server launched in a browser window.\n\n\n\nJupyter Server Launched\n\n\n\n\n\n\nCongratulations! You’ve successfully installed Anaconda on your Windows computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.\nFor more information on using Anaconda, refer to the official documentation at https://docs.anaconda.com/.\nIf you encounter any issues or have questions, don’t hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
   },
   {
-    "objectID": "thonny-windows.html#introduction",
-    "href": "thonny-windows.html#introduction",
-    "title": "Thonny Installation Guide for Windows",
+    "objectID": "anaconda-windows.html#introduction",
+    "href": "anaconda-windows.html#introduction",
+    "title": "Anaconda Installation Guide for Windows",
     "section": "",
-    "text": "This guide provides a step-by-step walkthrough for installing Thonny, a user-friendly Python IDE, on your Windows computer. Thonny simplifies Python programming and is suitable for learners and developers."
+    "text": "This guide will walk you through the process of installing Anaconda, a popular Python distribution, on your Windows computer. Anaconda provides a convenient way to manage Python packages and environments for data science and scientific computing."
   },
   {
-    "objectID": "thonny-windows.html#prerequisites",
-    "href": "thonny-windows.html#prerequisites",
-    "title": "Thonny Installation Guide for Windows",
+    "objectID": "anaconda-windows.html#prerequisites",
+    "href": "anaconda-windows.html#prerequisites",
+    "title": "Anaconda Installation Guide for Windows",
+    "section": "",
+    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nSufficient disk space for the installation."
+  },
+  {
+    "objectID": "anaconda-windows.html#installation-steps",
+    "href": "anaconda-windows.html#installation-steps",
+    "title": "Anaconda Installation Guide for Windows",
+    "section": "",
+    "text": "Visit the Anaconda download page at https://www.anaconda.com/download.\n\n\n\nClick on the “Download” button under the Windows section to download the Anaconda installer for Windows.\n\n\n\nDownload Anaconda\n\n\n\n\n\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the installer executable (.exe) file to run it.\n\n\n\n\nRun Installer\n\n\n\n\n\n\nFollow the on-screen instructions to begin the installation.\nRead and accept the license agreement when prompted.\n\n\n\n\nRead Me\n\n\n\n\n\nLicense Agreement\n\n\n\nChoose the installation type. It’s recommended to select “Just me” unless you have specific reasons for a different choice.\n\n\n\n\nInstallation Type\n\n\n\nSelect the installation location (the default is usually fine).\n\n\n\n\nInstallation Location\n\n\n\n\n\nClick the “Install” button to begin the installation process. This may take a few minutes.\n\n\n\nInstall\n\n\n\n\n\nOnce the installation is complete, you will see a confirmation message. Click the “Next” button and proceed to finish.\n\n\n\nInstallation Complete\n\n\n\n\n\nClose Installation Wizard\n\n\n\n\n\n\n\n\nDon’t Update\n\n\n\n\n\n\n\n\nDon’t Log in/Sign up\n\n\n\n\n\n\nTo verify the installation launch a local Jupyter Server by clicking on the “launch” button for Jupyter Notebook.\n\n\n\nLaunch Jupyter Server\n\n\nYou should see a Jupyter Notebbok server launched in a browser window.\n\n\n\nJupyter Server Launched"
+  },
+  {
+    "objectID": "anaconda-windows.html#conclusion",
+    "href": "anaconda-windows.html#conclusion",
+    "title": "Anaconda Installation Guide for Windows",
+    "section": "",
+    "text": "Congratulations! You’ve successfully installed Anaconda on your Windows computer. You can now use Anaconda to create Python environments, manage packages, and work on data science projects.\nFor more information on using Anaconda, refer to the official documentation at https://docs.anaconda.com/.\nIf you encounter any issues or have questions, don’t hesitate to seek help from the Anaconda community or consult the documentation for troubleshooting tips.\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
+  },
+  {
+    "objectID": "vscode-windows.html",
+    "href": "vscode-windows.html",
+    "title": "Visual Studio Code Installation Guide for Windows",
+    "section": "",
+    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer. VS Code provides a powerful environment for coding and development across various programming languages."
+  },
+  {
+    "objectID": "vscode-windows.html#introduction",
+    "href": "vscode-windows.html#introduction",
+    "title": "Visual Studio Code Installation Guide for Windows",
+    "section": "",
+    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer. VS Code provides a powerful environment for coding and development across various programming languages."
+  },
+  {
+    "objectID": "vscode-windows.html#prerequisites",
+    "href": "vscode-windows.html#prerequisites",
+    "title": "Visual Studio Code Installation Guide for Windows",
     "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA Windows computer.\nAn active internet connection.\nAdequate disk space for the installation."
+    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
   },
   {
-    "objectID": "thonny-windows.html#installation-steps",
-    "href": "thonny-windows.html#installation-steps",
-    "title": "Thonny Installation Guide for Windows",
+    "objectID": "vscode-windows.html#installation-steps",
+    "href": "vscode-windows.html#installation-steps",
+    "title": "Visual Studio Code Installation Guide for Windows",
     "section": "Installation Steps",
-    "text": "Installation Steps\n\n1. Visit Thonny’s Official Website\nGo to https://www.thonny.org/ to access Thonny’s official download page.\n\n\n\nVisit Official Website\n\n\n\n\n2. Select the Windows Download Option\nHover your mouse over the “Windows” option in the “Download version…” box and click to initiate the download.\n\n\n\nDownload Thonny\n\n\n\n\n3. Execute the Installer\nLocate the downloaded file, typically in your “Downloads” folder. Double-click the Thonny installer to run it.\n\n\n\nDownload Thonny\n\n\n\n\n4. Confirm Installation\nClick “Next” to proceed with the installation.\n\n\n\nConfirm Installation\n\n\n\n\n5. Agree to License Agreements\nAccept the license agreements by clicking “Agree.”\n\n\n\nLicense Agreement\n\n\n\n\n6. Choose Installation Location\nSelect a location for installation; the default option is acceptable.\n\n\n\nInstallation Location\n\n\n\n\n7. Select Start Menu Folder\nChoose a start menu folder; the default option is acceptable.\n\n\n\nStart Menu Folder\n\n\n\n\n8. Create Desktop Icon\nOpt to create a desktop icon for easy access. Click “Create Desktop Icon”.\n\n\n\nDesktop Icon\n\n\n\n\n9. Initiate Installation\nClick “Install” to start the installation process.\n\n\n\nInstall Thonny\n\n\n\n\n10. Completion\nOnce the installation is complete, click “Finish.”\n\n\n\nInstallation Complete\n\n\n\n\n11. Optional Cleanup\nConsider moving the installer file to the Recycle bin if desired.\n\n\n\nMove to Recycle bin\n\n\n\n\n12. Launch Thonny\nThonny is now installed on your computer. Open the Thonny editor by clicking on the desktop icon. \n\n\n13. Verification\nConfirm the successful installation by viewing the Thonny screen window.\n\n\n\nVerification"
+    "text": "Installation Steps\n\n1. Download Visual Studio Code\nVisit the official VS Code download page at https://code.visualstudio.com/download.\n\n\n2. Choose the Windows Installer\nClick on the “Windows” download link to download the Visual Studio Code installer for Windows.\n\n\n\nDownload VS Code\n\n\n\n\n3. Run the Installer\n\nLocate the downloaded installer file (usually in your “Downloads” folder).\nDouble-click the installer executable (.exe) file to run it.\n\n\n\n\nRun Installer\n\n\n\n\n4. Start the Installation\n\nYou will see the VS Code Setup Wizard. Click the “Next” button to begin the installation.\n\n\n\n\nLicense Agreement\n\n\n\n\n5. Choose Installation Options\n\nSelect the installation location (the default is usually fine) and click “Next.”\n\n\n\n\nInstallation Location\n\n\n\nChoose additional tasks if desired (e.g., adding VS Code to the PATH). Then, click “Next.”\n\n\n\n\nAdditional Tasks\n\n\n\n\n6. Install VS Code\nClick the “Install” button to begin the installation process. This may take a few moments.\n\n\n\nInstall\n\n\n\n\n7. Launch Visual Studio Code\nAfter the installation is complete, you can leave the “Launch Visual Studio Code” option checked and click “Finish.”\n\n\n\nLaunch VS Code\n\n\n\n\n8. Customize VS Code (Optional)\nUpon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (Optional)\n\n\n\nCustomize VS Code\n\n\n\n\n9. Open Extensions Tab\nOn the sidebar click on the Extensions tab.\n\n\n\nExtensions tab\n\n\n\n\n10. Search “Python”\nIn the search bar type “Python” and hit Enter.\n\n\n\nSearch Python\n\n\n\n\n11. Install Python Extension\nOn the right panel click on the install button to install the extension.\n\n\n\nInstall Python Extension\n\n\n\n\n12. Open a New File\nFrom the top-right corner click on the three-bars and open a New File.\n\n\n\nOpen New File\n\n\n\n\n13. Open a Jupyter Notebook\nFrom the drop down menu, select “Jupyter Notebook” as the file type.\n\n\n\nOpen Jupyter Notebook"
   },
   {
-    "objectID": "thonny-windows.html#conclusion",
-    "href": "thonny-windows.html#conclusion",
-    "title": "Thonny Installation Guide for Windows",
+    "objectID": "vscode-windows.html#conclusion",
+    "href": "vscode-windows.html#conclusion",
+    "title": "Visual Studio Code Installation Guide for Windows",
     "section": "Conclusion",
-    "text": "Conclusion\nCongratulations! Thonny is successfully installed on your Windows computer.\nBegin your coding journey with Thonny, and for additional guidance, consult the official documentation at https://docs.thonny.org/.\nIf you encounter any issues or have questions, feel free to seek assistance from the Thonny community or refer to the documentation for troubleshooting tips."
-  },
-  {
-    "objectID": "realvnc-mac.html",
-    "href": "realvnc-mac.html",
-    "title": "RealVNC Installation Guide for Mac",
-    "section": "",
-    "text": "Note\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.\nThis guide will walk you through the process of installing and setting up RealVNC on your Macintosh computer to enable remote desktop access."
-  },
-  {
-    "objectID": "realvnc-mac.html#prerequisites",
-    "href": "realvnc-mac.html#prerequisites",
-    "title": "RealVNC Installation Guide for Mac",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure you meet the following requirements:\n\nA Macintosh computer running a supported version of MacOS (e.g., MacOS 12+).\nInternet access."
-  },
-  {
-    "objectID": "realvnc-mac.html#installation-steps",
-    "href": "realvnc-mac.html#installation-steps",
-    "title": "RealVNC Installation Guide for Mac",
-    "section": "Installation Steps",
-    "text": "Installation Steps\n\n\n0. Download the installation file here\n\n\n1. Install RealVNC Viewer:\nLocate the downloaded installer file (usually in your Downloads folder) and double-click on it to start the installation process and click on “Allow” when prompted.\n\n\n\nRun Installer\n\n\n\n\n\n2. Follow Installation Wizard\nThe installation wizard will guide you through the installation process. Move the VNC Viewer to Applications to finish the installation. \n\n\n\nMove VNC Viewer to Applications\n\n\n\n\n\n4. Launch RealVNC Viewer\nOnce the installation is complete, you can launch RealVNC Viewer from Launchpad.\n\n\n\n\nOpen RealVNC from Launchpad\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nDon’t Sign up"
-  },
-  {
-    "objectID": "realvnc-mac.html#conclusion",
-    "href": "realvnc-mac.html#conclusion",
-    "title": "RealVNC Installation Guide for Mac",
-    "section": "Conclusion",
-    "text": "Conclusion\nCongratulations! You have successfully installed RealVNC Viewer on your Macintosh machine, allowing you to access and control remote computers with ease.\nFor more information and support, you can visit the RealVNC FAQa."
-  },
-  {
-    "objectID": "install-editor.html",
-    "href": "install-editor.html",
-    "title": "Much Needed Software Installations",
-    "section": "",
-    "text": "Note\n\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nREAD ME before you start installations on your personal computer:\n\nThe course is desinged with active learning modules with limited number of hardware components. It is required that these software be installed and working on your computers so that you may connect to the hardware provided and execute programs effectively.\nYou are strongly encouraged to bring your own personal machine or laptop and participate with the prerequisites installed.\nOnly Windows 10+ or Macintosh 12+ computers with QWERTY keyboards are supported for this course. The instructor has limited time to troubleshoot any OS-related problems.\n\nThe QWERTY (pronounced KWEHR-tee) keyboard is the standard typewriter and computer keyboard in countries that use a Latin-based alphabet.\n\nLinux OS-based laptops / personal computers and mobile /handheld-devices are not supported this semester for in-class usage on your personal machine.\nRaspberry Pi 4B with Raspberry Pi OS will be in all devices for IoT applications developed during the course.\n\nRaspberry Pi OS is a Unix-like operating system based on the Debian Linux distribution for the Raspberry Pi family of compact single-board computers. Source: wikipedia\n\n\n\n\n\n\nInstallation instructions\nThe following installation are required on your personal computers to move forward in this course amd need to be completed on first meeting day:\n\nSelect an option appropriate for your operating system\n\n\nMacOS:\n\n\nStep 1: Install Real VNC Viewer for Mac OS 12+\n\nDonwload the installation file here\nFollow installation instructions here\n\nStep 2: Download and install Thonny Python IDE for macOS\nStep 3: Download and install VS Code for macOS\nStep 4: Download and install Chrome web browser\n\nSkip this step if you already have Chrome installed on your laptop.\n\nStep 5: Create a free ThingSpeak account\n\nThis step requires Step 2 to be completed as it works mostly on the Chrome browser.\nFollow the steps on this page ThingSpeak to finish account creation.\n\n\n\n\n\n\nWindows:\n\n\nStep 1: Install Real VNC Viewer for Windows 10+\n\nDonwload the installation file here\nFollow installation instructions here\n\nStep 2: Download and install Thonny Python IDE for Windows\nStep 3: Download and install VS Code for Windows\nStep 4: Download and install Chrome web browser\n\nSkip this step if you already have Chrome installed on your laptop.\n\nStep 5: Create a free ThingSpeak account\n\nThis step requires Step 2 to be completed as it works mostly on the Chrome browser.\nFollow the steps on this page ThingSpeak to finish account creation.\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdditional information on remote access software: VNC® Viewer\nVNC® Viewer is a remote access software application, that facilitates exchange data over the RFB protocol to allow the Viewer to control the Server’s screen remotely.\nSource: Wiki\n\n\nHow do I install VNC® Viewer?\n\nJust run the installer on the device you want to control from and follow the instructions, or there’s MSIs for remote deployment under Windows. If you don’t have permission to install VNC® Viewer on desktop platforms, choose the standalone option.\nSource: Real VNC FAQs\n\nHow do I control a remote computer?\n\nIf you have a keyboard and mouse in front of you, use them as you would normally. We don’t recommed the use of a mobile device for this workshop. However, if you’re on a mobile device, then your touchscreen acts as a mouse trackpad, with gestures mapped to mouse buttons.\nSource: Real VNC FAQs\n\nDo I need to license the software? No. VNC ® Viewer is always free to use. Just accept the EULA the first time you run.\n\nSource: Real VNC FAQs"
+    "text": "Conclusion\nCongratulations! You’ve successfully installed Visual Studio Code on your Windows computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.\nFeel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!\nFor more information and documentation on Visual Studio Code, visit https://code.visualstudio.com/docs."
   },
   {
     "objectID": "resources.html",
