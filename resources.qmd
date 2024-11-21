@@ -34,6 +34,13 @@ format:
 </div>
 </div>
 
+<div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+<div class="card-header">Markdown Guide</div>
+<div class="card-body">
+<h4 class="card-title">The Markdown Guide is a free and open-source reference guide that explains how to use Markdown, the simple and easy-to-use markup language you can use to format virtually any document.</h4>
+<p>Everything you need to learn Markdown: <a href="https://www.markdownguide.org" style="color:blue;" target="_blank">Click here to access</a></p>
+</div>
+</div>
 
 <div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
 <div class="card-header">Graphics and data visualization libraries</div>
@@ -116,6 +123,7 @@ format:
 <p>NSF-style proposal template: <a href="https://github.com/jeremygibbs/nsf-proposal-latex" style="color:blue;" target="_blank">An NSF proposal template in LaTeX-WTFPL license</a></p>
 </div>
 </div>
+
 
 <!-- 
 <div class="card text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
