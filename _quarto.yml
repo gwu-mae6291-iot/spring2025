@@ -42,8 +42,8 @@ website:
       #     - href: Week14-FinalProject_Gallery.qmd          
 
 
-      - weekly.qmd
-      - resources.qmd
+      # - weekly.qmd
+      # - resources.qmd
       - instructor.qmd
 
 format:

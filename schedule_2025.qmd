@@ -84,6 +84,17 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
         </ul>  
       </td>
       <td>
+
+<tr class="table-secondary">
+      <th scope="row">[01/20/2025]</th>
+      <td colspan="2" style="text-align: center"> Martin Luther King Jr. Day 
+      <br> Inauguration Day
+      <br><strong>No Classes</strong>
+      <!-- <br><strong><a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Midterm project presentation template [Download Template]</a></strong> -->
+      </td> 
+      <!--- <td>Column content</td> -->
+    </tr>
+
         <ul>
           <li>Getting familiar with the Raspberry Pi 4B</li>
           <li>Python programming using Thonny</li> 
@@ -94,16 +105,6 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       </td>
       <td>
       </td>
-      <!--- <td>Column content</td> -->
-    </tr>
-
-<tr class="table-secondary">
-      <th scope="row">[01/20/2025]</th>
-      <td colspan="2" style="text-align: center"> Martin Luther King Jr. Day 
-      <br> Inauguration Day
-      <br><strong>No Classes</strong>
-      <!-- <br><strong><a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Midterm project presentation template [Download Template]</a></strong> -->
-      </td> 
       <!--- <td>Column content</td> -->
     </tr>
 
@@ -226,9 +227,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row">Week 5 [02/19/2025]</th>
       <td>
         <ul>
-          <li>Guest lecture: 
-          <!-- **Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications** by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a> -->
-          </li> 
+          <li>Guest lecture: **Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications** by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li> 
           <li>IoT Taxonomy - 5 layer model</li>         
           <!-- <li>Guest lecture: <a href="Week5-Mohammad-PrattWhitney-Lecture.qmd" target="_blank">**Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications**</a> by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li>  -->
           <li>IoT Taxonomy - 5 layer model</li>     
@@ -247,7 +246,34 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <!--- <td>Column content</td> -->
     </tr>
 
-
+<tr class="table-secondary">
+      <th scope="row">Week 6 [02/26/2025]</th>
+      <td>
+        <ul>
+          <li>Guest lecture: **Empowering IoT and Edge Computing with Design Thinking** by <a href="/Lectures_Speakers/Nuzum-bio-Feb2024.pdf" target="_blank">Scott Nuzum</a>, Senior Leader, <a href="https://www.innovyzusa.com" target="_blank">Innovyz USA</a></li> 
+          <!-- <li>Guest lecture: <a href="Week6-Nuzum-Innovyz-Lecture.qmd" target="_blank">**Empowering IoT and Edge Computing with Design Thinking**</a> by <a href="/Lectures_Speakers/Nuzum-bio-Feb2024.pdf" target="_blank">Scott Nuzum</a>, Senior Leader, <a href="https://www.innovyzusa.com" target="_blank">Innovyz USA</a></ li>  -->
+           <li>Practical Introduction to Image processing for Edge Compute Applications</li>
+            <!-- <li style="color:black"><a href="Week6.qmd" style="color:red;" target="_blank">Week-6 Notes</a></li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>      
+        <li>Practical Introduction to Picamera2 OpenCV libraries in Python on the Raspberry Pi 4B</li>
+        <li>Sobel, Laplacian, Guassian filtering on Raspberry Pi 4B</li>
+        <li>Edge detection using thresholding and Otsu's method on Raspberry Pi 4B</li>
+        <li><strong>In-class Raspberry Pi Lab with PiCamera using OpenCV library [Graded Lab Activity]</strong></li>
+        <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW5: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW5 Assigned: 03/01/2024; HW5 Due: 02/08/2024</strong> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+<tr class="table-secondary">
+      <th scope="row"> Week 7 [03/05/2025]</th>
+      <td colspan="2" style="text-align: center">Midterm Project Presentations and Live Demos due.
+      <!-- <br><strong><a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Midterm project presentation template [Download Template]</a></strong> -->
+      </td> 
+      <!--- <td>Column content</td> -->
+    </tr>
 <tr class="table-secondary">
       <th scope="row"> [03/11/2025]</th>
       <td colspan="2" style="text-align: center">Midterm Project Report due.
@@ -263,8 +289,140 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <!--- <td>Column content</td> -->
     </tr>
 
+<tr class="table-secondary">
+      <th scope="row">Week 8 [03/19/2025]</th>
+      <td>
+        <ul>
+          <li>Guest lecture: **The Science of Predictive Wisdom** by <a href="/Lectures_Speakers/RJS-bio-Mar2024.pdf"
+          target="_blank">Rob Shaughnessy</a>, CEO, <a href="https://psymetis.com"
+          target="_blank">Psymetis Inc.</a></li> 
+            <li> Discussion on Final Projects and setting course for updates and reporting</li>
+            <li>Pending midterm project demos</li> 
+            <li>Understand key differences between Microprocessors and Microcontrollers</li>
+            <li>Introduction to Micropython</li>
+            <!-- <li style="color:black"><a href="Week9.qmd" style="color:red;" target="_blank">Week-9 Notes</a></li> -->
+<!-- <a href="Week9-Shaughnessy-Pysmetis-Lecture.qmd" target="_blank"></a>  -->
 
-  
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Introduction to the ESP32 microcontroller</li>
+          <li>Setting up Micropython interpreter in Thonny IDE </li>
+          <li>Flashing the ESP32 microcontroller</li>
+          <li><strong>In-class lab set-up of ESP32 microcontroller with the Raspberry Pi 4B [Graded Lab Activity]</strong></li>
+           <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW6.1: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW6.1 Assigned: 03/22/2024; HW6.1 Due: 03/29/2024</strong> -->
+           <!-- <li><strong><a href="Downloads/Final_Project_Proposal_CS4907.docx" style="color:red;" target="_blank">HW6.2: Final Project Proposal [Download Template]</a></strong></li> <strong>HW6.2 Assigned: 03/18/2024; HW6.2 Due: 03/25/2024</strong> -->
+           <!-- <br><strong><a href="Downloads/Sample_FinalProjectProposal.pdf" style="color:red;" target="_blank">Sample final project temaplate</a> -->
+      </strong></td>
+        </ul>
+      </td>
+    </tr>    
+
+    <tr class="table-light">
+      <th scope="row">Week 9 [03/26/2025]</th>
+      <td>
+        <ul>
+          <li>Guest lecture: **Introduction to the Internet of Things** by  <a href="/Lectures_Speakers/RemyPottier-bio-March2024.pdf" target="_blank">Remy Pottier</a>, Director of Innovation, <a href="https://arm.com" target="_blank">ARM</a></li>
+          <!-- <li>Guest lecture: <a href="Week10-Pottier-ARM-Lecture.qmd" target="_blank"> **Introduction to the Internet of Things**</a> by  <a href="/Lectures_Speakers/RemyPottier-bio-March2024.pdf" target="_blank">Remy Pottier</a>, Director of Innovation, <a href="https://arm.com" target="_blank">ARM</a></li> -->
+          <li>Review: Set up ESP32 microcontroller and Micropython interpreter</li>
+          <li>Review: Flashing the ESP32 microcontroller</li>
+          <!-- <li style="color:black"><a href="Week10.qmd" style="color:red;" target="_blank">Week-10 Notes</a></li> -->
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li>In-class Raspberry Pi Lab with ESP32</li>
+          <li>Push-botton LEDs with ESP32 and Raspberry Pi 4B</li>
+          <li><strong>Webserver Accesspoint with ESP32 and Raspberry Pi 4B [Graded Lab Activity]</strong></li>
+          <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW7: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW7 Assigned: 03/29/2024; HW7 Due: 04/05/2024</strong> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+    <tr class="table-light">
+      <th scope="row">Week 10 [04/02/2025]</th>
+      <td>
+        <ul>
+          <li>Working with SciPy</li>
+          <li>Practical introduction to Mosquitto MQTT</li>
+          <li>Practical introduction to linear algebra in the Edge compute framework</li>
+          <!-- <li style="color:black"><a href="Week11.qmd" style="color:red;" target="_blank">Week-11 Notes</a></li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><strong>In-class Raspberry Pi Lab - Mosquitto MQTT with the Raspberry Pi 4B [Graded Lab Activity]</strong></li>
+          <li>Data smoothing with Scipy library in Python</li>
+          <li>Examples: Moving average and Savitzky-Golay filters</li>
+<!--           <li>Working with senseHAT data and matplotlib</li>
+          <li>Writing senseHAT data to CSV files</li>
+          <li>Emails alerts from senseHAT data</li>
+          <li><a href="https://drive.google.com/drive/folders/1nfW_e6UMP8V1tn20zKAe9_b9Ix1DTEUw?usp=sharing" target="_blank">Lab examples</a></li> -->
+          <li><strong>No HW announced and nothing is due on 04/12/2024</strong></li>
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row">Week 11 [04/09/2025]</th>
+      <td>
+        <ul>
+          <li>Implementation of MQTT using ThingSpeak</li>
+          <!-- <li style="color:black"><a href="Week12.qmd" style="color:red;" target="_blank">Week-12 Notes</a></li> -->
+<!--           <li>Working with Scikit</li>
+          <li>Working with SciPy</li>
+          <li>Practical introduction to Mosquitto MQTT</li>
+          <li>Practical introduction to linear algebra in the Edge compute framework</li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>In-class Raspberry Pi Lab - Installation of Paho MQTT</li>
+          <li>Demonstration of SenseHat sensor module</li>
+          <li><strong>In-class Raspberry Pi Lab - Implementation of ThingSpeak MQTT with SenseHat[Graded Lab Activity]</strong></li>
+          <li><strong>No HW announced and nothing is due on 04/19/2024</strong></li>
+ <!--          <li>Working with senseHAT data and matplotlib</li>
+          <li>Writing senseHAT data to CSV files</li>
+          <li>Emails alerts from senseHAT data</li>
+          <li><a href="https://drive.google.com/drive/folders/1nfW_e6UMP8V1tn20zKAe9_b9Ix1DTEUw?usp=sharing" target="_blank">Lab examples</a></li>
+          <li>HW 8 due</li> -->
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row">Week 12 [04/16/2025]</th>
+      <td>
+        <ul>
+        <li>Guest lecture: **Post model Edge AI for Fisheries management** by  <a href="/Lectures_Speakers/ChrisRodley-bio-April2024.pdf" target="_blank">Chris Rodley</a>, CEO and Founder, Snap Information Technologies Ltd., <a href="www.snapcore.co" target="_blank">SnapCore</a></li>      
+        <!-- <li>Guest lecture: <a href="Week13-Rodley-SnapCore-Lecture.qmd" target="_blank"> **Post model Edge AI for Fisheries management**</a> by  <a href="/Lectures_Speakers/ChrisRodley-bio-April2024.pdf" target="_blank">Chris Rodley</a>, CEO and Founder, Snap Information Technologies Ltd., <a href="www.snapcore.co" target="_blank">SnapCore</a></li> -->
+          <li>Implementation of MQTT using Paho</li>
+          <!-- <li style="color:black"><a href="Week13.qmd" style="color:red;" target="_blank">Week-13 Notes</a></li> -->
+<!--           <li>Working with Scikit</li>
+          <li>Working with SciPy</li>
+          <li>Practical introduction to Mosquitto MQTT</li>
+          <li>Practical introduction to linear algebra in the Edge compute framework</li> -->
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Installation checks for Paho MQTT</li>
+          <li>Demonstration MQTT using Paho-MQTT </li>
+          <li><strong>In-class Raspberry Pi Lab – Publish and Subscribe Messages using Paho MQTT [Graded Lab Activity]</strong></li>
+          <!-- <li><strong>HW8 Assigned: 04/19/2024; HW8 Due: 05/01/2024</strong></li> -->
+ <!--          <li>Working with senseHAT data and matplotlib</li>
+          <li>Writing senseHAT data to CSV files</li>
+          <li>Emails alerts from senseHAT data</li>
+        </ul>
+      </td>
+      <!--- <td>Column content</td> -->
+    </tr>
+
 <tr class="table-secondary">
       <th scope="row"> Week 13 [04/23/2025]</th>
       <td colspan="2" style="text-align: center">Final Project Presentations and Live Demos due.
@@ -276,14 +434,13 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
 
 <tr class="table-secondary">
       <th scope="row"> [04/30/2025]</th>
-      <td colspan="2" style="text-align: center"> Final Project Report due (Tentatively!).
+      <td colspan="2" style="text-align: center">Final Project Report due.
       <!-- <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Final project report template [Download Template]</a>
       </strong> -->
       <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
       </strong></td>
       <!--- <td>Column content</td> -->
     </tr>
-    
 <tr class="table-secondary">
       <th scope="row">[04/28/2025]</th>
       <td colspan="2" style="text-align: center"> Last Day of Classes 
@@ -314,7 +471,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
     </tr>     
 <tr class="table-secondary">
       <th scope="row">[05/03/2025] to [05/09/2025]</th>
-      <td colspan="2" style="text-align: center"> <strong>Final Examinations </strong>
+      <td colspan="2" style="text-align: center"> Final Examinations 
       <!-- <br><strong><a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Midterm project presentation template [Download Template]</a></strong> -->
       </td> 
       <!--- <td>Column content</td> -->
