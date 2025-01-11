@@ -17,6 +17,7 @@ website:
       - text: "Getting Started"
         menu:
           - href: install-editor.qmd
+      - text: "Python Primer"   
       - schedule.qmd
       # - text: "Notes"
       #   menu: 
