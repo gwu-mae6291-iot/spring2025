@@ -17,7 +17,19 @@ website:
       - text: "Getting Started"
         menu:
           - href: install-editor.qmd
-      - text: "Python Primer"   
+
+      - text: "Python Primer"  
+        menu: 
+            - text: "Basics"
+              href: ./python_primer/basics.qmd
+            # - text: "Functions"
+            #   href: ./python_primer/functions.qmd
+            - text: "Constructs"
+              href: ./python_primer/constructs.qmd
+            - text: "Data types"
+              href: ./python_primer/data_types.qmd
+            
+          # - href:  ./python_primer/unt0/modules/module0.qmd
       - schedule.qmd
       # - text: "Notes"
       #   menu: 

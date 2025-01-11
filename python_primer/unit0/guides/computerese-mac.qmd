@@ -1,0 +1,170 @@
+---
+title: "**Mac**: Instructions for developing computer-usage competency"
+--- 
+
+_Develop your computerese skills_
+
+###### **Video: Useful info about files**
+{{< video ../../../media/computerese-mac/u0-mod0-mac-files.mp4 aspect-ratio="21x9" >}}
+
+###### **Video: Useful info about editing**
+{{< video ../../../media/computerese-mac/u0-mod0-mac-editing.mp4 aspect-ratio="21x9" >}}
+
+Useful screenshots and step-by-step instructions for:
+
+- [**Folder creation**](computerese-mac.qmd#make-folder) 
+- [**File downloads**](computerese-mac.qmd#download)
+- [**File a file**](computerese-mac.qmd#find)
+- [**Save a file**](computerese-mac.qmd#save)
+- [**Make a pdf**](computerese-mac.qmd#pdf)
+- [**Make a zip file**](computerese-mac.qmd#zip)
+
+## Creating folders
+<div id="make-folder"></div>
+
+### Step 1
+- In the top right corner while on the Desktop you can click the File option next to the work Finder. There you will see a New Folder option that you can choose.
+![](../../../media/computerese-mac/createfolder/step1.png)
+
+### Step 2 
+- Here is the new folder on the Desktop
+![](../../../media/computerese-mac/createfolder/step2.png)
+
+### Step 3 
+- You can write over the highlighted text that is the name of the folder and rename it whatever you want
+![](../../../media/computerese-mac/createfolder/step3.png)
+
+### Step 4 
+- When you open the folder you will see it is empty
+![](../../../media/computerese-mac/createfolder/step4.png)
+
+### Step 5
+- When you right click the space inside the folder you will see a New Folder option you can choose to make a new folder inside this one
+![](../../../media/computerese-mac/createfolder/step5.png)
+
+### Step 6
+- Here is the new folder inside your old one
+![](../../../media/computerese-mac/createfolder/step6.png)
+
+### Step 7
+- We are now in our newest empty folder and there is a setting option at the top of the folder window which has a New Folder option to make a new folder inside this one
+![](../../../media/computerese-mac/createfolder/step7.png)
+
+### Step 8
+- You can write over the highlighted text that is the name of the folder and rename it whatever you want
+![](../../../media/computerese-mac/createfolder/step8.png)
+
+### Step 9
+- Here is the newest folder inside the unit0 folder
+![](../../../media/computerese-mac/createfolder/step9.png)
+
+### Step 10
+- You can write over the highlighted text that is the name of the folder and rename it whatever you want
+![](../../../media/computerese-mac/createfolder/step10.png)
+
+Now you have created three folders, on your Desktop and inside each other. All of these different ways to create folders and work easily. You can also click and drag folders to move them inside other folders if you need to.
+
+
+## File downloads
+<div id="download"></div>
+
+### Step 1 
+- Here is a link to a file that needs to be downloaded to the computer. 
+
+![](../../../media/computerese-mac/filedownload/step1.png)
+
+:::{.callout-note}
+This is an image we're showing, so don't click. It is intended to show what it would look like on your computer.
+:::
+
+### Step 2 
+- Right click on the link and choose Download Linked File As...
+![](../../../media/computerese-mac/filedownload/step2.png)
+
+### Step 3 
+- This will provide a box where you can name the file and choose where you would like to save it.
+![](../../../media/computerese-mac/filedownload/step3.png)
+
+### Step 4 
+- Here you can see the file saved in the location we chose:
+![](../../../media/computerese-mac/filedownload/step4.png)
+
+
+## Find a file 
+<div id="find"></div>
+
+### Step 1
+![](../../../media/computerese-mac/findfile/step1.png)
+
+### Step 2
+![](../../../media/computerese-mac/findfile/step2.png)
+
+### Step 3
+![](../../../media/computerese-mac/findfile/step3.png)
+
+### Step 4
+![](../../../media/computerese-mac/findfile/step4.png)
+
+
+
+## Save a file 
+<div id="save"></div>
+
+### Step 1
+- When you are ready to save a file you made for the first time you can find a save option under the File option in the top right.
+![](../../../media/computerese-mac/savefile/step1.png)
+
+### Step 2
+- This will open up an option where you can choose the location of your file as well as the name.
+![](../../../media/computerese-mac/savefile/step2.png)
+
+### Step 3
+- Now when we open the previously empty folder where I saved this file you can see it there and you can open it and edit it from this folder.
+![](../../../media/computerese-mac/savefile/step3.png)
+
+### Step 4
+- When you open that same file you will also see a Save As option, this lets you make a new version of the file and put it somewhere else and give it a new name, but when you edit this new file it will not edit the old one so if you want to move a file it's better to click and drag is somewhere new
+![](../../../media/computerese-mac/savefile/step4.png)
+
+
+## Make a pdf
+<div id="pdf"></div>
+
+### Step 1
+- When editing a text document in TextEdit you can convert it into a PDF first by clicking the File menu in the top right and selecting Export as PDF.
+![](../../../media/computerese-mac/makepdf/step1.png)
+
+### Step 2
+- You will then see a menu where you can choose the name and location for the PDF.
+![](../../../media/computerese-mac/makepdf/step2.png)
+
+### Step 3
+- The PDF will then be saved in whatever location you chose.
+    
+    ![](../../../media/computerese-mac/makepdf/step3.png)
+
+### Step 4
+- When you open the PDF it will open in Preview which allows you to view and annotate PDFs
+![](../../../media/computerese-mac/makepdf/step4.png)
+
+
+## Make a zip
+<div id="zip"></div>
+
+### Step 1
+- To make a zip file from a group of files you first need to highlight all the files you want.
+![](../../../media/computerese-mac/makezip/step1.png)
+
+### Step 2
+- Then right click on the group of files and select Compress Items.
+![](../../../media/computerese-mac/makezip/step2.png)
+
+### Step 3
+- This will make a zip file containing all the files you had selected with a default name.
+![](../../../media/computerese-mac/makezip/step3.png)
+
+### Step 4
+- You can then rename your zip file to be whatever you want
+![](../../../media/computerese-mac/makezip/step4.png)
+
+

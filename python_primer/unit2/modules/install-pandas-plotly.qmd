@@ -1,0 +1,49 @@
+---
+title: "Install Plotly and Pandas via Anaconda"
+---
+
+## Installation instructions for Mac-OSX
+
+:::{.callout-note}
+Windows users, see the [**instructions for Windows**](install-pandas-plotly.qmd#windows) below
+:::
+
+1. Go to <b><a href="https://www.anaconda.com/products/individual#macos">https://www.anaconda.com/products/individual#macos</a></b>, then <b>scroll down</b> near the bottom, and install the <em>Python 64-Bit Graphical installer</em>. This installs software to help you install Anaconda.
+
+2. Verify your installation by pressing Command+Space and typing ‘**Anaconda**’ in Spotlight. If you see Anaconda-Navigator as shown below, you have installed it. 
+![](../../../media/units/unit2/module2.1/installfigures/mac1.png)
+
+3. Now continue with _Spotlight_, open _Anaconda Navigator_ and click on the environments tab on the left hand side.
+![](../../../media/units/unit2/module2.1/installfigures/mac2.png)
+
+4. Click on the environment that says "base (root)" and in the top center of the screen on the drop down menu, select "**All**" instead of "**Installed**".
+![](../../../media/units/unit2/module2.1/installfigures/mac3.png)
+
+5. In the "Search Packages" bar, type in "pandas". Select the checkbox next to the “_**pandas**_” package and click "**Apply**" in the bottom left corner of the interface. _If you cannot find plotly, pandas, or networkx packages, click "**Update index**"._
+
+6. Repeat **Steps 4** and **5**, but this time instead of "_**pandas**_", install the "_**plotly**_" package.
+
+7. Repeat **Steps 4** and **5**, and install the "_**networkx**_" package.
+
+## Installation instructions for Windows
+
+1. Go to <b><a href="https://www.anaconda.com/products/individual#macos">https://www.anaconda.com/products/individual#macos</a></b>, then <b>scroll down</b> near the bottom, and install the <em>Python 64-Bit Graphical installer</em>. This installs software to help you install Anaconda.
+
+2. For "_Select Installation Type_" install for "**Just Me**" (recommended).
+
+3. Choose a destination folder to install Anaconda in. Our recommendation is to install it in `C:\Users\YourName\anaconda3`.
+
+4. Under "**Advanced Installation Options**" choose "Register Anaconda3 as my default Python 3.8" only. 
+
+5. Now open Anaconda Navigator and click on the environments tab on the left hand side.  
+![](../../../media/units/unit2/module2.1/installfigures/win1.png)
+
+6. Click on the environment that says "base (root)" and in the top center of the screen on the drop down menu, select "**All**" instead of "_Installed_".
+![](../../../media/units/unit2/module2.1/installfigures/win2.png)
+
+7. In the "**Search Packages**" bar, type in "_**pandas**_". Select the checkbox next to the "**pandas**" package and click "**Apply**" in the bottom left corner of the interface. 
+![](../../../media/units/unit2/module2.1/installfigures/win3.png)
+
+8. Repeat **Steps 6** and **7**, but this time instead of "_**pandas**_", install "_**plotly**_".
+
+9. Repeat **Steps 6** and **7**, and install the "_**networkx**_" package.

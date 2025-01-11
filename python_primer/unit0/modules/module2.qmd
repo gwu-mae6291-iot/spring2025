@@ -1,0 +1,472 @@
+---
+title: "**Module 2:** Functions: a first look"
+format:
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 0</a> &raquo;
+  <span class="current-page">Module 2</span>
+</div> -->
+
+## Objectives
+By the end of this module, for simple HelloWorld-like
+programs, you will be able to:
+
+- Demonstrate function calls.
+- Use mental tracing to identify output without execution.
+- Add numbered comments to show an execution trace.
+- Identify and correct syntax errors related to the above objectives.
+
+:::{.callout-tip}
+[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
+
+[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
+
+[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
+
+[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
+
+[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
+:::
+
+## 2.0 An example with function calls
+Consider the following program:
+```python
+# define a function we'll use later
+def print_big_M():    
+    print('*   *')
+    print('** **')
+    print('* * *')
+    print('*   *')
+    print('*   *')
+
+# define another one we'll use later
+def print_big_O():    
+    print('*****')
+    print('*   *')
+    print('*   *')
+    print('*   *')
+    print('*****')
+
+# Print MOO using the above defined functions
+print_big_M()
+print_big_O()
+print_big_O()
+```    
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.1
+
+Type up the above in `animal_sounds.py`and run it. Also save the file so that it can be submitted (You will need to save the appropriate files for everysuch "type up" exercise).
+:::
+
+Let's point out a few things:
+![](../../../media/units/unit0/module2/animalsounds.png)
+
+- Let's start by distinguishing between a function <em>definition</em> (which uses `def` and merely tells Python what the function is about), and invocation (which asks Python to execute the function at that moment).
+    - A <em>function definition</em> is a piece of code that begins with the word `def`
+    - A function definition is sometimes also called <em>function declaration</em>.
+    - A function definition does not execute the code immediately.
+    - Instead it's like saving in one place a bunch of instructions that can be invoked with just the name of the function.
+    - This saves writing lots of code if a group of code can begiven a name (in this case, a function name).
+
+- A function definition has 5 elements:
+![](../../../media/units/unit0/module2/funcdef.png)
+
+- A function with a given name is defined just once.
+- A function invocation merely uses the name, along with parentheses:
+
+    ```python
+    print_big_M()
+    ```
+We'll later see examples where some things can go between the parens.
+
+- While a particular function is defined once, it can be used any number of times:
+    - In fact, that is the whole purpose of defining functions.
+    - Each use of a function is a single line of code, which saves us the trouble of rewriting all the code that was inside the function for each time we need it.
+
+- Function definitions also help isolate code so that one doesn't have to see or understand what's inside to use it.
+
+- We've already used such a function before: the `print` function.
+    - The `print`function is defined internal to Python.
+    - We don't type its definition, nor do we see it.
+    - We just use it as often as we like.
+
+- **Important:** Please pay careful attention to <em>indentation</em>
+    - The line that begins with `def` should NOT be indented.
+    - Other lines that belong to the function <em>should</em> be indented.
+    - There are other forms of indentation that we'll point out as we proceed - they're all <em>important</em>.
+
+###### **2.2 Video**
+{{< video ../../../media/units/unit0/module2/u0-mod2.2.mp4 aspect-ratio='21x9' >}}
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.3
+
+Write your own animal sound that uses one function at least thrice with an exclamation mark at the end, <em>e.g.</em> print the big version of `BAAA!`. Write your code in `my_pet_sound.py`. Once your program is working, say the sound out aloud to celebrate. (Why not?)
+:::
+
+Next, let's see how functions "work" by making a small change to the program:
+```python
+def print_big_M():
+    print('*   *')
+    print('** **')
+    print('* * *')
+    print('*   *')
+    print('*   *')
+
+def print_big_O():
+    print('*****')
+    print('*   *')
+    print('*   *')
+    print('*   *')
+    print('*****')
+
+print('Step 1')
+print_big_M()
+print('Step 8')
+print_big_O()
+print('Step x')
+print_big_O()
+print('Step y')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.4
+
+Type up the above in `animal_sounds2.py` and run it.
+:::
+
+Let's explain using an analogy:
+![](../../../media/units/unit0/module2/funcexecution.png)
+  
+- We'll use the analogy of a <em>house</em> to describe a program and its parts (the functions).
+- A program's <em>execution starts at the very top</em>.
+- In the above case, there are a number of definitions:
+     - Definitions are merely "processed" but not executed.
+     - It's understood that the definitions may be invoked later.
+     - In our house analogy, we walk past these "rooms" to the main lobby.
+   
+- The first real line of code is the `print('Step 1')`statement.
+    - Think of this section of code as the "main lobby".
+
+- After this, we see the line (also a command) `print_big_M()`
+    - This is an instruction that causes the computer to "go to the `print_big_M()`room".
+    - We then head to that room and start executing commands in there.
+
+- Thus, the third command that gets executed is `print('*   *')`
+ 
+-  We're still in the room with more commands to go, and the next one (4th so far) is `print('** **')`
+
+- Continuing, we execute the last line in the room, which will make this the 7th one executed.
+
+- After we leave the "room", <em>and this is important</em>, we continue execution after the invocation that brought us to the room.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.5
+
+At which step (which step number) do we execute the last line in `print_big_O`? And then, at which step do we enter `print_big_O` the second time and print its first line? In `animal_sounds3.py` replace x and y with the correct step number. Use comments (text followed by ‘#’ symbol) to describe your answer.
+:::
+
+
+###### **2.6 Video**
+{{< video ../../../media/units/unit0/module2/u0-mod2.6.mp4 aspect-ratio='21x9' >}}
+
+## 2.1 Calling functions from other functions
+Consider this program:
+```python
+def print_big_M():
+    print('*   *')
+    print('** **')
+    print('* * *')
+    print('*   *')
+    print('*   *\n')
+
+def print_big_O():
+    print('*****')
+    print('*   *')
+    print('*   *')
+    print('*   *')
+    print('*****\n')
+
+def print_two_big_Os():
+    print_big_O()
+    print_big_O()
+
+print_big_M()
+print_two_big_Os()
+```
+- Yes, we can write our functions that call our own functions.
+- Incidentally, did you notice the escape sequences?
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; We improved the output.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.7
+
+Use this idea to rewrite your own animal sound in a file called `my_pet_sound2.py`. That is, add an additional function to your earlier program `my_pet_sound.py` that is analogous to `print_two_big_Os()` above.
+:::
+
+
+- Once again, let's trace through some steps:
+![](../../../media/units/unit0/module2/funcexecution2.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.8
+
+Look at the example above. What step number is represented by the question mark (?) next to the second `print_big_O()` inside the `print_two_big_Os()` function? What line in the program represents step 15? Discuss the program to correctly identify “step-15” with your TAs. There is nothing to submit in this exercise.
+:::
+
+###### **2.9 Video**
+{{< video ../../../media/units/unit0/module2/u0-mod2.9.mp4 aspect-ratio='21x9' >}}
+
+- Mental execution:
+- We will use the term <em>mental execution</em> for the above exercise of tracing through the execution without actually compiling and running the program.
+
+:::{.callout-note}
+Mental execution is <em>extremely important</em> in developing programming skill <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; Please be sure to practice this with <em>every</em> program you read or write.
+:::
+
+- We can't emphasisize this enough. Really.
+- Remember:
+     - Execution starts at the top of a program and goes downwards.
+     - Function definitions are <em>processed</em> (understood) but not executed.
+     - When a function are <em>invoked</em>, execution "goes" into the function to execute the code in there.
+
+## 2.2 More about functions
+About function names:
+
+- Consider the function name `print_big_M`.
+- This is a name we chose.
+- We could just as easily have called it `my_crazy_function`:
+
+    ```python
+    def my_crazy_function():
+        print('*   *')
+        print('** **')
+        print('* * *')
+        print('*   *')
+        print('*   *\n')
+
+    def print_big_O():
+        print('*****')
+        print('*   *')
+        print('*   *')
+        print('*   *')
+        print('*****\n')
+
+    def print_two_big_Os():
+        print_big_O()
+        print_big_O()
+
+    # Use the different name:
+    my_crazy_function()    
+    print_two_big_Os()
+    ```
+
+- In other words, the compiler does not look into the <em>English meaning</em> of function names.
+- We choose function names to help us <em>read</em> programs.
+
+Beware of name clashes:
+
+- Consider the following program (that has a mistake):
+
+    ```python
+    def print_big_M():
+        print('*   *')
+        print('** **')
+        print('* * *')
+        print('*   *')
+        print('*   *\n')
+
+    def print_big_M():      # A mistake! We meant to have typed
+        print('*****')      # print_big_O()
+        print('*   *')
+        print('*   *')
+        print('*   *')
+        print('*****\n')
+
+    # What happens now?
+    print_big_M()
+    ```
+
+- In this example, we have functions with different content but with the same name.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.10
+
+Implement the above in `name_clash.py` along with the comments (text followed by '#' symbol) in it and run it. Submit your program. Discuss the program with your TA to understand the comments  in the program.
+:::
+
+- What we see is that the second definition replaces the first.
+- The program runs but this error is not identified as such by the language. Instead, we need to be careful not to unintentionally make such a mistake.
+
+The order of function invocation matters. For example, consider:
+```python
+def print_big_M():
+    print('*   *')
+    print('** **')
+    print('* * *')
+    print('*   *')
+    print('*   *\n')
+
+def print_big_O():
+    print('*****')
+    print('*   *')
+    print('*   *')
+    print('*   *')
+    print('*****\n')
+
+def print_two_big_Os():
+    print_big_O()
+    print_big_O()
+
+# We've changed the order here:
+print_two_big_Os()
+print_big_M()
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.11
+
+Type up the above example in `animal_sounds4.py` and run it to make sure there are no errors.
+:::
+
+## 2.3 A peek at the future
+Once again, we will present a small program with features yet to be explained, by way of getting you comfortable and yet curious.
+
+Here's the program:
+```python
+import tkinter as tk
+import random as rand
+
+window = tk.Tk()
+w = 500
+h = 400
+canvas = tk.Canvas(master=window, width=w, height=h)
+canvas.pack()
+
+# A function that draws a random circle
+def draw_random_circle(color):
+    x = rand.randint(0, w)
+    y = rand.randint(0, h)
+    size = rand.randint(0, w/10)
+    canvas.create_oval(x,y, x+size, y+size, fill=color)
+
+# draw 100 circles
+for i in range(100):
+    draw_random_circle("cyan")
+
+# Standard colors: "black", "red", "green", "blue", 
+# "cyan", "yellow", "magenta"
+
+window.mainloop()
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.12
+
+Type up the above program in `random_art.py` and execute it. When you quit your program, instead of x-ing out the window, use control-c ("control" key and "c" key pressed together) while the cursor is in the output window.
+:::
+
+Now let's point out a few features:
+![](../../../media/units/unit0/module2/randomart.png)
+
+<!-- :::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.13
+
+Use the same code in `random_art2.py` and then add and modify it to create your own art, and include a screenshot in `module2.pdf`. When you quit your program, instead of x-ing out the window, type  `control-c` ("control" key and "c" key pressed together) while the cursor is in the output window.
+::: -->
+
+About <em>control-c</em>
+
+- The standard keyboard has some keys that act together with other keys, in effect <em>modifying</em> them.
+- The <em>shift</em> key is the most obvious one: pressing the shift key along with another key either capitalizes a letter or types the symbol "above" in a two-symbol key. For example, the ampersand &amp; is "above" 7 on the same key as 7; thus, pressing shift and 7 achieves typing &amp;
+- On a Mac, you've probably used the <em>command</em> key, and on Windows, you've used <em>control</em>.
+- The <em>control</em> key, when used with other keys is often used in programming contexts.
+- One such case is to use <em>control-c</em> (control and c together) to terminate the execution of a program.
+- However, to do this, you first need to click into wherever the program is executing. This is typically the output window (where the output appears).
+
+###### **2.14 Video**
+{{< video ../../../media/units/unit0/module2/u0-mod2.14.mp4 aspect-ratio='21x9' >}}
+
+## 2.4 And now for something strange
+
+Consider the following program:
+```python
+def print_big_M():   
+    print('*   *')
+    print('** **')
+    print('* * *')
+    print('*   *')
+    print('*   *\n')
+
+def print_big_O():   
+    print('*****')
+    print('*   *')
+    print('*   *')
+    print('*   *')
+    print('*****\n')
+    print_big_O()    # We're invoking the function from within
+
+print_big_M()
+print_big_O()
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.15
+
+_Before doing this exercise_, please [**read this page**](../guides/stopping.qmd) on how to  stop endlessly running programs. Now, type up and execute the above program in `my_strange_example.py`.
+:::
+
+:::{.callout-tip title="Hint"}
+You might get a “recursion depth exceed” error. Ask your TA about what this error means. 
+:::
+
+The term <em>recursion</em> is used when function calls itself:
+    - In the above example, it's an obvious error
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; Nothing useful is accomplished.
+
+- Later, we'll learn to use recursion to solve problems.
+
+- In fact, <em>recursion</em> is one of the most powerful computational problem-solving paradigms.
+
+###### **2.17 Video**
+{{< video ../../../media/units/unit0/module2/u0-mod2.17.mp4 aspect-ratio='21x9' >}}
+
+## 2.5 Another reminder about computerese
+How is your computerese coming along? Are you now much more confident with folders, files, zip files and such? What about editing, and saving?
+
+Don't forget that you can always review the [**material on computerese**](../guides/computerese.qmd) from Module 0.
+
+Please check that your module2 folder has the right files before you zip and upload. Does it look like one of these sample screenshots: 
+
+![Mac](../../../media/units/unit0/module2/mac-module2-23.png) 
+
+or
+
+![Windows](../../../media/units/unit0/module2/win-module2-23.png)
+
+
+<!-- <br>
+[Previous Module: **Module 0.1**](./module0.1.qmd){.button .prev} [Next Module: **Module 0.3**](./module0.3.qmd){.button .next} -->
+
+</body>
+</html>

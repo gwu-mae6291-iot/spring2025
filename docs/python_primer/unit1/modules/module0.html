@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAE 6291 - Module 0: A first look at lists</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">MAE 6291</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policies.html"> 
+<span class="menu-text">Course policies</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../../install-editor.html">
+ <span class="dropdown-text">Much Needed Software Installations</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Python Primer</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/basics.html">
+ <span class="dropdown-text">Basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/constructs.html">
+ <span class="dropdown-text">Constructs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../instructor.html"> 
+<span class="menu-text">Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#an-example-of-a-list" id="toc-an-example-of-a-list" class="nav-link" data-scroll-target="#an-example-of-a-list">0.0 An example of a <code>list</code></a></li>
+  <li><a href="#more-list-examples" id="toc-more-list-examples" class="nav-link" data-scroll-target="#more-list-examples">0.1 More list examples</a></li>
+  <li><a href="#a-strange-thing-with-lists" id="toc-a-strange-thing-with-lists" class="nav-link" data-scroll-target="#a-strange-thing-with-lists">0.2 A strange thing with lists</a></li>
+  <li><a href="#different-ways-of-iterating-through-a-list" id="toc-different-ways-of-iterating-through-a-list" class="nav-link" data-scroll-target="#different-ways-of-iterating-through-a-list">0.3 Different ways of iterating through a list</a></li>
+  <li><a href="#working-with-multiple-lists" id="toc-working-with-multiple-lists" class="nav-link" data-scroll-target="#working-with-multiple-lists">0.4 Working with multiple lists</a></li>
+  <li><a href="#moving-elements-around-in-a-list" id="toc-moving-elements-around-in-a-list" class="nav-link" data-scroll-target="#moving-elements-around-in-a-list">0.5 Moving elements around in a list</a></li>
+  <li><a href="#lists-of-strings-characters-or-real-numbers" id="toc-lists-of-strings-characters-or-real-numbers" class="nav-link" data-scroll-target="#lists-of-strings-characters-or-real-numbers">0.6 Lists of strings, characters, or real numbers</a></li>
+  <li><a href="#a-different-version-of-print" id="toc-a-different-version-of-print" class="nav-link" data-scroll-target="#a-different-version-of-print">0.7 A different version of print</a></li>
+  <li><a href="#random-selection-of-elements-from-a-list" id="toc-random-selection-of-elements-from-a-list" class="nav-link" data-scroll-target="#random-selection-of-elements-from-a-list">0.8 Random selection of elements from a list</a></li>
+  <li><a href="#some-math-via-programming" id="toc-some-math-via-programming" class="nav-link" data-scroll-target="#some-math-via-programming">0.9 Some math via programming</a></li>
+  <li><a href="#mathematical-art" id="toc-mathematical-art" class="nav-link" data-scroll-target="#mathematical-art">0.10 Mathematical art</a></li>
+  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">0.11 When things go wrong</a></li>
+  <li><a href="#meta" id="toc-meta" class="nav-link" data-scroll-target="#meta">0.12 Meta</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Module 0:</strong> A first look at lists</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+<style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 1</a> &raquo;
+  <span class="current-page">Module 0</span>
+</div> -->
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this module you will be able to:</p>
+<ul>
+<li>Understand how a list is different from a variable</li>
+<li>Explore the syntax around using lists in programs</li>
+<li>Use lists in programs to solve problems</li>
+<li>Practice mental execution (tracing) and debugging related to lists</li>
+</ul>
+</section>
+<section id="an-example-of-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="an-example-of-a-list">0.0 An example of a <code>list</code></h2>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List example:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(A[i])</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># In contrast, a plain variable:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(k)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_list1.py</code>, type up the above and examine the output. Then, inside the above for-loop, but before the first print statement, add an additional line of code to also print the value of i so that each value of i is printed on a line by itself. Submit this modified version of <code>my_list1.py</code>.</p>
+</div>
+</div>
+<p><br>Remember how we think of a variable as a box that stores values?</p>
+<ul>
+<li>This is indeed how we think of the variable <code>k</code> above. <img src="../../../media/units/unit1/module0/list1.png" class="img-fluid"></li>
+<li>In contrast, a <em>list variable</em> is a single name given to a collection of boxes: <img src="../../../media/units/unit1/module0/list2.png" class="img-fluid"></li>
+<li>The above collection has a <em>current size</em>, in this case 5.</li>
+<li>The values in a list are called <em>elements</em> of the list.</li>
+<li>There is an implied order going from the first to the last element.</li>
+<li>It turns out, we can access individual elements in the list using <em>indices</em>: <img src="../../../media/units/unit1/module0/list3.png" class="img-fluid"></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>List indices start at 0</li>
+<li>And end at <em>one less than the size</em>.</li>
+<li>Thus, in the above example, the size of the list is 5.</li>
+<li>The indices (positions in the list) are: 0, 1, 2, 3, 4.</li>
+<li>The last valid position (or index), which is 4 here, is one less than the size, 5.</li>
+</ul>
+</div>
+</div>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use len to get the current size:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">len</span>(A)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Size of A: '</span> <span class="op">+</span> <span class="bu">str</span>(n))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Add an element to the list:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>A.append(<span class="dv">36</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">len</span>(A)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Size of A: '</span> <span class="op">+</span> <span class="bu">str</span>(n))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Change a particular element:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>A[<span class="dv">3</span>] <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The list: '</span> <span class="op">+</span> <span class="bu">str</span>(A))</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in program <code>my_list2.py</code> and submit it.</p>
+</div>
+</div>
+<p>Let’s point out:</p>
+<ul>
+<li><p>Observe how we obtain the current size and add an element: <img src="../../../media/units/unit1/module0/list4.png" class="img-fluid"></p></li>
+<li><p>Next, observe square brackets being used for different purposes: <img src="../../../media/units/unit1/module0/list5.png" class="img-fluid"></p></li>
+<li><p>We could use a variable to access elements, as long as that variable has a valid integer value within the range of indices, for example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>A[k] <span class="op">=</span> <span class="dv">100</span></span></code></pre></div></li>
+<li><p>Remember <code>len</code>?</p>
+<ul>
+<li><p>We had used <code>len</code> earlier for the length of strings, as in</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'hello'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(s))    <span class="co"># Prints 5</span></span></code></pre></div></li>
+<li><p>Here, <code>len</code> works to give us the length of a list, as in:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(A)) <span class="co"># print-statement will return the integer 5</span></span></code></pre></div></li>
+</ul></li>
+<li><p>We can access elements in the list in the following manner:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span>         <span class="co"># i's value 3 is valid for a size 5 list</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A[i])</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">7</span>         <span class="co"># 7 is not valid</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A[i])</span></code></pre></div></li>
+<li><p>In the above example, there is no element <code>A[7]</code> in a list that only has 5 elements.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_list3.py</code> and run it. The list <code>A</code> has only has 5 elements. Hence, there is no element <code>A[7]</code> in the list. The program would return an error. Fix the error by replacing i = 7 with another number (not 3). Make sure the program does not return an error. Submit your modified <code>my_list3.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_list4.py</code>, make a list with the values 1,2,3,4,5,6,7,8,9,10. Then, set up a for-loop so that only the odd numbers are printed as in:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span></span></code></pre></div>
+</div>
+</div>
+<section id="video" class="level6">
+<h6 class="anchored" data-anchor-id="video"><strong>0.5 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module0/u1-mod0.5.mp4"></video></div>
+</section>
+</section>
+<section id="more-list-examples" class="level2">
+<h2 class="anchored" data-anchor-id="more-list-examples">0.1 More list examples</h2>
+<p>Just as we can add elements to list, so can we remove elements, as in:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">64</span>, <span class="dv">9</span>, <span class="dv">25</span>, <span class="dv">81</span>, <span class="dv">49</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>A.remove(<span class="dv">9</span>) </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   This statement will remove the element, 9 from the list.</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   The number 9, is not an index. </span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   It is a value of the element within the list.</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Confirm the output by typing up the above in <code>my_list5.py</code>. Then, explore what would go wrong if you try and remove something that’s not in the list. For example, change the line <code>A.remove(9)</code> to <code>A.remove(10)</code>. Submit your <code>my_list5.py</code> with the former (<code>A.remove(9)</code>). <!-- Use comments (text followed by ‘#’ symbol) to describe to report what you see in the output. --></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The elements in a list do not need to be in sorted order, as the above example shows. They can be in any order, but once in that order, they stay in that order unless we make a change to the elements in the list.</li>
+<li>Although our examples so far have lists of integers, we will later build lists with real numbers and strings.</li>
+</ul>
+</div>
+</div>
+<p>Consider this example:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List constructed by typing the elements in:</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># List built using code to construct elements:</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> []                 <span class="co"># An empty list</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> (i<span class="op">+</span><span class="dv">1</span>) <span class="op">*</span> (i<span class="op">+</span><span class="dv">1</span>) </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    B.append(k)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(B)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.7
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_list6.py</code>. Notice that the lists A and B have the same elements. Submit <code>my_list6.py</code>.</p>
+<p>The following part of the exercise is not required for submission.</p>
+<p>However, it is important for you to complete it on your own to understand the execution of the program <code>my_list6.py</code>.</p>
+<ul>
+<li>To confirm your output, trace through the changing values of i, k and the list B in each iteration of the for-loop in a spreadsheet or a document.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>It is possible to create an empty list and give it a variable name as in:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> []                 <span class="co"># An empty list</span></span></code></pre></div></li>
+<li><p>We could then add elements by appending.</p></li>
+<li><p>One can shorten the lines inside the loop:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> []                 <span class="co"># An empty list</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    B.append( (i<span class="op">+</span><span class="dv">1</span>) <span class="op">*</span> (i<span class="op">+</span><span class="dv">1</span>) )</span></code></pre></div>
+<p>Here, we’ve fed the arithmetic expression <code>(i+1) * (i+1)</code> directly into <code>append</code>, without using a separate variable <code>k</code> to first calculate and then append.</p></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_odd_list.py</code> fill in the necessary code below to create a list with the first N odd numbers:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>odd_numbers <span class="op">=</span> []</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># WRITE YOUR CODE HERE using one for-loop</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(odd_numbers)</span></code></pre></div>
+<p>In this case, the output should be:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>]</span></code></pre></div>
+<p>(These are the first 10 odd numbers).</p>
+</div>
+</div>
+<p>We do not need to traverse in exactly the order of elements in the list:</p>
+<ul>
+<li><p>For example:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">35</span>, <span class="dv">45</span>, <span class="dv">55</span>, <span class="dv">65</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">95</span>, <span class="dv">105</span>]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">9</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>):</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(A[i])</span></code></pre></div></li>
+<li><p>Here, we’re starting at the last element, traversing the list from end to beginning in steps of 2.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.9
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above program in <code>my_list7.py</code> and submit it.</p>
+<p>The following part of the exercise is not required for submission.</p>
+<p>However, it is important for you to complete it on your own to understand the execution of the program <code>my_list7.py</code>.</p>
+<ul>
+<li>To confirm your output, trace through the above code showing the values of <code>i</code> and <code>A[i]</code> at each iteration of the for-loop.</li>
+<li>Confirm with the result from your code, <code>my_list7.py</code>.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="a-strange-thing-with-lists" class="level2">
+<h2 class="anchored" data-anchor-id="a-strange-thing-with-lists">0.2 A strange thing with lists</h2>
+<p>Let’s first look at <em>copying</em> between regular variables, as in:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x     <span class="co"># Copy the value of x into y</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span>     <span class="co"># Change the value of x</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)  <span class="co"># x is no longer equal 5. Now, x = 6</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)  <span class="co"># Does it affect what's in y?</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>          <span class="co"># No. y = 5. y retains original the value of x it was assigned (x = 5) </span></span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider the example above that involves copying a variable. The following can be observed in the program:</p>
+<ul>
+<li>First, the value of variable <code>x</code> is initialized, i.e., <code>x = 5</code>.</li>
+<li>Next, the value associated with variable x is assigned to a variable <code>y</code>, i.e., value of <code>x</code> is copied into <code>y</code>.<br>
+</li>
+<li>Then, the value of <code>x</code> is changed, i.e., <code>x = 6</code>.</li>
+<li>Finally, the values of <code>y</code> and <code>x</code> are printed using <code>print(y)</code> and <code>print(x)</code>.</li>
+<li>Type up the program above in <code>my_variable_copy.py</code> and run it.</li>
+<li>When you run the program you will notice that the value of <code>y</code> is the same as the value of <code>x</code> that was copied into it.
+<ul>
+<li>Any changes to <code>x</code> after its value was copied into <code>y</code> did not change the value of <code>y</code>.</li>
+</ul></li>
+</ul>
+<p>Submit <code>my_variable_copy.py</code>.</p>
+<!-- In your module pdf, draw two boxes, one for x and one for y. Show the contents of the two boxes and if they change, show how they change. There is nothing to submit in this exercise. -->
+</div>
+</div>
+<p>Next, consider this:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)    <span class="co"># A = [1, 4, 9, 16, 25]</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> A</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>A[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">49</span>   <span class="co"># Change some value in list A</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)    <span class="co"># A = [49, 4, 9, 16, 25]</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(B)    <span class="co"># Does it affect what's in list B?</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Yes, B = [49, 4, 9, 16, 25]</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>            <span class="co"># After the line of code B = A,</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>            <span class="co"># any change in the elements of A also </span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>            <span class="co"># makes a corresponding </span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>            <span class="co"># change in the elements of B.</span></span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.11
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Now consider the example above that involves copying a list.</p>
+<p>The following can be observed in the program:</p>
+<ul>
+<li>First, a list <code>A</code> of 5 elements is initialized, i.e., <code>A = [1, 4, 9, 16, 25]</code>.</li>
+<li>The list <code>A</code> is printed using <code>print(A)</code> and returns <code>[1, 4, 9, 16, 25]</code>.</li>
+<li>Next, a list <code>B</code> is assigned to list A, i.e., <code>B = A</code>.<br>
+</li>
+<li>Then, the element <code>A[0]</code> is changed, i.e., <code>A[0] = 49</code>.</li>
+<li>List <code>A</code> is printed again and now returns <code>[49, 4, 9, 16, 25]</code>.</li>
+<li>Finally, the list <code>B</code> is printed using <code>print(B)</code>.</li>
+<li>Type up the above in <code>my_list_copy.py</code> and run it.</li>
+<li>When you run the program, you will notice something different than in the previous <strong>Exercise 0.10</strong>.
+<ul>
+<li>Following the line of code where you typed <code>B = A</code>, the change in the elements of <code>A</code> caused the same change in the elements of <code>B</code>.</li>
+</ul></li>
+</ul>
+<p>Submit <code>my_list_copy.py</code>.</p>
+</div>
+</div>
+<p>Let’s explain further:</p>
+<ul>
+<li><p>Clearly something strange is going on with lists.</p></li>
+<li><p>One way to think of it is to go back to our picture of a list: <img src="../../../media/units/unit1/module0/list6.png" class="img-fluid"></p></li>
+<li><p>We’ll now sketch out an analogy:</p>
+<ul>
+<li>Think of the list as a <em>building</em> with rooms (the boxes): <img src="../../../media/units/unit1/module0/list7.png" class="img-fluid"></li>
+<li>Then, the list variable `A is really something that holds the building address (the building number).</li>
+<li>The rooms in the building are numbered <code>0, 1</code>, etc.</li>
+<li>The first room is <code>A[0]</code>, the second is <code>A[1]</code>, etc.</li>
+</ul></li>
+<li><p>Now, consider an assignment like:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> A</span></code></pre></div>
+<p>Then, in the building analogy, what we get is: <img src="../../../media/units/unit1/module0/list8.png" class="img-fluid"></p></li>
+<li><p>This is why, when we change the A list as in</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>A[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">49</span>    <span class="co"># Change some value in list A</span></span></code></pre></div>
+<p>Then, we achieve <img src="../../../media/units/unit1/module0/list9.png" class="img-fluid"></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nowhere in our code is the building number (4701) explicitly written. Building numbers (they are technically called <em>pointers</em>) are handled by Python, and made invisible to us because we don’t need them. <br> (Yes, we can print the building number if we wish, but that’s an advanced topic.)</p>
+</div>
+</div>
+<ul>
+<li><p>We obviously want to know: is it possible to create a complete copy of A in B? As in: <img src="../../../media/units/unit1/module0/list10.png" class="img-fluid"></p></li>
+<li><p>Because then, if we change A, it does not affect B: <img src="../../../media/units/unit1/module0/list11.png" class="img-fluid"></p></li>
+<li><p>This is what it looks like in code:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)     <span class="co"># A = [1, 4, 9, 16, 25]</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> A.copy() <span class="co"># This is NOT the same as B = A</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>A[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">49</span>    <span class="co"># Change some value in list A</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)     <span class="co"># A = [49, 4, 9, 16, 25]</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(B)     <span class="co"># Does it affect what's in list B?</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>             <span class="co"># No, B = [1, 4, 9, 16, 25]</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>             <span class="co"># After the line of code B = A.copy(),</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>             <span class="co"># any change in elements of A, DOES NOT make</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>             <span class="co"># a corresponding change in elements of B.</span></span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.12
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_list_copy2.py</code> to find out if any values have changed in list B.</p>
+<p>Submit <code>my_list_copy2.py</code>.</p>
+</div>
+</div>
+<p>So, which (<code>B = A</code> or <code>B = A.copy()</code>) do we use?</p>
+<ul>
+<li>Generally, you should use <code>A.copy()</code> unless you intentionally want the same “building number”.</li>
+<li>In that, you have to be careful.</li>
+</ul>
+</section>
+<section id="different-ways-of-iterating-through-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="different-ways-of-iterating-through-a-list">0.3 Different ways of iterating through a list</h2>
+<p>Consider this example:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> A[i]</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.13
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_total_example1.py</code> and submit it.</p>
+<p>The following part of the exercise is not required for submission.</p>
+<p>However, it is important for you to complete it on your own to understand the execution of the program <code>my_total_example1.py</code>.</p>
+<ul>
+<li>To confirm your output, trace through the changing values of i, A and total through each iteration of the loop in a spreadsheet or a document.</li>
+</ul>
+</div>
+</div>
+<p>Now let’s look at two different ways of writing the same loop (we’ll only show the loop part):</p>
+<ul>
+<li><p>The first one:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A)):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> A[i]</span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Instead of figuring out the length of a list by looking at the list, we can ask Python to compute the length and use that directly:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A)):</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> A[i]</span></code></pre></div></li>
+<li><p>This way, we don’t need to track the length ourselves (if elements get added or removed).</p></li>
+</ul>
+</div>
+</div>
+<ul>
+<li><p>The second way is even better:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> k</span></code></pre></div>
+<p>Here:</p>
+<ul>
+<li><p>Here the iteration is directly over the contents of the list.</p></li>
+<li><p>The variable k is not an index but takes on the actual values in the list.</p></li>
+<li><p>With a list like</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>]</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> k</span></code></pre></div>
+<p>In the first iteration k is 1, in the second k is 3, in the third k is 5, and so on.</p></li>
+<li><p>So, naturally, these get added directly into the variable <code>total</code>.</p></li>
+</ul></li>
+<li><p>You can think of the first approach (using an index i and A[i]) as <em>index iteration</em>.</p></li>
+<li><p>The second (using the value directly), as <em>content iteration</em>.</p></li>
+<li><p>Which one should one use?</p>
+<ul>
+<li>Use content-iteration, whenever you can.</li>
+<li>In some cases, however, you’ll find index iteration is useful, especially when you need the <em>position</em> where something occurs in the list.</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.14
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_content_iteration.py</code>, use content-iteration to print the contents of the list A below:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">2020</span>, <span class="dv">2016</span>, <span class="dv">2012</span>, <span class="dv">2008</span>, <span class="dv">2004</span>, <span class="dv">2000</span>]</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here:</span></span></code></pre></div>
+<p>The output should be one number per line in the order that the numbers appear in the list as shown below.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2020</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2016</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2012</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2008</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2004</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="dv">2000</span></span></code></pre></div>
+<p>Submit the program, <code>my_content_iteration.py</code></p>
+</div>
+</div>
+</section>
+<section id="working-with-multiple-lists" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-multiple-lists">0.4 Working with multiple lists</h2>
+<p>Suppose we have two lists of the same length like this:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>]</span></code></pre></div>
+<p>Let’s examine different ways of performing addition on the elements.</p>
+<p>First, let’s add up the total of all 10 numbers:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>]</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> k</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> B:</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> k</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.15
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type the above in <code>my_twolist1.py</code> and submit the program.</p>
+<p>The following part of the exercise is not required for submission.</p>
+<p>However, it is important for you to complete it on your own to understand the execution of the program <code>my_twolist1.py</code>.</p>
+<ul>
+<li>To confirm your output, trace through the changing values of <code>i, k</code> and <code>total</code> through each iteration of the loop in a spreadsheet or a document.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>In the above case, we added all the numbers contained in both lists, to get a single number.</p></li>
+<li><p>Notice how natural it is to use content-iteration.</p></li>
+<li><p>What if we want a third list whose elements are the additions of corresponding elements from each list?</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>    <span class="dv">4</span>    <span class="dv">9</span>    <span class="dv">16</span>    <span class="dv">25</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>    <span class="dv">3</span>    <span class="dv">5</span>     <span class="dv">7</span>    <span class="dv">11</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="op">-----------------------</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>    <span class="dv">7</span>   <span class="dv">14</span>    <span class="dv">23</span>    <span class="dv">36</span></span></code></pre></div>
+<p>Here, the last row is a new (third) list.</p></li>
+</ul>
+</div>
+</div>
+<p>Let’s write code to perform element-by-element addition:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>]</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> []</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    element_total <span class="op">=</span> A[i] <span class="op">+</span> B[i]</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    C.append(element_total)</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(C)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.16
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type the above in <code>my_twolist2.py</code>.</p>
+<ul>
+<li><p>Print the list inside the loop, by adding a print statement right after the append occurs.</p></li>
+<li><p>Your program output should be as shown below.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="dv">14</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="dv">23</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="dv">36</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">14</span>, <span class="dv">23</span>, <span class="dv">36</span>]</span></code></pre></div></li>
+<li><p>Submit your program <code>my_twolist2.py</code> with the added print statement.</p></li>
+</ul>
+<p>The following part of the exercise is not required for submission.</p>
+<p>However, it is important for you to complete it on your own to understand the execution of the program <code>my_twolist2.py</code>.</p>
+<ul>
+<li>Try and trace through the values of <code>i</code> and <code>element_total</code> in each iteration of the loop and see for yourself how the list C changes across the iterations. Do this, as usual, in a spreadsheet or a document.</li>
+<li>Explain to yourself why, in this case, index-iteration is a better choice than content iteration.</li>
+</ul>
+</div>
+</div>
+<section id="video-1" class="level6">
+<h6 class="anchored" data-anchor-id="video-1"><strong>0.17 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module0/u1-mod0.19.mp4"></video></div>
+</section>
+</section>
+<section id="moving-elements-around-in-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="moving-elements-around-in-a-list">0.5 Moving elements around in a list</h2>
+<p>Consider a list like:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span></code></pre></div>
+<p>Next, suppose we want to swap the elements in the 2nd and 4th positions within the same list (without creating a new list).</p>
+<p>That is, we want to write code so that:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ... code to swap 2nd and 4th elements ...</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Should print [1, 16, 9, 4, 25]</span></span></code></pre></div>
+<p>To achieve that:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> A[<span class="dv">1</span>]</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>A[<span class="dv">1</span>] <span class="op">=</span> A[<span class="dv">3</span>]</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>A[<span class="dv">3</span>] <span class="op">=</span> temp</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.18
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type the above in <code>my_list_swap1.py</code>.</p>
+<p>The following part of the exercise is not required for submission.</p>
+<p>However, it is important for you to complete it on your own to understand the execution of the program <code>my_listswap1.py</code>.</p>
+<ul>
+<li>Try and trace through the execution of the above showing the values in temp and the list after each line executes.</li>
+<li>Do this, as usual, in a spreadsheet or a document.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.19
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type the code you just wrote, i.e., <code>my_list_swap1.py</code>, in <code>my_list_swap2.py</code>.</p>
+<ul>
+<li><p>Then, replace the middle three lines with following:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>A[<span class="dv">1</span>] <span class="op">=</span> A[<span class="dv">3</span>]</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>A[<span class="dv">3</span>] <span class="op">=</span> A[<span class="dv">1</span>]</span></code></pre></div></li>
+<li><p>You should notice that the program <code>my_list_swap1.py</code> swapped the elements in the list. But <code>my_list_swap2.py</code> copied the the elements in the list.</p></li>
+<li><p>The output of <code>my_list_swap2.py</code> should be as shown below.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span></code></pre></div></li>
+<li><p>Submit <code>my_list_swap2.py</code></p></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.20
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the “temp” variable idea to perform a left-rotate of a list in <code>my_left_rotate.py</code>. Thus, given</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ... your code here...</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Should print [4, 9, 16, 25, 1]</span></span></code></pre></div>
+<p>Thus everything but the first element moves leftwards, while the first element moves to the last place. Use a for-loop to move most (but not all) elements.</p>
+</div>
+</div>
+</section>
+<section id="lists-of-strings-characters-or-real-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="lists-of-strings-characters-or-real-numbers">0.6 Lists of strings, characters, or real numbers</h2>
+<p>We have thus far seen lists of integers. One can make a list of other kinds of elements.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Some real numbers:</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="fl">1.1</span>, <span class="fl">2.22</span>, <span class="fl">3.333</span>, <span class="fl">4.4444</span>]</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> C:</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> x</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Average ='</span>, total<span class="op">/</span><span class="dv">4</span>)</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="co"># A way to extract the characters in a string into a list:</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'abcdef'</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="bu">list</span>(s)</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(B)</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a><span class="co"># A list of strings:</span></span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="st">'cats'</span>, <span class="st">'and'</span>, <span class="st">'dogs'</span>]</span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> w <span class="kw">in</span> A:</span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>    s <span class="op">+=</span> w</span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.21
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type the following program in <code>my_other_lists.py</code>:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="st">'chutes'</span>, <span class="st">'and'</span>, <span class="st">'ladders'</span>]</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> w <span class="kw">in</span> A:</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    s <span class="op">+=</span> w</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<p>Notice that the above program will print <code>chutesandladders</code>.</p>
+<p>Modify the program so that the output of the program should be as shown below.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>chutes <span class="kw">and</span> ladders</span></code></pre></div>
+<p>Note that there is a space between each word.</p>
+<p>Submit <code>my_other_lists.py</code>.</p>
+</div>
+</div>
+</section>
+<section id="a-different-version-of-print" class="level2">
+<h2 class="anchored" data-anchor-id="a-different-version-of-print">0.7 A different version of print</h2>
+<p>Consider these two variations of using print:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'eat'</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.141</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y))</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.22
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type the above in <code>my_print_example.py</code> and submit it.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>The first version above uses string concatenation to send one big string to print:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y) )</span></code></pre></div></li>
+<li><p>In the second version, the strings and variables given to print <code>(x, s, y)</code> are separated by commas.</p></li>
+<li><p>Here, print treats the four things as separate entities:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div></li>
+<li><p>And it, automatically inserts a space between the different things (that are separated by commas).</p></li>
+<li><p>Note that here, there is no need to convert numbers to strings.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="random-selection-of-elements-from-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="random-selection-of-elements-from-a-list">0.8 Random selection of elements from a list</h2>
+<p>It is often useful to be able to pick random elements from a list.</p>
+<p>Let’s use this feature first for a single roll of a die and then two dice:</p>
+<ul>
+<li><p>Since a single die has 6 faces with the numbers 1 through 6, we’ll use a list of the numbers 1 through 6:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>die <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span></code></pre></div></li>
+<li><p>Our goal is to choose one of these numbers randomly.</p></li>
+<li><p>Python provides a way to randomly pick (without removing) an element from a list:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>die <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>roll <span class="op">=</span> random.choice(die)</span></code></pre></div></li>
+<li><p>Let’s put this together into a program (remembering to import the random package):</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>die <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>roll <span class="op">=</span> random.choice(die)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(roll)</span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.23
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type the above in <code>my_die_roll.py</code>. Run the program several times to verify that you are getting random selections from the list.</p>
+</div>
+</div>
+<p>Next, let’s use this to make a (ridiculously) simple game:</p>
+<ul>
+<li><p>Two players each roll a die N times. The reuslts of the rolls are averaged. The player with the higher average wins.</p></li>
+<li><p>OK, not the most entertaining game, but one for which we can easily write a program (from the point of view of one player):</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>die <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>num_trials <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_trials):</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>    roll <span class="op">=</span> random.choice(die)</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(roll)</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>    total <span class="op">+=</span> roll</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Average score:'</span>, total<span class="op">/</span>num_trials)</span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.24
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The program above prints out the average score from the number of trials.</p>
+<p>Type the above in <code>my_die_roll2.py</code> to observe this result.</p>
+<p><strong>Submit <code>my_die_roll2.py</code> with <code>num_trials = 10</code>.</strong></p>
+<p>Try this experiment; you don’t need to submit the following part of the exercise:</p>
+<ul>
+<li>Try changing <code>num_trials = 100</code> and see if the results of average score is any different from your program with <code>num_trials = 10</code></li>
+<li>Try a higher number for <code>num_trials</code>, say 1000. You may end up spending more time waiting for the program to complete its execution.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.25
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_die_roll3.py</code>, change the game to the following:</p>
+<ul>
+<li>In each trial, each player should roll the die twice and add the two numbers.</li>
+<li>The final score is the average sum across all trials.</li>
+<li>Let your program estimate the average score when you use a large number of trials, say <code>num_trials = 1000</code>.</li>
+</ul>
+<p><strong>Submit <code>my_die_roll3.py</code> with <code>num_trials = 1000</code>.</strong></p>
+<!-- In your module pdf, devise a more interesting 2-player game one could play solely using dice. (You don't have to write a program for this last part.) -->
+</div>
+</div>
+</section>
+<section id="some-math-via-programming" class="level2">
+<h2 class="anchored" data-anchor-id="some-math-via-programming">0.9 Some math via programming</h2>
+<p>Let’s start with an example and then use that to delve into a few concepts:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">0</span>,<span class="dv">10</span>, <span class="dv">0</span>,<span class="dv">100</span>)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co"># The blue collection of points:</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>dt.set_color(<span class="st">'b'</span>)</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>x_coords <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>y_coords <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">23</span>]</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>dt.draw_curve_as_points(x_coords, y_coords)</span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="co"># The red collection of points:</span></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>dt.set_color(<span class="st">'r'</span>)</span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>x_coords <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>y_coords <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>, <span class="dv">49</span>, <span class="dv">64</span>, <span class="dv">81</span>, <span class="dv">100</span>]</span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>dt.draw_curve_as_points(x_coords, y_coords)</span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.26
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_plot_example.py</code> and see what you get. You will also need to download <a href="../../../media/useful/drawtool.py" download=""><strong>drawtool.py</strong></a> into the same folder.</p>
+<p>Submit <code>my_plot_example.py</code></p>
+</div>
+</div>
+<p>Now let’s ask some basic questions:</p>
+<ul>
+<li>What, really, is a graph and what does it mean to plot on a graph?</li>
+<li>What are <code>(x,y)</code> coordinates and what do they have to with plotting?</li>
+<li>What’s a function and what’s the connection between <code>f(x)</code> and points on a graph?</li>
+<li>And, what does this have to do with programming?</li>
+</ul>
+<p>We’ll address these questions below.</p>
+<p>Let’s recall where we started:</p>
+<ul>
+<li>In the beginning, there were integers (whole numbers) like <code>1, 2, 3, and 42</code>.</li>
+<li>Along with them came real needs like addition, subtraction, multiplication and division. <br> (Ancient applications include navigation, telling time, accounting/trade).</li>
+<li>The integers were not enough because you can perform 3 - 8 and get … what? So came the negative integers like -5.</li>
+<li>Then, because 5/2 is not an integer, more numbers were needed, and hence come the real numbers.</li>
+<li>Next came <em>algebra</em>:
+<ul>
+<li>Instead of saying “I can take 12 times 4 and get 48, and then divide by 6, to get twice your original number 4”, we can write: <span class="math display">\[ \frac{12x}{6} = 2x \]</span></li>
+<li>It’s much more compact and precise.</li>
+</ul></li>
+<li>Next came <em>functions</em>:
+<ul>
+<li>Instead of saying “OK, take your number and multiply it by itself,” it’s much more compact to say: <code>f(x) = x^2</code>.</li>
+<li>We can think of a function as taking some input (like <code>x</code> and “doing something to it” to get an output: <img src="../../../media/units/unit1/module0/func.png" class="img-fluid"></li>
+</ul></li>
+<li>All of this resulted in significant advances in mathematics.</li>
+<li>Then came Descartes who took this to a whole new level with coordinates.</li>
+</ul>
+<p>The idea of coordinates:</p>
+<ul>
+<li><p>Suppose you had a way of linking or associating pairs of numbers:</p>
+<ul>
+<li>For example, suppose 1 is associated with 5</li>
+<li>2 is associated with 7</li>
+<li>3 with 9</li>
+</ul></li>
+<li><p>Suppose we wrote these as: (1,5), (2,7), (3,9), and so on.</p></li>
+<li><p>Next, draw two perpendicular lines (one horizontal, one vertical) on a page: <img src="../../../media/units/unit1/module0/axes.png" class="img-fluid" style="width:60.0%"></p></li>
+</ul>
+<p>And call them the x and y axes respectively.</p>
+<ul>
+<li><p>Now given associations (1,5), (2,7) and (3,9):</p>
+<ul>
+<li>Treat the first number as the distance from the vertical axis.</li>
+<li>Treat the second number as the distance from the horizontal axis.</li>
+<li>This will put us in a unique spot.</li>
+<li>Call that a point.</li>
+</ul></li>
+<li><p>For example: <img src="../../../media/units/unit1/module0/axes2.png" class="img-fluid"></p></li>
+<li><p>That’s all there’s to it. It’s hard to believe that such a simple idea became transformational.</p></li>
+<li><p>The connection between functions and coordinates:</p>
+<ul>
+<li><p>Suppose you have a function like: <code>f(x) = 2x + 3</code></p></li>
+<li><p>One way to make sense of a function is to compute lots of examples like:</p></li>
+</ul>
+<p><span class="math display">\[ f({\bf 1}) = 2*{\bf 1} + 3 = 5 \]</span> <span class="math display">\[ f({\bf 2}) = 2*{\bf 2} + 3 = 7 \]</span> <span class="math display">\[ f({\bf 3}) = 2*{\bf 3} + 3 = 9 \]</span></p>
+<ul>
+<li>And even <span class="math display">\[ f({\bf 3.16}) = 2*{\bf 3.16} + 3 = 9.32 \]</span></li>
+</ul></li>
+<li><p>A pair of axes makes it possible to <em>visualize</em> a function directly, initially by plotting some example points:</p>
+<ul>
+<li>Take some x.</li>
+<li>Calculate f(x)</li>
+<li>Then treat x as the first coordinate (distance from y-axis).</li>
+<li>Treat f(x) as the second coordinate (distance from x-axis), and plot.</li>
+<li>For example, when x=2, then we saw that f(2) = 7. So, plot (2, 7).</li>
+</ul></li>
+<li><p>In general, we want to plot <code>(x, f(x))</code> for lots of different possible x values.</p></li>
+<li><p>Here, f(x) is what we use for the y-coordinate, which is why we sometimes write y = f(x).</p></li>
+<li><p>When we plot <code>(x, f(x))</code> for different x values, we typically pick those x values for our convenience.</p></li>
+<li><p>Above, we showed how to calculate f(x) = 2x + 3 when x=1, when x=2, when x=3, and so on, perhaps up to when x=10, <!-- <br> (Here, the intended range is close to zero.) --></p></li>
+<li><p>But if we needed to, we could just as easily calculate f(x) = 2x + 3 when x=0.1, when x=0.2, when x=0.3, and so on up to when x=1.0, <!-- <br> (Here, the intended range is close to zero, between 0 and 1.0) --></p></li>
+</ul>
+<p>Let’s put these ideas to use:</p>
+<ul>
+<li><p>Suppose we have two functions f and g</p>
+<ol type="1">
+<li>f(x) = 2x + 3</li>
+<li>g(x) = x^2</li>
+</ol></li>
+<li><p>Our goal: compare the two functions.</p></li>
+<li><p>One advantage of programming is that we can write code to perform the action of functions.</p></li>
+<li><p>For example:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x ='</span>, x, <span class="st">' f(x) ='</span>, f)</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> x<span class="op">*</span>x</span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x ='</span>, x, <span class="st">' g(x) ='</span>, g)</span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.27
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_function_example.py</code> and submit it.</p>
+</div>
+</div>
+<p>It is far more valuable to visualize, so let’s set about plotting both together:</p>
+<ul>
+<li><p>To plot, we’ll need to construct the list of x and y coordinates:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">1</span>,<span class="dv">10</span>, <span class="dv">0</span>,<span class="dv">100</span>)</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>x_coords <span class="op">=</span> []</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>y_coords <span class="op">=</span> []</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>    x_coords.append(x)</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>    y_coords.append(f)</span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>dt.draw_curve_as_lines(x_coords, y_coords)</span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>dt.set_color(<span class="st">'r'</span>)</span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a><span class="co"># WRITE CODE HERE for the second function</span></span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>dt.draw_curve_as_lines(x_coords, y_coords)</span>
+<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div></li>
+</ul>
+<p>Let’s point out: <img src="../../../media/units/unit1/module0/funcplot-code.png" class="img-fluid"></p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.28
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_function_plot.py</code> and add code for the second function (g(x)=x<sup>2</sup>) to get a plot like: <img src="../../../media/units/unit1/module0/func-exercise.png" class="img-fluid" style="width:60.0%"></p>
+</div>
+</div>
+<section id="video-2" class="level6">
+<h6 class="anchored" data-anchor-id="video-2"><strong>0.29 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module0/u1-mod0.32.mp4"></video></div>
+<p>Scale and axes:</p>
+<ul>
+<li><p>You may have noticed that the x-axis above had tick marks going from 0 to 10, while the y-axis went from 0 to 100.</p></li>
+<li><p>This is an example of a plot that’s NOT drawn to scale.</p></li>
+<li><p>Let’s draw one to scale to see what it looks like by changing one line, from</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">1</span>,<span class="dv">10</span>, <span class="dv">0</span>,<span class="dv">100</span>)</span></code></pre></div>
+<p>to</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">1</span>,<span class="dv">100</span>, <span class="dv">1</span>,<span class="dv">100</span>)</span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.30
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_plot_example2.py</code> change your code from the earlier exercise (<code>my_function_plot.py</code>) to make the scale the same along the x and y axes.</p>
+<p>For example, you can try one of the following options:</p>
+<ul>
+<li><code>dt.set_XY_range(1,10, 0,10)</code></li>
+<li><code>dt.set_XY_range(1,100, 0,100)</code></li>
+</ul>
+<p><strong>Submit <code>my_plot_example2.py</code> with <code>dt.set_XY_range(1,100, 0,100)</code>.</strong></p>
+</div>
+</div>
+<p>When to use different scales along the axes:</p>
+<ul>
+<li>Using the same scale, we see the dramatic difference between <em>linear growth</em> (the function <code>f(x)=2x+3</code> and <em>quadratic growth</em> (the function <code>g(x) = x^2</code>).</li>
+<li>But at the same time, some features, like the point of intersection of the two curves, are hard to see.</li>
+<li>We can use different scales when we want to emphasize different aspects.</li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.31
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_function_plot2.py</code>, add a third function <code>h(x) = 2^x</code>. <!-- \(h(x) = 2<sup>x</sup>\)  --></p>
+<p>Try out the following options:</p>
+<ul>
+<li>Create the plot with x and y axes set as [0, 1200] as shown below.
+<ul>
+<li><code>dt.set_XY_range(1,1200, 0,1200)</code></li>
+</ul></li>
+<li>Create the plot with different ranges for the scale of the x and y axes
+<ul>
+<li>Set the x-range as [0,12] and the y-range as [0,1200] i.e., <code>dt.set_XY_range(1,12, 0,1200)</code>.</li>
+<li>This should show you how puny quadratic growth is compared to exponential growth.</li>
+</ul></li>
+</ul>
+<p><strong>Submit your <code>my_function_plot2.py</code>, setting the scale of both the x and y axes with same range [0, 100] i.e., <code>dt.set_XY_range(1,100, 0,100)</code></strong></p>
+</div>
+</div>
+</section>
+</section>
+<section id="mathematical-art" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-art">0.10 Mathematical art</h2>
+<p>Since we’re on the topic of functions, we cannot resist developing an art project based on it.</p>
+<p>Let’s first plot a function from high-school: the sine function</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">0</span>,<span class="fl">6.28</span>, <span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>x_spacing <span class="op">=</span> <span class="fl">6.28</span><span class="op">/</span>n</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> math.sin(x)</span>
+<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a>    dt.draw_point(x, f)</span>
+<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> x_spacing</span>
+<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<p>Let’s point out:</p>
+<ul>
+<li>First, some code features: <img src="../../../media/units/unit1/module0/sine-code.png" class="img-fluid"></li>
+<li>Next, observe that we plotted points directly inside the loop instead of first building a list of coordinates.</li>
+<li>Doing so is an alternative way of plotting (“plot as you go”), and will let us change the point color.</li>
+</ul>
+<p>So, for our art project:</p>
+<ul>
+<li>We’ll draw a background with randomly strewn yellow dots.</li>
+<li>Then, along a sine-curve, we’ll draw small ellipses of different sizes.</li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.32
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download <a href="../../../media/units/unit1/module0/functional_art.py" download=""><strong>functional_art.py</strong></a> and run it to see a plot like that shown below.</p>
+<p><img src="../../../media/units/unit1/module0/Ex032_pic1.png" class="img-fluid"></p>
+<p>If you examine and understand the program <code>functional_art.py</code>, you will see that the <code>random.random()</code> and <code>math.sin()</code> functions were used to generate the plot above.</p>
+<p>Now create a program <code>my_functional_art.py</code>, and improve on the program <code>functional_art.py</code> by including a <code>math.cos()</code> function as an additional decoration on the mathematic art of a plot.</p>
+<p>Your new plot should look like the one shown below. <img src="../../../media/units/unit1/module0/Ex032_pic2.png" class="img-fluid"></p>
+<p><strong>Submit your <code>functional_art.py</code> and <code>my_functional_art.py</code>.</strong></p>
+</div>
+</div>
+</section>
+<section id="when-things-go-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="when-things-go-wrong">0.11 When things go wrong</h2>
+<p>In each of the exercises below, there are</p>
+<ul>
+<li>Either some “bugs” that will not generate an error message, but instead produce incorrect output</li>
+<li>Or, error that will produce an error message.</li>
+</ul>
+<p>Do the following in the exercises below:</p>
+<ul>
+<li>First try to identify the error or bug just by reading.</li>
+<li>Then type up the program to confirm, and after that, fix the error or bug.</li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.36
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>):</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(A[i])</span></code></pre></div>
+<p>Identify and fix the bug in <code>my_error1.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.37
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following program intends to build the decreasing-order list <code>[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</code>.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> []</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> n <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>    A.append(n)</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)</span></code></pre></div>
+<p>Identify and fix the bug in <code>my_error2.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 0.38
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following program intends to add to N all the elements of the list <code>A</code>.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> N <span class="op">+</span> A[k]</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(N)</span></code></pre></div>
+<p>Identify and fix the error in <code>my_error3.py</code>.</p>
+</div>
+</div>
+</section>
+<section id="meta" class="level2">
+<h2 class="anchored" data-anchor-id="meta">0.12 Meta</h2>
+<p>This is the next installment in our series of stepping back from it all and reflecting, with the hope of helping you progress as a learner.</p>
+<p>This time our topic is math and math anxiety.</p>
+<p>Let’s start by acknowledging a few things:</p>
+<ul>
+<li>Students do, in fact, have bad experiences learning math.
+<ul>
+<li>For example, if you were unlucky to be ill during the critical period in 4th grade when fractions were covered, that could become a gap that precludes other concepts.</li>
+<li>Or if algebra did not go well, everything that follows in math can lead to cascading difficulties in learning.</li>
+</ul></li>
+<li>Students learn math differently and their “window of opportunity” may not be aligned with where their school is.
+<ul>
+<li>Thus, for many students, a certain age is not optimal for academic intensity, or issues at home prevent full engagement.</li>
+</ul></li>
+<li>There are hidden cultural dispositions that can get in the way.
+<ul>
+<li>The most pernicious by far is the notion that some people just aren’t cut out for it. Or you have to have the “math gene”.</li>
+</ul></li>
+<li>Much of K-12 math is, admittedly, a bit dull.</li>
+</ul>
+<p>At the same time, there’s good news:</p>
+<ul>
+<li>Math (and programming) is like any other skill: everyone can acquire it with sufficient practice, but not everyone can reach the level of “world expert”.</li>
+<li>This is true of just about any mental skill like facility with language or playing a musical instrument.</li>
+<li>And, most importantly, anyone can acquire it at any age.
+<ul>
+<li>Can you tell someone it’s too late to learn, say, French?<br>
+</li>
+</ul></li>
+<li>It all depends on shedding the “I’m not cut out for it” disposition and committing to practice.</li>
+<li>There is a world of elegance and beauty in math after crossing a threshold of skill level, just as with a musical instrument.</li>
+</ul>
+<p>Let’s say a bit more about practice:</p>
+<ul>
+<li>You surely know a musical instrument cannot be learned merely by watching videos or reading about it.</li>
+<li>Proficiency requires regular and intense practice.</li>
+<li>The best part of practice is that, even though progress is not instantaneous, you can see results after a while.</li>
+<li>Another advantage: the nature of practice is that many people give up. So, if you don’t, you are ahead of those that do.</li>
+</ul>
+<p>Finally, the connection between programming and math:</p>
+<ul>
+<li>It is true that most people who program do not use math at all. Just ask a web developer.</li>
+<li>But if you add a bit of math, you can do many interesting things in programming, as anyone who deals with data will tell you.</li>
+<li>Some aspects of computer science that have a strong mathematical underpinning are just … a lot of fun!</li>
+</ul>
+<!-- <br>
+[Next Module: **Module 1.1**](./module1.1.qmd){.button .next} -->
+
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>The material is sourced from <strong>Prof.&nbsp;Kartik Bulusu’s</strong> course titled, ‘Introduction to IoT and Edge computng applications’. <br> This is a Quarto website. To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.<br> Contact: <a href="mailto:bulusu@email.gwu.edu">Kartik Bulusu</a><br> © 2024 All rights reserved</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
+<script>videojs(video_shortcode_videojs_video3);</script>
+
+
+
+
+</body></html>

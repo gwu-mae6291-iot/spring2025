@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAE 6291 - Module 5: Review</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">MAE 6291</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policies.html"> 
+<span class="menu-text">Course policies</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../../install-editor.html">
+ <span class="dropdown-text">Much Needed Software Installations</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Python Primer</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/basics.html">
+ <span class="dropdown-text">Basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/constructs.html">
+ <span class="dropdown-text">Constructs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../instructor.html"> 
+<span class="menu-text">Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">5.0 Variables</a></li>
+  <li><a href="#how-to-read-and-mentally-execute-programs" id="toc-how-to-read-and-mentally-execute-programs" class="nav-link" data-scroll-target="#how-to-read-and-mentally-execute-programs">5.1 How to read and mentally execute programs</a></li>
+  <li><a href="#functions-without-parameters" id="toc-functions-without-parameters" class="nav-link" data-scroll-target="#functions-without-parameters">5.2 Functions without parameters</a></li>
+  <li><a href="#functions-with-parameters" id="toc-functions-with-parameters" class="nav-link" data-scroll-target="#functions-with-parameters">5.3 Functions with parameters</a></li>
+  <li><a href="#functions-that-return-values" id="toc-functions-that-return-values" class="nav-link" data-scroll-target="#functions-that-return-values">5.4 Functions that return values</a></li>
+  <li><a href="#lists-are-different" id="toc-lists-are-different" class="nav-link" data-scroll-target="#lists-are-different">5.5 Lists are different</a></li>
+  <li><a href="#why-are-functions-useful" id="toc-why-are-functions-useful" class="nav-link" data-scroll-target="#why-are-functions-useful">5.6 Why are functions useful?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Module 5:</strong> Review</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+<style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+
+
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p><strong>The main goal of this module is to step back and review the following core concepts in programming:</strong></p>
+<ol type="1">
+<li>Loops</li>
+<li>Conditionals</li>
+<li>Lists</li>
+<li>Functions</li>
+</ol>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">5.0 Variables</h2>
+<p><strong>Consider the following program:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span>                </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">3.14</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'hello'</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>this_is_fun <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>odds <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">2.718</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>odds[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">9</span></span></code></pre></div>
+<p><strong>The variables in the above program have the following <em>four</em> aspects to them:</strong></p>
+<ol type="1">
+<li>A <em>name</em>, like <code>x</code> or <code>this_is_fun</code> above. <br>&nbsp;&nbsp;&nbsp;&nbsp; ⇒ Variable names don’t change during execution, they are given by the programmer.</li>
+<li>A current <em>value</em>. <br>&nbsp;&nbsp;&nbsp;&nbsp; ⇒ At any moment during execution, a variable has a value. <br> This value can change (often does) during execution.</li>
+<li>A <em>scope</em>. More about this in Unit-2.</li>
+<li>A <em>type</em>, such as <code>int</code> (integer), <code>float</code> (floating point number), <code>str</code> (string), <code>bool</code> (Boolean), <code>list</code> (and there are a few more to be covered in an advanced topic).</li>
+</ol>
+<p><strong>Let’s examine what happens when each line in the above program executes:</strong></p>
+<ul>
+<li><p>When the first line executes: <img src="../../../media/units/unit1/module1.5/variables.png" class="img-fluid"></p></li>
+<li><p>After the second line executes: <img src="../../../media/units/unit1/module1.5/variables2.png" class="img-fluid"></p></li>
+<li><p>After the third line: <img src="../../../media/units/unit1/module1.5/variables3.png" class="img-fluid"></p></li>
+<li><p>After the fourth: <img src="../../../media/units/unit1/module1.5/variables4.png" class="img-fluid"></p></li>
+<li><p>After the fifth: <img src="../../../media/units/unit1/module1.5/variables5.png" class="img-fluid"></p></li>
+<li><p>Then, one of the variables does have its value replaced: <img src="../../../media/units/unit1/module1.5/variables6.png" class="img-fluid"></p></li>
+<li><p>Finally, one of the elements in the list gets replaced: <img src="../../../media/units/unit1/module1.5/variables7.png" class="img-fluid"></p></li>
+<li><p>Now, there is a somewhat highly technical point to be made:</p>
+<ul>
+<li>The “box” is what we’re using to conceptualize what a variable is, and how it behaves when we change it.</li>
+<li>Generally, this is how you should think of it.</li>
+<li>However, some books will present certain kinds of variables differently, with more detail.</li>
+<li>Underneath the hood, in fact, string and list variables are a bit different.</li>
+</ul></li>
+<li><p>So, for the sake of completeness, we’ll just point out this more detailed version: <img src="../../../media/units/unit1/module1.5/variables8.png" class="img-fluid"></p></li>
+<li><p>In the above program:</p>
+<ul>
+<li>String and list variables are themselves small boxes.</li>
+<li>These variables contain a <em>reference</em> (conceptualized by the black arrow above) to the actual data.</li>
+<li>The actual data for a string (the letters in it) are stored side by side, which is why we can “get at” letters via code like <code>s[2]</code> (3rd char in string).</li>
+<li>This more detailed version will make sense when you eventually get to see <em>objects</em> (a feature of Python) in the future.</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-to-read-and-mentally-execute-programs" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-read-and-mentally-execute-programs">5.1 How to read and mentally execute programs</h2>
+<p><strong>Let’s start with a simple example:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>):</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> i</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'x ='</span>, x)</span></code></pre></div>
+<p><strong>Let’s look at this in steps:</strong></p>
+<ul>
+<li>First, start by noticing the chunks of code: <img src="../../../media/units/unit1/module1.5/execution.png" class="img-fluid"></li>
+<li>Second, walk through the execution of the first chunk, and notice that the value of x is what’s used later: <img src="../../../media/units/unit1/module1.5/execution2.png" class="img-fluid"></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>If it helps to picture the boxes for x and y, then do so.</p></li>
+<li><p>Look at the statement</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> y</span></code></pre></div>
+<p>and say to yourself: “First, let’s look at the right side, and the values of x and y now”.</p></li>
+<li><p>Go backwards in the code to see the values of x and y.</p></li>
+<li><p>Then perform the operation to get the new value of x (5 in this case) that replaces what was there (which was 2).</p></li>
+</ul>
+</div>
+</div>
+<ul>
+<li>Next, notice key aspects of the loop without yet executing iteration by iteration: <img src="../../../media/units/unit1/module1.5/execution3.png" class="img-fluid"></li>
+<li>Then you get down to the iterative level and execute iteration by iteration:</li>
+</ul>
+<pre><code>                           i      x
+  Before loop starts:             5
+  After first iteration    0      5
+  After i is 1             1      6
+  After i is 2             2      8
+  After i is 3             3      11
+  After i is 4             4      15
+  After i is 5             5      20</code></pre>
+<ul>
+<li>Finally, there’s the print: <img src="../../../media/units/unit1/module1.5/execution4.png" class="img-fluid"></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Examine and mentally execute the following program:</strong></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>j <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(i, j<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> A[k]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'total ='</span>, total)</span></code></pre></div>
+<ul>
+<li><strong>Then, type up the above program in <code>my_execution_practice.py</code>.</strong>
+<ul>
+<li>Execute your program <code>my_execution_practice.py</code> and check if the result matches what you expected.</li>
+<li>Try doing this a few times until you are certain.</li>
+</ul></li>
+<li><strong>Submit your program <code>my_execution_practice.py</code>.</strong></li>
+</ul>
+</div>
+</div>
+<p><strong>Now, let’s look at reading a program with a conditional that is more complex:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">'b'</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">10</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> x <span class="op">&gt;</span> y:</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x <span class="op">&gt;</span> <span class="dv">0</span>) <span class="kw">and</span> (x<span class="op">+</span>y <span class="op">&gt;</span> z):</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> c <span class="op">==</span> <span class="st">'a'</span>:</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'yes, a'</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> c <span class="op">==</span> <span class="st">'b'</span>:</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="st">'no, b'</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'boo'</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'ok, that is enough'</span>)</span></code></pre></div>
+<p><strong>We’ll do this in steps, working from the “outside going in”:</strong></p>
+<ul>
+<li>We’ll start by noticing some variables and values being assigned, followed by a large nested conditional: <img src="../../../media/units/unit1/module1.5/conditional.png" class="img-fluid"></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The conditional has both an <code>elif and an</code>else` code block.</li>
+<li>The conditions depend on the variables that precede it.</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>Next, we identify which part of the outer conditional executes: <img src="../../../media/units/unit1/module1.5/conditional2.png" class="img-fluid"></li>
+<li>Then, working inwards, we examine and see that the <code>elif</code> code block is itself a big conditional: <img src="../../../media/units/unit1/module1.5/conditional3.png" class="img-fluid">
+<ul>
+<li><p>The combined Boolean expression</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="op">&gt;</span> <span class="dv">0</span>) <span class="kw">and</span> (x<span class="op">+</span>y <span class="op">&gt;</span> z):</span></code></pre></div>
+<p>does turn out to be <code>True</code>, and so we enter the <code>if</code>-block that follows: <img src="../../../media/units/unit1/module1.5/conditional4.png" class="img-fluid"></p></li>
+<li><p>The <code>if</code>-condition below fails:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> c <span class="op">==</span> <span class="st">'a'</span>:</span></code></pre></div>
+<p>and so execution proceeds into the <code>else</code>-block: <img src="../../../media/units/unit1/module1.5/conditional5.png" class="img-fluid"></p></li>
+</ul></li>
+</ul>
+<!-- :::{.callout-note}
+The else-part (which is allowed).
+::: -->
+<ul>
+<li><p>Clearly, in this case, the condition succeeds and we get to the print: <img src="../../../media/units/unit1/module1.5/conditional6.png" class="img-fluid"></p></li>
+<li><p>Observe that if the condition was</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> c <span class="op">==</span> <span class="st">'z'</span>:</span></code></pre></div>
+<p>then we would jump right out of the whole: <img src="../../../media/units/unit1/module1.5/conditional6.png" class="img-fluid"></p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This example illustrates how critical it is to make sure the <em>indentation</em> is correct.</p>
+</div>
+</div>
+<ul>
+<li><p><strong>For example, consider these three variations:</strong></p>
+<ul>
+<li><p><strong>Indent-case #1:</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> c <span class="op">==</span> <span class="st">'a'</span>:</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'yes, a'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> c <span class="op">==</span> <span class="st">'b'</span>:</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'no, b'</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'hello'</span>)</span></code></pre></div></li>
+<li><p><strong>Indent case #2:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> c <span class="op">==</span> <span class="st">'a'</span>:</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'yes, a'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> c <span class="op">==</span> <span class="st">'b'</span>:</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'no, b'</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'hello'</span>)</span></code></pre></div></li>
+<li><p><strong>Indent case #3:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> c <span class="op">==</span> <span class="st">'a'</span>:</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'yes, a'</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> c <span class="op">==</span> <span class="st">'b'</span>:</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'no, b'</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hello'</span>)</span></code></pre></div>
+<p>Can you see why they’re all different?</p></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Type up the following program in <code>my_execution_practice2.py</code>.</strong></li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">'b'</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">10</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> x <span class="op">&gt;</span> y:</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x <span class="op">&gt;</span> <span class="dv">0</span>) <span class="kw">and</span> (x<span class="op">+</span>y <span class="op">&gt;</span> z):</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> c <span class="op">==</span> <span class="st">'a'</span>:</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'yes, a'</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> c <span class="op">==</span> <span class="st">'b'</span>:</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="st">'no, b'</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'boo'</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'ok, that is enough'</span>)</span></code></pre></div>
+<ul>
+<li><p>Execute your program <code>my_execution_practice2.py</code> and examine the output as shown below:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>no, b</span></code></pre></div></li>
+<li><p>Modify your program by replacing the inner-most <code>if-else</code> code block with <em>Indent case #3</em> described above.</p></li>
+<li><p>Exceute your modified program and observe the output that is now changed to the following:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>no, b</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>hello</span></code></pre></div></li>
+<li><p><strong>Submit your modified program <code>my_execution_practice2.py</code>.</strong></p></li>
+<li><p><strong>Answering the following part of the exercise is recommended but not required for submission:</strong></p>
+<ul>
+<li>Try different assignments to <code>c</code> in the inner-most <code>if-else</code> code block.</li>
+<li>That is, try <code>c = 'a'</code>, then <code>c = 'b'</code>.</li>
+<li>Explain to yourself why these may result in different outputs.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p>Consider this variation (we’ve added a few print’s):</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">'b'</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">10</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> x <span class="op">&gt;</span> y:</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'one'</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x <span class="op">&gt;</span> <span class="dv">0</span>) <span class="kw">and</span> (x<span class="op">+</span>y <span class="op">&gt;</span> z):</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'two'</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> c <span class="op">==</span> <span class="st">'a'</span>:</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'yes, a'</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> c <span class="op">==</span> <span class="st">'b'</span>:</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="st">'no, b'</span>)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'three'</span>)</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'four'</span>)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'boo'</span>)</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'five'</span>)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'ok, that is enough'</span>)</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'six'</span>)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'seven'</span>)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Mentally execute the above program and indentify the <code>print</code> statements that get executed.</strong></p></li>
+<li><p><strong>Type up the above program in <code>my_execution_practice3.py</code>.</strong></p></li>
+<li><p><strong>Execute your program <code>my_execution_practice3.py</code> and check if the results match what you expected.</strong></p>
+<ul>
+<li>Execute the program until all outputs are understood.</li>
+</ul></li>
+<li><p><strong>Submit your program <code>my_execution_practice3.py</code>.</strong></p></li>
+</ul>
+<!-- Which of the above added print's execute? See if you can identify them just by reading. Then confirm in `my_execution_practice3.py`. -->
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Examine and mentally execute the following program:</strong></li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A)):</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> A[i] <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> A[i] <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>            total <span class="op">=</span> total <span class="op">+</span> A[i]</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'rejected:'</span>, A[i])</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'illegal:'</span>, A[i])</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre></div>
+<ul>
+<li><p><strong>Type up the above program in <code>my_execution_practice4.py</code>.</strong></p></li>
+<li><p><strong>Execute your program <code>my_execution_practice4.py</code> and check if the results match what you expected.</strong></p>
+<ul>
+<li>Execute the program until all outputs are understood.</li>
+</ul></li>
+<li><p><strong>Submit your program <code>my_execution_practice4.py</code>.</strong><br>
+</p></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Consider the following program:</strong></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> printword(n):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'one'</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> n <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'two'</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> n <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'three'</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> n <span class="op">==</span> <span class="dv">4</span>:</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'four'</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'cannot handle n &gt; 4'</span>)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>printword(<span class="dv">1</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>printword(<span class="dv">2</span>)</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>printword(<span class="dv">3</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>printword(<span class="dv">4</span>)</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>printword(<span class="dv">5</span>)</span></code></pre></div>
+<ul>
+<li><p><strong>In <code>my_conditional.py</code>, rewrite the function <code>printword(n)</code> so that it does the same thing but without using any <code>elif</code> code blocks.</strong></p></li>
+<li><p><strong>Submit your program, <code>my_conditional.py</code>.</strong></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="functions-without-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="functions-without-parameters">5.2 Functions without parameters</h2>
+<p><strong>Consider the following example:</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_two_xs():</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'xx'</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'start'</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>print_two_xs()</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>print_two_xs()</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'end'</span>)</span></code></pre></div>
+<p><strong>Let’s look at the execution step by step:</strong></p>
+<ul>
+<li>First, Python reads through and stores the function <em>definition</em>: <img src="../../../media/units/unit1/module1.5/function.png" class="img-fluid"></li>
+<li>Then execution starts with the first print, followed by the first <em>function call</em> (or <em>function invocation</em>, if you like big words).
+<ul>
+<li>At this point, execution enters the function:<br>
+<img src="../../../media/units/unit1/module1.5/function2.png" class="img-fluid"></li>
+<li>After the function executes, execution proceeds to <em>just after the function call:</em> <img src="../../../media/units/unit1/module1.5/function3.png" class="img-fluid"></li>
+<li>In this particular case, the very next line is a call to the same function: <img src="../../../media/units/unit1/module1.5/function4.png" class="img-fluid"></li>
+<li>After which: <img src="../../../media/units/unit1/module1.5/function5.png" class="img-fluid"></li>
+</ul></li>
+</ul>
+<p><strong>Consider the following program:</strong></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_two_xs():</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'xx'</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_three_ys():</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'yyy'</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_more():</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    print_two_xs()</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    print_three_ys()</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'z'</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'start'</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>        print_two_xs()</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>        print_three_ys()</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>        print_two_xs()</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>        print_three_ys()</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>    print_more()</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'end'</span>)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Examine and mentally execute the above program.</strong></p></li>
+<li><p><strong>Type up the above program in <code>my_execution_practice5.py</code>.</strong></p></li>
+<li><p><strong>Execute your program <code>my_execution_practice5.py</code> and check if the results match what you expected.</strong></p>
+<ul>
+<li>Execute the program until all outputs are understood.</li>
+</ul></li>
+<li><p><strong>Submit your program <code>my_execution_practice5.py</code>.</strong></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="functions-with-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="functions-with-parameters">5.3 Functions with parameters</h2>
+<p><strong>Here’s an example of a function with parameters:</strong></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_stuff(n):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'n ='</span>, n)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>n</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'twice n ='</span>, n)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> n <span class="op">//</span> <span class="dv">4</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'half n ='</span>, n)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(m)</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>print_stuff(m)</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(m)</span></code></pre></div>
+<p><strong>Let’s point out what we can understand in the above program:</strong></p>
+<ul>
+<li>The parameter variable <code>n</code> gets its value from the argument variable: <img src="../../../media/units/unit1/module1.5/parameter.png" class="img-fluid"></li>
+<li>Recall: <code>//</code> is the integer-division operator.</li>
+<li>Later in the function, the parameter variable gets its value changed: <img src="../../../media/units/unit1/module1.5/parameter2.png" class="img-fluid"></li>
+<li>It’s important to realize that we could have named the argument variable <code>n</code> as well: <img src="../../../media/units/unit1/module1.5/parameter3.png" class="img-fluid"></li>
+</ul>
+<p><strong>Any code <em>inside</em> the function that uses or modifies <code>n</code> affects only the parameter variable <code>n</code> (the <code>n</code> inside the function and not the <code>n</code> outside the function).</strong></p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Consider the following program:</strong></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_stuff(n):</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'n ='</span>, n)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>n</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'twice n ='</span>, n)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> n <span class="op">//</span> <span class="dv">4</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'half n ='</span>, n)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'m ='</span>, m)   <span class="co"># Trying to access m</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(m)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>print_stuff(m)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(m)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'n ='</span>, n)       <span class="co"># Trying to access n will generate an error and should be deleted for this program to work</span></span></code></pre></div>
+<ul>
+<li><strong>Type up the above program in <code>my_variable_access.py</code>.</strong></li>
+<li><strong>Execute your program <code>my_variable_access.py</code>.</strong>
+<ul>
+<li>Make the modification suggested in the last line of the program to eliminate the error.</li>
+</ul></li>
+<li><strong>Submit your program <code>my_variable_access.py</code> without any errors.</strong></li>
+<li><strong>Answering the following part of the exercise is recommended but not required for submission:</strong>
+<ul>
+<li>Identify the errors and understand why you were getting them. <!-- Also, in your module pdf, explain why half of the original n is calculated as n // 4. --></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>You will notice that m is accessible in the function whereas the parameter variable n is not accessible outside.</li>
+<li>This is a topic (called <em>scope</em>) that we’ll address in Unit-2.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="functions-that-return-values" class="level2">
+<h2 class="anchored" data-anchor-id="functions-that-return-values">5.4 Functions that return values</h2>
+<p><strong>Let’s look at an example:</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> incr(n):</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> n <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>j <span class="op">=</span> incr(i)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> incr( incr( incr(j) ) )</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(k)</span></code></pre></div>
+<p><strong>Consider the moment the first call to the <code>incr()</code> function occurs:</strong></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>j <span class="op">=</span> incr(i)</span></code></pre></div>
+<ul>
+<li><p>Here, the value in argument variable <code>i</code> is copied into parameter variable <code>n</code>: <img src="../../../media/units/unit1/module1.5/return.png" class="img-fluid"></p></li>
+<li><p>Then, the value <code>m</code> becomes <code>6</code>, which is returned when the <code>return</code> statement executes: <img src="../../../media/units/unit1/module1.5/return2.png" class="img-fluid"></p></li>
+<li><p>Moments later (in a tiny fraction of a second), you can think of the function call itself as replaced by the return value: <img src="../../../media/units/unit1/module1.5/return3.png" class="img-fluid"></p></li>
+<li><p>After the return occurs, remember that the parameter and other function-defined variables disappear. <br> (Fresh versions will be created whenever another function call occurs.)</p></li>
+<li><p>Now let’s examine the following code block:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> incr( incr( incr(j) ) )</span></code></pre></div>
+<p>At this moment <code>j</code> has the value <code>6</code>.</p></li>
+<li><p>The inner-most call happens first:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> incr( incr( incr(<span class="dv">6</span>) ) )</span></code></pre></div>
+<p>which goes to <code>incr()</code>, which returns <code>7</code>, which results in</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> incr( incr( <span class="dv">7</span> ) )</span></code></pre></div></li>
+<li><p>Then, for the next call to <code>incr()</code>, the value <code>7</code> is copied into the parameter variable <!--, resulting in:
+         ```python
+    k = incr( incr( 7 ) )
+    ``` --> which returns <code>8</code> as shown below:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> incr( <span class="dv">8</span> )</span></code></pre></div></li>
+<li><p>And finally <code>k = incr( 8 )</code> results in</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">9</span></span></code></pre></div></li>
+<li><p>Lastly, remember that a <code>return</code> statement can have expressions. Which means we can shorten <code>incr()</code> to:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> incr(n):</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n<span class="op">+</span><span class="dv">1</span></span></code></pre></div></li>
+<li><p>We could also place another function call in the <code>return</code> statement itself:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> incr(n):</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> double_incr(n):</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> incr(incr(n))</span></code></pre></div>
+<p>This is a shorter way of writing</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> incr(n):</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> double_incr(n):</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> incr(incr(n))</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> k</span></code></pre></div></li>
+</ul>
+<p><strong>Now consider a function with multiple returns:</strong></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> strange(n):</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'start-of-strange'</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>            s <span class="op">=</span> s <span class="op">+</span> k</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'end-of-strange'</span>)</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(strange(<span class="op">-</span><span class="dv">3</span>))</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(strange(<span class="dv">0</span>))</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(strange(<span class="dv">3</span>))</span></code></pre></div>
+<p><strong>In the first call to the function <code>strange()</code>, the parameter <code>n</code> will have the value <code>-3</code>.</strong></p>
+<ul>
+<li><p>In this case, we see ‘start-of-strange’ printed.</p></li>
+<li><p>The if-condition is <code>True</code>, which means the first <code>return</code> executes:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> strange(n):</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'start-of-strange'</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span>  </span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>            s <span class="op">=</span> s <span class="op">+</span> k</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'end-of-strange'</span>)</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(strange(<span class="op">-</span><span class="dv">3</span>))    </span></code></pre></div></li>
+<li><p>Execution leaves the function immediately, which means nothing else in the function executes.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.11
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Type up the above program in <code>my_strange_example.py</code>.</strong></p></li>
+<li><p><strong>Execute your program <code>my_strange_example.py</code>.</strong></p>
+<ul>
+<li>For the remaining two calls to the function <code>strange()</code> with arguments <code>0</code> and <code>3</code>, can you tell whether ‘end-of-strange’ gets printed or not?</li>
+</ul></li>
+<li><p><strong>Submit your program <code>my_strange_example.py</code>.</strong></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="lists-are-different" class="level2">
+<h2 class="anchored" data-anchor-id="lists-are-different">5.5 Lists are different</h2>
+<p>Consider</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_one(n):</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> n <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'incr: n='</span>, n)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> list_add_one(A):</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(A)):</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>        A[k] <span class="op">=</span> A[k] <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'list_incr: A='</span>, A)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>add_one(p)</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p)</span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>list_add_one(B)</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(B)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.12
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Type up the above program in <code>my_list_example.py</code>.</strong></p></li>
+<li><p><strong>Submit your program <code>my_list_example.py</code>.</strong></p></li>
+</ul>
+</div>
+</div>
+<p>Observe:</p>
+<ul>
+<li>The <code>add_one()</code> function has no effect on the variable <code>p</code>, since the value in <code>p</code> gets copied into <code>n</code>.</li>
+<li>The parameter variable <code>n</code> does get <code>1</code> added (as the print in <code>add_one()</code> confirms.</li>
+<li>One the other hand, <code>print(B)</code> shows that the elements of <code>B</code> have <code>1</code> added to each of them.</li>
+<li>Why is this? Why are lists different as parameters?
+<ul>
+<li>List variables are actually <em>references</em>, sometimes called <em>pointers</em>.</li>
+<li>Think of a reference or pointer as a special token that provides access to the <code>list</code> elements.</li>
+<li>Whoever has the token can access the <code>list</code> elements.</li>
+<li>When the contents of variable <code>B</code> are copied into parameter variable <code>A</code>, then the variable <code>A</code> has the special token.</li>
+<li>Which means variable <code>A</code> access the list elements and can change those.</li>
+</ul></li>
+<li>Why was the Python language designed this way?
+<ul>
+<li>It turns out that copying over big lists into parameter variables can greatly slow down execution.</li>
+<li>Thus, <code>lists</code> (and other such complex objects) don’t have their elements copied.</li>
+<li>Instead, it’s only the reference (which is really a single number, under the hood) gets copied.</li>
+</ul></li>
+</ul>
+<p><strong>For practice, let’s look at a list example with Boolean values (<code>True</code>, <code>False</code>):</strong></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> list_or(A):</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(A)):</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> x <span class="kw">or</span> (<span class="kw">not</span> A[k])</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="va">True</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">False</span>]</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(list_or(B))</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.13
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Type up the above program in <code>my_list_example2.py</code>.</strong></li>
+<li><strong>Submit your program <code>my_list_example2.py</code>.</strong></li>
+<li><strong>Answering the following part of the exercise is recommended but not required for submission:</strong>
+<ul>
+<li>Trace through each iteration of the loop in the function <code>list_or()</code>, showing <code>x</code>, <code>k</code>, and each <code>A[k]</code>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p><strong>And another example for practice:</strong></p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> within1(x, y):</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write your code here to return True or False</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return True if the difference between x and y is 1 or less</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> first_diff(A, B):</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> (k <span class="op">&lt;</span> <span class="bu">len</span>(A)) <span class="kw">and</span> (within1(A[k], B[k])):</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>        k <span class="op">=</span> k <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> k <span class="op">==</span> <span class="bu">len</span>(A):</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> k</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>]</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">4</span>]</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_diff(X,Y))    <span class="co"># Should print -1</span></span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_diff(X,Z))    <span class="co"># Should print 2</span></span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5.14
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>In the above program, the function <code>first_diff()</code> is intended to take two <code>lists</code></strong>
+<ul>
+<li>Compare elements in the same positions, and</li>
+<li>Identify the first position where the two lists differ by more than <code>1</code>.</li>
+<li>If no such difference exists, the function should return <code>-1</code>.</li>
+</ul></li>
+<li>In <code>my_list_example3.py</code>, complete the code in the <code>within1()</code> function so that it returns <code>True</code> only when the difference between <code>x</code> and <code>y</code> is <code>1</code> or less. Thus, True when <code>x=1</code>, <code>y=2</code>, or when <code>x=4</code>, <code>y=3</code>, or when <code>x=5</code>, <code>y=5</code>.</li>
+<li><strong>Submit your program <code>my_list_example3.py</code>.</strong></li>
+<li><strong>Answering the following part of the exercise is recommended but not required for submission:</strong>
+<ul>
+<li>Trace through the iteration in the while-loop.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="why-are-functions-useful" class="level2">
+<h2 class="anchored" data-anchor-id="why-are-functions-useful">5.6 Why are functions useful?</h2>
+<p><strong>Functions are very useful for four different reasons:</strong></p>
+<ol type="1">
+<li><p>Code written in a function can be <i>re-used</i>.</p>
+<ul>
+<li>For example, compare the following programs:</li>
+</ul>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> X:</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    total <span class="op">+=</span> k</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>avg <span class="op">=</span> total <span class="op">/</span> <span class="bu">len</span>(X)</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(avg)</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>]</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> Y:</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>    total <span class="op">+=</span> k</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>avg <span class="op">=</span> total <span class="op">/</span> <span class="bu">len</span>(Y)</span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(avg)</span></code></pre></div>
+<p>with</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mean(A):</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> k</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total <span class="op">/</span> <span class="bu">len</span>(A)</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mean(X))</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>]</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mean(Y))</span></code></pre></div></li>
+<li><p>The second big reason is <i>composability</i>, as the following example shows:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> incr( diff(x, y) )</span></code></pre></div>
+<p>(You can imagine what the functions <code>incr()</code> and <code>diff()</code> do.)</p></li>
+<li><p>Another example showing <i>compactness</i> with functions:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'  hello  '</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(s.strip()))</span></code></pre></div></li>
+<li><p>A long program broken up into functions will make the program more <i>readable</i> and therefore more easily understood.</p></li>
+<li><p>The biggest reason, perhaps, is that it has become one of two important ways by which multiple programmers use each others’ code.</p>
+<p><strong>Example</strong>: you have used functions in <code>drawtool</code> and Python functions like <code>math.random()</code>.</p></li>
+</ol>
+<p><strong>How do you know when to create functions vs.&nbsp;writing long code?</strong></p>
+<ul>
+<li>There are no rules. The judgement comes with practice.</li>
+<li>Generally, tiny computations like increment don’t need functions.</li>
+<li>Any significant computation that is likely to be re-used should probably be in a functions.</li>
+<li>Use functions when breaking things into functions greatly improves readability.</li>
+</ul>
+
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>The material is sourced from <strong>Prof.&nbsp;Kartik Bulusu’s</strong> course titled, ‘Introduction to IoT and Edge computng applications’. <br> This is a Quarto website. To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.<br> Contact: <a href="mailto:bulusu@email.gwu.edu">Kartik Bulusu</a><br> © 2024 All rights reserved</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

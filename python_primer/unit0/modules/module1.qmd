@@ -1,0 +1,359 @@
+---
+title: "**Module 1:** A few more getting-started examples"
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 0</a> &raquo;
+  <span class="current-page">Module 1</span>
+</div> -->
+
+## Objectives
+
+By the end of this module you will be able to:
+
+- Learn what a comment is, and how to write them.
+- Write programs with multiple prints
+- Escape sequences
+- Identify new syntactic elements.
+- Understand case-sensitivity.
+- Write a function and examine proper indentation.
+- Find and fix errors
+
+:::{.callout-tip}
+[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
+
+[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
+
+[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
+
+[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
+
+[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
+:::
+
+## 1.0 comments
+A <em>comment</em> is like a note-to-self that you include directly in a program as a way to explain something to yourself for later, or to someone else who reads your program.
+
+```python
+# This is a comment
+      # This is one too, but not recommended 
+
+print('Something')      # And so is this
+```
+Let's explain:
+
+- A comment begins with a `#` and ends at the end of the line.
+- Anything written as a comment is not treated by your computer as a "command" or as programming intent.
+- Thus, as far as programming goes, the above program is as good as:
+```python
+print('Something')
+```
+- You can insert comments in various places in a program:
+![](../../../media/units/unit0/module1/comments.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.1
+
+Under your `unit0`, create a `module1` folder (if you haven't already), and then write up the above in `my_comments.py`. Fix the second comment to start at the beginning of the line, and add an entirely new comment line of your own.
+:::
+
+Sometimes one needs a comment to spill over multiple lines, as in
+```python
+# I wrote this program at midnight
+20 seconds before the deadline
+print('Something') 
+```
+Notice the missing # in the second line of the comment.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.2
+
+Write up the above in `comment_error.py`. Remember to save the file (and do this for every exercise in the future that involves a program). 
+:::
+
+## 1.1 Whitespace
+Consider the following program:
+```python
+print   (  'Hello World!'     ) 
+```
+Notice the spaces inserted in various places.
+
+:::{.callout-caution appearance="simple" icon=false} 
+### Exercise 1.3
+
+Write up the above in `whitespace_example.py` and submit.
+:::
+
+Consider this variation
+```python
+  print('Hello World!')
+```
+(Two spaces before `print`).
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.4
+
+Write up the above in `whitespace_example2.py`. Run and check if you are getting any errors.
+:::
+
+Finally, look at:
+```python
+print('Hello     World!') 
+```
+(Extra spaces between Hello and World.)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.5
+
+Write up the above program in `whitespace_example3.py`,  by including 5 empty spaces between `Hello` and `World`. Run and check if you are getting any errors.
+:::
+
+Let's point out a few things:
+
+- Some kinds of whitespace, even if ill-advised, is permitted.
+- When starting a line of code, proper indentation is expected, which is why we got an error when we indented the line starting with `print`
+- The extra spaces between Hello and World are perfectly acceptable if the goal is to print them. Printing accepts whatever spaces you want printed.
+
+## 1.2 Strings
+A <em>string</em> in Python is a sequence of letters, digits, or symbols (like $ or *) surrounded by either
+
+- A pair of double quotes, as in: `"Hello World!"`
+- A pair of single quotes as in: `'Hello World!'`
+
+:::{.callout-note}
+- Whichever quote you use to start a string must be used to end the string.
+- The ending quote must be on the same line as the starting quote.
+- There are special techniques to handle long strings that need to spill over multiple lines (which we'll see below).
+- This raises some questions:
+    - Is it possible to print a single line but with multiple print statements?
+    - How does one print a quote?
+:::
+
+First, note that we can use single or double quotes for different strings in the same program:
+```python
+print('Hello')
+print("World!") 
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.6
+
+Confirm that Hello and World! get printed on two lines by writing the above in `my_string_example.py`
+:::
+
+A print statement prints the string within parenthesis and then goes to the next line of output, which is why we see World! on the next line.
+
+To keep printing on the same line:
+```python
+print('Hello', end=' ')
+print('World!')
+```
+
+:::{.callout-note}
+We've reverted to using single-quotes for all strings, which will be our preference.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.7
+
+Confirm by writing the above in `my_string_example2.py`.
+:::
+
+We'll now go the other way and have a single string itself contain a directive to spill over to the next line.
+```python
+print('Hello\nWorld!') 
+```
+Notice the backslash `\` followed by `n` inside the string: `'Hello\nWorld!'`
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.8
+
+Write up the above `my_string_example3.py`. Run and check if you are getting any errors.
+:::
+
+Strings can embed special so-called <em>escape sequences</em> that begin with backslash.
+
+This will give us one way to print a quote:
+```python
+print('My friend\'s friend\'s dog\'s friend')
+```
+
+Another way is to use one set of quotes to delimit the string that are different from the ones used within:
+```python
+print('My friend\'s friend\'s dog\'s friend')
+print("bit my friend's dog's ankle")
+print('who yelped "owww"')
+```
+
+How does one print a backslash itself? By using a double backslash:
+```python
+print('The backslash character, \\, is less intimidating now')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.9
+
+Write a program called `practice_escaping.py` that prints out
+
+```python
+  "    "   \\\
+  "    "    \    
+  """"""    \    
+  "    "    \    
+  "    "   \\\  
+```
+:::
+
+###### **1.10 Video**
+{{< video ../../../media/units/unit0/module1/u0-mod1.10.mp4 aspect-ratio='21x9' >}}
+
+Another use of backslash: to make long strings
+
+- Sometimes we need to type in a really long string.
+- The following does NOT work:
+```python
+print('An Ogden Nash poem:')
+print('The camel has a single hump; 
+The dromedary, two; 
+Or else the other way around. 
+I’m never sure. Are you?')
+```
+<a id="exercise-1.11">
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.11
+
+Write up a program called `my_string_example4.py` with the above program and run it. Submit the program. Observe the error the program generates to assess for yourself why the program returns the error.
+:::
+
+</a>
+
+To spread a single string over multiple lines, one uses a <em>triple quote</em> as in:
+```python
+print('An Ogden Nash poem:')
+print('''The camel has a single hump; 
+The dromedary, two; 
+Or else the other way around. 
+I’m never sure. Are you?''')
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.12
+
+Write up a program called `my_string_example5.py` with the 5-line limerick above program and run it. Observe that error the program doesn't not generate an error. Submit the program. Compare this program with [**Exercise 1.11**](./module1.qmd#exercise-1.11) to assess why there is no error in this program. You can discuss this program with your TA if you haven't figured it out for yourself.
+:::
+
+Empty strings:
+- It is possible to not have anything in a string, as in:
+```python
+print('')
+```
+
+:::{.callout-note}
+There are no letters, digits or anything between the two single quotes above.
+:::
+- Such a string is called an <em>empty string</em>.
+- Odd as it may seem, empty strings are useful (we'll see later) when you want to add strings to make a longer string.
+
+
+
+## 1.3 Case sensitivity
+What if we had used uppercase P instead of lowercase p in print?
+```python
+print('Hello World!')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.13
+
+Write up the above program `case_error.py` using uppercase P instead of lowercase p, in print and run it. Use comments (text followed by ‘#’ symbol) to describe the error in the python-file.
+:::
+
+What if we changed the case inside a string?
+```python
+print('helLo WoRLd!')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.14
+
+Write up the above program in `my_string_example6.py` and run it to see if it works.
+:::
+
+Python is case sensitive but strings are like <em>data</em> inside programs, which means they can be whatever we like.
+
+- The two strings `'Hello World!'` and `'helLo WoRLd!'` are fine as two different strings, if that's we want.
+- However, Python has only one  `print` and so it won't recognize `Print` (with capital P).
+
+
+
+
+## 1.4 A peek at the future
+We will occasionally jump ahead and present an example of a program that does something advanced, just so you get a feel for what's coming.
+
+With these examples, we'll only ask you to type up the program and run the program.
+
+And then we'll point out a few features, just so that you get acquainted with features that you'll eventually encounter.
+``` python
+import tkinter as tk
+
+window = tk.Tk()
+canvas = tk.Canvas(master=window, width=500, height=400)
+canvas.pack()
+
+for i in range(1, 10):
+    fontSize = i * 20
+    fontStr = 'Times ' + str(fontSize) + ' italic bold'
+    startx = 200 + 10 * i
+    starty = 20 + i * 20
+    canvas.create_text(
+        startx, starty, text="Hello", font=fontStr, fill='grey')
+
+window.mainloop()
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.15
+
+Write up the above program in `hello_gui.py` being careful to type it in exactly as shown above, paying attention to every keystroke. Run it to get something like: ![](../../../media/units/unit0/module1/hello-gui.png) If something went wrong with the typing, you can instead download <a href="../../../media/units/unit0/module1/hello_gui.py" download>**hello_gui.py**</a> but only after giving the typing a good try. When you quit your program, instead of x-ing out the window, use control-c ("control" key and "c" key pressed together) while the cursor is in the output window.
+:::
+
+Now let's point out a few features of the program, and we'll focus on the middle section:
+![](../../../media/units/unit0/module1/for-loop.png)
+
+Our belief is that by showing you bits and pieces of advanced code, you'll be primed to absorb these concepts when we work through them.
+
+One of the most important things to observe about is that some code is <em>indented</em>:
+![](../../../media/units/unit0/module1/for-loop2.png)
+
+
+
+## 1.5 A reminder about computerese
+As you complete Module 1 and ready that for submission you might want to review:
+
+- Did you make your `module1` folder? Did you ensure that the `m` in `module1` is lowercase and that there's no space `module` and `1`?
+- Are your Python programs from this module in that folder?
+- Do you recall how to make a zip?
+
+If it's a bit hazy, please make sure to review from the [**material on computerese**](../guides/computerese.qmd) from Module 0.
+
+<!-- [Here's more information about submitting Module 1]() -->
+
+<!-- <br>
+[Previous Module: **Module 0.0**](./module0.0.qmd){.button .prev} [Next Module: **Module 0.2**](./module0.2.qmd){.button .next} -->
+
+</body>
+</html>

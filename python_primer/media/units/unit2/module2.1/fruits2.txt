@@ -1,0 +1,16 @@
+apple
+banana
+apple
+pear
+banana
+banana
+apple
+kiwi
+orange
+plum
+orange
+orange
+kiwi
+plum
+orange
+peach

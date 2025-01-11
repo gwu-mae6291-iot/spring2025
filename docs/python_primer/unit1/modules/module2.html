@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAE 6291 - Module 2: Functions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">MAE 6291</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policies.html"> 
+<span class="menu-text">Course policies</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../../install-editor.html">
+ <span class="dropdown-text">Much Needed Software Installations</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Python Primer</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/basics.html">
+ <span class="dropdown-text">Basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/constructs.html">
+ <span class="dropdown-text">Constructs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../instructor.html"> 
+<span class="menu-text">Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#wait-stop" id="toc-wait-stop" class="nav-link" data-scroll-target="#wait-stop">2.0 Wait, stop!</a></li>
+  <li><a href="#a-simple-example" id="toc-a-simple-example" class="nav-link" data-scroll-target="#a-simple-example">2.1 A simple example</a></li>
+  <li><a href="#multiple-parameters" id="toc-multiple-parameters" class="nav-link" data-scroll-target="#multiple-parameters">2.2 Multiple parameters</a></li>
+  <li><a href="#return-values" id="toc-return-values" class="nav-link" data-scroll-target="#return-values">2.3 Return values</a></li>
+  <li><a href="#multiple-returns-in-a-function" id="toc-multiple-returns-in-a-function" class="nav-link" data-scroll-target="#multiple-returns-in-a-function">2.4 Multiple returns in a function</a></li>
+  <li><a href="#parameter-and-argument-names" id="toc-parameter-and-argument-names" class="nav-link" data-scroll-target="#parameter-and-argument-names">2.5 Parameter and argument names</a></li>
+  <li><a href="#what-can-you-do-with-parameter-variables" id="toc-what-can-you-do-with-parameter-variables" class="nav-link" data-scroll-target="#what-can-you-do-with-parameter-variables">2.6 What can you do with parameter variables?</a></li>
+  <li><a href="#functions-and-lists" id="toc-functions-and-lists" class="nav-link" data-scroll-target="#functions-and-lists">2.7 Functions and lists</a></li>
+  <li><a href="#returns-that-dont-return-anything" id="toc-returns-that-dont-return-anything" class="nav-link" data-scroll-target="#returns-that-dont-return-anything">2.8 returns that don’t return anything</a></li>
+  <li><a href="#a-fundamental-difference-between-list-and-basic-parameters" id="toc-a-fundamental-difference-between-list-and-basic-parameters" class="nav-link" data-scroll-target="#a-fundamental-difference-between-list-and-basic-parameters">2.9 A fundamental difference between list and basic parameters</a></li>
+  <li><a href="#calling-functions-from-functions" id="toc-calling-functions-from-functions" class="nav-link" data-scroll-target="#calling-functions-from-functions">2.10 Calling functions from functions</a></li>
+  <li><a href="#more-stats-via-programming" id="toc-more-stats-via-programming" class="nav-link" data-scroll-target="#more-stats-via-programming">2.11 More stats via programming</a></li>
+  <li><a href="#a-function-that-calls-itself" id="toc-a-function-that-calls-itself" class="nav-link" data-scroll-target="#a-function-that-calls-itself">2.12 A function that calls itself</a></li>
+  <li><a href="#inscribed-geometric-figures-as-art" id="toc-inscribed-geometric-figures-as-art" class="nav-link" data-scroll-target="#inscribed-geometric-figures-as-art">2.13 Inscribed geometric figures as art</a></li>
+  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">2.14 When things go wrong</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Module 2:</strong> Functions</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+<style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 1</a> &raquo;
+  <span class="current-page">Module 2</span>
+</div> -->
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this module you will be able to:</p>
+<ul>
+<li>Enhance your understanding of how to use def to write functions, then invoke them.</li>
+<li>Write code with function definitions and invocations.</li>
+<li>Write and debug code with functions</li>
+<li>Explore the different ways in which parameters work.</li>
+<li>Identify new syntactic elements related to the above.</li>
+</ul>
+</section>
+<section id="wait-stop" class="level2">
+<h2 class="anchored" data-anchor-id="wait-stop">2.0 Wait, stop!</h2>
+<p>Before continuing it is essential to review functions as described in <a href="../../../python_primer/unit0/modules/module2.html"><strong>Module 2 of Unit-0</strong></a></p>
+<p>What to review most carefully:</p>
+<ul>
+<li>The notion of how execution starts outside a function, goes into a function, and comes back to where the function was invoked.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When we come back to where the function was invoked, we continue execution just after the invocation.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please review <a href="../../../python_primer/unit0/modules/module2.html"><strong>Module 2 of Unit-0</strong></a>. There is nothing to submit in this exercise.</p>
+</div>
+</div>
+</section>
+<section id="a-simple-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-example">2.1 A simple example</h2>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment_and_print(a):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>increment_and_print(i)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>j <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>increment_and_print(j)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_func_example.py</code>.</p>
+<p>Then do the following:</p>
+<ul>
+<li>Just before the line where the variable assignment <code>j = 6</code> is shown, print the value of i.</li>
+<li>Execute the program <code>my_func_example.py</code>.</li>
+</ul>
+<p>Submit the program <code>my_func_example.py</code>.</p>
+</div>
+</div>
+<p>Let’s explain:</p>
+<ul>
+<li>Let’s start by distinguishing between a function <em>definition</em> (which merely tells Python what the function is about), and <em>invocation</em> (which asks Python to execute the function at that moment): <img src="../../../media/units/unit1/module1.2/func-code.png" class="img-fluid"></li>
+<li>Now let’s peer into what constitutes a definition: <img src="../../../media/units/unit1/module1.2/func-code2.png" class="img-fluid"></li>
+<li>In the above case, the function <code>increment_and_print</code> has only one parameter called <code>a</code>.
+<ul>
+<li><p>In the future, we’ll see that a function can have several parameters, separated by commas.</p></li>
+<li><p>For example</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment_and_print(a, b, c):</span></code></pre></div></li>
+</ul></li>
+<li>Next, let’s examine how execution proceeds, starting with what happens when a function is invoked: <img src="../../../media/units/unit1/module1.2/func-code3.png" class="img-fluid"></li>
+<li>Once execution is inside the function: <img src="../../../media/units/unit1/module1.2/func-code4.png" class="img-fluid"></li>
+<li>Next, execution moves further into the second invocation: <img src="../../../media/units/unit1/module1.2/func-code5.png" class="img-fluid"></li>
+<li>The code inside the function now executes (again): <img src="../../../media/units/unit1/module1.2/func-code6.png" class="img-fluid"></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Did you notice that neither <code>i</code> nor <code>j</code> was affected by the incrementing of the value of variable <code>a</code>?</p>
+<ul>
+<li>This is because the value in <code>i</code> was copied into the newly-created variable <code>a</code> when the function was invoked.</li>
+<li>Even though variable <code>a</code> got incremented, that did not affect <code>i</code>.</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>Variables like <code>a</code> that appear in the parentheses of a function definition are called <em>parameters</em>.</li>
+</ul>
+<p>What does a function <em>do</em> with its parameters?</p>
+<ul>
+<li>Think of the parameters as variables that can be used as regular variables for any purpose.</li>
+<li>For example, consider this program:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_from_one_to(a):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Printing between 1 and '</span>, a)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, a<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>print_from_one_to(<span class="dv">5</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>print_from_one_to(<span class="dv">6</span>)</span></code></pre></div>
+<ul>
+<li>Here, we used the parameter <strong><code>a</code></strong> in setting the upper limit of a for-loop.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>When a function is defined with a parameter, the intent is that some code <em>outside</em> the function will set the <em>value</em> of the parameter.</p>
+<ul>
+<li><p>Thus, it would be allowed but technically defeat the purpose to write:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_from_one_to(a):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Printing between 1 and '</span>, a)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, a<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>print_from_one_to(<span class="dv">5</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>print_from_one_to(<span class="dv">6</span>)</span></code></pre></div></li>
+<li><p>Yes, this runs, but the whole point is for some other code to tell the function, “Hey, I’m going to set variable <strong><code>a</code></strong>, and <em>then</em> you do your printing with the value I set”.</p></li>
+<li><p>And so, when we write</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_from_one_to(a):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Printing between 1 and '</span>, a)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, a<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>print_from_one_to(<span class="dv">5</span>)   <span class="co"># We're telling the function that a = 5</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>print_from_one_to(<span class="dv">6</span>)   <span class="co"># We're now telling the function to use a = 6</span></span></code></pre></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What do each of the above two programs print? Type them up in <code>my_func_example2a.py</code> and <code>my_func_example2b.py</code> to find out.</p>
+<p>Submit the following programs in this exercise:</p>
+<ol type="1">
+<li><code>my_func_example2a.py</code></li>
+<li><code>my_func_example2b.py</code></li>
+</ol>
+</div>
+</div>
+<section id="video" class="level6">
+<h6 class="anchored" data-anchor-id="video"><strong>2.4 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.2/u1-mod2.4.mp4"></video></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_func_example3.py</code>, fill in the code in the function below so that the output of the program is:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">*****</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">***</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">*</span></span></code></pre></div>
+<p>The partially-written program is as shown below.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_stars(n):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write your function code here</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>print_stars(<span class="dv">5</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>print_stars(<span class="dv">3</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>print_stars(<span class="dv">1</span>)</span></code></pre></div>
+<ul>
+<li>Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)</li>
+<li>You can include the comment in the your code.</li>
+<li>Execute the program <code>my_func_example3.py</code>.</li>
+<li>Submit your program <code>my_func_example3.py</code>.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="video-1" class="level6">
+<h6 class="anchored" data-anchor-id="video-1"><strong>2.6 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.2/u1-mod2.6.mp4"></video></div>
+</section>
+</section>
+<section id="multiple-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-parameters">2.2 Multiple parameters</h2>
+<p>Remember Pythagoras? We know his famous result:</p>
+<p><img src="../../../media/units/unit1/module1.2/pythagoras.png" class="img-fluid"></p>
+<p>A <em>Pythagorean triple</em> is any group of three integers like <i>3,4,5</i> where the squares of the first two add up to the square of the third: <i>3<sup>2</sup> + 4<sup>2</sup> = 5<sup>2</sup></i>.</p>
+<p>We’ll now write code to check whether a trio of numbers is indeed a Pythagorean triple:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_pythagorean(a, b, c):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a<span class="op">*</span>a <span class="op">+</span> b<span class="op">*</span>b <span class="op">==</span> c<span class="op">*</span>c:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'yes'</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'no'</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>check_pythagorean(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>check_pythagorean(<span class="dv">5</span>, <span class="dv">12</span>, <span class="dv">13</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>check_pythagorean(<span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">20</span>)</span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>This time, we’ve defined a <em>function</em> that takes three parameters:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_pythagorean(a, b, c):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The comments here are indented by a tab space. </span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The function code replaces these comments as shown below.</span></span></code></pre></div></li>
+<li><p>Notice the commas separating the three variables.</p></li>
+<li><p>Consider the first invocation: <img src="../../../media/units/unit1/module1.2/pytha-code.png" class="img-fluid"></p></li>
+<li><p>The invocation also uses commas to separate arguments.</p></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.7
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_func_example4.py</code>, fill in the code in the function below so that the output of the program is:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span></code></pre></div>
+<p><strong>Hint:</strong> The idea is to compute the sum but only of the positive parameters; if neither value is positive, print <code>0</code>.</p>
+<p>The partially written program is as shown below.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_profit_total(a,b):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write your function code here</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>print_profit_total(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>print_profit_total(<span class="op">-</span><span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>print_profit_total(<span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>print_profit_total(<span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>)</span></code></pre></div>
+<ul>
+<li>Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)</li>
+<li>You can include the comment in the your code.</li>
+<li>Execute the program <code>my_func_example4.py</code>.</li>
+<li>Submit your program <code>my_func_example4.py</code>.</li>
+</ul>
+</div>
+</div>
+<section id="video-2" class="level6">
+<h6 class="anchored" data-anchor-id="video-2"><strong>2.8 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.2/u1-mod2.8.mp4"></video></div>
+</section>
+</section>
+<section id="return-values" class="level2">
+<h2 class="anchored" data-anchor-id="return-values">2.3 Return values</h2>
+<p>So far, we’ve written methods that <em>take</em> values, do things and print.</p>
+<p>We get a whole new level of programming power, when methods can compute something and <em>return</em> something to the invoking code.</p>
+<p>Here’s an example:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> padd(a, b):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> a</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> b <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> b</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> padd(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.9
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_func_example5.py</code>.</p>
+<p><strong>Try and answer the following for yourself:</strong> What does the <code>padd()</code> function achieve by reviewing the program?</p>
+<p>Then do the following:</p>
+<ul>
+<li>First, execute the program <code>my_func_example5.py</code>.</li>
+<li>Next, replace the function parameters with <code>5, -6</code>.</li>
+<li>Finally, replace the function parameters with <code>5, 6</code>.</li>
+</ul>
+<p><strong>Submit your program <code>my_func_example5.py</code> with function parameters <code>padd(5, 6)</code>.</strong></p>
+</div>
+</div>
+<p>Let’s explain:</p>
+<ul>
+<li><p>First, execution begins after the function definition is “absorbed” by Python: <img src="../../../media/units/unit1/module1.2/return-code.png" class="img-fluid"><br>
+</p></li>
+<li><p>Remember, in an assignment statement, the right side is executed first:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> padd(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>)</span></code></pre></div>
+<p>The result of invoking this function somehow results in <code>x</code> getting a value stored inside it. <br> (We’ll see how, shortly.)</p></li>
+<li><p>Next, execution goes into the function: <img src="../../../media/units/unit1/module1.2/return-code2.png" class="img-fluid"></p></li>
+<li><p>When the return statement executes, the value returned (the value of <code>total</code> gets copied into <code>x</code>) <img src="../../../media/units/unit1/module1.2/return-code3.png" class="img-fluid"></p></li>
+<li><p>One way to think about it is presented below:</p>
+<ul>
+<li><p>Consider the following function invocation:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> padd(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>)</span></code></pre></div></li>
+<li><p>Then look at the function definition and the code block that is executed under <strong><code>def padd(a, b):</code></strong>.</p></li>
+<li><p>After the function <strong><code>padd(-5, 6)</code></strong> is executed, it returns the value in one of its variables (i.e., <strong><code>total</code></strong>).</p></li>
+<li><p>In this case where the function is <strong><code>padd(-5, 6)</code></strong>, the value <strong><code>6</code></strong> is returned. <!-- - That, behind the scenes, replaces the function invocation: --></p></li>
+<li><p>The value <strong><code>6</code></strong> is now assigned to the the variable <strong><code>x</code></strong> as shown below.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span></span></code></pre></div></li>
+<li><p>And thus, the value <strong><code>6</code></strong> gets copied into the variable <strong><code>x</code></strong>.</p></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_func_example6.py</code>, complete the code in <code>sum_up_to()</code> so that it computes and then returns the sum of numbers from 1 to n (inclusive of 1 and n).</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_up_to(n):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># write your code here</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> sum_up_to(<span class="dv">5</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)            <span class="co"># should print 15</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> sum_up_to(<span class="dv">10</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)            <span class="co"># should print 55</span></span></code></pre></div>
+</div>
+</div>
+<section id="video-3" class="level6">
+<h6 class="anchored" data-anchor-id="video-3"><strong>2.11 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.2/u1-mod2.11.mp4"></video></div>
+<p>Let’s return to our earlier example and use the <code>padd()</code> function in different ways:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> padd(a, b):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Received values: '</span>, a, b)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> a</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> b <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> b</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(padd(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>))                   </span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> padd(padd(<span class="op">-</span><span class="dv">5</span>,<span class="dv">6</span>), <span class="dv">7</span>)              </span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)                             </span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(padd(padd(<span class="op">-</span><span class="dv">5</span>,<span class="dv">6</span>), padd(<span class="dv">5</span>,<span class="op">-</span><span class="dv">6</span>)))  </span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.12
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_func_example7.py</code>.</p>
+<p>Then do the following:</p>
+<ul>
+<li>Execute the program <code>my_func_example7.py</code>.</li>
+<li>Submit the program <code>my_func_example7.py</code>.</li>
+</ul>
+</div>
+</div>
+<p>Let’s examine each of the last four statements in the program <code>my_func_example7.py</code>:</p>
+<ul>
+<li><p>First, let us look at the following statement in the program <code>my_func_example7.py</code>:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(padd(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>))</span></code></pre></div>
+<ul>
+<li><p>In this case, the invocation of the function <strong><code>padd()</code></strong> occurs inside the <strong><code>print()</code></strong> statement.</p></li>
+<li><p>The function <strong><code>padd(-5, 6)</code></strong> executes and returns the value <strong><code>6</code></strong>.</p></li>
+<li><p>Then the <strong><code>print()</code></strong> statement is executed as shown below with the value <strong><code>6</code></strong>.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="dv">6</span> )</span></code></pre></div></li>
+<li><p>The value <strong><code>6</code></strong> is the output of the <strong><code>print()</code></strong> function.</p></li>
+</ul></li>
+<li><p>Next, let us examine the following statement in the program <code>my_func_example7.py</code>:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> padd(padd(<span class="op">-</span><span class="dv">5</span>,<span class="dv">6</span>), <span class="dv">7</span>)              </span></code></pre></div>
+<ul>
+<li><p>In this case, the innermost <strong><code>padd()</code></strong> function is invoked first, i.e., <strong><code>padd(-5, 6)</code></strong> in</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> padd( padd(<span class="op">-</span><span class="dv">5</span>,<span class="dv">6</span>), <span class="dv">7</span> )</span></code></pre></div></li>
+<li><p>The parameter values <strong><code>5</code> &amp; <code>6</code></strong> are input into the function <strong><code>padd(-5, 6)</code></strong>.</p></li>
+<li><p>The function <strong><code>padd(-5, 6)</code></strong> returns the value <strong><code>6</code></strong>, and the statement takes the form as shown below:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> padd( <span class="dv">6</span>, <span class="dv">7</span> )</span></code></pre></div></li>
+<li><p>Now the outermost <strong><code>padd()</code></strong> function has the value values <strong><code>6</code> &amp; <code>7</code></strong> as its’ parameters.</p></li>
+<li><p>This results in another invocation to <strong><code>padd()</code></strong> with parameter values <strong><code>6</code> &amp; <code>7</code></strong> i.e., <strong><code>padd( 6, 7 )</code></strong>.</p></li>
+<li><p>The function <strong><code>padd( 6, 7 )</code></strong> is executed and it returns the value <strong><code>13</code></strong>.</p></li>
+<li><p>The result is assigned to the variable <strong><code>x</code></strong> as shown below:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">13</span></span></code></pre></div></li>
+</ul></li>
+<li><p>Finally, consider the last statement in the program <code>my_func_example7.py</code> as shown below:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(padd(padd(<span class="op">-</span><span class="dv">5</span>,<span class="dv">6</span>), padd(<span class="dv">5</span>,<span class="op">-</span><span class="dv">6</span>)))  </span></code></pre></div>
+<ul>
+<li><p>In this case, there are two innermost invocations of the <code>padd()</code> functions. These are <strong><code>padd(-5, 6)</code> &amp; <code>padd(5, -6)</code></strong> located inside the outermost <code>padd()</code> function as shown below:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(padd( padd(<span class="op">-</span><span class="dv">5</span>,<span class="dv">6</span>), padd(<span class="dv">5</span>,<span class="op">-</span><span class="dv">6</span>) ))  </span></code></pre></div></li>
+<li><p>In the statement above the first function to be invoked is <strong><code>padd(-5, 6)</code></strong>.</p></li>
+<li><p>The function <strong><code>padd(-5, 6)</code></strong> returns the value <strong><code>6</code></strong> and the statement takes the following form:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(padd( <span class="dv">6</span>, padd(<span class="dv">5</span>,<span class="op">-</span><span class="dv">6</span>) ))  </span></code></pre></div></li>
+<li><p>Next, the function <strong><code>padd(5, -6)</code></strong> is invoked</p></li>
+<li><p>The function <strong><code>padd(5, -6)</code></strong> returns the value <strong><code>5</code></strong> and the statement takes the following form inside the <strong><code>print()</code></strong> statement:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(padd( <span class="dv">6</span>, <span class="dv">5</span> ))  </span></code></pre></div></li>
+<li><p>Now, the values <strong><code>6 &amp; 5</code></strong> become the parameters for the third invocation of the function <strong><code>padd()</code></strong>.</p></li>
+<li><p>This invocation of the function <strong><code>padd( 6, 5 )</code></strong> returns the value <strong><code>11</code></strong></p></li>
+<li><p>The <strong><code>print()</code></strong> statement is now executed with the returned output from the function <strong><code>padd( 6, 5 )</code></strong> as shown below:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="dv">11</span> )  </span></code></pre></div></li>
+<li><p>And so 11 gets sent to print, which prints it.</p></li>
+<li><p>Whew!</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="multiple-returns-in-a-function" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-returns-in-a-function">2.4 Multiple returns in a function</h2>
+<p>Take a moment to go back up and quickly glance through the Pythagorean example.</p>
+<p>Now consider this rewrite:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_pythagorean(a, b, c):</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a<span class="op">*</span>a <span class="op">+</span> b<span class="op">*</span>b <span class="op">==</span> c<span class="op">*</span>c:</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'In the if-part'</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'yes'</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'In the else-part'</span>)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'no'</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> check_pythagorean(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> check_pythagorean(<span class="dv">5</span>, <span class="dv">12</span>, <span class="dv">13</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> check_pythagorean(<span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">20</span>)</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.13
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_func_example8.py</code>.</p>
+<p>Execute the program <code>my_func_example8.py</code>.</p>
+<p>Submit the program <code>my_func_example8.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>When a function executes a return statement, execution exits the function right then and there, even if there’s more code below.</li>
+<li>Thus for example, in the first time <code>check_pythagorean()</code> is invoked: <img src="../../../media/units/unit1/module1.2/return-code4.png" class="img-fluid"></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.14
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Trying drawing a similar diagram for the other two function invocations in a separate document to help you understand the flow of the program.</p>
+<p><strong>There is nothing to submit in this exercise.</strong></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.15
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_func_example9.py</code>, complete the code below so that the function, when given three numbers, identifies the two larger ones and returns their sum.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_bigger_pair(a, b, c):</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write your code here:</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add_bigger_pair(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>))  <span class="co"># Should print 7</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add_bigger_pair(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">1</span>))  <span class="co"># Should print 5</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add_bigger_pair(<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">4</span>))  <span class="co"># Should print 6</span></span></code></pre></div>
+<ul>
+<li>Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)</li>
+<li>You can include the comment in the your code.</li>
+<li>Execute the program <code>my_func_example9.py</code>.</li>
+<li>Submit your program <code>my_func_example9.py</code>.</li>
+</ul>
+</div>
+</div>
+<section id="video-4" class="level6">
+<h6 class="anchored" data-anchor-id="video-4"><strong>2.16 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.2/u1-mod2.16.mp4"></video></div>
+</section>
+</section>
+<section id="parameter-and-argument-names" class="level2">
+<h2 class="anchored" data-anchor-id="parameter-and-argument-names">2.5 Parameter and argument names</h2>
+<p>Consider this example:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> subtract(a, b):</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>   c <span class="op">=</span> b <span class="op">-</span> a</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> c</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> subtract(x, y)</span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>We refer to <code>a</code> and <code>b</code> as <em>parameters</em> in the definition of the function:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> subtract(a, b):</span></code></pre></div></li>
+<li><p>When function is invoked as shown below,</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>subtract(x, y):</span></code></pre></div>
+<p>we use the term <em>function arguments</em> for <code>x</code> and <code>y</code>.</p></li>
+</ul>
+</div>
+</div>
+<p>The names given to parameters have <em>no relation</em> to the names used for arguments:</p>
+<ul>
+<li><p>In the above case: <img src="../../../media/units/unit1/module1.2/param-names.png" class="img-fluid"></p></li>
+<li><p>Consider this variation:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> subtract(a, b):</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> b <span class="op">-</span> a</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> subtract(a, b)</span></code></pre></div></li>
+<li><p>The a,b,c that are the parameter variables are <em>different</em> from the a,b,c variables below: <img src="../../../media/units/unit1/module1.2/param-names2.png" class="img-fluid"></p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you aren’t sure, it’s safest to use different names.</p>
+</div>
+</div>
+</section>
+<section id="what-can-you-do-with-parameter-variables" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-you-do-with-parameter-variables">2.6 What can you do with parameter variables?</h2>
+<p>Generally, the purpose of parameter variables is this:</p>
+<ul>
+<li><p>Consider this example:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> silly_func(a, b):</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>a <span class="op">-</span> b</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(c)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>silly_func(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>silly_func(x, <span class="dv">8</span>)</span></code></pre></div></li>
+<li><p>From the point of view of the <em>definition of the function</em>, <code>silly_func(a, b)</code> thinks “Someone is going to put values into my variables <code>a</code> and <code>b</code>, and then I’ll do stuff like calculate and print”.</p></li>
+<li><p>From the point of view of code that is <em>using the function</em> or the invocation of the function, <code>silly_func(3, 4)</code> is saying “We’ll set the function’s parameter <code>a</code> to <code>3</code>, and <code>b</code> parameter to <code>4</code>, and then let the function do its thing”.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>silly_func(<span class="dv">3</span>, <span class="dv">4</span>)</span></code></pre></div>
+<ul>
+<li>Note that the values <code>3</code> and <code>4</code> are called the arguments of the invoked-function <code>silly_func(3, 4)</code>.</li>
+</ul></li>
+<li><p>Functions can use its parameter variables just like any other variable and <em>change its value</em>, as in:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> crazy_func(p, q):</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(p)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> p <span class="op">+</span> <span class="dv">3</span><span class="op">*</span>q       <span class="co"># We're changing p here</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(p)</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> p <span class="op">+</span> q</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(r)</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>crazy_func(x, y)</span></code></pre></div>
+<p>Because the value in <code>x</code> gets copied into the variable <code>p</code>, the value in <code>x</code> does not get changed even though the function changes the value in <code>p</code>.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.17
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Just by reading the above program, can you tell what the above program prints? The above question is for you understand the execution of the program and you don’t need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result.</p>
+<p><strong>The following portion of the exercise is required for submission of this exercise:</strong></p>
+<ul>
+<li><p>Implement the above program in <code>my_func_example10.py</code>.</p></li>
+<li><p>Submit your program <code>my_func_example10.py</code>.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="functions-and-lists" class="level2">
+<h2 class="anchored" data-anchor-id="functions-and-lists">2.7 Functions and lists</h2>
+<p>Can a function receive a list as parameter? Can it return one? Is this useful? Yes, yes, yes.</p>
+<p>Let’s start with a list as parameter:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_total(B):</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> B:</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> k</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> compute_total(A)</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.18
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try tracing through the execution of the above program, including loop interactions. The tracing activity is for you understand the execution of the program and you don’t need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result.</p>
+<p><strong>The following portion of the exercise is required for submission of this exercise:</strong></p>
+<ul>
+<li>Type up the above in <code>my_func_example11.py</code> by including a <code>print(k)</code> inside the for-loop.</li>
+<li>Submit your program <code>my_func_example11.py</code>.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.19
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_even_numbers.py</code>, complete the code in the function below so that the even numbers in a list are printed out:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_even(A):</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>print_even(A)</span></code></pre></div>
+<p>Write the function so that the output is as shown below:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>Found even:  <span class="dv">6</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>Found even:  <span class="dv">8</span></span></code></pre></div>
+<p><strong>Hint:</strong> Recall how to use the <em>remainder</em> operator from the previous module (conditionals and loops).</p>
+<ul>
+<li>Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)</li>
+<li>You can include the comment in the your code.</li>
+<li>Execute the program <code>my_even_numbers.py</code>.</li>
+<li>Submit your program <code>my_even_numbers.py</code>.</li>
+</ul>
+</div>
+</div>
+<p>Next, let’s look at an example where a list is returned:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_odd_list(n):</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> []</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>        k <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>        L.append(k)</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(build_odd_list(<span class="dv">5</span>))</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.21
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<!-- Try tracing through the above, the type up in `my_odd_list.py` to confirm what you learned. Include a `print(k)` in the loop after the append. -->
+<p>Try tracing through the execution of the above program, including loop interactions. The tracing activity is for you understand the execution of the program and you don’t need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result.</p>
+<p><strong>The following portion of the exercise is required for submission of this exercise:</strong></p>
+<ul>
+<li>Type up the above in <code>my_odd_list.py</code> by including a <code>print(k)</code> inside the for-loop after the <code>L.append(k)</code>.</li>
+<li>Submit your program `<code>my_odd_list.py</code>.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Execution begins with</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(build_odd_list(<span class="dv">5</span>))</span></code></pre></div></li>
+<li><p>This results in: <img src="../../../media/units/unit1/module1.2/list-return.png" class="img-fluid"></p></li>
+<li><p>Once the return occurs, we could think of this as:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>] )</span></code></pre></div>
+<p>This gets sent to print, which prints.</p></li>
+<li><p>One could make this more explicit: <img src="../../../media/units/unit1/module1.2/list-return2.png" class="img-fluid"></p></li>
+</ul>
+</div>
+</div>
+<p>Next, let’s look at a list example with multiple returns:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_first_negative(A):</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>            <span class="co"># First try print(k) here</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> k</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Then try print(k) here</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_first_negative(B))</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_first_negative(C))</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.22
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before typing this up in <code>my_first_negative.py</code> to confirm. That is, use the tracing approach we’ve used before: write out the values of variables and how they change from one iteration to the next. Then, replace the first comment so that you <code>print(k)</code> inside the loop. Then, move the print statement (still inside the loop) to after the <code>return k</code> statement. What do you observe? There is nothing to submit in the above portion of this exercise.</p>
+<p>Type up the above program in <code>my_first_negative.py</code>. Then do the following:</p>
+<ol type="1">
+<li>Execute the program and examine the output.</li>
+<li>Next, replace the first comment so that you <code>print(k)</code> inside the if-conditional.</li>
+<li>Execute your program <code>my_first_negative.py</code> and examine the output.</li>
+<li>Then, delete the <code>print(k)</code> you wrote in place of the first comment.</li>
+<li>Now replace the second comment with <code>print(k)</code> statement so that it appears after the <code>return k</code> statement.</li>
+<li>Exceute your program <code>my_first_negative.py</code> and examine the output for any change with the earlier execution.</li>
+<li>Submit your program <code>my_first_negative.py</code> with the modification suggested in point #5.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.23
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_last_negative.py</code>, modify the above program to find the last negative number (if one exists) in a list. So, after completing the code below</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_last_negative(A):</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span></code></pre></div>
+<p>it should print</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">5</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span></code></pre></div>
+<p><strong>Submit your program <code>my_last_negative.py</code>.</strong></p>
+</div>
+</div>
+</section>
+<section id="returns-that-dont-return-anything" class="level2">
+<h2 class="anchored" data-anchor-id="returns-that-dont-return-anything">2.8 returns that don’t return anything</h2>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_first_negative(A):</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Found: '</span>,k)</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> </span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negatives found'</span>)</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>print_first_negative(B)</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>print_first_negative(C)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.25
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_first_negative2.py</code>, execute and check for any errors.</p>
+<p><strong>Submit your program <code>my_first_negative2.py</code> if there are no errors.</strong></p>
+</div>
+</div>
+<p>Let’s point out:</p>
+<ul>
+<li><p>Whenever a <code>return</code> statement is executed in a function, execution exits the function right away.</p></li>
+<li><p>When a <code>return</code> statement does not return a variable’s value, execution leaves the function but does not give a value back to the invoking code.</p></li>
+<li><p>Thus the <code>return</code> statement in the program below, does not return a value but merely causes execution to leave the function and get back to line <em>just after</em> the function was invoked.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_first_negative(A):</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Found: '</span>,k)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negatives found'</span>)</span></code></pre></div></li>
+<li><p>Although it’s not needed, one could return at the end of a non-value-returning function:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_first_negative(A):</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Found: '</span>,k)</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negatives found'</span>)</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span></code></pre></div></li>
+<li><p>Why do we have multiple return’s in a function? Why not always wait until execution reaches the end of a function?</p>
+<ul>
+<li>It is very useful to be able to return from anywhere in a function’s code.</li>
+<li>The reason is, as soon as the function’s “job” is done (example: finding the first negative), we want to leave the function.</li>
+</ul></li>
+</ul>
+</section>
+<section id="a-fundamental-difference-between-list-and-basic-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="a-fundamental-difference-between-list-and-basic-parameters">2.9 A fundamental difference between list and basic parameters</h2>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> swapint(a, b):</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> a</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> b</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> temp</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a, b)</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>swapint(x, y)</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, y)     <span class="co"># Will this print 5 and 6, or 6 and 5?</span></span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.26
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before typing up the above in <code>my_swap_int.py</code> and submitting, can you guess what the output will be ?</p>
+<ul>
+<li>Type up and execute the program <code>my_swap_int.py</code>.</li>
+<li>Submit your program <code>my_swap_int.py</code>.</li>
+</ul>
+</div>
+</div>
+<p>Let’s explain:</p>
+<ul>
+<li><p>Execution of the program begins with the line</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span></code></pre></div></li>
+<li><p>When the function is called soon after:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>swapint(x, y)</span></code></pre></div>
+<p>then execution enters the function with the values in x and y copied into a and b: <img src="../../../media/units/unit1/module1.2/swap-code.png" class="img-fluid"></p></li>
+<li><p>Then, by the time we reach the print statement: <img src="../../../media/units/unit1/module1.2/swap-code2.png" class="img-fluid"></p></li>
+<li><p>Thus, the values in a and b do indeed get swapped.</p></li>
+<li><p>But this does not affect x and y because they are actually different variables.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.27
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To help you understand the program, in a separate document draw the three boxes for <code>a, b,</code> and <code>temp</code>, at each step in the function’s execution.</p>
+<p><strong>There is nothing to submit in this exercise.</strong></p>
+</div>
+</div>
+<p>Now, consider a similar program with lists:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> swap_list_first(A, B):</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> A[<span class="dv">0</span>]</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>    A[<span class="dv">0</span>] <span class="op">=</span> B[<span class="dv">0</span>]</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>    B[<span class="dv">0</span>] <span class="op">=</span> temp</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>]</span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>swap_list_first(X, Y)</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X, Y)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.28
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To help you understand the above program, in a separate document draw the three boxes for <code>A, B,</code> and <code>temp</code>, at each step in the function’s execution.</p>
+<p><strong>There is nothing to submit in this exercise.</strong></p>
+</div>
+</div>
+<p>Let’s see what’s going on:</p>
+<ul>
+<li>List variables are fundamentally different from numeric variables.</li>
+<li>Think of a list variable has having a reference ID to the actual list contents:
+<ul>
+<li>This is like an “address” in memory.</li>
+<li>If you have this “address” you can go to the list and do things with it.</li>
+<li>List variables actual store these addresses (which, interestingly, turn out to be numbers).</li>
+</ul></li>
+<li>We will draw a <em>conceptual diagram</em> to highlight this point: <img src="../../../media/units/unit1/module1.2/swap-code3.png" class="img-fluid"></li>
+<li>Thus, when the function starts execution, the “references” in X and Y are copied into A and B.</li>
+<li>This means A and B refer to the same <em>list contents</em>.</li>
+<li>So, A[0] is the same as X[0], for example.</li>
+<li>Next, after executing the three lines inside the function but before returning: <img src="../../../media/units/unit1/module1.2/swap-code4.png" class="img-fluid"></li>
+<li>Notice that temp is a regular integer.</li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.29
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above program with the function <code>swap_list_first(A, B)</code> in <code>my_swap_list_first.py</code>.</p>
+<ul>
+<li>Execute the program and examine the output.</li>
+<li>Submit your program <code>my_swap_list_first.py</code>.</li>
+</ul>
+<!-- To help you understand the program, in a separate document draw the three boxes for a, b, and temp, at each step in the function’s execution. -->
+</div>
+</div>
+<p><strong>The key takeaways:</strong></p>
+<ul>
+<li>When you send number variables to a function, they get copied, and so the function can’t “do” anything to the variables you present as arguments.</li>
+<li>But if you send a list, a function can change the contents.</li>
+<li>This means you need to be careful about <em>intent</em> when writing functions that involve larger entities like lists. <!--     <br> (There are other such "grouped data" entities, called <em>objects</em>.)
+- If the intent is to change contents, that's fine, we should know that. --></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.31
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider the following program:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> change_int(a):</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> change_list(A):</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>    A[<span class="dv">0</span>] <span class="op">=</span> A[<span class="dv">0</span>] <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>change_int(x)</span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a>change_list(B)</span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(B)</span></code></pre></div>
+<ul>
+<li>Type up the above in <code>my_change_list.py</code>.</li>
+<li>Execute the program <code>my_change_list.py</code> and examine the output.</li>
+<li>Submit your program <code>my_change_list.py</code>.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="calling-functions-from-functions" class="level2">
+<h2 class="anchored" data-anchor-id="calling-functions-from-functions">2.10 Calling functions from functions</h2>
+<p>The code <em>inside</em> functions can be like regular code that’s outside functions.</p>
+<p>In particular, code inside functions can call (invoke) other functions.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(a):</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> b</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment_twice(c):</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>    d <span class="op">=</span> increment(c)</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>    e <span class="op">=</span> increment(d)</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> e</span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> increment_twice(x)</span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>The program starts execution at the line</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span></code></pre></div></li>
+<li><p>Then, when <code>increment_twice(x)</code> is called, we enter the function <code>increment_twice()</code> with the variable <code>c</code> set to 5 (copied from x).</p></li>
+<li><p>The next line in there</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> increment(c)</span></code></pre></div>
+<p>results in a call to <code>increment()</code> with the value 5 copied into parameter <code>a</code>.</p></li>
+<li><p>Then, the code in <code>increment()</code> executes, resulting in 6 being returned.</p></li>
+<li><p>The returned value 6 is stored in <code>d</code>.</p></li>
+<li><p>Then <code>increment()</code> is called again with the value in <code>d</code>. (now 6) copied into <code>a</code>.</p></li>
+<li><p>The code in <code>increment()</code> executes resulting in 7 returned.</p></li>
+<li><p>Execution continues in the <code>increment_twice()</code> function and the value 7 is stored in <code>e</code>.</p></li>
+<li><p>Finally <code>increment_twice()</code>completes execution and returns the value in <code>e</code>, which is 7.</p></li>
+<li><p>This value is stored in <code>y</code>,</p></li>
+<li><p>Execution continues from there to the print.</p></li>
+</ul>
+</div>
+</div>
+<p>In addition, observe the following:</p>
+<ul>
+<li><p>We can shorten the above code by writing:</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(a):</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment_twice(c):</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> increment(increment(c))</span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> increment_twice(x)</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span></code></pre></div></li>
+<li><p>Notice that one can return the result of an <em>expression</em>:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> a <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
+<p>In this case, the calculation is an arithmetic expression.</p></li>
+<li><p>One can also have the result of a function call itself be returned:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment_twice(c):</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> increment(increment(c))</span></code></pre></div></li>
+<li><p>After, it’s possible to do this:</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( increment(increment(c)) )</span></code></pre></div>
+<p>Here, the result of the inner <code>increment()</code>call</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( increment(increment(c)) )</span></code></pre></div>
+<p>is sent again to <code>increment()</code>:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( increment( ... ) )</span></code></pre></div></li>
+<li><p>In the same vein, we can, instead of printing, execute a return:</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> increment(increment(c))</span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You do NOT have to use such shortcuts. Some shortcuts are an advanced topic and may in fact make your code harder to read, and harder to fix mistakes in.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.33
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider the following program:</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decrement(a):</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> subtract(a, b):</span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, a):</span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> decrement(b)</span>
+<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> b</span>
+<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-9"><a href="#cb65-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(subtract(<span class="dv">5</span>, <span class="dv">9</span>))</span>
+<span id="cb65-10"><a href="#cb65-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(subtract(<span class="dv">3</span>, <span class="dv">13</span>))</span></code></pre></div>
+<ul>
+<li>Type up the above in <code>my_subtraction.py</code>.</li>
+<li>Execute the program <code>my_subtraction.py</code> and examine the output.</li>
+<li>Submit your program <code>my_subtraction.py</code>.</li>
+</ul>
+<p><strong>Recommended but not required for submission in this exercise:</strong> As with other tracing exercises this is also optional and in this particular case a bit long, but worth doing because it will help your understanding. Try tracing the execution step-by-step in a separate document.</p>
+</div>
+</div>
+<section id="video-5" class="level6">
+<h6 class="anchored" data-anchor-id="video-5"><strong>2.34 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video6" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.2/u1-mod2.34.mp4"></video></div>
+</section>
+</section>
+<section id="more-stats-via-programming" class="level2">
+<h2 class="anchored" data-anchor-id="more-stats-via-programming">2.11 More stats via programming</h2>
+<p>Armed with our new ability to work with functions and lists, we will see how easy it is to compute basic statistics with data.</p>
+<p>Before we get to that, here’s a small exercise.</p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.35
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider the following program:</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_smallest(A):</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>    smallest <span class="op">=</span> A[<span class="dv">0</span>]</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> smallest:</span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a>            smallest <span class="op">=</span> k</span>
+<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> smallest</span>
+<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="op">-</span><span class="fl">2.3</span>, <span class="op">-</span><span class="fl">1.22</span>, <span class="fl">1.6</span>, <span class="op">-</span><span class="fl">10.5</span>, <span class="fl">1.4</span>, <span class="fl">2.5</span>, <span class="op">-</span><span class="fl">3.32</span>, <span class="fl">11.03</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="op">-</span><span class="fl">1.4</span>]</span>
+<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_smallest(data))</span></code></pre></div>
+<ul>
+<li>Type up the above in <code>my_find_smallest.py</code>.</li>
+<li>Execute the program <code>my_find_smallest.py</code> and examine the output.</li>
+<li>Submit your program <code>my_find_smallest.py</code>.</li>
+</ul>
+<p><strong>Recommended but not required for submission in this exercise:</strong> It’s critical to understand how the variable <code>smallest</code> is changing through the loop, and why the function <code>find_smallest()</code> does in fact identify the smallest value in a list. Remember: the more negative a number, the smaller. Thus, -10 is less than or “smaller” than -4.</p>
+</div>
+</div>
+<p>With that, consider this partially complete program:</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_smallest(A):</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>    smallest <span class="op">=</span> A[<span class="dv">0</span>]</span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> smallest:</span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>            smallest <span class="op">=</span> k</span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> smallest</span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_largest(A):</span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here:</span></span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_span(A):</span>
+<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a>    smallest <span class="op">=</span> find_smallest(A)</span>
+<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a>    largest <span class="op">=</span> find_largest(A)</span>
+<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a>    span <span class="op">=</span> largest <span class="op">-</span> smallest</span>
+<span id="cb67-15"><a href="#cb67-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> span</span>
+<span id="cb67-16"><a href="#cb67-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-17"><a href="#cb67-17" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="op">-</span><span class="fl">2.3</span>, <span class="op">-</span><span class="fl">1.22</span>, <span class="fl">1.6</span>, <span class="op">-</span><span class="fl">10.5</span>, <span class="fl">1.4</span>, <span class="fl">2.5</span>, <span class="op">-</span><span class="fl">3.32</span>, <span class="fl">11.03</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="op">-</span><span class="fl">1.4</span>]</span>
+<span id="cb67-18"><a href="#cb67-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'span: '</span>, find_span(data))</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.36
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_stats.py</code> complete the above so that the <em>span</em> of the data is computed and printed. This is the difference between the largest and smallest values.</p>
+<ul>
+<li>Type up the above in <code>my_stats.py</code>.</li>
+<li>Execute the program <code>my_stats.py</code> and examine the output to check if the <em>span</em> of the data is computed and printed.</li>
+<li>Submit your program <code>my_stats.py</code>.</li>
+</ul>
+</div>
+</div>
+<section id="video-6" class="level6">
+<h6 class="anchored" data-anchor-id="video-6"><strong>2.37 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video7" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.2/u1-mod2.37.mp4"></video></div>
+<p>Next, let’s write some (partially complete) code for standard statistics:</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_mean(A):</span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here:</span></span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_std(A):</span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a>    mean <span class="op">=</span> compute_mean(A)</span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> (k<span class="op">-</span>mean)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a>    std <span class="op">=</span> math.sqrt( total <span class="op">/</span> <span class="bu">len</span>(A) )</span>
+<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> std</span>
+<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="op">-</span><span class="fl">2.3</span>, <span class="op">-</span><span class="fl">1.22</span>, <span class="fl">1.6</span>, <span class="op">-</span><span class="fl">10.5</span>, <span class="fl">1.4</span>, <span class="fl">2.5</span>, <span class="op">-</span><span class="fl">3.32</span>, <span class="fl">11.03</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="op">-</span><span class="fl">1.4</span>]</span>
+<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'mean ='</span>, compute_mean(data))</span>
+<span id="cb68-16"><a href="#cb68-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'standard deviation ='</span>, compute_std(data))</span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The <em>mean</em> of a list of numbers is the total (add the numbers up) divided by “how many numbers there are” in the list.</li>
+<li>The <em>standard deviation</em> is more involved:
+<ul>
+<li><p>Consider data like:</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span></span></code></pre></div>
+<p>This is centered around 30 (mean in this case).</p></li>
+<li><p>Here, a different set of data that’s also centered around 30:</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="dv">28</span>, <span class="dv">29</span>, <span class="dv">30</span>, <span class="dv">31</span>, <span class="dv">32</span></span></code></pre></div></li>
+<li><p>Clearly, the second set of data is very bunched up around 30 while the first is more spread out.</p></li>
+<li><p>The <em>standard deviation</em> is a measure (a single number) that rates the “spreadout-ness” of data.</p></li>
+<li><p>The more spread out, the higher the standard deviation.</p></li>
+<li><p>To calculate it, we take the difference of each data from the mean, square it (to make it always positive), then add all of these up.</p></li>
+<li><p>This gives something called the <em>variance</em>, which itself is a fine measure of spreadout-ness.</p></li>
+<li><p>However, because we’re adding up squared numbers, the variance can become a big number.</p></li>
+<li><p>To bring the measure closer to the “level” of the actual data, we take the square root of the variance: this is the <em>standard deviation</em>.</p></li>
+</ul></li>
+<li>If you’ve never seen this before, it’s worth computing by hand with the data above, just so you understand how it looks on paper. Then compare with the results from the program.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.38
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Complete the code above and type it up in <code>my_stats2.py</code>.</p></li>
+<li><p>Execute the program <code>my_stats2.py</code> and examine the output to check if the <em>mean</em> and <em>standard deviation</em> of the data are computed and printed.</p></li>
+<li><p>You should get as output as shown below:</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> <span class="fl">0.1627272727272727</span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>standard deviation <span class="op">=</span> <span class="fl">4.955716792313685</span></span></code></pre></div>
+<p>(Real numbers, what can you do?)</p></li>
+<li><p>Submit your program <code>my_stats2.py</code>.</p></li>
+</ul>
+</div>
+</div>
+<p>Next, let’s tackle the more challenging problem of identifying <em>outliers</em>:</p>
+<ul>
+<li><p>Take a closer look at the data:</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="op">-</span><span class="fl">2.3</span>, <span class="op">-</span><span class="fl">1.22</span>, <span class="fl">1.6</span>, <span class="op">-</span><span class="fl">10.5</span>, <span class="fl">1.4</span>, <span class="fl">2.5</span>, <span class="op">-</span><span class="fl">3.32</span>, <span class="fl">11.03</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="op">-</span><span class="fl">1.4</span>]</span></code></pre></div></li>
+<li><p>We see that two data values <strong><code>-10.5</code></strong> &amp; <strong><code>11.03</code></strong> seem to be far outside the range of the other data.</p></li>
+<li><p>Suppose we use the following approach to identifying outliers:</p>
+<ul>
+<li>Compute the mean and standard deviation.</li>
+<li>Identify those data that lie further than two standard deviations away from the mean.</li>
+<li>Call these <em>outliers</em>.</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The traditional definition uses <em>three</em> standard deviations, but we’ll stick with two because it makes our example easy to work with.</p>
+</div>
+</div>
+<p>Let’s write a function to do this:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_outliers(A):</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>    mean <span class="op">=</span> compute_mean(A)</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>    std <span class="op">=</span> compute_std(A)</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> (mean <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>std):</span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Found outlier: '</span>, k)</span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> k <span class="op">&gt;</span> (mean <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>std):</span>
+<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Found outlier: '</span>, k)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.39
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>In <code>my_stats2.py</code>, add the above to your code and save your program as <code>my_stats3.py</code>.</p></li>
+<li><p>Execute the program <code>my_stats3.py</code> and examine the output to check if the <em>mean</em>, <em>standard deviation</em> and <em>outliers</em> of the data are computed and printed.</p></li>
+<li><p>The output of your program should be as shown below:</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> <span class="fl">0.1627272727272727</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>standard deviation <span class="op">=</span> <span class="fl">4.955716792313685</span></span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>Found outlier:  <span class="op">-</span><span class="fl">10.5</span></span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>Found outlier:  <span class="fl">11.03</span></span></code></pre></div></li>
+<li><p>Submit your program <code>my_stats3.py</code>.</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="a-function-that-calls-itself" class="level2">
+<h2 class="anchored" data-anchor-id="a-function-that-calls-itself">2.12 A function that calls itself</h2>
+<p><strong>This is a somewhat advanced topic (not on any exam or assignment!).</strong></p>
+<p>We will only present a simple example only so that you see what it’s like.</p>
+<p>Consider the following example:</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> factorial(n):</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print(n)</span></span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> factorial(n<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> m</span>
+<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(factorial(<span class="dv">5</span>))</span>
+<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(factorial(<span class="dv">10</span>))</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.40
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Type up the above in <code>my_factorial.py</code>.</p></li>
+<li><p>Remove the <code>#</code> symbol to allow <code>print(n)</code> statement to return the value of <code>n</code>.</p></li>
+<li><p>Execute the program <code>my_factorial.py</code>.</p></li>
+<li><p>Submit your program <code>my_factorial.py</code>.</p></li>
+</ul>
+<p><strong>Recommended but not required for submission in this exercise:</strong> Try tracing through what happens when <code>factorial(5)</code> is called.</p>
+</div>
+</div>
+<p>Let’s point out:</p>
+<ul>
+<li>Yes, it’s allowed for a function to call itself.</li>
+<li>Such a function is called a <em>recursive function</em>, and the resulting behavior is called <em>recursion</em>.</li>
+<li>The above example computes numbers like &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 × 2 × 3 × 4 × 5 × = 120 <br> (This ascending multiplication is called factorial.)</li>
+<li>For recursion to work, the successive calls to itself have to end so that we don’t get the infinity of barbershop mirrors.</li>
+<li>In the above case, n eventually becomes 1. In this case, there’s no further call to itself.</li>
+<li>Recursion is hard to understand, and will be featured in later courses after you’ve got more programming under your belt.</li>
+<li>Surprisingly, many problems are solvable elegantly and efficiently using recursion.</li>
+<li>It is possible to do recursion improperly, in which case a program is set up to recurse forever. In this case, Python will give up after too many recursions.</li>
+</ul>
+<section id="video-7" class="level6">
+<h6 class="anchored" data-anchor-id="video-7"><strong>2.41 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video8" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.2/u1-mod2.41.mp4"></video></div>
+</section>
+</section>
+<section id="inscribed-geometric-figures-as-art" class="level2">
+<h2 class="anchored" data-anchor-id="inscribed-geometric-figures-as-art">2.13 Inscribed geometric figures as art</h2>
+<p>Of course we’re going to try and use functions and drawing.</p>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>dt.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_circle_in_square(side):</span>
+<span id="cb76-9"><a href="#cb76-9" aria-hidden="true" tabindex="-1"></a>    radius <span class="op">=</span> side<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb76-10"><a href="#cb76-10" aria-hidden="true" tabindex="-1"></a>    dt.set_color(<span class="st">'r'</span>)</span>
+<span id="cb76-11"><a href="#cb76-11" aria-hidden="true" tabindex="-1"></a>    dt.draw_circle(<span class="dv">0</span>,<span class="dv">0</span>, radius)</span>
+<span id="cb76-12"><a href="#cb76-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> radius</span>
+<span id="cb76-13"><a href="#cb76-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-14"><a href="#cb76-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_square_in_circle(radius):</span>
+<span id="cb76-15"><a href="#cb76-15" aria-hidden="true" tabindex="-1"></a>    side <span class="op">=</span> math.sqrt(<span class="dv">2</span>) <span class="op">*</span> radius</span>
+<span id="cb76-16"><a href="#cb76-16" aria-hidden="true" tabindex="-1"></a>    dt.set_color(<span class="st">'b'</span>)</span>
+<span id="cb76-17"><a href="#cb76-17" aria-hidden="true" tabindex="-1"></a>    dt.draw_rectangle(<span class="op">-</span>side<span class="op">/</span><span class="dv">2</span>, <span class="op">-</span>side<span class="op">/</span><span class="dv">2</span>, side, side)</span>
+<span id="cb76-18"><a href="#cb76-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> side</span>
+<span id="cb76-19"><a href="#cb76-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-20"><a href="#cb76-20" aria-hidden="true" tabindex="-1"></a>side <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb76-21"><a href="#cb76-21" aria-hidden="true" tabindex="-1"></a>dt.draw_rectangle(<span class="op">-</span>side<span class="op">/</span><span class="dv">2</span>, <span class="op">-</span>side<span class="op">/</span><span class="dv">2</span>, side, side)</span>
+<span id="cb76-22"><a href="#cb76-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-23"><a href="#cb76-23" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb76-24"><a href="#cb76-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb76-25"><a href="#cb76-25" aria-hidden="true" tabindex="-1"></a>    radius <span class="op">=</span> draw_circle_in_square(side)</span>
+<span id="cb76-26"><a href="#cb76-26" aria-hidden="true" tabindex="-1"></a>    side <span class="op">=</span> draw_square_in_circle(radius)</span>
+<span id="cb76-27"><a href="#cb76-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-28"><a href="#cb76-28" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.42
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download <a href="../../../media/useful/drawtool.py" download=""><strong>drawtool.py</strong></a> and <a href="../../../media/units/unit1/module1.2/circle_square.py" download=""><strong>circle_square.py</strong></a> and run the latter to get <img src="../../../media/units/unit1/module1.2/kepler.png" class="img-fluid"></p>
+<p>Then do the following:</p>
+<ul>
+<li>Change n to <code>n = 20</code> in the program <code>circle_square.py</code>.</li>
+<li>Execute the program <code>circle_square.py</code>.</li>
+<li>Submit your program <code>circle_square.py</code> along with <code>drawtool.py</code>.</li>
+</ul>
+<p><strong>Recommended but not required for submission in this exercise:</strong> Perhaps experiment with colors. Try to read the functions and figure out, not so much the calculation, as what they’re doing.</p>
+</div>
+</div>
+<p>At first, this looks like a simple exercise in geometric art, or a depiction of the “evil eye” but there’s more to it:</p>
+<ul>
+<li>Notice the construction:
+<ul>
+<li>We start with a square.</li>
+<li>Then we <em>inscribe</em> the biggest possible circle that’ll fit inside that square.</li>
+<li>Now we find the biggest possible square that’ll fit inside the recently drawn circle.</li>
+<li>Then the square inscribed in <em>that circle</em>, and so on.</li>
+</ul></li>
+<li>Instead of just using circles and squares, one can use a square first, then a pentagon, then a hexagon, and so on.</li>
+<li>The result is something that Kepler worked on a long time ago. See <a href="https://en.wikipedia.org/wiki/Kepler%E2%80%93Bouwkamp_constant"><strong>this article</strong></a></li>
+<li>The historical significance is this:
+<ul>
+<li>Ever since the Greeks, polygons and circles have held special significance.</li>
+<li>So, something like this had an almost religious significance.</li>
+<li><a href="https://en.wikipedia.org/wiki/Johannes_Kepler"><strong>Kepler</strong></a> then used a similar idea for solids to expound (an entirely wrong) theory of planetary motion.</li>
+<li>To his credit, he realized he was wrong when shown higher quality data (from Tycho Brahe), and used the data to fit ellipses.</li>
+<li>This was the beginning of the modern understanding of planetary motion, later mathematically solved by Isaac Newton.</li>
+</ul></li>
+</ul>
+</section>
+<section id="when-things-go-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="when-things-go-wrong">2.14 When things go wrong</h2>
+<p>In each of the exercises below, first try to identify the error just by reading. Then type up the program to confirm, and after that, fix the error.</p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.43
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square_it(x):</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">*</span> x</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> square_it(a)</span>
+<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code></pre></div>
+<p>Identify and fix the error in <code>my_error1.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.44
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb78"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bigger(x,y)</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">&gt;</span> y:</span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> y</span>
+<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bigger(<span class="dv">4</span>,<span class="dv">5</span>))</span></code></pre></div>
+<p>Identify and fix the error in <code>my_error2.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.45
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_smallest(A):</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>    smallest <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> smallest:</span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>            smallest <span class="op">=</span> k</span>
+<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> smallest</span>
+<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>]</span>
+<span id="cb79-9"><a href="#cb79-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_smallest(B))</span></code></pre></div>
+<p>Does the above program work? What is the reasoning behind the line <code>smallest = 1000</code>? What would go wrong if you removed it altogether? Can you create a list (change the data in B) which will cause the function to fail to find the smallest number. Fix the issue in <code>my_error3.py</code>.</p>
+</div>
+</div>
+<!-- <br>
+[Previous Module: **Module 1.1**](./module1.1.qmd){.button .prev} [Next Module: **Module 1.3**](./module1.3.qmd){.button .next} -->
+
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>The material is sourced from <strong>Prof.&nbsp;Kartik Bulusu’s</strong> course titled, ‘Introduction to IoT and Edge computng applications’. <br> This is a Quarto website. To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.<br> Contact: <a href="mailto:bulusu@email.gwu.edu">Kartik Bulusu</a><br> © 2024 All rights reserved</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
+<script>videojs(video_shortcode_videojs_video3);</script>
+<script>videojs(video_shortcode_videojs_video4);</script>
+<script>videojs(video_shortcode_videojs_video5);</script>
+<script>videojs(video_shortcode_videojs_video6);</script>
+<script>videojs(video_shortcode_videojs_video7);</script>
+<script>videojs(video_shortcode_videojs_video8);</script>
+
+
+
+
+</body></html>

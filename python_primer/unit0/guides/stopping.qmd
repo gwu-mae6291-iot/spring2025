@@ -1,0 +1,63 @@
+---
+title: "Instructions for stopping a running program"
+format:
+  html:
+    code-copy: false
+---
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+
+As you will see, it is easy to write a program that runs forever or "gets stuck in an endless loop".
+
+Some kinds of "endless" programs will crash on their own because they use up hidden resources on your laptop, which means the operating system (Mac, Windows) will intervene.
+
+But it's equally possible to write a harmless program that merely either just "waits for the user" or is in an endless loop.
+
+In either case, it's very useful to be able to <em>stop a program from continuing to execute</em>.
+
+**Thonny users**: Thonny already has an easy way to do this from the <em>Run</em> menu: simply click on Interrupt Execution or type <em>control-c</em> (the control key and the c key simultaneously).
+
+**Spyder users**: Stopping a running program is a bit more complicated in Spyder because Spyder behaves differently depending on which part of Spyder "has the focus".
+
+**Step 1:**
+![](../../../media/stopping/step1.png)
+
+By default, when you write code in Spyder, it's in the window that says the name of the file (on your screen, you may have chosen for the layout to look slightly different where the file is on the right, or on the bottom or on the top, but the location doesn't matter for this).
+
+As you write code, the outline of that area (called a window) has what is called "focus", in that when you type something, even ctrl+c, Spyder believes it is meant for that window.
+
+You can tell which window has focus because Spyder will outline it in a faint blue line. We've drawn in some red arrows to help you see the outline.
+
+
+**Step 2:**
+![](../../../media/stopping/step2.png)
+
+If you move your cursor to a different "window", Spyder will then highlight that window's outline in a slightly brighter blue to let you know you've moved your cursor to a different area. In order to stop a program, the "focus" must be on the output window, called the "IPython Console", instead of any other window (like the window in which you type your code).
+
+We've drawn in some more red arrows to highlight Spyder outlining the IPython Console in a lighter blue.
+
+**Step 3:**
+![](../../../media/stopping/step3.png)
+
+All you need to do to give the IPython Console "focus", is to click anywhere in that window. Then, you'll notice that the outline of the window changes slightly. The IPython Console window will be outlined in a faint blue, and the other windows will no longer be outlined.
+
+We've drawn in some red arrows to show what it looks like when a window has focus (on the right), and some green arrows (on the left) to show what it looks like when a window doesn't have focus.
+
+ **Step 4:**
+![](../../../media/stopping/step4.png)
+
+Once you've clicked anywhere in the IPython Console Window (again, the output window), then, once you press ctrl+c, your program will terminate. If the IPython Console doesn't have focus when you press ctrl+c, it won't know you mean to terminate the program, and so it will ignore the ctrl+c.
+
+</body>
+</html>

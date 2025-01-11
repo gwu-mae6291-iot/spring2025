@@ -1,0 +1,1447 @@
+---
+title: "**Module 2:** Functions"
+format:
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 1</a> &raquo;
+  <span class="current-page">Module 2</span>
+</div> -->
+
+## Objectives
+
+By the end of this module you will be able to:
+
+- Enhance your understanding of how to use def to write functions, then invoke them.
+- Write code with function definitions and invocations.
+- Write and debug code with functions
+- Explore the different ways in which parameters work.
+- Identify new syntactic elements related to the above.
+
+## 2.0 Wait, stop!
+Before continuing it is essential to review functions as described in [**Module 2 of Unit-0**](../../unit0/modules/module2.qmd)
+
+What to review most carefully:
+
+- The notion of how execution starts outside a function, goes into a function, and comes back to where the function was invoked.
+
+:::{.callout-tip}
+When we come back to where the function was invoked, we continue execution just after the invocation.
+:::
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.1
+
+Please review [**Module 2 of Unit-0**](../../unit0/modules/module2.qmd).
+There is nothing to submit in this exercise.
+:::
+
+## 2.1 A simple example
+Consider this program:
+```python
+def increment_and_print(a):
+    a = a + 1
+    print(a)
+
+i = 5
+increment_and_print(i)
+
+j = 6
+increment_and_print(j)
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.2
+
+Type up the above in `my_func_example.py`.
+
+Then do the following:
+
+- Just before the line where the variable assignment `j = 6` is shown, print the value of i.
+- Execute the program `my_func_example.py`.
+
+Submit the program `my_func_example.py`.
+:::
+
+Let's explain:
+
+- Let's start by distinguishing between a function <em>definition</em> (which merely tells Python what the function is about), and <em>invocation</em> (which asks Python to execute the function at that moment):
+![](../../../media/units/unit1/module1.2/func-code.png)
+- Now let's peer into what constitutes a definition:
+![](../../../media/units/unit1/module1.2/func-code2.png)
+- In the above case, the function `increment_and_print` has only one parameter called `a`.
+    - In the future, we'll see that a function can have several parameters, separated by commas.
+    - For example
+
+        ```python
+        def increment_and_print(a, b, c):
+        ```
+- Next, let's examine how execution proceeds, starting with what happens when a function is invoked:
+![](../../../media/units/unit1/module1.2/func-code3.png)
+- Once execution is inside the function:
+![](../../../media/units/unit1/module1.2/func-code4.png)
+- Next, execution moves further into the second invocation:
+![](../../../media/units/unit1/module1.2/func-code5.png)
+- The code inside the function now executes (again):
+![](../../../media/units/unit1/module1.2/func-code6.png)
+
+:::{.callout-note}
+Did you notice that neither `i` nor `j` was affected by the incrementing of the value of variable `a`?
+
+- This is because the value in `i` was copied into the newly-created variable `a` when the function was invoked.
+- Even though variable `a` got incremented, that did not affect `i`.
+:::
+- Variables like `a` that appear in the parentheses of a function definition are called <em>parameters</em>.
+
+What does a function <em>do</em> with its parameters?
+
+- Think of the parameters as variables that can be used as regular variables for any purpose.
+- For example, consider this program:
+```python
+def print_from_one_to(a):
+    print('Printing between 1 and ', a)
+    for i in range(1, a+1):
+        print(i)
+
+print_from_one_to(5)
+print_from_one_to(6)
+```
+- Here, we used the parameter **`a`** in setting the upper limit of a for-loop.
+
+:::{.callout-note}
+- When a function is defined with a parameter, the intent is that some code <em>outside</em> the function will set the <em>value</em> of the parameter.
+
+    - Thus, it would be allowed but technically defeat the purpose to write:
+    
+        ```python
+        def print_from_one_to(a):
+            a = 5
+            print('Printing between 1 and ', a)
+            for i in range(1, a+1):
+                print(i)
+
+        print_from_one_to(5)
+        print_from_one_to(6)
+        ```
+    - Yes, this runs, but the whole point is for some other code to tell the function, "Hey, I'm going to set variable **`a`**, and <em>then</em> you do your printing with the value I set".
+    - And so, when we write
+
+        ```python
+        def print_from_one_to(a):
+            print('Printing between 1 and ', a)
+            for i in range(1, a+1):
+                print(i)
+        print_from_one_to(5)   # We're telling the function that a = 5
+        print_from_one_to(6)   # We're now telling the function to use a = 6
+        ```
+:::
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.3
+
+What do each of the above two programs print? Type them up in `my_func_example2a.py` and `my_func_example2b.py` to find out.
+
+Submit the following programs in this exercise:
+
+1. `my_func_example2a.py` 
+2. `my_func_example2b.py`
+:::
+
+###### **2.4 Video**
+{{< video ../../../media/units/unit1/module1.2/u1-mod2.4.mp4 aspect-ratio="21x9" >}}
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.5
+
+In `my_func_example3.py`, fill in the code in the function below so that the output of the program is:
+```python
+*****
+***
+*
+```
+The partially-written program is as shown below.
+
+```python
+def print_stars(n):
+    # Write your function code here
+
+print_stars(5)
+print_stars(3)
+print_stars(1)
+```
+
+- Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)
+- You can include the comment in the your code.
+- Execute the program `my_func_example3.py`.
+- Submit your program `my_func_example3.py`.
+:::
+
+###### **2.6 Video**
+{{< video ../../../media/units/unit1/module1.2/u1-mod2.6.mp4 aspect-ratio="21x9" >}}
+
+## 2.2 Multiple parameters
+
+Remember Pythagoras? We know his famous result:
+
+![](../../../media/units/unit1/module1.2/pythagoras.png)
+
+A <em>Pythagorean triple</em> is any group of three integers like <i>3,4,5</i> where the squares of the first two add up to the square of the third: <i>3<sup>2</sup> + 4<sup>2</sup> = 5<sup>2</sup></i>.
+
+We'll now write code to check whether a trio of numbers is indeed a Pythagorean triple:
+```python
+def check_pythagorean(a, b, c):
+    if a*a + b*b == c*c:
+        print('yes')
+    else:
+        print('no')
+
+check_pythagorean(3, 4, 5)
+check_pythagorean(5, 12, 13)
+check_pythagorean(6, 8, 20)
+```
+
+:::{.callout-note}
+- This time, we've defined a <em>function</em> that takes three parameters:
+
+    ```python
+    def check_pythagorean(a, b, c):
+        # The comments here are indented by a tab space. 
+        # The function code replaces these comments as shown below.
+    ```
+- Notice the commas separating the three variables.
+- Consider the first invocation:
+![](../../../media/units/unit1/module1.2/pytha-code.png)
+- The invocation also uses commas to separate arguments.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.7
+
+In `my_func_example4.py`, fill in the code in the function below so that the output of the program is:
+
+```python
+5
+3
+2
+0
+```
+
+**Hint:** The idea is to compute the sum but only of the positive parameters; if neither value is positive, print `0`.
+
+The partially written program is as shown below.
+
+```python
+def print_profit_total(a,b):
+    # Write your function code here
+
+print_profit_total(2, 3)
+print_profit_total(-2, 3)
+print_profit_total(2, -3)
+print_profit_total(-2, -3)
+```
+
+- Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)
+- You can include the comment in the your code.
+- Execute the program `my_func_example4.py`.
+- Submit your program `my_func_example4.py`.
+:::
+
+###### **2.8 Video**
+{{< video ../../../media/units/unit1/module1.2/u1-mod2.8.mp4 aspect-ratio="21x9" >}}
+
+## 2.3 Return values
+So far, we've written methods that <em>take</em> values, do things and print.
+
+We get a whole new level of programming power, when methods can compute something and <em>return</em> something to the invoking code.
+
+Here's an example:
+```python
+def padd(a, b):
+    total = 0
+    if a >= 0:
+        total += a
+    if b >= 0:
+        total += b
+    return total
+
+x = padd(-5, 6)
+print(x)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.9
+
+Type up the above in `my_func_example5.py`. 
+
+**Try and answer the following for yourself:** What does the `padd()` function achieve by reviewing the program?
+
+Then do the following: 
+
+- First, execute the program `my_func_example5.py`. 
+- Next, replace the function parameters with `5, -6`.
+- Finally, replace the function parameters with `5, 6`. 
+
+**Submit your program `my_func_example5.py` with function parameters `padd(5, 6)`.**
+:::
+
+Let's explain:
+
+- First, execution begins after the function definition is "absorbed" by Python:
+![](../../../media/units/unit1/module1.2/return-code.png)  
+- Remember, in an assignment statement, the right side is executed first:
+    
+    ```python
+    x = padd(-5, 6)
+    ```
+The result of invoking this function somehow results in `x` getting a value stored inside it.
+    <br> (We'll see how, shortly.)
+- Next, execution goes into the function:
+![](../../../media/units/unit1/module1.2/return-code2.png)  
+
+- When the return statement executes, the value returned (the value of `total` gets copied into `x`)
+![](../../../media/units/unit1/module1.2/return-code3.png)
+- One way to think about it is presented below:
+
+    - Consider the following function invocation:
+
+        ```python
+        x = padd(-5, 6)
+        ```
+    - Then look at the function definition and the code block that is executed under **`def padd(a, b):`**.
+    - After the function **`padd(-5, 6)`** is executed, it returns the value in one of its variables (i.e., **`total`**). 
+    - In this case where the function is **`padd(-5, 6)`**, the value **`6`** is returned.
+    <!-- - That, behind the scenes, replaces the function invocation: -->
+    - The value **`6`** is now assigned to the the variable **`x`** as shown below.
+    
+        ```python
+        x = 6
+        ```
+    - And thus, the value **`6`** gets copied into the variable **`x`**.
+
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.10
+
+In `my_func_example6.py`, complete the code in `sum_up_to()` so that it computes and then returns the sum of numbers from 1 to n (inclusive of 1 and n).
+```python
+def sum_up_to(n):
+    # write your code here
+
+result = sum_up_to(5)
+print(result)            # should print 15
+result = sum_up_to(10)
+print(result)            # should print 55
+```
+:::
+
+###### **2.11 Video**
+{{< video ../../../media/units/unit1/module1.2/u1-mod2.11.mp4 aspect-ratio="21x9" >}}
+
+Let's return to our earlier example and use the `padd()` function in different ways:
+```python
+def padd(a, b):
+    print('Received values: ', a, b)
+    total = 0
+    if a >= 0:
+        total += a
+    if b >= 0:
+        total += b
+    return total
+
+print(padd(-5, 6))                   
+x = padd(padd(-5,6), 7)              
+print(x)                             
+print(padd(padd(-5,6), padd(5,-6)))  
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.12
+
+Type up the above in `my_func_example7.py`.
+
+Then do the following:
+
+- Execute the program `my_func_example7.py`.
+- Submit the program `my_func_example7.py`.
+:::
+
+Let's examine each of the last four statements in the program `my_func_example7.py`:
+
+- First, let us look at the following statement in the program `my_func_example7.py`:
+
+    ```python
+    print(padd(-5, 6))
+    ```
+    - In this case, the invocation of the function **`padd()`** occurs inside the **`print()`** statement.
+
+    - The function **`padd(-5, 6)`** executes and returns the value **`6`**.
+
+    - Then the **`print()`** statement is executed as shown below with the value **`6`**.
+    
+        ```python
+        print( 6 )
+        ```
+
+    - The value **`6`** is the output of the **`print()`** function.
+
+- Next, let us examine the following statement in the program `my_func_example7.py`: 
+    
+    ```python
+    x = padd(padd(-5,6), 7)              
+    ```
+
+    - In this case,  the innermost **`padd()`** function is invoked first, i.e., **`padd(-5, 6)`** in 
+
+        ```python
+        x = padd( padd(-5,6), 7 )
+        ```
+
+    - The parameter values **`5` & `6`** are input into the function **`padd(-5, 6)`**.
+    - The function **`padd(-5, 6)`** returns the value **`6`**, and the statement takes the form as shown below:
+
+        ```python
+        x = padd( 6, 7 )
+        ```
+
+    - Now the outermost **`padd()`** function has the value values **`6` & `7`** as its' parameters.
+    - This results in another invocation to **`padd()`** with parameter values **`6` & `7`** i.e., **`padd( 6, 7 )`**.
+    - The function **`padd( 6, 7 )`** is executed and it returns the value **`13`**.
+    - The result is assigned to the variable **`x`** as shown below:
+    
+        ```python
+        x = 13
+        ```
+
+- Finally, consider the last statement in the program `my_func_example7.py` as shown below:
+
+    ```python
+    print(padd(padd(-5,6), padd(5,-6)))  
+    ```
+
+    - In this case, there are two innermost invocations of the `padd()` functions. These are **`padd(-5, 6)` & `padd(5, -6)`** located inside the outermost `padd()` function as shown below:
+
+        ```python
+        print(padd( padd(-5,6), padd(5,-6) ))  
+        ```
+
+    - In the statement above the first function to be invoked is **`padd(-5, 6)`**. 
+
+    - The function **`padd(-5, 6)`** returns the value **`6`** and the statement takes the following form: 
+
+        ```python
+        print(padd( 6, padd(5,-6) ))  
+        ```
+
+    - Next, the function **`padd(5, -6)`** is invoked
+    
+    - The function **`padd(5, -6)`** returns the value **`5`** and the statement takes the following form inside the **`print()`** statement: 
+        
+        ```python
+        print(padd( 6, 5 ))  
+        ```
+
+    - Now, the values **`6 & 5`** become the parameters for the third invocation of the function **`padd()`**.
+    
+    - This invocation of the function **`padd( 6, 5 )`** returns the value **`11`** 
+    
+    - The **`print()`** statement is now executed with the returned output from the function **`padd( 6, 5 )`** as shown below: 
+
+        ```python
+        print( 11 )  
+        ```
+    - And so 11 gets sent to print, which prints it.
+    - Whew!
+
+
+## 2.4 Multiple returns in a function
+Take a moment to go back up and quickly glance through the Pythagorean example.
+
+Now consider this rewrite:
+```python
+def check_pythagorean(a, b, c):
+    if a*a + b*b == c*c:
+        print('In the if-part')
+        return 'yes'
+    else:
+        print('In the else-part')
+        return 'no'
+
+result = check_pythagorean(3, 4, 5)
+print(result)
+result = check_pythagorean(5, 12, 13)
+print(result)
+result = check_pythagorean(6, 8, 20)
+print(result)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.13
+
+Type up the above in `my_func_example8.py`.
+
+Execute the program `my_func_example8.py`.
+
+Submit the program `my_func_example8.py`. 
+:::
+
+:::{.callout-note}
+- When a function executes a return statement, execution exits the function right then and there, even if there's more code below.
+- Thus for example, in the first time `check_pythagorean()` is invoked:
+![](../../../media/units/unit1/module1.2/return-code4.png)
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.14
+
+Trying drawing a similar diagram for the other two function invocations in a separate document to help you understand the flow of the program. 
+
+**There is nothing to submit in this exercise.**
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.15
+
+In `my_func_example9.py`, complete the code below so that the function, when given three numbers, identifies the two larger ones and returns their sum.
+
+```python
+def add_bigger_pair(a, b, c):
+    # Write your code here:
+
+print(add_bigger_pair(2,3,4))  # Should print 7
+print(add_bigger_pair(2,3,1))  # Should print 5
+print(add_bigger_pair(2,1,4))  # Should print 6
+```
+
+- Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)
+- You can include the comment in the your code.
+- Execute the program `my_func_example9.py`.
+- Submit your program `my_func_example9.py`.
+:::
+
+###### **2.16 Video**
+{{< video ../../../media/units/unit1/module1.2/u1-mod2.16.mp4 aspect-ratio="21x9" >}}
+
+## 2.5 Parameter and argument names
+Consider this example:
+```python
+def subtract(a, b):
+   c = b - a
+   return c
+
+x = 5
+y = 6
+z = subtract(x, y)
+```
+
+:::{.callout-note}
+- We refer to `a` and `b` as <em>parameters</em> in the definition of the function:
+    
+    ```python
+    def subtract(a, b):
+    ```
+- When function is invoked as shown below,
+
+    ```python
+    subtract(x, y):
+    ```
+we  use the term <em>function arguments</em> for `x` and `y`.
+:::
+
+The names given to parameters have <em>no relation</em> to the names used for arguments:
+
+- In the above case:
+![](../../../media/units/unit1/module1.2/param-names.png)
+- Consider this variation:
+    
+    ```python
+    def subtract(a, b):
+        c = b - a
+        return c
+
+    a = 5
+    b = 6
+    c = subtract(a, b)
+    ```
+- The a,b,c that are the parameter variables are <em>different</em> from the a,b,c variables below:
+![](../../../media/units/unit1/module1.2/param-names2.png)
+
+:::{.callout-tip}
+If you aren't sure, it's safest to use different names.
+:::
+
+## 2.6 What can you do with parameter variables?
+Generally, the purpose of parameter variables is this:
+
+- Consider this example:
+
+    ```python
+    def silly_func(a, b):
+        c = 2*a - b
+        print(c)
+
+    silly_func(3, 4)
+    x = 6
+    silly_func(x, 8)
+    ```
+- From the point of view of the <em>definition of the function</em>, `silly_func(a, b)` thinks "Someone is going to put values into my variables `a` and `b`, and then I'll do stuff like calculate and print".
+
+- From the point of view of code that is <em>using the function</em> or the invocation of the function, `silly_func(3, 4)` is saying "We'll set the function's parameter `a` to `3`, and `b` parameter to `4`, and then let the function do its thing". 
+
+    ```python
+    silly_func(3, 4)
+    ```
+
+    - Note that the values `3` and `4` are called the arguments of the invoked-function `silly_func(3, 4)`.
+
+- Functions can use its parameter variables just like any other variable and <em>change its value</em>, as in:
+
+    ```python
+    def crazy_func(p, q):
+        print(p)
+        p = p + 3*q       # We're changing p here
+        print(p)
+        r = p + q
+        print(r)
+
+    x = 6
+    y = 7
+    crazy_func(x, y)
+    ```
+Because the value in `x` gets copied into the variable `p`, the value in `x` does not get changed even though the function changes the value in `p`.
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.17
+
+Just by reading the above program, can you tell what the above program prints? 
+The above question is for you understand the execution of the program and you don't need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result. 
+
+**The following portion of the exercise is required for submission of this exercise:**
+
+- Implement the above program in `my_func_example10.py`.
+
+- Submit your program `my_func_example10.py`.
+:::
+
+## 2.7 Functions and lists
+Can a function receive a list as parameter? Can it return one? Is this useful? Yes, yes, yes.
+
+Let's start with a list as parameter:
+```python
+def compute_total(B):
+    total = 0
+    for k in B:
+        total += k
+    return total
+
+A = [1, 3, 5, 7]
+t = compute_total(A)
+print(t)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.18
+
+Try tracing through the execution of the above program, including loop interactions. The tracing activity is for you understand the execution of the program and you don't need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result. 
+
+**The following portion of the exercise is required for submission of this exercise:**
+
+- Type up the above in `my_func_example11.py` by including a `print(k)` inside the for-loop.
+- Submit your program `my_func_example11.py`. 
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.19
+
+In `my_even_numbers.py`, complete the code in the function below so that the even numbers in a list are printed out:
+```python
+def print_even(A):
+    # Insert your code here
+
+A = [1, 3, 5, 6, 7, 8]
+print_even(A)
+```
+Write the function so that the output is as shown below:
+```python
+Found even:  6
+Found even:  8
+```
+**Hint:** Recall how to use the <em>remainder</em> operator from the previous module (conditionals and loops).
+
+- Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)
+- You can include the comment in the your code.
+- Execute the program `my_even_numbers.py`.
+- Submit your program `my_even_numbers.py`.
+:::
+
+Next, let's look at an example where a list is returned:
+```python
+def build_odd_list(n):
+    L = []
+    for i in range(0, n):
+        k = 2*i + 1
+        L.append(k)
+    return L
+
+print(build_odd_list(5))
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.21
+
+<!-- Try tracing through the above, the type up in `my_odd_list.py` to confirm what you learned. Include a `print(k)` in the loop after the append. -->
+
+Try tracing through the execution of the above program, including loop interactions. The tracing activity is for you understand the execution of the program and you don't need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result. 
+
+**The following portion of the exercise is required for submission of this exercise:**
+
+- Type up the above in `my_odd_list.py` by including a `print(k)` inside the for-loop after the `L.append(k)`.
+- Submit your program ``my_odd_list.py`. 
+:::
+
+:::{.callout-note}
+- Execution begins with 
+
+    ```python
+    print(build_odd_list(5))
+    ```
+- This results in:
+![](../../../media/units/unit1/module1.2/list-return.png)
+- Once the return occurs, we could think of this as:
+
+    ```python
+    print( [1, 3, 5, 7, 9] )
+    ```
+    This gets sent to print, which prints.
+- One could make this more explicit:
+![](../../../media/units/unit1/module1.2/list-return2.png)
+:::
+
+Next, let's look at a list example with multiple returns:
+```python
+def find_first_negative(A):
+    for k in A:
+        if k < 0:
+            # First try print(k) here
+            return k
+            # Then try print(k) here
+    return 0
+
+B = [1, 2, -3, 4, -5, 6]
+C = [1, 2, 3, 4]
+
+print(find_first_negative(B))
+print(find_first_negative(C))
+```  
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.22
+
+Before typing this up in `my_first_negative.py` to confirm. That is, use the tracing approach we've used before: write out the values of variables and how they change from one iteration to the next. Then, replace the first comment so that you `print(k)` inside the loop. Then, move the print statement (still inside the loop) to after the `return k` statement. What do you observe? There is nothing to submit in the above portion of this exercise.
+
+Type up the above program in `my_first_negative.py`. 
+Then do the following: 
+
+1. Execute the program and examine the output.
+2. Next, replace the first comment so that you `print(k)` inside the if-conditional. 
+3. Execute your program `my_first_negative.py` and examine the output.
+4. Then, delete the `print(k)` you wrote in place of the first comment. 
+5. Now replace the second comment with `print(k)` statement so that it appears after the `return k` statement. 
+6. Exceute your program `my_first_negative.py` and examine the output for any change with the earlier execution. 
+7. Submit your program `my_first_negative.py` with the modification suggested in point #5.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.23
+
+In `my_last_negative.py`, modify the above program to find the last negative number (if one exists) in a list. So, after completing the code below
+```python
+def find_last_negative(A):
+    # Insert your code here
+
+B = [1, 2, -3, 4, -5, 6]
+C = [1, 2, 3, 4]
+```
+it should print
+```python
+-5
+0
+```
+**Submit your program `my_last_negative.py`.**
+:::
+
+## 2.8 returns that don't return anything
+Consider this program:
+```python
+def print_first_negative(A):
+    for k in A:
+        if k < 0:
+            print('Found: ',k)
+            return 
+    print('No negatives found')
+
+B = [1, 2, -3, 4, -5, 6]
+print_first_negative(B)
+C = [1, 2, 3, 4]
+print_first_negative(C)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.25
+
+Type up the above in `my_first_negative2.py`, execute and check for any errors. 
+
+**Submit your program `my_first_negative2.py` if there are no errors.**
+:::
+
+Let's point out:
+
+- Whenever a `return` statement is executed in a function, execution exits the function right away.
+- When a `return` statement does not return a variable's value, execution leaves the function but does not give a value back to the invoking code.
+- Thus the `return` statement in the program below, does not return a value but merely causes execution to leave the function and get back to line <em>just after</em> the function was invoked.
+
+    ```python
+    def print_first_negative(A):
+        for k in A:
+            if k < 0:
+                print('Found: ',k)
+                return
+        print('No negatives found')
+    ```
+    
+- Although it's not needed, one could return at the end of a non-value-returning function:
+
+    ```python
+    def print_first_negative(A):
+        for k in A:
+            if k < 0:
+                print('Found: ',k)
+                return
+        print('No negatives found')
+        return
+    ```
+- Why do we have multiple return's in a function? Why not always wait until execution reaches the end of a function?
+    - It is very useful to be able to return from anywhere in a function's code.
+    - The reason is, as soon as the function's "job" is done (example: finding the first negative), we want to leave the function.
+
+## 2.9 A fundamental difference between list and basic parameters
+Consider this program:
+```python
+def swapint(a, b):
+    temp = a
+    a = b
+    b = temp
+    print(a, b)
+
+x = 5
+y = 6
+swapint(x, y)
+print(x, y)     # Will this print 5 and 6, or 6 and 5?
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.26
+
+Before typing up the above in `my_swap_int.py` and submitting, can you guess what the output will be ?
+
+- Type up and execute the program `my_swap_int.py`.
+- Submit your program `my_swap_int.py`. 
+:::
+
+Let's explain:
+
+- Execution of the program begins with the line
+
+    ```python
+    x = 5
+    ```
+- When the function is called soon after:
+    
+    ```python
+    swapint(x, y)
+    ```
+    then execution enters the function with the values in x and y copied into a and b:
+    ![](../../../media/units/unit1/module1.2/swap-code.png)
+- Then, by the time we reach the print statement:
+![](../../../media/units/unit1/module1.2/swap-code2.png)
+- Thus, the values in a and b do indeed get swapped.
+- But this does not affect x and y because they are actually different variables.
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.27
+To help you understand the program, in a separate document draw the three boxes for `a, b,` and `temp`, at each step in the function’s execution. 
+
+**There is nothing to submit in this exercise.**
+:::
+
+Now, consider a similar program with lists:
+```python
+def swap_list_first(A, B):
+    temp = A[0]
+    A[0] = B[0]
+    B[0] = temp
+
+X = [1, 3, 5, 7]
+Y = [2, 4, 6]
+swap_list_first(X, Y)
+print(X, Y)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.28
+
+To help you understand the above program, in a separate document draw the three boxes for `A, B,` and `temp`, at each step in the function’s execution. 
+
+**There is nothing to submit in this exercise.**
+:::
+
+Let's see what's going on:
+
+- List variables are fundamentally different from numeric variables.
+- Think of a list variable has having a reference ID to the actual list contents:
+    - This is like an "address" in memory.
+    - If you have this "address" you can go to the list and do things with it.
+    - List variables actual store these addresses (which, interestingly, turn out to be numbers).
+- We will draw a <em>conceptual diagram</em> to highlight this point:
+![](../../../media/units/unit1/module1.2/swap-code3.png)
+- Thus, when the function starts execution, the "references" in X and Y are copied into A and B.
+- This means A and B refer to the same <em>list contents</em>.
+- So, A[0] is the same as X[0], for example.
+- Next, after executing the three lines inside the function but before returning:
+![](../../../media/units/unit1/module1.2/swap-code4.png)
+- Notice that temp is a regular integer.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.29
+
+Type up the above program with the function `swap_list_first(A, B)` in `my_swap_list_first.py`. 
+
+- Execute the program and examine the output. 
+- Submit your program `my_swap_list_first.py`. 
+
+<!-- To help you understand the program, in a separate document draw the three boxes for a, b, and temp, at each step in the function’s execution. -->
+:::
+
+**The key takeaways:**
+
+- When you send number variables to a function, they get copied, and so the function can't "do" anything to the variables you present as arguments.
+- But if you send a list, a function can change the contents.
+- This means you need to be careful about <em>intent</em> when writing functions that involve larger entities like lists.
+<!--     <br> (There are other such "grouped data" entities, called <em>objects</em>.)
+- If the intent is to change contents, that's fine, we should know that. -->
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.31
+
+Consider the following program:
+```python
+def change_int(a):
+    a = a + 1
+
+def change_list(A):
+    A[0] = A[0] + 1
+
+x = 5
+change_int(x)
+print(x)
+
+B = [1, 2, 3]
+change_list(B)
+print(B)
+```
+
+- Type up the above in `my_change_list.py`. 
+- Execute the program `my_change_list.py` and examine the output. 
+- Submit your program `my_change_list.py`.
+:::
+
+## 2.10 Calling functions from functions
+The code <em>inside</em> functions can be like regular code that's outside functions.
+
+In particular, code inside functions can call (invoke) other functions.
+
+For example:
+```python
+def increment(a):
+    b = a + 1
+    return b
+
+def increment_twice(c):
+    d = increment(c)
+    e = increment(d)
+    return e
+
+x = 5
+y = increment_twice(x)
+print(y)
+```
+
+:::{.callout-note}
+- The program starts execution at the line
+
+    ```python
+    x = 5
+    ```
+- Then, when `increment_twice(x)` is called, we enter the function `increment_twice()` with the variable `c` set to 5 (copied from x).
+- The next line in there
+    
+    ```python
+    d = increment(c)
+    ```
+    results in a call to `increment()` with the value 5 copied into parameter `a`.
+- Then, the code in `increment()`  executes, resulting in 6 being returned.
+- The returned value 6 is stored in `d`.
+- Then `increment()` is called again with the value in `d`. (now 6) copied into `a`.
+- The code in `increment()` executes resulting in 7 returned.
+- Execution continues in the `increment_twice()` function and the value 7 is stored in `e`.
+- Finally `increment_twice()`completes execution and returns the value in `e`, which is 7.
+- This value is stored in `y`,
+- Execution continues from there to the print.
+:::
+
+In addition, observe the following:
+
+- We can shorten the above code by writing:
+
+    ```python
+    def increment(a):
+        return a + 1
+
+    def increment_twice(c):
+        return increment(increment(c))
+
+    x = 5
+    y = increment_twice(x)
+    print(y)
+    ```
+- Notice that one can return the result of an <em>expression</em>:
+
+    ```python
+    return a + 1
+    ```
+    In this case, the calculation is an arithmetic expression.
+- One can also have the result of a function call itself be returned:
+    
+    ```python
+    def increment_twice(c):
+        return increment(increment(c))
+    ```
+- After, it's possible to do this:
+    
+    ```python
+    print( increment(increment(c)) )
+    ```
+    Here, the result of the inner `increment()`call
+    
+    ```python
+    print( increment(increment(c)) )
+    ```
+    is sent again to `increment()`:
+
+    ```python
+    print( increment( ... ) )
+    ```
+- In the same vein, we can, instead of printing, execute a return:
+    
+    ```python
+    return increment(increment(c))
+    ```
+
+:::{.callout-tip}
+You do NOT have to use such shortcuts. Some shortcuts are an advanced topic and may in fact make your code harder to read, and harder to fix mistakes in.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.33
+
+Consider the following program:
+```python
+def decrement(a):
+    return a - 1
+
+def subtract(a, b):
+    for i in range(0, a):
+        b = decrement(b)
+    return b
+
+print(subtract(5, 9))
+print(subtract(3, 13))
+```
+
+- Type up the above in `my_subtraction.py`. 
+- Execute the program `my_subtraction.py` and examine the output. 
+- Submit your program `my_subtraction.py`.
+
+
+**Recommended but not required for submission in this exercise:** As with other tracing exercises this is also optional and in this particular case a bit long, but worth doing because it will help your understanding. Try tracing the execution step-by-step in a separate document.
+:::
+
+###### **2.34 Video**
+{{< video ../../../media/units/unit1/module1.2/u1-mod2.34.mp4 aspect-ratio="21x9" >}}
+
+## 2.11 More stats via programming
+Armed with our new ability to work with functions and lists, we will see how easy it is to compute basic statistics with data.
+
+Before we get to that, here's a small exercise.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.35
+
+Consider the following program:
+```python
+def find_smallest(A):
+    smallest = A[0]
+    for k in A:
+        if k < smallest:
+            smallest = k
+    return smallest
+
+data = [-2.3, -1.22, 1.6, -10.5, 1.4, 2.5, -3.32, 11.03, 2, 2, -1.4]
+print(find_smallest(data))
+```
+
+- Type up the above in `my_find_smallest.py`. 
+- Execute the program `my_find_smallest.py` and examine the output. 
+- Submit your program `my_find_smallest.py`.
+
+**Recommended but not required for submission in this exercise:** It's critical to understand how the variable `smallest` is changing through the loop, and why the function `find_smallest()` does in fact identify the smallest value in a list. Remember: the more negative a number, the smaller. Thus, -10 is less than or "smaller" than -4.
+:::
+
+With that, consider this partially complete program:
+```python
+def find_smallest(A):
+    smallest = A[0]
+    for k in A:
+        if k < smallest:
+            smallest = k
+    return smallest
+
+def find_largest(A):
+    # Insert your code here:
+
+def find_span(A):
+    smallest = find_smallest(A)
+    largest = find_largest(A)
+    span = largest - smallest
+    return span
+
+data = [-2.3, -1.22, 1.6, -10.5, 1.4, 2.5, -3.32, 11.03, 2, 2, -1.4]
+print('span: ', find_span(data))
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.36
+
+In `my_stats.py` complete the above so that the <em>span</em> of the data is computed and printed. This is the difference between the largest and smallest values.
+
+- Type up the above in `my_stats.py`.
+- Execute the program `my_stats.py` and examine the output to check if the <em>span</em> of the data is computed and printed. 
+- Submit your program `my_stats.py`.
+:::
+
+###### **2.37 Video**
+{{< video ../../../media/units/unit1/module1.2/u1-mod2.37.mp4 aspect-ratio="21x9" >}}
+
+Next, let's write some (partially complete) code for standard statistics:
+```python
+import math
+
+def compute_mean(A):
+    # Insert your code here:
+
+def compute_std(A):
+    mean = compute_mean(A)
+    total = 0
+    for k in A:
+        total += (k-mean)**2
+    std = math.sqrt( total / len(A) )
+    return std
+
+data = [-2.3, -1.22, 1.6, -10.5, 1.4, 2.5, -3.32, 11.03, 2, 2, -1.4]
+print('mean =', compute_mean(data))
+print('standard deviation =', compute_std(data))
+```
+
+:::{.callout-note}
+- The <em>mean</em> of a list of numbers is the total (add the numbers up) divided by "how many numbers there are" in the list.
+- The <em>standard deviation</em> is more involved:
+    - Consider data like:
+
+        ```python
+        10, 20, 30, 40, 50
+        ```
+    This is centered around 30 (mean in this case).
+    - Here, a different set of data that's also centered around 30:
+        
+        ```python
+        28, 29, 30, 31, 32
+        ```
+    - Clearly, the second set of data is very bunched up around 30 while the first is more spread out.
+    - The <em>standard deviation</em> is a measure (a single number) that rates the "spreadout-ness" of data.
+    - The more spread out, the higher the standard deviation.
+    - To calculate it, we take the difference of each data from the mean, square it (to make it always positive), then add all of these up.
+    - This gives something called the <em>variance</em>, which itself is a fine measure of spreadout-ness.
+    - However, because we're adding up squared numbers, the variance can become a big number.
+    - To bring the measure closer to the "level" of the actual data, we take the square root of the variance: this is the <em>standard deviation</em>.
+
+- If you've never seen this before, it's worth computing by hand with the data above, just so you understand how it looks on paper. Then compare with the results from the program.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.38
+
+- Complete the code above and type it up in `my_stats2.py`.
+- Execute the program `my_stats2.py` and examine the output to check if the <em>mean</em> and <em>standard deviation</em> of the data are computed and printed. 
+- You should get as output as shown below:
+
+    ```python
+    mean = 0.1627272727272727
+    standard deviation = 4.955716792313685
+    ```
+    (Real numbers, what can you do?)
+
+- Submit your program `my_stats2.py`.
+
+:::
+
+Next, let's tackle the more challenging problem of identifying <em>outliers</em>:
+
+- Take a closer look at the data:
+
+    ```python
+    data = [-2.3, -1.22, 1.6, -10.5, 1.4, 2.5, -3.32, 11.03, 2, 2, -1.4]
+    ```
+    
+- We see that two data values **`-10.5`** & **`11.03`** seem to be far outside the range of the other data.
+
+- Suppose we use the following approach to identifying outliers:
+    - Compute the mean and standard deviation.
+    - Identify those data that lie further than two standard deviations away from the mean.
+    - Call these <em>outliers</em>.
+
+:::{.callout-note}
+The traditional definition uses <em>three</em> standard deviations, but we'll stick with two because it makes our example easy to work with.
+:::
+
+Let's write a function to do this:
+```python
+def find_outliers(A):
+    mean = compute_mean(A)
+    std = compute_std(A)
+    for k in A:
+        if k < (mean - 2*std):
+            print('Found outlier: ', k)
+        elif k > (mean + 2*std):
+            print('Found outlier: ', k)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.39
+
+- In `my_stats2.py`, add the above to your code and save your program as `my_stats3.py`.
+
+- Execute the program `my_stats3.py` and examine the output to check if the <em>mean</em>, <em>standard deviation</em> and <em>outliers</em> of the data are computed and printed.
+
+-  The output of your program should be as shown below:
+
+    ```python
+    mean = 0.1627272727272727
+    standard deviation = 4.955716792313685
+    Found outlier:  -10.5
+    Found outlier:  11.03
+    ```
+- Submit your program `my_stats3.py`.
+
+:::
+
+## 2.12 A function that calls itself
+**This is a somewhat advanced topic (not on any exam or assignment!).**
+
+We will only present a simple example only so that you see what it's like.
+
+Consider the following example:
+
+```python
+def factorial(n):
+    # print(n)
+    if n == 1:
+        return 1
+    else:
+        m = factorial(n-1)
+        return n * m
+
+print(factorial(5))
+print(factorial(10))
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.40
+
+- Type up the above in `my_factorial.py`. 
+
+- Remove the `#` symbol to allow `print(n)` statement to return the value of `n`. 
+
+- Execute the program `my_factorial.py`. 
+
+- Submit your program `my_factorial.py`. 
+
+**Recommended but not required for submission in this exercise:** Try tracing through what happens when `factorial(5)` is called.
+:::
+
+Let's point out:
+
+- Yes, it's allowed for a function to call itself.
+- Such a function is called a <em>recursive function</em>, and the resulting behavior is called <em>recursion</em>.
+- The above example computes numbers like
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    1 &times; 2 &times; 3 &times; 4 &times; 5 &times; = 120
+    <br>
+    (This ascending multiplication is called factorial.)
+- For recursion to work, the successive calls to itself have to end so that we don't get the infinity of barbershop mirrors.
+- In the above case, n eventually becomes 1. In this case, there's no further call to itself.
+- Recursion is hard to understand, and will be featured in later courses after you've got more programming under your belt.
+- Surprisingly, many problems are solvable elegantly and efficiently using recursion.
+- It is possible to do recursion improperly, in which case a program is set up to recurse forever. In this case, Python will give up after too many recursions.
+
+###### **2.41 Video**
+{{< video ../../../media/units/unit1/module1.2/u1-mod2.41.mp4 aspect-ratio="21x9" >}}
+
+## 2.13 Inscribed geometric figures as art
+Of course we're going to try and use functions and drawing.
+
+Consider this program:
+```python
+import math
+from drawtool import DrawTool
+
+dt = DrawTool()
+dt.set_XY_range(-1,1, -1,1)
+dt.set_aspect('equal')
+
+def draw_circle_in_square(side):
+    radius = side/2
+    dt.set_color('r')
+    dt.draw_circle(0,0, radius)
+    return radius
+
+def draw_square_in_circle(radius):
+    side = math.sqrt(2) * radius
+    dt.set_color('b')
+    dt.draw_rectangle(-side/2, -side/2, side, side)
+    return side
+
+side = 1
+dt.draw_rectangle(-side/2, -side/2, side, side)
+
+n = 5
+for i in range(n):
+    radius = draw_circle_in_square(side)
+    side = draw_square_in_circle(radius)
+
+dt.display()
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.42
+
+Download <a href="../../../media/useful/drawtool.py" download>**drawtool.py**</a> and <a href="../../../media/units/unit1/module1.2/circle_square.py" download>**circle_square.py**</a> and run the latter to get
+![](../../../media/units/unit1/module1.2/kepler.png)
+
+Then do the following:
+
+- Change n to `n = 20` in the program `circle_square.py`. 
+- Execute the program `circle_square.py`. 
+- Submit your program `circle_square.py` along with `drawtool.py`. 
+
+**Recommended but not required for submission in this exercise:** Perhaps experiment with colors. Try to read the functions and figure out, not so much the calculation, as what they're doing.
+:::
+
+At first, this looks like a simple exercise in geometric art, or a depiction of the "evil eye" but there's more to it:
+
+- Notice the construction:
+    - We start with a square.
+    - Then we <em>inscribe</em> the biggest possible circle that'll fit inside that square.
+    - Now we find the biggest possible square that'll fit inside the recently drawn circle.
+    - Then the square inscribed in <em>that circle</em>, and so on.
+- Instead of just using circles and squares, one can use a square first, then a pentagon, then a hexagon, and so on.
+- The result is something that Kepler worked on a long time ago. See <a href="https://en.wikipedia.org/wiki/Kepler%E2%80%93Bouwkamp_constant">**this article**</a>
+- The historical significance is this:
+    - Ever since the Greeks, polygons and circles have held special significance.
+    - So, something like this had an almost religious significance.
+    - <a href="https://en.wikipedia.org/wiki/Johannes_Kepler">**Kepler**</a> then used a similar idea for solids to expound (an entirely wrong) theory of planetary motion.
+    - To his credit, he realized he was wrong when shown higher quality data (from Tycho Brahe), and used the data to fit ellipses.
+    - This was the beginning of the modern understanding of planetary motion, later mathematically solved by Isaac Newton.
+
+## 2.14 When things go wrong
+In each of the exercises below, first try to identify the error just by reading. Then type up the program to confirm, and after that, fix the error.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.43
+
+```python
+def square_it(x):
+    y = x * x
+
+a = 5
+b = square_it(a)
+print(b)
+```
+Identify and fix the error in `my_error1.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.44
+
+```python
+def bigger(x,y)
+    if x > y:
+        return x
+    else:
+        return y
+
+print(bigger(4,5))
+```
+Identify and fix the error in `my_error2.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.45
+
+```python
+def find_smallest(A):
+    smallest = 1000
+    for k in A:
+        if k < smallest:
+            smallest = k
+    return smallest
+
+B = [2, 1, 4, 3]
+print(find_smallest(B))
+```
+Does the above program work? What is the reasoning behind the line `smallest = 1000`? What would go wrong if you removed it altogether? Can you create a list (change the data in B) which will cause the function to fail to find the smallest number. Fix the issue in `my_error3.py`.
+:::
+
+<!-- <br>
+[Previous Module: **Module 1.1**](./module1.1.qmd){.button .prev} [Next Module: **Module 1.3**](./module1.3.qmd){.button .next} -->
+
+</body>
+</html>

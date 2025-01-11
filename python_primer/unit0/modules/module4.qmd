@@ -1,0 +1,805 @@
+---
+title: "**Module 4:** Integers"
+format:
+  html:
+    code-copy: false
+    bread-crumbs: true
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="">Unit 0</a> &raquo;
+  <span class="current-page">Module 4</span>
+</div> -->
+
+:::{.callout-warning}
+Before proceeding with Module 4 you would need to install `matplotlib` library. Follow these guides to learn about how to install packages in Thonny on a [**Mac**](../guides/thonny-mac-matplotlib.qmd) or [**Windows**](../guides/thonny-win-matplotlib.qmd) computer.
+:::
+
+## Objectives (Real Numbers)
+By the end of this module, for simple HelloWorld-like programs, you will be able to:
+
+- Create variable declarations.
+- Assign values to variables by simple assignment, and print them out.
+- Distinguish between integers in strings versus actual integers.
+- Demonstrate ability to perform operations on integers for a desired output.
+- Simplify expressions with constants to single value.
+- Evaluate expressions with variables in them.
+- Convert English descriptions of operations into expressions.
+- Mentally trace execution with expressions and calculations.
+- Mentally trace expressions and calculations inside for-loops.
+- Produce desired output using for-loops and calculations.
+- Identify new syntactic elements related to the above.
+
+And, once we've worked with integers, we'll also do some "number crunching".
+
+:::{.callout-tip}
+[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
+
+[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
+
+[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
+
+[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
+
+[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
+:::
+
+#### **Lecture video for `for-loop` with tracing**
+{{< video ../../../media/units/unit0/module4/Tracing_Demo1_SumOfIntegers.mp4 aspect-ratio="21x9" >}}
+
+## 4.0 First, an analogy
+Suppose we have boxes. Consider the following rules about "boxes":
+
+- Each box can store only one item.
+
+![](../../../media/units/unit0/module4/box.PNG)
+
+- The possible things that can be stored inside are called *values*.
+- Thus, at any given moment, a box's value is whatever's inside it.
+- Each box has a unique *name*:
+
+![](../../../media/units/unit0/module4/box3.PNG)
+
+- There is a <em>cloning</em> process that works like this:
+![](../../../media/units/unit0/module4/box4.PNG)
+    - The value inside one box is cloned.
+    - The cloned value is placed inside another.
+- There is a strange shortcut notation to specify cloning:
+![](../../../media/units/unit0/module4/box5.PNG)
+  - Here, the `=` (equals sign) does NOT mean "equals."
+  - It has been repurposed to mean "clone", "copy," or, in programming-language jargon, "assign".
+- How to say it: "x is assigned the value in y".
+- **Important:** Remember, a box can hold only one value at a time.
+- The technical term for our informal "box" is <em>variable</em>.
+
+
+## 4.1 Integer variables
+We'll now start working with "boxes" (variables) that hold <em>integers</em> (whole numbers like 3, 17, 2097, but not numbers like 3.141).
+
+Consider this program:
+```python
+i = 5
+print(i)
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.1
+
+Type up the program in `my_variable_example.py`. Also save the file so that it can be submitted (Remember: you need to save the appropriate files for every such "type up" exercise).
+:::
+
+- Now let's examine key parts of this program:
+- First, `i` is the <em>name</em> of a "box" (of sorts).
+- The term used for "box" is <em>variable</em>.&nbsp;&nbsp;&nbsp;&nbsp;      
+    &rArr; `i` is a variable.
+- To put something in a variable, we use <em>assignment</em>&nbsp;&nbsp;     
+    &rArr; with the repurposed `=` (equals) sign.
+    ![](../../../media/units/unit0/module4/int1.png)
+- When we print a variable, what gets printed is its <em>value</em>.     &nbsp;&nbsp;      
+     &rArr; Thus, the number `5` gets printed
+    ![](../../../media/units/unit0/module4/int2.png)
+- **Important:** What you see on printed out is the number `5` and NOT the letter `i`
+- Thus when you see `print(i)`you should think:
+    - "Hmmm, the print function is going to print the contents of variable i".
+    - "I wonder what's inside i?"
+    - "Let me look in the program to see what was the most recent value that got written into i".
+
+For example:
+```python
+i = 5
+i = 3
+print(i)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.2
+
+Type up the above in `my_variable_example2.py` and confirm that 3 is what gets printed.
+:::
+
+By way of explanation:
+![](../../../media/units/unit0/module4/int2.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.3
+
+Is it possible to not have a value in a variable? Consider this program:
+```python
+i
+print(i)
+```
+Type up the program in  `my_variable_example3.py` and run it to check if there are any errors to confirm if it is possible to not have a value in a variable. Submit the program.
+:::
+
+Thus: when you make a variable, you need to put something in it.
+- Next, let's look at <em>assignment</em> between variables:
+  - This is the analogue of cloning between "boxes".
+
+Consider this program:
+```python
+i = 5
+j = i     # The value in i gets copied into j
+print(j)  # Prints 5
+```
+
+- We say, in short, "`i` is assigned to `j`".
+
+:::{.callout-tip}
+We've used comments above to annotate and explain.
+
+- We'll do this often, knowing that comments are not <em>executed</em>.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.4
+
+Consider this program:
+
+```python
+i = 5
+j = i
+print(j)
+print(i)   # Did i lose its value?
+```
+Type up the program in `my_variable_example4.py` and use comments (text followed by ‘#’ symbol) to describe what happens with `print(i)`. Include ‘Yes’ or ‘No’ at the end of the comment, # Did I lose its value?  Submit the python file.
+:::
+
+The above example illustrates that the value in `i` gets copied into the variable `j`, which means that the value 5 is still in  the variable `i`.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.5
+
+Consider this program:
+
+```python
+i = 5
+j = i
+k = j
+print(k)
+```
+Try to identify the output of this program just by mental execution. Type up the program in `my_variable_example5.py` and confirm.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.6
+
+Consider this program:
+```python
+i = 5
+j = i
+i = 0
+k = j
+j = 0
+print(k)
+```
+Try to identify the output of this program just by mental execution. Type up the program in `my_variable_example6.py` and confirm.
+:::
+
+:::{.callout-note}
+A copied value does not change if the original is changed
+:::
+
+For example, consider:
+```python
+i = 5
+j = i      # j now has 5
+i = 0      # We changed i here
+print(j)   # j still has 5
+```
+
+- Here's the line-by-line execution:
+  - The first line puts the value 5 in variable i.
+  - The second line <em>copies</em> the value in i (which is 5) into j. So j will have the value 5 as well.
+  - The third line replaces the value 5 with value 0.
+  - j still has 5, so the fourth line will print 5.
+
+:::{.callout-tip}
+0 is an actual value, and is not "no value" or "nothing".
+:::
+
+###### **4.7 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.7.mp4 aspect-ratio="21x9" >}}
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.8
+
+Consider this program:
+
+Type up the following lines of code in `my_variable_example7.py`:
+```python
+i = 5
+j = 6      
+
+# Add code between here
+
+# and here.
+
+print(i)   # should print 6
+print(j)   # should print 5
+```
+Add some lines of code with the objective of swapping the  values in variables i and j. You will need a third variable to be used as a holding place. Thus, without directly assigning the  number 5 to j or the number 6 to i, write code using a third variable to achieve the desired swapping of values.
+:::
+
+###### **4.9 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.9.mp4 aspect-ratio="21x9" >}}
+
+## 4.2 Integer operators
+Let's examine the familiar <em>arithmetic operators</em> `+, -, *, /`
+
+- Addition: `+`
+- Subtraction: `-`
+- Multiplication: `*`
+- Division: `/`
+
+Consider this example with addition:
+```python
+i = 5
+j = 6
+k = i + j
+print(k)
+```
+
+- What happens during execution:
+![](../../../media/units/unit0/module4/binary2.PNG)
+  - The <em>values</em> in `i` and `j` are added.
+  - The resulting <em>value</em> goes into variable `k`.
+- A long-ish way of saying this aloud:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+  &rArr; "`k` is assigned the sum of the values of `i` and `j`"
+- A shorter way:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      &rArr; "`k` is assigned `i` plus `j`"
+
+Here's an example with multiplication and division:      
+```python
+i = 5
+j = 6
+k = i * j
+print(k)      # prints 30
+m = i / j
+print(m)      # what does this print?
+n = i // j
+print(n)      # what does this print?
+```
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.10
+
+Type up the above in `my_variable_example8.py`. Run the program and answer the following questions for yourself:
+
+- What is the value of `n` printed?
+- Change `i` to `21`. What is the value of `n` printed ?
+- Submit your code with `i` set to `5`.
+:::
+
+
+Integer division:
+- In math, we learned that 1/4 = 0.25 and 21/6 = 3.5.
+
+- This remains true in Python when we do something like
+  ```python
+        i = 21
+        j = 6
+        m = i / j
+  ```
+
+- On the other hand, if we wish to perform <em>integer division</em>, we can use the integer division operator:
+  ```python
+        i = 21
+        j = 6
+        m = i // j
+  ```
+
+- That is, the result is truncated <em>down</em> to the nearest integer.
+  - **Example:** 3 // 2  becomes 1 because 1.5 gets truncated to 1.
+  - **Example:** 15 // 4  becomes 3 because 3.75 gets truncated to 3.
+
+- Integer division is useful when we want to do integer arithmetic. 
+
+## 4.3 Expressions and operator-precedence
+Consider the following program:
+```python
+i = 5
+j = 6
+k = i*j - (i+1)*(j-1)
+print(k)
+```
+
+About expressions:
+
+- An expression combines constants (like `1`, above), and variables using operators.
+- Example: `i*j - (i+1)*(j-1)`.
+- The above expression is really equivalent to: `(i*j) - ((i+1) * (j-1))`. Here, we added some clarifying parentheses.
+- Operator <em>precedence</em> allows us to reduce the number of clarifying parentheses.
+- Python precedence follows standard precedence in math:  `/, *, +, -`.
+- You might remember the precedence via the acronyms **BODMAS** or **PEMDAS**. (Look it up.)
+- The above expression is NOT the same as: `i*j - i+1*j-1`.
+- Also, note the change of whitespace:
+  - We could have written `k = i * j - (i + 1) * (j - 1)`.
+  - But `k = i*j - (i+1)*(j-1)` is easier to read.
+
+Let's dive a bit deeper into precedence and do some examples:
+
+- We'll use the four operators: add or +, subtraction or -, multiplication or *, and division or /.
+- We'll use plain ol' numbers to illustrate.
+
+:::{.callout-tip}
+The key to working them out is to use <b>extra</b> parentheses in the right way.
+:::
+
+- The PEMDAS rule: 
+  - First apply Parentheses, then Exponents, then Multiplication and Division, and then Addition and Subtraction.
+
+- Example: 3 + 2*4
+  - Here, we apply 2*4 to give 8
+  - Then do 3 + 8 to give 11.
+  - Applying extra parenthesis to 3 + (2*4) makes it clear.
+
+- Example: 3*(24/3-2*3)
+  - First, work out what's inside the parens (the P of PEMDAS):
+    - Do div to 24/3 and mult to 2*3 to get (8 - 6)
+    - This gives (2)
+  - Now go out and see that we need to do 3*(2)
+  - Which gives 6.
+  - Using extra parens and spacing makes it clear: 3 * ( (24/3) - (2*3) )
+
+- Example:   1 +  ( (4 - 1) * 8) / 6
+  - Do the innermost parens first: (4 -1) = 3
+  - Which results in 1 + (3 * 8) / 6
+  - Then the next parens to give: 1 + 24/6
+  - Then the D in PEMDAS: 1 + 4
+  - Result: 5
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.12
+
+Use the PEMDAS rule to evaluate mentally or by hand the expression,  `i*j - i+1*j-1` when `i = 7` and `j = 3`. Write a Python program `my_expression_example1.py` to evaluate the expression and print your answer.
+:::
+
+###### **4.13 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.13.mp4 aspect-ratio="21x9" >}}
+
+## 4.4 More about expressions and assignment
+The <em>remainder</em> operator:
+
+- The expression 10 % 3 is "the remainder when 10 is divided by 3".
+- Thus 10 % 3 is 1.
+- Similarly 11 % 4 is 3.
+- The remainder operator is sometimes called <em>modulo</em>, as in "ten modulo 3 is 1"
+
+Consider this example:
+```python
+i = 14
+j = -6
+k = i % (-j)
+print(k)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.14
+
+Can you mentally execute and identify what's printed? Type up the above in `my_expression_example2.py` to confirm.
+:::
+
+One way to know whether one number cleanly divides another is to apply the `%` (remainder) operator.
+
+Consider this program:
+```python
+j = 10
+for i in range(1, j):
+    k = j % i
+    print(k)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.15
+
+Can you mentally execute and identify what's printed? Type up the above in `my_expression_example3.py` to confirm. Then change j to 11 and run the program. When submitting the code, leave j as 11.
+:::
+
+:::{.callout-note}
+- In the above exercise we systematically obtained the remainder when dividing 10 (the value of j) by every possible number less than 10.
+- Whenever the output is 0 in some iteration, we know 10 % i is 0 for that iteration.
+- This means i divides 10 cleanly (with no remainder).
+- For example 10 % 5 is 0.
+- Whenever a number j has nothing less than j that divides j cleanly, the number is called a <em>prime number</em>.
+- Examples of prime numbers: 7 and 11.
+- Examples of non-prime numbers: 10 and 15
+- The notion of a prime number may seem like an esoteric topic, suitable for a dinner conversation with mathematicians. But it turns out to have immense practical value: much of cryptography is based on properties of numbers that can be cleanly divided by only two prime numbers. 
+:::
+
+###### **4.16 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.16.mp4 aspect-ratio="21x9" >}}
+
+Now we'll look at a strange (initially) but very useful type of assignment:
+
+Consider this program:
+```python
+i = 8
+i = i + i/2
+print(i)
+```
+
+- Prior to evaluating the expression, `i` has value `8`.
+- On the right side, the current value of `i` is used to <em>evaluate</em> the expression.
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      &rArr; Thus, the expression evaluates to `(8 + 8/2) = 12`.
+- This evaluated value then goes into variable `i`.
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      &rArr; After the assignment, `i` has the value `12`.
+
+Let's use this to compute the sum of numbers from 0 to 10:
+```python
+s = 0
+for i in range(0, 11):
+    s = s + i
+print(s)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.17
+
+Trace the changing values of `s` in the above program using the following kind of table:
+![](../../../media/units/unit0/module4/tracetable.PNG)
+
+There is nothing to submit in this exercise, but it is highly recommended that you complete the tracing exercise using a spreadsheet or a document.
+:::
+
+:::{.callout-note}
+In this and other tracing exercises involving a table, you can simply draw the table by hand and include a picture. (That is, you don't have to spend time on making tables inside Word.)
+:::
+
+Consider this program:
+```python
+N = 5
+s = 0
+for i in range(1, N+1):
+    s = s + (2*i - 1)
+print(s)
+```
+- The program prints the sum of the first N odd numbers.
+- Recall from earlier that as i goes through 1, 2, 3, ... (2*i-1) evaluates as successive odd numbers 1, 3, 5, ...
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.18
+
+Write up the above program in `my_expression_example4.py`, edit the code to create an outer loop that varies N from 1 to 10... That is, make N a new for-loop variable that ranges between 1 and 10 (inclusive), and ensure that you properly indent the inner (nested) loop that uses i. 
+
+Review [**Section 3.3**](https://gwu-csci1012.github.io/units/unit0/modules/module3.html#tracing-through-a-program-in-detail) in **Unit0 » Module3** to understand how the inner and outer loop are indented in a `nested-for-loop` and ensure that the inner for-loop that uses I is properly indented. 
+
+Submit a working program as `my_expression_example4.py`.
+:::
+
+###### **4.19 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.19.mp4 aspect-ratio="21x9" >}}
+
+## 4.5 Problem solving and pseudocode
+Suppose we were given the following problem: <em>write a program to print the first <i>N</i> odd numbers</em>.
+
+We'll solve it in the following steps:
+
+- First, let's sketch out a "program-like" outline (not a real program):
+  ```python
+  N = 10      
+  for i ranging from 1 to N:
+      Calculate the i-th odd number
+      Print it
+  ```
+
+- This kind of rough outline is called <em>pseudocode</em>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+  &rArr; We're meant to do this on paper, prior to programming.
+- Pseudocode looks a little like code, but is half-English.
+- For any given `i`, the `i`-th odd number is:
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+  `2*i - 1`.
+- Now let's put this together into a program:
+  ```python
+  N = 10
+  for i in range(1, N+1):
+      k = (2*i - 1)
+      print(k)
+  ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.20
+
+Trace the values of `i` and `k` in the program above using a table in a spreadsheet or a document. It is highly recommended that you complete the tracing exercise using a spreadsheet or a document, though you are not submitting the tracing spreadsheet or document. Write up the above program in `loop_exercise1.py`and submit it.
+:::
+
+## 4.6 A problem-solving example with variables and nested for-loops
+We'll solve the following problem: <em>for any given <i>n</i>, compute</em>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+  1 + 2<sup>1</sup> + 2<sup>2</sup> 
+  + 2<sup>3</sup> + ... + 2<sup>n</sup> 
+
+That is, the sum of consecutive powers of 2.
+
+As a first step, let's see if we can use a loop to compute a single power of 2:
+  
+- Suppose we wish to compute <i>2<sup>k</sup></i> for some <i>k</i>.
+
+- We know that 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+  <i>2<sup>k</sup>
+  =  2*2*2 ... *2</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (k times)
+- Thus, what we could is:
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      Start with p = 1
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      Multiply by 2: p = p * 2
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      Multiple that result by 2: p = p * 2
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      ... etc
+- In pseudocode:
+  ```python
+  p = 1  
+  for i ranging from 1 to k:
+    p = p * 2
+  ```
+
+- Let's put this into code and test:
+  ```python
+  k = 10
+  p = 1
+  for i in range(1, k+1):
+      p = p * 2
+  print(p)
+  ```
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.21
+
+Trace the changing values of `p` in the above program using a table in a spreadsheet or a document. It is highly recommended that you complete the tracing exercise using a spreadsheet or a document, though you are not submitting the tracing spreadsheet or document. Write up the above program in `my_powerof2.py` and submit it.
+:::
+
+###### **4.22 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.22.mp4 aspect-ratio="21x9" >}}
+
+- Next, let's look at pseudocode for the sum of powers (our original problem):
+  ```python
+  s = 1    
+  for k ranging from 1 to n:
+      Compute k-th power of 2
+      Accumulate in s
+  Print s
+  ```
+- Now, let's put this all together:
+  ```python
+  n = 5
+  s = 1
+  for k in range(1, n+1):
+      p = 1
+      for i in range(1, k+1):
+          p = p * 2
+      s = s + p
+  print(s)
+  ```
+
+- Let's point out a few things.
+  - First, let's have our eyes look over the outer-loop and not focus on the details of the inner loop:
+  ![](../../../media/units/unit0/module4/power.png)
+  - Now look inside the body of the outerloop:
+  ![](../../../media/units/unit0/module4/power2.png)
+  - Try to get a feel for how it executes by looking at the first iteration of the outerloop:
+  ![](../../../media/units/unit0/module4/power3.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.23
+
+Make a table with columns labeled `k, i, p` and `s` and trace the program, filling in the table step-by-step. It is highly recommended that you complete the tracing exercise using a spreadsheet or a document, though you are not submitting the tracing spreadsheet or document.
+:::
+
+###### **4.24 Video:**
+<div id="video-4.24"></div>
+{{< video ../../../media/units/unit0/module4/u0-mod4.24.mp4 aspect-ratio="21x9" >}}
+
+<div id="exercise-4.25"></div>
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.25
+
+Watch the video above and try a few other values of n, e.g., n = 3 or n =4. Try to guess the mathematical formula for 1 + 2<sup>1</sup> + 2<sup>2</sup> + 2<sup>3</sup> + ... + 2<sup>n</sup>. There is nothing to submit in this exercise.
+:::
+
+:::{.callout-tip}
+Add 1 to the sum-of-powers of 2.
+:::
+
+## 4.7 Shortcut operators
+Recall the integer-sum program:
+```python
+s = 0
+for i in range(0, 11):
+    s = s + i
+print(s)
+```
+
+We can write this using the "shortcut addition" operator += as follows:
+```python
+s = 0
+for i in range(0, 11):
+    s += i
+print(s)
+```
+Thus, `s += i` is the same as `s = s + i`
+
+One can read `s += i` as "add i to what's already in s, and store the result in s".
+
+This can be applied to the other operators as well:
+```python
+s -= i         # Same as s = s - i
+p *= 2         # Same as p = p * 2
+d /= 2         # Same as d = d / 2
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.26
+
+Using shortcut operators discussed above, in `my_sum_powerof2.py` rewrite the example code that computes the sum of the power of 2, as shown in the [**Video 4.24**](./module4.qmd#video-4.24) and [**Exercise 4.25**](./module4.qmd#exercise-4.25).
+:::
+
+## 4.8 When things go wrong
+As you might imagine, there are many ways to inadvertently create errors.
+
+In each case below, first try to identify the error just by reading. Then, type up the program to confirm.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.27
+
+What is the error in this program?
+```python
+i = j
+j = 4
+print(i)
+```
+Type up the above program in `error1.py` to confirm the error and submit.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.28
+
+What is the error in this program?
+```python
+i = 4
+j = 3
+k = ( (i + j) * (i - j) / 2
+print(k)
+```
+Type up the above program in `error2.py` to confirm the error and submit.
+:::
+
+We'll now see a different kind of error:
+```python
+n = 5
+for i in range(1, n+1):
+    k = n / (n - i)
+    print(k)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.29
+
+Type up the above program in `error3.py` to confirm the error and submit. Trace through the program to understand why there is an error. It is highly recommended that you complete the tracing, though you are not submitting the tracing spreadsheet or document. See hint below.
+:::
+
+:::{.callout-tip title="Hint"}
+The above is an example of a <em>runtime error</em>:
+
+- The code itself is correctly written in that there are no issues with breaking the rules of the language.
+- However, when i is 0, you can't divide by 0.
+- This causes a runtime error, meaning the program runs fine until the particular occurence of divide-by-zero.
+:::
+
+<!-- ## 4.9 Python files vs module pdf
+**Important:**
+
+- By now it should be clear what you type into a Python file (ends with `.py`) verses what goes into your module pdf.
+- Code goes into the specified Python file (example: `error3.py`) and all other answers go into your module pdf (numbered by module#, such as: `module4.pdf`).
+- Your module pdf (a single pdf per module) will have all the non-coding answers for a module. Whereas, a module can have many different Python files.
+- Thus, in future modules, we will only specify the Python filename with the understanding that you know how to name your module pdf. -->
+
+## 4.9 A peek at the future
+Let's now revisit some earlier code <a href="../../../media/units/unit0/module1/hello_gui.py" download >**hello_gui.py**</a> and apply what've learned about integers, arithmetic, and for-loops:
+![](../../../media/units/unit0/module4/for-loop.png)
+
+Next, consider this program that uses a for-loop to plot
+points:
+```python
+from drawtool import DrawTool 
+import math
+
+dt = DrawTool()
+dt.set_XY_range(0,10, 0,10)
+
+for i in range(0, 6):
+    j = 2*i + 1
+    dt.draw_point(i, j)
+
+dt.display()
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 4.30
+
+Download <a href="../../../media/useful/drawtool.py" download>**drawtool.py**</a> into your module4 folder. Then, type up the above in `my_plot_points.py`, and run.
+:::
+
+Let's point out:
+
+- Let's focus on the parts we recognize (the for-loop):
+![](../../../media/units/unit0/module4/for-loop2.png)
+  - So, when i is 0, j is calculated as 1
+  - This plots the point (0,1).
+  - Then, when i is 1, j becomes 3, which results in the point (1,3).
+  - ... and so on.
+
+- The points are the dots shown in the plot.
+- When you downloaded `drawtool.py`, you downloaded another Python program into the same folder.
+  - This is a program that provides drawing and plotting features.
+  - We've used one of its features here (plotting points), and will use `drawtool.py` again in the future.
+
+- Notice that the plotted points are along a straight line, implying a <em>linear</em> relationship between i and j.
+
+- We will occasionally write programs that work with numbers and quantitative concepts. As a result, we'll encounter mathematical ideas in a different way, through programming.
+
+## 4.10 Meta
+Another in our series of occasional "meta" sections that will step back from the material to comment on how we can learn better.
+
+This was a loooong module with lots of exercises and details. Let's review:
+
+- We introduced the all-important concept of a <em>variable</em> along with the sense that there's a "place" in the computer for each variable.
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; 
+  The "place" is really in the <em>memory</em> (also called RAM) of the computer.
+- Along with variables is the notion of <em>assignment</em>, which means "copying the value in one variable into another variable".
+
+:::{.callout-tip}
+Assignments are amongst the most common of statements in everyday code.
+:::
+
+- When a variable is of a numeric type like integers, we also need to go over basic <em>operators</em> and show examples.
+- Further complications arose when the operators have variations.
+- Since we were on the topic of integers, we took this opportunity to learn how to do some number-crunching.
+- When we got to nested loops, it got tricky following the values of variables through multiple nested loops.
+
+So, if you felt a bit overwhelmed, that's perfectly understandable. If you have to go back to some of the material to review or try some exercises again, that's fine. You're going to get better at this!
+
+
+<!-- <br>
+[Previous Module: **Module 0.3**](./module0.3.qmd){.button .prev} [Next Module: **Module 0.5**](./module0.5.qmd){.button .next} -->
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+---
+title: "Advising Information: if you want to continue with some computing in the future"
+---
+
+:::{.callout-note}
+## Mid Semester Survey
+- Please take a few moments to complete the Mid-Semester Survey for our course before **Saturday 03/30/2024** by **11:59 PM**. 
+- Your input will help us understand if you need advising regarding a minor in Computer Science. Plus, here's some extra incentive: filling out the survey will count as one of your quizzes for the course, and you'll earn 10 points!
+- Scan the QR code below or click [here](https://docs.google.com/forms/d/e/1FAIpQLSfDnmqZVCGIu28xacTCAEaazVbNQRp35XHTQ0GNk7LB6FGnmA/viewform?usp=sf_link) to access the survey:
+
+    ![](../../../media/advising/CS1012-Spring2024_MidSemSurvey.png){width="30%"}
+:::
+
+_Quick links_
+
+[**The math in CS: an explanation**](advising.qmd#math)
+
+[**Difference between B.A. and B.S in  Computer Science**](advising.qmd#babs)
+
+[**Doing a minor in CS**](advising.qmd#minor)
+
+[**Important things to know about a minor or second major in CS**](advising.qmd#imp)
+
+[**Continuing with CS post-graduation**](advising.qmd#gateway)
+
+[**FAQ**](advising.qmd#faq)
+
+
+
+## 1 &nbsp;&nbsp; What are your plans (even if vague at this time)?
+Do any of the following might apply to you?
+  
+- You'd like to switch into the computer science program, either for the B.S. program or the B.A. program (there's a difference - see [**Section 3**]() below).
+- You want to keep your major but want to explore whether it's possible to get a dual-major or second-major in computer science.
+- You may be interested in a <em>computer science minor</em>, and want to learn what it involves, and whether you should do one.
+- You see more computing in your future, but don't have the time for it now.
+- You've heard about the math requirements in computer science, and are wondering if there's an alternative.
+
+You might have other questions such as: Is the rest of CS harder than 1012? What can you do with a CS minor?
+
+We'll address these cases and questions below but let's start with understanding this business of math in CS.
+
+## 2 &nbsp;&nbsp; Why does CS have math in it? And how much?
+<div id="math"></div>
+The first few courses in computer science are:
+
+- _**CS-1111: Introduction to Software Development**_.
+
+    This is the introductory programming course for majors in the Java programming language. The good news is, you are primed for success in this course because you already know key concepts such as loops, conditionals and functions.
+
+- _**CS-1112: Algorithms and Data Structures**_.
+
+    Remember lists, arrays, sets, and dictionaries? This course dives deep into these structures and also spends time on algorithmic ideas.
+
+:::{.callout-note}
+You need to have completed **Math-1220** or **Math-1231** to take this course. And a minimum grade of **C** in **CS-1111**.
+
+**Math-1220** or **Math-1231** are different versions of Calculus.
+:::
+
+- _**CS-1311: Discrete Structures**_.
+
+    This is the <em>second</em> math course, and the first "math in CS" course. Here's what you should know about CS-1311: even if math did not work out for you in high-school, CS-1311 might be fine if  you really work at it. CS-1311 does not require any of the traditional pre-calc math (trigonometry etc) as background, but you do need to be comfortable with symbols and algebra.
+
+:::{.callout-note}
+You need to have completed **Math-1220** or **Math-1231** to take this course. 
+:::
+
+- _**CS-2113: Software Engineering**_ .
+
+    This is the third in the programming sequence where you'll learn to  write more sophisticated code to build real applications.
+
+:::{.callout-note}
+This has a prerequisite of **CS-1112** _(with a minimum grade of **C**)_, and you need to have completed **Math-1231** or the combination of _1220_ and _1221_ to take this course. 
+:::
+
+So, now let's answer a few questions about math:
+
+- _**What kinds of math, and how much?**_.
+    - The <em>minor</em> requires two math courses: 
+       - Calculus, which can be taken as a single intensive course (Math-1231) or as two courses (Math 1220 and 1221).
+       - Discrete-structures (CS-1311), which is a more CS-related math course offered by the CS department itself.
+    - In addition to Calculus and Discrete structures, the B.A in CS <em>major</em> requires a statistics elective (which you are likely to take in almost any major) and a Linear Algebra course.
+    -  In addition to Calculus and Discrete structures, the B.S in CS <em>major</em> has four additional math courses: Discrete Structures II, Foundations of Computing, Statistics, and Linear Algebra.
+
+:::{.callout-note}
+The <b>BS</b> program has a specific list of Statistics courses that are allowed, which does NOT include the oft-taken 1051 or 1053. (The <b>BA</b> does allow 1051/3).
+:::
+
+- _**Why is there math in CS? Programming doesn't appear to need math**_.
+    - While it's true that you don't need any math to program websites or write code for mobile apps, computer science is a lot more than just programming. For instance, <em>artificial intelligence</em> is an area of computer science that seeks to build programs that rival (in fact, exceed) humans in intelligence. There's a fair amount of math behind this type of computing. Other areas that overlap with math include: cryptography, data science, robotics, graphics. 
+    - A lot of computer science becomes interesting if you are willing to take on a reasonable amount of math.
+    - Theoretical computer science, which is quite mathematical, asks fundamental questions about the theory behind computing. For example, if you've wondered why the Python compiler can't tell whether your program will run correctly, it's because we can (mathematically) prove that no such compiler can be created.
+
+- _**Are there options if I'm not interested in doing the math?**_.
+  <br> Yes. See the "Post-graduation online programs" section below.
+
+
+
+## 3 &nbsp;&nbsp; The two Bachelor's programs in computer science (BA and BS)
+<div id="babs"></div>
+
+- The <em>BA in CS</em>:
+   - This program is designed to allow students to easily dual major or to take two minors. 
+   - <em>What this means:</em> Suppose you want to combine a major in Political Science with a major in Computer Science. Then, the BA-Computer-Science might be the best option for you.
+   - Alternatively, you can do the BA-Computer-Science and take two minors. For example, a minor in Political Science and a minor in History.
+   - The overall CS and math requirements are fewer than those required for the BS in CS.
+   - If you choose the BA program, you will need to decide whether the non-CS part is another major, or two majors. In other words, you cannot do the BA-CS without either taking two minors or taking another major.
+   - The curriculum is <a href="http://bulletin.gwu.edu/engineering-applied-science/computer-science/ba/">**listed here**</a>
+
+- The <em>BS in CS</em>:
+   - This is the gold-standard rigorous computer science program, covering all of undergraduate CS, and with many electives as options.
+   - The BS in CS is an engineering-accredited program that meets the stringent criteria of programs accredited by the Accreditation Board of Engineering &amp; Technology, the national accrediting agency for engineering programs.
+   - The curriculum is <a href="http://bulletin.gwu.edu/engineering-applied-science/computer-science/bs/#requirementstext">**listed here**</a>
+
+:::{.callout-note title="About the BS"}
+If you are transferring late into the BS, you'll need to keep in mind that there are quite a few requirements and so, you should check that they are do-able in your time-frame.
+:::
+
+If either of the above (BS or BA) is your next step:
+
+- To transfer into SEAS as a CS major, you'll need to follow the <a href="https://registrar.gwu.edu/undergraduate-internal-transfer"> **internal transfer**</a> steps. Be aware that there are specific deadlines for this and that there are specific admission requirements to be able to transfer into SEAS.
+- To take CS as a second major:
+    - <a href="https://www.cs.seas.gwu.edu/admission-computer-science-second-major-or-minor">**Follow these steps and deadlines**</a>
+    - Fill out either the <a href="https://www.cs.seas.gwu.edu/sites/g/files/zaxdzs1421/f/downloads/Revised%20CS%20BS%20Double%20Major%20Application%20Form%20%28editable%29%20-%208.5.19.pdf">**BS double-major application**</a> or the <a href="https://www.cs.seas.gwu.edu/sites/g/files/zaxdzs1421/f/downloads/CS%20BA%20Double%20Major%20Application%20Form%20%28editable%29.pdf">
+        **BA double-major application**</a>
+    - Include your unofficial transcript, and home school's double-major form, along with the above form, and email to <a href="mailto:seasadvising@gwu.edu">**seasadvising@gwu.edu**</a>
+
+
+
+## 4 &nbsp;&nbsp; Doing a minor in computer science
+<div id="minor"></div>
+
+The CS minor consists of six courses:
+ 
+- **CS-1111**: Intro to Software Development
+- **CS-1112**: Algorithms & Data Structures
+    - **CS-1112** has **CS-1111** as a prerequisite. Also, because **CS-1112** requires **Math-1220** or **Math-1231**, you will also need to take one of **Math-1220** or **Math-1231**.
+- **CS-1311**: Discrete Structures
+- **CS-2113**: Software Engineering
+    - **CS-2113** has CS-1112 as a prerequisite. Also, because **CS-2113** requires Math-1221 or **Math-1231**, you will also need one of these.
+- CS Elective 1
+- CS Elective 2
+
+All CS Electives for the minor must come from pre-approved list: see <a href="https://www.cs.seas.gwu.edu/minor-computer-science">**this page for more information about the CS minor**</a>
+
+To apply you need:
+
+- To submit the application no later than the start of the _5th semester_ of study at GW.
+- A grade of **B-** or higher in **MATH 1231** or the **combination of MATH-1220/1221**, or AP Credit for **MATH 1231**.
+- A grade of **B** or higher in **CSCI 1111** or **CSCI 1011** or **CSCI 1121**
+- A minimum overall GPA of 3.0 at time of application
+
+Minor applications are accepted on a rolling basis with a processing time of up to 2 weeks. Please include a copy of your unofficial transcript, your school's minor declaration form, the <a href="../../../media/units/unit2/module2.2/MinorForm.pdf">**SEAS CS minor declaration form**</a> and send to <b>seasadvising@gwu.edu</b>.
+
+
+<!-- Additional information: 
+<a href="../../../media/units/unit2/module2.2/CS-Minor-Flyer.pdf">**See this flyer**</a> -->
+
+
+## 5 &nbsp;&nbsp; Important things to know for either the minor or second major
+<div id="imp"></div>
+
+- CS-1012 does NOT count towards the minor.
+- You should plan on taking <b>CS-1111 in the Spring</b> because the Fall offering of CS-1111 is restricted to SEAS majors.
+- Along with **CS-1111** in the Spring, you ought to take either **MATH-1231** or **Math-1220** in the Spring. If you happened to take **CS-1111** in the Fall, you could opt for **MATH-1220** in the same Fall (and take **MATH-1221** in the Spring).
+- If you take **CS-1111** in the Spring, you should take **CS-1112** in the Fall. 
+- Pass/No-Pass grades are NOT allowed for either the minor or major with the condition that the student must pass a placement exam to proceed to the next course in the sequence.
+- Because applying for the minor has a stringent GPA requirement, you might be better off transferring into SEAS.
+- Interested students must apply <b>no later</b> than the start of their 5th semester of study at GW, or completion of 60th credit, whichever comes later.
+
+<!-- If you have more questions, you can <a href="https://calendly.com/dginnetti">**sign up for an appointment with Dawn Ginnetti**</a> -->
+
+
+## 6 &nbsp;&nbsp; Post-graduation online programs
+<div id="gateway"></div>
+
+The Department of Computer Science offers two programs for students who cannot fit additional computer science while doing their Bachelor's:
+
+- The <a href="https://www.cs.seas.gwu.edu/graduate-certificate-gateway-computer-science">**Gateway to Computer Science**</a> graduate certificate. 
+- The <a href="https://www.cs.seas.gwu.edu/master%E2%80%99s-applied-computer-science">**Master's in Applied Computer Science**</a> program.
+
+Both are designed to be open to anyone, especially for those with no background at all in computing, and both are free of math requirements. They are online and can be taken at a gradual pace while working.
+
+<!-- ## 7 &nbsp;&nbsp; FAQ 
+<div id="faq"></div>
+
+First, some advice about the <em>timing</em> in taking courses towards the minor/major:
+
+- Take 1111 in Spring along with Calculus (1231).
+- First sign up for a minor/major in CS and then take 1112 either in summer or the following Fall.
+
+:::{.callout-note}
+You'll need to have completed minor/major sign up before getting into CS-1112.
+:::
+
+- Take 1311 in the Fall (along with 1112). 
+- Take 2113 in either Spring or Fall.
+- Electives can be taken anytime after taking 2113.
+
+::::{.callout-note}
+1111, 1112 and 2113 are all offered <i>fully online</i> in the summer
+:::
+
+The above offerings have plenty of extra seats for non-SEAS students.
+
+Now for questions asked by students.
+
+#### <b>Questions about the minor or dual/second major</b>
+
+- <i>**Is it common or smart to combine a CS minor with a business-related major?**</i>
+  <br>
+    Both common and smart. First, a strong computing background helps you in Business disciplines such as data analytics and finance. Second, you could be working on the business end of tech projects as a product manager (common in the DC area).
+- <i>**What is the difference between a BA and BS in CS? What does the internal transfer process look like when trying to major in CS but not being a SEAS student?**</i>
+    <br> See the section above on the two programs, which also describes the transfer process.
+
+#### <b>Questions about procedures/timing/forms</b>
+  
+- <i>**What is the latest time to sign up for CS minor? Can I declare a minor after my sophomore year? Later?**</i>
+    <br>
+    Keep in mind that the minor has a four-course chain. To take one of the electives, you need CS-2113, which requires CS-1112, which in turn requires CS-1111. So, we don't allow signing up for after after the sophomore year.
+- <i>**Besides sending unofficial transcript and minor declaration forms, is there any other procedure necessary to declare a minor in CS?**</i>
+    <br> That's all you need.
+- <i>**How should I chose my spring courses to prepare me for second majoring in CS?**</i>
+    <br> See advice at the start of this section.
+- <i>**Would sending out the application form for the second CS major be done after receiving the CSCI 1111 grade or the semester during which it is taken?**</i>
+    <br> After receiving the grade.
+
+
+#### <b>Questions about workload, math, tight schedules</b>
+
+- <i>**Are there any courses that I can take extra to my packed course schedule? winter short courses or summer short courses for example?**</i>
+    <br> Yes, 1111, 1112, and 2113 are all offered fully online in the summer but you can only take one of them at a time (in the summer) because each course extends through the entire summer.
+- <i>**Does this class prepare you to take CS classes with those who are in SEAS?**</i>
+    <br> For programming, certainly. In fact you'll be slightly overprepared for CS-1111. The language is different (that's in Java) but the concepts are similar.
+- <i>**Would the additional workload be way too much for a potential neuroscience major who is following a pre med path?**</i>
+    <br> It would depend on careful scheduling. If you're doing Calculus and CS courses and chemistry at the same time,  then yes, that's quite a stiff workload. But if you're done with Chem and Physics early, you can take CS later.
+- <i>**If I do not have a strong background in math, will I struggle in future CS courses?**</i>
+    <br> Maybe. There is math and some students do struggle with it, but most students do get through. We are in the process of designing a no-math option - stay tuned.
+- <i>**What courses would you recommend for someone who is currently struggling with the workload of Introduction to Python?**</i>
+    <br> That depends on the goal. If you want to learn programming, you have to put the time into it. And it's perfectly fine to take your time learning. A summer course might be an option where you can devote the time.
+- <i>**What are some of the main CS courses that can/should be taken as a follow up to this class, particularly for students who are beyond the deadline for declaring a minor in CS or have limited time in their course schedule?**</i>
+    <br> You can take CS-1111. However, if you want to go further, you need to sign up for a minor (at least).
+- <i>**Is there any way to sign up for courses that are restricted to cs majors or minors? What CS courses are available to non-SEAS majors?**</i>
+    <br> We are recommending the schedule at the beginning of this section.
+
+#### <b>Questions about languages</b>
+
+- <i>**Does the CS minor offer a good foundation to learn newer languages, such as React Native? Do you recommend continuing with specifically python or diversifying into other computer programming languages such as Java?**</i>
+    <br> All you need to do is learn one language well, which generally takes three courses in that language, not that different from learning a foreign language. Doing that  positions you to learn any new language on your own. The CS department's 1111-1112-2113 sequence is all in Java (but you do learn a bit of the C language in 2113). -->

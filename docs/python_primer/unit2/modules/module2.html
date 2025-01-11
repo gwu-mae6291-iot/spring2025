@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAE 6291 - Module 2: Next Steps in Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">MAE 6291</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policies.html"> 
+<span class="menu-text">Course policies</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../../install-editor.html">
+ <span class="dropdown-text">Much Needed Software Installations</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Python Primer</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/basics.html">
+ <span class="dropdown-text">Basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/constructs.html">
+ <span class="dropdown-text">Constructs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../instructor.html"> 
+<span class="menu-text">Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#getting-set-up-for-datatool" id="toc-getting-set-up-for-datatool" class="nav-link" data-scroll-target="#getting-set-up-for-datatool">2.0 Getting set up for datatool</a></li>
+  <li><a href="#csv-data" id="toc-csv-data" class="nav-link" data-scroll-target="#csv-data">2.1 CSV data</a></li>
+  <li><a href="#using-datatool-for-plotting" id="toc-using-datatool-for-plotting" class="nav-link" data-scroll-target="#using-datatool-for-plotting">2.2 Using <code>datatool</code> for plotting</a></li>
+  <li><a href="#using-datatool-for-drawing" id="toc-using-datatool-for-drawing" class="nav-link" data-scroll-target="#using-datatool-for-drawing">2.3 Using datatool for drawing</a></li>
+  <li><a href="#using-datatool-with-generated-data" id="toc-using-datatool-with-generated-data" class="nav-link" data-scroll-target="#using-datatool-with-generated-data">2.4 Using datatool with generated data</a></li>
+  <li><a href="#using-datatool-for-maps" id="toc-using-datatool-for-maps" class="nav-link" data-scroll-target="#using-datatool-for-maps">2.5 Using datatool for maps</a></li>
+  <li><a href="#choropleth-maps" id="toc-choropleth-maps" class="nav-link" data-scroll-target="#choropleth-maps">2.6 Choropleth maps</a></li>
+  <li><a href="#using-datatool-for-maps-tilemaps" id="toc-using-datatool-for-maps-tilemaps" class="nav-link" data-scroll-target="#using-datatool-for-maps-tilemaps">2.7 Using datatool for maps: tilemaps</a></li>
+  <li><a href="#whats-next-for-you-in-computing" id="toc-whats-next-for-you-in-computing" class="nav-link" data-scroll-target="#whats-next-for-you-in-computing">2.8 What’s next for you in Computing?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Module 2:</strong> Next Steps in Python</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+<style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+
+
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<!-- :::{.callout-note}
+The topics are introduced with a "not on the final exam" intent, for your understanding and use in the next module's exercises, but not tested on the final exam.
+::: -->
+<p>This is a somewhat light module aimed at introducing a new member of the family: <b>datatool</b></p>
+<ul>
+<li>We’ve already worked with drawtool and wordtool.</li>
+<li>Drawtool is based on a popular Python graphing package called <em>Matplotlib</em>:
+<ul>
+<li>Matplotlib is a powerful package for all kinds of plotting.</li>
+<li>However, it can be difficult to understand how to use effectively.</li>
+<li>To simplify, we developed drawtool so that you can perform both plotting and simple drawing.</li>
+</ul></li>
+<li><em>Plotly</em> is a recent competitor of Matplotlib:
+<ul>
+<li>Plotly is designed to be web-friendly, to let Python programs have output that renders in a browser, so that websites can display nice graphics.</li>
+<li>Plotly has stronger support for maps (as in geographic maps) than Matplotlib.</li>
+<li>However, just like Matplotlib, it can be difficult to use, especially since there are two fundamentally different kinds of maps.</li>
+</ul></li>
+<li><em>Pandas</em> is perhaps the most popular Python package aimed at data handling and data science applications. It too takes a while to learn.</li>
+<li>Thus, to simplify, we have developed <b>datatool</b>, to make it easy to do typical things like plotting graphs but also to work with data files, and especially, maps.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Datatool does not display via its own GUI. Instead, datatool uses a browser, depending on whether you are using Mac or Windows:</p>
+<ul>
+<li><strong>Mac/Linux:</strong> <em>If you don’t have Firefox, you will need to <a href="https://www.mozilla.org/en-US/firefox/new/"><strong>install Firefox</strong></a> and have that running (open a tab to any webpage).</em></li>
+<li><strong>Windows:</strong> Your default browser will do.</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>Also, you will need to be connected (online) because datatool downloads map data from certain websites.</li>
+</ul>
+</section>
+<section id="getting-set-up-for-datatool" class="level2">
+<h2 class="anchored" data-anchor-id="getting-set-up-for-datatool">2.0 Getting set up for datatool</h2>
+<p>If you’ve downloaded Anaconda as directed earlier in the course, you should already have <em>Pandas</em> and <em>Plotly</em> installed.</p>
+<p>Let’s give this a test.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To use datatool, you must follow the separate instructions for Mac and Windows:</p>
+<ul>
+<li>Mac users: you need to have Firefox running and open to any page, such as this one.</li>
+<li>Windows users: Your default browser will do.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download <a href="../../../media/useful/datatool.py" download=""><strong>datatool.py</strong></a>, <a href="../../../media/units/unit2/module2.1/simpledata.csv" download=""><strong>simpledata.csv</strong></a>, and <a href="../../../media/units/unit2/module2.1/line_graph_example.py" download=""><strong>line_graph_example.py</strong></a>, and then run the latter. This should automatically open a new tab in Firefox showing this figure: <img src="../../../media/units/unit2/module2.1/linegraph.png" class="img-fluid"></p>
+<p>If this did NOT work, then you will need to <a href="../../../python_primer/unit2/modules/install-pandas-plotly.html"><strong>install Pandas and Plotly via Anaconda</strong></a> and use Spyder (instead of Thonny).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You also need to be connected because datatool downloads some map-drawing files from designated websites.</p>
+</div>
+</div>
+</section>
+<section id="csv-data" class="level2">
+<h2 class="anchored" data-anchor-id="csv-data">2.1 CSV data</h2>
+<p>When hearing buzzwords like “data science” or “data analytics”, one is led to ask: exactly what is meant by data, and what form does it take on computers?</p>
+<p>We need to be aware of two such forms:</p>
+<ul>
+<li>One is the form it takes as a <em>file</em>.</li>
+<li>The other is: how do we store it in our Python code?</li>
+</ul>
+<p>Here are some basic types of data files:</p>
+<ul>
+<li><em>Text data</em>. This is just plain text but can be found (and stored) as files of different kinds: Word files, plain text files (as we’ve seen with our text examples), and webpages (which contain text).
+<ul>
+<li>Example: see <a href="../../../media/units/unit2/module2.1/alice.txt" download=""><strong>this file</strong></a></li>
+<li>Here, the data is in plain text format, which means we can use something like wordtool to iterate through words, letters etc.</li>
+<li>Once we’ve read the words in the file, our program could store the words in a list.</li>
+</ul></li>
+<li><em>Numeric-only data</em>. This kind of data is often presented in plain text files:
+<ul>
+<li>Example: see <a href="../../../media/units/unit2/module2.1/weatherdiff.txt" download=""><strong>this file</strong></a>, which has pressure-difference readings from two weather stations in the Pacific (it’s called the Southern Oscillation, used to predict El-Nino).</li>
+<li>There’s one reading for each month, a list of 12 numbers.</li>
+<li>Numbers are often stored in arrays inside a program.</li>
+</ul></li>
+<li><em>Image data</em>. Images are stored in various formats such as JPG or PNG.
+<ul>
+<li>Example: see <a href="../../../media/units/unit2/module2.1/washdc.jpg" download=""><strong>this JPG file</strong></a>.</li>
+<li>As we’ve seen, a color image is stored as 3D array in a program.</li>
+</ul></li>
+</ul>
+<p>CSV files for mixed data:</p>
+<ul>
+<li><p>Most real world data sets combine different data together.</p></li>
+<li><p>For example, even in purely numeric data (such as the weather data example above), we might have multiple “columns” of data as in:</p>
+<pre><code>Oscillation  Year          Year       Month
+----------------------------------------------
+-0.7         1955        1955         1
+1.3         1955        1955         2
+0.1         1955        1955         3
+-0.9         1955        1955         4
+0.8         1955        1955         5
+1.6         1955        1955         6
+1.7         1955        1955         7
+1.4         1955        1955         8
+1.4         1955        1955         9
+1.5         1955        1955        10
+1.4         1955        1955        11
+0.9         1955        1955        12</code></pre></li>
+<li><p>But even more commonly, numeric and text data are often found together, as in:</p>
+<pre><code>    city      lat      long       country iso2 iso3  population
+   Tokyo  35.6897  139.6922         Japan   JP  JPN    37977000
+ Jakarta  -6.2146  106.8451     Indonesia   ID  IDN    34540000
+   Delhi  28.6600   77.2300         India   IN  IND    29617000
+  Mumbai  18.9667   72.8333         India   IN  IND    23355000
+  Manila  14.5958  120.9772   Philippines   PH  PHL    23088000
+Shanghai  31.1667  121.4667         China   CN  CHN    22120000
+Sao Paulo -23.5504  -46.6339        Brazil   BR  BRA    22046000
+   Seoul  37.5833  127.0000  Korea, South   KR  KOR    21794000
+Mexico City  19.4333  -99.1333        Mexico   MX  MEX    20996000
+Guangzhou  23.1288  113.2590         China   CN  CHN    20902000</code></pre>
+<p>This type of table-like format is possibly the most common type of data.</p></li>
+<li><p>While one could store this in a plain text file as in <a href="../../../media/units/unit2/module2.1/cities.txt" download=""><strong>this example</strong></a>, it is much more convenient to use the <b>CSV format</b>.</p></li>
+<li><p>The same data in CSV format looks like this:</p>
+<pre><code>city,lat,long,country,iso2,iso3,population
+Tokyo,35.6897,139.6922,Japan,JP,JPN,37977000
+Jakarta,-6.2146,106.8451,Indonesia,ID,IDN,34540000
+Delhi,28.66,77.23,India,IN,IND,29617000
+Mumbai,18.9667,72.8333,India,IN,IND,23355000
+Manila,14.5958,120.9772,Philippines,PH,PHL,23088000
+Shanghai,31.1667,121.4667,China,CN,CHN,22120000
+Sao Paulo,-23.5504,-46.6339,Brazil,BR,BRA,22046000
+Seoul,37.5833,127.0,"Korea, South",KR,KOR,21794000
+Mexico City,19.4333,-99.1333,Mexico,MX,MEX,20996000
+Guangzhou,23.1288,113.259,China,CN,CHN,20902000</code></pre>
+<ul>
+<li>Whitespace is removed</li>
+<li>Commas are used to separate data.</li>
+</ul></li>
+</ul>
+<p>For the above example, <a href="../../../media/units/unit2/module2.1/cities.csv" download=""><strong>this is the CSV file</strong></a>, which you can store and open in Excel or Google-sheets.</p>
+<ul>
+<li>You can see why <strong>CSV</strong> stands for “<strong>Comma Separated Values</strong>”.</li>
+</ul>
+<p>Next, let’s write some code to work with CSV files.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'cities.csv'</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dt.print_data()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>First, download <a href="../../../media/units/unit2/module2.1/cities.csv" download=""><strong>cities.csv</strong></a>. Then, type up the above in <code>my_data_example.py</code> and confirm that you see the same data printed out. You will notice an additional “row number” column as the first column.</p>
+</div>
+</div>
+<p>It is often convenient CSV data into an array, as in this example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'cities.csv'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> dt.get_data_as_array()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(D)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_data_example2.py</code>, add code to print the average city population using these 10 cities. You should get 25643500.00 (larger than the third most populous U.S. state).</p>
+</div>
+</div>
+</section>
+<section id="using-datatool-for-plotting" class="level2">
+<h2 class="anchored" data-anchor-id="using-datatool-for-plotting">2.2 Using <code>datatool</code> for plotting</h2>
+<p>Often, one of the first things we do with data is to plot the data, or at least parts of it.</p>
+<p>With datatool, that is as simple as this:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'simpledata.csv'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># A basic line graph. 'X' and 'Y' are the column headers.</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>dt.line_graph(<span class="st">'Y'</span>, <span class="st">'X'</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<p>Let’s examine the data:</p>
+<ul>
+<li><p>The CSV file looks like this:</p>
+<pre><code>X,Y
+1,1
+2,2
+3,3
+4,5
+5,8
+6,13
+7,21
+8,34
+9,55
+10,89</code></pre>
+<p>This is merely a list of points with x,y coordinates.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_plot_example.py</code>, plot ‘X’ against ‘Y’ to get <img src="../../../media/units/unit2/module2.1/linegraph_ex.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Mac Users</strong>: Don’t forget to have Firefox running before you run the program.</p>
+</div>
+</div>
+<p>One can plot <em>categorical</em> (non-numeric) data as well:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'cities.csv'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>dt.line_graph(<span class="st">'city'</span>, <span class="st">'population'</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_plot_example2.py</code> to observe a decidedly nonlinear relationship between city rank and population.</p>
+</div>
+</div>
+<p>It is possible to depict multiple curves on one plot:</p>
+<ul>
+<li><p>Consider this data set: <a href="../../../media/units/unit2/module2.1/simpledata2.csv"><strong>simpledata2.csv</strong></a>,</p>
+<pre><code>X,Y,Z,W
+1,1,89,88
+2,2,55,53
+3,3,34,31
+4,5,21,16
+5,8,13,5
+6,13,8,5
+7,21,5,16
+8,34,3,31
+9,55,2,53
+10,89,1,88</code></pre></li>
+<li><p>Here, there are four columns.</p></li>
+<li><p>We will plot the 2nd, 3rd, and 4th columns against the 1st:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'simpledata2.csv'</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: how to place a title on a graph:</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>dt.set_title(<span class="st">'X vs Y, W, Z'</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>dt.line_graph(<span class="st">'X'</span>, <span class="st">'Y'</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>dt.line_graph(<span class="st">'X'</span>, <span class="st">'Z'</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>dt.line_graph(<span class="st">'X'</span>, <span class="st">'W'</span>)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When <strong>Plotly</strong> (via <em>datatool</em>) displays in the browser, there are additional controls included, such as <em>zoom in/out</em>: <img src="../../../media/units/unit2/module2.1/plotly.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Next, let’s use datatool to plot a bar chart:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'simpledata2.csv'</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>dt.bar_chart(<span class="st">'X'</span>, <span class="st">'Y'</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>dt.bar_chart(<span class="st">'X'</span>, <span class="st">'Z'</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<p>Which produces <img src="../../../media/units/unit2/module2.1/barchart.png" class="img-fluid"></p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_plot_example2.py</code>, use the <strong>cities.csv</strong> data to plot a bar chart of city populations as in <img src="../../../media/units/unit2/module2.1/barchart_ex.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Next up: bubble charts</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'simpledata2.csv'</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>dt.bubble_chart(<span class="st">'X'</span>, <span class="st">'Y'</span>, bubblesize<span class="op">=</span><span class="st">'Y'</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<p>Which produces <img src="../../../media/units/unit2/module2.1/bubblechart.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>We need to tell datatool which column to use for the size of the bubbles.</li>
+<li>It is possible to use one column for the center of each bubble (as if plotting points) and another for bubble sizes.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.7
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_plot_example4.py</code>, use the <strong>cities.csv</strong> dataset to plot a bubble chart of city populations as in: <img src="../../../media/units/unit2/module2.1/bubblechart_ex.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="using-datatool-for-drawing" class="level2">
+<h2 class="anchored" data-anchor-id="using-datatool-for-drawing">2.3 Using datatool for drawing</h2>
+<p>Datatool as drawing functions similar to drawtool:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the range along each axis:</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>dt.set_x_range(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>dt.set_y_range(<span class="dv">0</span>, <span class="dv">10</span>) </span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set line width:</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>dt.set_draw_width(<span class="dv">2</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw some lines and shapes</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>dt.set_draw_color(<span class="st">'blue'</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>dt.draw_line(<span class="dv">2</span>,<span class="dv">3</span>, <span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>dt.set_draw_color(<span class="st">'green'</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>dt.draw_rectangle(<span class="dv">7</span>,<span class="dv">2</span>, <span class="dv">3</span>,<span class="dv">4</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>dt.draw_ellipse(<span class="dv">7</span>,<span class="dv">2</span>, <span class="dv">3</span>,<span class="dv">4</span>)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>dt.set_draw_color(<span class="st">'red'</span>)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>dt.draw_arrow(<span class="dv">3</span>,<span class="dv">8</span>, <span class="dv">5</span>,<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">2</span>)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw text </span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>dt.draw_text(<span class="fl">8.5</span>, <span class="dv">4</span>, <span class="st">'Bullseye'</span>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<p>Which produces <img src="../../../media/units/unit2/module2.1/drawing.png" class="img-fluid"></p>
+</section>
+<section id="using-datatool-with-generated-data" class="level2">
+<h2 class="anchored" data-anchor-id="using-datatool-with-generated-data">2.4 Using datatool with generated data</h2>
+<p>In some situations, we end up <em>generating data</em> with our code. This means the data is not in some CSV file.</p>
+<p>For example, suppose we want to plot the numbers 0 through 10 and their squares using:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> i</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">*</span> x        <span class="co"># The square of x</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We'd like to plot these x,y values as points in a graph</span></span></code></pre></div>
+<p>There are two options:</p>
+<ul>
+<li>Create a CSV from the above program, and then load that into datatool.</li>
+<li>Avoid creating a file and directly feed the data into datatool.</li>
+</ul>
+<p>Let’s use the latter approach since it avoids having to create a file.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Make an empty array with zeroes (dtype='f' means float numbers)</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Other kinds are 'int'</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.zeros( (<span class="dv">11</span>, <span class="dv">2</span>), dtype<span class="op">=</span><span class="st">'f'</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Now fill the array with generated data:</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> i</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">*</span> x</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    A[i,<span class="dv">0</span>] <span class="op">=</span> x     <span class="co"># First col has x</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    A[i,<span class="dv">1</span>] <span class="op">=</span> y     <span class="co"># Second has y</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co"># We now want to plot the second column in A against the first</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Hand the array over to datatool, specifying column names:</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>dt.set_data_from_array(A, col_headers<span class="op">=</span>[<span class="st">'X'</span>,<span class="st">'Y'</span>])</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>dt.line_graph(<span class="st">'X'</span>, <span class="st">'Y'</span>)</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<p>Which produces <img src="../../../media/units/unit2/module2.1/generated.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Notice how we ask Numpy to create an array of the right size:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.zeros( <span class="op">&lt;</span>b<span class="op">&gt;</span>(<span class="dv">11</span>, <span class="dv">2</span>)<span class="op">&lt;/</span>b<span class="op">&gt;</span>, dtype<span class="op">=</span><span class="st">'f'</span>)</span></code></pre></div>
+<p>That is, <b>11</b> rows for the numbers 0 through 10 and <b>2</b> columns for the x,y values.</p></li>
+<li><p>Notice that <b>(11, 2)</b> is specified as a <em>tuple</em>. <br>(Recall tuples from Module 1 of this unit.)</p></li>
+<li><p>The array A now has 11 rows and 2 columns, with each entry set to 0.</p></li>
+<li><p>After that, we fill in the values we generate:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> i</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">*</span> x</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    A[i,<span class="dv">0</span>] <span class="op">=</span> x  </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    A[i,<span class="dv">1</span>] <span class="op">=</span> y  </span></code></pre></div></li>
+<li><p>Which we could shorten to:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>A[i,<span class="dv">0</span>] <span class="op">=</span> i  </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>A[i,<span class="dv">1</span>] <span class="op">=</span> i <span class="op">*</span> i  </span></code></pre></div></li>
+<li><p>The CSV equivalent (which we don’t need here) would look like this:</p>
+<pre><code>0,0
+1,1
+2,4
+3,9
+4,16
+5,25
+6,36
+7,49
+8,64
+9,81
+10,100</code></pre></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="using-datatool-for-maps" class="level2">
+<h2 class="anchored" data-anchor-id="using-datatool-for-maps">2.5 Using datatool for maps</h2>
+<p>One of the more exciting uses of Plotly is to display maps and draw on them.</p>
+<p>Let’s think about what a map really is:</p>
+<ul>
+<li>Whereas a standard 2D plot depicts an x-axis and a y-axis, a map could be a region of the globe or the whole globe forced into 2D depiction (sometimes awkwardly).</li>
+<li>The coordinate system uses <em>angles</em> called <em>latitudes</em> and <em>longitudes</em>.</li>
+</ul>
+<p>There are fundamentally two types of <em>digital maps</em>:</p>
+<ul>
+<li>A <em>vector map</em> or <em>line map</em> is a collection of lines and other such geometric entities which, if drawn like lines typically are, will show a map.
+<ul>
+<li>A vector map is most often a very basic map with simple lines for boundaries.</li>
+<li>Vector maps are efficient because it doesn’t take much storage space to store lines (you only need the coordinates of the end points of each line).</li>
+</ul></li>
+<li>A <em>tile map</em> is really a collection of tiles put together to form a map:
+<ul>
+<li>An individual tile can itself be an image (as in a ‘satellite view’) or a combination of image and geometric objects.</li>
+<li>Tilemaps generally look nicer because tiles can be pre-built with accurate and rich detail.</li>
+<li>However, detailed tiles can be slow to load, as you’ve no doubt notice when zooming quickly with Google-maps.</li>
+</ul></li>
+</ul>
+<p>Because of these and other differences, map drawing can sometimes be confusing.</p>
+<p>Let’s look at an example of a simple line-map:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'cities.csv'</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to specify which columns of cities.csv have</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co"># the latitude and longitude, respectively.</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>dt.linemap(<span class="st">'lat'</span>, <span class="st">'long'</span>)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You already have <strong>cities.csv</strong>. Type up the above in <code>my_linemap_example.py</code> and confirm that you see <img src="../../../media/units/unit2/module2.1/linemap.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>You need to be connected to the internet because datatool downloads map data from certain websites.</p></li>
+<li><p>You may see an “<strong>Aa</strong>” legend by the side, depending on which version of <strong>Plotly</strong> was installed by <em>Anaconda</em>.</p></li>
+<li><p>The CSV file looks like this;</p>
+<pre><code>city,lat,long,country,iso2,iso3,population
+Tokyo,35.6897,139.6922,Japan,JP,JPN,37977000
+Jakarta,-6.2146,106.8451,Indonesia,ID,IDN,34540000
+Delhi,28.66,77.23,India,IN,IND,29617000
+Mumbai,18.9667,72.8333,India,IN,IND,23355000
+Manila,14.5958,120.9772,Philippines,PH,PHL,23088000
+Shanghai,31.1667,121.4667,China,CN,CHN,22120000
+Sao Paulo,-23.5504,-46.6339,Brazil,BR,BRA,22046000
+Seoul,37.5833,127.0,"Korea, South",KR,KOR,21794000
+Mexico City,19.4333,-99.1333,Mexico,MX,MEX,20996000
+Guangzhou,23.1288,113.259,China,CN,CHN,20902000</code></pre></li>
+<li><p>The columns that have the latitude and longitude happen to be called <code>lat</code> and <code>long</code>.</p></li>
+<li><p>Which is what we need to tell datatool:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>dt.linemap(<span class="op">&lt;</span>b<span class="op">&gt;</span><span class="st">'lat'</span>, <span class="st">'long'</span><span class="op">&lt;/</span>b<span class="op">&gt;</span>)</span></code></pre></div>
+<p>Datatool then (via Plotly) draws a world map as default with one red dot per latitude-longitude pair extracted from those columns.</p></li>
+</ul>
+</div>
+</div>
+<p>Next, let’s label the cities and draw a line:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'cities.csv'</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>dt.linemap(<span class="st">'lat'</span>, <span class="st">'long'</span>, <span class="st">'city'</span>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># This needs to come &lt;b&gt;after&lt;/b&gt; the linemap() function call.</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>dt.linemap_add_line(<span class="op">-</span><span class="fl">23.5504</span>,<span class="op">-</span><span class="fl">46.6339</span>, <span class="fl">19.4333</span>,<span class="op">-</span><span class="fl">99.1333</span>)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.9
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_linemap_example2.py</code>and confirm that you see <img src="../../../media/units/unit2/module2.1/linemap2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The city labels are crowded and overwrite each other in places. In general, map labeling is a challenging issue.</p>
+</div>
+</div>
+<p>There is a more detailed version of linemap drawing that allows one to set the size of labels (markers), create “hover” text, and so on:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>dt.linemap_detailed(</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'lat'</span>, </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'long'</span>, </span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    marker_color<span class="op">=</span><span class="st">'Red'</span>, </span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    marker_size<span class="op">=</span><span class="dv">10</span>, </span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    marker_text<span class="op">=</span><span class="st">'city'</span>, </span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    marker_text_size<span class="op">=</span><span class="dv">9</span>, </span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    hovertext<span class="op">=</span>[<span class="st">'city'</span>, <span class="st">'population'</span>], </span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    showlegend<span class="op">=</span><span class="va">False</span>)</span></code></pre></div>
+</section>
+<section id="choropleth-maps" class="level2">
+<h2 class="anchored" data-anchor-id="choropleth-maps">2.6 Choropleth maps</h2>
+<p>A <a href="https://en.wikipedia.org/wiki/Choropleth_map#:~:text=A%20choropleth%20map%20(from%20Greek,each%20area%2C%20such%20as%20population"><strong>choropleth map</strong></a> shows regions in colors that imply a quantity associated with a region.</p>
+<p>Datatool displays choropleths using linemaps.</p>
+<p>For example, let’s show country populations from our running example in a choropleth map:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'2011_population.csv'</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Changes the colorscale of the choropleth_iso3()</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>dt.set_color_scale(<span class="st">'rainbow'</span>)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co"># More choices here: https://plotly.com/python/builtin-colorscales/</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="co"># The choropleth_iso3() function uses a standard code for countries.</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co"># The second parameter describes which column to use for heat-map</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="co"># like coloring. The third is what to show when the mouse hovers.</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>dt.choropleth_iso3(<span class="st">'countrycode'</span>, <span class="st">'pop'</span>, <span class="st">'country'</span>)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<p>Which produces: <img src="../../../media/units/unit2/module2.1/choropleth.png" class="img-fluid"></p>
+</section>
+<section id="using-datatool-for-maps-tilemaps" class="level2">
+<h2 class="anchored" data-anchor-id="using-datatool-for-maps-tilemaps">2.7 Using datatool for maps: tilemaps</h2>
+<p>Let’s look at our 10 cities using a tilemap:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'cities.csv'</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The first two identify the lat/long columns. The third</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># is the column with the data to be drawn.</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>dt.tilemap_attach_col_lat_long(<span class="st">'lat'</span>, <span class="st">'long'</span>, <span class="st">'city'</span>)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>dt.tilemap()</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>For tilemaps, we <em>first</em> need to identify the columns that have the latitudes and longitudes, along with the “data” column.</li>
+<li>The data column has the strings that we want shown at those latitudes and longitudes.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_tilemap_example.py</code> and confirm that you see <img src="../../../media/units/unit2/module2.1/tilemap.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Now let’s draw a line between two cities:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'cities.csv'</span>)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>dt.tilemap_attach_col_lat_long(<span class="st">'lat'</span>, <span class="st">'long'</span>, <span class="st">'city'</span>)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="co"># For tilemaps, line drawing must &lt;b&gt;precede&lt;/b&gt; the call to tilemap.</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>dt.tilemap_add_line(<span class="op">-</span><span class="fl">23.5504</span>,<span class="op">-</span><span class="fl">46.6339</span>, <span class="fl">19.4333</span>,<span class="op">-</span><span class="fl">99.1333</span>)</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>dt.tilemap()</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.11
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_tilemap_example2.py</code> and confirm that you see <img src="../../../media/units/unit2/module2.1/tilemap2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>The above shows the full world map centered at latitude 0, longitude 0.</p>
+<p>A more detailed version of the tilemap function allows you to set the zoom and center, among other items:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>dt.tilemap_attach_col_lat_long(<span class="st">'lat'</span>, <span class="st">'long'</span>, <span class="st">'city'</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a different center:</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="bu">dict</span>(lat <span class="op">=</span> <span class="dv">30</span>, lon <span class="op">=</span> <span class="dv">120</span>)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># The detailed version specifies hover data, the center, a zoom level</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>dt.tilemap_detailed(hover_name<span class="op">=</span><span class="st">'city'</span>, hover_data<span class="op">=</span>[<span class="st">'city'</span>], center<span class="op">=</span>c, zoom<span class="op">=</span><span class="dv">2</span>, title<span class="op">=</span><span class="st">'Some cities'</span>)</span></code></pre></div>
+<p>There is also an intermediate-detail version with just center, zoom and title:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>dt.tilemap_attach_col_lat_long(<span class="st">'lat'</span>, <span class="st">'long'</span>, <span class="st">'city'</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="bu">dict</span>(lat <span class="op">=</span> <span class="dv">30</span>, lon <span class="op">=</span> <span class="dv">120</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Intermediate-detail: center, zoom, title:</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>dt.tilemap_czt(center<span class="op">=</span>c, zoom<span class="op">=</span><span class="dv">2</span>, title<span class="op">=</span><span class="st">'Some cities'</span>)</span></code></pre></div>
+<p>Finally, let’s look at an example with street maps, where tilemaps really stand out:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datatool <span class="im">import</span> datatool</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datatool()</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>dt.load_csv(<span class="st">'parkingtickets_June2020.csv'</span>)</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>dt.tilemap_attach_col_lat_long(<span class="st">'LATITUDE'</span>, <span class="st">'LONGITUDE'</span>, <span class="st">'FINE_AMOUNT'</span>)</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co"># DC's lat/long:</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>dc_latlong <span class="op">=</span> <span class="bu">dict</span>(lat <span class="op">=</span> <span class="fl">38.92</span>, lon <span class="op">=</span> <span class="op">-</span><span class="fl">77.07</span>)</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>dt.tilemap_detailed(</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>    hover_name<span class="op">=</span><span class="st">'LOCATION'</span>, </span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>    hover_data<span class="op">=</span>[<span class="st">'VIOLATION_PROC_DESC'</span>],</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>    center<span class="op">=</span>dc_latlong, </span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>    zoom<span class="op">=</span><span class="dv">11</span>, </span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'DC Parking Violations June 2020'</span>)</span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.12
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download <a href="../../../media/units/unit2/module2.1/parkingtickets_June2020.csv" download=""><strong>parkingtickets_June2020.csv</strong></a> and type up the above in <code>my_tilemap_example3.py</code> Run and confirm that you see: <img src="../../../media/units/unit2/module2.1/tilemap3.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="whats-next-for-you-in-computing" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next-for-you-in-computing">2.8 What’s next for you in Computing?</h2>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Congratulations!'</span>)</span></code></pre></div>
+<p>Yes, we’ll say that again: <strong>Congratulations!</strong></p>
+<ul>
+<li>You have come a long way from the first day. Most likely you had not written much code before, but now have hundreds of exercises behind you.</li>
+<li>You have also experienced <em>skill development over time</em>, which requires patience, willingness to persist, and lots of practice. <br> Most importantly: you’ve seen that it’s do-able and that it does NOT require any pre-determined aptitude.</li>
+<li>You’ve also, hopefully, experienced the <em>joy</em> of programming: figuring something out and that special pleasure of getting a program to work.</li>
+<li>And you’ve gotten a glimpse of how powerful computational tools can be in any discipline.</li>
+</ul>
+<p>What you could do next:</p>
+<ul>
+<li>Earlier in <a href="../../../python_primer/unit2/modules/advising.html"><strong>the webpage on advising</strong></a>, we explained how you can take your computing skills further. This page includes guidelines for:
+<ul>
+<li>Transferring or adding CS as a major.</li>
+<li>Doing a minor in CS.</li>
+<li>CS courses available online in the summer.</li>
+</ul></li>
+<li>Through the survey we discovered that many of you have no room in your schedule for additional computing during your degree program. If you nonetheless have developed a taste for programming and want to be the “programming/software” person in your domain, we have a <em>post-graduation</em> option for you:
+<ul>
+<li>A fully online and asynchronous Gateway-to-CS certificate focused on programming skills (including web development) that you can take at your own pace.</li>
+<li>An online Master’s in Applied Computer Science, if you want to go further.</li>
+</ul></li>
+</ul>
+<p>Neither program needs any background, and neither features any math at all. Both are focused on practical skills for the workplace.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The future awaits you'</span>)</span></code></pre></div>
+
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>The material is sourced from <strong>Prof.&nbsp;Kartik Bulusu’s</strong> course titled, ‘Introduction to IoT and Edge computng applications’. <br> This is a Quarto website. To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.<br> Contact: <a href="mailto:bulusu@email.gwu.edu">Kartik Bulusu</a><br> © 2024 All rights reserved</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

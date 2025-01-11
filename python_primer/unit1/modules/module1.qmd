@@ -1,0 +1,1080 @@
+---
+title: "**Module 1:** Conditionals"
+format:
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 1</a> &raquo;
+  <span class="current-page">Module 1</span>
+</div> -->
+
+## Objectives
+By the end of this module you will be able to:
+
+- Evaluate Boolean (pronounced: <em>BOO-lee-unn</em>) expressions.
+- Construct Boolean expressions from English descriptions.
+- Mentally execute (trace) code with <em>conditionals</em>, that is,  if, if-else, and if-multi-else statements.
+- Write and debug code with conditionals.
+- Write and debug code with conditionals inside loops.
+- Identify new syntactic elements related to the above.
+
+## 1.0 A simple example
+Consider this program:
+```python
+x = 5
+y = 4
+
+if x > y:
+    print('Hey, x is bigger')
+
+print("OK, we're done")
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.1
+
+In `my_ifexample.py`, type up the above and examine the output. 
+Then, do the following:
+
+1. Below the print with `Hey, x is bigger`, add another print-statement to print another line of text. For example, you could add a line such as, 'Hey, y is smaller'. Make sure the new print-statement is indented (i.e., it should have 4 spaces preceding it).
+2. Run the program and make sure you are getting the outputs you programmed.
+3. Now change the value of y to 6 and see for yourself if you are getting a different output.
+4. Submit `my_ifexample.py` with the modifications outlined in point #1 and #3.
+:::
+
+Let's explain:
+
+- First, observe:
+![](../../../media/units/unit1/module1/if-code.png)
+- Now, at the moment the if-statement executes, the condition is evaluated:
+![](../../../media/units/unit1/module1/if-code2.png)
+If the condition is true, then the code that's indented below the if-statement executes.
+- Consider what happens when y is 6:
+![](../../../media/units/unit1/module1/if-code3.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.2
+
+Consider this program:
+
+```python
+s = 0
+for i in range(6):
+    s = s + i
+    if s < 15:
+        print('Less than 15')
+
+print('Done')
+```
+Type up the above program in `my_ifexample2.py` and submit it.
+
+The following part of the exercise is not required for submission. However, it is important for you to complete it on your own to understand the execution of the program `my_ifexample2.py`. 
+
+- Trace through the program above using a table in a spreadsheet or a document
+    - Track the variables i and s, as well as the print-statements to confirm the output of the program.
+:::
+
+## 1.1 if-else
+Think of <em>else</em> as <em>if</em>'s occasional partner.
+
+Consider this example:
+```python
+x = 5
+y = 4
+
+if x > y:
+    print('Hey, x is bigger')
+else:
+    print('Who said x is bigger?')
+    print('In fact, y is bigger')
+
+print("OK, we're done")
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.3
+
+Type up the above in `my_ifexample3.py` and examine the output. 
+Then do the following:
+
+1. Change the value of y to 6 and examine the output. 
+2. Submit the program with `y = 6`.
+:::
+
+Let's point out:
+
+- When x is indeed larger than y, the code in the if-body executes:
+![](../../../media/units/unit1/module1/if-code4.png)
+- When the if-condition evaluates to false:
+![](../../../media/units/unit1/module1/if-code5.png)
+- What happens when x is 5 and y is 5?
+![](../../../media/units/unit1/module1/if-code6.png)
+
+Because some of these arrows might be difficult to follow, let's emphasize some blocks (lines) of code:
+
+- First consider when x is larger than y:
+![](../../../media/units/unit1/module1/if-code4-alt.png)
+- And when y is larger than x:
+![](../../../media/units/unit1/module1/if-code5-alt.png)
+
+## 1.2 if-elif-else
+Consider this variation:
+```python
+x = 5
+y = 5
+
+if x > y:
+    print('Hey, x is bigger')
+elif y > x:
+    print('Who said x is bigger?')
+    print('In fact, y is bigger')
+else:
+    print('Actually, they are equal')
+
+print("OK, we're done")
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.4
+
+Type up the above in `my_ifexample4.py` and examine the output. 
+Then do the following:
+
+1. Change the variable assigments to x = 6 and y = 4, and run the program to examine the output.
+2. Change the variable assigments to x = 4 and y = 6, and run the program to examine the output.
+3. Change the variable assigments to  x = 5 and y = 5, and run the program to examine the output.
+4. Submit the program `my_ifexample4.py` with x = 5 and y = 5.
+:::
+
+Let's explain:
+
+- First, consider the case wehere x=5 and y=5:
+![](../../../media/units/unit1/module1/if-code7.png)
+- Now consider the case where x=5 and y=4:
+![](../../../media/units/unit1/module1/if-code8.png)
+- Next: x=5, y=6:
+![](../../../media/units/unit1/module1/if-code9.png)
+
+One can have as many elif sections as one would like, for example:
+```python
+x = 3
+
+if x == 1:
+    print('one')
+elif x == 2:
+    print('two')
+elif x == 3:
+    print('three')
+elif x == 4:
+    print('four')
+else:
+    print('big')
+```
+
+Think of the whole thing as a giant if-statement:
+![](../../../media/units/unit1/module1/if-code10.png)
+In the above case, when x is 3, the execution path through the giant if-statement is:
+![](../../../media/units/unit1/module1/if-code11.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.5
+
+Type up the above in `my_ifexample5.py` and examine the output. 
+Then do the following: 
+
+1. Notice that, in the first line, the variable x is assigned the value 3.  
+2. Run the program again after changing the variable assigment in the first line of the program to x = 1, x = 2, x = 4, and x = 5 and examine the output each time.
+3. Submit the program `my_ifexample5.py` with x = 3. 
+
+The following part of the exercise is not required for submission. However, it will help you understand how the elif-construct works
+ 
+ - Draw execution pathways (similar to the picture above) for each case in a separate document.
+:::
+
+Consider this program:
+```python
+x = 5
+y = 4
+z = 3
+
+if x > y:
+    print('Hey, x is bigger')
+
+if x > z:
+    print('x is bigger than z')
+    print('So, x must be the largest')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.6
+
+Type up the above in `my_ifexample6.py` and run the program to examine the output. Then do the following: 
+
+1. Change the variable assigment of y to 6, and run the program to examine the output.
+2. Change the variable assigment of y to 4, and submit the program, `my_ifexample6.py`.
+
+<!-- Then try to alter the program without changing the print-statements so that it works in all cases for possible values of x,y, and z. That is, whichever of the above print-statements gets printed correctly reflects the values of x, y and z. -->
+:::
+
+###### **1.7 Video**
+{{< video ../../../media/units/unit1/module1/u1-mod1.7.mp4 aspect-ratio="21x9" >}}
+
+## 1.3 Nested conditionals
+Consider this program:
+```python
+a = 3
+b = 4
+c = 5
+
+if a < b:
+    if a < c:
+        print('a is the smallest')
+    else:
+        print('a is not the smallest')
+
+print('Done')
+```
+
+This is an example of a nested conditional (nested if):
+
+- First, examine the indented structure:
+![](../../../media/units/unit1/module1/if-code12.png)
+- The flow of execution:
+![](../../../media/units/unit1/module1/if-code13.png)
+
+Consider this variation:
+```python
+a = 3
+b = 4
+c = 5
+
+if a < b:
+    if a < c:
+        print('a is the smallest')
+    else:
+        print('a is not the smallest')
+    print('We know a is less than b')
+else:
+    print('We know a is not less than b')
+
+print('Done')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.8
+
+Type up the above in `my_nestedif.py` and examine the output. 
+Then do the following: 
+
+1. Run the program for a = 3, b = 4, c = 5 and examine the output.
+2. Run the program for a = 3, b = 4, c = 2 and examine the output.
+3. Run the program for a = 6, b = 4, c = 5 and examine the output.
+4. Submit the program for a = 3, b = 4 and c = 5. 
+
+The following part of the exercise is not required for submission. However, it will help you understand how the nested if-construct works.
+ 
+- Draw the flow of execution for the following three cases: (1) when a=3, b=4, c=5; (2) when a=3, b=4, c=2; (3) when a=6, b=4, c=5 in a separate document.
+:::
+
+<!-- :::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.9
+
+In `my_smallest_of_three.py`, modify the above program so that it prints out, appropriately, one of "a is the smallest", "b is the smallest" or "c is the smallest", depending on the actual values of a, b, and c. Try different values of these variables to make sure your program is working correctly.
+::: -->
+
+:::{.callout-tip}
+- A numeric variable can be strictly less than, less than or equal to, strictly greater than, greater than or equal to, or equal to another variable.
+- Accordingly, the different types of less/greater comparisons are:
+
+    ```python
+    a < b      # Strictly less (a=3, b=4)
+    a <= b     # Could be less (a=3, b=5), could be equal (a=3, b=3) 
+    a > b      # Strictly greater (a=3, b=2)
+    a >= b     # Could be greater (a=3, b=1), could be equal (a=2, b=2) 
+    ```
+:::
+
+## 1.4 Combining conditions
+Consider this program:
+```python
+x = 5
+y = 5
+z = 5
+
+if x == y and y == z:
+    print('All three are equal')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.10
+
+Type up the above in `my_boolean.py`. 
+Then do the following: 
+
+1. Run the program for x=3, y=4, z=5 and examine the output.
+1. Run the program for x=3, y=3, z=3 and examine the output.
+3. Run the program for x=4, y=4, z=4 and examine the output.
+4. Submit the program with the modifications outlined in point #3. 
+:::
+
+:::{.callout-note}
+- The first thing to point out is the `==` operator:
+    - Because we've been using the <em>equals</em> operator (=) for <em>assigning values to variables</em>, we need something else to test for <em>equality</em>.
+    - The equality operator in Python is `==`, as in:
+    
+        ```python
+        if x == y and y == z:
+        ```
+    - Alas, the problems with limited keyboard symbols!
+- **Important:** The difference between = and == is very important to remember. It's easy to make a mistake.
+    - The if-statement combines two conditions using the <em>Boolean operator</em> **and**:
+    
+    ```python
+    if x == y and y == z:
+    ```
+<!--     - The combining occurs with the <em>Boolean operator</em> <b>and</b>:
+    
+    ```python
+    if x == y and y == z:
+    ``` -->
+    - We can clarify the parts and combination thereof using parentheses:
+    
+    ```python
+    if (x == y) and (y == z):
+    ```
+    - The two conditions  are often called <em>clauses</em>:
+<!--         - The first clause is `(x == y)`.
+    
+        ```python
+        if (x == y) and (y == z):
+        ```
+        - The second clause is `(y == z)`.
+    
+        ```python
+        if (x == y) and (y == z):
+        ``` -->
+        - You could also include many more clauses.
+
+- Boolean is pronounced "BOO lee unn".
+
+- A Boolean operator takes expressions and evaluates to either `True` or `False`.        
+
+- The "and" operator works like this:
+![](../../../media/units/unit1/module1/boolean1.png)
+
+:::
+
+Let's go back to finding the smallest of three numbers using conditionals:
+```python
+a = 3
+b = 4
+c = 5
+
+# Fill in code here ... 
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.11
+
+In `my_smallest_of_three2.py`, fill in code to identify which of the three variables has the smallest value, depending on the actual values of a, b, and c. Use if-statements with multiple clauses. 
+
+- Try different values of these variables to verify that your program is working correctly.
+
+- There is nothing to submit for this exercise.
+:::
+
+###### **1.12 Video**
+{{< video ../../../media/units/unit1/module1/u1-mod1.12.mp4 aspect-ratio="21x9" >}}
+
+The counterpart to the <b>and</b> operator is the <b>or</b> operator: 
+```python
+a = -2.718
+
+if (a <= 0) or (a >= 1):
+    print('a is not between 0 and 1')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.13
+
+Type up the above in `my_boolean2.py`. 
+Then:
+
+1. Change the value of the variable `a` to 0.5 and run the program to examine the output.
+2. Submit the program with the modification outlined in point #1.
+:::
+
+:::{.callout-note}
+- We have shown how to write "less than or equal to" using `<=`    
+<!-- - So, now we can add "equals" and "not equals" to the numeric comparisons: -->
+    
+    ```python
+    a < b      # Strictly less than
+    a <= b     # Could be less, could be equal
+    a > b      # Strictly greater than
+    a >= b     # Could be greater, could be equal 
+    a == b     # Exactly equal
+    a != b     # Not equal
+    ```
+- For the <b>or</b> operator to evaluate to `True`, <em>any one or both of the two expressions need to be true</em>.
+- Consider:
+
+    ```python
+    a = 3
+    b = 4
+    if (a < 10) or (b < 10):
+        print('One or both of them is less than 10')
+    ```
+    - In this case both will evaluate to `True`, so the print statement executes.
+    - Suppose we make `a = 3` and `b = 11`, the print statement will execute.
+    - Suppose we make `a = 11`, `b = 3`, the print statement will execute.
+    - But, if `a = 11` and `b = 12`, the <b>or</b> fails (i.e., both clauses are false), and the print won't execute.
+- Incidentally, let's replace <b>or</b> with <b>and</b> in the above case and see what we get:
+    
+    ```python
+    a = 3
+    b = 4
+    if (a < 10) and (b < 10):
+        print('Both of them are less than 10')
+    ```
+In this case, both sub-conditions are satisfied, meaning the whole if-condition is satisfied and the print will execute.
+- But if we had the following:
+    
+    ```python
+    a = 3
+    b = 4
+    if (a < 10) and (b > 10):
+        print('One or both of them is less than 10')
+    ```
+In this case, the second comparison would fail, and the print wouldn't occur.
+
+- Whereas if we had <b>or</b>:
+    
+    ```python
+    a = 3
+    b = 4
+    if (a > 10) or (b < 10):
+        print('One or both of them is less than 10')
+    ```
+Here, it's enough that a is less than 3, so the print executes even though "b greater than 10" fails.
+:::
+
+Next, let's look at the NOT operator (written as !):
+```python
+x = 5
+y = 6
+z = 7
+
+if (x != y) and (x != z):
+    print('x is different from y and from z')
+```  
+
+Here, read `!=` as "not equals".
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.14
+
+Type up the above in `my_boolean3.py`. 
+Then do the following: 
+
+1. Change the value of `z` value to 6 (same as y) and observe the output.
+2. Submit the program with the modification outlined in point #1.
+:::
+
+One can combine any number of <b>and</b>'s. For example,
+```python
+x = 5
+y = 6
+z = 7
+
+if (x != y) and (x != z) and (y != z):
+    print('x, y, z are all different')
+```
+The difference between `!=` and `not`
+    
+- We should read `!=` as "not equals", just as we read `==` as "equals".
+- There is another operator called <b>not</b> which applies to Boolean expressions, as we'll see next.
+
+The <b>not</b> operator
+
+- One can apply the <b>not</b> operator to groups of clauses using additional parentheses:
+
+    ```python
+    x = 8
+
+    if not ( (x == 5) or (x == 6) ):
+        print('x is neither 5 nor 6')
+    ```
+- Here, <b>not</b> is asking that whatever it applies to be inverted.
+- Thus, consider the expression
+    
+    ```python
+    if not ((x == 5) or (x == 6)):
+    ```
+- In this case, x is 8. So, neither of `(x == 5)` nor `(x == 6)` is true.
+- Thus, the whole expression `( (x == 5) or (x ==6) )` is false.
+- Which means `not ( (x == 5) or (x ==6) )` evaluates to true.
+- Therefore, the print executes.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.15
+
+Suppose integer variables `a,b,c,d,e` have values a=1, b=1, c=3, d=4, e=5. Consider the following three expressions:
+
+```python
+( (a <= b) and (c+d > e) and (d > 1) )
+
+( (a > c) or ( (c+1 < e) and (c-b > a) ) )
+
+not ( (b == d-c) and (a > b) or (c < d) )
+```
+- Try to evaluate each expression by hand. 
+
+- Then, write up a program `my_boolean4.py` with variables assignments, a=1, b=1, c=3, d=4 and e=5, to evaluate the above expressions. 
+    - Use print-statements with each of the expressions to see the results. 
+
+- Submit `my_boolean4.py`. 
+
+- The following part is not required for submission: 
+    - Compare the results of your evaluation-by-hand with those of the program.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.16
+
+In `my_boolean5.py`, write a program that begins with the following program shown below.
+
+```python
+a = -3
+b = -4
+diff = abs(a-b) 
+# Note: abs() is a Python built-in function that returns 
+# the absolute value of the specified number
+print(diff)
+```
+**Note: `abs()` is a Python built-in function that returns the absolute value of the specified number**
+
+**Case-1:** 
+Use conditionals to print out the absolute difference between the two numbers if they are greater than or equal to 1.
+
+<!-- Use conditionals to print out the absolute difference between the two numbers. In the above case, the difference is 1.  -->
+
+- Hint: Use logic operator, >= to print the variable diff . Use the code structure shown below that compares a <variable>  to a value in order to print.
+
+    ```python
+    if <variable> >= value:
+        print(<variable>) 
+    ```
+
+**Case-2:** Use a=3, b=4, the difference is also 1. 
+
+**Case-3:** When a=-3, b=4, the difference is 7.
+
+Submit `my_boolean5.py` with `a = -3` and `b = -4`.
+:::
+
+###### **1.17 Video**
+{{< video ../../../media/units/unit1/module1/u1-mod1.17.mp4 aspect-ratio="21x9" >}}
+
+## 1.5 Conditionals and loops
+Let's write a program to loop through integers and print only  the even numbers:
+```python
+n = 10
+for i in range(1, n+1):
+    if i % 2 == 0:
+        print(i, 'is even')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.18
+Type up the above program in `my_oddeven.py`and run it to examine the output. Then do the following: 
+
+1.  Modify the above program so that for every number between n and 1 (inclusive), the program prints whether it's even or odd in reverse order, as in:
+    
+    ```python
+    10 is even
+    9 is odd
+    8 is even
+    7 is odd
+    6 is even
+    5 is odd
+    4 is even
+    3 is odd
+    2 is even
+    1 is odd
+    ```
+2. Submit the program with modification outlined in point #1. 
+
+3. The following part of the exercise is not required for submission: 
+
+    - Trace through the interactions in the above program in a separate spreadsheet or document.
+:::
+
+## 1.6 Conditionals and lists
+Suppose we have a list of numbers, representing daily profits (sometimes negative, sometimes positive) and we only want to add up the positive numbers:
+```python
+earnings = [-5, 2, 3, -9, 12, 4, -30]
+total = 0
+for k in earnings:
+    if k >= 0:
+        total += k
+
+print('Total profit =', total)
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.20
+
+Trace through the values of total and k in the program above. There is nothing to submit for this exercise.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.21
+
+Given a list like:
+
+```python
+A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
+```
+we see that 12, 13 and -21, -20 are pairs of consecutive numbers. 
+
+- Type up the program below called `my_consecutive.py`, which uses a loop and a conditional to identify consecutive pairs and print them. 
+
+    ```python
+    A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
+    for i in range(len(A) - 1):
+        if abs(A[i] - A[i + 1]) == 1:
+            print("Consecutive pair found: ",A[i], A[i + 1])
+    ```
+
+For the above list, the output should be:
+```python
+Consecutive pair found: 12 13
+Consecutive pair found: -21 -20
+```
+
+
+:::
+
+Next, let's write a program that asks the user to enter a number, that we then check is in a list of numbers:
+```python
+# The list of numbers:
+A = [-5, 2, 4, -9, 12, 13, -30]
+
+# Receive what the user types in (as a string):
+user_str = input('Enter an integer: ')
+
+# Convert string to integer:
+k = int(user_str)
+
+# Check whether in the list:
+if k in A:
+    print(k,'is in the list')
+else:
+    print(k,'is not in the list')
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.23
+Type up the above program in `my_listcheck.py`, run it for the following user inputs and examine the output in each case:
+
+1. 100
+2. 35.364 (For a float-type input explain to yourself why you may get an error.)
+3. 4 
+
+Run each case listed above and understand the output or error you are getting.
+
+Submit the program `my_listcheck.py`.
+:::
+
+:::{.callout-note}
+The <b>in</b> operator checks for membership in the list:
+```python
+if k in A:
+```
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.24
+
+Suppose you are given two lists like:
+```python
+A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
+B = [2, -9, 11, 16, 13]
+```
+Notice that some elements of A (like 2) also exist in B. In `my_twolist.py`, use the list membership idea to print those elements of A that are also in B. For the above example, the output should be:
+```python
+2 in A also found in B
+-9 in A also found in B
+13 in A also found in B
+```
+:::
+
+## 1.7 More examples with lists
+Consider the following program that aims to find duplicates in a list:
+```python
+A = [2, 9, 2, 6, 4, 3, 3, 2]
+for k in A:
+    if k in A:
+        print('Duplicate found:', k)
+```
+In the list, we can see that 2 occurs thrice, and 3 occurs twice. Both should be listed as duplicates. Is this the case?
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.25
+
+Trace through the loop's iterations in the above program and explain to yourself why it does not work.
+
+There is nothing to submit for this exercise.
+:::
+
+Now consider this variation:
+```python
+A = [2, 9, 2, 6, 4, 3, 3, 2]
+for i in range(len(A)-1):
+    for j in range(i+1, len(A)):
+        if A[i] == A[j]:
+            print('Duplicate found:', A[i])
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.26
+Type up the above program in `my_listcheck2.py` and submit it.
+
+The following part of the exercise is not required for submission: 
+
+- Trace through the loop's iterations in the above program in a separate spreadsheet or document. Explain the output to yourself. Why does the inner loop start with i+1?
+:::
+
+## 1.8 Some stats via programming
+Let's now apply our practice with conditionals to solve some problems in probability and statistics. 
+
+For example: Suppose I toss a coin 4 times and observe the face that's up. What is the probability that I get all "tails" (i.e., not one toss shows "heads").
+
+Let's do this in steps.
+
+First, let's write a program to toss a coin 4 times
+```python
+import random
+
+coin = ['heads', 'tails']
+for i in range(4):
+    toss = random.choice(coin)
+    print(toss)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.28
+
+Type up the above in `my_cointosses.py` and run it a few times to see what you get.
+
+Submit your program.
+:::
+
+:::{.callout-note}
+- We have made a list of strings:
+    
+    ```python
+    coin = ['heads', 'tails']
+    ```
+- Python has a useful way to randomly select an element in a list:
+
+    ```python
+    toss = random.choice(coin)
+    ```
+- Alternatively, we could have written:
+
+    ```python
+    toss = random.choice(['heads','tails'])
+    ```
+and avoided defining `coin`.
+:::
+
+Next, instead of printing the results, let's count the number of heads observed:
+```python
+import random
+
+count = 0
+for i in range(4):
+    toss = random.choice(['heads', 'tails'])
+    if toss == 'heads':
+        count = count + 1
+
+print('Number of heads', count)
+```
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.29
+
+Type up the above in `my_cointosses2.py` and run it a few times to see what you get.
+
+Submit your program.
+:::
+
+:::{.callout-note}
+Observe how the string that's randomly selected from the list is compared against 'heads':
+```python
+if toss == 'heads':
+    count = count + 1
+```
+:::
+
+Next, what we need to do is repeat the 4-coin toss many times:
+
+- Suppose we call 4-coin tosses a single <em>trial</em>.
+- If we ran a single trial and obtained 1 heads (count=1), could we conclude that the probability of getting all-4-tails is zero?
+- What we need to do is run a large number of trials and record how many of them result in 4-tails.
+- We'll use the term "success" to identify a trial in which we get all 4-tails.
+- Let's examine the code:
+```python
+import random
+
+trials = 10
+successes = 0
+for i in range(trials):
+    # Count number of heads in 4 tosses:
+    count = 0
+    for i in range(4):
+        toss = random.choice(['heads', 'tails'])
+        if toss == 'heads':
+            count = count + 1
+
+    # If the count is zero, that's a success
+    if count == 0:
+        successes += 1
+
+# Ratio of successes to trials:
+probability = successes / trials
+print('probability =', probability)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.30
+
+Type up the above in `my_cointosses3.py` and run it a few times to see what you get. 
+Then do the following: 
+
+1. Increase the number of trials to 10000 and examine the output. 
+Note: The theoretical answer is 0.0625 (approximately a 6% chance that there's no heads in 4 tosses).
+2. Submit your program with modification outlined in point #1.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.31
+
+Use the same program `my_cointosses3.py` as a starting point and write up a program `my_cointosses4.py` to run 10000 trials in the following experiment: 
+
+- Toss a coin 10 times and record a success if you get an equal number of heads and tails.
+
+- Hint: To accomplish this, you have to change the parameter in the `range()` function in the nested-for-loop.
+:::
+
+Now let's solve a problem with the other favorite manner of generating chance: dice
+
+We'll roll two dice and add the numbers that are face up. We want to ask: what are the chances we get sum of 7 (when added up)?
+
+Here's the program:
+```python
+import random
+
+possible_outcomes = [1,2,3,4,5,6]
+trials = 100000
+successes = 0
+for i in range(trials):
+    roll1 = random.choice(possible_outcomes)
+    roll2 = random.choice(possible_outcomes)
+    if roll1 + roll2 == 7:
+        successes += 1
+
+probability = successes / trials
+print('probability =', probability)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.33
+
+Type up the above in `my_dice.py` and examine the output. 
+Then do the following and examine the probability in each output: 
+
+- Run the program for the sum of the values of the dice being 12, i.e., roll1 + roll2 = 12
+- Run the program for the sum of the values of the dice being 2, i.e., roll1 + roll2 = 2 
+- Submit your program for roll1 + roll2 = 7
+
+<!-- Try and answer for yourself if there is a number other than 7 for which the probability is higher. -->
+:::
+
+Let's also look at how one can use Python to randomly generate real numbers, for example:
+```python
+import random
+
+trials = 100
+total = 0
+
+for i in range(trials):
+    x = random.uniform(5, 10)
+    print(x)
+    total += x
+
+print('mean =', total/trials)
+```
+
+:::{.callout-note}
+- By using 
+
+    ```python
+    x = random.uniform(5, 10)
+    ```
+we can generate a random real number between 5 and 10.
+
+- In the above program we are generating many such numbers and calculating their average.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.34
+
+Type up the above in `my_uniform.py` and examine the average. 
+Then perform the following two modifications:
+
+**Case-1:** Increase the number of trials, to `trials = 1000`, and examine the average.
+
+**Case-2:** For 1000 trials, generate numbers between 25 and 30 and examine the average
+
+**Submit your program with modifications outlined in Case-2**
+
+<!-- **2.** How does that compare with the average of the numbers 25 and 30? 
+
+**3.** And why the results make sense.  -->
+:::
+
+Before you head off to Vegas with your Python programs, let's point out:
+
+- You can use programming to explore ideas in probability and statistics, as well as to solve real problems.
+- It is an exciting way to learn statistics that we will have more to say about later.
+
+## 1.9 Algorithmic art
+Let's now use what we've learned to explore the notion of how computers can be programmed to generate abstract art.
+
+In our first example, we'll draw lines from one border of a square to another:
+![](../../../media/units/unit1/module1/artwork.png)
+
+Let's describe the main idea via some pseudocode:
+
+- In a loop we'll generate:
+
+    ```python
+    Set up an initial x1,y1 and x2,y2
+    for i in ...
+        Pick a random color
+        Draw a line from x1,y1, y2,y2
+        Make the current endpoint the start of the next line:
+        x1 = x2
+        y1 = y2
+        Pick a random border
+        Now pick a new random point on the next border
+    ```
+- When we pick a border, we'll need to figure out the coordinates.
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.35
+
+Download <a href="../../../media/units/unit1/module1/conditional_art.py" download>**conditional_art.py**</a> and <a href="../../../media/useful/drawtool.py" download>**drawtool.py**</a>. Then do the following:
+
+1. Try it out and then examine the code to confirm that it mirrors the pseudocode. 
+
+2. Try another value of n, i.e., n = 1000. You should get an image like the one below.
+
+![](../../../media/units/unit1/module1/Conditional_art1_2.png)
+
+3. Change the options for your randomly chosen colors. Use `colors = ['c','m','y','k']` and the value of n = 1000.
+
+4. Submit your program with the modifcations suggested in point #3. 
+<!-- 
+to improve the result? Does it look good with just two colors? Next, starting with Kandinsky, find an example of abstract art that you think might be considered an analogue in the history of art. There is nothing to submit in this exercise. -->
+:::
+
+
+Next, we'll explore an interesting question:
+
+- Think of random art as one end of a spectrum.
+- And highly-structured geometry as generated by an algorithm at the other end.
+- The question: can we adjust a "knob" that will let us generate a mix? And is that more aesthetic?
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.36
+
+Download <a href="../../../media/units/unit1/module1/conditional_art2.py" download>**conditional_art2.py**</a>. Run the program and then do the following: 
+
+**Case-1:** Change the value of the `structure` parameter, (between 0 and 1). For example, change 0.9 to 0.1. 
+
+**Case-2:** Assign the `structure` parameter a value 0.5 and change the value of n to 100.  
+
+**Submit your program with the modifications outlined in Case-2**
+
+<!-- Is there a value that provides an aesthetic mix? Try different n. Make changes to the code. -->
+:::
+
+## 1.10 When things go wrong
+In each of the exercises below, first try to identify the error just by reading through the program. Then type up the program to confirm and, after that, fix the error.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.37
+
+```python
+x = 5
+y = 6
+if x < y
+    print('x is less than y')
+```
+Identify and fix the error in `my_error1.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.38
+
+```python
+x = 6
+y = 5
+if x !< y:
+    print('x is not less than y')
+```
+Identify and fix the error in `my_error2.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.40
+
+```python
+a = 2.5
+
+# See whether a lies between 0 to 1, or 1 to 2, 
+# or something else
+if (a > 0) and (a < 1):
+    print('between 0 and 1')
+else if (a > 1) and (a < 2):
+    print('between 1 and 2')
+else:
+    print('something else')
+```
+Identify and fix the error in `my_error3.py`.
+:::
+
+<!-- <br>
+[Previous Module: **Module 1.0**](./module1.0.qmd){.button .prev} [Next Module: **Module 1.2**](./module1.2.qmd){.button .next} -->
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+---
+title: "Instructions for developing computer usage-competency"
+---
+
+### **Select an Option Appropriate for Your Operating System**
+
+**1.** [**MacOS**](./computerese-mac.qmd)
+
+**2.** [**Windows**](./computerese-windows.qmd)

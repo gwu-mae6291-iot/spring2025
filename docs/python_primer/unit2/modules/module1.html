@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAE 6291 - Module 1: Tuples, Sets, Dictionaries</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">MAE 6291</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policies.html"> 
+<span class="menu-text">Course policies</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../../install-editor.html">
+ <span class="dropdown-text">Much Needed Software Installations</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Python Primer</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/basics.html">
+ <span class="dropdown-text">Basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/constructs.html">
+ <span class="dropdown-text">Constructs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../instructor.html"> 
+<span class="menu-text">Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#tuples" id="toc-tuples" class="nav-link" data-scroll-target="#tuples">1.0 Tuples</a></li>
+  <li><a href="#sets" id="toc-sets" class="nav-link" data-scroll-target="#sets">1.1 Sets</a></li>
+  <li><a href="#dictionaries" id="toc-dictionaries" class="nav-link" data-scroll-target="#dictionaries">1.2 Dictionaries</a></li>
+  <li><a href="#advanced-topic-global-variables" id="toc-advanced-topic-global-variables" class="nav-link" data-scroll-target="#advanced-topic-global-variables">1.3 Advanced topic: global variables</a></li>
+  <li><a href="#multiple-files" id="toc-multiple-files" class="nav-link" data-scroll-target="#multiple-files">1.4 Multiple files</a></li>
+  <li><a href="#string-formatting-and-numbers" id="toc-string-formatting-and-numbers" class="nav-link" data-scroll-target="#string-formatting-and-numbers">1.5 String formatting and numbers</a></li>
+  <li><a href="#randomness" id="toc-randomness" class="nav-link" data-scroll-target="#randomness">1.6 Randomness</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Module 1:</strong> Tuples, Sets, Dictionaries</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+<style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+
+
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p><strong>Our goal in this almost-final module was to:</strong></p>
+<ul>
+<li>Introduce the all-important topics of <em>tuples</em>, <em>sets</em> and <em>dictionaries</em>.</li>
+<li>Lightly sketch a few advanced topics to introduce ideas and show some examples, without expecting mastery of all the details.</li>
+</ul>
+<p>In the next module, we will dive into examples from across the disciplines. Some of these advanced topics will be useful</p>
+<p>So, one might ask: what’s left in Python to learn?</p>
+<p><strong>Quite a bit it turns out:</strong></p>
+<ul>
+<li>Like many modern programming languages, Python is large enough that one needs a few courses to experience all of it.</li>
+<li>Some concepts are advanced enough to need weeks to cover (example: <em>objects</em>).</li>
+<li>Others need a background in <em>data structures</em> to understand <em>how</em> they work (example: dictionaries).</li>
+<li>Yet others involve library functions and external packages.</li>
+</ul>
+<p><strong>Do you need to learn more? Is what we’ve learned enough to achieve a good deal?</strong></p>
+<p><strong>We’ll have more to say about this in a later module.</strong></p>
+</section>
+<section id="tuples" class="level2">
+<h2 class="anchored" data-anchor-id="tuples">1.0 Tuples</h2>
+<ul>
+<li><p>In this section and the ones that follow, we’ll touch lightly upon a few topics that are or were “not on the exam” but will be useful in general.</p></li>
+<li><p>Some of these concepts will be directly used in the next module.</p></li>
+<li><p>Suppose we want to write a function that computes both the square and cube of a number:</p></li>
+<li><p>One option is to write two separate functions</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(x):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cube(x):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x<span class="op">*</span>x</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, square(x), cube(x))</span></code></pre></div></li>
+<li><p>We can alternatively write one function that computes and returns <em>two things</em>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_both(x):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    square <span class="op">=</span> x<span class="op">*</span>x</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    cube <span class="op">=</span> square<span class="op">*</span>x </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (square, cube)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>(y, z) <span class="op">=</span> do_both(x)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, y, z)</span></code></pre></div></li>
+<li><p><strong>Notice that the <code>return</code> statement returns a <em>pair</em> of values:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> (square, cube)</span></code></pre></div>
+<p><strong>And that the pair is enclosed in parentheses.</strong></p></li>
+<li><p><strong>And notice that, since two values are being returned, we need a pair to capture the return values:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(y, z) <span class="op">=</span> do_both(x)</span></code></pre></div></li>
+<li><p><strong>We can go beyond a pair to any number of such “grouped” variables:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_more(x):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    square <span class="op">=</span> x<span class="op">*</span>x</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    cube <span class="op">=</span> square<span class="op">*</span>x </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    fourth <span class="op">=</span> cube<span class="op">*</span>x</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    fifth <span class="op">=</span> fourth<span class="op">*</span>x</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (square, cube, fourth, fifth)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>(a, b, c, d) <span class="op">=</span> do_more(x)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, a, b, c, d)</span></code></pre></div></li>
+<li><p><strong>Such a grouping of variables is called a <code>tuple</code>.</strong></p></li>
+</ul>
+<p><strong><code>Tuples</code> are similar to lists in many ways, but different in one crucial aspect:</strong></p>
+<ul>
+<li><p>First, let’s examine how to write the same <code>do_both()</code> function above but using lists:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_both_list(x):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    square <span class="op">=</span> x<span class="op">*</span>x</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    cube <span class="op">=</span> square<span class="op">*</span>x </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [square, cube]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>[y, z] <span class="op">=</span> do_both_list(x)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, y, z)</span></code></pre></div>
+<p>This works just fine.</p></li>
+<li><p>Another way in which a <code>tuple</code> is like a <code>list</code> is in using square-brackets and position indices to access individual elements, as in:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List version:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> do_both_list(x)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(L[<span class="dv">0</span>], L[<span class="dv">1</span>])      <span class="co"># L[0] has the square, L[1] has the cube</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Tuple version:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> do_both(x)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t[<span class="dv">0</span>], t[<span class="dv">1</span>])      <span class="co"># t[0] has the square, t[1] has the cube</span></span></code></pre></div></li>
+<li><p><strong>However, here’s the difference:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List version:</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> do_both_list(x)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>L[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span>              <span class="co"># This is allowed</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Tuple version:</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> do_both(x)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>t[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span>              <span class="co"># This is NOT allowed</span></span></code></pre></div>
+<p>Thus, you can replace a <code>list</code> element but you cannot replace a <code>tuple</code> element.</p></li>
+<li><p>This is in fact a bit subtle, as this example shows:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> (x, y)   <span class="co"># The tuple's value is now fixed.</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)     <span class="co"># (3, 4)</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)     <span class="co"># (3, 4)</span></span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Once the tuple is <em>instantiated</em> (that’s the technical term for “made”) then the tuple’s value cannot be changed.</li>
+<li><strong><code>Tuples</code> are immutable.</strong></li>
+</ul>
+</div>
+</div></li>
+<li><p>You can of course assign a different <code>tuple</code> value to a <code>tuple</code> variable as in:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
+<p>Here, we’re simply replacing one fixed-value <code>tuple</code> with another.</p></li>
+<li><p><code>Tuples</code> are therefore said to be an <em>immutable</em> type.<br>
+</p></li>
+<li><p>Similarly, <code>strings</code> are also an <em>immutable</em> object-type.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Why use tuples at all?</strong>
+<ul>
+<li>It’s to allow programmers to signal clearly that their <code>tuples</code> shouldn’t be changed.</li>
+<li>This turns out to be convenient for <em>mathematical tuples</em> (like points on a graph), which are similar.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p><strong>Groups of tuples can be combined into lists and other data structures.</strong></p>
+<ul>
+<li><p>It’s very useful in working with points (the mathematical point you draw with coordinates) and other mathematical structures that need more than one number to describe.</p></li>
+<li><p>For example, here’s a program that, given a list of points, finds the leftmost point (the one with the least x value).</p></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> leftmost(L):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    leftmost_guess <span class="op">=</span> L[<span class="dv">0</span>]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> q <span class="kw">in</span> L:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> q[<span class="dv">0</span>] <span class="op">&lt;</span> leftmost_guess[<span class="dv">0</span>]:</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>            leftmost_guess <span class="op">=</span> q</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> leftmost_guess</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>list_of_points <span class="op">=</span> [(<span class="dv">3</span>,<span class="dv">4</span>), (<span class="dv">1</span>,<span class="dv">2</span>), (<span class="dv">3</span>,<span class="dv">2</span>), (<span class="dv">4</span>,<span class="dv">3</span>), (<span class="dv">5</span>,<span class="dv">6</span>)]</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>(x,y) <span class="op">=</span> leftmost(list_of_points)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'leftmost:'</span>, (x,y) )</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co"># leftmost: (1, 2)</span></span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Type up the above in <code>my_tuple_example.py</code>.</strong></p>
+<p><strong>Submit your program <code>my_tuple_example.py</code>.</strong></p>
+<p><strong>Answering the following part of the exercise is recommended but not required for submission:</strong> - Trace through the iterations and record them in a separate document or spreadsheet.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Consider the following:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> distance(p, q):</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> math.sqrt( (p[<span class="dv">0</span>]<span class="op">-</span>q[<span class="dv">0</span>])<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (p[<span class="dv">1</span>]<span class="op">-</span>q[<span class="dv">1</span>])<span class="op">**</span><span class="dv">2</span> )</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_closest_point(p, L):</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write your code here to find the closest point in L to p</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># and to return both the point and the distance to it from p.</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>list_of_points <span class="op">=</span> [(<span class="dv">3</span>,<span class="dv">4</span>), (<span class="dv">1</span>,<span class="dv">2</span>), (<span class="dv">3</span>,<span class="dv">2</span>), (<span class="dv">4</span>,<span class="dv">3</span>), (<span class="dv">5</span>,<span class="dv">6</span>)]</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>query_point <span class="op">=</span> (<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>(c, d) <span class="op">=</span> find_closest_point(query_point, list_of_points)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'closest:'</span>,c,<span class="st">' at distance'</span>, d)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Should print: </span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co"># closest: (4, 3)  at distance 1.4142135623730951</span></span></code></pre></div>
+<ul>
+<li><strong>In <code>my_tuple_example2.py</code>,</strong>
+<ul>
+<li>Fill in the missing code to find the closest point in a list of points to a given query point and</li>
+<li>Return both the closest point and the distance to the query point as a <code>tuple</code>.</li>
+</ul></li>
+<li><strong>Submit your program <code>my_tuple_example2.py</code>.</strong><br>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="sets" class="level2">
+<h2 class="anchored" data-anchor-id="sets">1.1 Sets</h2>
+<p><strong>The general mathematical term <code>set</code> means a “collection of like things but without duplicates”.</strong></p>
+<p><strong>Python has special syntax and operations to support this mathematical notion:</strong></p>
+<ul>
+<li><p><strong>Here are two <code>sets</code> being defined:</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>}       <span class="co"># Curly brackets</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> {<span class="st">'hello'</span>, <span class="st">'hi'</span>, <span class="st">'hey'</span>, <span class="st">'howdy'</span>}</span></code></pre></div></li>
+<li><p><strong>The first set contains five numbers, whereas the second contains four strings.</strong></p></li>
+</ul>
+<p><strong>Consider this variation</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>}</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> {<span class="st">'hello'</span>, <span class="st">'hi'</span>, <span class="st">'hey'</span>, <span class="st">'howdy'</span>}</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> {<span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">5</span>}</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(C)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> A <span class="op">==</span> C:</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'they are equal'</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'they are not equal'</span>)</span></code></pre></div>
+<p>Given what we’ve said about sets, what will be printed?</p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Type up the above in <code>my_set_example.py</code> to find out.</strong></p></li>
+<li><p><strong>Submit your program <code>my_set_example.py</code>.</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Even though a set may not have duplicates, we are actually allowed to <em>try</em> to create duplicates:</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> {<span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">5</span>}</span></code></pre></div>
+<p>Python simply removes the duplicates.</p></li>
+<li><p><strong>Python also organizes sets so that sets can be compared for equality:</strong> Thus, printing the set</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> {<span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">5</span>}</span></code></pre></div>
+<p>actually results in</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>{<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>}</span></code></pre></div></li>
+</ul>
+</div>
+</div>
+<p><strong>What can we do with sets?</strong></p>
+<ul>
+<li><p>The most common operation is to see whether some value is in some set we’ve defined using the keyword <code>in</code>:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_vowel(x):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    vowels <span class="op">=</span> {<span class="st">'a'</span>,<span class="st">'e'</span>,<span class="st">'i'</span>,<span class="st">'o'</span>,<span class="st">'u'</span>}</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="kw">in</span> vowels:</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(x, <span class="st">'is a vowel'</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(x, <span class="st">'is not a vowel'</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>check_vowel(<span class="st">'a'</span>)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>check_vowel(<span class="st">'b'</span>)</span></code></pre></div></li>
+<li><p>Other, more mathematical operations, feature different ways of combining sets. For example:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>}</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>}</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> A <span class="op">|</span> B    <span class="co"># union</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(D)</span></code></pre></div>
+<p>Here, <code>D</code> contains every element across both sets.</p></li>
+<li><p>Other such operators include:</p>
+<ul>
+<li>intersection (elements that are in both sets)</li>
+<li>difference (elements in one set that are not in the other)</li>
+</ul></li>
+<li><p>Since our goal is merely to give you a taste of these advanced topics, we won’t say much more about these operations.</p></li>
+</ul>
+<p><strong>Let’s look at an application:</strong></p>
+<ul>
+<li>In <em>text processing</em>, the term <em>stopword</em> is often used to describe commonly used words that serve little or no purpose in text analysis:
+<ul>
+<li>When you analyze digitized texts for meaning, topic and dialogue (for example), words like “the”, “of”, “and” get in the way of analysis.</li>
+<li>They are often discarded from text analysis that seeks to analyze more significant words.</li>
+</ul></li>
+<li>We’ll ask the question: what proportion of text typically consists of stopwords? <br>(The answer is surprising, as we’ll see).</li>
+<li>To answer the question, we’ll scan text word-by-word and see if each word is in the <em>set</em> of stopwords.</li>
+<li>Although there are hundreds of stopwords, we’ll keep things simple by targeting a few.</li>
+</ul>
+<p><strong>Let’s write this up:</strong></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> wordtool <span class="im">as</span> wt </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># The 25 most common stopwords</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>stopwords <span class="op">=</span> {<span class="st">'the'</span>,<span class="st">'be'</span>,<span class="st">'to'</span>,<span class="st">'of'</span>,<span class="st">'and'</span>,<span class="st">'a'</span>,<span class="st">'in'</span>,<span class="st">'that'</span>,<span class="st">'have'</span>,<span class="st">'I'</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>             <span class="st">'it'</span>,<span class="st">'for'</span>,<span class="st">'not'</span>,<span class="st">'on'</span>,<span class="st">'with'</span>,<span class="st">'he'</span>,<span class="st">'she'</span>,<span class="st">'you'</span>,<span class="st">'do'</span>,<span class="st">'as'</span>,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>             <span class="st">'at'</span>,<span class="st">'his'</span>,<span class="st">'her'</span>,<span class="st">'they'</span>,<span class="st">'by'</span>}</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>wt.open_file_byword(<span class="st">'alice.txt'</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> wt.next_word()</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>num_stopwords <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>total_words <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> s <span class="op">!=</span> <span class="va">None</span>:</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="kw">in</span> stopwords:</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>        num_stopwords <span class="op">+=</span> <span class="dv">1</span>   <span class="co"># Count stopwords</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    total_words <span class="op">+=</span> <span class="dv">1</span>         <span class="co"># And all words</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> wt.next_word()</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>percent_stopwords <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> (num_stopwords<span class="op">/</span>total_words)</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="co"># print the following:</span></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>string_to_print <span class="op">=</span> <span class="st">'</span><span class="sc">% o</span><span class="st">f stopwords:</span><span class="sc">{0:.2f}</span><span class="st">'</span>.<span class="bu">format</span>(percent_stopwords)</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(string_to_print)</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a><span class="co"># and print the following:</span></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a><span class="co"># print(percent_stopwords)</span></span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Download the text</strong> <a href="../../../media/units/unit2/module2.1/alice.txt"><strong>Alice in Wonderland</strong></a> <strong>and save it in the same folder as your code</strong></li>
+<li><strong>Type up the above program in <code>my_stopwords.py</code>.</strong></li>
+<li><strong>Submit your program <code>my_stopwords.py</code>.</strong></li>
+</ul>
+<p><strong>Answering the following part of the exercise is recommended but not required for submission:</strong></p>
+<ul>
+<li>Compare the percentage of stopwords in these two famous texts: <a href="../../../media/units/unit2/module2.1/alice.txt"><strong>Alice in Wonderland</strong></a> and Darwin’s <a href="../../../media/units/unit2/module2.1/darwin.txt"><strong>The Origin of the Species</strong></a>.</li>
+</ul>
+<!-- Try two other texts from Project Gutenberg, and understand the differences in the results. -->
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>As an aside, we’ll point out something about <em>string formatting</em>, which is also an advanced topic:</strong></p>
+<ul>
+<li><p>It’s plain ugly (and often useless) to print out all the digits in a floating number like:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span> of stopwords: <span class="fl">31.969357958208498</span></span></code></pre></div></li>
+<li><p>Instead, we’d like</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span> of stopwords: <span class="fl">31.97</span></span></code></pre></div></li>
+<li><p>Specifying to Python how you’d like a number <em>formatted</em>, unfortunately, is a bit of a chore using somewhat cryptic commands embedded within strings:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>string_to_print <span class="op">=</span> <span class="st">'</span><span class="sc">% o</span><span class="st">f stopwords:</span><span class="sc">{0:.2f}</span><span class="st">'</span>.<span class="bu">format</span>(percent_stopwords)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(string_to_print)</span></code></pre></div>
+<p>We’ll explain this one with the understanding that a proper look into this topic is beyond the scope of this course:</p>
+<ul>
+<li><p>First, one builds the target strings using typical quotes, as in:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>string_to_print <span class="op">=</span> <span class="st">'</span><span class="sc">% o</span><span class="st">f stopwords: '</span></span></code></pre></div></li>
+<li><p>Then, attach the format function with the desired variable whose value we wish to print nicely:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>string_to_print <span class="op">=</span> <span class="st">'</span><span class="sc">% o</span><span class="st">f stopwords: '</span>.<span class="bu">format</span>(percent_stopwords)</span></code></pre></div></li>
+<li><p>Then, figure out where in the string you want the resulting number and use curly brackets:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>string_to_print <span class="op">=</span> <span class="st">'</span><span class="sc">% o</span><span class="st">f stopwords: </span><span class="sc">{0}</span><span class="st">'</span>.<span class="bu">format</span>(percent_stopwords)</span></code></pre></div>
+<p>Here, 0 means the first such number. If had a second number, we’d use 1, and so on.</p></li>
+<li><p>Finally, specify both how many digits after the decimal point, and that this number is a float:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>string_to_print <span class="op">=</span> <span class="st">'</span><span class="sc">% o</span><span class="st">f stopwords: </span><span class="sc">{0:.2f}</span><span class="st">'</span>.<span class="bu">format</span>(percent_stopwords)</span></code></pre></div></li>
+</ul></li>
+<li><p>Yes, a bit cryptic and difficult to understand. But eventually, when you get used to it, it’s powerful when you are doing a lot of text output.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="dictionaries" class="level2">
+<h2 class="anchored" data-anchor-id="dictionaries">1.2 Dictionaries</h2>
+<p><strong>Consider this problem:</strong></p>
+<ul>
+<li><p><strong>We have a data file that looks like this:</strong></p>
+<pre><code>apple
+banana
+apple
+pear
+banana
+banana
+apple
+kiwi
+orange
+orange
+orange
+kiwi
+orange</code></pre>
+<p>This might represent, for example, a record of sales at a fruit stand.</p></li>
+<li><p><strong>We’d like to count how many of each fruit.</strong></p></li>
+<li><p><strong>One way would be to define a counter for each kind:</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>num_apples <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>num_bananas <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>num_pears <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>num_kiwis <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>num_oranges <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'fruits.txt'</span>,<span class="st">'r'</span>) <span class="im">as</span> data_file:</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> data_file.readline()</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> line <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>        fruit <span class="op">=</span> line.strip()</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> fruit <span class="op">==</span> <span class="st">'apple'</span>:</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>            num_apples <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> fruit <span class="op">==</span> <span class="st">'banana'</span>:</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>            num_bananas <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> fruit <span class="op">==</span> <span class="st">'pear'</span>:</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>            num_pears <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> fruit <span class="op">==</span> <span class="st">'kiwi'</span>:</span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>            num_kiwis <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> fruit <span class="op">==</span> <span class="st">'orange'</span>:</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>            num_oranges <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'unknown fruit:'</span>, fruit)</span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>        line <span class="op">=</span> data_file.readline()</span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'# apples:'</span>, num_apples)</span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'# bananas:'</span>, num_bananas)</span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'# pears:'</span>, num_pears)</span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'# kiwi:'</span>, num_kiwis)</span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'# oranges:'</span>, num_oranges)</span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Type up the above in <code>my_fruits.py</code> and use the data file <a href="../../../media/units/unit2/module2.1/fruits.txt" download=""><strong>fruits.txt</strong></a> to confirm.</p></li>
+<li><p>Next, in <code>my_fruits2.py</code>, change the program to accommodate the additional fruits in <a href="../../../media/units/unit2/module2.1/fruits2.txt" download=""><strong>fruits2.txt</strong></a>.</p></li>
+</ul>
+<p><strong>Submit the following two programs:</strong></p>
+<ol type="1">
+<li><code>my_fruits.py</code></li>
+<li><code>my_fruits2.py</code></li>
+</ol>
+</div>
+</div>
+<p><strong>Aside from being tedious, this approach has other issues:</strong></p>
+<ul>
+<li>One would like to be able to write a general program that does not need to know which fruits are in a file.</li>
+<li>What if there were a thousand different kinds of items (not fruits, say, but department-store items)?</li>
+<li>A single mistake in a variable can cause the counts to be wrong.</li>
+</ul>
+<p><strong>Fortunately, the use of <em>dictionaries</em> will make it easy:</strong></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make an empty dictionary</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>counters <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'fruits.txt'</span>,<span class="st">'r'</span>) <span class="im">as</span> data_file:</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> data_file.readline()</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> line <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>        fruit <span class="op">=</span> line.strip()</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> fruit <span class="kw">in</span> counters.keys():</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If we've seen the fruit before, increment.</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>            counters[fruit] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If this is the first time, set the counter to 1</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>            counters[fruit] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>        line <span class="op">=</span> data_file.readline()</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counters)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Type up the above in <code>my_fruits3.py</code> and first apply it to <a href="../../../media/units/unit2/module2.1/fruits.txt" download=""><strong>fruits.txt</strong></a>.</p></li>
+<li><p>Then to <a href="../../../media/units/unit2/module2.1/fruits2.txt" download=""><strong>fruits2.txt</strong></a>.</p></li>
+<li><p><strong>Submit <code>my_fruits3.py</code> with <code>fruits2.txt</code> as the input to your program.</strong></p></li>
+</ul>
+<p><strong>Answering the following part of the exercise is recommended but not required for submission:</strong></p>
+<ul>
+<li>Explain to yourself what you had to change in the code to make it work for the second file.</li>
+</ul>
+</div>
+</div>
+<p><strong>Now let’s explain:</strong></p>
+<ul>
+<li><p>A <code>dictionary</code> is a technical term that is only somewhat related to an actual English dictionary.</p></li>
+<li><p>Think of an English dictionary as something where you <em>look up</em> a word and <em>receive</em> its meaning.</p></li>
+<li><p>They operations here are <em>look up</em> and <em>receive</em> an associated <em>value</em> (the word’s meaning, in this case).</p></li>
+<li><p>In Python, a dictionary is a structure that lets you associate one kind of data with another.</p></li>
+<li><p>The technical equivalent of a word is called a <code>key</code> and the equivalent of the meaning is called the <code>value</code>.</p></li>
+<li><p>So, a dictionary is a collection of <code>key-value</code> pairs.</p></li>
+<li><p><strong>Here’s an example:</strong></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">'apple'</span>: <span class="dv">3</span>, <span class="st">'banana'</span>: <span class="dv">3</span>, <span class="st">'pear'</span>: <span class="dv">1</span>, <span class="st">'kiwi'</span>: <span class="dv">2</span>, <span class="st">'orange'</span>: <span class="dv">4</span>}</span></code></pre></div>
+<p><strong>In this case, we’re associating</strong></p>
+<ul>
+<li>The value 3 with the key ‘apple’</li>
+<li>The value 3 with the key ‘banana’</li>
+<li>The value 1 with the key ‘pear’</li>
+<li>The value 2 with the key ‘kiwi’</li>
+<li>The value 4 with the key ‘orange’</li>
+</ul></li>
+<li><p><strong>Conveniently, Python allows array indexing using the key:</strong></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">'apple'</span>: <span class="dv">3</span>, <span class="st">'banana'</span>: <span class="dv">3</span>, <span class="st">'pear'</span>: <span class="dv">1</span>, <span class="st">'kiwi'</span>: <span class="dv">2</span>, <span class="st">'orange'</span>: <span class="dv">4</span>}</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d[<span class="st">'apple'</span>])  <span class="co"># Prints 3</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>d[<span class="st">'banana'</span>] <span class="op">=</span> <span class="dv">0</span>    </span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Which changes the value associated with 'banana' to 3</span></span></code></pre></div></li>
+<li><p><strong>The above is an example of a dictionary that’s already built (after we’ve processed the data).</strong></p></li>
+<li><p><strong>To process data on-the-fly, we need an additional operation that an English dictionary does not really have:</strong></p>
+<ul>
+<li>We need to be able to <em>add</em> something that’s not already there.</li>
+<li>To add a new <code>key</code>, we simply use it as an index:</li>
+</ul>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">'apple'</span>: <span class="dv">3</span>, <span class="st">'banana'</span>: <span class="dv">3</span>, <span class="st">'pear'</span>: <span class="dv">1</span>, <span class="st">'kiwi'</span>: <span class="dv">2</span>, <span class="st">'orange'</span>: <span class="dv">4</span>}</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>d[<span class="st">'plum'</span>] <span class="op">=</span> <span class="dv">0</span></span></code></pre></div>
+<p><strong>With this understanding we can now revisit the code in the fruit example:</strong></p></li>
+<li><p>We’ve seen how to read a file line-by-line before</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'fruits.txt'</span>,<span class="st">'r'</span>) <span class="im">as</span> data_file:</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> data_file.readline()</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> line <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>        fruit <span class="op">=</span> line.strip()           <span class="co"># Remove whitespace on either side</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># This is where we'd do something with the datda</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>        line <span class="op">=</span> data_file.readline()    <span class="co"># Get the next line</span></span></code></pre></div></li>
+<li><p>The rest is merely the dictionary part:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'fruits.txt'</span>,<span class="st">'r'</span>) <span class="im">as</span> data_file:</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> data_file.readline()</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> line <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>        fruit <span class="op">=</span> line.strip()           <span class="co"># Remove whitespace on either side</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> fruit <span class="kw">in</span> counters.keys():</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If we've seen the fruit before, increment.</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>            counters[fruit] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If this is the first time, set the counter to 1</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>         counters[fruit] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>        line <span class="op">=</span> data_file.readline()    <span class="co"># Get the next line</span></span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.7
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Use the knowledge gained from the above example to work on this exercise.</strong></p>
+<ul>
+<li><p>You should have downloaded the text<a href="../../../media/units/unit2/module2.1/alice.txt"><strong>Alice in Wonderland</strong></a> and saved it in the same folder as your code.</p></li>
+<li><p>In <code>my_stopwords2.py</code>, write code that uses a dictionary to compute the relative occurrence of stopwords in <code>alice.txt</code>.</p></li>
+<li><p>For <code>alice.txt</code> the output should look <a href="../../../media/units/unit2/module2.1/alice_output.txt" download=""><strong>like this</strong></a> (not necessarily in the same order) using the string formatting from the previous section.</p></li>
+<li><p><strong>Submit your program <code>my_stopwords2.py</code></strong></p></li>
+</ul>
+<!--  - Compare the percentage of stopwords in these two famous texts: <a href="../../../media/units/unit2/module2.1/alice.txt">**Alice in Wonderland**</a> and Darwin's <a href="../../../media/units/unit2/module2.1/darwin.txt">**The Origin of the Species**</a>. 
+ 
+ and `darwin.txt`. In particular, we'd like to know: what percentage of the stopword occurence can be attributed to 'the', what percentage to 'and', and so on.  In your module pdf, compare the outputs for the two texts: do the stopwords occur with similar relative frequencies across the two texts? -->
+<!-- - In  `my_stopwords2.py`, write code that uses a dictionary to compare the relative occurrence of stopwords in `alice.txt` and `darwin.txt`. In particular, we'd like to know: what percentage of the stopword occurence can be attributed to 'the', what percentage to 'and', and so on. For `alice.txt` the output should look  <a href="../../../media/units/unit2/module2.1/alice_output.txt" download>**like this**</a> (not necessarily in the same order) using the string formatting from the previous section. In your module pdf, compare the outputs for the two texts: do the stopwords occur with similar relative frequencies across the two texts? -->
+</div>
+</div>
+</section>
+<section id="advanced-topic-global-variables" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-topic-global-variables">1.3 Advanced topic: global variables</h2>
+<p>Suppose we have the following application:</p>
+<ul>
+<li><p>We prompt the user to enter the parameters (the coordinates of the center, and radius) of circle that needs to be drawn.</p>
+<ul>
+<li>For example, we do it in the following manner:</li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span></span></code></pre></div></li>
+<li><p>We do this repeatedly until the user is done (i.e., provide an empty input and hit <code>Enter</code> or <code>return</code> on your kepyboard) and then draw all the circles.</p>
+<ul>
+<li>For example, see that inputs below:</li>
+</ul>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: <span class="dv">7</span> <span class="dv">8</span> <span class="dv">9</span> </span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: <span class="dv">1</span> <span class="dv">1</span> <span class="dv">4</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: </span></code></pre></div></li>
+<li><p>This is the kind of code we’d like to write:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice: x ranges between -10 and +10, y ranges between -10 and +10.</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co"># These values may have to be changed according to the inputs parameters for the circles.</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">10</span>,<span class="dv">10</span>)</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>dt.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Read circle data from the user:</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>line <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Enter circle parameters: '</span>)</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> line <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>    process_line(line)</span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Enter circle parameters: '</span>)</span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a><span class="co"># A method that'll access the list of circles</span></span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>draw_circles()</span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div></li>
+<li><p>What we’ll do is have a <em>list</em> of circles:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice: x ranges between -10 and +10, y ranges between -10 and +10.</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co"># These values may have to be changed according to the inputs parameters for the circles.</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">10</span>,<span class="dv">10</span>)</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>dt.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="co"># The list of circles</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>circles <span class="op">=</span> []</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_line(line):</span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Code for extracting the center coordinates and radius</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This will add to the list circles</span></span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_circles():</span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Code for drawing the circles: will access the list circles</span></span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a>line <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Enter circle parameters: '</span>)</span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> line <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>    process_line(line)</span>
+<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Enter circle parameters: '</span>)</span>
+<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a>draw_circles()</span>
+<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-26"><a href="#cb39-26" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div></li>
+<li><p>Here, the variable <code>circles</code> is called a <em>global</em> variable because it can be access inside other functions defined in the file.</p></li>
+<li><p>So, what would be an example of a non-global variable?</p></li>
+<li><p>Let’s fill out the code and see:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice: x ranges between -10 and +10, y ranges between -10 and +10.</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co"># These values may have to be changed according to the inputs parameters for the circles.</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">10</span>,<span class="dv">10</span>)</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>dt.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>circles <span class="op">=</span> []                      <span class="co"># The global variable</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_line(line):</span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>    parts <span class="op">=</span> line.split()          <span class="co"># parts is a local variable</span></span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="bu">float</span>(parts[<span class="dv">0</span>])</span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="bu">float</span>(parts[<span class="dv">1</span>])</span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="bu">float</span>(parts[<span class="dv">2</span>])</span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>    circle <span class="op">=</span> (x,y,r)              <span class="co"># We've used a tuple here!</span></span>
+<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a>    circles.append (circle)       <span class="co"># Accessing global circles</span></span>
+<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_circles():</span>
+<span id="cb40-20"><a href="#cb40-20" aria-hidden="true" tabindex="-1"></a>    dt.set_color(<span class="st">'b'</span>)</span>
+<span id="cb40-21"><a href="#cb40-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> c <span class="kw">in</span> circles:             <span class="co"># Accessing global circles</span></span>
+<span id="cb40-22"><a href="#cb40-22" aria-hidden="true" tabindex="-1"></a>        dt.draw_circle(c[<span class="dv">0</span>], c[<span class="dv">1</span>], c[<span class="dv">2</span>])</span>
+<span id="cb40-23"><a href="#cb40-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-24"><a href="#cb40-24" aria-hidden="true" tabindex="-1"></a>line <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Enter circle parameters: '</span>)</span>
+<span id="cb40-25"><a href="#cb40-25" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> line <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb40-26"><a href="#cb40-26" aria-hidden="true" tabindex="-1"></a>    process_line(line)</span>
+<span id="cb40-27"><a href="#cb40-27" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Enter circle parameters: '</span>)</span>
+<span id="cb40-28"><a href="#cb40-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-29"><a href="#cb40-29" aria-hidden="true" tabindex="-1"></a>draw_circles()</span>
+<span id="cb40-30"><a href="#cb40-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-31"><a href="#cb40-31" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div></li>
+</ul>
+<p><strong>Let’s create a simpler example to illustrate:</strong></p>
+<ul>
+<li><p><strong>Consider the example below:</strong></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> some_func():</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(y)</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> some_other_func():</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> x <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(z)</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print(y)         # This would fail: we can't access y here</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>some_func()          <span class="co"># Prints 6</span></span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>some_other_func()    <span class="co"># Prints 7</span></span></code></pre></div></li>
+<li><p><strong>Let’s point out:</strong> <img src="../../../media/units/unit2/module2.1/globals-code.png" class="img-fluid"></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Thus: to share variables across functions, define the variables <em>outside</em> the functions.</strong>
+<ul>
+<li>In which case they become <strong>global variables</strong>.</li>
+</ul></li>
+<li><strong>That would be the end of it, but there’s one more complication:</strong>
+<ul>
+<li>You cannot <em>modify</em> a global variable inside a function without explicitly stating an intention to do so.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<ul>
+<li><p><strong>Suppose we wanted to modify <code>x</code> in the example:</strong></p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> some_func():</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> x        <span class="co"># Explicit statement of intent to modify</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(y)</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> some_other_func():</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> x <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(z)</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>some_func()         <span class="co"># Prints 7</span></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>some_other_func()   <span class="co"># Prints 8</span></span></code></pre></div></li>
+</ul>
+<p><strong>Now let’s go back to the circle-drawing example to see an instance where modifying a global is useful:</strong></p>
+<ul>
+<li><p>Suppose we want to track the smallest circle (smallest radius) and draw that circle in red.</p></li>
+<li><p>Thus, as we get user input line-by-line, we’ll need to update the smallest.</p></li>
+<li><p>Here’s part of the code:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice: x ranges between -10 and +10, y ranges between -10 and +10.</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co"># These values may have to be changed according to the inputs parameters for the circles.</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">10</span>,<span class="dv">10</span>)</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>dt.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Global variable circles (a list) available to all functions</span></span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>circles <span class="op">=</span> []</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>smallest_r <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>smallest <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_line(line):</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> smallest_r, smallest   <span class="co"># Identify globals being modified</span></span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a>    parts <span class="op">=</span> line.split()</span>
+<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="bu">float</span>(parts[<span class="dv">0</span>])</span>
+<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="bu">float</span>(parts[<span class="dv">1</span>])</span>
+<span id="cb43-19"><a href="#cb43-19" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="bu">float</span>(parts[<span class="dv">2</span>])</span>
+<span id="cb43-20"><a href="#cb43-20" aria-hidden="true" tabindex="-1"></a>    circle <span class="op">=</span> (x,y,r) </span>
+<span id="cb43-21"><a href="#cb43-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> r <span class="op">&lt;</span> smallest_r:</span>
+<span id="cb43-22"><a href="#cb43-22" aria-hidden="true" tabindex="-1"></a>        smallest_r <span class="op">=</span> r            <span class="co"># Modifying global smallest_r</span></span>
+<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a>        smallest <span class="op">=</span> circle         <span class="co"># Modifying global smallest</span></span>
+<span id="cb43-24"><a href="#cb43-24" aria-hidden="true" tabindex="-1"></a>    circles.append (circle)       <span class="co"># Accessing global circles</span></span>
+<span id="cb43-25"><a href="#cb43-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-26"><a href="#cb43-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_circles():</span>
+<span id="cb43-27"><a href="#cb43-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fill in the code here to draw the smallest in red</span></span>
+<span id="cb43-28"><a href="#cb43-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># and the other circles in blue.</span></span>
+<span id="cb43-29"><a href="#cb43-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-30"><a href="#cb43-30" aria-hidden="true" tabindex="-1"></a><span class="co"># The rest of the code is the same as before ... (read line by line etc)</span></span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>In <code>my_circles.py</code>, copy the code above and from the earlier example, and then fill in code in the <code>draw_circles()</code> function to complete the program. When the user types, for example,</li>
+</ul>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: <span class="dv">3</span> <span class="dv">4</span> <span class="dv">3</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: <span class="dv">4</span> <span class="dv">3</span> <span class="dv">1</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: <span class="dv">5</span> <span class="dv">7</span> <span class="dv">2</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>Enter circle parameters: </span></code></pre></div>
+<p>the output should be: <img src="../../../media/units/unit2/module2.1/draw-circles.png" class="img-fluid"></p>
+<ul>
+<li><strong>Submit your program <code>my_circles.py</code>.</strong>
+<ul>
+<li>We are only looking for a working program i.e., <code>my_circles.py</code>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="multiple-files" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-files">1.4 Multiple files</h2>
+<p>Large Python applications consists of tens of thousands of lines of code.</p>
+<p>Most such applications actually consist of hundreds of Python programs bundled together and where one program can call functions in another.</p>
+<p>We’ve already seen examples with the use of drawtool and wordtool.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Why are applications broken into multiple files?</strong></p>
+<ul>
+<li>One large file is unwieldy to understand and work with in an editor (imagine the scrolling difficult with a thousand lines).</li>
+<li>It’s much easier to separate out functionality and test each piece. Robustly tested programs can be left alone while refining those that need work.</li>
+<li>Separated functionality is useful in other projects.</li>
+<li>If one piece needs upgrading, you can upgrade just that part if it’s in a separate file.</li>
+</ul>
+</div>
+</div>
+<p><strong>Let’s build a simple example that we will be using toward submitting the Exercise 1.9:</strong></p>
+<ul>
+<li><p><strong>Suppose we put together a file called <code>my_math_functions.py</code> which has the following code:</strong></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.141</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(x):</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cube(x):</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x<span class="op">*</span>x</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> distance(x1, y1, x2, y2):</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write your code here</span></span></code></pre></div></li>
+<li><p><strong>Then in an another file called <code>my_math_application.py</code> you could write the following code:</strong></p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> my_math_functions <span class="im">as</span> m</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> m.square(<span class="dv">5</span>)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> m.cube(x2)</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y2)</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> m.distance(x,y, x2, y2)</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d)</span></code></pre></div></li>
+<li><p><strong>Notice the <code>import</code> statement at the top of the file as shown below:</strong></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> my_math_functions <span class="im">as</span> m</span></code></pre></div>
+<p><strong>This has the <code>import</code> keyword, the name of the other file, and a shortcut.</strong></p></li>
+<li><p><strong>To access something from another file, we use the dot (period):</strong></p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> m.square(<span class="dv">5</span>)</span></code></pre></div></li>
+<li><p>One can access a variable in the other file as well.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(m.pi)</span></code></pre></div></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>If we did not have the shortcut, we’d have to write code like the one shown below:</strong></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> my_math_functions </span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> my_math_functions.square(<span class="dv">5</span>)</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span></code></pre></div>
+<p><strong>The above code is perfectly legit but a bit tedious.</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.9
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Complete the code for the function <code>distance()</code> and write the above two programs (viz., <code>my_math_functions.py</code>and <code>my_math_application.py</code>. These program were discussed earlier in this section. The output of the program <code>my_math_application.py</code> that imports <code>my_math_functions.py</code> should look like the following:</strong></li>
+</ul>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="dv">25</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fl">2.23606797749979</span></span></code></pre></div>
+<ul>
+<li><strong>Submit the following programs to complete this exercise:</strong></li>
+</ul>
+<ol type="1">
+<li><code>my_math_functions.py</code></li>
+<li><code>my_math_application.py</code></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="string-formatting-and-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="string-formatting-and-numbers">1.5 String formatting and numbers</h2>
+<p><strong>Consider this program:</strong></p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'i='</span>, i, <span class="st">'x='</span>, x)</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="fl">0.1</span></span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Type up the above program in <code>my_format.py</code>.</strong></li>
+<li><strong>Submit your program<code>my_format.py</code>.</strong></li>
+</ul>
+</div>
+</div>
+<p><strong>You observed output that looks like what is shown below:</strong></p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>i<span class="op">=</span> <span class="dv">0</span> x<span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>i<span class="op">=</span> <span class="dv">1</span> x<span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>i<span class="op">=</span> <span class="dv">2</span> x<span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>i<span class="op">=</span> <span class="dv">3</span> x<span class="op">=</span> <span class="fl">0.30000000000000004</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>i<span class="op">=</span> <span class="dv">4</span> x<span class="op">=</span> <span class="fl">0.4</span></span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Why the ugly output?</strong></p>
+<ul>
+<li>There are really three questions here, the second of which is a bit subtle.</li>
+<li>The first one is: why doesn’t Python see that most of the other values are bring printed nice, so why not print <code>0.3</code> instead of <code>0.30000000000000004</code>?</li>
+<li>The second, more sutble one, is: our for-loop clearly wants to increment by 0.1, which means x should be 0.3 and not 0.30000000000000004.</li>
+<li>The third implied question is: how do we actually limit the number of digits printed after the decimal?</li>
+</ul>
+</div>
+</div>
+<p><strong>Let’s answer these questions:</strong></p>
+<ol type="1">
+<li><p><strong>Why doesn’t Python recognize unnecessary digits?</strong></p>
+<ul>
+<li>This is because Python does not want to second guess the programmer’s intent.</li>
+<li>Maybe you do want the digits.</li>
+</ul></li>
+<li><p><strong>How did 0.3 become 0.30000000000000004?</strong></p>
+<ul>
+<li>A computer’s memory has two kinds of limitations, and one “feature”.
+<ol type="1">
+<li>It cannot store beyond a certain accuracy (and computers differ based on their hardware).</li>
+<li>When calculations are performed, this storage limitation forces some arithmetic to be slightly wrong (many digits after the decimal point).</li>
+</ol></li>
+<li>The “feature” is that computers store binary numbers, not our kind of decimal numbers. This means a decimal version of a binary number might have to be an approximation.</li>
+</ul></li>
+<li><p><strong>OK, how do we actually print nicely?</strong></p>
+<ul>
+<li>This is a bit of an advanced topic, so we’ll only provide a simple example.</li>
+<li>The solution is to use a special set of <em>formatting</em> commands, like the ones you saw a long time ago (remember ?)</li>
+</ul></li>
+</ol>
+<p><strong>Here’s how it works for the above program:</strong></p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>    format_string <span class="op">=</span> <span class="st">'i = </span><span class="sc">{0:2d}</span><span class="st">  x = </span><span class="sc">{1:.2f}</span><span class="st">'</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>    string_to_print <span class="op">=</span> format_string.<span class="bu">format</span>(i, x)</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(string_to_print)</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="fl">0.1</span></span></code></pre></div>
+<p><strong>Let’s explain:</strong></p>
+<ul>
+<li><p><strong>A format string is the eventual desired string that needs to be printed but with some placeholders:</strong></p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>format_string <span class="op">=</span> <span class="st">'i = </span><span class="sc">{0:2d}</span><span class="st">  x = </span><span class="sc">{1:.2f}</span><span class="st">'</span></span></code></pre></div></li>
+<li><p><strong>In this case, there are two placeholders:</strong></p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>format_string <span class="op">=</span> <span class="st">'i = </span><span class="sc">{0:2d}</span><span class="st">  x = </span><span class="sc">{1:.2f}</span><span class="st">'</span></span></code></pre></div>
+<p><strong>Placeholders are enclosed in curly brackets.</strong></p></li>
+<li><p><strong>Each placeholder begins with a number that will eventually determine which variable gets its value into the placeholder.</strong></p></li>
+<li><p><strong>So, here we have variables 0 and 1:</strong></p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>format_string <span class="op">=</span> <span class="st">'i = </span><span class="sc">{0:2d}</span><span class="st">  x = </span><span class="sc">{1:.2f}</span><span class="st">'</span></span></code></pre></div></li>
+<li><p><strong>We feed the <em>values</em> via the <code>format()</code> function:</strong></p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>format_string <span class="op">=</span> <span class="st">'i = </span><span class="sc">{0:2d}</span><span class="st">  x = </span><span class="sc">{1:.2f}</span><span class="st">'</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>string_to_print <span class="op">=</span> format_string.<span class="bu">format</span>(i, x)</span></code></pre></div>
+<p><strong>This is what lets <code>format()</code> put the value of i in place of the “0” and the value of x in place of the “1”.</strong></p></li>
+<li><p><strong>All that’s left to explain are the cryptic commands that follow the “0” and “1” respectively:</strong></p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>format_string <span class="op">=</span> <span class="st">'i = </span><span class="sc">{0:2d}</span><span class="st">  x = </span><span class="sc">{1:.2f}</span><span class="st">'</span></span></code></pre></div>
+<ul>
+<li><strong>The first one says, in effect, “use a minimum of 2 spaces and expect an integer”.</strong></li>
+<li><strong>The second says “expect a float and restrict the number of post-decimal digits to 2”.</strong></li>
+</ul></li>
+</ul>
+<p><strong>String formatting has more to it, but that’s all we’ll say about it here.</strong></p>
+</section>
+<section id="randomness" class="level2">
+<h2 class="anchored" data-anchor-id="randomness">1.6 Randomness</h2>
+<p><strong>As we’ve seen throughout the course, it is useful to be able to have Python generate random numbers:</strong></p>
+<ul>
+<li>We use random numbers to answer statistical questions.</li>
+<li>Random numbers were also useful in creating patterns, as in art.</li>
+</ul>
+<p><strong>However, there’s an important thing to know about random generation.</strong></p>
+<p><strong>Consider this program:</strong></p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co">#random.seed(123)</span></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> random.uniform(<span class="fl">1.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.11
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Type up the above <code>my_random_example.py</code>.</strong></li>
+<li><strong>Run it multiple times and observe the output.</strong></li>
+<li><strong>Next, un-comment the following line and run it again multiple times:</strong></li>
+</ul>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co">#random.seed(123)</span></span></code></pre></div>
+<ul>
+<li><strong>Then, change the number <code>123</code> in the seed to any number between 1 and 1000, and once more run the program many times.</strong></li>
+<li><strong>Submit your program <code>my_random_example.py</code> by including <code>random.seed(123)</code> to complete this assignment.</strong></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>How random generation works</strong></p>
+<ul>
+<li>Python uses a mathematical function with a so-called “seed” to produce random numbers.</li>
+<li>The numbers aren’t really random, because a particular seed will produce the same numbers, which is why they’re called pseudorandom numbers.</li>
+<li>However, if we’re doing things like computing averages, a pseudorandom sequence, provided it’s long enough, is a reasonably good approximation.</li>
+<li>Is there ever a reason to fix a seed?
+<ul>
+<li>Turns out, yes. It’s very useful for debugging.</li>
+<li>Using a seed causes your program to be <em>repeatable</em> (with the same pseudorandom sequence).</li>
+<li>So, typically, one uses a seed when getting your program to work.</li>
+<li>After it’s working, you can comment out the seed.</li>
+</ul></li>
+<li>If a seed is not provided, Python uses the local time or something like that as the seed, so that repeated runs produce different results.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>The material is sourced from <strong>Prof.&nbsp;Kartik Bulusu’s</strong> course titled, ‘Introduction to IoT and Edge computng applications’. <br> This is a Quarto website. To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.<br> Contact: <a href="mailto:bulusu@email.gwu.edu">Kartik Bulusu</a><br> © 2024 All rights reserved</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

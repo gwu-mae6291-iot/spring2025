@@ -1,0 +1,1200 @@
+---
+title: "**Module 3:** Booleans, strings, built-in functions, types"
+format:
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 1</a> &raquo;
+  <span class="current-page">Module 3</span>
+</div> -->
+
+## Objectives
+By the end of this module you will be able to:
+
+- Practice working with Boolean expressions and variables.
+- Practice examples with strings
+- Start to use built-in functions
+- Delve into the notion of <em>type</em>
+
+## 3.0 Boolean variables: two examples
+Recall:
+
+- An integer variable takes on values like 5 and -33:
+    
+    ```python
+    x = 5
+    y = -33
+    ```
+- A floating-point variable stores real numbers like:
+
+    ```python
+    x = 5.0014
+    y = -33.3333334
+    ```
+- A string variable stores strings or chars, as in:
+
+    ```python
+    s = 'hello'
+    c = 'z'
+    ```
+- A <b>boolean variable</b> stores one of two values: `True` or `False`
+
+For example:
+```python
+a = True
+print(a)
+
+b = False
+print(b)
+
+c = not a
+print(c)
+
+d = a or b
+print(d)
+
+e = a and b
+print(e)
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.1
+
+Type up the above in `my_boolean_example.py`.
+
+**Submit your program `my_boolean_example.py`.**
+
+<!-- Use comments (text followed by ‘#’ symbol) to report your output in the python-file.  -->
+:::
+
+:::{.callout-note}
+<!-- - The reserved words `True` and `False` are used in their usual sense. -->
+
+- The words `True` and `False` are <em>reserved words</em> in Python.
+- A boolean variable can store only one of these values:
+  
+    ```python
+    a = True
+    b = False
+    ```
+    - `True` and `False` start with uppercase alphabets.
+    - The quote-delimited <em>strings</em> `'True'` and `'False'` are not the same as `True` and `False`. 
+
+- Just as we could perform arithmetic on integer variables, so can we perform <em>boolean operations</em> on boolean variables.
+- **The simplest one is <em>not</em> as shown below:**
+    
+    ```python
+    a = True
+    c = not a
+    ```
+    **Explanation about how the <em>not</em>-operation works:**
+
+    - Since `a` has the value `True` then `not a` will have the value `False`
+    - Thus, `c` will have the value `False`.
+
+
+- **Similarly, <em>not</em>-operation can also be implemented as shown below**
+    
+    ```python
+    a = False
+    c = not a
+    print(c)
+    ```
+    will print `True`.
+
+- **Let us the consider <em>or</em>-operation:**
+    
+    ```python
+    d = a or b
+    ```
+    **Explanation about how the <em>or</em>-operation works:**
+
+    - `a or b` will be `True` when any one of the two i.e., a or b is `True`.
+    - Another way to state it: `a or b` will be `False` only when both a and b are `False`.
+    - The following table shows all the logical possibilities for the <em>or</em>-operation:
+       <table border="2" cellpadding="2" cellspacing="2">
+          <tr>
+             <td> <b>a</b>  </td>
+             <td> <b>b</b>  </td>
+             <td> <b>d = a or b</b>  </td>
+	    </tr>
+          <tr>
+             <td> False  </td>
+             <td> False  </td>
+             <td> False  </td>
+	  </tr>
+          <tr>
+             <td> False  </td>
+             <td> True  </td>
+             <td> True  </td>
+	  </tr>
+          <tr>
+             <td> True  </td>
+             <td> True  </td>
+             <td> True  </td>
+	  </tr>
+          <tr>
+             <td> True  </td>
+             <td> False  </td>
+             <td> True  </td>
+	  </tr>
+       </table>
+
+
+- **Let us the consider <em>and</em>-operation:**
+    
+    ```python
+    e = a and b
+    ```
+    **Explanation about how the <em>and</em>-operation works:**
+
+    - `a and b` will be True only when both are True.
+    - The following table shows all the logical possibilities for the <em>and</em>-operation:
+       <table border="2" cellpadding="2" cellspacing="2">
+          <tr>
+             <td> <b>a</b>  </td>
+             <td> <b>b</b>  </td>
+             <td> <b>c = a and b</b>  </td>
+	  </tr>
+          <tr>
+             <td> False  </td>
+             <td> False  </td>
+             <td> False  </td>
+	  </tr>
+          <tr>
+             <td> False  </td>
+             <td> True  </td>
+             <td> False  </td>
+	  </tr>
+          <tr>
+             <td> True  </td>
+             <td> True  </td>
+             <td> True  </td>
+	  </tr>
+          <tr>
+             <td> True  </td>
+             <td> False  </td>
+             <td> False  </td>
+	  </tr>
+       </table>
+:::
+
+
+Let's look at another example:
+```python
+a = True
+b = True
+
+a = not a       
+x = a and b
+y = a or b
+print(x, y)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.2
+
+Type up the above in `my_boolean_example2.py`. 
+
+**Submit your program `my_boolean_example2.py`.**
+
+:::
+
+**The explanation of the above program is as shown below:**
+  
+- First, let's look at the following lines of code:
+    
+    ```python
+    a = True
+    b = True
+    ```
+    - Here, there are two boolean variables, each of which is assigned a (boolean) value.
+    - Think of the variables as "boxes" in the usual way but as boxes that can hold only boolean values (`True` or `False`).
+
+- Next, let's look at the following lines of code:
+    
+    ```python
+    a = not a
+    ```
+    - Here, the value in `a` before this executes is `True`
+    - So, `not a` is `False`.
+    - This gets stored in `a`
+    - So, after the statement executes `a` will have the value `False`.
+
+- Further, let's look at the following lines of code:
+
+    ```python
+    x = a and b
+    ```
+    - We know that `a` has the value `False` in it, while `b` has the value `True`.
+    - Thus, the `and` operator is applied to the values `False` and `True`.
+    - You can picture this as: `False and True`.
+    - What is the result? 
+    - Similar to applying the "rules of multiplication" to two numbers, we apply the rules of <b>and</b> to `False` and `True`.
+    ![](../../../media/units/unit1/module1.3/boolean-and.png)
+    - The result is: `False`.
+    - Thus, the value `False` is assigned to the variable `x`.
+
+
+- Finally, let's look at the following lines of code:
+    
+    ```python
+    y = a or b
+    ```
+    Because `a` is now `False` and `b` is `True`, the result in y will be:
+    ![](../../../media/units/unit1/module1.3/boolean-or.png)
+
+
+###### **3.3 Video**
+{{< video ../../../media/units/unit1/module1.3/u1-mod3.3.mp4 aspect-ratio="21x9" >}}
+
+## 3.1 Combining Boolean operators
+Consider
+```python
+a = True
+b = False
+c = True
+u = (a and b) or (a or b)
+v = (not u) or (not (b and c))
+print(u, v)
+```
+
+Let's draw an <em>expression diagram</em> to help us understand what happens with the first expression:
+![](../../../media/units/unit1/module1.3/boolean-expr.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.4
+
+Type up the above in `my_boolean_example3.py`.
+
+**Submit your program `my_boolean_example3.py`.**
+
+**Recommended but not required for submission in this exercise:** 
+Draw an expression diagram to work out the result for the second expression (the value of v) above.
+:::
+
+###### **3.5 Video**
+{{< video ../../../media/units/unit1/module1.3/u1-mod3.5.mp4 aspect-ratio="21x9" >}}
+
+Boolean expressions can be constructed with numeric variables and their comparison operators:
+```python
+k = 5
+m = 3
+n = 8
+a = True
+b = False
+
+first = (m < k) and (n > k)
+second = ( (k+m == n) or (k-m < 10) )
+third = first and (not second)
+fourth = first or a
+print(first, second, third, fourth)
+```
+
+:::{.callout-note}
+- Since the variable `m` is assigned the integer `3`, k is assigned the integer value `5`, the expression `(m < k)` in `first = (m < k) and (n > k)` evaluates to `True`.
+    
+<!--     ```python
+    first = (m < k) and (n > k)
+    ``` -->
+    
+- The variable `n` is assigned the integer value `8`.  Therefore, the expression `(n > k)` in `first = (m < k) and (n > k)` also evaluates to `True`.
+
+- Thus, the resulting expression in line of code below,
+
+    ```python
+    first = (m < k) and (n > k)
+    ```
+    takes the following form:
+    
+    ```python
+    first = True and True
+    ```
+   The above expression evaluates to `True` from the rules (the table) for <b>and</b>-operation.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.6
+Type up the above in `my_boolean_example4.py`.
+
+**Submit your program `my_boolean_example4.py`.**
+
+**Recommended but not required for submission in this exercise:** 
+Draw an expression diagram to work out the result for the remaining three expressions above. 
+:::
+
+## 3.2 Using a Boolean variable
+To see how a Boolean variable is used in practice, we will work through a somewhat elaborate example that will teach us other useful things.
+
+Let's start with this program:
+```python
+def print_search_result(A, search_term):
+    if search_term in A:
+        print('Found ', search_term)
+
+B = [15, 3, 23, 9, 14, 4, 6, 2]
+print_search_result(B, 4)
+```
+
+In the above example program, the goal is to create a function that takes a list, and a search value (or search term) and looks inside the list to see if it exists.
+
+Does the program work?
+
+:::{.callout-caution appearance="simple" icon=false }
+### Exercise 3.8
+
+Type up the above program in `my_search_example.py` to confirm.
+
+**Submit your program `my_search_example.py`.**
+:::
+
+:::{.callout-note}
+- We have exploited the <b>in</b>-operator in Python to examine whether or not an element exists in a list:
+    
+    ```python
+    if search_term in A:
+    ```
+- This will return either `True` or `False`.
+- And Python does the <em>work</em> of traversing the list and peeking inside to see if value (4 in this case) is in the list.
+:::
+
+**Now consider the problem of also printing the position where it's found:**
+
+```python
+def print_search_result(A, search_term):
+    for k in range(len(A)):
+        if A[k] == search_term:
+            print('Found', search_term, 'at position', k)
+
+B = [15, 3, 23, 9, 14, 4, 6, 2]
+print_search_result(B, 4)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.9
+
+- To check if the above program works, type it up in `my_search_example2.py`. 
+
+- Make any changes required to make sure that the program prints the position where element of the list is found.
+
+**Submit your program `my_search_example2.py`.**
+:::
+
+:::{.callout-note}
+- We are now traversing the list ourselves:
+    
+     ```python
+    for k in range(len(A)):
+    ```
+    Here, the variable `k` will start at `0` and go up to the last index (one less than the length of the list).
+- At each iteration, the program checks to see if the search term is equal to the list element at the current position (determined by `k`):
+  
+    ```python
+    if A[k] == search_term:
+    ```
+    If the condition above evaluates to `True`, it means the program found the list element we are looking for.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.10
+**There is nothing to submit in this exercise. However, it is important for you to complete it on your own to understand the execution of the program:** 
+
+Consider the list and the user-defined function call as shown in the program below. 
+```python
+B = [15, 4, 23, 9, 14, 4, 6, 2]
+print_search_result(B, 4)
+```
+Note that the function `print_search_result(B, 4)` was typed up in the previous exercise 3.9. 
+
+Try tracing through the above program and also what happens when we instead have below.
+```python
+B = [15, 4, 23, 9, 14, 4, 6, 2]
+print_search_result(B, 5)
+```
+:::
+
+**What we'd like to do is print something when a search term is not found in the list.**
+
+Consider the following program:
+```python
+def print_search_result(A, search_term):
+    for k in range(len(A)):
+        if A[k] == search_term:
+            print('Found', search_term, 'at position', k)
+    print('Not found:', search_term)
+
+B = [15, 3, 23, 9, 14, 4, 6, 2]
+print_search_result(B, 4)
+print_search_result(B, 5)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.11
+
+- Type up the above in `my_search_example3.py`.
+
+- **Submit your program `my_search_example3.py`.**
+
+**Recommended but not required for submission in this exercise:** 
+Think through the execution of your program `my_search_example3.py` to see if it worked as intended. Explain to yourself what went wrong in the program.
+:::
+
+**Let's try another variation to see if we can improve the program `my_search_example3.py` as shown below:**
+```python
+def print_search_result(A, search_term):
+    for k in range(len(A)):
+        if A[k] == search_term:
+            print('Found', search_term, 'at position', k)
+        else:
+            print('Not found:', search_term)
+
+B = [15, 3, 23, 9, 14, 4, 6, 2]
+print_search_result(B, 4)
+print_search_result(B, 5)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.12
+- Type up the above in `my_search_example4.py`.
+
+- **Submit your program `my_search_example4.py`.**
+
+**Recommended but not required for submission in this exercise:** 
+Think through the execution of your program `my_search_example4.py` to see if it worked as intended. Explain to yourself what went wrong in the program.
+
+<!-- Start by thinking through the execution to see if this worked. Then, type it up in `my_search_example4.py` to see. Use comments (text followed by ‘#’ symbol) to explain what went wrong in the python-file.  -->
+:::
+
+**We'll now see how a simple Boolean variable is commonly  used in these types of problems:**
+```python
+def print_search_result(A, search_term):
+    found = False
+    pos = -1
+    for k in range(len(A)):
+        if A[k] == search_term:
+            found = True
+            pos = k
+
+    if found:
+        print('Found', search_term, 'at position', pos)
+    else:
+        print('Not found:', search_term)
+
+B = [15, 3, 23, 9, 14, 4, 6, 2]
+print_search_result(B, 4)
+print_search_result(B, 5)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.13
+- Type up the above in `my_search_example5.py`.
+
+- **Submit your program `my_search_example5.py`.**
+
+**The following part of the exercise is recommended but not required for submission:** 
+Trace through the program `my_search_example5.py` to understand the execution of the  the above program. 
+:::
+
+## 3.3 Returning a True/False value
+The most common use of <b>Boolean expressions</b> is to write functionz that return either `True` or `False`.
+
+Suppose we want to determine whether or not (Hint: whether or not
+&rArr; true or false) a list has a negative number:
+```python
+def has_negative(A):
+    for k in A:
+        if k < 0:
+            return True
+    return False
+
+B = [2, 4, 8, -10]
+print(has_negative(B))
+C = [1, 3, 5]
+print(has_negative(C))
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.14
+- Type up the above in `my_search_negative.py`.
+
+- **Submit your program `my_search_negative.py`.**
+
+**The following part of the exercise is recommended but not required for submission:** 
+Trace through the program `my_search_negative.py` to understand the execution of the  the above program.
+:::
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.15
+
+In `my_search_negative2.py` complete the function below to identify whether or not a list has exactly two negative numbers:
+```python
+def has_two_negatives(A):
+    # Write your code here
+
+B = [2, 4, 8, -10]
+print(has_two_negatives(B))  # Should print False
+C = [1, -3, -5]
+print(has_two_negatives(C))  # Should print True
+D = [1, -3, -5, -7]
+print(has_two_negatives(D))  # Should print False
+```
+**Submit your program `my_search_negative2.py`.**
+:::
+
+## 3.4 New topic: strings and slicing
+It is common to want to pull out parts of strings.
+
+For example, if the user in some application  types `'DC 20052'`, we may want just the zip code:
+```python
+s = 'DC 20052'
+state = s[0:2]
+zip = s[3:8]
+print(state, zip)
+```
+
+**Explanation about how the <em>slicing in strings</em> works:**
+![](../../../media/units/unit1/module1.3/slicing.png)
+
+- The <em>slicing</em> expression `0:2` refers to all the characters of the string from the first (i.e.,the 0-th indexed) character up to the character before the one at position-2 (i.e., associated with index-1).
+- Thus, `0:2` refers to characters at positions or indices `0` through `1`.
+- Similarly, `3:8` refers to all the characterss from position- or index-`3` up to `7`.
+- Slicing ranges are specified so that the left end is inclusive and the right end is exclusive:
+- Thus, `3:8` means "including 3" and "excluding 8".
+- Recall:
+    - For any range of numbers like 3,4,5,6,7, <em>exclusive</em> would mean the numbers 4, 5, 6 (excluding 3, excluding 7).
+    - <em>Inclusive</em> would include the ends: 3,4,5,6,7.
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.16
+
+In `my_slicing.py` write code to extract the actual phone number (202-994-4000) from 
+```python
+s = 'phone: 202-994-4000'
+# Write your code here
+```
+
+**Submit your program `my_slicing.py`.**
+:::
+
+**Slicing expressions work for lists in the same manner as strings:**
+```python
+A = ['may','the','force','be','with','you']
+print(A[2:5])
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.18
+
+- Before typing it up in `my_slicing2.py` try and guess what the above will print.
+
+- Type up the program above in `my_slicing2.py`.
+
+**Submit your program `my_slicing2.py`.**
+:::
+
+Let's look at slicing when we don't know the size:
+
+- Consider the zipcode example where the 5-digit zip code may preceded by all kinds of text, as in:
+
+    ```python
+   'DC 20052'
+   'District of Columbia, 20052'
+   '20052'
+   'My zip code is 20052'
+    ```
+- So, all we know is that the last 5 characters in the string need to be extracted.
+- Then, we need to get the length of the string.
+- Let's put this in a function:
+    
+    ```python
+    def extract_zip(s):
+        start = len(s) - 5
+        end = len(s)
+        return s[start:end]
+
+    example1 = 'DC 20052'
+    example2 = 'District of Columbia, 20052'
+    example3 = '20052'
+    print(extract_zip(example1))
+    print(extract_zip(example2))
+    print(extract_zip(example3))
+    ```
+- Note that 
+    
+    ```python
+    end = len(s)
+    ```
+    gives us the index just past the last index.
+- And 
+    
+    ```python
+    start = len(s) - 5
+    ```
+    gives the index 5 position before the end.
+- So, the <em>slice</em> becomes:
+    
+    ```python
+    return s[start:end]
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.19
+
+In `my_slicing3.py`, write a program that implements a function to extract the phone number in the same way as shown above, when the first part could be anything like "phone: 202-994-4000" or "my number is 202-994-4000".
+
+**Submit your program `my_slicing3.py`.**
+:::
+
+:::{.callout-note}
+<em>Slicing</em> has more to it than two numbers. We'll have more to say about this in Unit-2.
+:::
+
+## 3.5 Using slicing to solve a problem
+Suppose we want to determine the longest prefix that two strings have in common, as in:
+```python
+print(find_common_prefix('river', 'rivet'))
+```
+This should print 'rive' but
+```python
+print(find_common_prefix('river', 'stream'))
+```
+should find no common prefix.
+
+
+**We will use the following ideas:**
+
+- Let an index variable start at `0` and increase in a loop.
+- For each value of the index, we'll compare the corresponding character in each string.
+- When the characters are the same (or equal), we move to the next character and compare again.  
+- The characters that are the same will be part of the common prefix.
+- We keep moving to each and charater and compare them.
+- The instance the characters are NOT equal, we would have gone past the end of the common prefix.
+
+**Let's try the following program:**
+```python
+def find_common_prefix(w1, w2):
+    for k in range(len(w1)):
+        if w1[k] != w2[k]:
+            break
+    return w1[0:k]
+
+print(find_common_prefix('river', 'rivet'))
+```
+
+**Let's point out that there is a reserved word <em>break</em> in the program above:**
+
+- The reserved word <b>break</b> is used to, well, "break out" of a loop:
+  
+    ```python
+    for k in range(len(w1)):
+        if w1[k] != w2[k]:
+            break
+    ```
+- When `break` statement is executed, the program exits the loop to the statement that follows the loop.
+- Notice how we use slicing once we've found the char that's past the common prefix:
+  
+    ```python
+    return w1[0:k]  # All the chars from 0 to k-1 inclusive
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.20
+Type up the program below in `my_prefix.py`. 
+
+```python
+def find_common_prefix(w1, w2):
+    for k in range(len(w1)):
+        if w1[k] != w2[k]:
+            break
+    return w1[0:k]
+
+print(find_common_prefix('river', 'rivet'))
+```
+
+**Submit your program `my_prefix.py`.**
+
+
+**The following part of the exercise is recommended but not required for submission:** 
+
+- Does the program `my_prefix.py` work as intended? 
+- Trace the execution of the program `my_prefix.py` to understand how the program executes.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.21
+
+- In this exercise, start with your program `my_prefix.py`. 
+- Save it again as `my_prefix2.py`. 
+- Use the arguments `'riveting'` and `'rivet'` in the function-call as shown below.
+```python
+print(find_common_prefix('river', 'rivet'))
+```
+- Check the output of your program `my_prefix2.py`, and observe if the program executes as intended. 
+
+**Fix the problem in `my_prefix2.py` and submit your program.**
+
+**The following part of the exercise is recommended but not required for submission:** 
+- Trace the executing when the strings are 'riveting' and 'rivet'. 
+- Understand what goes wrong in the program `my_prefix2.py`.
+:::
+
+
+###### **3.23 Video**
+{{< video ../../../media/units/unit1/module1.3/u1-mod3.23.mp4 aspect-ratio="21x9" >}}
+
+## 3.6 Built-in string functions in Python
+Python comes with many useful functions for strings.
+
+Here's a sample:
+```python
+A = ['to','infinity','and','beyond','and', 'even','further']
+s = 'infinity'
+
+# Convert to uppercase:
+print(s.upper())       
+
+# Count occurrences of the char 'i' in s:
+print(s.count('i'))    
+
+# Locate which index 'f' first occurs in s:
+print(s.find('f'))     
+
+# Occurrences of 'and' in list A:
+print(A.count('and'))  
+
+# Occurrences of 'i' in 2nd string in list A:
+print(A[1].count('i')) 
+
+if A[3].startswith('be'):
+    print('starts with be')
+
+data = '42'
+print(data.isnumeric())
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.24
+- Type up the above in `my_string_functions.py`.
+
+- **Submit your program `my_string_functions.py`.**
+
+**The following part of the exercise is recommended but not required for submission:** 
+
+Examine the output to try and make sense of how the functions worked.
+:::
+
+
+**Explanation about how some of the string-functions work:**
+
+- There's a key difference, for example, between the functions `len()` and `upper()`:
+    
+    ```python
+    s = 'hello'
+    k = len(s)
+    t = s.upper()
+    ```
+    - The function
+        `len()`
+     is like the ones we've been writing ourselves.
+    - In this case, the string s is given to it as a parameter:
+    
+    ```python
+    k = len(s)
+    ```
+    - But the function `upper()` is quite different:
+    
+    ```python
+    t = s.upper()
+    ```
+    - This is, in some sense, <em>attached</em> to the string variable s.
+- The use of the period right after the variable followed by a function is a somewhat advanced topic:
+![](../../../media/units/unit1/module1.3/object-function.png)
+We'll just <em>use</em> the feature.
+- The advanced topic is called: <em>objects</em>.
+  <br> (Yes. An ordinary name, but quite an involved topic, it turns out.)
+
+**Let's emphasize one more feature with this snippet of code:**
+```python
+s = 'hello'
+t = s.upper()
+print(s)
+print(t)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.25
+
+Type up the above program in `my_string_functions2.py`. 
+
+**Submit your program `my_string_functions2.py`.**
+:::
+
+:::{.callout-note}
+- The string assigned to the variable `s` itself did not change but its uppercase version was returned by the call as shown below. 
+    
+    ```python
+    t = s.upper()
+    ```
+- This returns a new string that gets placed into `t`.
+:::
+
+**Let's continue with the earlier example:**
+
+- Similar "dot" functions are available for lists too, as in:
+    
+     ```python
+    k = A.count('and')
+    ```
+    - This asks the list `A` to count how many times the string 'and' occurs in the list.
+    - The number that is returned gets stored in `k`.
+- Notice how we can call a "dot" like function in a string when the string itself is an element of a list:
+    
+    ```python
+    k = A[1].count('i')
+    ```
+    - Here, `A[1]` is the second string in the list `A`.
+    - This happens to be 'infinity'.
+    - We're calling its `count()`function.
+    - And giving that function the letter `'i'` to count.
+    - It returns a number, which gets stored above in `k`.
+
+
+
+**Consider the following partially completed code:**
+```python
+def get_zipcode(A):
+    # Insert your code here
+
+B = ['my','zip', 'is', '20052']
+z = get_zipcode(B)
+print(z+1)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.26
+
+- Type the above code in `my_string_functions3.py`. 
+
+- In `my_string_functions3.py`, note that the fourth string in the list `B` is a zipcode. 
+
+- In `my_string_functions3.py`, complete the function above by replace the commented text so that the program returns a the zipcode as a number not a string i.e., the print statement outputs `20053`.
+
+**Submit your program `my_string_functions3.py`.**
+:::
+
+## 3.7 The concept of `type`
+So far, we've seen different kinds of variables:
+
+- **Integer variables are represented as shown below:**
+
+    ```python
+    a = 100
+    b = 435
+    ```
+- **Floating-point variables for real numbers are represented as shown below:**
+
+    ```python
+    c = 3.14159
+    d = 2.718
+    ```
+- **String variables are represented as shown below:**
+
+    ```python
+    e = 'hello'    # String with multiple chars
+    f = 'h'        # Single-char string
+    ```
+- **Boolean variables are represented as shown below:**
+
+    ```python
+    g = False
+    h = True
+    ```
+- **We've also seen other kinds of <em>features</em> or "things" in Python such as:**
+    - Reserved words.
+    - Expressions, whether arithmetic, comparison, or Boolean.
+    - Lists.
+    - Functions that we write using `def`.
+    - Built-in functions like `len()`. and `print()`.
+    - Control structures like `for` and `if` that direct the flow of execution.
+    - Ways to use existing other code via `import`'s.
+
+**Python programming language has other kinds of "things":**
+
+- One of these is another kind of variable called a `complex` variable, for advanced math.
+- Another kind of "thing" or feature is an <b>object</b> which is a kind of structure that can contain related variables and functions.
+- Similarly, there are "things" called <b>generators</b> and <b>iterators</b> (an advanced topic)
+
+**What we want to do here is focus your attention on a concept called <em>type</em>:**
+
+- At any given moment, a variable is said to have a <b>type</b>.
+- What doeas this mean?
+- What kind of value does it have at the moment? An integer? A string?
+- Consider the following lines of code:
+
+    ```python
+    x = 42      # The type of x is integer
+    y = 4.2     # The type of y is floating point
+    z = 'whoa'  # The type of z is string
+    b = False   # The type of b is Boolean
+    ```
+- One can print the `type` of a variable as follows:
+    
+    ```python
+    x = 42    
+    y = 4.2   
+    z = 'whoa'
+    v = False 
+    print(type(x), type(y), type(z), type(v))
+    ```
+- **The `type` information is often itself represention in a special Python feature called a <em>class</em> (intuitively, as in this "class of item").**
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.27
+
+In `my_type.py`, type up the above program and find out what gets printed.
+
+**Submit your program `my_type.py`.**
+:::
+
+Thus, we see that:
+
+- A variable that holds `42` is rightfully an <b>integer variable</b>.
+- A number like `4.2` is a floating-point number (what we've also called a real number), and so a variable that holds such a number is a <b>floating-point variable</b>.
+- A string variable that holds `'whoa'` is just that, a <b>string variable</b>.
+- And a variable that holds `True` or `False` is called a <b>Boolean variable</b>.
+
+**Converting from one `type` to another:**
+
+- It is often useful to go from one type to another.
+- We've seen an example of going from single-char string to integer, and converting from int to string (and vice-versa).
+- To review, let's look at a few more examples:
+    
+    ```python
+    a = int(4.2)
+    b = float(42)
+    c = str(b)
+    d = int('256')
+    e = ord('z')
+    f = chr(97)
+    print(a, b, c, d, e, f)
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.28
+
+Type the above in `my_type2.py`, to see how it works.
+
+**Submit your program `my_type2.py`.**
+:::
+
+**Types and <em>operators</em>:**
+
+- Because our keyboards are limited in the number of symbol keys, we need to use some symbols for multiple purposes.
+- The way we see this is when one operator, like `+`, has different meanings when used with different types:
+  
+    ```python
+    a = 3
+    b = 4
+    c = a + b         # + for arithmetic
+
+    d = 'hello'
+    e = 'world'
+    f = d + ' ' + e   # + for string concatenation
+    ```
+- Rather than list all possible uses of all operator symbols, we will introduce additional uses beyond the common case wherever appropriate.
+- Generally, you should be intentional about using operators: you should know what the purpose is.
+- For example, consider:
+  
+    ```python
+    a = 4
+    b = a * 3
+    print(b)          # prints 12
+
+    d = 'hello'
+    e = d * 3         # * for string concatenation
+    print(e)          # Prints hellohellohello
+    ```
+    <!-- (The latter is not a frequently used operator with strings.) -->
+
+## 3.8 A text application
+Sometimes we need to go beyond what Python has to offer.
+
+**One way to do this is to find a popular <em>library</em> and use that:**
+
+- **What's a <em>library</em>?**
+- **A <em>library</em> is a collection of programs all related for a purpose.**
+- For example, there's a **library called NLTK** (go look it up) that's aimed at processing English text:
+    - It can figure out parts of speech from sentences.
+    - It can pick out topics (somewhat approximately) in paragraphs.
+    - It can group so-called stem-related words like "fry", "fries", "frying" and separate those from "friar".
+- However, installing and learning to use these sophisticated packages requires some work.
+- What we will do instead in this course is to provide you with simple programs that you can download and use directly without any installation.
+- This is the purpose in providing programs like wordtool and drawtool.
+
+**Let's use `wordtool` to find the longest sentence in a book:**
+   
+- The **`wordtool`** has a feature to break down text and give you one sentence at a time.
+- For example:
+    
+    ```python
+    import wordtool as wt
+
+    sentences = wt.get_sentences_from_textfile('jabberwocky.txt')
+
+    count = 0
+        
+    for s in sentences:
+        count += 1
+        print('Sentence #', count, ':\n', s, '\n', sep='')
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.29
+
+- Type the above program in `my_sentence_app.py`, to see how it works. 
+
+- You will need to download <a href="../../../media/useful/wordtool.py" download>**wordtool.py**</a>, <a href="../../../media/useful/wordsWithPOS.txt" download>**wordsWithPOS.txt**</a>, and the sample text file <a href="../../../media/units/unit1/module1.3/jabberwocky.txt" download>**jabberwocky.txt**</a> all into your module folder. 
+
+- You are likely to be familiar with the author's other famous works.
+
+- **Submit your program `my_sentence_app.py`.**
+:::
+
+**Let's point out some salient feature in the program `my_sentence_app.py`:**
+
+- When using functions in another program, one has to `import` that program:
+    
+<!--     ```python
+    import wordtool as wt
+    ``` -->
+- It is convenient to use a shorthand such as `wt` for an imported program `wordtool` as shown below:
+    
+    ```python
+    import wordtool as wt
+    ```
+:::{.callout-note}
+We could have called the shorthand for the imported program something other than `wt`.
+:::
+
+
+- The function `get_sentences_from_textfile` from `wt` can now be applied to a file to initiate the process of breaking down text and output one sentence at a time as shown below:
+    
+    ```python
+    sentences = wt.get_sentences_from_textfile('jabberwocky.txt')
+    ```
+:::{.callout-note}
+`wordtool` requires that you to name the file, expecting it to be a plain text file (not a Word-document file).   
+:::
+
+<!--     ```python
+    sentences = wt.get_sentences_from_textfile('jabberwocky.txt')
+    ``` -->
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.30
+- Start with the program `my_sentence_app.py`, and save it as `my_sentence_app2.py`.
+
+- Observe that the for-loop has `\n` and `sep=''` in its last line.
+
+- Remove `\n` and `sep=''` from the line `print('Sentence #', count, ':\n', s, '\n', sep='')` in the program `my_sentence_app2.py`.
+
+- Execute the program `my_sentence_app2.py` to make sure there are no errors and  observe the change in output (if any) by not including `\n` and `sep=''`. 
+
+**Submit your program `my_sentence_app.py`.**
+:::
+
+**Let's now do something interesting with `wordtool` i.e., find the longest sentence (by length) in two texts and compare the two really long sentences.**
+```python
+import wordtool as wt
+
+def get_longest_sentence(filename):
+    sentences = wt.get_sentences_from_textfile(filename)
+    maxL = 0
+    
+    for s in sentences:
+        if len(s) > maxL:
+            maxL = len(s)
+            maxS = s
+
+    return maxS
+
+
+book = 'federalist_papers.txt'
+s = get_longest_sentence(book)
+print('Longest sentence in', book, 'with', len(s), 'chars:\n', s)
+
+print()
+
+book = 'darwin.txt'
+s = get_longest_sentence(book)
+print('Longest sentence in', book, 'with', len(s), 'chars:\n', s)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.31
+
+- Type the above in `my_sentence_app3.py`. 
+
+- Then download <a href="../../../media/units/unit1/module1.3/darwin.txt" download>**darwin.txt**</a> (Darwin's <em>On the Origin of Species</em>) and <a href="../../../media/units/unit1/module1.3/federalist_papers.txt" download>**federalist_papers.txt**</a>  (the Federalist Papers by Hamilton and others). 
+
+- Execute the program `my_sentence_app3.py`.
+
+- **Submit your program `my_sentence_app3.py`.**
+
+**Answering the following part of the exercise is recommended but not required for submission:** 
+
+- Which one has the longest? 
+- Who wrote the longest sentence in the Federalist Papers? 
+- Go to <a href="https://www.gutenberg.org/" download>Project Gutenberg</a> and find a text with a longer sentence. 
+:::
+
+## 3.9 When things go wrong
+In each of the exercises below, first try to identify the error just by reading. Then type up the program to confirm, and after that, fix the error.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.33
+
+```python
+def is_odd(k):
+    if k % 2 == 1:
+        return true
+    else:
+        return false
+```
+- Identify and fix the error in `my_error1.py`.
+
+- **Submit your `my_error1.py` after fixing the error.**
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.34
+
+```python
+x = 4
+if x >= 0 and <= 5:
+    print('x is between 0 and 5 inclusive')
+```
+- Identify and fix the error in `my_error2.py`.
+
+- **Submit your `my_error2.py` after fixing the error.**
+:::
+
+</body>
+</html>

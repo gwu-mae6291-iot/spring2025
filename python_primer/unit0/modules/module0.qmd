@@ -1,0 +1,408 @@
+---
+title: "**Module 0:** Your First Program"
+format:
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 0</a> &raquo;
+  <span class="current-page">Module 0</span>
+</div> -->
+
+## Objectives
+By the end of this module you will be able to:
+
+- Experince writing a really simple program.
+- Explain the difference between command-line outputs vs GUI for programs.
+
+:::{.callout-tip}
+[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
+
+[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
+
+[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
+
+[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
+
+[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
+:::
+
+### 0.0: Our First Program
+Lets take a look at our first program as it appears in a textbook (like this one):
+```python
+print("Hello World")
+```
+
+This is a simple program written in the Python programming language, possibly one of the smallest programs one can write, and a traditional starting point for learning programming.
+
+We will very soon (below) write this program ourselves.
+
+For now, let's point out a few things:
+
+- What we see above is the _text_ of the program.
+![](../../../media/units/unit0/module0/firstprogram.png)
+- The entire program will appear inside of a _code editor_ when we write.
+- We could use one of several code editors.
+- For example, this is how it would look inside the _Spyder_ code editor:
+![](../../../media/units/unit0/module0/spyder.png)
+- And how it might look in the _Thonny_ code editor:
+![](../../../media/units/unit0/module0/thonny1.png)
+- Various editors colorize in different ways for convenience of reading, none of which affect the actual text of the program.
+- Apart from typing it in (which you'll do shortly), we haven't actually _run_ the program.
+- Intuitively, just looking at the program we might think that:
+    - It has to do with some kind of "printing" (because we see `print`)
+    - We have no idea what is meant by the somewhat odd phrase "Hello World!", but we see it there.
+
+- There are several ways to run a program:
+    - Run the program inside the very same editor used to type in the program.
+    - Run it without any editor (a slightly advanced topic).
+
+- For example, if we run the program using the _Thonny_ editor, we will see this:
+![](../../../media/units/unit0/module0/thonny3.png)
+
+Next, you will try this yourself.
+
+::: {.callout-caution appearance="simple" icon=false}
+### Exercise 0.1
+
+Write and run the `helloworld` program by following [**these instructions**](../guides/hello.qmd), save it and submit it as `test.py` in your `module0.zip`.
+:::
+
+So, what's with printing the unusual phrase "Hello World!"?
+
+- It's a tradition in computer science that your first program will print "Hello World!".
+- It's meant to pretend that a program is a creature that's itself communicating to the outside world by saying hello.
+
+### 0.1 The recipe-cook-dish analogy
+What just happened above?
+
+Let's use an analogy
+![](../../../media/units/unit0/module0/recipe.png)
+    
+- A recipe is a bunch of instructions in text form.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr;
+A program is also a set of instructions in text form.
+
+- By itself, a recipe doesn't do anything until it's _acted on_.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr;
+You can type up a program but not do anything with it (i.e., not run it).
+
+- A cook _executes_ a recipe by following the instructions
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr;
+A combination of elements in your laptop _executes_ a program.
+
+- The net result of a cook executing a recipe is, typically, a dish.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr;
+The result of executing a program is the program's output
+
+- We of course design and write up programs to get useful or interesting output.
+
+- When a recipe is poorly written, or if the cook messes up, the result may be failure.
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr;
+A program and the laptop are even more exacting: the slightest error can result in failure.
+
+### 0.2 Programming vs. computerese
+What we mean by _computerese_:
+
+- The computer-related tasks and knowledge that are needed, but not the intellectual core of programming.
+- We use the term slightly pejoratively, like _legalese_.
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rArr; 
+     A necessary evil.
+
+- Examples of computerese:
+     - Navigating directories
+     - Locating files, copying them, moving them.
+     - Mastery of editor keys, shortcuts.
+     - Handling the quirks of an operating system.
+     - Uploading files to a website, downloading.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.2
+
+Develop your computerese skills by following [these instructions.](../guides/computerese.qmd). There is nothing to submit in this exercise.
+:::
+
+:::{.callout-note}
+There is nothing to submit for this particula exercise; it is aimed at generally helping you get proficien with using your computer for programming.
+:::
+
+### 0.3 A slight variation
+We will now spend a bit of time trying a few variations, and also  examining what happens when typing mistakes are made.
+
+Consider this program:
+```python
+print('Hello World!')
+print('My name is X')
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.3
+
+Type up this program but use your own name instead of X. Save the file in the `module0` folder as `myname.py`.
+:::
+
+:::{.callout-note}
+In the future we will be asking you to "type up" programs; in all such cases, please also save the file (for eventual submission)
+:::
+
+### 0.4 What happens when things go (even slightly) wrong
+We'll now deliberately make a few tiny errors and see what happens:
+
+- **Error #1:** forgetting to type the closing parenthesis.
+    - Here's the program:
+```python
+print('Hello World!'
+```
+    Note the missing right parenthesis at the end of the line.
+        
+    - What happens when we nonetheless try and run the program?    
+    - Here's an example with the Thonny editor:
+    ![](../../../media/units/unit0/module0/error1.png)
+- **Error #2:** What happens if we forget the quotation marks?
+    - Here's the program:
+```python
+print(Hello World!)
+```
+    - We get something quite similar:
+    ![](../../../media/units/unit0/module0/error2.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.4
+
+Confirm that you get the errors above by typing up the two programs as `error1.py` and `error2.py` and save the programs in the `module0` folder before submitting.
+:::
+
+### 0.5 A peek at a more complex program
+Just to see what's coming later, let's get a sense of what a more complex program _looks like_.
+
+Your goal is to look through it with bemused curiosity, as if studying an incomprensible work of abstract art.
+
+We'll just examine the some surface features, as we would when examining some undeciphered ancient script such as:
+![](../../../media/units/unit0/module0/indus-script.jpg)
+
+Let's start by running the program.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.5
+
+Download <a href="../../../media/units/unit0/module0/whackamole.py" download>**whackamole.py**</a> into your `module0` folder Then open it and run it. You should see
+![](../../../media/units/unit0/module0/whackamole.png)
+The purpose of the program and how you use it should be easy to figure out.
+:::
+
+Let's point out a few things:
+
+- Unlike the toy `test.py` example, this program actually does something nontrivial.
+- The program brings up a window, and allows a user to interact with it (the program).
+
+Now let's list the program and then point out some "surface" features.
+
+The full program:
+
+```python
+# whackamole with nerf gun
+
+# Use programs written by others through "import"
+import tkinter as tk  
+
+# Define a window
+window = tk.Tk()
+
+# The instructions at the top
+instructions = 'Click reset, then click fire to strike the mole'
+label = tk.Label(text=instructions)
+label.pack()
+
+# Build a rectangular space on which to draw 
+# shapes like circles
+w = 300
+h = 200
+canvas = tk.Canvas(master=window, width=w, height=h)
+canvas.pack()
+
+# These are variables that control the 
+# position of the target and nerf ball
+targetX = 0
+targetVX = 10
+nerfX = 0
+nerfY = h-10
+nerfVX = 20
+nerfVY = 0
+nerfAY = -3
+delT = 0.1
+nerfFired = False
+
+
+# This is what we want to do when the 
+# reset button is clicked:
+def reset():
+    global nerfFired, targetX, nerfX, nerfY, nerfVY
+    nerfFired = False
+    targetX = 0
+    nerfX = 0
+    nerfY = h-1
+    nerfVY = 0
+    canvas.delete("all")
+    print('reset')
+
+# When the fire button is clicked, we change 
+# the status of the nerf gun
+def fire():
+    # start launch
+    global nerfFired
+    nerfFired = True
+    print('fired')
+
+# Build the three buttons called "reset", "fire" and "quit"
+frame = tk.Frame(master=window)
+frame.pack()
+
+resetb = tk.Button(
+    master=frame, text="reset", relief=tk.RIDGE, 
+    fg='black', bg='grey', height=2, width=5,command=reset)
+resetb.grid(row=0, column=0)
+
+fireb = tk.Button(
+    master=frame, text="fire", relief=tk.RIDGE, 
+    fg='black', bg='grey', height=2, width=5, command=fire)
+fireb.grid(row=0, column=1)
+
+quitb = tk.Button(
+    master=frame, text="quit", relief=tk.RIDGE, fg='black', 
+    bg='grey', height=2, width=5, command=window.destroy)
+quitb.grid(row=0, column=2)
+
+# This part of the code draws and animates
+def run():
+    global targetX, nerfX, nerfVY, nerfY
+    canvas.delete("all")
+    targetX += targetVX * delT
+    canvas.create_rectangle(
+        targetX, h-10, targetX+10, h, fill="green")
+    if nerfFired:
+        nerfX += nerfVX * delT
+        nerfVY += nerfAY * delT
+        nerfY += nerfVY * delT
+    canvas.create_oval(
+        nerfX+5,h-nerfY+5, nerfX+15, h-nerfY+15, 
+        fill="red")
+    window.after(1, run)
+
+# Launch the window and start the animation
+window.after(1, run)
+window.mainloop()
+```
+Yes, that's a long program! Now let's point out some features:
+
+First, some features from the first half of the program:
+![](../../../media/units/unit0/module0/whackamole2.png)
+
+And some from the latter part:And some from the latter part:
+![](../../../media/units/unit0/module0/whackamole3.png)
+
+### 0.6 GUI vs command-line
+GUI stands for: Graphical User Interface.
+
+And is pronounced like "gooey".
+
+The difference between GUI and command-line programs:
+
+- Programs like `test.py` from earlier printed plain text. These are _Command-line_ programs.
+- Programs like `whackamole.py` bring up their own little window on your screen. These are called GUI programs.
+- GUI programs are typically more complicated because one has to specify all the elements (buttons etc) of the interface.
+- We will spend quite a bit of time learning programming with simpler (albeit less exciting) command-line programs.
+- However, we will occasionally work with GUI programs because they are visually more interesting, and demonstrate applications.
+
+### 0.7 Computer science: beyond programming
+Is computer science the same as programming?
+
+Not at all:
+
+Programming is certainly a significant part, just as narrative non-fiction is a significant part of an English degree.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; But there's much more to it.
+
+What else does a computer science degree feature? Typically:
+
+- Programming devices (units 9-10).
+- An understanding of the hardware (units 11-12).
+- Algorithms: the science in computer science.
+- Theory: understanding fundamental theoretical limitations of computation.
+- A deeper understanding of how computer systems work: networks, databases, operating systems.
+
+But also electives among (to name a few):
+
+- Artificial intelligence, machine learning, robotics, computer vision, natural language processing.
+- Design of interfaces.
+- Graphics, animation, visualization.
+- Digital humanities, computing for arts and social sciences.
+- Scientific computing.
+- Computational X, where X=biology, physics, economics ...
+- Educational tools, health data systems.
+- Medical devices, prosthetics, control of mechanical systems
+
+### 0.8 How to succeed as a student
+The challenge in learning programming:
+
+**1:** it's an alien world.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; Takes getting used to.
+
+**2:** it's a mental skill
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; Skills are acquired slowly, with much practice, and in fits and starts.
+
+**3:** there are confounding issues
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; some knowledge of (regrettably) <em>computerese</em> needed.
+
+**4:** it's easy to feel overwhelmed or intimidated
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; your neighbor may appear to be "getting it" while you feel you don't.
+
+What you should expect:
+
+- You can't learn instantly
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; You may have to see a concept multiple times to "get it".
+- You may occasionally feel bewildered.
+- There are some things that can't be understoodat this stage.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; Not enough background.
+- It's deceptively easy to understand an idea when reading or viewing but devilishly harder to do it yourself.
+
+How to succeed:
+
+- Make progress every day
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; Each module builds on previous modules
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; Can't afford to let <em>anything</em> slide.
+- Be willing to put the effort 
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; Do <em>all</em> exercises, assignments etc.
+- Practice being irrepressibly positive.
+
+:::{.callout-note}
+[What to rememeber about submitting work](../../../submit-remember.qmd)
+:::
+
+<!-- <br>
+[Next Module: **Module 0.1**](./module0.1.qmd){.button .next} -->
+
+</body>
+</html>

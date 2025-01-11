@@ -1,0 +1,66 @@
+---
+title: "Installing an Editor"
+format:
+  html:
+    code-copy: false
+    bread-crumbs: true
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+*Getting Started with Your Coding Journey*
+
+## Understanding the Basics
+
+In the realm of programming, your choice of an editor is pivotal. It serves as your creative hub, where your code takes shape. Here's a brief overview of key features editors bring to the table:
+
+- **Text Editing**: Core to any editor is the ability to write, edit, and organize code. Look for features like syntax highlighting, auto-indentation, and code completion for an enhanced coding experience.
+
+- **Code Execution**: Some editors go beyond editing by enabling interactive code execution, which is handy for data analysis and experimentation.
+
+- **Extensions and Plugins**: Editors are highly customizable. Enhance functionality by installing extensions or plugins tailored to your needs, adding Python-specific tools or themes.
+
+- **IDEs (Integrated Development Environments)**: Editors offer a complete development environment, including debugging and version control integration.
+
+For your CS1012 course, we recommend Thonny as the primary choice, with Spyder as a valuable alternative:
+
+- **Thonny**: Thonny is a beginner-friendly Python IDE, designed to make it easy to get started with programming. It comes with a simple interface and integrated tools for package management.
+
+- **Spyder**: Spyder is a powerful IDE for scientific computing and data analysis. It provides features like an interactive console, variable explorer, and integrated help, making it a solid alternative to Thonny.
+
+Let's dive into the installation process:
+
+### **Select an Option Appropriate for Your Operating System**
+<!-- <div id="steps"></div> -->
+
+#### **MacOS:**
+
+- **Step 1**: [Install Thonny for Mac](./guides/thonny-mac.qmd)
+
+- **Step 2**: [Install Spyder for Mac](./guides/anaconda-mac.qmd)
+
+#### **Windows:**
+
+- **Step 1**: [Install Thonny for Windows](./guides/thonny-windows.qmd)
+
+- **Step 2**: [Install Spyder for Windows](./guides/anaconda-windows.qmd)
+
+Choose Thonny as your primary choice for its simplicity, especially if you're new to coding. However, if you prefer a more feature-rich environment, Spyder is an excellent alternative.
+
+Follow the respective installation instructions and embark on your coding journey with confidence!
+
+Once you have your preferred editor installed, you're ready to start coding. Happy exploring!
+
+</body>
+</html>

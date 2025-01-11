@@ -1,0 +1,99 @@
+---
+title: "Thonny Installation Guide for Windows"
+---
+
+## Introduction
+
+This guide provides a step-by-step walkthrough for installing Thonny, a user-friendly Python IDE, on your Windows computer. Thonny simplifies Python programming and is suitable for learners and developers.
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+1. A Windows computer.
+2. An active internet connection.
+3. Adequate disk space for the installation.
+
+## Installation Steps
+
+### 1. Visit Thonny's Official Website
+Go to [https://www.thonny.org/](https://www.thonny.org/) to access Thonny's official download page.
+
+![Visit Official Website](../../../media/thonny-windows/step_1.png)
+
+### 2. Select the Windows Download Option
+Hover your mouse over the "**Windows**" option in the "_Download version…_" box and click to initiate the download.
+
+![Download Thonny](../../../media/thonny-windows/step_2.png)
+
+### 3. Execute the Installer
+Locate the downloaded file, typically in your "_Downloads_" folder. Double-click the Thonny installer to run it.
+
+![Download Thonny](../../../media/thonny-windows/step_3.png)
+
+### 4. Confirm Installation
+
+Click "**Next**" to proceed with the installation.
+
+![Confirm Installation](../../../media/thonny-windows/step_4.png)
+
+### 5. Agree to License Agreements
+
+Accept the license agreements by clicking "**Agree**."
+
+![License Agreement](../../../media/thonny-windows/step_5.png)
+
+### 6. Choose Installation Location
+
+Select a location for installation; the default option is acceptable.
+
+![Installation Location](../../../media/thonny-windows/step_6.png)
+
+### 7. Select Start Menu Folder
+
+Choose a start menu folder; the default option is acceptable.
+
+![Start Menu Folder](../../../media/thonny-windows/step_7.png)
+
+### 8. Create Desktop Icon
+
+Opt to create a desktop icon for easy access. Click "_Create Desktop Icon_".
+
+![Desktop Icon](../../../media/thonny-windows/step_8.png)
+
+### 9. Initiate Installation
+
+Click "**Install**" to start the installation process.
+
+![Install Thonny](../../../media/thonny-windows/step_9.png)
+
+### 10. Completion
+
+Once the installation is complete, click "**Finish**."
+
+![Installation Complete](../../../media/thonny-windows/step_10.png)
+
+### 11. Optional Cleanup
+
+Consider moving the installer file to the Recycle bin if desired.
+
+![Move to Recycle bin](../../../media/thonny-windows/step_3.png)
+
+### 12. Launch Thonny
+
+Thonny is now installed on your computer. Open the Thonny editor by clicking on the desktop icon.
+![Launch Thonny](../../../media/thonny-windows/step_12.png)
+
+### 13. Verification
+
+Confirm the successful installation by viewing the Thonny screen window.
+
+![Verification](../../../media/thonny-windows/step_13.png)
+
+## Conclusion
+
+Congratulations! Thonny is successfully installed on your Windows computer. 
+
+Begin your coding journey with Thonny, and for additional guidance, consult the official documentation at [https://docs.thonny.org/](https://docs.thonny.org/). 
+
+If you encounter any issues or have questions, feel free to seek assistance from the Thonny community or refer to the documentation for troubleshooting tips.

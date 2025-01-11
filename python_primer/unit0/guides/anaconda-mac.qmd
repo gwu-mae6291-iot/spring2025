@@ -1,0 +1,87 @@
+---
+title: "Anaconda and Spyder Installation Guide for macOS"
+---
+
+## Introduction
+
+This guide will lead you through the process of installing Anaconda, a popular Python distribution, on your macOS computer. Anaconda provides a convenient way to manage Python packages and environments, and it includes Spyder, a powerful IDE for scientific computing.
+
+## Prerequisites
+
+Before you begin, make sure you have the following:
+
+1. A macOS computer.
+2. An internet connection.
+3. Adequate disk space for the installation.
+
+## Installation Steps
+
+### 1. Download Anaconda
+Visit the Anaconda download page at [https://www.anaconda.com/download](https://www.anaconda.com/download).
+
+### 2. Choose the macOS Installer
+Click on the "**Download**" button under the macOS section depending on your System-on-chip (**Intel/M1/M2**) to download the Anaconda installer for macOS.
+
+![Download Anaconda](../../../media/anaconda-mac/screenshot-1.png)
+
+### 3. Run the Installer
+
+- Locate the downloaded file, usually in your "_Downloads_" folder.
+- Double-click the Anaconda disk image (`.dmg`) file to open it and click "**Allow**" when prompted.
+
+![Run Installer](../../../media/anaconda-mac/screenshot-2.png)
+
+![Allow Installation](../../../media/anaconda-mac/screenshot-3.png)
+
+### 4. Follow the Installer Wizard
+
+- Follow on-screen instructions to begin the installation.
+- Read and accept the license agreement when prompted.
+
+![Read Me](../../../media/anaconda-mac/screenshot-4.png)
+
+![License Agreement](../../../media/anaconda-mac/screenshot-5.png)
+
+### 5. Install Anaconda
+Click the "**Install**" button to start the installation process. This may take a few minutes.
+
+![Install](../../../media/anaconda-mac/screenshot-6.png)
+
+### 6. Complete the Installation
+Once installation is complete, you'll see a confirmation message. Click "**Continue**" and close the installation wizard by clicking "**Close**".
+
+![Installation Complete](../../../media/anaconda-mac/screenshot-7.png)
+
+![Close Installation Wizard](../../../media/anaconda-mac/screenshot-8.png)
+
+### 7. Move the Installer File to Trash **(Optional)**
+
+![Move the Installer to Trash](../../../media/anaconda-mac/screenshot-9.png)
+
+### 8. If prompted to update the navigator, select "No, don't show again"
+
+![Don't Update](../../../media/anaconda-mac/screenshot-10.png)
+
+### 9. You're <u>NOT REQUIRED</u> to Log in/Sign up for Anaconda Cloud; close the prompt by clicking the "x" button
+
+![Don't Log in/Sign up](../../../media/anaconda-mac/screenshot-13.png)
+
+### 10. Access Spyder through Anaconda Navigator
+
+- Open _Anaconda Navigator_, which is now installed on your system.
+
+![Launch Anaconda Navigator](../../../media/anaconda-mac/Step_12.png)
+
+- Locate Spyder and click "**Launch**" to open the _Spyder IDE_.
+
+![Launch Spyder](../../../media/anaconda-mac/Step_13.png)
+
+![Spyder](../../../media/anaconda-mac/Step_14.png)
+
+## Conclusion
+
+Congratulations! You've successfully installed Anaconda and Spyder on your macOS computer. Utilize Spyder for scientific computing and Python development. 
+
+For further guidance on using Anaconda, refer to the official documentation at [https://docs.anaconda.com/](https://docs.anaconda.com/). 
+
+If you encounter any issues or have questions, seek assistance from the Anaconda community or consult the documentation for troubleshooting tips.

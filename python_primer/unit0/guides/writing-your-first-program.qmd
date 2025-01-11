@@ -1,0 +1,71 @@
+---
+title: "Instructions for typing and running your first program"
+format:
+  html:
+    code-copy: false
+    bread-crumbs: true
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+## Objectives
+We will now have you <em>type</em>, </em>run</em>, and save your first <em>computer program</em>.
+
+::: {.callout-note}
+- Programs are <em>typed</em> in using your computer's keyboard, just as you would type in an email or text document. 
+- And just as the "thing you are typing into" is different for email and for text-editing, there is a different "thing" to type programs into.
+- The <em>typing</em> is one part of getting a program. If you just type your program, it will just be sitting there on your computer. But you want to go the next step and <em>run</em> (or, execute, as we say) the program. Typing and not-running is loosely analogous to typing an email but not <em>sending</em> it (the email will just remain in composed-form, but go nowhere). Similarly, typing text into Word doesn't mean it gets "published".
+- The "thing" into which you type and run your program is called a <em>code editor</em> or an IDE (Integrated Development Environment, a mouthful).
+- We are going to give you the option of using one of two code editors, <em>Thonny</em> or <em>Spyder</em>. Think of them as apps that help you type and run programs.
+:::
+
+#### **Type and Execute `test.py`**
+Choose between:
+
+- Mac _(Option A)_: [**Helloworld for Mac users using Thonny**](hello.qmd#hello-thonny-mac)
+
+- Mac _(Option B)_: [**Helloworld for Mac users using Spyder**](hello.qmd#hello-spyder-mac)
+
+- Windows _(Option A)_: [**Helloworld for Windows users using Thonny**](hello.qmd#hello-thonny-win)
+
+- Windows _(Option B)_: [**Helloworld for Windows users using Spyder**](hello.qmd#hello-spyder-win)
+
+
+
+
+## macOS Users
+
+### Option A: Helloworld in Thonny 
+<div id="hello-thonny-mac"></div>
+
+{{< video ../../../media/hello/u0-mod0-mac-thonny.mp4 aspect-ratio="21x9" >}}
+
+
+### Option B: Helloworld in Spyder 
+<div id="hello-spyder-mac"></div>
+
+{{< video ../../../media/hello/u0-mod0-mac-spyder.mp4 aspect-ratio="21x9" >}}
+
+
+
+## Windows Users
+### Option A: Helloworld in Thonny 
+<div id="hello-thonny-win"></div>
+
+{{< video ../../../media/hello/u0-mod0-win-spyder.mp4 aspect-ratio="21x9" >}}
+
+### Option B: Helloworld in Spyder 
+<div id="hello-spyder-win"></div>
+
+{{< video ../../../media/hello/u0-mod0-win-spyder.mp4 aspect-ratio="21x9" >}}

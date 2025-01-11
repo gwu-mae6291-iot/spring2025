@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAE 6291 - Module 3: Loops: the for-loop</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">MAE 6291</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policies.html"> 
+<span class="menu-text">Course policies</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../../install-editor.html">
+ <span class="dropdown-text">Much Needed Software Installations</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Python Primer</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/basics.html">
+ <span class="dropdown-text">Basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/constructs.html">
+ <span class="dropdown-text">Constructs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../instructor.html"> 
+<span class="menu-text">Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#an-example" id="toc-an-example" class="nav-link" data-scroll-target="#an-example">3.0 An example</a></li>
+  <li><a href="#variations" id="toc-variations" class="nav-link" data-scroll-target="#variations">3.1 Variations</a></li>
+  <li><a href="#nested-for-loops" id="toc-nested-for-loops" class="nav-link" data-scroll-target="#nested-for-loops">3.2 Nested for-loops</a></li>
+  <li><a href="#tracing-through-a-program-in-detail" id="toc-tracing-through-a-program-in-detail" class="nav-link" data-scroll-target="#tracing-through-a-program-in-detail">3.3 Tracing through a program in detail</a></li>
+  <li><a href="#reading-and-writing" id="toc-reading-and-writing" class="nav-link" data-scroll-target="#reading-and-writing">3.4 Reading and writing</a></li>
+  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">3.5 When things go wrong</a></li>
+  <li><a href="#a-peek-at-the-future" id="toc-a-peek-at-the-future" class="nav-link" data-scroll-target="#a-peek-at-the-future">3.6 &nbsp;&nbsp; A peek at the future</a></li>
+  <li><a href="#some-things-to-keep-mind" id="toc-some-things-to-keep-mind" class="nav-link" data-scroll-target="#some-things-to-keep-mind">3.7 &nbsp;&nbsp; Some things to keep mind</a></li>
+  <li><a href="#meta" id="toc-meta" class="nav-link" data-scroll-target="#meta">3.8 Meta</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Module 3:</strong> Loops: the for-loop</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+<style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+
+
+<!-- <div class="breadcrumbs">
+  <a href="../../../index.qmd">Home</a> &raquo;
+  <a href="#">Unit 0</a> &raquo;
+  <span class="current-page">Module 3</span>
+</div> -->
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this module, for simple HelloWorld-like programs, you will be able to:</p>
+<ul>
+<li>Identify the new syntactic elements with the basic output-only for-loop.</li>
+<li>Demonstrate ability to mentally trace execution of for-loops.</li>
+<li>Produce desired output using for-loop and print’s.</li>
+<li>Distinguish between count-up and count-down loops.</li>
+<li>Use some nested for-loops with independent variables.</li>
+<li>Use some nested for-loops with dependent conditions.</li>
+<li>Identify and correct syntax errors related to above objectives.</li>
+<li>Distinguish between syntax errors and debugging.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="../../additional-resources/insructor-notes/week-1.qmd"><strong>Instructor’s lecture slide deck week 1</strong></a></p>
+<p><a href="../../additional-resources/insructor-notes/week-2.qmd"><strong>Instructor’s lecture slide deck week 2</strong></a></p>
+<p><a href="../../additional-resources/insructor-notes/week-3.qmd"><strong>Instructor’s lecture slide deck week 3</strong></a></p>
+<p><a href="../../additional-resources/insructor-notes/week-4.qmd"><strong>Instructor’s lecture slide deck week 4</strong></a></p>
+<p><a href="../../additional-resources/insructor-notes/week-5.qmd"><strong>Instructor’s video lectures week 5</strong></a></p>
+</div>
+</div>
+</section>
+<section id="an-example" class="level2">
+<h2 class="anchored" data-anchor-id="an-example">3.0 An example</h2>
+<p>Consider the following program:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_big_M():  </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'** **'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'* * *'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_big_O():  </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*****'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*****</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>print_big_M()</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>print_big_O()  </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>print_big_O()  <span class="co"># 1st repetition</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>print_big_O()  <span class="co"># 2nd repetition</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>print_big_O()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>print_big_O()</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>print_big_O()  <span class="co"># 5th repetition - 6 O's in all</span></span></code></pre></div>
+<p>What we would like is a way to <em>organize</em> repetition.</p>
+<p>We will do this using one version (there are many) of the <em>for-loop</em>, one of the most important programming constructs:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_big_M():  </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'** **'</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'* * *'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_big_O():  </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*****'</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*   *'</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*****</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>print_big_M()</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>):</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    print_big_O()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>animal_sounds_loop.py</code> and run it. Also save the file so that it can be submitted (You will need to save the appropriate files for every such “type up” exercise).</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the example above as a point of reference, print out your own animal sound. Be sure to use a for-loop to repeatedly print one letter in the sound. Write your code in <code>my_pet_sound_loop.py</code>.</p>
+</div>
+</div>
+<p>Let’s zoom in on the for-loop and examine it.</p>
+<p>To do so, we’ll write a different for-loop:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_forloop_example.py</code> and run it. You should observe this:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span></span></code></pre></div>
+<p>In the place in the code where you see the number 6, replace 6 with 10 and then run the program. Next, try 2 instead of 6. Finally, try 0 instead of 6. What is the output in each case? Discuss the program with your TA to understand what happens when you replace the number 6 with 10 and 2. Submit your working program with the value 6 as the parameter in range() function in the for loop.</p>
+</div>
+</div>
+<p>Let’s now examine elements of the loop: - There’s the special word <code>for</code> <img src="../../../media/units/unit0/module3/forloop1.png" class="img-fluid"></p>
+<ul>
+<li><p>Then, there’s the for-loop variable <img src="../../../media/units/unit0/module3/forloop2.png" class="img-fluid"></p></li>
+<li><p>The special word <img src="../../../media/units/unit0/module3/forloop3.png" class="img-fluid"></p></li>
+<li><p>The element that controls the spread of different values that variable <code>i</code> takes on at each iteration of the loop: <img src="../../../media/units/unit0/module3/forloop4.png" class="img-fluid"></p></li>
+<li><p>The colon at the end: <img src="../../../media/units/unit0/module3/forloop5.png" class="img-fluid"></p></li>
+<li><p>Finally, the block of code (in this case, just one line) that’s called the <em>body</em> of the loop: <img src="../../../media/units/unit0/module3/forloop6.png" class="img-fluid"></p></li>
+</ul>
+<p>Let’s change the program slightly and then set about explaining how the loop works:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Hello'</span>)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_forloop_example2.py</code> and run the program.</p>
+</div>
+</div>
+<p>Observe that the body of this for-loop has two statements: <img src="../../../media/units/unit0/module3/forloop7.png" class="img-fluid"></p>
+<p>Let’s now use a slightly fictionalized way to explain the <em>action</em> of this loop:</p>
+<ul>
+<li><p>Think of the Python part of your computer (since your laptop does many things) as reading your program and then carrying out the instructions.</p></li>
+<li><p>When it encounters the <code>for</code> word, it says “Ah, here’s a for-loop”.</p></li>
+<li><p>Then it sees the variable <code>i</code> and says (to itself), “This is the variable whose value will change after each iteration”.</p></li>
+<li><p>Then it sees the term <code>range(6)</code> and says “Oh, i will start at 0 and end just before 6, which means it will be 0 in the first iteration, 1 in the second, 2 in the third, 3 in the fourth, 4 in the fifth, 5 in the last”.</p></li>
+<li><p>Then, it starts executing the body of the loop for the first iteration:</p>
+<ul>
+<li>For the first iteration, i=0.</li>
+<li>The entire body of the loop executes with i being replaced by 0: <img src="../../../media/units/unit0/module3/forloop8.png" class="img-fluid"></li>
+<li>For the second iteration, i=1 <img src="../../../media/units/unit0/module3/forloop9.png" class="img-fluid"></li>
+<li>Third iteration: <img src="../../../media/units/unit0/module3/forloop10.png" class="img-fluid"></li>
+<li>Fourth iteration: <img src="../../../media/units/unit0/module3/forloop11.png" class="img-fluid"></li>
+<li>Fifth iteration: <img src="../../../media/units/unit0/module3/forloop12.png" class="img-fluid"></li>
+<li>Sixth and final iteration: <img src="../../../media/units/unit0/module3/forloop13.png" class="img-fluid"></li>
+</ul></li>
+<li><p>Now the for-loop is done and the execution goes past the whole for-loop to whatever’s there.</p>
+<ul>
+<li>In this case, there’s no other code and the program completes.</li>
+</ul></li>
+</ul>
+<section id="video" class="level6">
+<h6 class="anchored" data-anchor-id="video"><strong>3.5 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.5.mp4"></video></div>
+</section>
+</section>
+<section id="variations" class="level2">
+<h2 class="anchored" data-anchor-id="variations">3.1 Variations</h2>
+<p>To explore for-loops further, we’ll look at some variations of the basic for-loop:</p>
+<p><strong>1.</strong> First, we could have named our for-loop variable</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(count)</span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s customary to use short variable names like <code>i</code> and <code>j</code></p>
+</div>
+</div>
+<p><strong>2.</strong> To go through a loop five times, any range of numbers will do:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">16</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Here, the <code>range</code> feature has both a starting value (10) and just-after-ending value (16) specified.</li>
+<li>This will print the numbers 10 through 15.</li>
+</ul>
+</div>
+</div>
+<p><strong>3.</strong> We don’t have to increment the for-loop variable by 1.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">16</span>, <span class="dv">2</span>):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<ul>
+<li>This prints the numbers 10, 12, 14.</li>
+<li>The number 2 in <code>range(10, 16, 2)</code> specifies an increment <em>amount</em>.</li>
+<li>Thus, we start with i taking the value 10 in the first iteration.</li>
+<li>In the second iteration, i becomes 12 (because 10+2 = 12).</li>
+<li>In the third iteration, i becomes 14 (incrementing 12 by 2).</li>
+<li>If we were to increment 14 by 2 it becomes 16 which is past the last value allowed.</li>
+<li><strong>Important:</strong> think of 16 as “the variable cannot have this value or anything past this value”.</li>
+</ul>
+<p><strong>4.</strong> We can decrement, as in:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">16</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<ul>
+<li>This will print 16, 15, 14, 13, 12, 11.</li>
+<li>We start with 16 (the first part of the range).</li>
+<li>After each iteration we apply the increment/decrement amount.</li>
+<li>In this case, applying -1 to 16 gives us 15, which gets printed.</li>
+<li>Then, the third time through, i becomes 14. And so on.</li>
+<li>In the last iteration, i becomes 11.</li>
+<li>Finally, when i is decremented to 10, the loop is ended.</li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above four examples in <code>my_forloop_variation1.py</code>, <code>my_forloop_variation2.py</code>, <code>my_forloop_variation3.py</code>, and <code>my_forloop_variation4.py</code>. Run to confirm the output.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.7
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>count_odd_up.py</code>, write a loop to print the odd numbers from 1 to 25 (thus, skipping by 2, and including 1 and 25 in the output).</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>count_even_down.py</code>, write a loop to print the even numbers from 24 down to 2 (inclusive of 24 and 2).</p>
+</div>
+</div>
+<section id="video-1" class="level6">
+<h6 class="anchored" data-anchor-id="video-1"><strong>3.9 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.9.mp4"></video></div>
+</section>
+</section>
+<section id="nested-for-loops" class="level2">
+<h2 class="anchored" data-anchor-id="nested-for-loops">3.2 Nested for-loops</h2>
+<p>We’ll start by writing a program to print a little number triangle like this:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dv">22</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dv">333</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="dv">4444</span></span></code></pre></div>
+<p>Notice: there’s repetition across a row of numbers: a potential use of for-loops!</p>
+<p>We’ll do this in stages, starting with this program:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span>)               <span class="co"># print 1 all by itself</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):     <span class="co"># i will start at 0, go up to 1</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">2</span>, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()                <span class="co"># Print nothing but go to the next line.</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):     <span class="co"># i ranges from 0 to 2</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">3</span>, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):     <span class="co"># i ranges from 0 to 3</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">4</span>, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span></code></pre></div>
+<p>Observe:</p>
+<ul>
+<li>We’ve used <code>end=''</code> (two single quotes in succession) to avoid printing each number on a single line.</li>
+<li>One could use two double quotes in succession as well.</li>
+<li><code>print()</code> merely goes to the next line. <br>(Or, stated differently, ends the current line being printed.)</li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Add a row for <code>5</code> (with five of them), writing your code in <code>my_forloop_print.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.11
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Just for the heck of it, could one use a for-loop to achieve the printing of <code>1</code> all by itself? That is, can a for-loop be set up so that you go into it exactly once? Write you code in <code>my_forloop_print2.py</code></p>
+</div>
+</div>
+<p>Next, observe that the upper-limits of the for-loops are themselves increasing: <img src="../../../media/units/unit0/module3/forlooprint.png" class="img-fluid"></p>
+<p>Also, observe that the very thing we’re printing across a row is the loop limit itself: <img src="../../../media/units/unit0/module3/forlooprint2.png" class="img-fluid"></p>
+Another way to say this: <!-- ``` -->
+<blockquote class="blockquote">
+When the value is 2, print a row of two 2’s <br>When the value is 3, print a row of three 3’s <br>When the value is 4, print a row of four 4’s
+</blockquote>
+<!-- ``` -->
+<p>Thus, we could try to do is:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">5</span>):   <span class="co"># let j iterate from 2 to 4</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print j occurences of j using a loop</span></span></code></pre></div>
+<p>But we already know how to print a row of j’s:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">5</span>):   <span class="co"># let j iterate from 2 to 4</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print a row of j's (j of them)</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span> (j):</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(j, end<span class="op">=</span><span class="st">''</span>)</span></code></pre></div>
+<p>Let’s put this together in a complete program:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span>)                   <span class="co"># print 1 all by itself</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">5</span>):      <span class="co"># j iterates from 2 to 4</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(j):     <span class="co"># for each j, print j of them</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(j, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()    </span></code></pre></div>
+<section id="video-2" class="level6">
+<h6 class="anchored" data-anchor-id="video-2"><strong>3.12 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.12.mp4"></video></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.13
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Change the program to print a fifth row with five <code>5</code>’s. Also adjust the for-loop so that the for-loop also takes care of printing the sole <code>1</code> that appears in the row of the sole <code>1</code>’s. That is, adjust the for-loop conditions so that you don’t need the stand-alone <code>print(1)</code> to print <code>1</code>. Write your code in <code>my_forloop_print3.py</code>.</p>
+</div>
+</div>
+<p>Let’s review what we learned above:</p>
+<ul>
+<li>The outer loop variable’s value is used in the inner loop: <img src="../../../media/units/unit0/module3/forlooprint3.png" class="img-fluid"></li>
+<li>Consider a single iteration of the outer-loop (e.g., when <code>j</code> is <code>3</code>). <img src="../../../media/units/unit0/module3/forlooprint4.png" class="img-fluid">
+<ul>
+<li>For this value of <code>j</code>, the inner loop executes <code>j</code> times.</li>
+<li>Thus, when <code>j</code> is <code>3</code>, the inner loop has <code>3</code> iterations.</li>
+</ul></li>
+<li>This is an example of a <em>nested for-loop</em> in which the inner loop’s execution <em>depends</em> on the value of the outer-loop variable.</li>
+<li>Another way to say it: a <em>nested for-loop</em> has one for-loop inside another.</li>
+<li>We will use <em>nesting</em> in other contexts as well, when one structure is placed inside another.</li>
+</ul>
+</section>
+</section>
+<section id="tracing-through-a-program-in-detail" class="level2">
+<h2 class="anchored" data-anchor-id="tracing-through-a-program-in-detail">3.3 Tracing through a program in detail</h2>
+<p>We’ll now look at an example of how to execute a program “by hand”. That is, how to <em>trace</em> a program’s execution by painstakingly following its execution step-by-step.</p>
+<p>At first this will appear tedious, but it is <em><b>critical</b></em> to a firm understanding of how programs execute, and eventually to your own writing of programs.</p>
+<p>We’ll first do a longer, more narrative version here, and then show you how to submit a much shorter version for your exercises.</p>
+<p>For our example, let’s look at the program we last saw:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span>)                   </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">5</span>):      </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(j):     </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(j, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()    </span></code></pre></div>
+<p>Let’s now dive into the longer version, just for the sake of understanding.</p>
+<p>To make best use of this:</p>
+<ul>
+<li>Open this same page in another browser, and have the program side-by-side, as you read what’s below.</li>
+<li>Read out <em>aloud</em> what you see below.</li>
+</ul>
+<p>Ready? Let’s trace through: <img src="../../../media/units/unit0/module3/looptrace1.png" class="img-fluid"></p>
+<ul>
+<li><p>Right at the start, the first line is <code>print(1)</code>. This prints out 1, and moves to the next line. <img src="../../../media/units/unit0/module3/looptrace2.png" class="img-fluid"></p></li>
+<li><p>Initially j=2 at the start of the outer for-loop: <img src="../../../media/units/unit0/module3/looptrace3.png" class="img-fluid"></p></li>
+<li><p>Since j is 2, it’s within the range, and we enter the outer for-loop.</p>
+<ul>
+<li><p>Now we encounter the inner for-loop, where i is set to 0</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>when <code>range</code> has only one number specified, it’s understood to be the upper limit.</p>
+</div>
+</div></li>
+<li><p>The upper limit is the <em>current value of j</em>, which is 2. <img src="../../../media/units/unit0/module3/looptrace4.png" class="img-fluid"></p></li>
+<li><p>Inside the inner loop, we execute <code>print(1)</code>, which, because j is now 2, will print 2. <img src="../../../media/units/unit0/module3/looptrace5.png" class="img-fluid"></p></li>
+<li><p>We’re at the end of the inner loop, so now i increments to 1: <img src="../../../media/units/unit0/module3/looptrace6.png" class="img-fluid"></p></li>
+<li><p>So now inside the inner-loop, we print 2 again <img src="../../../media/units/unit0/module3/looptrace7.png" class="img-fluid"></p></li>
+<li><p>Then, at the end of the inner for-loop, we return to the top where i increments to 2.</p></li>
+<li><p>Since i is at the limit, we exit the inner for-loop. <img src="../../../media/units/unit0/module3/looptrace8.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The inner loop iterated twice.</p>
+</div>
+</div></li>
+</ul></li>
+<li><p>Next, we go past the inner loop to <code>print()</code>, which goes to the <em>beginning</em> of the next line. <img src="../../../media/units/unit0/module3/looptrace9.png" class="img-fluid"></p></li>
+<li><p>This completes the <em>first iteration</em> of the outer, after which we go to the top of the outerloop and increment j. <img src="../../../media/units/unit0/module3/looptrace10.png" class="img-fluid"></p></li>
+<li><p>Execution now enters the outerloop with j set to 3.</p>
+<ul>
+<li>Now we encounter the inner for-loop, where i is set to 0</li>
+<li>The upper limit is the <em>current value of j</em>, which is 3.</li>
+<li>So, the inner loop executes three times, with i first set to 0, then to 1, then to 2.</li>
+<li>This will result in printing three 3’s.</li>
+<li>When i becomes 3, it hits the inner-loop limit and proceeds to the <code>print()</code> that follows.</li>
+<li>The output so far is:
+<ul>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">2</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">3</span> <span class="dv">3</span></span></code></pre></div>
+</li></ul></li>
+<li><p>This completes the iterations of the inner loop with the outer loop j set to 3.</p></li>
+<li><p>Next, j becomes 4 <img src="../../../media/units/unit0/module3/looptrace11.png" class="img-fluid"></p>
+<ul>
+<li>The inner loop starts with i set to 0.</li>
+<li>Each time through i increments.</li>
+<li>Until i hits the limit j (which is 4 now).</li>
+<li>This results in four 4’s being printed in a line.</li>
+<li>Then we come out of the inner loop and execute <code>print()</code>, which goes to the next line.</li>
+</ul></li>
+<li><p>The output so far is</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">2</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">3</span> <span class="dv">3</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">4</span> <span class="dv">4</span> <span class="dv">4</span></span></code></pre></div></li>
+<li><p>Finally at the end of the outer loop, j becomes 5 and hits the limit of the outer loop <img src="../../../media/units/unit0/module3/looptrace12.png" class="img-fluid"></p></li>
+</ul>
+<p>Yes, that was long. But doing this many times will help you understand how to read programs. Later, you will become good at this and will, with a quick glance at the inner-loop, say “Oh, this prints 2 twice in the first iteration of the outer.”</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you need to submit a program’s traced-out execution, use a shorter version. For example, <a href="../../../media/units/unit0/module3/TracingExample.pdf"><strong>see this PDF for the above program</strong></a>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.14
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The discussion presented before this exercise was meant for you to develop an understanding of how to read programs. Tracing a program before running it is good way to read through the program and understand how it works. Now consider this program:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'*'</span>, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">' '</span>, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, i):</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'-'</span>, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span></code></pre></div>
+<p>Firstly, type up the program in <code>my_forloop_trace.py</code> and run it. If you are encountering any errors discuss with your TA and make sure there aren’t any errors before submitting the program.</p>
+<p>Secondly, trace through the values of i and j using approach presented in the PDF of the example program presented earlier. See <a href="../../../media/units/unit0/module3/TracingExample.pdf"><strong>this PDF for the above program</strong></a>.</p>
+<ul>
+<li>Discuss the tracing steps with your colleagues in the laboratory in groups of two or three.</li>
+<li>You can use the same table format presented therein.</li>
+<li>Do this painstakingly for each possible value of i and j.</li>
+<li>Consult your TA if you have any questions.</li>
+</ul>
+<p>Programs with nested loops can get complicated and challenging. The ultimate goal of this exercise is to get you to understand how to read programs especially when nested loops are involved.</p>
+<p>You are to only submit the working program <code>my_forloop_trace.py</code>. The tracing table need not be submitted.</p>
+<!-- First, trace through the values of i and j by hand and try to figure out what gets printed. Do this painstakingly for each possible value of i and j, remembering that i is now the name of the outerloop variable. You can use the shorter “table” format. See [**this PDF for the above program**](../../../media/units/unit0/module3/TracingExample.pdf)  Then edit, compile and execute the above program in `my_forloop_trace.py`. Discuss the program with your TA if you are encountering any errors or for any questions. -->
+</div>
+</div>
+<section id="video-3" class="level6">
+<h6 class="anchored" data-anchor-id="video-3"><strong>3.15 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.15.mp4"></video></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.16
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider this program: Write a program to print out consecutive integers in a diagonal, as in</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">3</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>   <span class="dv">4</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">5</span></span></code></pre></div>
+<p>Use a nested for-loop as in earlier examples to print the requisite number of spaces before printing a digit. Write your code in <code>my_diagonal_print.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.17
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider this program: Write a program to print out</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>I<span class="st">'m feeling cold: b rrrrrr rrrrr rrrr rrr rr r</span></span></code></pre></div>
+<p>Use a regular <code>print</code> to print everything up to the <code>b</code>. Then, use a nested for-loop for the <code>r</code>’s. Don’t forget the space between each grouping of <code>r</code>’s. Write your code in <code>my_brr_print.py</code>.</p>
+</div>
+</div>
+</section>
+<section id="video-4" class="level6">
+<h6 class="anchored" data-anchor-id="video-4"><strong>3.18 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.18.mp4"></video></div>
+</section>
+</section>
+<section id="reading-and-writing" class="level2">
+<h2 class="anchored" data-anchor-id="reading-and-writing">3.4 Reading and writing</h2>
+<p>Let’s consider how to <em>read</em> a single for-loop, such as:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">2</span>):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k, end<span class="op">=</span><span class="st">' '</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">2</span><span class="op">*</span>k)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'-'</span>)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.19
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Write up the above in <code>my_simpleloop.py</code> and run to see the output.</p>
+</div>
+</div>
+<p>Instead of explaining the execution, let’s focus on how to <em>read</em> such a program:</p>
+<ul>
+<li>The first thing to do is to observe two parts to the loop: <img src="../../../media/units/unit0/module3/loopread1.png" class="img-fluid"></li>
+<li>Next, study the for-statement to understand the nature of the iteration: <img src="../../../media/units/unit0/module3/loopread2.png" class="img-fluid"></li>
+<li>Now look inside the body: <img src="../../../media/units/unit0/module3/loopread3.png" class="img-fluid"></li>
+</ul>
+<p>Let’s also point out what to keep in mind when <em>writing</em>:</p>
+<ul>
+<li>First, the for-loop header or for-statement: <img src="../../../media/units/unit0/module3/loopread4.png" class="img-fluid"></li>
+<li>Next, the loop body: <img src="../../../media/units/unit0/module3/loopread5.png" class="img-fluid"></li>
+<li><strong>Important:</strong> we will be nitpicky about writing because good writing habits will save you a lot of trouble.</li>
+</ul>
+<p>Next, let’s combine reading with <em>mental execution</em>. Consider the following program:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> functionOne():</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*'</span>, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> functionTwo():</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*'</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> functionThree():</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>):</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>        functionOne()</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    functionTwo()</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>, <span class="dv">2</span>):</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    functionThree()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.20
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What does it print? Try to figure this out by mental execution first. Then, type it up, compile and execute to confirm, writing your code in <code>my_execution_exercise.py</code>.</p>
+</div>
+</div>
+<section id="video-5" class="level6">
+<h6 class="anchored" data-anchor-id="video-5"><strong>3.21 Video</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video6" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.21.mp4"></video></div>
+</section>
+</section>
+<section id="when-things-go-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="when-things-go-wrong">3.5 When things go wrong</h2>
+<p>As code gets more complex, it gets easier to make mistakes, and harder to find them.</p>
+<p>In each of the programs below, try to determine the error without compiling the program. Then, write up the program, compile and see what the compiler says. After that, fix the error.</p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.22
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following program is intended to go through a loop five times and print the numbers 0 through 5:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span> <span class="dv">6</span>):</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<p>Write your corrected code in <code>my_loop_exercise1.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.23
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following program is intended to go through a loop six times and print the numbers 1 through 6:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<p>Write your corrected code in <code>my_loop_exercise2.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.24
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following program is intended to go through a loop and print the numbers 15 through 19, with increments of 2, i.e., <code>15, 17, 19</code>:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">2</span>:</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<p>Write your corrected code in <code>my_loop_exercise3.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.25
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following program is intended to go through a loop and print the numbers 6 through 1, decrementing by 1, i.e., <code>6, 5, 4, 3, 2, 1</code>:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i)</span></code></pre></div>
+<p>Write your corrected code in <code>my_loop_exercise4.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.26
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following program is intended to go through a loop and print the numbers 6 through 1, decrementing by 2, i.e., <code>6, 4, 2</code></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>):</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<p>Write your corrected code in <code>my_loop_exercise5.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.27
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following program is intended to go through a loop and print the numbers 10 through18, incrementing by 2, i.e., <code>10, 12, 14, 16, 18</code>:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">2</span>):</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> count</span></code></pre></div>
+<p>Write your corrected code in <code>my_loop_exercise6.py</code>.</p>
+</div>
+</div>
+<p>Let’s point out the difference between a <em>syntax error</em> and a <em>logical</em> error:</p>
+<ul>
+<li>A <em>syntax error</em> will not allow a program to run.</li>
+<li>This means you are using the language incorrectly.</li>
+<li>On the other hand, you could have a program that has no syntax errors (it runs) but it does not produce the desired output. This means there’s a <em>logical error</em>.</li>
+<li>The process of identifying and fixing logical errors is called <em>debugging</em>.</li>
+<li>A <em>bug</em> is a logical error.</li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.28
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following code intends to print</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="dv">55555</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4444</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="dv">333</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="dv">22</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">1</span>):</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, i):</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i, end<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span></code></pre></div>
+<p>But there are two bugs. First, try to find the problems solely by reading and mental execution. Then, type up the program in <code>my_loop_exercise7.py</code>. Fix the program to get the desired output.</p>
+</div>
+</div>
+</section>
+<section id="a-peek-at-the-future" class="level2">
+<h2 class="anchored" data-anchor-id="a-peek-at-the-future">3.6 &nbsp;&nbsp; A peek at the future</h2>
+<p>Consider the following program:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tkinter <span class="im">as</span> tk</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>window <span class="op">=</span> tk.Tk()</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>canvas <span class="op">=</span> tk.Canvas(master<span class="op">=</span>window, width<span class="op">=</span><span class="dv">200</span>, height<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>canvas.pack()</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_rectangles():</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">51</span>, <span class="dv">10</span>):              </span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>        canvas.create_rectangle(</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>            <span class="dv">3</span><span class="op">*</span>i, i, <span class="dv">3</span><span class="op">*</span>i<span class="op">+</span><span class="dv">20</span>, i<span class="op">+</span><span class="dv">10</span>, outline<span class="op">=</span><span class="st">"blue"</span>)</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>draw_rectangles()</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>window.mainloop()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.29
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download the above program, <a href="../../../media/units/unit0/module3/my_forloop_rectangle.py" download=""><strong>my_forloop_rectangle.py</strong></a>, and execute the program. If you’re feeling brave, add a second for-loop so that output looks like: <img src="../../../media/units/unit0/module3/forloop_rect_screenshot.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Let’s point out the for-loop’s part in the program:</p>
+<ul>
+<li>First, we need to understand how coordinates work differently in Python: <img src="../../../media/units/unit0/module3/loop_rect.png" class="img-fluid"></li>
+<li>Next, let’s read the for-loop statement to see how it iterates: <img src="../../../media/units/unit0/module3/loop_rect2.png" class="img-fluid">
+<ul>
+<li>We can see that i will be 10 the first time through the loop.</li>
+<li>Then i becomes 20, then 30 etc until 50.</li>
+<li>Thus, there are 5 iterations through the loop.</li>
+</ul></li>
+<li>Notice how i is used in the calculation of the measurements needed to draw the rectangle: <img src="../../../media/units/unit0/module3/loop_rect3.png" class="img-fluid"> (We spilled a line of code over two lines to make the font large enough.)
+<ul>
+<li>When i is 10, the first rectangle’s top left corner gets drawn at 30 (which is 3 times i, or 3*i) from the left side, and 10 down from the top.</li>
+<li>In the second iteration i is 20, which means the top left corner is 60 from the left. And so on.</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3.30
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download <a href="../../../media/units/unit0/module3/my_forloop_rectangle2.py" download=""><strong>my_forloop_rectangle2.py</strong></a>, and execute the program to see that an animation is really a for-loop.</p>
+</div>
+</div>
+<p>About animations:</p>
+<ul>
+<li>Even if an object moves across a screen (and is in different positions on the screen), there is something that “repeats”.</li>
+<li>What repeats is the drawing of the object in different places (with a gap in time to create the illusion of real movement).</li>
+<li>Thus, when locations can be <em>calculated</em> we can use a loop to iterate through the different positions.</li>
+<li>This is essentially how animation works.</li>
+</ul>
+</section>
+<section id="some-things-to-keep-mind" class="level2">
+<h2 class="anchored" data-anchor-id="some-things-to-keep-mind">3.7 &nbsp;&nbsp; Some things to keep mind</h2>
+<p>Let’s introduce the notion of <em>reserved words</em>:</p>
+<ul>
+<li>Some words like <code>for</code> and <code>in</code> are special to the language and are called <em>reserved words</em> or <em>key words</em> of the language. <img src="../../../media/units/unit0/module3/forloop14.png" class="img-fluid"></li>
+<li>There are special rules associated with the usage of such reserved words, which we’ll describe over time. For now, we’re just pointing them out.</li>
+<li>Another example of a reserved word we’ve seen: <code>def</code></li>
+<li>It turns out that, even though <code>print</code> looks like it should be a reserved word, it’s in fact not.
+<ul>
+<li>At this stage, the distinction is not clear and that’s fine.</li>
+<li>As you learn the language, you’ll learn how to distinguish.</li>
+</ul></li>
+</ul>
+<p>Counting from 0:</p>
+<ul>
+<li>When a single number like 6 is specified in the <code>range</code> as in <code>range(6)</code> <img src="../../../media/units/unit0/module3/forloop15.png" class="img-fluid"></li>
+<li>Thus, i is 0 the first time, then 1, then 2, and so on until i = 5 (last time through).</li>
+<li>The number 6 specifies that i cannot be 6 or higher.</li>
+<li>Thus, there is a certain strangeness to get used to:
+<ul>
+<li>Unlike math (where counting starts from 1), in programming, the convention is to start from 0. <br> (Did you notice that’s why we started with Module 0?)</li>
+<li>The other strangeness is specifying the limit as one higher (6) than than last iteration value (5).</li>
+</ul></li>
+</ul>
+<p>The different uses of <code>range</code></p>
+<ul>
+<li>When a single number is specified, as in <code>range(6)</code> the implied start is 0.</li>
+<li>When two numbers are specified as in: <code>range(10, 16)</code> the first is the start of the count, and the second is the limit: <img src="../../../media/units/unit0/module3/forloop16.png" class="img-fluid">
+<ul>
+<li>Thus i is 10 the first time (this is the first thing that’s printed).</li>
+<li>Then i becomes 11.</li>
+<li>Then 12, and so on until the last time through when i is 15.</li>
+</ul></li>
+<li>When three numbers are specified as in <code>range(10, 16, 2)</code> the third number is the increment. <img src="../../../media/units/unit0/module3/forloop17.png" class="img-fluid">
+<ul>
+<li>Here, i starts as 10 in the first iteration.</li>
+<li>Then, i is 12 in the second iteration.</li>
+<li>Then i becomes 14. This is the last iteration because after that i would be 16, which ends the loop.</li>
+</ul></li>
+<li>Using <code>range(10, 15, 2)</code> produces the same result as above, and in fact preferable.</li>
+</ul>
+<p>About comments:</p>
+<ul>
+<li><p>First, comments are for us to read. The computer does not read them.</p></li>
+<li><p>Thus, in terms of execution, this program</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list the even numbers between 10 and 14, inclusive:</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">2</span>):    <span class="co"># Notice the increment</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<p>will result in the exact output as this one:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">2</span>):</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div></li>
+<li><p>We will use comments in two ways, as in the above example:</p>
+<ul>
+<li>The first comment is an example of using a comment as a prelude to code, to explain what’s coming or intended.</li>
+<li>The second kind that is to the right side of a line of code is like an alert: we’ll use this to point out something to pay attention to in that line of code.</li>
+</ul></li>
+</ul>
+</section>
+<section id="meta" class="level2">
+<h2 class="anchored" data-anchor-id="meta">3.8 Meta</h2>
+<p>We will occasionally step back from the details to comment on how best to learn.</p>
+<p>This module was a bit different, a little more challenging than modules 1-2.</p>
+<p>What to keep in mind:</p>
+<ul>
+<li>It is only natural to feel like you are in an alien landscape. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⇒ You would feel no different doing the first few modules while learning a foreign language with an entirely different script.</li>
+<li>It takes a while to absorb some of the details, and that’s just fine.</li>
+<li>Notice that some exercises were significantly more challenging than others:
+<ul>
+<li>In prior modules, you merely typed in something and tried it out, or make a small change.</li>
+<li>With some exercises (like brrrrr) you had to do it all from scratch.</li>
+<li>Both involved <em>problem-solving</em> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⇒ Taking a problem described in words and finding a solution.</li>
+</ul></li>
+<li>Problem-solving is a higher-level skill than programming.
+<ul>
+<li>It takes time to acquire this skill.</li>
+<li>There is no magic formula or words to simply make “problem solving” work for you.</li>
+<li>The only way is to develop this skill is to struggle with problems, and with lots of them.</li>
+</ul></li>
+<li>Finally, think about this:
+<ul>
+<li>Anyone can acquire both programming and problem-solving skills with sufficient dedication. So why not you?</li>
+<li>If you get past these hurdles with determination, you will leave in the dust all those who gave up earlier.</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before proceeding with Module 4 you would need to install <code>matplotlib</code> library. Follow these guides to learn about how to install packages in Thonny on a <a href="../../../python_primer/unit0/guides/thonny-mac-matplotlib.html"><strong>Mac</strong></a> or <a href="../../../python_primer/unit0/guides/thonny-win-matplotlib.html"><strong>Windows</strong></a> computer.</p>
+</div>
+</div>
+<!-- <br>
+[Previous Module: **Module 0.2**](./module0.2.qmd){.button .prev} [Next Module: **Module 0.4**](./module0.4.qmd){.button .next} -->
+
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>The material is sourced from <strong>Prof.&nbsp;Kartik Bulusu’s</strong> course titled, ‘Introduction to IoT and Edge computng applications’. <br> This is a Quarto website. To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.<br> Contact: <a href="mailto:bulusu@email.gwu.edu">Kartik Bulusu</a><br> © 2024 All rights reserved</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
+<script>videojs(video_shortcode_videojs_video3);</script>
+<script>videojs(video_shortcode_videojs_video4);</script>
+<script>videojs(video_shortcode_videojs_video5);</script>
+<script>videojs(video_shortcode_videojs_video6);</script>
+
+
+
+
+</body></html>

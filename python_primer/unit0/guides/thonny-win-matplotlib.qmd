@@ -1,0 +1,64 @@
+---
+title: "Thonny Package Installation Guide for Windows"
+format:
+  html:
+    code-copy: false
+---
+
+## Introduction
+This guide will guide you through the process of installing Python packages, specifically **Matplotlib**, using *Thonny* on your Windows computer. Thonny is a user-friendly Python IDE, and managing packages is a crucial aspect of the development process.
+
+## Prerequisites
+Before you begin, ensure you have the following:
+
+- Thonny IDE installed on your Windows computer.
+- An active internet connection.
+
+## Package Installation Steps
+### 1. Open Thonny
+Launch Thonny on your Windows computer.
+
+![](../../../media/hello/windows-thonny-1.png)
+
+![](../../../media/hello/windows-thonny-2.png)
+
+### 2. Open the Manage Packages Window
+Click on the "**Tools**" menu at the top. Select "**Manage Packages...**" from the dropdown menu.
+
+![](../../../media/hello/matplotlib/step1win.png)
+
+### 3. Search for Matplotlib
+In the "**Manage Packages**" window, type "_**matplotlib**_" into the search bar.
+
+![](../../../media/hello/matplotlib/step2.png)
+
+### 4. Select Matplotlib Package
+Find the "**matplotlib**" package in the search results. Click on it to select it. If multiple versions of Matplotlib are available, choose the desired version from the list.
+
+### 5. Click "Install Package"
+Click the "**Install Package**" button to initiate the installation process.
+
+![](../../../media/hello/matplotlib/step3add.png)
+
+### 6. Monitor Installation Progress
+Thonny will display the progress of the installation in the console window. Wait for the process to complete.
+
+### 7. Confirm Installation
+Once the installation is complete, you should see a confirmation message in the console window.
+
+### 8. Verify Matplotlib Installation
+To confirm the successful installation of Matplotlib, you can open a new Python script or interactive console in Thonny and try importing the library:
+
+```python
+import matplotlib.pyplot as plt
+```
+
+### 9. Additional Packages
+Repeat the above steps to install any other packages you need, such as **NumPy** or **Pandas**.
+
+## Conclusion
+Congratulations! You've successfully installed Matplotlib and other packages using Thonny on your Windows computer. Managing packages with Thonny is a straightforward process, allowing you to enhance your Python development environment.
+
+For more information on managing packages with Thonny, refer to the official documentation at https://thonny.org/.
+
+If you encounter any issues or have questions, don't hesitate to seek help from the Thonny community or consult the documentation for troubleshooting tips.

@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAE 6291 - Windows: Instructions for developing computer-usage competency</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">MAE 6291</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policies.html"> 
+<span class="menu-text">Course policies</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../../install-editor.html">
+ <span class="dropdown-text">Much Needed Software Installations</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Python Primer</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/basics.html">
+ <span class="dropdown-text">Basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/constructs.html">
+ <span class="dropdown-text">Constructs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../python_primer/data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../instructor.html"> 
+<span class="menu-text">Instructor</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#creating-folders" id="toc-creating-folders" class="nav-link active" data-scroll-target="#creating-folders">Creating folders</a>
+  <ul class="collapse">
+  <li><a href="#step-1" id="toc-step-1" class="nav-link" data-scroll-target="#step-1">Step 1</a></li>
+  <li><a href="#step-2" id="toc-step-2" class="nav-link" data-scroll-target="#step-2">Step 2</a></li>
+  <li><a href="#step-3" id="toc-step-3" class="nav-link" data-scroll-target="#step-3">Step 3</a></li>
+  <li><a href="#step-4" id="toc-step-4" class="nav-link" data-scroll-target="#step-4">Step 4</a></li>
+  <li><a href="#step-5" id="toc-step-5" class="nav-link" data-scroll-target="#step-5">Step 5</a></li>
+  <li><a href="#step-6" id="toc-step-6" class="nav-link" data-scroll-target="#step-6">Step 6</a></li>
+  <li><a href="#step-7" id="toc-step-7" class="nav-link" data-scroll-target="#step-7">Step 7</a></li>
+  <li><a href="#step-8" id="toc-step-8" class="nav-link" data-scroll-target="#step-8">Step 8</a></li>
+  <li><a href="#step-9" id="toc-step-9" class="nav-link" data-scroll-target="#step-9">Step 9</a></li>
+  <li><a href="#step-10" id="toc-step-10" class="nav-link" data-scroll-target="#step-10">Step 10</a></li>
+  <li><a href="#step-11" id="toc-step-11" class="nav-link" data-scroll-target="#step-11">Step 11</a></li>
+  <li><a href="#step-12" id="toc-step-12" class="nav-link" data-scroll-target="#step-12">Step 12</a></li>
+  <li><a href="#step-13" id="toc-step-13" class="nav-link" data-scroll-target="#step-13">Step 13</a></li>
+  <li><a href="#step-14" id="toc-step-14" class="nav-link" data-scroll-target="#step-14">Step 14</a></li>
+  </ul></li>
+  <li><a href="#file-downloads" id="toc-file-downloads" class="nav-link" data-scroll-target="#file-downloads">File downloads</a>
+  <ul class="collapse">
+  <li><a href="#step-1-1" id="toc-step-1-1" class="nav-link" data-scroll-target="#step-1-1">Step 1</a></li>
+  <li><a href="#step-2-1" id="toc-step-2-1" class="nav-link" data-scroll-target="#step-2-1">Step 2</a></li>
+  <li><a href="#step-3-1" id="toc-step-3-1" class="nav-link" data-scroll-target="#step-3-1">Step 3</a></li>
+  </ul></li>
+  <li><a href="#find-a-file" id="toc-find-a-file" class="nav-link" data-scroll-target="#find-a-file">Find a file</a>
+  <ul class="collapse">
+  <li><a href="#step-1-2" id="toc-step-1-2" class="nav-link" data-scroll-target="#step-1-2">Step 1</a></li>
+  <li><a href="#step-2-2" id="toc-step-2-2" class="nav-link" data-scroll-target="#step-2-2">Step 2</a></li>
+  <li><a href="#step-3-2" id="toc-step-3-2" class="nav-link" data-scroll-target="#step-3-2">Step 3</a></li>
+  <li><a href="#step-4-1" id="toc-step-4-1" class="nav-link" data-scroll-target="#step-4-1">Step 4</a></li>
+  <li><a href="#step-5-1" id="toc-step-5-1" class="nav-link" data-scroll-target="#step-5-1">Step 5</a></li>
+  <li><a href="#step-6-1" id="toc-step-6-1" class="nav-link" data-scroll-target="#step-6-1">Step 6</a></li>
+  </ul></li>
+  <li><a href="#make-a-pdf" id="toc-make-a-pdf" class="nav-link" data-scroll-target="#make-a-pdf">Make a pdf</a>
+  <ul class="collapse">
+  <li><a href="#step-1-3" id="toc-step-1-3" class="nav-link" data-scroll-target="#step-1-3">Step 1</a></li>
+  <li><a href="#step-2-3" id="toc-step-2-3" class="nav-link" data-scroll-target="#step-2-3">Step 2</a></li>
+  <li><a href="#step-3-3" id="toc-step-3-3" class="nav-link" data-scroll-target="#step-3-3">Step 3</a></li>
+  <li><a href="#step-4-2" id="toc-step-4-2" class="nav-link" data-scroll-target="#step-4-2">Step 4</a></li>
+  <li><a href="#step-5-2" id="toc-step-5-2" class="nav-link" data-scroll-target="#step-5-2">Step 5</a></li>
+  <li><a href="#step-6-2" id="toc-step-6-2" class="nav-link" data-scroll-target="#step-6-2">Step 6</a></li>
+  </ul></li>
+  <li><a href="#make-a-zip" id="toc-make-a-zip" class="nav-link" data-scroll-target="#make-a-zip">Make a zip</a>
+  <ul class="collapse">
+  <li><a href="#step-1-4" id="toc-step-1-4" class="nav-link" data-scroll-target="#step-1-4">Step 1</a></li>
+  <li><a href="#step-2-4" id="toc-step-2-4" class="nav-link" data-scroll-target="#step-2-4">Step 2</a></li>
+  <li><a href="#step-3-4" id="toc-step-3-4" class="nav-link" data-scroll-target="#step-3-4">Step 3</a></li>
+  <li><a href="#step-4-3" id="toc-step-4-3" class="nav-link" data-scroll-target="#step-4-3">Step 4</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Windows</strong>: Instructions for developing computer-usage competency</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Develop your computerese skills</em></p>
+<section id="video-useful-info-about-files" class="level6">
+<h6 class="anchored" data-anchor-id="video-useful-info-about-files"><strong>Video: Useful info about files</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/computerese-win/u0-mod0-win-files.mp4"></video></div>
+</section>
+<section id="video-useful-info-about-editing" class="level6">
+<h6 class="anchored" data-anchor-id="video-useful-info-about-editing"><strong>Video: Useful info about editing</strong></h6>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/computerese-win/u0-mod0-win-editing.mp4"></video></div>
+<p>Useful screenshots and step-by-step instructions for:</p>
+<ul>
+<li><a href="../../../python_primer/unit0/guides/computerese-windows.html#make-folder"><strong>Folder creation</strong></a></li>
+<li><a href="../../../python_primer/unit0/guides/computerese-windows.html#download"><strong>File downloads</strong></a></li>
+<li><a href="../../../python_primer/unit0/guides/computerese-windows.html#find"><strong>File a file</strong></a></li>
+<li><a href="../../../python_primer/unit0/guides/computerese-windows.html#pdf"><strong>Make a pdf</strong></a></li>
+<li><a href="../../../python_primer/unit0/guides/computerese-windows.html#zip"><strong>Make a zip file</strong></a></li>
+</ul>
+</section>
+<section id="creating-folders" class="level2">
+<h2 class="anchored" data-anchor-id="creating-folders">Creating folders</h2>
+<div id="make-folder">
+
+</div>
+<section id="step-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-1">Step 1</h3>
+<ul>
+<li><p>To create a new folder on your desktop (which is the main area of your computer that you see if you have nothing else open. It usually has a nice picture and a couple icons), right click on any open area on your desktop that is not occupied by an icon. You’ll then see the above image pop up, with some minor variations (you might not have “Git GUI Here” or “Git Bash Here”, but you’ll absolutely have the red circled option “new”. Keep your mouse on that option and you’ll see another menu pop up for the different options for a new thing to create:</p>
+<p><img src="../../../media/computerese-win/createfolder/step1.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-2" class="level3">
+<h3 class="anchored" data-anchor-id="step-2">Step 2</h3>
+<ul>
+<li><p>The top option of the new menu shown above should say “Folder”, click on that, and it will create a new folder for you (literally named “New Folder” – unless you have other folders already called “New Folder”, in which case it will call the folder “New Folder (X)” where X is just some number based on how many other new folders you already had existing.</p>
+<p><img src="../../../media/computerese-win/createfolder/step2.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
+<ul>
+<li><p>Above is what the “New Folder” should look like! Now, we’re going to rename it with the course name “cs1012”. Shown in the next step:</p>
+<p><img src="../../../media/computerese-win/createfolder/step3.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-4" class="level3">
+<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
+<ul>
+<li><p>Right click on the icon of the new folder that was just created, and you’ll see another menu. Again, you might not see many of the options in the image, but the only option you need is the one near the bottom that says “rename”. Click on that option, and the menu will disappear, and you’ll see the old name of the folder is highlighted in blue, meaning it is ready for you to type a new name for the folder.</p>
+<p><img src="../../../media/computerese-win/createfolder/step4.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-5" class="level3">
+<h3 class="anchored" data-anchor-id="step-5">Step 5</h3>
+<ul>
+<li><p>Type in “cs1012”, and press enter. If you mistype it, it’s not a problem, just rename the folder again! In that case, you’ll then see “cs1012” highlighted in blue like above rather than “New Folder”.</p>
+<p><img src="../../../media/computerese-win/createfolder/step5.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-6" class="level3">
+<h3 class="anchored" data-anchor-id="step-6">Step 6</h3>
+<ul>
+<li><p>If you double click on the folder we’ve created and renamed (now called “cs1012”), you’ll see a pop up called “File Explorer”, which is how Windows shows you what files and folders you have.</p>
+<p><img src="../../../media/computerese-win/createfolder/step6.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-7" class="level3">
+<h3 class="anchored" data-anchor-id="step-7">Step 7</h3>
+<ul>
+<li><p>There are a couple important things to point out:</p>
+<p>“This folder is empty” – we’ll change that shortly.</p>
+<p>Then: “cs1012” – this tells us the name of the folder we are currently looking at, called the “PATH” as well as eventually what other folders are containing it (in this case, since this folder is from our desktop, all we see is cs1012. Once we make a unit0 folder and look at that, we’ll notice the “PATH” says “cs1012 &gt; unit0”, which means we’re inside “unit0”, which is inside “cs1012”, which we know was created inside the desktop).</p>
+<p>Here’s what we need to click on to create our folders! First, click the “Home” button, and you’ll then see the rest of the options shown in the image, like “New Folder”, which is what we want to click on next! It will create a folder again called “New Folder”, which we will rename the same way we renamed cs1012.</p>
+<p><img src="../../../media/computerese-win/createfolder/step7.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-8" class="level3">
+<h3 class="anchored" data-anchor-id="step-8">Step 8</h3>
+<ul>
+<li><p>By default actually, when you create a new folder it will allow you to type a name for it directly. If you clicked somewhere else just after clicking new folder, then Windows assumes you’ve given the folder the name you want. If you haven’t clicked somewhere else just yet, cool! Type the name “unit0” (with no spaces) and press enter or click somewhere else to complete the renaming.</p>
+<p><img src="../../../media/computerese-win/createfolder/step8.PNG" class="img-fluid"></p>
+<p>If you clicked somewhere else before you had a chance to rename the folder, no worries, there are two ways to rename it. One shown in the image above – you’ll need to right click on the folder and choose “rename”. Or, if you look at the top bar again, just to the left of the “New Folder” button is a button called “rename”. This is the same button! (Just click the folder first once before clicking “rename”, otherwise Windows doesn’t know what item you’re trying to rename.</p></li>
+</ul>
+</section>
+<section id="step-9" class="level3">
+<h3 class="anchored" data-anchor-id="step-9">Step 9</h3>
+<ul>
+<li><p>Now that you have a unit0 folder, repeat the process (steps 7 and 8) for two more folders called “unit1” and “unit2”.</p>
+<p><img src="../../../media/computerese-win/createfolder/step9.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-10" class="level3">
+<h3 class="anchored" data-anchor-id="step-10">Step 10</h3>
+<ul>
+<li><p>Double click on unit0, and it will bring us inside that folder, where we want to create another new folder, shown in the next step.</p>
+<p><img src="../../../media/computerese-win/createfolder/step10.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-11" class="level3">
+<h3 class="anchored" data-anchor-id="step-11">Step 11</h3>
+<ul>
+<li><p>Create a folder called module0 (again with no spaces).</p>
+<p><img src="../../../media/computerese-win/createfolder/step11.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-12" class="level3">
+<h3 class="anchored" data-anchor-id="step-12">Step 12</h3>
+<ul>
+<li><p>Once that’s all set, go down to the bottom left corner of your computer and click on that “Windows” icon. Then, click on the icon of your user (circled – really more like “squared” in red). Then, click on sign out to log out. Then, log back in and let’s find the folders we’ve just made again!</p>
+<p><img src="../../../media/computerese-win/createfolder/step12.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-13" class="level3">
+<h3 class="anchored" data-anchor-id="step-13">Step 13</h3>
+<ul>
+<li><p>Now that you’re logged back in, let’s start back at the desktop. Double click on the cs1012 folder.</p>
+<p><img src="../../../media/computerese-win/createfolder/step13.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-14" class="level3">
+<h3 class="anchored" data-anchor-id="step-14">Step 14</h3>
+<ul>
+<li><p>Now, let’s get back to module0. In the image above there are 3 separate windows to show as steps. First, double click on the “unit0” folder, which will bring you inside where you’ll see module0. Click on “module0”, and you’ll then see “This folder is empty”. Congratulations! You’re back! And don’t worry, we’ll find something to put in module0 soon!</p>
+<p><img src="../../../media/computerese-win/createfolder/step14.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+</section>
+<section id="file-downloads" class="level2">
+<h2 class="anchored" data-anchor-id="file-downloads">File downloads</h2>
+<div id="download">
+
+</div>
+<section id="step-1-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-1">Step 1</h3>
+<ul>
+<li><p>To save a file (also known as downloading a file) from a link from the module pages, find the link you want to save. Here is an example link from module0 exercise2 on learning “Computerese”.</p>
+<p><img src="../../../media/computerese-win/filedownload/step1.PNG" class="img-fluid"></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>This is an image we’re showing, so don’t click. It is intended to show what it would look like on your computer.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="step-2-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-1">Step 2</h3>
+<ul>
+<li><p>Right click on the link itself, and select “save link as”. This will begin saving the file (downloading it) to your computer.</p>
+<p><img src="../../../media/computerese-win/filedownload/step2.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-3-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-1">Step 3</h3>
+<ul>
+<li><p>Now, you can decide what to call the file and where to save it. The default options are usually to your desktop or downloads folders, but you can navigate directly to one of your module folders and have the file saved there!</p>
+<p><img src="../../../media/computerese-win/filedownload/step3.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+</section>
+<section id="find-a-file" class="level2">
+<h2 class="anchored" data-anchor-id="find-a-file">Find a file</h2>
+<div id="find">
+
+</div>
+<section id="step-1-2" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-2">Step 1</h3>
+<ul>
+<li><p>To save a file you’re working on, you can press the control key (abbreviated as “ctrl”) and the “s” key at the same time, or, you can press the actual save button that exists in most text editors. Prior to saving, you’ll notice that the file has some default name, like “untitled” (I’m using Thonny, but the same occurs in Spyder).</p>
+<p><img src="../../../media/computerese-win/findfile/step1.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-2-2" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-2">Step 2</h3>
+<ul>
+<li><p>The most universal way to save a file is as shown above, via going to “File” and then “Save”. This will allow you to not only save the file but name it for the first time. You now have the opportunity to name the file, and select where you want it to be saved. For this demo, I chose my desktop, but usually you will want to save it directly to the module folder it is a part of.</p>
+<p><img src="../../../media/computerese-win/findfile/step2.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-3-2" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-2">Step 3</h3>
+<ul>
+<li><p>You’ll see that the file now no longer says “untitled”, and instead shows “helloworld.py”, and the location of where the file was saved. (My desktop in this case)</p>
+<p><img src="../../../media/computerese-win/findfile/step3.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-4-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-1">Step 4</h3>
+<ul>
+<li><p>To move a file from your desktop into a module folder, start by navigating to a module (like module0), which was shown as the last step in the set of steps for creating the folders you need! Then, click on the python file (if you’re using thonny, your python files will likely have an icon like what you see here. If you’re using spyder, they will have a different icon) and drag it into the module0 folder.</p>
+<p><img src="../../../media/computerese-win/findfile/step4.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-5-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-1">Step 5</h3>
+<ul>
+<li><p>You’ll see that the file now is in the module0 folder instead of being shown on your desktop.</p>
+<p><img src="../../../media/computerese-win/findfile/step5.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-6-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-1">Step 6</h3>
+<ul>
+<li><p>Once you’ve saved a file (say to your desktop), you can still pick another location for it (say to a module folder) to be saved via the “save as” option – Note! Save as creates a copy of the file you’re working on, but if you make a change to one version of the file, the other version is not updated with the changes. It’s a better idea to move a file to the new location you want (as shown in step 5) than it is to use save as so that you don’t end up with multiple versions of a file.</p>
+<p><img src="../../../media/computerese-win/findfile/step6.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+</section>
+<section id="make-a-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="make-a-pdf">Make a pdf</h2>
+<div id="pdf">
+
+</div>
+<section id="step-1-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-3">Step 1</h3>
+<ul>
+<li><p>In whatever program you use to write your answers to modules (Notepad, Microsoft Word, Google Docs, etc..), once you’ve completed writing the answers to a module, we want to convert it to a .pdf file for submission (note, pdf files cannot be edited easily once created, so if you make changes to your text file after creating your pdf, you’ll need to repeat this process to create a new pdf with the updated changes you made to your text file.</p>
+<p><img src="../../../media/computerese-win/makepdf/step1.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-2-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-3">Step 2</h3>
+<ul>
+<li><p>In Notepad, click on File, and then Print.</p>
+<p><img src="../../../media/computerese-win/makepdf/step2.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-3-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-3">Step 3</h3>
+<ul>
+<li><p>You will then see a pop up similar to what you just saw above. You will want to select whatever option mentions “convert to pdf” or “print to pdf”. In this case it’s called “Microsoft Print to PDF”. Rather than this printing out your document, it will create a .pdf file for you.</p>
+<p><img src="../../../media/computerese-win/makepdf/step3.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-4-2" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-2">Step 4</h3>
+<ul>
+<li><p>Press okay, and then give you pdf file a name (it will always be moduleX) where X is the number of the current module. In this case, I’ve named it module0. You do not need to call it “module0.pdf”, Windows will add the “.pdf” for you. In fact, if you do type it, you might find your file is created as “module0.pdf.pdf”. (Fortunately if that happens you can rename the file!)</p>
+<p><img src="../../../media/computerese-win/makepdf/step4.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-5-2" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-2">Step 5</h3>
+<ul>
+<li><p>You will now see the pdf file created in whatever folder it was saved to – in this case I saved mine to my desktop. PDF files usually open in an internet browser. Since my default browser is Google Chrome, my pdf file has a chrome icon.</p>
+<p><img src="../../../media/computerese-win/makepdf/step5.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-6-2" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-2">Step 6</h3>
+<ul>
+<li><p>Double click on the pdf file, and it will open in your default internet browser. Although the pdf creation process is pretty accurate, it’s always a good idea to open your pdf file and read it through to make sure everything looks the way you expect.</p>
+<p><img src="../../../media/computerese-win/makepdf/step6.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+</section>
+<section id="make-a-zip" class="level2">
+<h2 class="anchored" data-anchor-id="make-a-zip">Make a zip</h2>
+<div id="zip">
+
+</div>
+<section id="step-1-4" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-4">Step 1</h3>
+<ul>
+<li><p>Navigate to the folder you want to create a zip file of (note, a zip file is a ‘compressed’ folder of some files or folders. It allows you to package your files as a single unit as if you were sending a folder itself). The navigation part itself is shown in the last step of creating the folders you need for this class.</p>
+<p><img src="../../../media/computerese-win/makezip/step1.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-2-4" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-4">Step 2</h3>
+<ul>
+<li><ol start="2" type="1">
+<li>Click once on the folder you want to zip (if you click twice, you’ll end up inside that folder). Then, right click on that folder and go to the “send to” option.</li>
+</ol>
+<img src="../../../media/computerese-win/makezip/step2.PNG" class="img-fluid"></li>
+</ul>
+</section>
+<section id="step-3-4" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-4">Step 3</h3>
+<ul>
+<li><p>From “send to”, select “Compressed (zipped) folder.”</p>
+<p><img src="../../../media/computerese-win/makezip/step3.PNG" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="step-4-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-3">Step 4</h3>
+<ul>
+<li><p>You will now see a new zip file with the same name as the folder you zipped. In theory you can rename it, but you shouldn’t have to since it will take the name of the folder you zipped. If you need to rename it for any reason, you can rename it the same way we’ve renamed folders.</p>
+<p><img src="../../../media/computerese-win/makezip/step4.PNG" class="img-fluid"></p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>The material is sourced from <strong>Prof.&nbsp;Kartik Bulusu’s</strong> course titled, ‘Introduction to IoT and Edge computng applications’. <br> This is a Quarto website. To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.<br> Contact: <a href="mailto:bulusu@email.gwu.edu">Kartik Bulusu</a><br> © 2024 All rights reserved</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
+
+
+
+
+</body></html>
