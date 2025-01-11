@@ -260,8 +260,8 @@ Type up the above in `my_boolean_example2.py`.
     ![](../../../media/units/unit1/module1.3/boolean-or.png)
 
 
-###### **3.3 Video**
-{{< video ../../../media/units/unit1/module1.3/u1-mod3.3.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **3.3 Video**
+{{< video ../../../media/units/unit1/module1.3/u1-mod3.3.mp4 aspect-ratio="21x9" >}} -->
 
 ## 3.1 Combining Boolean operators
 Consider
@@ -288,8 +288,8 @@ Type up the above in `my_boolean_example3.py`.
 Draw an expression diagram to work out the result for the second expression (the value of v) above.
 :::
 
-###### **3.5 Video**
-{{< video ../../../media/units/unit1/module1.3/u1-mod3.5.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **3.5 Video**
+{{< video ../../../media/units/unit1/module1.3/u1-mod3.5.mp4 aspect-ratio="21x9" >}} -->
 
 Boolean expressions can be constructed with numeric variables and their comparison operators:
 ```python
@@ -666,7 +666,7 @@ In `my_slicing3.py`, write a program that implements a function to extract the p
 <em>Slicing</em> has more to it than two numbers. We'll have more to say about this in Unit-2.
 :::
 
-## 3.5 Using slicing to solve a problem
+<!-- ## 3.5 Using slicing to solve a problem
 Suppose we want to determine the longest prefix that two strings have in common, as in:
 ```python
 print(find_common_prefix('river', 'rivet'))
@@ -757,7 +757,7 @@ print(find_common_prefix('river', 'rivet'))
 
 
 ###### **3.23 Video**
-{{< video ../../../media/units/unit1/module1.3/u1-mod3.23.mp4 aspect-ratio="21x9" >}}
+{{< video ../../../media/units/unit1/module1.3/u1-mod3.23.mp4 aspect-ratio="21x9" >}} -->
 
 ## 3.6 Built-in string functions in Python
 Python comes with many useful functions for strings.
@@ -1031,9 +1031,8 @@ Type the above in `my_type2.py`, to see how it works.
     e = d * 3         # * for string concatenation
     print(e)          # Prints hellohellohello
     ```
-    <!-- (The latter is not a frequently used operator with strings.) -->
 
-## 3.8 A text application
+<!-- ## 3.8 A text application
 Sometimes we need to go beyond what Python has to offer.
 
 **One way to do this is to find a popular <em>library</em> and use that:**
@@ -1080,10 +1079,6 @@ Sometimes we need to go beyond what Python has to offer.
 **Let's point out some salient feature in the program `my_sentence_app.py`:**
 
 - When using functions in another program, one has to `import` that program:
-    
-<!--     ```python
-    import wordtool as wt
-    ``` -->
 - It is convenient to use a shorthand such as `wt` for an imported program `wordtool` as shown below:
     
     ```python
@@ -1103,9 +1098,6 @@ We could have called the shorthand for the imported program something other than
 `wordtool` requires that you to name the file, expecting it to be a plain text file (not a Word-document file).   
 :::
 
-<!--     ```python
-    sentences = wt.get_sentences_from_textfile('jabberwocky.txt')
-    ``` -->
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 3.30
@@ -1194,6 +1186,40 @@ if x >= 0 and <= 5:
 - Identify and fix the error in `my_error2.py`.
 
 - **Submit your `my_error2.py` after fixing the error.**
+::: -->
+
+## 0.7 A different version of print
+Consider these two variations of using print:
+```python
+x = 2
+s = 'eat'
+y = 3.141
+
+print('I love ' + str(x) + ' ' + s + ' ' + str(y))
+
+print('I love', x, s, y)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.22
+
+Type the above in `my_print_example.py` and submit it.
+:::
+
+:::{.callout-note}
+- The first version above uses string concatenation to send one big string to print:
+
+    ```python
+    print( 'I love ' + str(x) + ' ' + s + ' ' + str(y) )
+    ```
+- In the second version, the strings and variables given to print `(x, s, y)` are separated by commas.
+- Here, print treats the four things as separate entities:
+
+    ```python
+    print('I love', x, s, y)
+    ```
+- And it, automatically inserts a space between the different things (that are separated by commas).
+- Note that here, there is no need to convert numbers to strings.
 :::
 
 </body>

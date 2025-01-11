@@ -29,7 +29,7 @@ format:
 Before proceeding with Module 4 you would need to install `matplotlib` library. Follow these guides to learn about how to install packages in Thonny on a [**Mac**](../guides/thonny-mac-matplotlib.qmd) or [**Windows**](../guides/thonny-win-matplotlib.qmd) computer.
 :::
 
-## Objectives (Real Numbers)
+## Objectives
 By the end of this module, for simple HelloWorld-like programs, you will be able to:
 
 - Create variable declarations.
@@ -46,7 +46,7 @@ By the end of this module, for simple HelloWorld-like programs, you will be able
 
 And, once we've worked with integers, we'll also do some "number crunching".
 
-:::{.callout-tip}
+<!-- :::{.callout-tip}
 [**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
 [**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
@@ -56,10 +56,10 @@ And, once we've worked with integers, we'll also do some "number crunching".
 [**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
 
 [**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-:::
+::: -->
 
 #### **Lecture video for `for-loop` with tracing**
-{{< video ../../../media/units/unit0/module4/Tracing_Demo1_SumOfIntegers.mp4 aspect-ratio="21x9" >}}
+<!-- {{< video ../../../media/units/unit0/module4/Tracing_Demo1_SumOfIntegers.mp4 aspect-ratio="21x9" >}} -->
 
 ## 4.0 First, an analogy
 Suppose we have boxes. Consider the following rules about "boxes":
@@ -230,8 +230,8 @@ print(j)   # j still has 5
 0 is an actual value, and is not "no value" or "nothing".
 :::
 
-###### **4.7 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.7.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **4.7 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.7.mp4 aspect-ratio="21x9" >}} -->
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 4.8
@@ -253,8 +253,8 @@ print(j)   # should print 5
 Add some lines of code with the objective of swapping the  values in variables i and j. You will need a third variable to be used as a holding place. Thus, without directly assigning the  number 5 to j or the number 6 to i, write code using a third variable to achieve the desired swapping of values.
 :::
 
-###### **4.9 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.9.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **4.9 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.9.mp4 aspect-ratio="21x9" >}} -->
 
 ## 4.2 Integer operators
 Let's examine the familiar <em>arithmetic operators</em> `+, -, *, /`
@@ -388,10 +388,10 @@ The key to working them out is to use <b>extra</b> parentheses in the right way.
 Use the PEMDAS rule to evaluate mentally or by hand the expression,  `i*j - i+1*j-1` when `i = 7` and `j = 3`. Write a Python program `my_expression_example1.py` to evaluate the expression and print your answer.
 :::
 
-###### **4.13 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.13.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **4.13 Video**
+{{< video ../../../media/units/unit0/module4/u0-mod4.13.mp4 aspect-ratio="21x9" >}} -->
 
-## 4.4 More about expressions and assignment
+<!-- ## 4.4 More about expressions and assignment
 The <em>remainder</em> operator:
 
 - The expression 10 % 3 is "the remainder when 10 is divided by 3".
@@ -724,13 +724,6 @@ The above is an example of a <em>runtime error</em>:
 - This causes a runtime error, meaning the program runs fine until the particular occurence of divide-by-zero.
 :::
 
-<!-- ## 4.9 Python files vs module pdf
-**Important:**
-
-- By now it should be clear what you type into a Python file (ends with `.py`) verses what goes into your module pdf.
-- Code goes into the specified Python file (example: `error3.py`) and all other answers go into your module pdf (numbered by module#, such as: `module4.pdf`).
-- Your module pdf (a single pdf per module) will have all the non-coding answers for a module. Whereas, a module can have many different Python files.
-- Thus, in future modules, we will only specify the Python filename with the understanding that you know how to name your module pdf. -->
 
 ## 4.9 A peek at the future
 Let's now revisit some earlier code <a href="../../../media/units/unit0/module1/hello_gui.py" download >**hello_gui.py**</a> and apply what've learned about integers, arithmetic, and for-loops:
@@ -795,7 +788,279 @@ Assignments are amongst the most common of statements in everyday code.
 - Since we were on the topic of integers, we took this opportunity to learn how to do some number-crunching.
 - When we got to nested loops, it got tricky following the values of variables through multiple nested loops.
 
-So, if you felt a bit overwhelmed, that's perfectly understandable. If you have to go back to some of the material to review or try some exercises again, that's fine. You're going to get better at this!
+So, if you felt a bit overwhelmed, that's perfectly understandable. If you have to go back to some of the material to review or try some exercises again, that's fine. You're going to get better at this! -->
+
+## Objectives
+By the end of this module, for simple programs with real numbers, you will be able to:
+
+- Create variable declarations for variables.
+- Assign values to variables by simple assignment, and print them out.
+- Demonstrate ability to perform operations 
+      for a desired output.
+- Evaluate expressions with variables in them.
+- Convert English descriptions of operations into expressions.
+- Mentally trace execution with expressions and calculations.
+- Mentally trace expressions and calculations inside for-loops.
+- Produce desired output using for-loops and calculations.
+- Identify new syntactic elements related to the above.
+
+## 6.0 What are real numbers?
+Let's start with some math facts:
+
+- Whole numbers like 3, 42 and 1024 are <em>integers</em>.
+  <br> (As an aside: integers include 0 and the negative ones like -2 or -219).
+- The collection of all integers is infinite in size.
+- But integers are limited because some operations on integers do not yield integers:
+    - 30 &div; 5 gives 6, which is an integer.
+    - But 31 &div; 5 is not an integer, yet it's a quantity.
+- Real numbers <em>include all the integers</em> but also numbers like 3.141, and -615.2368.
+- The collection of all real numbers is also infinite. Interestingly, it's a bigger kind of infinite (but that's a rather subtle math argument outside the scope of this course).
+- The term <em>real</em> is just that: a term that's came about historically to describe all these numbers.
+- You might wonder: is there any other kind of number?
+- Turns out: yes, there a fascinating (and extraordinarily useful) kind of number called an <em>imaginary</em> number, or more generally, a <em>complex</em> number.
+    <br> (We won't be working with these in his course.)
+- What does one do with real numbers?
+    - The same operations: +, -, *, /
+    - What's nice is that applying these to real numbers will always result in real number results.
+- For example:
+    
+    ```python
+    x = 3.14
+    y = 2.718
+    z = x + y
+    print(z)
+
+    w = z * (x + y) / (x - y)
+    print(w)
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 6.1
+
+Type up and submit the above in `my_real_example1.py`. Confirm that the operations on real number should output a real number in this exercise.
+:::
+
+:::{.callout-note}
+
+- You might have seen 5.8580000000000005 as the value of z printed out.
+- However, you might also have seen something slightly different because of the <em>approximate</em> nature of such calculations, a limitation of computer hardware.
+- These tiny errors are tiny indeed, but vary slightly from one computer to another, generally occuring around the 16th decimal place: 0.00000000000000001
+- Do we need to worry about this? Only if we are engaged in complex scientific calculations.
+- Occasionally, however, it can matter. For example, if two people calculate mortgage interest (with real consequences) slightly differently, it could lead to a legal conflict.
+:::
+
+Quick review of some relevant math:
+
+- One kind of operation that's useful is <em>power</em>.
+- We write 2<sup>6</sup> to mean 2 x 2 x 2 x 2 x 2 x 2 (six times)
+- It's easy to see that you could make this work for real numbers that get multiplied: 2.56<sup>6</sup> =  2.56 x 2.56 x 2.56 x 2.56 x 2.56 x 2.56
+- But could you do 2<sup>6.4</sup>? Turns out, yes, you can do this even if it's not easy to see or intuit.
+    <br>(We would expect 2<sup>6.4</sup> to be larger than 2<sup>6</sup> and smaller than 2<sup>7</sup>, which it is.)
+- The next step then is to allow numbers like 2.56<sup>6.4</sup>.
+- In fact, you can take any real number as the <em>mantissa</em> (the 2.56 in 2.56<sup>6.4</sup>) and any real number as the <em>exponent</em> (the 6.4 in  2.56<sup>6.4</sup>).
+- Let's put this in code and introduce a new operator to raise a number to a power, as in 2.56<sup>6.4</sup>).
+
+    ```python
+    x = 2 ** 6
+    print(x)
+
+    y = 2.56 ** 6.4
+    print(y)
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 6.2
+
+Type up the above in `my_real_example2.py`. 
+
+- Don't submit it yet. 
+- Now consider the equation 2.56<sup>z</sup> = y. You need to use Python to provide a real number input to the value z such that the value of y becomes 400. 
+- Type up you lines of Python code to compute the value of y and include them below what you typed already. 
+- Check if the value of y is approximately 400 by initalizing the value of z = 6.4. 
+- You don't have to be accurate. Try chaning the value of z to a number greater than 6.4 and then lower than 6.4 to see how close you can get to 400. 
+- Again, don't worry about the correct answer and focus on the syntax and the outout of your program.
+- Submit hte program `my_real_example2.py` with the value of x that in your attempts gets the value of y closest to 400. 
+:::
+
+Let's explore further:
+
+- The technical term for "what is x that would make 2.56<sup>x</sup> = 400?" is <em>logarithm</em>.
+- We would say: x = log<sub>2.56</sub>(400).
+  <br> (Read this as: x is equal to log of 400 to the base 2.56).
+- We can calculate this directly:
+
+    ```python
+    import math
+
+    x = math.log(400, 2.56)
+    print(x)
+    ```
+
+- Here we've introduced some new concepts:
+![](../../../media/units/unit0/module6/real1.png)
+- Just like you can ask Python to calculate logarithms using `math.log`, you can do other kinds of "calculator" functions conveniently.
+- **Example**: `math.sqrt` for square roots.
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 6.3
+
+Compute the square root of 2 in this exercise. 
+
+In `my_real_example3.py`, fill in code below that prints the square root of the number 2 (and only the square root - just one number).
+
+```python
+import math
+
+# Write a line of code here
+
+print(x)
+```
+:::
+
+###### **6.4 Video**
+{{< video ../../../media/units/unit0/module6/u0-mod6.4.mp4 aspect-ratio="21x9" >}}
+
+## 6.1 Going from reals to integers and strings
+Consider this program:
+```python
+import math
+
+x = 3.141
+print('x=' + str(x))
+
+i = math.floor(x)
+j = math.ceil(x)
+print('Rounding down x gives ' + str(i))
+print('Rounding up x gives ' + str(j))
+```
+
+:::{.callout-tip}
+- The <em>floor</em> function identifies the integer part of a number like 3.141, in this case 3.
+- <em>ceil</em> identifies the next higher integer, in this case 4.
+- So, any number with digits after the decimal point like 3.141 lies between its floor and ceiling.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 6.5
+
+Type the above in `my_real_example4.py`. 
+
+- Don't submit it yet. 
+- Add additional lines of code to print the floor and ceiling of 2.718 in the same way that the floor and ceiling of 3.141 were printed above. 
+- The lines of code shown below are incomplete. 
+- You should complete the additional lines of the code required in this exercise, and run the program to make sure you are getting the output desired. 
+- Submit `my_real_example4.py`
+
+```python
+y = 2.718
+print('y=' + str(y))
+
+m = math.floor()
+n = math.ceil()
+print('Rounding down y gives ' + str(m))
+print('Rounding up y gives ' + str(n))
+```
+:::
+
+Let's point out a few things:
+![](../../../media/units/unit0/module6/real2.png)
+
+Next, getting real numbers as input:
+```python
+import math
+
+# input always results in a string
+x_str = input('Enter a number: ')
+
+# This is how we convert a string into a real number:
+x = float(x_str)
+
+# We use str to embed a number in a string:
+print('The square of the number you entered is: ' + str(x*x))
+```
+
+:::{.callout-note}
+- We use the `int()` function to convert a string representation of an integer into an actual integer ready for arithmetic, as in:
+    
+    ```python
+    pounds_str = input('Desired flour in pounds: ')
+    pounds = int(pounds_str)
+    ounces = 16 * pounds
+    print('Flour amount in ounces: ' + ounces)
+    ```
+
+- The equivalent for real numbers is float:
+
+    ```python
+    x = float(x_str)
+    ```
+
+- Why is it called so?
+    - Observe that we can write the number 234.56 as 23.456 x 10<sup>1</sup> or as 2.3456 x 10<sup>2</sup> or as 0.23456 x 10<sup>3</sup>, or to exaggerate this idea: 0.000000000023456 x 10<sup>13</sup>
+    - The decimal point can thus, be "floated" around by adjusting the exponent (like 13).
+    - This is called <em>floating-point</em> notation.
+- So, what does it mean to have a string representation of a number versus the actual number?
+    - First, consider this program:
+        
+        ```python
+        some_string = '3.141'
+        x = float(some_string)
+        # Now we can use x in arithmetic
+        y = x / 2
+        ```
+<ul>
+- We cannot use `some_string` in arithmetic.
+</ul>
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 6.6
+The following does NOT work:
+```python
+x = '3.141'
+y = x / 2
+print(y)
+```
+Type up the above program in `my_real_example5.py` 
+
+- Fix it and make sure you program is running correctly.
+- Don't submit it yet. 
+- Add a few lines of code to print the output of `z = x * 2`, correctly. 
+- You should complete the additional lines of the code required in this exercise, and run the program to make sure you are getting the output desired. 
+- Submit `my_real_example5.py`
+:::
+
+The last exercise illustrates the strange way in which operators like + and * are repurposed for strings when used with strings:
+
+- Consider this example:
+    
+    ```python
+    s = 'Hello'
+    t = ' World'
+    u = s + t
+    print(u)
+    v = s * 3   # Makes 3 copies of s and concatenates them
+    print(v)    # Prints HelloHelloHello
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 6.7
+
+Type up the above in `my_string_example.py`, including the comments provided and submit your program.
+
+:::
+
+###### **6.8 Video**
+{{< video ../../../media/units/unit0/module6/u0-mod6.8.mp4 aspect-ratio="21x9" >}}
+
+Now, back to real numbers.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 6.9
+
+In `my_conversion_example.py` write a program that asks the user to enter a distance in kilometers, and then converts to miles and prints that number. Submit `my_conversion_example.py`. 
+:::
 
 
 <!-- <br>

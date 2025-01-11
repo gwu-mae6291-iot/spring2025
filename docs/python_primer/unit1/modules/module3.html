@@ -196,11 +196,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#using-a-boolean-variable" id="toc-using-a-boolean-variable" class="nav-link" data-scroll-target="#using-a-boolean-variable">3.2 Using a Boolean variable</a></li>
   <li><a href="#returning-a-truefalse-value" id="toc-returning-a-truefalse-value" class="nav-link" data-scroll-target="#returning-a-truefalse-value">3.3 Returning a True/False value</a></li>
   <li><a href="#new-topic-strings-and-slicing" id="toc-new-topic-strings-and-slicing" class="nav-link" data-scroll-target="#new-topic-strings-and-slicing">3.4 New topic: strings and slicing</a></li>
-  <li><a href="#using-slicing-to-solve-a-problem" id="toc-using-slicing-to-solve-a-problem" class="nav-link" data-scroll-target="#using-slicing-to-solve-a-problem">3.5 Using slicing to solve a problem</a></li>
   <li><a href="#built-in-string-functions-in-python" id="toc-built-in-string-functions-in-python" class="nav-link" data-scroll-target="#built-in-string-functions-in-python">3.6 Built-in string functions in Python</a></li>
   <li><a href="#the-concept-of-type" id="toc-the-concept-of-type" class="nav-link" data-scroll-target="#the-concept-of-type">3.7 The concept of <code>type</code></a></li>
-  <li><a href="#a-text-application" id="toc-a-text-application" class="nav-link" data-scroll-target="#a-text-application">3.8 A text application</a></li>
-  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">3.9 When things go wrong</a></li>
+  <li><a href="#a-different-version-of-print" id="toc-a-different-version-of-print" class="nav-link" data-scroll-target="#a-different-version-of-print">0.7 A different version of print</a></li>
   </ul>
 </nav>
     </div>
@@ -518,10 +516,8 @@ Exercise 3.2
 <div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> a <span class="kw">or</span> b</span></code></pre></div>
 <p>Because <code>a</code> is now <code>False</code> and <code>b</code> is <code>True</code>, the result in y will be: <img src="../../../media/units/unit1/module1.3/boolean-or.png" class="img-fluid"></p></li>
 </ul>
-<section id="video" class="level6">
-<h6 class="anchored" data-anchor-id="video"><strong>3.3 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.3/u1-mod3.3.mp4"></video></div>
-</section>
+<!-- ###### **3.3 Video**
+ -->
 </section>
 <section id="combining-boolean-operators" class="level2">
 <h2 class="anchored" data-anchor-id="combining-boolean-operators">3.1 Combining Boolean operators</h2>
@@ -548,9 +544,8 @@ Exercise 3.4
 <p><strong>Recommended but not required for submission in this exercise:</strong> Draw an expression diagram to work out the result for the second expression (the value of v) above.</p>
 </div>
 </div>
-<section id="video-1" class="level6">
-<h6 class="anchored" data-anchor-id="video-1"><strong>3.5 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.3/u1-mod3.5.mp4"></video></div>
+<!-- ###### **3.5 Video**
+ -->
 <p>Boolean expressions can be constructed with numeric variables and their comparison operators:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">3</span></span>
@@ -604,7 +599,6 @@ Exercise 3.6
 <p><strong>Recommended but not required for submission in this exercise:</strong> Draw an expression diagram to work out the result for the remaining three expressions above.</p>
 </div>
 </div>
-</section>
 </section>
 <section id="using-a-boolean-variable" class="level2">
 <h2 class="anchored" data-anchor-id="using-a-boolean-variable">3.2 Using a Boolean variable</h2>
@@ -976,123 +970,126 @@ Note
 <p><em>Slicing</em> has more to it than two numbers. We’ll have more to say about this in Unit-2.</p>
 </div>
 </div>
-</section>
-<section id="using-slicing-to-solve-a-problem" class="level2">
-<h2 class="anchored" data-anchor-id="using-slicing-to-solve-a-problem">3.5 Using slicing to solve a problem</h2>
-<p>Suppose we want to determine the longest prefix that two strings have in common, as in:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_common_prefix(<span class="st">'river'</span>, <span class="st">'rivet'</span>))</span></code></pre></div>
-<p>This should print ‘rive’ but</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_common_prefix(<span class="st">'river'</span>, <span class="st">'stream'</span>))</span></code></pre></div>
-<p>should find no common prefix.</p>
-<p><strong>We will use the following ideas:</strong></p>
-<ul>
-<li>Let an index variable start at <code>0</code> and increase in a loop.</li>
-<li>For each value of the index, we’ll compare the corresponding character in each string.</li>
-<li>When the characters are the same (or equal), we move to the next character and compare again.<br>
-</li>
-<li>The characters that are the same will be part of the common prefix.</li>
-<li>We keep moving to each and charater and compare them.</li>
-<li>The instance the characters are NOT equal, we would have gone past the end of the common prefix.</li>
-</ul>
-<p><strong>Let’s try the following program:</strong></p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_common_prefix(w1, w2):</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(w1)):</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> w1[k] <span class="op">!=</span> w2[k]:</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> w1[<span class="dv">0</span>:k]</span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_common_prefix(<span class="st">'river'</span>, <span class="st">'rivet'</span>))</span></code></pre></div>
-<p><strong>Let’s point out that there is a reserved word <em>break</em> in the program above:</strong></p>
-<ul>
-<li><p>The reserved word <b>break</b> is used to, well, “break out” of a loop:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(w1)):</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> w1[k] <span class="op">!=</span> w2[k]:</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span></code></pre></div></li>
-<li><p>When <code>break</code> statement is executed, the program exits the loop to the statement that follows the loop.</p></li>
-<li><p>Notice how we use slicing once we’ve found the char that’s past the common prefix:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> w1[<span class="dv">0</span>:k]  <span class="co"># All the chars from 0 to k-1 inclusive</span></span></code></pre></div></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.20
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the program below in <code>my_prefix.py</code>.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_common_prefix(w1, w2):</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(w1)):</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> w1[k] <span class="op">!=</span> w2[k]:</span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> w1[<span class="dv">0</span>:k]</span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_common_prefix(<span class="st">'river'</span>, <span class="st">'rivet'</span>))</span></code></pre></div>
-<p><strong>Submit your program <code>my_prefix.py</code>.</strong></p>
-<p><strong>The following part of the exercise is recommended but not required for submission:</strong></p>
-<ul>
-<li>Does the program <code>my_prefix.py</code> work as intended?</li>
-<li>Trace the execution of the program <code>my_prefix.py</code> to understand how the program executes.</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.21
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>In this exercise, start with your program <code>my_prefix.py</code>.</li>
-<li>Save it again as <code>my_prefix2.py</code>.</li>
-<li>Use the arguments <code>'riveting'</code> and <code>'rivet'</code> in the function-call as shown below.</li>
-</ul>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_common_prefix(<span class="st">'river'</span>, <span class="st">'rivet'</span>))</span></code></pre></div>
-<ul>
-<li>Check the output of your program <code>my_prefix2.py</code>, and observe if the program executes as intended.</li>
-</ul>
-<p><strong>Fix the problem in <code>my_prefix2.py</code> and submit your program.</strong></p>
-<p><strong>The following part of the exercise is recommended but not required for submission:</strong> - Trace the executing when the strings are ‘riveting’ and ‘rivet’. - Understand what goes wrong in the program <code>my_prefix2.py</code>.</p>
-</div>
-</div>
-<section id="video-2" class="level6">
-<h6 class="anchored" data-anchor-id="video-2"><strong>3.23 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module1.3/u1-mod3.23.mp4"></video></div>
-</section>
+<!-- ## 3.5 Using slicing to solve a problem
+Suppose we want to determine the longest prefix that two strings have in common, as in:
+```python
+print(find_common_prefix('river', 'rivet'))
+```
+This should print 'rive' but
+```python
+print(find_common_prefix('river', 'stream'))
+```
+should find no common prefix.
+
+
+**We will use the following ideas:**
+
+- Let an index variable start at `0` and increase in a loop.
+- For each value of the index, we'll compare the corresponding character in each string.
+- When the characters are the same (or equal), we move to the next character and compare again.  
+- The characters that are the same will be part of the common prefix.
+- We keep moving to each and charater and compare them.
+- The instance the characters are NOT equal, we would have gone past the end of the common prefix.
+
+**Let's try the following program:**
+```python
+def find_common_prefix(w1, w2):
+    for k in range(len(w1)):
+        if w1[k] != w2[k]:
+            break
+    return w1[0:k]
+
+print(find_common_prefix('river', 'rivet'))
+```
+
+**Let's point out that there is a reserved word <em>break</em> in the program above:**
+
+- The reserved word <b>break</b> is used to, well, "break out" of a loop:
+  
+    ```python
+    for k in range(len(w1)):
+        if w1[k] != w2[k]:
+            break
+    ```
+- When `break` statement is executed, the program exits the loop to the statement that follows the loop.
+- Notice how we use slicing once we've found the char that's past the common prefix:
+  
+    ```python
+    return w1[0:k]  # All the chars from 0 to k-1 inclusive
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.20
+Type up the program below in `my_prefix.py`. 
+
+```python
+def find_common_prefix(w1, w2):
+    for k in range(len(w1)):
+        if w1[k] != w2[k]:
+            break
+    return w1[0:k]
+
+print(find_common_prefix('river', 'rivet'))
+```
+
+**Submit your program `my_prefix.py`.**
+
+
+**The following part of the exercise is recommended but not required for submission:** 
+
+- Does the program `my_prefix.py` work as intended? 
+- Trace the execution of the program `my_prefix.py` to understand how the program executes.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.21
+
+- In this exercise, start with your program `my_prefix.py`. 
+- Save it again as `my_prefix2.py`. 
+- Use the arguments `'riveting'` and `'rivet'` in the function-call as shown below.
+```python
+print(find_common_prefix('river', 'rivet'))
+```
+- Check the output of your program `my_prefix2.py`, and observe if the program executes as intended. 
+
+**Fix the problem in `my_prefix2.py` and submit your program.**
+
+**The following part of the exercise is recommended but not required for submission:** 
+- Trace the executing when the strings are 'riveting' and 'rivet'. 
+- Understand what goes wrong in the program `my_prefix2.py`.
+:::
+
+
+###### **3.23 Video**
+ -->
 </section>
 <section id="built-in-string-functions-in-python" class="level2">
 <h2 class="anchored" data-anchor-id="built-in-string-functions-in-python">3.6 Built-in string functions in Python</h2>
 <p>Python comes with many useful functions for strings.</p>
 <p>Here’s a sample:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="st">'to'</span>,<span class="st">'infinity'</span>,<span class="st">'and'</span>,<span class="st">'beyond'</span>,<span class="st">'and'</span>, <span class="st">'even'</span>,<span class="st">'further'</span>]</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'infinity'</span></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to uppercase:</span></span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.upper())       </span>
-<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Count occurrences of the char 'i' in s:</span></span>
-<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.count(<span class="st">'i'</span>))    </span>
-<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Locate which index 'f' first occurs in s:</span></span>
-<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.find(<span class="st">'f'</span>))     </span>
-<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Occurrences of 'and' in list A:</span></span>
-<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A.count(<span class="st">'and'</span>))  </span>
-<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Occurrences of 'i' in 2nd string in list A:</span></span>
-<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A[<span class="dv">1</span>].count(<span class="st">'i'</span>)) </span>
-<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> A[<span class="dv">3</span>].startswith(<span class="st">'be'</span>):</span>
-<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'starts with be'</span>)</span>
-<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="st">'42'</span></span>
-<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.isnumeric())</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="st">'to'</span>,<span class="st">'infinity'</span>,<span class="st">'and'</span>,<span class="st">'beyond'</span>,<span class="st">'and'</span>, <span class="st">'even'</span>,<span class="st">'further'</span>]</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'infinity'</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to uppercase:</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.upper())       </span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Count occurrences of the char 'i' in s:</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.count(<span class="st">'i'</span>))    </span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Locate which index 'f' first occurs in s:</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.find(<span class="st">'f'</span>))     </span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Occurrences of 'and' in list A:</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A.count(<span class="st">'and'</span>))  </span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Occurrences of 'i' in 2nd string in list A:</span></span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A[<span class="dv">1</span>].count(<span class="st">'i'</span>)) </span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> A[<span class="dv">3</span>].startswith(<span class="st">'be'</span>):</span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'starts with be'</span>)</span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="st">'42'</span></span>
+<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.isnumeric())</span></code></pre></div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1114,18 +1111,18 @@ Exercise 3.24
 <p><strong>Explanation about how some of the string-functions work:</strong></p>
 <ul>
 <li><p>There’s a key difference, for example, between the functions <code>len()</code> and <code>upper()</code>:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">len</span>(s)</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'hello'</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">len</span>(s)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div>
 <ul>
 <li>The function <code>len()</code> is like the ones we’ve been writing ourselves.</li>
 <li>In this case, the string s is given to it as a parameter:</li>
 </ul>
-<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">len</span>(s)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">len</span>(s)</span></code></pre></div>
 <ul>
 <li>But the function <code>upper()</code> is quite different:</li>
 </ul>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div>
 <ul>
 <li>This is, in some sense, <em>attached</em> to the string variable s.</li>
 </ul></li>
@@ -1133,10 +1130,10 @@ Exercise 3.24
 <li><p>The advanced topic is called: <em>objects</em>. <br> (Yes. An ordinary name, but quite an involved topic, it turns out.)</p></li>
 </ul>
 <p><strong>Let’s emphasize one more feature with this snippet of code:</strong></p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'hello'</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1163,7 +1160,7 @@ Note
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>The string assigned to the variable <code>s</code> itself did not change but its uppercase version was returned by the call as shown below.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div></li>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div></li>
 <li><p>This returns a new string that gets placed into <code>t</code>.</p></li>
 </ul>
 </div>
@@ -1171,13 +1168,13 @@ Note
 <p><strong>Let’s continue with the earlier example:</strong></p>
 <ul>
 <li><p>Similar “dot” functions are available for lists too, as in:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> A.count(<span class="st">'and'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> A.count(<span class="st">'and'</span>)</span></code></pre></div>
 <ul>
 <li>This asks the list <code>A</code> to count how many times the string ‘and’ occurs in the list.</li>
 <li>The number that is returned gets stored in <code>k</code>.</li>
 </ul></li>
 <li><p>Notice how we can call a “dot” like function in a string when the string itself is an element of a list:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> A[<span class="dv">1</span>].count(<span class="st">'i'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> A[<span class="dv">1</span>].count(<span class="st">'i'</span>)</span></code></pre></div>
 <ul>
 <li>Here, <code>A[1]</code> is the second string in the list <code>A</code>.</li>
 <li>This happens to be ‘infinity’.</li>
@@ -1187,12 +1184,12 @@ Note
 </ul></li>
 </ul>
 <p><strong>Consider the following partially completed code:</strong></p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_zipcode(A):</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="st">'my'</span>,<span class="st">'zip'</span>, <span class="st">'is'</span>, <span class="st">'20052'</span>]</span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> get_zipcode(B)</span>
-<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(z<span class="op">+</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_zipcode(A):</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="st">'my'</span>,<span class="st">'zip'</span>, <span class="st">'is'</span>, <span class="st">'20052'</span>]</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> get_zipcode(B)</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(z<span class="op">+</span><span class="dv">1</span>)</span></code></pre></div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1217,17 +1214,17 @@ Exercise 3.26
 <p>So far, we’ve seen different kinds of variables:</p>
 <ul>
 <li><p><strong>Integer variables are represented as shown below:</strong></p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">435</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">435</span></span></code></pre></div></li>
 <li><p><strong>Floating-point variables for real numbers are represented as shown below:</strong></p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">3.14159</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="fl">2.718</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">3.14159</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="fl">2.718</span></span></code></pre></div></li>
 <li><p><strong>String variables are represented as shown below:</strong></p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="st">'hello'</span>    <span class="co"># String with multiple chars</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">'h'</span>        <span class="co"># Single-char string</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="st">'hello'</span>    <span class="co"># String with multiple chars</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">'h'</span>        <span class="co"># Single-char string</span></span></code></pre></div></li>
 <li><p><strong>Boolean variables are represented as shown below:</strong></p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="va">True</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="va">True</span></span></code></pre></div></li>
 <li><p><strong>We’ve also seen other kinds of <em>features</em> or “things” in Python such as:</strong></p>
 <ul>
 <li>Reserved words.</li>
@@ -1251,16 +1248,16 @@ Exercise 3.26
 <li><p>What doeas this mean?</p></li>
 <li><p>What kind of value does it have at the moment? An integer? A string?</p></li>
 <li><p>Consider the following lines of code:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span>      <span class="co"># The type of x is integer</span></span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">4.2</span>     <span class="co"># The type of y is floating point</span></span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="st">'whoa'</span>  <span class="co"># The type of z is string</span></span>
-<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="va">False</span>   <span class="co"># The type of b is Boolean</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span>      <span class="co"># The type of x is integer</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">4.2</span>     <span class="co"># The type of y is floating point</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="st">'whoa'</span>  <span class="co"># The type of z is string</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="va">False</span>   <span class="co"># The type of b is Boolean</span></span></code></pre></div></li>
 <li><p>One can print the <code>type</code> of a variable as follows:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span>    </span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">4.2</span>   </span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="st">'whoa'</span></span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="va">False</span> </span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(x), <span class="bu">type</span>(y), <span class="bu">type</span>(z), <span class="bu">type</span>(v))</span></code></pre></div></li>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span>    </span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">4.2</span>   </span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="st">'whoa'</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="va">False</span> </span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(x), <span class="bu">type</span>(y), <span class="bu">type</span>(z), <span class="bu">type</span>(v))</span></code></pre></div></li>
 <li><p><strong>The <code>type</code> information is often itself represention in a special Python feature called a <em>class</em> (intuitively, as in this “class of item”).</strong></p></li>
 </ul>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
@@ -1289,13 +1286,13 @@ Exercise 3.27
 <li><p>It is often useful to go from one type to another.</p></li>
 <li><p>We’ve seen an example of going from single-char string to integer, and converting from int to string (and vice-versa).</p></li>
 <li><p>To review, let’s look at a few more examples:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="fl">4.2</span>)</span>
-<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="bu">float</span>(<span class="dv">42</span>)</span>
-<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="bu">str</span>(b)</span>
-<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="bu">int</span>(<span class="st">'256'</span>)</span>
-<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="bu">ord</span>(<span class="st">'z'</span>)</span>
-<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">chr</span>(<span class="dv">97</span>)</span>
-<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b, c, d, e, f)</span></code></pre></div></li>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="fl">4.2</span>)</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="bu">float</span>(<span class="dv">42</span>)</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="bu">str</span>(b)</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="bu">int</span>(<span class="st">'256'</span>)</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="bu">ord</span>(<span class="st">'z'</span>)</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">chr</span>(<span class="dv">97</span>)</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b, c, d, e, f)</span></code></pre></div></li>
 </ul>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1315,225 +1312,221 @@ Exercise 3.28
 <ul>
 <li><p>Because our keyboards are limited in the number of symbol keys, we need to use some symbols for multiple purposes.</p></li>
 <li><p>The way we see this is when one operator, like <code>+</code>, has different meanings when used with different types:</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b         <span class="co"># + for arithmetic</span></span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="st">'world'</span></span>
-<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> d <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> e   <span class="co"># + for string concatenation</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b         <span class="co"># + for arithmetic</span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="st">'hello'</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="st">'world'</span></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> d <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> e   <span class="co"># + for string concatenation</span></span></code></pre></div></li>
 <li><p>Rather than list all possible uses of all operator symbols, we will introduce additional uses beyond the common case wherever appropriate.</p></li>
 <li><p>Generally, you should be intentional about using operators: you should know what the purpose is.</p></li>
 <li><p>For example, consider:</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a <span class="op">*</span> <span class="dv">3</span></span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)          <span class="co"># prints 12</span></span>
-<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> d <span class="op">*</span> <span class="dv">3</span>         <span class="co"># * for string concatenation</span></span>
-<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(e)          <span class="co"># Prints hellohellohello</span></span></code></pre></div>
-<p><!-- (The latter is not a frequently used operator with strings.) --></p></li>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)          <span class="co"># prints 12</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="st">'hello'</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> d <span class="op">*</span> <span class="dv">3</span>         <span class="co"># * for string concatenation</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(e)          <span class="co"># Prints hellohellohello</span></span></code></pre></div></li>
 </ul>
-</section>
-<section id="a-text-application" class="level2">
-<h2 class="anchored" data-anchor-id="a-text-application">3.8 A text application</h2>
-<p>Sometimes we need to go beyond what Python has to offer.</p>
-<p><strong>One way to do this is to find a popular <em>library</em> and use that:</strong></p>
-<ul>
-<li><strong>What’s a <em>library</em>?</strong></li>
-<li><strong>A <em>library</em> is a collection of programs all related for a purpose.</strong></li>
-<li>For example, there’s a <strong>library called NLTK</strong> (go look it up) that’s aimed at processing English text:
-<ul>
-<li>It can figure out parts of speech from sentences.</li>
-<li>It can pick out topics (somewhat approximately) in paragraphs.</li>
-<li>It can group so-called stem-related words like “fry”, “fries”, “frying” and separate those from “friar”.</li>
-</ul></li>
-<li>However, installing and learning to use these sophisticated packages requires some work.</li>
-<li>What we will do instead in this course is to provide you with simple programs that you can download and use directly without any installation.</li>
-<li>This is the purpose in providing programs like wordtool and drawtool.</li>
-</ul>
-<p><strong>Let’s use <code>wordtool</code> to find the longest sentence in a book:</strong></p>
-<ul>
-<li><p>The <strong><code>wordtool</code></strong> has a feature to break down text and give you one sentence at a time.</p></li>
-<li><p>For example:</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> wordtool <span class="im">as</span> wt</span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>sentences <span class="op">=</span> wt.get_sentences_from_textfile(<span class="st">'jabberwocky.txt'</span>)</span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> s <span class="kw">in</span> sentences:</span>
-<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>    count <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Sentence #'</span>, count, <span class="st">':</span><span class="ch">\n</span><span class="st">'</span>, s, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>, sep<span class="op">=</span><span class="st">''</span>)</span></code></pre></div></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.29
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>Type the above program in <code>my_sentence_app.py</code>, to see how it works.</p></li>
-<li><p>You will need to download <a href="../../../media/useful/wordtool.py" download=""><strong>wordtool.py</strong></a>, <a href="../../../media/useful/wordsWithPOS.txt" download=""><strong>wordsWithPOS.txt</strong></a>, and the sample text file <a href="../../../media/units/unit1/module1.3/jabberwocky.txt" download=""><strong>jabberwocky.txt</strong></a> all into your module folder.</p></li>
-<li><p>You are likely to be familiar with the author’s other famous works.</p></li>
-<li><p><strong>Submit your program <code>my_sentence_app.py</code>.</strong></p></li>
-</ul>
-</div>
-</div>
-<p><strong>Let’s point out some salient feature in the program <code>my_sentence_app.py</code>:</strong></p>
-<ul>
-<li>When using functions in another program, one has to <code>import</code> that program:</li>
-</ul>
-<!--     ```python
+<!-- ## 3.8 A text application
+Sometimes we need to go beyond what Python has to offer.
+
+**One way to do this is to find a popular <em>library</em> and use that:**
+
+- **What's a <em>library</em>?**
+- **A <em>library</em> is a collection of programs all related for a purpose.**
+- For example, there's a **library called NLTK** (go look it up) that's aimed at processing English text:
+    - It can figure out parts of speech from sentences.
+    - It can pick out topics (somewhat approximately) in paragraphs.
+    - It can group so-called stem-related words like "fry", "fries", "frying" and separate those from "friar".
+- However, installing and learning to use these sophisticated packages requires some work.
+- What we will do instead in this course is to provide you with simple programs that you can download and use directly without any installation.
+- This is the purpose in providing programs like wordtool and drawtool.
+
+**Let's use `wordtool` to find the longest sentence in a book:**
+   
+- The **`wordtool`** has a feature to break down text and give you one sentence at a time.
+- For example:
+    
+    ```python
     import wordtool as wt
-    ``` -->
-<ul>
-<li><p>It is convenient to use a shorthand such as <code>wt</code> for an imported program <code>wordtool</code> as shown below:</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> wordtool <span class="im">as</span> wt</span></code></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We could have called the shorthand for the imported program something other than <code>wt</code>.</p>
-</div>
-</div></li>
-<li><p>The function <code>get_sentences_from_textfile</code> from <code>wt</code> can now be applied to a file to initiate the process of breaking down text and output one sentence at a time as shown below:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>sentences <span class="op">=</span> wt.get_sentences_from_textfile(<span class="st">'jabberwocky.txt'</span>)</span></code></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>wordtool</code> requires that you to name the file, expecting it to be a plain text file (not a Word-document file).</p>
-</div>
-</div></li>
-</ul>
-<!--     ```python
+
     sentences = wt.get_sentences_from_textfile('jabberwocky.txt')
-    ``` -->
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.30
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>Start with the program <code>my_sentence_app.py</code>, and save it as <code>my_sentence_app2.py</code>.</p></li>
-<li><p>Observe that the for-loop has <code>\n</code> and <code>sep=''</code> in its last line.</p></li>
-<li><p>Remove <code>\n</code> and <code>sep=''</code> from the line <code>print('Sentence #', count, ':\n', s, '\n', sep='')</code> in the program <code>my_sentence_app2.py</code>.</p></li>
-<li><p>Execute the program <code>my_sentence_app2.py</code> to make sure there are no errors and observe the change in output (if any) by not including <code>\n</code> and <code>sep=''</code>.</p></li>
-</ul>
-<p><strong>Submit your program <code>my_sentence_app.py</code>.</strong></p>
-</div>
-</div>
-<p><strong>Let’s now do something interesting with <code>wordtool</code> i.e., find the longest sentence (by length) in two texts and compare the two really long sentences.</strong></p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> wordtool <span class="im">as</span> wt</span>
-<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_longest_sentence(filename):</span>
-<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>    sentences <span class="op">=</span> wt.get_sentences_from_textfile(filename)</span>
-<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>    maxL <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> s <span class="kw">in</span> sentences:</span>
-<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(s) <span class="op">&gt;</span> maxL:</span>
-<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a>            maxL <span class="op">=</span> <span class="bu">len</span>(s)</span>
-<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a>            maxS <span class="op">=</span> s</span>
-<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> maxS</span>
-<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-15"><a href="#cb67-15" aria-hidden="true" tabindex="-1"></a>book <span class="op">=</span> <span class="st">'federalist_papers.txt'</span></span>
-<span id="cb67-16"><a href="#cb67-16" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> get_longest_sentence(book)</span>
-<span id="cb67-17"><a href="#cb67-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Longest sentence in'</span>, book, <span class="st">'with'</span>, <span class="bu">len</span>(s), <span class="st">'chars:</span><span class="ch">\n</span><span class="st">'</span>, s)</span>
-<span id="cb67-18"><a href="#cb67-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-19"><a href="#cb67-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
-<span id="cb67-20"><a href="#cb67-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-21"><a href="#cb67-21" aria-hidden="true" tabindex="-1"></a>book <span class="op">=</span> <span class="st">'darwin.txt'</span></span>
-<span id="cb67-22"><a href="#cb67-22" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> get_longest_sentence(book)</span>
-<span id="cb67-23"><a href="#cb67-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Longest sentence in'</span>, book, <span class="st">'with'</span>, <span class="bu">len</span>(s), <span class="st">'chars:</span><span class="ch">\n</span><span class="st">'</span>, s)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.31
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>Type the above in <code>my_sentence_app3.py</code>.</p></li>
-<li><p>Then download <a href="../../../media/units/unit1/module1.3/darwin.txt" download=""><strong>darwin.txt</strong></a> (Darwin’s <em>On the Origin of Species</em>) and <a href="../../../media/units/unit1/module1.3/federalist_papers.txt" download=""><strong>federalist_papers.txt</strong></a> (the Federalist Papers by Hamilton and others).</p></li>
-<li><p>Execute the program <code>my_sentence_app3.py</code>.</p></li>
-<li><p><strong>Submit your program <code>my_sentence_app3.py</code>.</strong></p></li>
-</ul>
-<p><strong>Answering the following part of the exercise is recommended but not required for submission:</strong></p>
-<ul>
-<li>Which one has the longest?</li>
-<li>Who wrote the longest sentence in the Federalist Papers?</li>
-<li>Go to <a href="https://www.gutenberg.org/" download="">Project Gutenberg</a> and find a text with a longer sentence.</li>
-</ul>
-</div>
-</div>
+
+    count = 0
+        
+    for s in sentences:
+        count += 1
+        print('Sentence #', count, ':\n', s, '\n', sep='')
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.29
+
+- Type the above program in `my_sentence_app.py`, to see how it works. 
+
+- You will need to download <a href="../../../media/useful/wordtool.py" download>**wordtool.py**</a>, <a href="../../../media/useful/wordsWithPOS.txt" download>**wordsWithPOS.txt**</a>, and the sample text file <a href="../../../media/units/unit1/module1.3/jabberwocky.txt" download>**jabberwocky.txt**</a> all into your module folder. 
+
+- You are likely to be familiar with the author's other famous works.
+
+- **Submit your program `my_sentence_app.py`.**
+:::
+
+**Let's point out some salient feature in the program `my_sentence_app.py`:**
+
+- When using functions in another program, one has to `import` that program:
+- It is convenient to use a shorthand such as `wt` for an imported program `wordtool` as shown below:
+    
+    ```python
+    import wordtool as wt
+    ```
+:::{.callout-note}
+We could have called the shorthand for the imported program something other than `wt`.
+:::
+
+
+- The function `get_sentences_from_textfile` from `wt` can now be applied to a file to initiate the process of breaking down text and output one sentence at a time as shown below:
+    
+    ```python
+    sentences = wt.get_sentences_from_textfile('jabberwocky.txt')
+    ```
+:::{.callout-note}
+`wordtool` requires that you to name the file, expecting it to be a plain text file (not a Word-document file).   
+:::
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.30
+- Start with the program `my_sentence_app.py`, and save it as `my_sentence_app2.py`.
+
+- Observe that the for-loop has `\n` and `sep=''` in its last line.
+
+- Remove `\n` and `sep=''` from the line `print('Sentence #', count, ':\n', s, '\n', sep='')` in the program `my_sentence_app2.py`.
+
+- Execute the program `my_sentence_app2.py` to make sure there are no errors and  observe the change in output (if any) by not including `\n` and `sep=''`. 
+
+**Submit your program `my_sentence_app.py`.**
+:::
+
+**Let's now do something interesting with `wordtool` i.e., find the longest sentence (by length) in two texts and compare the two really long sentences.**
+```python
+import wordtool as wt
+
+def get_longest_sentence(filename):
+    sentences = wt.get_sentences_from_textfile(filename)
+    maxL = 0
+    
+    for s in sentences:
+        if len(s) > maxL:
+            maxL = len(s)
+            maxS = s
+
+    return maxS
+
+
+book = 'federalist_papers.txt'
+s = get_longest_sentence(book)
+print('Longest sentence in', book, 'with', len(s), 'chars:\n', s)
+
+print()
+
+book = 'darwin.txt'
+s = get_longest_sentence(book)
+print('Longest sentence in', book, 'with', len(s), 'chars:\n', s)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.31
+
+- Type the above in `my_sentence_app3.py`. 
+
+- Then download <a href="../../../media/units/unit1/module1.3/darwin.txt" download>**darwin.txt**</a> (Darwin's <em>On the Origin of Species</em>) and <a href="../../../media/units/unit1/module1.3/federalist_papers.txt" download>**federalist_papers.txt**</a>  (the Federalist Papers by Hamilton and others). 
+
+- Execute the program `my_sentence_app3.py`.
+
+- **Submit your program `my_sentence_app3.py`.**
+
+**Answering the following part of the exercise is recommended but not required for submission:** 
+
+- Which one has the longest? 
+- Who wrote the longest sentence in the Federalist Papers? 
+- Go to <a href="https://www.gutenberg.org/" download>Project Gutenberg</a> and find a text with a longer sentence. 
+:::
+
+## 3.9 When things go wrong
+In each of the exercises below, first try to identify the error just by reading. Then type up the program to confirm, and after that, fix the error.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.33
+
+```python
+def is_odd(k):
+    if k % 2 == 1:
+        return true
+    else:
+        return false
+```
+- Identify and fix the error in `my_error1.py`.
+
+- **Submit your `my_error1.py` after fixing the error.**
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.34
+
+```python
+x = 4
+if x >= 0 and <= 5:
+    print('x is between 0 and 5 inclusive')
+```
+- Identify and fix the error in `my_error2.py`.
+
+- **Submit your `my_error2.py` after fixing the error.**
+::: -->
 </section>
-<section id="when-things-go-wrong" class="level2">
-<h2 class="anchored" data-anchor-id="when-things-go-wrong">3.9 When things go wrong</h2>
-<p>In each of the exercises below, first try to identify the error just by reading. Then type up the program to confirm, and after that, fix the error.</p>
+<section id="a-different-version-of-print" class="level2">
+<h2 class="anchored" data-anchor-id="a-different-version-of-print">0.7 A different version of print</h2>
+<p>Consider these two variations of using print:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'eat'</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.141</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y))</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 3.33
+Exercise 0.22
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_odd(k):</span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> k <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> true</span>
-<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> false</span></code></pre></div>
-<ul>
-<li><p>Identify and fix the error in <code>my_error1.py</code>.</p></li>
-<li><p><strong>Submit your <code>my_error1.py</code> after fixing the error.</strong></p></li>
-</ul>
+<p>Type the above in <code>my_print_example.py</code> and submit it.</p>
 </div>
 </div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 3.34
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> <span class="op">&lt;=</span> <span class="dv">5</span>:</span>
-<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is between 0 and 5 inclusive'</span>)</span></code></pre></div>
 <ul>
-<li><p>Identify and fix the error in <code>my_error2.py</code>.</p></li>
-<li><p><strong>Submit your <code>my_error2.py</code> after fixing the error.</strong></p></li>
+<li><p>The first version above uses string concatenation to send one big string to print:</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y) )</span></code></pre></div></li>
+<li><p>In the second version, the strings and variables given to print <code>(x, s, y)</code> are separated by commas.</p></li>
+<li><p>Here, print treats the four things as separate entities:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div></li>
+<li><p>And it, automatically inserts a space between the different things (that are separated by commas).</p></li>
+<li><p>Note that here, there is no need to convert numbers to strings.</p></li>
 </ul>
 </div>
 </div>

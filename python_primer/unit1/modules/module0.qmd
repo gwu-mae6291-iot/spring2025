@@ -711,39 +711,7 @@ Note that there is a space between each word.
 Submit `my_other_lists.py`.
 :::
 
-## 0.7 A different version of print
-Consider these two variations of using print:
-```python
-x = 2
-s = 'eat'
-y = 3.141
-
-print('I love ' + str(x) + ' ' + s + ' ' + str(y))
-
-print('I love', x, s, y)
-```
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 0.22
-
-Type the above in `my_print_example.py` and submit it.
-:::
-
-:::{.callout-note}
-- The first version above uses string concatenation to send one big string to print:
-
-    ```python
-    print( 'I love ' + str(x) + ' ' + s + ' ' + str(y) )
-    ```
-- In the second version, the strings and variables given to print `(x, s, y)` are separated by commas.
-- Here, print treats the four things as separate entities:
-
-    ```python
-    print('I love', x, s, y)
-    ```
-- And it, automatically inserts a space between the different things (that are separated by commas).
-- Note that here, there is no need to convert numbers to strings.
-:::
+<!-- 
 
 ## 0.8 Random selection of elements from a list
 It is often useful to be able to pick random elements from  a list.
@@ -824,7 +792,6 @@ In `my_die_roll3.py`, change the game to the following:
 
 **Submit `my_die_roll3.py` with `num_trials = 1000`.**
 
-<!-- In your module pdf, devise a more interesting 2-player game one could play solely using dice. (You don't have to write a program for this last part.) -->
 :::
 
 ## 0.9 Some math via programming
@@ -938,14 +905,12 @@ And call them the x and y axes respectively.
     when x=3,
     and so on, perhaps up to 
     when x=10,
-  <!-- <br> (Here, the intended range is close to zero.) -->
 
 - But if we needed to, we could just as easily calculate f(x) = 2x + 3
     when x=0.1,
     when x=0.2,
     when x=0.3,
     and so on up to when x=1.0,
-    <!-- <br> (Here, the intended range is close to zero, between 0 and 1.0) -->
 
 Let's put these ideas to use:
 
@@ -1057,7 +1022,6 @@ When to use different scales along the axes:
 ### Exercise 0.31
 
 In `my_function_plot2.py`, add a third function `h(x) = 2^x`.
-<!-- \(h(x) = 2<sup>x</sup>\)  -->
 
 Try out the following options:
 
@@ -1213,7 +1177,474 @@ Finally, the connection between programming and math:
 
 - It is true that most people who program do not use math at all. Just ask a web developer.
 - But if you add a bit of math, you can do many interesting things in programming, as anyone who deals with data will tell you.
-- Some aspects of computer science that have a strong mathematical underpinning are just ... a lot of fun!
+- Some aspects of computer science that have a strong mathematical underpinning are just ... a lot of fun! -->
+
+## 1.6 Conditionals and lists
+Suppose we have a list of numbers, representing daily profits (sometimes negative, sometimes positive) and we only want to add up the positive numbers:
+```python
+earnings = [-5, 2, 3, -9, 12, 4, -30]
+total = 0
+for k in earnings:
+    if k >= 0:
+        total += k
+
+print('Total profit =', total)
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.20
+
+Trace through the values of total and k in the program above. There is nothing to submit for this exercise.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.21
+
+Given a list like:
+
+```python
+A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
+```
+we see that 12, 13 and -21, -20 are pairs of consecutive numbers. 
+
+- Type up the program below called `my_consecutive.py`, which uses a loop and a conditional to identify consecutive pairs and print them. 
+
+    ```python
+    A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
+    for i in range(len(A) - 1):
+        if abs(A[i] - A[i + 1]) == 1:
+            print("Consecutive pair found: ",A[i], A[i + 1])
+    ```
+
+For the above list, the output should be:
+```python
+Consecutive pair found: 12 13
+Consecutive pair found: -21 -20
+```
+
+
+:::
+
+Next, let's write a program that asks the user to enter a number, that we then check is in a list of numbers:
+```python
+# The list of numbers:
+A = [-5, 2, 4, -9, 12, 13, -30]
+
+# Receive what the user types in (as a string):
+user_str = input('Enter an integer: ')
+
+# Convert string to integer:
+k = int(user_str)
+
+# Check whether in the list:
+if k in A:
+    print(k,'is in the list')
+else:
+    print(k,'is not in the list')
+```
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.23
+Type up the above program in `my_listcheck.py`, run it for the following user inputs and examine the output in each case:
+
+1. 100
+2. 35.364 (For a float-type input explain to yourself why you may get an error.)
+3. 4 
+
+Run each case listed above and understand the output or error you are getting.
+
+Submit the program `my_listcheck.py`.
+:::
+
+:::{.callout-note}
+The <b>in</b> operator checks for membership in the list:
+```python
+if k in A:
+```
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.24
+
+Suppose you are given two lists like:
+```python
+A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
+B = [2, -9, 11, 16, 13]
+```
+Notice that some elements of A (like 2) also exist in B. In `my_twolist.py`, use the list membership idea to print those elements of A that are also in B. For the above example, the output should be:
+```python
+2 in A also found in B
+-9 in A also found in B
+13 in A also found in B
+```
+:::
+
+## 1.7 More examples with lists
+Consider the following program that aims to find duplicates in a list:
+```python
+A = [2, 9, 2, 6, 4, 3, 3, 2]
+for k in A:
+    if k in A:
+        print('Duplicate found:', k)
+```
+In the list, we can see that 2 occurs thrice, and 3 occurs twice. Both should be listed as duplicates. Is this the case?
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.25
+
+Trace through the loop's iterations in the above program and explain to yourself why it does not work.
+
+There is nothing to submit for this exercise.
+:::
+
+Now consider this variation:
+```python
+A = [2, 9, 2, 6, 4, 3, 3, 2]
+for i in range(len(A)-1):
+    for j in range(i+1, len(A)):
+        if A[i] == A[j]:
+            print('Duplicate found:', A[i])
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.26
+Type up the above program in `my_listcheck2.py` and submit it.
+
+The following part of the exercise is not required for submission: 
+
+- Trace through the loop's iterations in the above program in a separate spreadsheet or document. Explain the output to yourself. Why does the inner loop start with i+1?
+:::
+
+## 2.7 Functions and lists
+Can a function receive a list as parameter? Can it return one? Is this useful? Yes, yes, yes.
+
+Let's start with a list as parameter:
+```python
+def compute_total(B):
+    total = 0
+    for k in B:
+        total += k
+    return total
+
+A = [1, 3, 5, 7]
+t = compute_total(A)
+print(t)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.18
+
+Try tracing through the execution of the above program, including loop interactions. The tracing activity is for you understand the execution of the program and you don't need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result. 
+
+**The following portion of the exercise is required for submission of this exercise:**
+
+- Type up the above in `my_func_example11.py` by including a `print(k)` inside the for-loop.
+- Submit your program `my_func_example11.py`. 
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.19
+
+In `my_even_numbers.py`, complete the code in the function below so that the even numbers in a list are printed out:
+```python
+def print_even(A):
+    # Insert your code here
+
+A = [1, 3, 5, 6, 7, 8]
+print_even(A)
+```
+Write the function so that the output is as shown below:
+```python
+Found even:  6
+Found even:  8
+```
+**Hint:** Recall how to use the <em>remainder</em> operator from the previous module (conditionals and loops).
+
+- Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)
+- You can include the comment in the your code.
+- Execute the program `my_even_numbers.py`.
+- Submit your program `my_even_numbers.py`.
+:::
+
+Next, let's look at an example where a list is returned:
+```python
+def build_odd_list(n):
+    L = []
+    for i in range(0, n):
+        k = 2*i + 1
+        L.append(k)
+    return L
+
+print(build_odd_list(5))
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.21
+
+<!-- Try tracing through the above, the type up in `my_odd_list.py` to confirm what you learned. Include a `print(k)` in the loop after the append. -->
+
+Try tracing through the execution of the above program, including loop interactions. The tracing activity is for you understand the execution of the program and you don't need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result. 
+
+**The following portion of the exercise is required for submission of this exercise:**
+
+- Type up the above in `my_odd_list.py` by including a `print(k)` inside the for-loop after the `L.append(k)`.
+- Submit your program ``my_odd_list.py`. 
+:::
+
+:::{.callout-note}
+- Execution begins with 
+
+    ```python
+    print(build_odd_list(5))
+    ```
+- This results in:
+![](../../../media/units/unit1/module1.2/list-return.png)
+- Once the return occurs, we could think of this as:
+
+    ```python
+    print( [1, 3, 5, 7, 9] )
+    ```
+    This gets sent to print, which prints.
+- One could make this more explicit:
+![](../../../media/units/unit1/module1.2/list-return2.png)
+:::
+
+Next, let's look at a list example with multiple returns:
+```python
+def find_first_negative(A):
+    for k in A:
+        if k < 0:
+            # First try print(k) here
+            return k
+            # Then try print(k) here
+    return 0
+
+B = [1, 2, -3, 4, -5, 6]
+C = [1, 2, 3, 4]
+
+print(find_first_negative(B))
+print(find_first_negative(C))
+```  
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.22
+
+Before typing this up in `my_first_negative.py` to confirm. That is, use the tracing approach we've used before: write out the values of variables and how they change from one iteration to the next. Then, replace the first comment so that you `print(k)` inside the loop. Then, move the print statement (still inside the loop) to after the `return k` statement. What do you observe? There is nothing to submit in the above portion of this exercise.
+
+Type up the above program in `my_first_negative.py`. 
+Then do the following: 
+
+1. Execute the program and examine the output.
+2. Next, replace the first comment so that you `print(k)` inside the if-conditional. 
+3. Execute your program `my_first_negative.py` and examine the output.
+4. Then, delete the `print(k)` you wrote in place of the first comment. 
+5. Now replace the second comment with `print(k)` statement so that it appears after the `return k` statement. 
+6. Exceute your program `my_first_negative.py` and examine the output for any change with the earlier execution. 
+7. Submit your program `my_first_negative.py` with the modification suggested in point #5.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.23
+
+In `my_last_negative.py`, modify the above program to find the last negative number (if one exists) in a list. So, after completing the code below
+```python
+def find_last_negative(A):
+    # Insert your code here
+
+B = [1, 2, -3, 4, -5, 6]
+C = [1, 2, 3, 4]
+```
+it should print
+```python
+-5
+0
+```
+**Submit your program `my_last_negative.py`.**
+:::
+
+## 2.8 returns that don't return anything
+Consider this program:
+```python
+def print_first_negative(A):
+    for k in A:
+        if k < 0:
+            print('Found: ',k)
+            return 
+    print('No negatives found')
+
+B = [1, 2, -3, 4, -5, 6]
+print_first_negative(B)
+C = [1, 2, 3, 4]
+print_first_negative(C)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.25
+
+Type up the above in `my_first_negative2.py`, execute and check for any errors. 
+
+**Submit your program `my_first_negative2.py` if there are no errors.**
+:::
+
+Let's point out:
+
+- Whenever a `return` statement is executed in a function, execution exits the function right away.
+- When a `return` statement does not return a variable's value, execution leaves the function but does not give a value back to the invoking code.
+- Thus the `return` statement in the program below, does not return a value but merely causes execution to leave the function and get back to line <em>just after</em> the function was invoked.
+
+    ```python
+    def print_first_negative(A):
+        for k in A:
+            if k < 0:
+                print('Found: ',k)
+                return
+        print('No negatives found')
+    ```
+    
+- Although it's not needed, one could return at the end of a non-value-returning function:
+
+    ```python
+    def print_first_negative(A):
+        for k in A:
+            if k < 0:
+                print('Found: ',k)
+                return
+        print('No negatives found')
+        return
+    ```
+- Why do we have multiple return's in a function? Why not always wait until execution reaches the end of a function?
+    - It is very useful to be able to return from anywhere in a function's code.
+    - The reason is, as soon as the function's "job" is done (example: finding the first negative), we want to leave the function.
+
+## 2.9 A fundamental difference between list and basic parameters
+Consider this program:
+```python
+def swapint(a, b):
+    temp = a
+    a = b
+    b = temp
+    print(a, b)
+
+x = 5
+y = 6
+swapint(x, y)
+print(x, y)     # Will this print 5 and 6, or 6 and 5?
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.26
+
+Before typing up the above in `my_swap_int.py` and submitting, can you guess what the output will be ?
+
+- Type up and execute the program `my_swap_int.py`.
+- Submit your program `my_swap_int.py`. 
+:::
+
+Let's explain:
+
+- Execution of the program begins with the line
+
+    ```python
+    x = 5
+    ```
+- When the function is called soon after:
+    
+    ```python
+    swapint(x, y)
+    ```
+    then execution enters the function with the values in x and y copied into a and b:
+    ![](../../../media/units/unit1/module1.2/swap-code.png)
+- Then, by the time we reach the print statement:
+![](../../../media/units/unit1/module1.2/swap-code2.png)
+- Thus, the values in a and b do indeed get swapped.
+- But this does not affect x and y because they are actually different variables.
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.27
+To help you understand the program, in a separate document draw the three boxes for `a, b,` and `temp`, at each step in the function’s execution. 
+
+**There is nothing to submit in this exercise.**
+:::
+
+Now, consider a similar program with lists:
+```python
+def swap_list_first(A, B):
+    temp = A[0]
+    A[0] = B[0]
+    B[0] = temp
+
+X = [1, 3, 5, 7]
+Y = [2, 4, 6]
+swap_list_first(X, Y)
+print(X, Y)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.28
+
+To help you understand the above program, in a separate document draw the three boxes for `A, B,` and `temp`, at each step in the function’s execution. 
+
+**There is nothing to submit in this exercise.**
+:::
+
+Let's see what's going on:
+
+- List variables are fundamentally different from numeric variables.
+- Think of a list variable has having a reference ID to the actual list contents:
+    - This is like an "address" in memory.
+    - If you have this "address" you can go to the list and do things with it.
+    - List variables actual store these addresses (which, interestingly, turn out to be numbers).
+- We will draw a <em>conceptual diagram</em> to highlight this point:
+![](../../../media/units/unit1/module1.2/swap-code3.png)
+- Thus, when the function starts execution, the "references" in X and Y are copied into A and B.
+- This means A and B refer to the same <em>list contents</em>.
+- So, A[0] is the same as X[0], for example.
+- Next, after executing the three lines inside the function but before returning:
+![](../../../media/units/unit1/module1.2/swap-code4.png)
+- Notice that temp is a regular integer.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.29
+
+Type up the above program with the function `swap_list_first(A, B)` in `my_swap_list_first.py`. 
+
+- Execute the program and examine the output. 
+- Submit your program `my_swap_list_first.py`. 
+
+<!-- To help you understand the program, in a separate document draw the three boxes for a, b, and temp, at each step in the function’s execution. -->
+:::
+
+**The key takeaways:**
+
+- When you send number variables to a function, they get copied, and so the function can't "do" anything to the variables you present as arguments.
+- But if you send a list, a function can change the contents.
+- This means you need to be careful about <em>intent</em> when writing functions that involve larger entities like lists.
+<!--     <br> (There are other such "grouped data" entities, called <em>objects</em>.)
+- If the intent is to change contents, that's fine, we should know that. -->
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 2.31
+
+Consider the following program:
+```python
+def change_int(a):
+    a = a + 1
+
+def change_list(A):
+    A[0] = A[0] + 1
+
+x = 5
+change_int(x)
+print(x)
+
+B = [1, 2, 3]
+change_list(B)
+print(B)
+```
+
+- Type up the above in `my_change_list.py`. 
+- Execute the program `my_change_list.py` and examine the output. 
+- Submit your program `my_change_list.py`.
+:::
 
 <!-- <br>
 [Next Module: **Module 1.1**](./module1.1.qmd){.button .next} -->

@@ -30,7 +30,7 @@ By the end of this module you will be able to:
 - Experince writing a really simple program.
 - Explain the difference between command-line outputs vs GUI for programs.
 
-:::{.callout-tip}
+<!-- :::{.callout-tip}
 [**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
 [**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
@@ -40,7 +40,7 @@ By the end of this module you will be able to:
 [**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
 
 [**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-:::
+::: -->
 
 ### 0.0: Our First Program
 Lets take a look at our first program as it appears in a textbook (like this one):
@@ -88,7 +88,7 @@ So, what's with printing the unusual phrase "Hello World!"?
 - It's a tradition in computer science that your first program will print "Hello World!".
 - It's meant to pretend that a program is a creature that's itself communicating to the outside world by saying hello.
 
-### 0.1 The recipe-cook-dish analogy
+<!-- ### 0.1 The recipe-cook-dish analogy
 What just happened above?
 
 Let's use an analogy
@@ -139,7 +139,7 @@ Develop your computerese skills by following [these instructions.](../guides/com
 
 :::{.callout-note}
 There is nothing to submit for this particula exercise; it is aimed at generally helping you get proficien with using your computer for programming.
-:::
+::: -->
 
 ### 0.3 A slight variation
 We will now spend a bit of time trying a few variations, and also  examining what happens when typing mistakes are made.
@@ -159,7 +159,7 @@ Type up this program but use your own name instead of X. Save the file in the `m
 In the future we will be asking you to "type up" programs; in all such cases, please also save the file (for eventual submission)
 :::
 
-### 0.4 What happens when things go (even slightly) wrong
+<!-- ### 0.4 What happens when things go (even slightly) wrong
 We'll now deliberately make a few tiny errors and see what happens:
 
 - **Error #1:** forgetting to type the closing parenthesis.
@@ -399,7 +399,7 @@ How to succeed:
 
 :::{.callout-note}
 [What to rememeber about submitting work](../../../submit-remember.qmd)
-:::
+::: -->
 
 <!-- <br>
 [Next Module: **Module 0.1**](./module0.1.qmd){.button .next} -->

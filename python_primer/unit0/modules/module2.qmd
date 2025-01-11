@@ -33,7 +33,7 @@ programs, you will be able to:
 - Add numbered comments to show an execution trace.
 - Identify and correct syntax errors related to the above objectives.
 
-:::{.callout-tip}
+<!-- :::{.callout-tip}
 [**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
 [**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
@@ -43,7 +43,7 @@ programs, you will be able to:
 [**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
 
 [**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-:::
+::: -->
 
 ## 2.0 An example with function calls
 Consider the following program:
@@ -113,8 +113,8 @@ We'll later see examples where some things can go between the parens.
     - Other lines that belong to the function <em>should</em> be indented.
     - There are other forms of indentation that we'll point out as we proceed - they're all <em>important</em>.
 
-###### **2.2 Video**
-{{< video ../../../media/units/unit0/module2/u0-mod2.2.mp4 aspect-ratio='21x9' >}}
+<!-- ###### **2.2 Video**
+{{< video ../../../media/units/unit0/module2/u0-mod2.2.mp4 aspect-ratio='21x9' >}} -->
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 2.3
@@ -185,8 +185,8 @@ At which step (which step number) do we execute the last line in `print_big_O`? 
 :::
 
 
-###### **2.6 Video**
-{{< video ../../../media/units/unit0/module2/u0-mod2.6.mp4 aspect-ratio='21x9' >}}
+<!-- ###### **2.6 Video**
+{{< video ../../../media/units/unit0/module2/u0-mod2.6.mp4 aspect-ratio='21x9' >}} -->
 
 ## 2.1 Calling functions from other functions
 Consider this program:
@@ -233,8 +233,8 @@ Use this idea to rewrite your own animal sound in a file called `my_pet_sound2.p
 Look at the example above. What step number is represented by the question mark (?) next to the second `print_big_O()` inside the `print_two_big_Os()` function? What line in the program represents step 15? Discuss the program to correctly identify “step-15” with your TAs. There is nothing to submit in this exercise.
 :::
 
-###### **2.9 Video**
-{{< video ../../../media/units/unit0/module2/u0-mod2.9.mp4 aspect-ratio='21x9' >}}
+<!-- ###### **2.9 Video**
+{{< video ../../../media/units/unit0/module2/u0-mod2.9.mp4 aspect-ratio='21x9' >}} -->
 
 - Mental execution:
 - We will use the term <em>mental execution</em> for the above exercise of tracing through the execution without actually compiling and running the program.
@@ -249,7 +249,7 @@ Mental execution is <em>extremely important</em> in developing programming skill
      - Function definitions are <em>processed</em> (understood) but not executed.
      - When a function are <em>invoked</em>, execution "goes" into the function to execute the code in there.
 
-## 2.2 More about functions
+<!-- ## 2.2 More about functions
 About function names:
 
 - Consider the function name `print_big_M`.
@@ -388,12 +388,6 @@ Type up the above program in `random_art.py` and execute it. When you quit your 
 Now let's point out a few features:
 ![](../../../media/units/unit0/module2/randomart.png)
 
-<!-- :::{.callout-caution appearance="simple" icon=false}
-### Exercise 2.13
-
-Use the same code in `random_art2.py` and then add and modify it to create your own art, and include a screenshot in `module2.pdf`. When you quit your program, instead of x-ing out the window, type  `control-c` ("control" key and "c" key pressed together) while the cursor is in the output window.
-::: -->
-
 About <em>control-c</em>
 
 - The standard keyboard has some keys that act together with other keys, in effect <em>modifying</em> them.
@@ -462,7 +456,7 @@ Please check that your module2 folder has the right files before you zip and upl
 
 or
 
-![Windows](../../../media/units/unit0/module2/win-module2-23.png)
+![Windows](../../../media/units/unit0/module2/win-module2-23.png) -->
 
 
 <!-- <br>

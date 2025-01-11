@@ -625,141 +625,7 @@ Type up the above program in `my_oddeven.py`and run it to examine the output. Th
     - Trace through the interactions in the above program in a separate spreadsheet or document.
 :::
 
-## 1.6 Conditionals and lists
-Suppose we have a list of numbers, representing daily profits (sometimes negative, sometimes positive) and we only want to add up the positive numbers:
-```python
-earnings = [-5, 2, 3, -9, 12, 4, -30]
-total = 0
-for k in earnings:
-    if k >= 0:
-        total += k
-
-print('Total profit =', total)
-```
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 1.20
-
-Trace through the values of total and k in the program above. There is nothing to submit for this exercise.
-:::
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 1.21
-
-Given a list like:
-
-```python
-A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
-```
-we see that 12, 13 and -21, -20 are pairs of consecutive numbers. 
-
-- Type up the program below called `my_consecutive.py`, which uses a loop and a conditional to identify consecutive pairs and print them. 
-
-    ```python
-    A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
-    for i in range(len(A) - 1):
-        if abs(A[i] - A[i + 1]) == 1:
-            print("Consecutive pair found: ",A[i], A[i + 1])
-    ```
-
-For the above list, the output should be:
-```python
-Consecutive pair found: 12 13
-Consecutive pair found: -21 -20
-```
-
-
-:::
-
-Next, let's write a program that asks the user to enter a number, that we then check is in a list of numbers:
-```python
-# The list of numbers:
-A = [-5, 2, 4, -9, 12, 13, -30]
-
-# Receive what the user types in (as a string):
-user_str = input('Enter an integer: ')
-
-# Convert string to integer:
-k = int(user_str)
-
-# Check whether in the list:
-if k in A:
-    print(k,'is in the list')
-else:
-    print(k,'is not in the list')
-```
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 1.23
-Type up the above program in `my_listcheck.py`, run it for the following user inputs and examine the output in each case:
-
-1. 100
-2. 35.364 (For a float-type input explain to yourself why you may get an error.)
-3. 4 
-
-Run each case listed above and understand the output or error you are getting.
-
-Submit the program `my_listcheck.py`.
-:::
-
-:::{.callout-note}
-The <b>in</b> operator checks for membership in the list:
-```python
-if k in A:
-```
-:::
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 1.24
-
-Suppose you are given two lists like:
-```python
-A = [-5, 2, 4, -9, 12, 13, -30, -21, -20]
-B = [2, -9, 11, 16, 13]
-```
-Notice that some elements of A (like 2) also exist in B. In `my_twolist.py`, use the list membership idea to print those elements of A that are also in B. For the above example, the output should be:
-```python
-2 in A also found in B
--9 in A also found in B
-13 in A also found in B
-```
-:::
-
-## 1.7 More examples with lists
-Consider the following program that aims to find duplicates in a list:
-```python
-A = [2, 9, 2, 6, 4, 3, 3, 2]
-for k in A:
-    if k in A:
-        print('Duplicate found:', k)
-```
-In the list, we can see that 2 occurs thrice, and 3 occurs twice. Both should be listed as duplicates. Is this the case?
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 1.25
-
-Trace through the loop's iterations in the above program and explain to yourself why it does not work.
-
-There is nothing to submit for this exercise.
-:::
-
-Now consider this variation:
-```python
-A = [2, 9, 2, 6, 4, 3, 3, 2]
-for i in range(len(A)-1):
-    for j in range(i+1, len(A)):
-        if A[i] == A[j]:
-            print('Duplicate found:', A[i])
-```
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 1.26
-Type up the above program in `my_listcheck2.py` and submit it.
-
-The following part of the exercise is not required for submission: 
-
-- Trace through the loop's iterations in the above program in a separate spreadsheet or document. Explain the output to yourself. Why does the inner loop start with i+1?
-:::
-
-## 1.8 Some stats via programming
+<!-- ## 1.8 Some stats via programming
 Let's now apply our practice with conditionals to solve some problems in probability and statistics. 
 
 For example: Suppose I toss a coin 4 times and observe the face that's up. What is the probability that I get all "tails" (i.e., not one toss shows "heads").
@@ -914,7 +780,6 @@ Then do the following and examine the probability in each output:
 - Run the program for the sum of the values of the dice being 2, i.e., roll1 + roll2 = 2 
 - Submit your program for roll1 + roll2 = 7
 
-<!-- Try and answer for yourself if there is a number other than 7 for which the probability is higher. -->
 :::
 
 Let's also look at how one can use Python to randomly generate real numbers, for example:
@@ -955,9 +820,6 @@ Then perform the following two modifications:
 
 **Submit your program with modifications outlined in Case-2**
 
-<!-- **2.** How does that compare with the average of the numbers 25 and 30? 
-
-**3.** And why the results make sense.  -->
 :::
 
 Before you head off to Vegas with your Python programs, let's point out:
@@ -1003,8 +865,6 @@ Download <a href="../../../media/units/unit1/module1/conditional_art.py" downloa
 3. Change the options for your randomly chosen colors. Use `colors = ['c','m','y','k']` and the value of n = 1000.
 
 4. Submit your program with the modifcations suggested in point #3. 
-<!-- 
-to improve the result? Does it look good with just two colors? Next, starting with Kandinsky, find an example of abstract art that you think might be considered an analogue in the history of art. There is nothing to submit in this exercise. -->
 :::
 
 
@@ -1025,7 +885,6 @@ Download <a href="../../../media/units/unit1/module1/conditional_art2.py" downlo
 
 **Submit your program with the modifications outlined in Case-2**
 
-<!-- Is there a value that provides an aesthetic mix? Try different n. Make changes to the code. -->
 :::
 
 ## 1.10 When things go wrong
@@ -1071,7 +930,7 @@ else:
     print('something else')
 ```
 Identify and fix the error in `my_error3.py`.
-:::
+::: -->
 
 <!-- <br>
 [Previous Module: **Module 1.0**](./module1.0.qmd){.button .prev} [Next Module: **Module 1.2**](./module1.2.qmd){.button .next} -->

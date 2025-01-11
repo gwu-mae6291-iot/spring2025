@@ -302,7 +302,7 @@ Python is case sensitive but strings are like <em>data</em> inside programs, whi
 
 
 
-## 1.4 A peek at the future
+<!-- ## 1.4 A peek at the future
 We will occasionally jump ahead and present an example of a program that does something advanced, just so you get a feel for what's coming.
 
 With these examples, we'll only ask you to type up the program and run the program.
@@ -348,7 +348,7 @@ As you complete Module 1 and ready that for submission you might want to review:
 - Are your Python programs from this module in that folder?
 - Do you recall how to make a zip?
 
-If it's a bit hazy, please make sure to review from the [**material on computerese**](../guides/computerese.qmd) from Module 0.
+If it's a bit hazy, please make sure to review from the [**material on computerese**](../guides/computerese.qmd) from Module 0. -->
 
 <!-- [Here's more information about submitting Module 1]() -->
 

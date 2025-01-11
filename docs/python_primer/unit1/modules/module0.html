@@ -103,35 +103,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -227,12 +198,11 @@ window.Quarto = {
   <li><a href="#working-with-multiple-lists" id="toc-working-with-multiple-lists" class="nav-link" data-scroll-target="#working-with-multiple-lists">0.4 Working with multiple lists</a></li>
   <li><a href="#moving-elements-around-in-a-list" id="toc-moving-elements-around-in-a-list" class="nav-link" data-scroll-target="#moving-elements-around-in-a-list">0.5 Moving elements around in a list</a></li>
   <li><a href="#lists-of-strings-characters-or-real-numbers" id="toc-lists-of-strings-characters-or-real-numbers" class="nav-link" data-scroll-target="#lists-of-strings-characters-or-real-numbers">0.6 Lists of strings, characters, or real numbers</a></li>
-  <li><a href="#a-different-version-of-print" id="toc-a-different-version-of-print" class="nav-link" data-scroll-target="#a-different-version-of-print">0.7 A different version of print</a></li>
-  <li><a href="#random-selection-of-elements-from-a-list" id="toc-random-selection-of-elements-from-a-list" class="nav-link" data-scroll-target="#random-selection-of-elements-from-a-list">0.8 Random selection of elements from a list</a></li>
-  <li><a href="#some-math-via-programming" id="toc-some-math-via-programming" class="nav-link" data-scroll-target="#some-math-via-programming">0.9 Some math via programming</a></li>
-  <li><a href="#mathematical-art" id="toc-mathematical-art" class="nav-link" data-scroll-target="#mathematical-art">0.10 Mathematical art</a></li>
-  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">0.11 When things go wrong</a></li>
-  <li><a href="#meta" id="toc-meta" class="nav-link" data-scroll-target="#meta">0.12 Meta</a></li>
+  <li><a href="#conditionals-and-lists" id="toc-conditionals-and-lists" class="nav-link" data-scroll-target="#conditionals-and-lists">1.6 Conditionals and lists</a></li>
+  <li><a href="#more-examples-with-lists" id="toc-more-examples-with-lists" class="nav-link" data-scroll-target="#more-examples-with-lists">1.7 More examples with lists</a></li>
+  <li><a href="#functions-and-lists" id="toc-functions-and-lists" class="nav-link" data-scroll-target="#functions-and-lists">2.7 Functions and lists</a></li>
+  <li><a href="#returns-that-dont-return-anything" id="toc-returns-that-dont-return-anything" class="nav-link" data-scroll-target="#returns-that-dont-return-anything">2.8 returns that don’t return anything</a></li>
+  <li><a href="#a-fundamental-difference-between-list-and-basic-parameters" id="toc-a-fundamental-difference-between-list-and-basic-parameters" class="nav-link" data-scroll-target="#a-fundamental-difference-between-list-and-basic-parameters">2.9 A fundamental difference between list and basic parameters</a></li>
   </ul>
 </nav>
     </div>
@@ -1053,28 +1023,728 @@ Exercise 0.21
 <p>Submit <code>my_other_lists.py</code>.</p>
 </div>
 </div>
+<!-- 
+
+## 0.8 Random selection of elements from a list
+It is often useful to be able to pick random elements from  a list.
+
+Let's use this feature first for a single roll of a die and then two dice:
+
+- Since a single die has 6 faces with the numbers 1 through 6, we'll use a list of the numbers 1 through 6:
+
+    ```python
+    die = [1, 2, 3, 4, 5, 6]
+    ```
+- Our goal is to choose one of these numbers randomly.
+- Python provides a way to randomly pick (without removing)
+  an element from a list:
+
+    ```python
+    die = [1, 2, 3, 4, 5, 6]
+    roll = random.choice(die)
+    ```
+- Let's put this together into a program (remembering to import the random package):
+    
+    ```python
+    import random
+
+    die = [1, 2, 3, 4, 5, 6]
+    roll = random.choice(die)
+    print(roll)
+    ```
+  
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.23
+
+Type the above in `my_die_roll.py`. Run the program several times to verify that you are getting random selections from the list.
+:::
+
+Next, let's use this to make a (ridiculously) simple game:
+
+- Two players each roll a die N times. The reuslts of the rolls are averaged. The player with the higher average wins.
+- OK, not the most entertaining game, but one for which we can easily write a program (from the point of view of one player):
+
+    ```python
+    import random
+
+    die = [1, 2, 3, 4, 5, 6]
+
+    num_trials = 10
+    total = 0
+    for i in range(num_trials):
+        roll = random.choice(die)
+        print(roll)
+        total += roll
+
+    print('Average score:', total/num_trials)
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.24
+The program above prints out the average score from the number of trials. 
+
+Type the above in `my_die_roll2.py` to observe this result. 
+
+**Submit `my_die_roll2.py` with `num_trials = 10`.**
+
+Try this experiment; you don't need to submit the following part of the exercise:
+
+- Try changing `num_trials = 100` and see if the results of average score is any different from your program with `num_trials = 10`
+- Try a higher number for `num_trials`, say 1000. You may end up spending more time waiting for the program to complete its execution.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.25
+
+In `my_die_roll3.py`, change the game to the following: 
+
+- In each trial, each player should roll the die twice and add the two numbers. 
+- The final score is the average sum across all trials. 
+- Let your program estimate the average score  when you use a large number of trials, say `num_trials = 1000`.  
+
+**Submit `my_die_roll3.py` with `num_trials = 1000`.**
+
+:::
+
+## 0.9 Some math via programming
+Let's start with an example and then use that to delve into a few concepts:
+```python
+from drawtool import DrawTool
+
+dt = DrawTool()
+dt.set_XY_range(0,10, 0,100)
+
+# The blue collection of points:
+dt.set_color('b')
+x_coords = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+y_coords = [3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]
+dt.draw_curve_as_points(x_coords, y_coords)
+
+# The red collection of points:
+dt.set_color('r')
+x_coords = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+y_coords = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+dt.draw_curve_as_points(x_coords, y_coords)
+
+dt.display()
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.26
+
+Type up the above in `my_plot_example.py` and see what you get. You will also need to download <a href="../../../media/useful/drawtool.py" download>**drawtool.py**</a> into the same folder.
+
+Submit `my_plot_example.py`
+:::
+
+Now let's ask some basic questions:
+
+- What, really, is a graph and what does it mean to plot on a graph?
+- What are `(x,y)` coordinates and what do they have to with plotting?
+- What's a function and what's the connection between `f(x)` and points on a graph?
+- And, what does this have to do with programming?
+
+We'll address these questions below.
+
+Let's recall where we started:
+
+- In the beginning, there were integers (whole numbers) like `1, 2, 3, and 42`.
+- Along with them came real needs like addition, subtraction, multiplication and division.
+    <br> (Ancient applications include navigation, telling time, accounting/trade).
+- The integers were not enough because you can perform 3 - 8 and get ... what? So came the negative integers like -5.
+- Then, because 5/2 is not an integer, more numbers were needed, and hence come the real numbers.
+- Next came <em>algebra</em>:
+    - Instead of saying "I can take 12 times 4 and get 48, and then divide by 6, to get twice your original number 4", we can write: $$ \frac{12x}{6} = 2x $$
+    - It's much more compact and precise.
+- Next came <em>functions</em>:
+    - Instead of saying "OK, take your number and multiply it by itself," it's much more compact to say: `f(x) = x^2`.
+    - We can think of a function as taking some input (like `x` and "doing something to it" to get an output:
+    ![](../../../media/units/unit1/module0/func.png)
+
+- All of this resulted in significant advances in mathematics.
+- Then came Descartes who took this to a whole new level with coordinates.
+
+The idea of coordinates:
+
+- Suppose you had a way of linking or associating pairs of numbers:
+
+    - For example, suppose 1 is associated with 5
+    - 2 is associated with 7
+    - 3 with 9
+
+- Suppose we wrote these as: (1,5), (2,7), (3,9), and so on.
+
+- Next, draw two perpendicular lines (one horizontal, one vertical) on a page:
+    ![](../../../media/units/unit1/module0/axes.png){width="60%"}
+  
+And call them the x and y axes respectively.
+
+- Now given associations (1,5), (2,7) and (3,9):
+    - Treat the first number as the distance from the vertical axis.
+    - Treat the second number as the distance from the horizontal axis.
+    - This will put us in a unique spot. 
+    - Call that a point.
+
+- For example:
+![](../../../media/units/unit1/module0/axes2.png)
+
+- That's all there's to it. It's hard to believe that such a simple idea became transformational.
+
+- The connection between functions and coordinates:
+
+    - Suppose you have a function like: `f(x) = 2x + 3`
+
+    - One way to make sense of a function is to compute lots of examples like:
+
+    $$ f({\bf 1}) = 2*{\bf 1} + 3 = 5 $$
+    $$ f({\bf 2}) = 2*{\bf 2} + 3 = 7 $$
+    $$ f({\bf 3}) = 2*{\bf 3} + 3 = 9 $$
+    - And even $$ f({\bf 3.16}) = 2*{\bf 3.16} + 3 = 9.32 $$
+
+- A pair of axes makes it possible to <em>visualize</em> a function directly, initially by plotting some example points:
+
+    - Take some x.
+    - Calculate f(x) 
+    - Then treat x as the first coordinate (distance from y-axis).
+    - Treat f(x) as the second coordinate (distance from x-axis), and plot.
+    - For example, when x=2, then we saw that f(2) = 7. So, plot (2, 7).
+- In general, we want to plot `(x, f(x))` for lots of different possible x values.
+- Here, f(x) is what we use for the y-coordinate, which is why we sometimes write y = f(x).
+- When we plot `(x, f(x))` for different x values, we typically pick those x values for our convenience.
+- Above, we showed how to calculate f(x) = 2x + 3
+    when x=1,
+    when x=2,
+    when x=3,
+    and so on, perhaps up to 
+    when x=10,
+
+- But if we needed to, we could just as easily calculate f(x) = 2x + 3
+    when x=0.1,
+    when x=0.2,
+    when x=0.3,
+    and so on up to when x=1.0,
+
+Let's put these ideas to use:
+
+- Suppose we have two functions f and g
+    1. f(x) = 2x + 3
+    2. g(x) = x^2
+- Our goal: compare the two functions.
+- One advantage of programming is that we can write code to perform the action of functions.
+- For example:
+
+    ```python
+    x = 0
+    for i in range(11):
+        f = 2*x + 3
+        print('x =', x, ' f(x) =', f)
+        x = x + 1
+
+    x = 0
+    for i in range(11):
+        g = x*x
+        print('x =', x, ' g(x) =', g)
+        x = x + 1
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.27
+
+Type up the above in `my_function_example.py` and submit it.
+:::
+
+It is far more valuable to visualize, so let's set about plotting both together:
+
+- To plot, we'll need to construct the list of x and y coordinates:
+
+    ```python
+    from drawtool import DrawTool
+
+    dt = DrawTool()
+    dt.set_XY_range(1,10, 0,100)
+
+    x = 0
+    x_coords = []
+    y_coords = []
+    for i in range(11):
+        x_coords.append(x)
+        f = 2*x + 3
+        y_coords.append(f)
+        x = x + 1
+
+    dt.draw_curve_as_lines(x_coords, y_coords)
+
+    dt.set_color('r')
+
+    # WRITE CODE HERE for the second function
+
+    dt.draw_curve_as_lines(x_coords, y_coords)
+
+    dt.display()
+    ```
+
+Let's point out:
+![](../../../media/units/unit1/module0/funcplot-code.png)
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.28
+
+Type up the above in `my_function_plot.py` and add code for the second function \(g(x)=x<sup>2</sup>\) to get a plot like:
+![](../../../media/units/unit1/module0/func-exercise.png){width="60%"}
+:::
+
+###### **0.29 Video**
+
+
+
+
+
+
+
+
+Scale and axes:
+
+- You may have noticed that the x-axis above had tick marks going from 0 to 10, while the y-axis went from 0 to 100.
+- This is an example of a plot that's NOT drawn to scale.
+- Let's draw one to scale to see what it looks like by changing one line, from
+    
+    ```python
+    dt.set_XY_range(1,10, 0,100)
+    ```
+to
+
+    ```python
+    dt.set_XY_range(1,100, 1,100)
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.30
+
+In `my_plot_example2.py` change your code from the earlier exercise (`my_function_plot.py`) to make the scale the same along the x and y axes.
+
+For example, you can try one of the following options:
+
+- `dt.set_XY_range(1,10, 0,10)`
+- `dt.set_XY_range(1,100, 0,100)`
+
+**Submit `my_plot_example2.py` with `dt.set_XY_range(1,100, 0,100)`.**
+:::
+
+When to use different scales along the axes:
+
+- Using the same scale, we see the dramatic difference between <em>linear growth</em> (the function `f(x)=2x+3` and <em>quadratic growth</em> (the function `g(x) = x^2`).
+- But at the same time, some features, like the point of intersection of the two curves, are hard to see.
+- We can use different scales when we want to emphasize different aspects.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.31
+
+In `my_function_plot2.py`, add a third function `h(x) = 2^x`.
+
+Try out the following options:
+
+- Create the plot with x and y axes set as [0, 1200] as shown below.
+    - `dt.set_XY_range(1,1200, 0,1200)`
+- Create the plot with different ranges for the scale of the x and y axes
+    - Set the x-range as [0,12] and the y-range as [0,1200] i.e., `dt.set_XY_range(1,12, 0,1200)`.
+    - This should show you how puny quadratic growth is compared to exponential growth. 
+
+**Submit your `my_function_plot2.py`, setting the scale of both the x and y axes with same range [0, 100] i.e., `dt.set_XY_range(1,100, 0,100)`**
+:::
+
+## 0.10 Mathematical art
+Since we're on the topic of functions, we cannot resist developing an art project based on it.
+
+Let's first plot a function from high-school: the sine function
+```python
+from drawtool import DrawTool
+import math
+
+dt = DrawTool()
+dt.set_XY_range(0,6.28, -1,1)
+
+n = 100
+x_spacing = 6.28/n
+
+x = 0
+for i in range(n):
+    f = math.sin(x)
+    dt.draw_point(x, f)
+    x = x + x_spacing
+
+dt.display()
+```
+
+Let's point out:
+
+- First, some code features:
+![](../../../media/units/unit1/module0/sine-code.png)
+- Next, observe that we plotted points directly inside the loop instead of first building a list of coordinates.
+- Doing so is an alternative way of plotting ("plot as you go"), and will let us change the point color.
+
+So, for our art project:
+
+- We'll draw a background with randomly strewn yellow dots.
+- Then, along a sine-curve, we'll draw small ellipses of different sizes. 
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.32
+
+Download <a href="../../../media/units/unit1/module0/functional_art.py" download>**functional_art.py**</a> and run it to see a plot like that shown below. 
+
+![](../../../media/units/unit1/module0/Ex032_pic1.png)
+
+If you examine and understand the program `functional_art.py`, you will see that the `random.random()`  and `math.sin()` functions were used to generate the plot above.
+
+Now create a program `my_functional_art.py`, and improve on the program `functional_art.py` by including a `math.cos()` function as an additional decoration on the mathematic art of a plot.
+
+Your new plot should look like the one shown below.
+![](../../../media/units/unit1/module0/Ex032_pic2.png)
+
+**Submit your `functional_art.py` and  `my_functional_art.py`.**
+:::
+
+## 0.11 When things go wrong
+In each of the exercises below, there are 
+
+- Either some "bugs" that will not generate an error message, but instead produce incorrect output
+- Or, error that will produce an error message.
+
+Do the following in the exercises below: 
+
+- First try to identify the error or bug just by reading.
+- Then type up the program to confirm, and after that, fix the error or bug.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.36
+
+```python
+A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for i in range(1, 10):
+    print(A[i])
+```
+Identify and fix the bug in `my_error1.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.37
+
+The following program intends to build the decreasing-order list `[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]`.
+```python
+A = []
+n = 10
+for i in range(n):
+    n = n - 1
+    A.append(n)
+
+print(A)
+```
+Identify and fix the bug in `my_error2.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 0.38
+
+The following program intends to add to N all the elements of the list `A`.
+```python
+N = 100
+A = [1, 4, 9, 16, 25]
+
+for k in A:
+    N = N + A[k]
+
+print(N)
+```
+Identify and fix the error in `my_error3.py`.
+:::
+
+## 0.12 Meta
+This is the next installment in our series of stepping back from it all and reflecting, with the hope of helping you progress as a learner.
+
+This time our topic is math and math anxiety.
+
+Let's start by acknowledging a few things:
+
+- Students do, in fact, have bad experiences learning math.
+    - For example, if you were unlucky to be ill during the critical period in 4th grade when fractions were covered, that could become a gap that precludes other concepts.
+    - Or if algebra did not go well, everything that follows in math can lead to cascading difficulties in learning.
+- Students learn math differently and their "window of opportunity" may not be aligned with where their school is.
+    - Thus, for many students, a certain age is not optimal for academic intensity, or issues at home prevent full engagement.
+- There are hidden cultural dispositions that can get in the way.
+    - The most pernicious by far is the notion that some people just aren't cut out for it. Or you have to have the "math gene".
+- Much of K-12 math is, admittedly, a bit dull.
+
+
+At the same time, there's good news:
+
+- Math (and programming) is like any other skill: everyone can acquire it with sufficient practice, but not everyone can reach the level of "world expert".
+- This is true of just about any mental skill like facility with language or playing a musical instrument.
+- And, most importantly, anyone can acquire it at any age.
+    - Can you tell someone it's too late to learn, say, French?   
+- It all depends on shedding the "I'm not cut out for it" disposition and committing to practice.
+- There is a world of elegance and beauty in math after crossing a threshold of skill level, just as with a musical instrument.
+
+Let's say a bit more about practice:
+
+- You surely know a musical instrument cannot be learned merely by watching videos or reading about it.
+- Proficiency requires regular and intense practice.
+- The best part of practice is that, even though progress is not instantaneous, you can see results after a while. 
+- Another advantage: the nature of practice is that many people give up. So, if you don't, you are ahead of those that do.
+
+Finally, the connection between programming and math:
+
+- It is true that most people who program do not use math at all. Just ask a web developer.
+- But if you add a bit of math, you can do many interesting things in programming, as anyone who deals with data will tell you.
+- Some aspects of computer science that have a strong mathematical underpinning are just ... a lot of fun! -->
 </section>
-<section id="a-different-version-of-print" class="level2">
-<h2 class="anchored" data-anchor-id="a-different-version-of-print">0.7 A different version of print</h2>
-<p>Consider these two variations of using print:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'eat'</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.141</span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y))</span>
+<section id="conditionals-and-lists" class="level2">
+<h2 class="anchored" data-anchor-id="conditionals-and-lists">1.6 Conditionals and lists</h2>
+<p>Suppose we have a list of numbers, representing daily profits (sometimes negative, sometimes positive) and we only want to add up the positive numbers:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>earnings <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">30</span>]</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> earnings:</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> k <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> k</span>
 <span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Total profit ='</span>, total)</span></code></pre></div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 0.22
+Exercise 1.20
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Type the above in <code>my_print_example.py</code> and submit it.</p>
+<p>Trace through the values of total and k in the program above. There is nothing to submit for this exercise.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.21
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Given a list like:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="op">-</span><span class="dv">30</span>, <span class="op">-</span><span class="dv">21</span>, <span class="op">-</span><span class="dv">20</span>]</span></code></pre></div>
+<p>we see that 12, 13 and -21, -20 are pairs of consecutive numbers.</p>
+<ul>
+<li><p>Type up the program below called <code>my_consecutive.py</code>, which uses a loop and a conditional to identify consecutive pairs and print them.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="op">-</span><span class="dv">30</span>, <span class="op">-</span><span class="dv">21</span>, <span class="op">-</span><span class="dv">20</span>]</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">abs</span>(A[i] <span class="op">-</span> A[i <span class="op">+</span> <span class="dv">1</span>]) <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Consecutive pair found: "</span>,A[i], A[i <span class="op">+</span> <span class="dv">1</span>])</span></code></pre></div></li>
+</ul>
+<p>For the above list, the output should be:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>Consecutive pair found: <span class="dv">12</span> <span class="dv">13</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>Consecutive pair found: <span class="op">-</span><span class="dv">21</span> <span class="op">-</span><span class="dv">20</span></span></code></pre></div>
+</div>
+</div>
+<p>Next, let’s write a program that asks the user to enter a number, that we then check is in a list of numbers:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The list of numbers:</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="op">-</span><span class="dv">30</span>]</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Receive what the user types in (as a string):</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>user_str <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Enter an integer: '</span>)</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert string to integer:</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">int</span>(user_str)</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Check whether in the list:</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> k <span class="kw">in</span> A:</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k,<span class="st">'is in the list'</span>)</span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k,<span class="st">'is not in the list'</span>)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.23
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above program in <code>my_listcheck.py</code>, run it for the following user inputs and examine the output in each case:</p>
+<ol type="1">
+<li>100</li>
+<li>35.364 (For a float-type input explain to yourself why you may get an error.)</li>
+<li>4</li>
+</ol>
+<p>Run each case listed above and understand the output or error you are getting.</p>
+<p>Submit the program <code>my_listcheck.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <b>in</b> operator checks for membership in the list:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> k <span class="kw">in</span> A:</span></code></pre></div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.24
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Suppose you are given two lists like:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="op">-</span><span class="dv">30</span>, <span class="op">-</span><span class="dv">21</span>, <span class="op">-</span><span class="dv">20</span>]</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">2</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">16</span>, <span class="dv">13</span>]</span></code></pre></div>
+<p>Notice that some elements of A (like 2) also exist in B. In <code>my_twolist.py</code>, use the list membership idea to print those elements of A that are also in B. For the above example, the output should be:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="kw">in</span> A also found <span class="kw">in</span> B</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">9</span> <span class="kw">in</span> A also found <span class="kw">in</span> B</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="dv">13</span> <span class="kw">in</span> A also found <span class="kw">in</span> B</span></code></pre></div>
+</div>
+</div>
+</section>
+<section id="more-examples-with-lists" class="level2">
+<h2 class="anchored" data-anchor-id="more-examples-with-lists">1.7 More examples with lists</h2>
+<p>Consider the following program that aims to find duplicates in a list:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>]</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> k <span class="kw">in</span> A:</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Duplicate found:'</span>, k)</span></code></pre></div>
+<p>In the list, we can see that 2 occurs thrice, and 3 occurs twice. Both should be listed as duplicates. Is this the case?</p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.25
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Trace through the loop’s iterations in the above program and explain to yourself why it does not work.</p>
+<p>There is nothing to submit for this exercise.</p>
+</div>
+</div>
+<p>Now consider this variation:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>]</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A)<span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, <span class="bu">len</span>(A)):</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> A[i] <span class="op">==</span> A[j]:</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Duplicate found:'</span>, A[i])</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1.26
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above program in <code>my_listcheck2.py</code> and submit it.</p>
+<p>The following part of the exercise is not required for submission:</p>
+<ul>
+<li>Trace through the loop’s iterations in the above program in a separate spreadsheet or document. Explain the output to yourself. Why does the inner loop start with i+1?</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="functions-and-lists" class="level2">
+<h2 class="anchored" data-anchor-id="functions-and-lists">2.7 Functions and lists</h2>
+<p>Can a function receive a list as parameter? Can it return one? Is this useful? Yes, yes, yes.</p>
+<p>Let’s start with a list as parameter:</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_total(B):</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> B:</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> k</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> compute_total(A)</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.18
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try tracing through the execution of the above program, including loop interactions. The tracing activity is for you understand the execution of the program and you don’t need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result.</p>
+<p><strong>The following portion of the exercise is required for submission of this exercise:</strong></p>
+<ul>
+<li>Type up the above in <code>my_func_example11.py</code> by including a <code>print(k)</code> inside the for-loop.</li>
+<li>Submit your program <code>my_func_example11.py</code>.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.19
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>my_even_numbers.py</code>, complete the code in the function below so that the even numbers in a list are printed out:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_even(A):</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>print_even(A)</span></code></pre></div>
+<p>Write the function so that the output is as shown below:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>Found even:  <span class="dv">6</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>Found even:  <span class="dv">8</span></span></code></pre></div>
+<p><strong>Hint:</strong> Recall how to use the <em>remainder</em> operator from the previous module (conditionals and loops).</p>
+<ul>
+<li>Complete the above program by including your code under the comment (i.e., text followed by the #-symbol)</li>
+<li>You can include the comment in the your code.</li>
+<li>Execute the program <code>my_even_numbers.py</code>.</li>
+<li>Submit your program <code>my_even_numbers.py</code>.</li>
+</ul>
+</div>
+</div>
+<p>Next, let’s look at an example where a list is returned:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_odd_list(n):</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> []</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>        k <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>        L.append(k)</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(build_odd_list(<span class="dv">5</span>))</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.21
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<!-- Try tracing through the above, the type up in `my_odd_list.py` to confirm what you learned. Include a `print(k)` in the loop after the append. -->
+<p>Try tracing through the execution of the above program, including loop interactions. The tracing activity is for you understand the execution of the program and you don’t need to submit a written answer. However, it is encouraged that you try it to fully-understand the execution of the above program and to confirm your result.</p>
+<p><strong>The following portion of the exercise is required for submission of this exercise:</strong></p>
+<ul>
+<li>Type up the above in <code>my_odd_list.py</code> by including a <code>print(k)</code> inside the for-loop after the <code>L.append(k)</code>.</li>
+<li>Submit your program `<code>my_odd_list.py</code>.</li>
+</ul>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1088,415 +1758,170 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>The first version above uses string concatenation to send one big string to print:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y) )</span></code></pre></div></li>
-<li><p>In the second version, the strings and variables given to print <code>(x, s, y)</code> are separated by commas.</p></li>
-<li><p>Here, print treats the four things as separate entities:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div></li>
-<li><p>And it, automatically inserts a space between the different things (that are separated by commas).</p></li>
-<li><p>Note that here, there is no need to convert numbers to strings.</p></li>
+<li><p>Execution begins with</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(build_odd_list(<span class="dv">5</span>))</span></code></pre></div></li>
+<li><p>This results in: <img src="../../../media/units/unit1/module1.2/list-return.png" class="img-fluid"></p></li>
+<li><p>Once the return occurs, we could think of this as:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>] )</span></code></pre></div>
+<p>This gets sent to print, which prints.</p></li>
+<li><p>One could make this more explicit: <img src="../../../media/units/unit1/module1.2/list-return2.png" class="img-fluid"></p></li>
 </ul>
 </div>
 </div>
-</section>
-<section id="random-selection-of-elements-from-a-list" class="level2">
-<h2 class="anchored" data-anchor-id="random-selection-of-elements-from-a-list">0.8 Random selection of elements from a list</h2>
-<p>It is often useful to be able to pick random elements from a list.</p>
-<p>Let’s use this feature first for a single roll of a die and then two dice:</p>
-<ul>
-<li><p>Since a single die has 6 faces with the numbers 1 through 6, we’ll use a list of the numbers 1 through 6:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>die <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span></code></pre></div></li>
-<li><p>Our goal is to choose one of these numbers randomly.</p></li>
-<li><p>Python provides a way to randomly pick (without removing) an element from a list:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>die <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>roll <span class="op">=</span> random.choice(die)</span></code></pre></div></li>
-<li><p>Let’s put this together into a program (remembering to import the random package):</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>die <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>roll <span class="op">=</span> random.choice(die)</span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(roll)</span></code></pre></div></li>
-</ul>
+<p>Next, let’s look at a list example with multiple returns:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_first_negative(A):</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>            <span class="co"># First try print(k) here</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> k</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Then try print(k) here</span></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_first_negative(B))</span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_first_negative(C))</span></code></pre></div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 0.23
+Exercise 2.22
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Type the above in <code>my_die_roll.py</code>. Run the program several times to verify that you are getting random selections from the list.</p>
-</div>
-</div>
-<p>Next, let’s use this to make a (ridiculously) simple game:</p>
-<ul>
-<li><p>Two players each roll a die N times. The reuslts of the rolls are averaged. The player with the higher average wins.</p></li>
-<li><p>OK, not the most entertaining game, but one for which we can easily write a program (from the point of view of one player):</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>die <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>num_trials <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_trials):</span>
-<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>    roll <span class="op">=</span> random.choice(die)</span>
-<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(roll)</span>
-<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>    total <span class="op">+=</span> roll</span>
-<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Average score:'</span>, total<span class="op">/</span>num_trials)</span></code></pre></div></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 0.24
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The program above prints out the average score from the number of trials.</p>
-<p>Type the above in <code>my_die_roll2.py</code> to observe this result.</p>
-<p><strong>Submit <code>my_die_roll2.py</code> with <code>num_trials = 10</code>.</strong></p>
-<p>Try this experiment; you don’t need to submit the following part of the exercise:</p>
-<ul>
-<li>Try changing <code>num_trials = 100</code> and see if the results of average score is any different from your program with <code>num_trials = 10</code></li>
-<li>Try a higher number for <code>num_trials</code>, say 1000. You may end up spending more time waiting for the program to complete its execution.</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 0.25
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In <code>my_die_roll3.py</code>, change the game to the following:</p>
-<ul>
-<li>In each trial, each player should roll the die twice and add the two numbers.</li>
-<li>The final score is the average sum across all trials.</li>
-<li>Let your program estimate the average score when you use a large number of trials, say <code>num_trials = 1000</code>.</li>
-</ul>
-<p><strong>Submit <code>my_die_roll3.py</code> with <code>num_trials = 1000</code>.</strong></p>
-<!-- In your module pdf, devise a more interesting 2-player game one could play solely using dice. (You don't have to write a program for this last part.) -->
-</div>
-</div>
-</section>
-<section id="some-math-via-programming" class="level2">
-<h2 class="anchored" data-anchor-id="some-math-via-programming">0.9 Some math via programming</h2>
-<p>Let’s start with an example and then use that to delve into a few concepts:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">0</span>,<span class="dv">10</span>, <span class="dv">0</span>,<span class="dv">100</span>)</span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co"># The blue collection of points:</span></span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>dt.set_color(<span class="st">'b'</span>)</span>
-<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>x_coords <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
-<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>y_coords <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">23</span>]</span>
-<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>dt.draw_curve_as_points(x_coords, y_coords)</span>
-<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="co"># The red collection of points:</span></span>
-<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>dt.set_color(<span class="st">'r'</span>)</span>
-<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>x_coords <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
-<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>y_coords <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>, <span class="dv">49</span>, <span class="dv">64</span>, <span class="dv">81</span>, <span class="dv">100</span>]</span>
-<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>dt.draw_curve_as_points(x_coords, y_coords)</span>
-<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 0.26
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_plot_example.py</code> and see what you get. You will also need to download <a href="../../../media/useful/drawtool.py" download=""><strong>drawtool.py</strong></a> into the same folder.</p>
-<p>Submit <code>my_plot_example.py</code></p>
-</div>
-</div>
-<p>Now let’s ask some basic questions:</p>
-<ul>
-<li>What, really, is a graph and what does it mean to plot on a graph?</li>
-<li>What are <code>(x,y)</code> coordinates and what do they have to with plotting?</li>
-<li>What’s a function and what’s the connection between <code>f(x)</code> and points on a graph?</li>
-<li>And, what does this have to do with programming?</li>
-</ul>
-<p>We’ll address these questions below.</p>
-<p>Let’s recall where we started:</p>
-<ul>
-<li>In the beginning, there were integers (whole numbers) like <code>1, 2, 3, and 42</code>.</li>
-<li>Along with them came real needs like addition, subtraction, multiplication and division. <br> (Ancient applications include navigation, telling time, accounting/trade).</li>
-<li>The integers were not enough because you can perform 3 - 8 and get … what? So came the negative integers like -5.</li>
-<li>Then, because 5/2 is not an integer, more numbers were needed, and hence come the real numbers.</li>
-<li>Next came <em>algebra</em>:
-<ul>
-<li>Instead of saying “I can take 12 times 4 and get 48, and then divide by 6, to get twice your original number 4”, we can write: <span class="math display">\[ \frac{12x}{6} = 2x \]</span></li>
-<li>It’s much more compact and precise.</li>
-</ul></li>
-<li>Next came <em>functions</em>:
-<ul>
-<li>Instead of saying “OK, take your number and multiply it by itself,” it’s much more compact to say: <code>f(x) = x^2</code>.</li>
-<li>We can think of a function as taking some input (like <code>x</code> and “doing something to it” to get an output: <img src="../../../media/units/unit1/module0/func.png" class="img-fluid"></li>
-</ul></li>
-<li>All of this resulted in significant advances in mathematics.</li>
-<li>Then came Descartes who took this to a whole new level with coordinates.</li>
-</ul>
-<p>The idea of coordinates:</p>
-<ul>
-<li><p>Suppose you had a way of linking or associating pairs of numbers:</p>
-<ul>
-<li>For example, suppose 1 is associated with 5</li>
-<li>2 is associated with 7</li>
-<li>3 with 9</li>
-</ul></li>
-<li><p>Suppose we wrote these as: (1,5), (2,7), (3,9), and so on.</p></li>
-<li><p>Next, draw two perpendicular lines (one horizontal, one vertical) on a page: <img src="../../../media/units/unit1/module0/axes.png" class="img-fluid" style="width:60.0%"></p></li>
-</ul>
-<p>And call them the x and y axes respectively.</p>
-<ul>
-<li><p>Now given associations (1,5), (2,7) and (3,9):</p>
-<ul>
-<li>Treat the first number as the distance from the vertical axis.</li>
-<li>Treat the second number as the distance from the horizontal axis.</li>
-<li>This will put us in a unique spot.</li>
-<li>Call that a point.</li>
-</ul></li>
-<li><p>For example: <img src="../../../media/units/unit1/module0/axes2.png" class="img-fluid"></p></li>
-<li><p>That’s all there’s to it. It’s hard to believe that such a simple idea became transformational.</p></li>
-<li><p>The connection between functions and coordinates:</p>
-<ul>
-<li><p>Suppose you have a function like: <code>f(x) = 2x + 3</code></p></li>
-<li><p>One way to make sense of a function is to compute lots of examples like:</p></li>
-</ul>
-<p><span class="math display">\[ f({\bf 1}) = 2*{\bf 1} + 3 = 5 \]</span> <span class="math display">\[ f({\bf 2}) = 2*{\bf 2} + 3 = 7 \]</span> <span class="math display">\[ f({\bf 3}) = 2*{\bf 3} + 3 = 9 \]</span></p>
-<ul>
-<li>And even <span class="math display">\[ f({\bf 3.16}) = 2*{\bf 3.16} + 3 = 9.32 \]</span></li>
-</ul></li>
-<li><p>A pair of axes makes it possible to <em>visualize</em> a function directly, initially by plotting some example points:</p>
-<ul>
-<li>Take some x.</li>
-<li>Calculate f(x)</li>
-<li>Then treat x as the first coordinate (distance from y-axis).</li>
-<li>Treat f(x) as the second coordinate (distance from x-axis), and plot.</li>
-<li>For example, when x=2, then we saw that f(2) = 7. So, plot (2, 7).</li>
-</ul></li>
-<li><p>In general, we want to plot <code>(x, f(x))</code> for lots of different possible x values.</p></li>
-<li><p>Here, f(x) is what we use for the y-coordinate, which is why we sometimes write y = f(x).</p></li>
-<li><p>When we plot <code>(x, f(x))</code> for different x values, we typically pick those x values for our convenience.</p></li>
-<li><p>Above, we showed how to calculate f(x) = 2x + 3 when x=1, when x=2, when x=3, and so on, perhaps up to when x=10, <!-- <br> (Here, the intended range is close to zero.) --></p></li>
-<li><p>But if we needed to, we could just as easily calculate f(x) = 2x + 3 when x=0.1, when x=0.2, when x=0.3, and so on up to when x=1.0, <!-- <br> (Here, the intended range is close to zero, between 0 and 1.0) --></p></li>
-</ul>
-<p>Let’s put these ideas to use:</p>
-<ul>
-<li><p>Suppose we have two functions f and g</p>
+<p>Before typing this up in <code>my_first_negative.py</code> to confirm. That is, use the tracing approach we’ve used before: write out the values of variables and how they change from one iteration to the next. Then, replace the first comment so that you <code>print(k)</code> inside the loop. Then, move the print statement (still inside the loop) to after the <code>return k</code> statement. What do you observe? There is nothing to submit in the above portion of this exercise.</p>
+<p>Type up the above program in <code>my_first_negative.py</code>. Then do the following:</p>
 <ol type="1">
-<li>f(x) = 2x + 3</li>
-<li>g(x) = x^2</li>
-</ol></li>
-<li><p>Our goal: compare the two functions.</p></li>
-<li><p>One advantage of programming is that we can write code to perform the action of functions.</p></li>
-<li><p>For example:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">3</span></span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x ='</span>, x, <span class="st">' f(x) ='</span>, f)</span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
-<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> x<span class="op">*</span>x</span>
-<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x ='</span>, x, <span class="st">' g(x) ='</span>, g)</span>
-<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span></code></pre></div></li>
-</ul>
+<li>Execute the program and examine the output.</li>
+<li>Next, replace the first comment so that you <code>print(k)</code> inside the if-conditional.</li>
+<li>Execute your program <code>my_first_negative.py</code> and examine the output.</li>
+<li>Then, delete the <code>print(k)</code> you wrote in place of the first comment.</li>
+<li>Now replace the second comment with <code>print(k)</code> statement so that it appears after the <code>return k</code> statement.</li>
+<li>Exceute your program <code>my_first_negative.py</code> and examine the output for any change with the earlier execution.</li>
+<li>Submit your program <code>my_first_negative.py</code> with the modification suggested in point #5.</li>
+</ol>
+</div>
+</div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 0.27
+Exercise 2.23
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_function_example.py</code> and submit it.</p>
-</div>
-</div>
-<p>It is far more valuable to visualize, so let’s set about plotting both together:</p>
-<ul>
-<li><p>To plot, we’ll need to construct the list of x and y coordinates:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">1</span>,<span class="dv">10</span>, <span class="dv">0</span>,<span class="dv">100</span>)</span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>x_coords <span class="op">=</span> []</span>
-<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>y_coords <span class="op">=</span> []</span>
-<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
-<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>    x_coords.append(x)</span>
-<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">3</span></span>
-<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>    y_coords.append(f)</span>
-<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>dt.draw_curve_as_lines(x_coords, y_coords)</span>
-<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>dt.set_color(<span class="st">'r'</span>)</span>
-<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a><span class="co"># WRITE CODE HERE for the second function</span></span>
-<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>dt.draw_curve_as_lines(x_coords, y_coords)</span>
-<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div></li>
-</ul>
-<p>Let’s point out: <img src="../../../media/units/unit1/module0/funcplot-code.png" class="img-fluid"></p>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 0.28
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_function_plot.py</code> and add code for the second function (g(x)=x<sup>2</sup>) to get a plot like: <img src="../../../media/units/unit1/module0/func-exercise.png" class="img-fluid" style="width:60.0%"></p>
-</div>
-</div>
-<section id="video-2" class="level6">
-<h6 class="anchored" data-anchor-id="video-2"><strong>0.29 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit1/module0/u1-mod0.32.mp4"></video></div>
-<p>Scale and axes:</p>
-<ul>
-<li><p>You may have noticed that the x-axis above had tick marks going from 0 to 10, while the y-axis went from 0 to 100.</p></li>
-<li><p>This is an example of a plot that’s NOT drawn to scale.</p></li>
-<li><p>Let’s draw one to scale to see what it looks like by changing one line, from</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">1</span>,<span class="dv">10</span>, <span class="dv">0</span>,<span class="dv">100</span>)</span></code></pre></div>
-<p>to</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">1</span>,<span class="dv">100</span>, <span class="dv">1</span>,<span class="dv">100</span>)</span></code></pre></div></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 0.30
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In <code>my_plot_example2.py</code> change your code from the earlier exercise (<code>my_function_plot.py</code>) to make the scale the same along the x and y axes.</p>
-<p>For example, you can try one of the following options:</p>
-<ul>
-<li><code>dt.set_XY_range(1,10, 0,10)</code></li>
-<li><code>dt.set_XY_range(1,100, 0,100)</code></li>
-</ul>
-<p><strong>Submit <code>my_plot_example2.py</code> with <code>dt.set_XY_range(1,100, 0,100)</code>.</strong></p>
-</div>
-</div>
-<p>When to use different scales along the axes:</p>
-<ul>
-<li>Using the same scale, we see the dramatic difference between <em>linear growth</em> (the function <code>f(x)=2x+3</code> and <em>quadratic growth</em> (the function <code>g(x) = x^2</code>).</li>
-<li>But at the same time, some features, like the point of intersection of the two curves, are hard to see.</li>
-<li>We can use different scales when we want to emphasize different aspects.</li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 0.31
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In <code>my_function_plot2.py</code>, add a third function <code>h(x) = 2^x</code>. <!-- \(h(x) = 2<sup>x</sup>\)  --></p>
-<p>Try out the following options:</p>
-<ul>
-<li>Create the plot with x and y axes set as [0, 1200] as shown below.
-<ul>
-<li><code>dt.set_XY_range(1,1200, 0,1200)</code></li>
-</ul></li>
-<li>Create the plot with different ranges for the scale of the x and y axes
-<ul>
-<li>Set the x-range as [0,12] and the y-range as [0,1200] i.e., <code>dt.set_XY_range(1,12, 0,1200)</code>.</li>
-<li>This should show you how puny quadratic growth is compared to exponential growth.</li>
-</ul></li>
-</ul>
-<p><strong>Submit your <code>my_function_plot2.py</code>, setting the scale of both the x and y axes with same range [0, 100] i.e., <code>dt.set_XY_range(1,100, 0,100)</code></strong></p>
+<p>In <code>my_last_negative.py</code>, modify the above program to find the last negative number (if one exists) in a list. So, after completing the code below</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_last_negative(A):</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span></code></pre></div>
+<p>it should print</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">5</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span></code></pre></div>
+<p><strong>Submit your program <code>my_last_negative.py</code>.</strong></p>
 </div>
 </div>
 </section>
-</section>
-<section id="mathematical-art" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-art">0.10 Mathematical art</h2>
-<p>Since we’re on the topic of functions, we cannot resist developing an art project based on it.</p>
-<p>Let’s first plot a function from high-school: the sine function</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="dv">0</span>,<span class="fl">6.28</span>, <span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>x_spacing <span class="op">=</span> <span class="fl">6.28</span><span class="op">/</span>n</span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> math.sin(x)</span>
-<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a>    dt.draw_point(x, f)</span>
-<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> x_spacing</span>
-<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<section id="returns-that-dont-return-anything" class="level2">
+<h2 class="anchored" data-anchor-id="returns-that-dont-return-anything">2.8 returns that don’t return anything</h2>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_first_negative(A):</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Found: '</span>,k)</span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> </span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negatives found'</span>)</span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>print_first_negative(B)</span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>print_first_negative(C)</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.25
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Type up the above in <code>my_first_negative2.py</code>, execute and check for any errors.</p>
+<p><strong>Submit your program <code>my_first_negative2.py</code> if there are no errors.</strong></p>
+</div>
+</div>
 <p>Let’s point out:</p>
 <ul>
-<li>First, some code features: <img src="../../../media/units/unit1/module0/sine-code.png" class="img-fluid"></li>
-<li>Next, observe that we plotted points directly inside the loop instead of first building a list of coordinates.</li>
-<li>Doing so is an alternative way of plotting (“plot as you go”), and will let us change the point color.</li>
-</ul>
-<p>So, for our art project:</p>
+<li><p>Whenever a <code>return</code> statement is executed in a function, execution exits the function right away.</p></li>
+<li><p>When a <code>return</code> statement does not return a variable’s value, execution leaves the function but does not give a value back to the invoking code.</p></li>
+<li><p>Thus the <code>return</code> statement in the program below, does not return a value but merely causes execution to leave the function and get back to line <em>just after</em> the function was invoked.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_first_negative(A):</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Found: '</span>,k)</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negatives found'</span>)</span></code></pre></div></li>
+<li><p>Although it’s not needed, one could return at the end of a non-value-returning function:</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_first_negative(A):</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Found: '</span>,k)</span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negatives found'</span>)</span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span></code></pre></div></li>
+<li><p>Why do we have multiple return’s in a function? Why not always wait until execution reaches the end of a function?</p>
 <ul>
-<li>We’ll draw a background with randomly strewn yellow dots.</li>
-<li>Then, along a sine-curve, we’ll draw small ellipses of different sizes.</li>
+<li>It is very useful to be able to return from anywhere in a function’s code.</li>
+<li>The reason is, as soon as the function’s “job” is done (example: finding the first negative), we want to leave the function.</li>
+</ul></li>
 </ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 0.32
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Download <a href="../../../media/units/unit1/module0/functional_art.py" download=""><strong>functional_art.py</strong></a> and run it to see a plot like that shown below.</p>
-<p><img src="../../../media/units/unit1/module0/Ex032_pic1.png" class="img-fluid"></p>
-<p>If you examine and understand the program <code>functional_art.py</code>, you will see that the <code>random.random()</code> and <code>math.sin()</code> functions were used to generate the plot above.</p>
-<p>Now create a program <code>my_functional_art.py</code>, and improve on the program <code>functional_art.py</code> by including a <code>math.cos()</code> function as an additional decoration on the mathematic art of a plot.</p>
-<p>Your new plot should look like the one shown below. <img src="../../../media/units/unit1/module0/Ex032_pic2.png" class="img-fluid"></p>
-<p><strong>Submit your <code>functional_art.py</code> and <code>my_functional_art.py</code>.</strong></p>
-</div>
-</div>
 </section>
-<section id="when-things-go-wrong" class="level2">
-<h2 class="anchored" data-anchor-id="when-things-go-wrong">0.11 When things go wrong</h2>
-<p>In each of the exercises below, there are</p>
+<section id="a-fundamental-difference-between-list-and-basic-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="a-fundamental-difference-between-list-and-basic-parameters">2.9 A fundamental difference between list and basic parameters</h2>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> swapint(a, b):</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> a</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> b</span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> temp</span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a, b)</span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a>swapint(x, y)</span>
+<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, y)     <span class="co"># Will this print 5 and 6, or 6 and 5?</span></span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.26
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before typing up the above in <code>my_swap_int.py</code> and submitting, can you guess what the output will be ?</p>
 <ul>
-<li>Either some “bugs” that will not generate an error message, but instead produce incorrect output</li>
-<li>Or, error that will produce an error message.</li>
+<li>Type up and execute the program <code>my_swap_int.py</code>.</li>
+<li>Submit your program <code>my_swap_int.py</code>.</li>
 </ul>
-<p>Do the following in the exercises below:</p>
+</div>
+</div>
+<p>Let’s explain:</p>
 <ul>
-<li>First try to identify the error or bug just by reading.</li>
-<li>Then type up the program to confirm, and after that, fix the error or bug.</li>
+<li><p>Execution of the program begins with the line</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span></code></pre></div></li>
+<li><p>When the function is called soon after:</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>swapint(x, y)</span></code></pre></div>
+<p>then execution enters the function with the values in x and y copied into a and b: <img src="../../../media/units/unit1/module1.2/swap-code.png" class="img-fluid"></p></li>
+<li><p>Then, by the time we reach the print statement: <img src="../../../media/units/unit1/module1.2/swap-code2.png" class="img-fluid"></p></li>
+<li><p>Thus, the values in a and b do indeed get swapped.</p></li>
+<li><p>But this does not affect x and y because they are actually different variables.</p></li>
 </ul>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1504,105 +1929,110 @@ Exercise 0.32
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 0.36
+Exercise 2.27
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>):</span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(A[i])</span></code></pre></div>
-<p>Identify and fix the bug in <code>my_error1.py</code>.</p>
+<p>To help you understand the program, in a separate document draw the three boxes for <code>a, b,</code> and <code>temp</code>, at each step in the function’s execution.</p>
+<p><strong>There is nothing to submit in this exercise.</strong></p>
 </div>
 </div>
+<p>Now, consider a similar program with lists:</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> swap_list_first(A, B):</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> A[<span class="dv">0</span>]</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>    A[<span class="dv">0</span>] <span class="op">=</span> B[<span class="dv">0</span>]</span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>    B[<span class="dv">0</span>] <span class="op">=</span> temp</span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>]</span>
+<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>swap_list_first(X, Y)</span>
+<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X, Y)</span></code></pre></div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 0.37
+Exercise 2.28
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The following program intends to build the decreasing-order list <code>[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</code>.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> []</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> n <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>    A.append(n)</span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A)</span></code></pre></div>
-<p>Identify and fix the bug in <code>my_error2.py</code>.</p>
+<p>To help you understand the above program, in a separate document draw the three boxes for <code>A, B,</code> and <code>temp</code>, at each step in the function’s execution.</p>
+<p><strong>There is nothing to submit in this exercise.</strong></p>
 </div>
 </div>
+<p>Let’s see what’s going on:</p>
+<ul>
+<li>List variables are fundamentally different from numeric variables.</li>
+<li>Think of a list variable has having a reference ID to the actual list contents:
+<ul>
+<li>This is like an “address” in memory.</li>
+<li>If you have this “address” you can go to the list and do things with it.</li>
+<li>List variables actual store these addresses (which, interestingly, turn out to be numbers).</li>
+</ul></li>
+<li>We will draw a <em>conceptual diagram</em> to highlight this point: <img src="../../../media/units/unit1/module1.2/swap-code3.png" class="img-fluid"></li>
+<li>Thus, when the function starts execution, the “references” in X and Y are copied into A and B.</li>
+<li>This means A and B refer to the same <em>list contents</em>.</li>
+<li>So, A[0] is the same as X[0], for example.</li>
+<li>Next, after executing the three lines inside the function but before returning: <img src="../../../media/units/unit1/module1.2/swap-code4.png" class="img-fluid"></li>
+<li>Notice that temp is a regular integer.</li>
+</ul>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 0.38
+Exercise 2.29
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The following program intends to add to N all the elements of the list <code>A</code>.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>]</span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> A:</span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> N <span class="op">+</span> A[k]</span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(N)</span></code></pre></div>
-<p>Identify and fix the error in <code>my_error3.py</code>.</p>
+<p>Type up the above program with the function <code>swap_list_first(A, B)</code> in <code>my_swap_list_first.py</code>.</p>
+<ul>
+<li>Execute the program and examine the output.</li>
+<li>Submit your program <code>my_swap_list_first.py</code>.</li>
+</ul>
+<!-- To help you understand the program, in a separate document draw the three boxes for a, b, and temp, at each step in the function’s execution. -->
 </div>
 </div>
-</section>
-<section id="meta" class="level2">
-<h2 class="anchored" data-anchor-id="meta">0.12 Meta</h2>
-<p>This is the next installment in our series of stepping back from it all and reflecting, with the hope of helping you progress as a learner.</p>
-<p>This time our topic is math and math anxiety.</p>
-<p>Let’s start by acknowledging a few things:</p>
+<p><strong>The key takeaways:</strong></p>
 <ul>
-<li>Students do, in fact, have bad experiences learning math.
-<ul>
-<li>For example, if you were unlucky to be ill during the critical period in 4th grade when fractions were covered, that could become a gap that precludes other concepts.</li>
-<li>Or if algebra did not go well, everything that follows in math can lead to cascading difficulties in learning.</li>
-</ul></li>
-<li>Students learn math differently and their “window of opportunity” may not be aligned with where their school is.
-<ul>
-<li>Thus, for many students, a certain age is not optimal for academic intensity, or issues at home prevent full engagement.</li>
-</ul></li>
-<li>There are hidden cultural dispositions that can get in the way.
-<ul>
-<li>The most pernicious by far is the notion that some people just aren’t cut out for it. Or you have to have the “math gene”.</li>
-</ul></li>
-<li>Much of K-12 math is, admittedly, a bit dull.</li>
+<li>When you send number variables to a function, they get copied, and so the function can’t “do” anything to the variables you present as arguments.</li>
+<li>But if you send a list, a function can change the contents.</li>
+<li>This means you need to be careful about <em>intent</em> when writing functions that involve larger entities like lists. <!--     <br> (There are other such "grouped data" entities, called <em>objects</em>.)
+- If the intent is to change contents, that's fine, we should know that. --></li>
 </ul>
-<p>At the same time, there’s good news:</p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.31
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider the following program:</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> change_int(a):</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> change_list(A):</span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>    A[<span class="dv">0</span>] <span class="op">=</span> A[<span class="dv">0</span>] <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a>change_int(x)</span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a>change_list(B)</span>
+<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(B)</span></code></pre></div>
 <ul>
-<li>Math (and programming) is like any other skill: everyone can acquire it with sufficient practice, but not everyone can reach the level of “world expert”.</li>
-<li>This is true of just about any mental skill like facility with language or playing a musical instrument.</li>
-<li>And, most importantly, anyone can acquire it at any age.
-<ul>
-<li>Can you tell someone it’s too late to learn, say, French?<br>
-</li>
-</ul></li>
-<li>It all depends on shedding the “I’m not cut out for it” disposition and committing to practice.</li>
-<li>There is a world of elegance and beauty in math after crossing a threshold of skill level, just as with a musical instrument.</li>
+<li>Type up the above in <code>my_change_list.py</code>.</li>
+<li>Execute the program <code>my_change_list.py</code> and examine the output.</li>
+<li>Submit your program <code>my_change_list.py</code>.</li>
 </ul>
-<p>Let’s say a bit more about practice:</p>
-<ul>
-<li>You surely know a musical instrument cannot be learned merely by watching videos or reading about it.</li>
-<li>Proficiency requires regular and intense practice.</li>
-<li>The best part of practice is that, even though progress is not instantaneous, you can see results after a while.</li>
-<li>Another advantage: the nature of practice is that many people give up. So, if you don’t, you are ahead of those that do.</li>
-</ul>
-<p>Finally, the connection between programming and math:</p>
-<ul>
-<li>It is true that most people who program do not use math at all. Just ask a web developer.</li>
-<li>But if you add a bit of math, you can do many interesting things in programming, as anyone who deals with data will tell you.</li>
-<li>Some aspects of computer science that have a strong mathematical underpinning are just … a lot of fun!</li>
-</ul>
+</div>
+</div>
 <!-- <br>
 [Next Module: **Module 1.1**](./module1.1.qmd){.button .next} -->
 

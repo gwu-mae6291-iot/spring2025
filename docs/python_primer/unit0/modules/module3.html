@@ -194,12 +194,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#an-example" id="toc-an-example" class="nav-link" data-scroll-target="#an-example">3.0 An example</a></li>
   <li><a href="#variations" id="toc-variations" class="nav-link" data-scroll-target="#variations">3.1 Variations</a></li>
   <li><a href="#nested-for-loops" id="toc-nested-for-loops" class="nav-link" data-scroll-target="#nested-for-loops">3.2 Nested for-loops</a></li>
-  <li><a href="#tracing-through-a-program-in-detail" id="toc-tracing-through-a-program-in-detail" class="nav-link" data-scroll-target="#tracing-through-a-program-in-detail">3.3 Tracing through a program in detail</a></li>
-  <li><a href="#reading-and-writing" id="toc-reading-and-writing" class="nav-link" data-scroll-target="#reading-and-writing">3.4 Reading and writing</a></li>
-  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">3.5 When things go wrong</a></li>
-  <li><a href="#a-peek-at-the-future" id="toc-a-peek-at-the-future" class="nav-link" data-scroll-target="#a-peek-at-the-future">3.6 &nbsp;&nbsp; A peek at the future</a></li>
-  <li><a href="#some-things-to-keep-mind" id="toc-some-things-to-keep-mind" class="nav-link" data-scroll-target="#some-things-to-keep-mind">3.7 &nbsp;&nbsp; Some things to keep mind</a></li>
-  <li><a href="#meta" id="toc-meta" class="nav-link" data-scroll-target="#meta">3.8 Meta</a></li>
   </ul>
 </nav>
     </div>
@@ -255,23 +249,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Identify and correct syntax errors related to above objectives.</li>
 <li>Distinguish between syntax errors and debugging.</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="../../additional-resources/insructor-notes/week-1.qmd"><strong>Instructor’s lecture slide deck week 1</strong></a></p>
-<p><a href="../../additional-resources/insructor-notes/week-2.qmd"><strong>Instructor’s lecture slide deck week 2</strong></a></p>
-<p><a href="../../additional-resources/insructor-notes/week-3.qmd"><strong>Instructor’s lecture slide deck week 3</strong></a></p>
-<p><a href="../../additional-resources/insructor-notes/week-4.qmd"><strong>Instructor’s lecture slide deck week 4</strong></a></p>
-<p><a href="../../additional-resources/insructor-notes/week-5.qmd"><strong>Instructor’s video lectures week 5</strong></a></p>
-</div>
-</div>
+<!-- :::{.callout-tip}
+[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
+
+[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
+
+[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
+
+[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
+
+[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
+::: -->
 </section>
 <section id="an-example" class="level2">
 <h2 class="anchored" data-anchor-id="an-example">3.0 An example</h2>
@@ -414,10 +402,8 @@ Exercise 3.4
 <li>In this case, there’s no other code and the program completes.</li>
 </ul></li>
 </ul>
-<section id="video" class="level6">
-<h6 class="anchored" data-anchor-id="video"><strong>3.5 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.5.mp4"></video></div>
-</section>
+<!-- ###### **3.5 Video**
+ -->
 </section>
 <section id="variations" class="level2">
 <h2 class="anchored" data-anchor-id="variations">3.1 Variations</h2>
@@ -520,10 +506,8 @@ Exercise 3.8
 <p>In <code>count_even_down.py</code>, write a loop to print the even numbers from 24 down to 2 (inclusive of 24 and 2).</p>
 </div>
 </div>
-<section id="video-1" class="level6">
-<h6 class="anchored" data-anchor-id="video-1"><strong>3.9 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.9.mp4"></video></div>
-</section>
+<!-- ###### **3.9 Video** 
+ -->
 </section>
 <section id="nested-for-loops" class="level2">
 <h2 class="anchored" data-anchor-id="nested-for-loops">3.2 Nested for-loops</h2>
@@ -601,9 +585,8 @@ When the value is 2, print a row of two 2’s <br>When the value is 3, print a r
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(j):     <span class="co"># for each j, print j of them</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(j, end<span class="op">=</span><span class="st">''</span>)</span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()    </span></code></pre></div>
-<section id="video-2" class="level6">
-<h6 class="anchored" data-anchor-id="video-2"><strong>3.12 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.12.mp4"></video></div>
+<!-- ###### **3.12 Video** 
+ -->
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -629,544 +612,485 @@ Exercise 3.13
 <li>Another way to say it: a <em>nested for-loop</em> has one for-loop inside another.</li>
 <li>We will use <em>nesting</em> in other contexts as well, when one structure is placed inside another.</li>
 </ul>
-</section>
-</section>
-<section id="tracing-through-a-program-in-detail" class="level2">
-<h2 class="anchored" data-anchor-id="tracing-through-a-program-in-detail">3.3 Tracing through a program in detail</h2>
-<p>We’ll now look at an example of how to execute a program “by hand”. That is, how to <em>trace</em> a program’s execution by painstakingly following its execution step-by-step.</p>
-<p>At first this will appear tedious, but it is <em><b>critical</b></em> to a firm understanding of how programs execute, and eventually to your own writing of programs.</p>
-<p>We’ll first do a longer, more narrative version here, and then show you how to submit a much shorter version for your exercises.</p>
-<p>For our example, let’s look at the program we last saw:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span>)                   </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">5</span>):      </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(j):     </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(j, end<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()    </span></code></pre></div>
-<p>Let’s now dive into the longer version, just for the sake of understanding.</p>
-<p>To make best use of this:</p>
-<ul>
-<li>Open this same page in another browser, and have the program side-by-side, as you read what’s below.</li>
-<li>Read out <em>aloud</em> what you see below.</li>
-</ul>
-<p>Ready? Let’s trace through: <img src="../../../media/units/unit0/module3/looptrace1.png" class="img-fluid"></p>
-<ul>
-<li><p>Right at the start, the first line is <code>print(1)</code>. This prints out 1, and moves to the next line. <img src="../../../media/units/unit0/module3/looptrace2.png" class="img-fluid"></p></li>
-<li><p>Initially j=2 at the start of the outer for-loop: <img src="../../../media/units/unit0/module3/looptrace3.png" class="img-fluid"></p></li>
-<li><p>Since j is 2, it’s within the range, and we enter the outer for-loop.</p>
-<ul>
-<li><p>Now we encounter the inner for-loop, where i is set to 0</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>when <code>range</code> has only one number specified, it’s understood to be the upper limit.</p>
-</div>
-</div></li>
-<li><p>The upper limit is the <em>current value of j</em>, which is 2. <img src="../../../media/units/unit0/module3/looptrace4.png" class="img-fluid"></p></li>
-<li><p>Inside the inner loop, we execute <code>print(1)</code>, which, because j is now 2, will print 2. <img src="../../../media/units/unit0/module3/looptrace5.png" class="img-fluid"></p></li>
-<li><p>We’re at the end of the inner loop, so now i increments to 1: <img src="../../../media/units/unit0/module3/looptrace6.png" class="img-fluid"></p></li>
-<li><p>So now inside the inner-loop, we print 2 again <img src="../../../media/units/unit0/module3/looptrace7.png" class="img-fluid"></p></li>
-<li><p>Then, at the end of the inner for-loop, we return to the top where i increments to 2.</p></li>
-<li><p>Since i is at the limit, we exit the inner for-loop. <img src="../../../media/units/unit0/module3/looptrace8.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The inner loop iterated twice.</p>
-</div>
-</div></li>
-</ul></li>
-<li><p>Next, we go past the inner loop to <code>print()</code>, which goes to the <em>beginning</em> of the next line. <img src="../../../media/units/unit0/module3/looptrace9.png" class="img-fluid"></p></li>
-<li><p>This completes the <em>first iteration</em> of the outer, after which we go to the top of the outerloop and increment j. <img src="../../../media/units/unit0/module3/looptrace10.png" class="img-fluid"></p></li>
-<li><p>Execution now enters the outerloop with j set to 3.</p>
-<ul>
-<li>Now we encounter the inner for-loop, where i is set to 0</li>
-<li>The upper limit is the <em>current value of j</em>, which is 3.</li>
-<li>So, the inner loop executes three times, with i first set to 0, then to 1, then to 2.</li>
-<li>This will result in printing three 3’s.</li>
-<li>When i becomes 3, it hits the inner-loop limit and proceeds to the <code>print()</code> that follows.</li>
-<li>The output so far is:
-<ul>
-</ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">2</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">3</span> <span class="dv">3</span></span></code></pre></div>
-</li></ul></li>
-<li><p>This completes the iterations of the inner loop with the outer loop j set to 3.</p></li>
-<li><p>Next, j becomes 4 <img src="../../../media/units/unit0/module3/looptrace11.png" class="img-fluid"></p>
-<ul>
-<li>The inner loop starts with i set to 0.</li>
-<li>Each time through i increments.</li>
-<li>Until i hits the limit j (which is 4 now).</li>
-<li>This results in four 4’s being printed in a line.</li>
-<li>Then we come out of the inner loop and execute <code>print()</code>, which goes to the next line.</li>
-</ul></li>
-<li><p>The output so far is</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">2</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">3</span> <span class="dv">3</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">4</span> <span class="dv">4</span> <span class="dv">4</span></span></code></pre></div></li>
-<li><p>Finally at the end of the outer loop, j becomes 5 and hits the limit of the outer loop <img src="../../../media/units/unit0/module3/looptrace12.png" class="img-fluid"></p></li>
-</ul>
-<p>Yes, that was long. But doing this many times will help you understand how to read programs. Later, you will become good at this and will, with a quick glance at the inner-loop, say “Oh, this prints 2 twice in the first iteration of the outer.”</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When you need to submit a program’s traced-out execution, use a shorter version. For example, <a href="../../../media/units/unit0/module3/TracingExample.pdf"><strong>see this PDF for the above program</strong></a>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.14
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The discussion presented before this exercise was meant for you to develop an understanding of how to read programs. Tracing a program before running it is good way to read through the program and understand how it works. Now consider this program:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'*'</span>, end<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">' '</span>, end<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, i):</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'-'</span>, end<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span></code></pre></div>
-<p>Firstly, type up the program in <code>my_forloop_trace.py</code> and run it. If you are encountering any errors discuss with your TA and make sure there aren’t any errors before submitting the program.</p>
-<p>Secondly, trace through the values of i and j using approach presented in the PDF of the example program presented earlier. See <a href="../../../media/units/unit0/module3/TracingExample.pdf"><strong>this PDF for the above program</strong></a>.</p>
-<ul>
-<li>Discuss the tracing steps with your colleagues in the laboratory in groups of two or three.</li>
-<li>You can use the same table format presented therein.</li>
-<li>Do this painstakingly for each possible value of i and j.</li>
-<li>Consult your TA if you have any questions.</li>
-</ul>
-<p>Programs with nested loops can get complicated and challenging. The ultimate goal of this exercise is to get you to understand how to read programs especially when nested loops are involved.</p>
-<p>You are to only submit the working program <code>my_forloop_trace.py</code>. The tracing table need not be submitted.</p>
-<!-- First, trace through the values of i and j by hand and try to figure out what gets printed. Do this painstakingly for each possible value of i and j, remembering that i is now the name of the outerloop variable. You can use the shorter “table” format. See [**this PDF for the above program**](../../../media/units/unit0/module3/TracingExample.pdf)  Then edit, compile and execute the above program in `my_forloop_trace.py`. Discuss the program with your TA if you are encountering any errors or for any questions. -->
-</div>
-</div>
-<section id="video-3" class="level6">
-<h6 class="anchored" data-anchor-id="video-3"><strong>3.15 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.15.mp4"></video></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.16
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Consider this program: Write a program to print out consecutive integers in a diagonal, as in</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">3</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>   <span class="dv">4</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">5</span></span></code></pre></div>
-<p>Use a nested for-loop as in earlier examples to print the requisite number of spaces before printing a digit. Write your code in <code>my_diagonal_print.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.17
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Consider this program: Write a program to print out</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>I<span class="st">'m feeling cold: b rrrrrr rrrrr rrrr rrr rr r</span></span></code></pre></div>
-<p>Use a regular <code>print</code> to print everything up to the <code>b</code>. Then, use a nested for-loop for the <code>r</code>’s. Don’t forget the space between each grouping of <code>r</code>’s. Write your code in <code>my_brr_print.py</code>.</p>
-</div>
-</div>
-</section>
-<section id="video-4" class="level6">
-<h6 class="anchored" data-anchor-id="video-4"><strong>3.18 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.18.mp4"></video></div>
-</section>
-</section>
-<section id="reading-and-writing" class="level2">
-<h2 class="anchored" data-anchor-id="reading-and-writing">3.4 Reading and writing</h2>
-<p>Let’s consider how to <em>read</em> a single for-loop, such as:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">2</span>):</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k, end<span class="op">=</span><span class="st">' '</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">2</span><span class="op">*</span>k)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'-'</span>)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.19
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Write up the above in <code>my_simpleloop.py</code> and run to see the output.</p>
-</div>
-</div>
-<p>Instead of explaining the execution, let’s focus on how to <em>read</em> such a program:</p>
-<ul>
-<li>The first thing to do is to observe two parts to the loop: <img src="../../../media/units/unit0/module3/loopread1.png" class="img-fluid"></li>
-<li>Next, study the for-statement to understand the nature of the iteration: <img src="../../../media/units/unit0/module3/loopread2.png" class="img-fluid"></li>
-<li>Now look inside the body: <img src="../../../media/units/unit0/module3/loopread3.png" class="img-fluid"></li>
-</ul>
-<p>Let’s also point out what to keep in mind when <em>writing</em>:</p>
-<ul>
-<li>First, the for-loop header or for-statement: <img src="../../../media/units/unit0/module3/loopread4.png" class="img-fluid"></li>
-<li>Next, the loop body: <img src="../../../media/units/unit0/module3/loopread5.png" class="img-fluid"></li>
-<li><strong>Important:</strong> we will be nitpicky about writing because good writing habits will save you a lot of trouble.</li>
-</ul>
-<p>Next, let’s combine reading with <em>mental execution</em>. Consider the following program:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> functionOne():</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*'</span>, end<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> functionTwo():</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'*'</span>)</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> functionThree():</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>):</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>        functionOne()</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    functionTwo()</span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>, <span class="dv">2</span>):</span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    functionThree()</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.20
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>What does it print? Try to figure this out by mental execution first. Then, type it up, compile and execute to confirm, writing your code in <code>my_execution_exercise.py</code>.</p>
-</div>
-</div>
-<section id="video-5" class="level6">
-<h6 class="anchored" data-anchor-id="video-5"><strong>3.21 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video6" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module3/u0-mod3.21.mp4"></video></div>
-</section>
-</section>
-<section id="when-things-go-wrong" class="level2">
-<h2 class="anchored" data-anchor-id="when-things-go-wrong">3.5 When things go wrong</h2>
-<p>As code gets more complex, it gets easier to make mistakes, and harder to find them.</p>
-<p>In each of the programs below, try to determine the error without compiling the program. Then, write up the program, compile and see what the compiler says. After that, fix the error.</p>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.22
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The following program is intended to go through a loop five times and print the numbers 0 through 5:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span> <span class="dv">6</span>):</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
-<p>Write your corrected code in <code>my_loop_exercise1.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.23
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The following program is intended to go through a loop six times and print the numbers 1 through 6:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
-<p>Write your corrected code in <code>my_loop_exercise2.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.24
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The following program is intended to go through a loop and print the numbers 15 through 19, with increments of 2, i.e., <code>15, 17, 19</code>:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">2</span>:</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
-<p>Write your corrected code in <code>my_loop_exercise3.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.25
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The following program is intended to go through a loop and print the numbers 6 through 1, decrementing by 1, i.e., <code>6, 5, 4, 3, 2, 1</code>:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i)</span></code></pre></div>
-<p>Write your corrected code in <code>my_loop_exercise4.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.26
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The following program is intended to go through a loop and print the numbers 6 through 1, decrementing by 2, i.e., <code>6, 4, 2</code></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>):</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
-<p>Write your corrected code in <code>my_loop_exercise5.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.27
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The following program is intended to go through a loop and print the numbers 10 through18, incrementing by 2, i.e., <code>10, 12, 14, 16, 18</code>:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">2</span>):</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> count</span></code></pre></div>
-<p>Write your corrected code in <code>my_loop_exercise6.py</code>.</p>
-</div>
-</div>
-<p>Let’s point out the difference between a <em>syntax error</em> and a <em>logical</em> error:</p>
-<ul>
-<li>A <em>syntax error</em> will not allow a program to run.</li>
-<li>This means you are using the language incorrectly.</li>
-<li>On the other hand, you could have a program that has no syntax errors (it runs) but it does not produce the desired output. This means there’s a <em>logical error</em>.</li>
-<li>The process of identifying and fixing logical errors is called <em>debugging</em>.</li>
-<li>A <em>bug</em> is a logical error.</li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.28
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The following code intends to print</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="dv">55555</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4444</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="dv">333</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="dv">22</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code></pre></div>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">1</span>):</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, i):</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i, end<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span></code></pre></div>
-<p>But there are two bugs. First, try to find the problems solely by reading and mental execution. Then, type up the program in <code>my_loop_exercise7.py</code>. Fix the program to get the desired output.</p>
-</div>
-</div>
-</section>
-<section id="a-peek-at-the-future" class="level2">
-<h2 class="anchored" data-anchor-id="a-peek-at-the-future">3.6 &nbsp;&nbsp; A peek at the future</h2>
-<p>Consider the following program:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tkinter <span class="im">as</span> tk</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>window <span class="op">=</span> tk.Tk()</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>canvas <span class="op">=</span> tk.Canvas(master<span class="op">=</span>window, width<span class="op">=</span><span class="dv">200</span>, height<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>canvas.pack()</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_rectangles():</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">51</span>, <span class="dv">10</span>):              </span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>        canvas.create_rectangle(</span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>            <span class="dv">3</span><span class="op">*</span>i, i, <span class="dv">3</span><span class="op">*</span>i<span class="op">+</span><span class="dv">20</span>, i<span class="op">+</span><span class="dv">10</span>, outline<span class="op">=</span><span class="st">"blue"</span>)</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>draw_rectangles()</span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>window.mainloop()</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.29
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Download the above program, <a href="../../../media/units/unit0/module3/my_forloop_rectangle.py" download=""><strong>my_forloop_rectangle.py</strong></a>, and execute the program. If you’re feeling brave, add a second for-loop so that output looks like: <img src="../../../media/units/unit0/module3/forloop_rect_screenshot.png" class="img-fluid"></p>
-</div>
-</div>
-<p>Let’s point out the for-loop’s part in the program:</p>
-<ul>
-<li>First, we need to understand how coordinates work differently in Python: <img src="../../../media/units/unit0/module3/loop_rect.png" class="img-fluid"></li>
-<li>Next, let’s read the for-loop statement to see how it iterates: <img src="../../../media/units/unit0/module3/loop_rect2.png" class="img-fluid">
-<ul>
-<li>We can see that i will be 10 the first time through the loop.</li>
-<li>Then i becomes 20, then 30 etc until 50.</li>
-<li>Thus, there are 5 iterations through the loop.</li>
-</ul></li>
-<li>Notice how i is used in the calculation of the measurements needed to draw the rectangle: <img src="../../../media/units/unit0/module3/loop_rect3.png" class="img-fluid"> (We spilled a line of code over two lines to make the font large enough.)
-<ul>
-<li>When i is 10, the first rectangle’s top left corner gets drawn at 30 (which is 3 times i, or 3*i) from the left side, and 10 down from the top.</li>
-<li>In the second iteration i is 20, which means the top left corner is 60 from the left. And so on.</li>
-</ul></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.30
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Download <a href="../../../media/units/unit0/module3/my_forloop_rectangle2.py" download=""><strong>my_forloop_rectangle2.py</strong></a>, and execute the program to see that an animation is really a for-loop.</p>
-</div>
-</div>
-<p>About animations:</p>
-<ul>
-<li>Even if an object moves across a screen (and is in different positions on the screen), there is something that “repeats”.</li>
-<li>What repeats is the drawing of the object in different places (with a gap in time to create the illusion of real movement).</li>
-<li>Thus, when locations can be <em>calculated</em> we can use a loop to iterate through the different positions.</li>
-<li>This is essentially how animation works.</li>
-</ul>
-</section>
-<section id="some-things-to-keep-mind" class="level2">
-<h2 class="anchored" data-anchor-id="some-things-to-keep-mind">3.7 &nbsp;&nbsp; Some things to keep mind</h2>
-<p>Let’s introduce the notion of <em>reserved words</em>:</p>
-<ul>
-<li>Some words like <code>for</code> and <code>in</code> are special to the language and are called <em>reserved words</em> or <em>key words</em> of the language. <img src="../../../media/units/unit0/module3/forloop14.png" class="img-fluid"></li>
-<li>There are special rules associated with the usage of such reserved words, which we’ll describe over time. For now, we’re just pointing them out.</li>
-<li>Another example of a reserved word we’ve seen: <code>def</code></li>
-<li>It turns out that, even though <code>print</code> looks like it should be a reserved word, it’s in fact not.
-<ul>
-<li>At this stage, the distinction is not clear and that’s fine.</li>
-<li>As you learn the language, you’ll learn how to distinguish.</li>
-</ul></li>
-</ul>
-<p>Counting from 0:</p>
-<ul>
-<li>When a single number like 6 is specified in the <code>range</code> as in <code>range(6)</code> <img src="../../../media/units/unit0/module3/forloop15.png" class="img-fluid"></li>
-<li>Thus, i is 0 the first time, then 1, then 2, and so on until i = 5 (last time through).</li>
-<li>The number 6 specifies that i cannot be 6 or higher.</li>
-<li>Thus, there is a certain strangeness to get used to:
-<ul>
-<li>Unlike math (where counting starts from 1), in programming, the convention is to start from 0. <br> (Did you notice that’s why we started with Module 0?)</li>
-<li>The other strangeness is specifying the limit as one higher (6) than than last iteration value (5).</li>
-</ul></li>
-</ul>
-<p>The different uses of <code>range</code></p>
-<ul>
-<li>When a single number is specified, as in <code>range(6)</code> the implied start is 0.</li>
-<li>When two numbers are specified as in: <code>range(10, 16)</code> the first is the start of the count, and the second is the limit: <img src="../../../media/units/unit0/module3/forloop16.png" class="img-fluid">
-<ul>
-<li>Thus i is 10 the first time (this is the first thing that’s printed).</li>
-<li>Then i becomes 11.</li>
-<li>Then 12, and so on until the last time through when i is 15.</li>
-</ul></li>
-<li>When three numbers are specified as in <code>range(10, 16, 2)</code> the third number is the increment. <img src="../../../media/units/unit0/module3/forloop17.png" class="img-fluid">
-<ul>
-<li>Here, i starts as 10 in the first iteration.</li>
-<li>Then, i is 12 in the second iteration.</li>
-<li>Then i becomes 14. This is the last iteration because after that i would be 16, which ends the loop.</li>
-</ul></li>
-<li>Using <code>range(10, 15, 2)</code> produces the same result as above, and in fact preferable.</li>
-</ul>
-<p>About comments:</p>
-<ul>
-<li><p>First, comments are for us to read. The computer does not read them.</p></li>
-<li><p>Thus, in terms of execution, this program</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list the even numbers between 10 and 14, inclusive:</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">2</span>):    <span class="co"># Notice the increment</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
-<p>will result in the exact output as this one:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">2</span>):</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div></li>
-<li><p>We will use comments in two ways, as in the above example:</p>
-<ul>
-<li>The first comment is an example of using a comment as a prelude to code, to explain what’s coming or intended.</li>
-<li>The second kind that is to the right side of a line of code is like an alert: we’ll use this to point out something to pay attention to in that line of code.</li>
-</ul></li>
-</ul>
-</section>
-<section id="meta" class="level2">
-<h2 class="anchored" data-anchor-id="meta">3.8 Meta</h2>
-<p>We will occasionally step back from the details to comment on how best to learn.</p>
-<p>This module was a bit different, a little more challenging than modules 1-2.</p>
-<p>What to keep in mind:</p>
-<ul>
-<li>It is only natural to feel like you are in an alien landscape. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⇒ You would feel no different doing the first few modules while learning a foreign language with an entirely different script.</li>
-<li>It takes a while to absorb some of the details, and that’s just fine.</li>
-<li>Notice that some exercises were significantly more challenging than others:
-<ul>
-<li>In prior modules, you merely typed in something and tried it out, or make a small change.</li>
-<li>With some exercises (like brrrrr) you had to do it all from scratch.</li>
-<li>Both involved <em>problem-solving</em> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⇒ Taking a problem described in words and finding a solution.</li>
-</ul></li>
-<li>Problem-solving is a higher-level skill than programming.
-<ul>
-<li>It takes time to acquire this skill.</li>
-<li>There is no magic formula or words to simply make “problem solving” work for you.</li>
-<li>The only way is to develop this skill is to struggle with problems, and with lots of them.</li>
-</ul></li>
-<li>Finally, think about this:
-<ul>
-<li>Anyone can acquire both programming and problem-solving skills with sufficient dedication. So why not you?</li>
-<li>If you get past these hurdles with determination, you will leave in the dust all those who gave up earlier.</li>
-</ul></li>
-</ul>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Before proceeding with Module 4 you would need to install <code>matplotlib</code> library. Follow these guides to learn about how to install packages in Thonny on a <a href="../../../python_primer/unit0/guides/thonny-mac-matplotlib.html"><strong>Mac</strong></a> or <a href="../../../python_primer/unit0/guides/thonny-win-matplotlib.html"><strong>Windows</strong></a> computer.</p>
-</div>
-</div>
+<!-- ## 3.3 Tracing through a program in detail
+We'll now look at an example of how to execute a program "by hand". That is, how to <em>trace</em> a program's execution by painstakingly following its execution step-by-step.
+
+At first this will appear tedious, but it is <em><b>critical</b></em> to a firm understanding of how programs execute, and eventually to your own writing of programs.
+
+We'll first do a longer, more narrative version here, and then show you how to submit a much shorter version for your exercises.
+
+
+For our example, let's look at the program we last saw:
+```python
+print(1)                   
+
+for j in range(2, 5):      
+    for i in range(j):     
+        print(j, end='')
+    print()    
+```
+
+Let's now dive into the longer version, just for the sake of understanding.
+
+To make best use of this:
+  
+- Open this same page in another browser, and have the program side-by-side, as you read what's below.
+- Read out <em>aloud</em> what you see below.
+
+Ready? Let's trace through:
+![](../../../media/units/unit0/module3/looptrace1.png)
+
+- Right at the start, the first line is `print(1)`. This prints out 1, and moves to the next line.
+![](../../../media/units/unit0/module3/looptrace2.png)
+- Initially j=2 at the start of the outer for-loop:
+![](../../../media/units/unit0/module3/looptrace3.png)
+-  Since j is 2, it's within the range, and we enter the outer for-loop.
+      - Now we encounter the inner for-loop, where i is set to 0      
+        
+        :::{.callout-note}
+        when `range` has only one number specified, it's understood to be the upper limit.
+        :::
+      - The upper limit is the <em>current value of j</em>, which is 2.
+        ![](../../../media/units/unit0/module3/looptrace4.png)
+      - Inside the inner loop, we execute `print(1)`, which, because j is now 2, will print 2.
+        ![](../../../media/units/unit0/module3/looptrace5.png)
+      - We're at the end of the inner loop, so now i increments to 1:
+        ![](../../../media/units/unit0/module3/looptrace6.png)
+      - So now inside the inner-loop, we print 2 again 
+        ![](../../../media/units/unit0/module3/looptrace7.png)
+      - Then, at the end of the inner for-loop, we return to the top where i increments to 2.
+      - Since i is at the limit, we exit the inner for-loop.
+        ![](../../../media/units/unit0/module3/looptrace8.png)
+        
+        :::{.callout-note}
+        The inner loop iterated twice.
+        :::
+
+- Next, we go past the inner loop to `print()`, which goes to the <em>beginning</em> of the next line.
+![](../../../media/units/unit0/module3/looptrace9.png) 
+- This completes the <em>first iteration</em> of the outer, after which we go to the top of the outerloop and increment j.
+![](../../../media/units/unit0/module3/looptrace10.png)
+
+- Execution now enters the outerloop with j set to 3.
+    - Now we encounter the inner for-loop, where i is set to 0
+    - The upper limit is the <em>current value of j</em>, which is 3.
+    - So, the inner loop executes three times, with i first set to 0, then to 1, then to 2.
+    - This will result in printing three 3's.
+    - When i becomes 3, it hits the inner-loop limit and proceeds to the `print()` that follows.
+    - The output so far is:
+    <ul>
+    ```python
+    1
+    2 2
+    3 3 3
+    ```
+    </ul>
+- This completes the iterations of the inner loop with the outer loop j set to 3.
+-  Next, j becomes 4
+![](../../../media/units/unit0/module3/looptrace11.png)
+    - The inner loop starts with i set to 0.
+    - Each time through i increments.
+    - Until i hits the limit j (which is 4 now).
+    - This results in four 4's being printed in a line.
+    - Then we come out of the inner loop and execute `print()`, which goes to the next line.
+
+- The output so far is
+  ```python
+  1
+  2 2
+  3 3 3
+  4 4 4 4
+  ```
+- Finally at the end of the outer loop, j becomes 5 and hits the limit of the outer loop
+![](../../../media/units/unit0/module3/looptrace12.png)
+
+Yes, that was long. But doing this many times will help you understand how to read programs. Later, you will become good at this and will, with a quick glance at the inner-loop, say "Oh, this prints 2 twice in the first iteration of the outer."
+
+:::{.callout-important}
+When you need to submit a program's traced-out execution, use a shorter version. For example, [**see this PDF for the above program**](../../../media/units/unit0/module3/TracingExample.pdf).
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.14
+
+The discussion presented before this exercise was meant for you to develop an understanding of how to read programs. Tracing a program before running it is good way to read through the program and understand how it works. Now consider this program:
+```python
+for i in range(1, 6):
+    for j in range(i, 0, -1):
+        print('*', end='')
+    print(' ', end='')
+    for j in range(1, i):
+        print('-', end='')
+    print()
+```
+Firstly, type up the program in `my_forloop_trace.py` and run it. If you are encountering any errors discuss with your TA and make sure there aren’t any errors before submitting the program.
+
+Secondly, trace through the values of i and j using approach presented in the PDF of the example program presented earlier. See [**this PDF for the above program**](../../../media/units/unit0/module3/TracingExample.pdf). 
+
+- Discuss the tracing steps with your colleagues in the laboratory in groups of two or three. 
+- You can use the same table format presented therein.
+- Do this painstakingly for each possible value of i and j. 
+- Consult your TA if you have any questions.
+
+Programs with nested loops can get complicated and challenging. The ultimate goal of this exercise is to get you to understand how to read programs especially when nested loops are involved. 
+
+You are to only submit the working program `my_forloop_trace.py`. The tracing table need not be submitted.
+
+:::
+
+###### **3.15 Video** 
+
+
+
+
+
+
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.16
+
+Consider this program:
+Write a program to print out consecutive integers in a diagonal, as in
+```python
+1
+ 2
+  3
+   4
+    5
+```
+Use a nested for-loop as in earlier examples to print the requisite number of spaces before printing a digit. Write your code in `my_diagonal_print.py`.
+:::
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.17
+
+Consider this program:
+Write a program to print out 
+```python
+I'm feeling cold: b rrrrrr rrrrr rrrr rrr rr r
+```
+Use a regular `print` to print everything up to the `b`. Then, use a nested for-loop for the `r`'s. Don't forget the space between each grouping of `r`'s. Write your code in `my_brr_print.py`.
+:::
+
+
+###### **3.18 Video** 
+
+
+
+
+
+
+
+
+## 3.4 Reading and writing
+Let's consider how to <em>read</em> a single for-loop, such as:
+```python
+for k in range(1, 10, 2):
+    print(k, end=' ')
+    print(2*k)
+    print('-')
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.19
+
+Write up the above in `my_simpleloop.py` and run to see the output.
+:::
+
+Instead of explaining the execution, let's focus on how to <em>read</em> such a program:
+
+- The first thing to do is to observe two parts to the loop:
+![](../../../media/units/unit0/module3/loopread1.png) 
+- Next, study the for-statement to understand the nature of the iteration:
+![](../../../media/units/unit0/module3/loopread2.png) 
+- Now look inside the body:
+![](../../../media/units/unit0/module3/loopread3.png) 
+
+Let's also point out what to keep in mind when <em>writing</em>:
+    
+- First, the for-loop header or for-statement:
+![](../../../media/units/unit0/module3/loopread4.png) 
+- Next, the loop body:
+![](../../../media/units/unit0/module3/loopread5.png) 
+- **Important:** we will be nitpicky about writing because good writing habits will save you a lot of trouble.
+
+Next, let's combine reading with <em>mental execution</em>.
+Consider the following program:
+```python
+def functionOne():
+    print('*', end='')
+
+def functionTwo():
+    print('*')
+
+def functionThree():
+    for j in range(0, 5):
+        functionOne()
+    functionTwo()
+
+for i in range(1, 11, 2):
+    functionThree()
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.20
+
+What does it print? Try to figure this out by mental execution first. Then, type it up, compile and execute to confirm, writing your code in `my_execution_exercise.py`.
+:::
+
+###### **3.21 Video** 
+
+
+
+
+
+
+
+
+## 3.5 When things go wrong
+As code gets more complex, it gets easier to make mistakes, and harder to find them.
+
+In each of the programs below, try to determine the error without compiling the program. Then, write up the program, compile and see what the compiler says. After that, fix the error.
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.22
+The following program is intended to go through a loop five times and print the numbers 0 through 5:
+```python
+for i in range(0 6):
+    print(i)
+```
+Write your corrected code in `my_loop_exercise1.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.23
+The following program is intended to go through a loop six times and print the numbers 1 through 6:
+```python
+for i in range(1, 7)
+    print(i)
+```
+Write your corrected code in `my_loop_exercise2.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.24
+The following program is intended to go through a loop and print the numbers 15 through 19, with increments of 2, i.e., `15, 17, 19`:
+```python
+for i in range(15, 20, 2:
+    print(i)
+```
+Write your corrected code in `my_loop_exercise3.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.25
+The following program is intended to go through a loop and print the numbers 6 through 1, decrementing by 1, i.e., `6, 5, 4, 3, 2, 1`:
+```python
+for i in range(6, 0, -1):
+print(i)
+```
+Write your corrected code in `my_loop_exercise4.py`.
+:::
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.26
+The following program is intended to go through a loop and print the numbers 6 through 1, decrementing by 2, i.e., `6, 4, 2`
+```python
+for in range(6, 0, -2):
+    print(i)
+```
+Write your corrected code in `my_loop_exercise5.py`.
+:::
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.27
+The following program is intended to go through a loop and print the numbers 10 through18, incrementing by 2, i.e., `10, 12, 14, 16, 18`:
+```python
+for count in range(10, 20, 2):
+    print count
+```
+Write your corrected code in `my_loop_exercise6.py`.
+:::
+
+Let's point out the difference between a <em>syntax error</em> and a <em>logical</em> error:
+  
+- A <em>syntax error</em> will not allow a program to run.
+- This means you are using the language incorrectly.
+- On the other hand, you could have a program that has no syntax errors (it runs) but it does not produce the desired output. This means there's a <em>logical error</em>.
+- The process of identifying and fixing logical errors is called <em>debugging</em>.
+- A <em>bug</em> is a logical error.
+
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.28
+
+The following code intends to print
+```python
+55555
+4444
+333
+22
+1
+```
+```python
+for i in range(5, 0, 1):
+    for j in range(1, i):
+        print(i, end='')
+    print()
+```
+But there are two bugs. First, try to find the problems solely by reading and mental execution. Then, type up the program in `my_loop_exercise7.py`. Fix the program to get the desired output.
+:::
+
+## 3.6 &nbsp;&nbsp; A peek at the future
+Consider the following program:
+```python
+import tkinter as tk
+
+window = tk.Tk()
+canvas = tk.Canvas(master=window, width=200, height=100)
+canvas.pack()
+
+def draw_rectangles():
+    for i in range(10, 51, 10):              
+        canvas.create_rectangle(
+            3*i, i, 3*i+20, i+10, outline="blue")
+
+draw_rectangles()
+window.mainloop()
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.29
+
+Download the above program, <a href="../../../media/units/unit0/module3/my_forloop_rectangle.py" download >**my_forloop_rectangle.py**</a>, and execute the program. If you're feeling brave, add a second for-loop so that output looks like:
+![](../../../media/units/unit0/module3/forloop_rect_screenshot.png)
+:::
+
+Let's point out the for-loop's part in the program:
+
+- First, we need to understand how coordinates work differently in Python:
+![](../../../media/units/unit0/module3/loop_rect.png)
+- Next, let's read the for-loop statement to see how it iterates:
+![](../../../media/units/unit0/module3/loop_rect2.png)
+  - We can see that i will be 10 the first time through the loop.
+  - Then i becomes 20, then 30 etc until 50.
+  - Thus, there are 5 iterations through the loop.
+
+- Notice how i is used in the calculation of the measurements needed to draw the rectangle:
+![](../../../media/units/unit0/module3/loop_rect3.png)
+(We spilled a line of code over two lines to make the font large enough.)
+  - When i is 10, the first rectangle's top left corner gets drawn at 30 (which is 3 times i, or 3*i) from the left side, and 10 down from the top.
+  - In the second iteration i is 20, which means the top left corner is 60 from the left. And so on.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.30
+
+Download <a href="../../../media/units/unit0/module3/my_forloop_rectangle2.py" download >**my_forloop_rectangle2.py**</a>, and execute the program to see that an animation is really a for-loop.
+:::
+
+About animations:
+
+- Even if an object moves across a screen (and is in different positions on the screen), there is something that "repeats".
+- What repeats is the drawing of the object in different places (with a gap in time to create the illusion of real movement).
+- Thus, when locations can be <em>calculated</em> we can use a loop to iterate through the different positions.
+- This is essentially how animation works.
+
+
+## 3.7 &nbsp;&nbsp; Some things to keep mind
+Let's introduce the notion of <em>reserved words</em>:
+
+- Some words like `for` and `in` are special to the language and are called <em>reserved words</em> or <em>key words</em> of the language.
+![](../../../media/units/unit0/module3/forloop14.png)
+- There are special rules associated with the usage of such reserved words, which we'll describe over time. For now, we're just pointing them out.
+- Another example of a reserved word we've seen: `def`
+- It turns out that, even though `print` looks like it should be a reserved word, it's in fact not.
+  - At this stage, the distinction is not clear and that's fine.
+  - As you learn the language, you'll learn how to distinguish.
+
+Counting from 0:
+
+- When a single number like 6 is specified in the `range` as in `range(6)`
+![](../../../media/units/unit0/module3/forloop15.png)
+- Thus, i is 0 the first time, then 1, then 2, and so on until i = 5 (last time through). 
+- The number 6 specifies that i cannot be 6 or higher.
+- Thus, there is a certain strangeness to get used to:
+  - Unlike math (where counting starts from 1), in programming, the convention is to start from 0.
+    <br> (Did you notice that's why we started with Module 0?)
+  - The other strangeness is specifying the limit as one higher (6) than than last iteration value (5).
+
+The different uses of `range`
+
+- When a single number is specified, as in `range(6)` the implied start is 0.
+- When two numbers are specified as in: `range(10, 16)` the first is the start of the count, and the second is the limit:
+![](../../../media/units/unit0/module3/forloop16.png)
+  - Thus i is 10 the first time (this is the first thing that's printed).
+  - Then i becomes 11.
+  - Then 12, and so on until the last time through when i is 15.
+
+- When three numbers are specified as in `range(10, 16, 2)` the third number is the increment.
+![](../../../media/units/unit0/module3/forloop17.png)
+  - Here, i starts as 10 in the first iteration.
+  - Then, i is 12 in the second iteration.
+  - Then i becomes 14. This is the last iteration because after that i would be 16, which ends the loop.
+- Using `range(10, 15, 2)` produces the same result as above, and in fact preferable.
+
+About comments:
+
+- First, comments are for us to read. The computer does not read them.
+- Thus, in terms of execution, this program
+
+  ```python
+  # list the even numbers between 10 and 14, inclusive:
+  for i in range(10, 15, 2):    # Notice the increment
+      print(i)
+  ```
+  will result in the exact output as this one:
+  
+  ```python
+  for i in range(10, 15, 2):
+      print(i)
+  ```
+
+- We will use comments in two ways, as in the above example:
+  - The first comment is an example of using a comment as a prelude to code, to explain what's coming or intended.
+  - The second kind that is to the right side of a line of code is like an alert: we'll use this to point out something to pay attention to in that line of code.
+
+## 3.8 Meta
+We will occasionally step back from the details to comment on how best to learn.
+
+This module was a bit different, a little more challenging than modules 1-2.
+
+What to keep in mind:
+
+- It is only natural to feel like you are in an alien landscape.
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; 
+  You would feel no different doing the first few modules while learning a foreign language with an entirely different script.
+- It takes a while to absorb some of the details, and that's just fine.
+- Notice that some exercises were significantly more challenging than others:
+  - In prior modules, you merely typed in something and tried
+    it out, or make a small change.
+  - With some exercises (like brrrrr)  you had to do it all from scratch.
+  - Both involved <em>problem-solving</em>
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; 
+    Taking a problem described in words and finding a solution.
+
+- Problem-solving is a higher-level skill than programming.
+  - It takes time to acquire this skill.
+  - There is no magic formula or words to simply make "problem solving" work for you.
+  - The only way is to develop this skill is to struggle with problems, and with lots of them.
+- Finally, think about this:
+  - Anyone can acquire both programming and problem-solving skills with sufficient dedication. So why not you?
+  - If you get past these hurdles with determination, you will leave in the dust all those who gave up earlier.
+
+:::{.callout-warning}
+Before proceeding with Module 4 you would need to install `matplotlib` library. Follow these guides to learn about how to install packages in Thonny on a [**Mac**](../guides/thonny-mac-matplotlib.qmd) or [**Windows**](../guides/thonny-win-matplotlib.qmd) computer.
+::: -->
 <!-- <br>
 [Previous Module: **Module 0.2**](./module0.2.qmd){.button .prev} [Next Module: **Module 0.4**](./module0.4.qmd){.button .next} -->
 

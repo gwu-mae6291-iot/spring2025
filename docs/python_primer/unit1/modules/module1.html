@@ -197,11 +197,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#nested-conditionals" id="toc-nested-conditionals" class="nav-link" data-scroll-target="#nested-conditionals">1.3 Nested conditionals</a></li>
   <li><a href="#combining-conditions" id="toc-combining-conditions" class="nav-link" data-scroll-target="#combining-conditions">1.4 Combining conditions</a></li>
   <li><a href="#conditionals-and-loops" id="toc-conditionals-and-loops" class="nav-link" data-scroll-target="#conditionals-and-loops">1.5 Conditionals and loops</a></li>
-  <li><a href="#conditionals-and-lists" id="toc-conditionals-and-lists" class="nav-link" data-scroll-target="#conditionals-and-lists">1.6 Conditionals and lists</a></li>
-  <li><a href="#more-examples-with-lists" id="toc-more-examples-with-lists" class="nav-link" data-scroll-target="#more-examples-with-lists">1.7 More examples with lists</a></li>
-  <li><a href="#some-stats-via-programming" id="toc-some-stats-via-programming" class="nav-link" data-scroll-target="#some-stats-via-programming">1.8 Some stats via programming</a></li>
-  <li><a href="#algorithmic-art" id="toc-algorithmic-art" class="nav-link" data-scroll-target="#algorithmic-art">1.9 Algorithmic art</a></li>
-  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">1.10 When things go wrong</a></li>
   </ul>
 </nav>
     </div>
@@ -894,532 +889,312 @@ Exercise 1.18
 </ol>
 </div>
 </div>
-</section>
-<section id="conditionals-and-lists" class="level2">
-<h2 class="anchored" data-anchor-id="conditionals-and-lists">1.6 Conditionals and lists</h2>
-<p>Suppose we have a list of numbers, representing daily profits (sometimes negative, sometimes positive) and we only want to add up the positive numbers:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>earnings <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">30</span>]</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> earnings:</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> k <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> k</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Total profit ='</span>, total)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.20
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Trace through the values of total and k in the program above. There is nothing to submit for this exercise.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.21
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Given a list like:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="op">-</span><span class="dv">30</span>, <span class="op">-</span><span class="dv">21</span>, <span class="op">-</span><span class="dv">20</span>]</span></code></pre></div>
-<p>we see that 12, 13 and -21, -20 are pairs of consecutive numbers.</p>
-<ul>
-<li><p>Type up the program below called <code>my_consecutive.py</code>, which uses a loop and a conditional to identify consecutive pairs and print them.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="op">-</span><span class="dv">30</span>, <span class="op">-</span><span class="dv">21</span>, <span class="op">-</span><span class="dv">20</span>]</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A) <span class="op">-</span> <span class="dv">1</span>):</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">abs</span>(A[i] <span class="op">-</span> A[i <span class="op">+</span> <span class="dv">1</span>]) <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Consecutive pair found: "</span>,A[i], A[i <span class="op">+</span> <span class="dv">1</span>])</span></code></pre></div></li>
-</ul>
-<p>For the above list, the output should be:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>Consecutive pair found: <span class="dv">12</span> <span class="dv">13</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>Consecutive pair found: <span class="op">-</span><span class="dv">21</span> <span class="op">-</span><span class="dv">20</span></span></code></pre></div>
-</div>
-</div>
-<p>Next, let’s write a program that asks the user to enter a number, that we then check is in a list of numbers:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The list of numbers:</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="op">-</span><span class="dv">30</span>]</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Receive what the user types in (as a string):</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>user_str <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Enter an integer: '</span>)</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert string to integer:</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">int</span>(user_str)</span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Check whether in the list:</span></span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> k <span class="kw">in</span> A:</span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k,<span class="st">'is in the list'</span>)</span>
-<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k,<span class="st">'is not in the list'</span>)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.23
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above program in <code>my_listcheck.py</code>, run it for the following user inputs and examine the output in each case:</p>
-<ol type="1">
-<li>100</li>
-<li>35.364 (For a float-type input explain to yourself why you may get an error.)</li>
-<li>4</li>
-</ol>
-<p>Run each case listed above and understand the output or error you are getting.</p>
-<p>Submit the program <code>my_listcheck.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The <b>in</b> operator checks for membership in the list:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> k <span class="kw">in</span> A:</span></code></pre></div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.24
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Suppose you are given two lists like:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="op">-</span><span class="dv">30</span>, <span class="op">-</span><span class="dv">21</span>, <span class="op">-</span><span class="dv">20</span>]</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">2</span>, <span class="op">-</span><span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">16</span>, <span class="dv">13</span>]</span></code></pre></div>
-<p>Notice that some elements of A (like 2) also exist in B. In <code>my_twolist.py</code>, use the list membership idea to print those elements of A that are also in B. For the above example, the output should be:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="kw">in</span> A also found <span class="kw">in</span> B</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">9</span> <span class="kw">in</span> A also found <span class="kw">in</span> B</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="dv">13</span> <span class="kw">in</span> A also found <span class="kw">in</span> B</span></code></pre></div>
-</div>
-</div>
-</section>
-<section id="more-examples-with-lists" class="level2">
-<h2 class="anchored" data-anchor-id="more-examples-with-lists">1.7 More examples with lists</h2>
-<p>Consider the following program that aims to find duplicates in a list:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>]</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> A:</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> k <span class="kw">in</span> A:</span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Duplicate found:'</span>, k)</span></code></pre></div>
-<p>In the list, we can see that 2 occurs thrice, and 3 occurs twice. Both should be listed as duplicates. Is this the case?</p>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.25
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Trace through the loop’s iterations in the above program and explain to yourself why it does not work.</p>
-<p>There is nothing to submit for this exercise.</p>
-</div>
-</div>
-<p>Now consider this variation:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>]</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A)<span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, <span class="bu">len</span>(A)):</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> A[i] <span class="op">==</span> A[j]:</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">'Duplicate found:'</span>, A[i])</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.26
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above program in <code>my_listcheck2.py</code> and submit it.</p>
-<p>The following part of the exercise is not required for submission:</p>
-<ul>
-<li>Trace through the loop’s iterations in the above program in a separate spreadsheet or document. Explain the output to yourself. Why does the inner loop start with i+1?</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="some-stats-via-programming" class="level2">
-<h2 class="anchored" data-anchor-id="some-stats-via-programming">1.8 Some stats via programming</h2>
-<p>Let’s now apply our practice with conditionals to solve some problems in probability and statistics.</p>
-<p>For example: Suppose I toss a coin 4 times and observe the face that’s up. What is the probability that I get all “tails” (i.e., not one toss shows “heads”).</p>
-<p>Let’s do this in steps.</p>
-<p>First, let’s write a program to toss a coin 4 times</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>coin <span class="op">=</span> [<span class="st">'heads'</span>, <span class="st">'tails'</span>]</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    toss <span class="op">=</span> random.choice(coin)</span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(toss)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.28
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_cointosses.py</code> and run it a few times to see what you get.</p>
-<p>Submit your program.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>We have made a list of strings:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>coin <span class="op">=</span> [<span class="st">'heads'</span>, <span class="st">'tails'</span>]</span></code></pre></div></li>
-<li><p>Python has a useful way to randomly select an element in a list:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>toss <span class="op">=</span> random.choice(coin)</span></code></pre></div></li>
-<li><p>Alternatively, we could have written:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>toss <span class="op">=</span> random.choice([<span class="st">'heads'</span>,<span class="st">'tails'</span>])</span></code></pre></div>
-<p>and avoided defining <code>coin</code>.</p></li>
-</ul>
-</div>
-</div>
-<p>Next, instead of printing the results, let’s count the number of heads observed:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    toss <span class="op">=</span> random.choice([<span class="st">'heads'</span>, <span class="st">'tails'</span>])</span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> toss <span class="op">==</span> <span class="st">'heads'</span>:</span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>        count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Number of heads'</span>, count)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.29
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_cointosses2.py</code> and run it a few times to see what you get.</p>
-<p>Submit your program.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Observe how the string that’s randomly selected from the list is compared against ‘heads’:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> toss <span class="op">==</span> <span class="st">'heads'</span>:</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>    count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
-</div>
-</div>
-<p>Next, what we need to do is repeat the 4-coin toss many times:</p>
-<ul>
-<li>Suppose we call 4-coin tosses a single <em>trial</em>.</li>
-<li>If we ran a single trial and obtained 1 heads (count=1), could we conclude that the probability of getting all-4-tails is zero?</li>
-<li>What we need to do is run a large number of trials and record how many of them result in 4-tails.</li>
-<li>We’ll use the term “success” to identify a trial in which we get all 4-tails.</li>
-<li>Let’s examine the code:</li>
-</ul>
-<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>successes <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(trials):</span>
-<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Count number of heads in 4 tosses:</span></span>
-<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>    count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>        toss <span class="op">=</span> random.choice([<span class="st">'heads'</span>, <span class="st">'tails'</span>])</span>
-<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> toss <span class="op">==</span> <span class="st">'heads'</span>:</span>
-<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>            count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If the count is zero, that's a success</span></span>
-<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> count <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>        successes <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Ratio of successes to trials:</span></span>
-<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a>probability <span class="op">=</span> successes <span class="op">/</span> trials</span>
-<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'probability ='</span>, probability)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.30
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_cointosses3.py</code> and run it a few times to see what you get. Then do the following:</p>
-<ol type="1">
-<li>Increase the number of trials to 10000 and examine the output. Note: The theoretical answer is 0.0625 (approximately a 6% chance that there’s no heads in 4 tosses).</li>
-<li>Submit your program with modification outlined in point #1.</li>
-</ol>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.31
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use the same program <code>my_cointosses3.py</code> as a starting point and write up a program <code>my_cointosses4.py</code> to run 10000 trials in the following experiment:</p>
-<ul>
-<li><p>Toss a coin 10 times and record a success if you get an equal number of heads and tails.</p></li>
-<li><p>Hint: To accomplish this, you have to change the parameter in the <code>range()</code> function in the nested-for-loop.</p></li>
-</ul>
-</div>
-</div>
-<p>Now let’s solve a problem with the other favorite manner of generating chance: dice</p>
-<p>We’ll roll two dice and add the numbers that are face up. We want to ask: what are the chances we get sum of 7 (when added up)?</p>
-<p>Here’s the program:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>possible_outcomes <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> <span class="dv">100000</span></span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>successes <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(trials):</span>
-<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>    roll1 <span class="op">=</span> random.choice(possible_outcomes)</span>
-<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>    roll2 <span class="op">=</span> random.choice(possible_outcomes)</span>
-<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> roll1 <span class="op">+</span> roll2 <span class="op">==</span> <span class="dv">7</span>:</span>
-<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>        successes <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>probability <span class="op">=</span> successes <span class="op">/</span> trials</span>
-<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'probability ='</span>, probability)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.33
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_dice.py</code> and examine the output. Then do the following and examine the probability in each output:</p>
-<ul>
-<li>Run the program for the sum of the values of the dice being 12, i.e., roll1 + roll2 = 12</li>
-<li>Run the program for the sum of the values of the dice being 2, i.e., roll1 + roll2 = 2</li>
-<li>Submit your program for roll1 + roll2 = 7</li>
-</ul>
-<!-- Try and answer for yourself if there is a number other than 7 for which the probability is higher. -->
-</div>
-</div>
-<p>Let’s also look at how one can use Python to randomly generate real numbers, for example:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>trials <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(trials):</span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> random.uniform(<span class="dv">5</span>, <span class="dv">10</span>)</span>
-<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span>
-<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>    total <span class="op">+=</span> x</span>
-<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'mean ='</span>, total<span class="op">/</span>trials)</span></code></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>By using</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> random.uniform(<span class="dv">5</span>, <span class="dv">10</span>)</span></code></pre></div>
-<p>we can generate a random real number between 5 and 10.</p></li>
-<li><p>In the above program we are generating many such numbers and calculating their average.</p></li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.34
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_uniform.py</code> and examine the average. Then perform the following two modifications:</p>
-<p><strong>Case-1:</strong> Increase the number of trials, to <code>trials = 1000</code>, and examine the average.</p>
-<p><strong>Case-2:</strong> For 1000 trials, generate numbers between 25 and 30 and examine the average</p>
-<p><strong>Submit your program with modifications outlined in Case-2</strong></p>
-<!-- **2.** How does that compare with the average of the numbers 25 and 30? 
+<!-- ## 1.8 Some stats via programming
+Let's now apply our practice with conditionals to solve some problems in probability and statistics. 
 
-**3.** And why the results make sense.  -->
-</div>
-</div>
-<p>Before you head off to Vegas with your Python programs, let’s point out:</p>
-<ul>
-<li>You can use programming to explore ideas in probability and statistics, as well as to solve real problems.</li>
-<li>It is an exciting way to learn statistics that we will have more to say about later.</li>
-</ul>
-</section>
-<section id="algorithmic-art" class="level2">
-<h2 class="anchored" data-anchor-id="algorithmic-art">1.9 Algorithmic art</h2>
-<p>Let’s now use what we’ve learned to explore the notion of how computers can be programmed to generate abstract art.</p>
-<p>In our first example, we’ll draw lines from one border of a square to another: <img src="../../../media/units/unit1/module1/artwork.png" class="img-fluid"></p>
-<p>Let’s describe the main idea via some pseudocode:</p>
-<ul>
-<li><p>In a loop we’ll generate:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>Set up an initial x1,y1 <span class="kw">and</span> x2,y2</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> ...</span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    Pick a random color</span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>    Draw a line <span class="im">from</span> x1,y1, y2,y2</span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>    Make the current endpoint the start of the <span class="bu">next</span> line:</span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>    x1 <span class="op">=</span> x2</span>
-<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> y2</span>
-<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>    Pick a random border</span>
-<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>    Now pick a new random point on the <span class="bu">next</span> border</span></code></pre></div></li>
-<li><p>When we pick a border, we’ll need to figure out the coordinates.</p></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.35
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Download <a href="../../../media/units/unit1/module1/conditional_art.py" download=""><strong>conditional_art.py</strong></a> and <a href="../../../media/useful/drawtool.py" download=""><strong>drawtool.py</strong></a>. Then do the following:</p>
-<ol type="1">
-<li><p>Try it out and then examine the code to confirm that it mirrors the pseudocode.</p></li>
-<li><p>Try another value of n, i.e., n = 1000. You should get an image like the one below.</p></li>
-</ol>
-<p><img src="../../../media/units/unit1/module1/Conditional_art1_2.png" class="img-fluid"></p>
-<ol start="3" type="1">
-<li><p>Change the options for your randomly chosen colors. Use <code>colors = ['c','m','y','k']</code> and the value of n = 1000.</p></li>
-<li><p>Submit your program with the modifcations suggested in point #3. <!-- 
-to improve the result? Does it look good with just two colors? Next, starting with Kandinsky, find an example of abstract art that you think might be considered an analogue in the history of art. There is nothing to submit in this exercise. --></p></li>
-</ol>
-</div>
-</div>
-<p>Next, we’ll explore an interesting question:</p>
-<ul>
-<li>Think of random art as one end of a spectrum.</li>
-<li>And highly-structured geometry as generated by an algorithm at the other end.</li>
-<li>The question: can we adjust a “knob” that will let us generate a mix? And is that more aesthetic?</li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.36
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Download <a href="../../../media/units/unit1/module1/conditional_art2.py" download=""><strong>conditional_art2.py</strong></a>. Run the program and then do the following:</p>
-<p><strong>Case-1:</strong> Change the value of the <code>structure</code> parameter, (between 0 and 1). For example, change 0.9 to 0.1.</p>
-<p><strong>Case-2:</strong> Assign the <code>structure</code> parameter a value 0.5 and change the value of n to 100.</p>
-<p><strong>Submit your program with the modifications outlined in Case-2</strong></p>
-<!-- Is there a value that provides an aesthetic mix? Try different n. Make changes to the code. -->
-</div>
-</div>
-</section>
-<section id="when-things-go-wrong" class="level2">
-<h2 class="anchored" data-anchor-id="when-things-go-wrong">1.10 When things go wrong</h2>
-<p>In each of the exercises below, first try to identify the error just by reading through the program. Then type up the program to confirm and, after that, fix the error.</p>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.37
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> y</span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is less than y'</span>)</span></code></pre></div>
-<p>Identify and fix the error in <code>my_error1.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.38
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">!&lt;</span> y:</span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'x is not less than y'</span>)</span></code></pre></div>
-<p>Identify and fix the error in <code>my_error2.py</code>.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 1.40
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">2.5</span></span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="co"># See whether a lies between 0 to 1, or 1 to 2, </span></span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or something else</span></span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (a <span class="op">&gt;</span> <span class="dv">0</span>) <span class="kw">and</span> (a <span class="op">&lt;</span> <span class="dv">1</span>):</span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'between 0 and 1'</span>)</span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="cf">if</span> (a <span class="op">&gt;</span> <span class="dv">1</span>) <span class="kw">and</span> (a <span class="op">&lt;</span> <span class="dv">2</span>):</span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'between 1 and 2'</span>)</span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'something else'</span>)</span></code></pre></div>
-<p>Identify and fix the error in <code>my_error3.py</code>.</p>
-</div>
-</div>
+For example: Suppose I toss a coin 4 times and observe the face that's up. What is the probability that I get all "tails" (i.e., not one toss shows "heads").
+
+Let's do this in steps.
+
+First, let's write a program to toss a coin 4 times
+```python
+import random
+
+coin = ['heads', 'tails']
+for i in range(4):
+    toss = random.choice(coin)
+    print(toss)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.28
+
+Type up the above in `my_cointosses.py` and run it a few times to see what you get.
+
+Submit your program.
+:::
+
+:::{.callout-note}
+- We have made a list of strings:
+    
+    ```python
+    coin = ['heads', 'tails']
+    ```
+- Python has a useful way to randomly select an element in a list:
+
+    ```python
+    toss = random.choice(coin)
+    ```
+- Alternatively, we could have written:
+
+    ```python
+    toss = random.choice(['heads','tails'])
+    ```
+and avoided defining `coin`.
+:::
+
+Next, instead of printing the results, let's count the number of heads observed:
+```python
+import random
+
+count = 0
+for i in range(4):
+    toss = random.choice(['heads', 'tails'])
+    if toss == 'heads':
+        count = count + 1
+
+print('Number of heads', count)
+```
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.29
+
+Type up the above in `my_cointosses2.py` and run it a few times to see what you get.
+
+Submit your program.
+:::
+
+:::{.callout-note}
+Observe how the string that's randomly selected from the list is compared against 'heads':
+```python
+if toss == 'heads':
+    count = count + 1
+```
+:::
+
+Next, what we need to do is repeat the 4-coin toss many times:
+
+- Suppose we call 4-coin tosses a single <em>trial</em>.
+- If we ran a single trial and obtained 1 heads (count=1), could we conclude that the probability of getting all-4-tails is zero?
+- What we need to do is run a large number of trials and record how many of them result in 4-tails.
+- We'll use the term "success" to identify a trial in which we get all 4-tails.
+- Let's examine the code:
+```python
+import random
+
+trials = 10
+successes = 0
+for i in range(trials):
+    # Count number of heads in 4 tosses:
+    count = 0
+    for i in range(4):
+        toss = random.choice(['heads', 'tails'])
+        if toss == 'heads':
+            count = count + 1
+
+    # If the count is zero, that's a success
+    if count == 0:
+        successes += 1
+
+# Ratio of successes to trials:
+probability = successes / trials
+print('probability =', probability)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.30
+
+Type up the above in `my_cointosses3.py` and run it a few times to see what you get. 
+Then do the following: 
+
+1. Increase the number of trials to 10000 and examine the output. 
+Note: The theoretical answer is 0.0625 (approximately a 6% chance that there's no heads in 4 tosses).
+2. Submit your program with modification outlined in point #1.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.31
+
+Use the same program `my_cointosses3.py` as a starting point and write up a program `my_cointosses4.py` to run 10000 trials in the following experiment: 
+
+- Toss a coin 10 times and record a success if you get an equal number of heads and tails.
+
+- Hint: To accomplish this, you have to change the parameter in the `range()` function in the nested-for-loop.
+:::
+
+Now let's solve a problem with the other favorite manner of generating chance: dice
+
+We'll roll two dice and add the numbers that are face up. We want to ask: what are the chances we get sum of 7 (when added up)?
+
+Here's the program:
+```python
+import random
+
+possible_outcomes = [1,2,3,4,5,6]
+trials = 100000
+successes = 0
+for i in range(trials):
+    roll1 = random.choice(possible_outcomes)
+    roll2 = random.choice(possible_outcomes)
+    if roll1 + roll2 == 7:
+        successes += 1
+
+probability = successes / trials
+print('probability =', probability)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.33
+
+Type up the above in `my_dice.py` and examine the output. 
+Then do the following and examine the probability in each output: 
+
+- Run the program for the sum of the values of the dice being 12, i.e., roll1 + roll2 = 12
+- Run the program for the sum of the values of the dice being 2, i.e., roll1 + roll2 = 2 
+- Submit your program for roll1 + roll2 = 7
+
+:::
+
+Let's also look at how one can use Python to randomly generate real numbers, for example:
+```python
+import random
+
+trials = 100
+total = 0
+
+for i in range(trials):
+    x = random.uniform(5, 10)
+    print(x)
+    total += x
+
+print('mean =', total/trials)
+```
+
+:::{.callout-note}
+- By using 
+
+    ```python
+    x = random.uniform(5, 10)
+    ```
+we can generate a random real number between 5 and 10.
+
+- In the above program we are generating many such numbers and calculating their average.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.34
+
+Type up the above in `my_uniform.py` and examine the average. 
+Then perform the following two modifications:
+
+**Case-1:** Increase the number of trials, to `trials = 1000`, and examine the average.
+
+**Case-2:** For 1000 trials, generate numbers between 25 and 30 and examine the average
+
+**Submit your program with modifications outlined in Case-2**
+
+:::
+
+Before you head off to Vegas with your Python programs, let's point out:
+
+- You can use programming to explore ideas in probability and statistics, as well as to solve real problems.
+- It is an exciting way to learn statistics that we will have more to say about later.
+
+## 1.9 Algorithmic art
+Let's now use what we've learned to explore the notion of how computers can be programmed to generate abstract art.
+
+In our first example, we'll draw lines from one border of a square to another:
+![](../../../media/units/unit1/module1/artwork.png)
+
+Let's describe the main idea via some pseudocode:
+
+- In a loop we'll generate:
+
+    ```python
+    Set up an initial x1,y1 and x2,y2
+    for i in ...
+        Pick a random color
+        Draw a line from x1,y1, y2,y2
+        Make the current endpoint the start of the next line:
+        x1 = x2
+        y1 = y2
+        Pick a random border
+        Now pick a new random point on the next border
+    ```
+- When we pick a border, we'll need to figure out the coordinates.
+
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.35
+
+Download <a href="../../../media/units/unit1/module1/conditional_art.py" download>**conditional_art.py**</a> and <a href="../../../media/useful/drawtool.py" download>**drawtool.py**</a>. Then do the following:
+
+1. Try it out and then examine the code to confirm that it mirrors the pseudocode. 
+
+2. Try another value of n, i.e., n = 1000. You should get an image like the one below.
+
+![](../../../media/units/unit1/module1/Conditional_art1_2.png)
+
+3. Change the options for your randomly chosen colors. Use `colors = ['c','m','y','k']` and the value of n = 1000.
+
+4. Submit your program with the modifcations suggested in point #3. 
+:::
+
+
+Next, we'll explore an interesting question:
+
+- Think of random art as one end of a spectrum.
+- And highly-structured geometry as generated by an algorithm at the other end.
+- The question: can we adjust a "knob" that will let us generate a mix? And is that more aesthetic?
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.36
+
+Download <a href="../../../media/units/unit1/module1/conditional_art2.py" download>**conditional_art2.py**</a>. Run the program and then do the following: 
+
+**Case-1:** Change the value of the `structure` parameter, (between 0 and 1). For example, change 0.9 to 0.1. 
+
+**Case-2:** Assign the `structure` parameter a value 0.5 and change the value of n to 100.  
+
+**Submit your program with the modifications outlined in Case-2**
+
+:::
+
+## 1.10 When things go wrong
+In each of the exercises below, first try to identify the error just by reading through the program. Then type up the program to confirm and, after that, fix the error.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.37
+
+```python
+x = 5
+y = 6
+if x < y
+    print('x is less than y')
+```
+Identify and fix the error in `my_error1.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.38
+
+```python
+x = 6
+y = 5
+if x !< y:
+    print('x is not less than y')
+```
+Identify and fix the error in `my_error2.py`.
+:::
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 1.40
+
+```python
+a = 2.5
+
+# See whether a lies between 0 to 1, or 1 to 2, 
+# or something else
+if (a > 0) and (a < 1):
+    print('between 0 and 1')
+else if (a > 1) and (a < 2):
+    print('between 1 and 2')
+else:
+    print('something else')
+```
+Identify and fix the error in `my_error3.py`.
+::: -->
 <!-- <br>
 [Previous Module: **Module 1.0**](./module1.0.qmd){.button .prev} [Next Module: **Module 1.2**](./module1.2.qmd){.button .next} -->
 

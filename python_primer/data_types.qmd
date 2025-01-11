@@ -97,18 +97,18 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
             desc here
         </td>
         <td>
-            <a href="./unit1/modules/module1.qmd">Module 2 </a>
+            <a href="./unit2/modules/module1.qmd">Module 2 </a>
         </td>
     </tr>
-    <tr class="table-secondary">
+    <!-- <tr class="table-secondary">
       <th scope="row">Next steps in Python</th>
         <td>
             desc here
         </td>
         <td>
-            <a href="./unit1/modules/module2.qmd">Module 3 </a>
+            <a href="./unit2/modules/module2.qmd">Module 3 </a>
         </td>
-    </tr>
+    </tr> -->
   </tbody>
 </table>
 

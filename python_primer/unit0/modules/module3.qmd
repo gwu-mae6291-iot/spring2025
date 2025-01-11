@@ -37,7 +37,7 @@ By the end of this module, for simple HelloWorld-like programs, you will be able
 - Identify and correct syntax errors related to above objectives.
 - Distinguish between syntax errors and debugging.
 
-:::{.callout-tip}
+<!-- :::{.callout-tip}
 [**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
 [**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
@@ -47,7 +47,7 @@ By the end of this module, for simple HelloWorld-like programs, you will be able
 [**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
 
 [**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-:::
+::: -->
 
 ## 3.0 An example 
 
@@ -198,8 +198,8 @@ Let's now use a slightly fictionalized way to explain the <em>action</em> of thi
     - In this case, there's no other code and the program completes.
 
 
-###### **3.5 Video**
-{{< video ../../../media/units/unit0/module3/u0-mod3.5.mp4 aspect-ratio='21x9' >}}
+<!-- ###### **3.5 Video**
+{{< video ../../../media/units/unit0/module3/u0-mod3.5.mp4 aspect-ratio='21x9' >}} -->
 
 ## 3.1 Variations
 To explore for-loops further, we'll look at some variations of the basic for-loop:
@@ -269,8 +269,8 @@ In `count_odd_up.py`, write a loop to print the odd numbers from 1 to 25 (thus, 
 In `count_even_down.py`, write a loop to print the even numbers from 24 down to 2 (inclusive of 24 and 2).
 :::
 
-###### **3.9 Video** 
-{{< video ../../../media/units/unit0/module3/u0-mod3.9.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **3.9 Video** 
+{{< video ../../../media/units/unit0/module3/u0-mod3.9.mp4 aspect-ratio="21x9" >}} -->
 
 ## 3.2 Nested for-loops
 We'll start by writing a program to print a little number triangle like this:
@@ -356,8 +356,8 @@ for j in range(2, 5):      # j iterates from 2 to 4
         print(j, end='')
     print()    
 ```
-###### **3.12 Video** 
-{{< video ../../../media/units/unit0/module3/u0-mod3.12.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **3.12 Video** 
+{{< video ../../../media/units/unit0/module3/u0-mod3.12.mp4 aspect-ratio="21x9" >}} -->
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 3.13
@@ -378,7 +378,7 @@ Let's review what we learned above:
 - Another way to say it: a <em>nested for-loop</em> has one for-loop inside another.
 - We will use <em>nesting</em> in other contexts as well, when one structure is placed inside another.
 
-## 3.3 Tracing through a program in detail
+<!-- ## 3.3 Tracing through a program in detail
 We'll now look at an example of how to execute a program "by hand". That is, how to <em>trace</em> a program's execution by painstakingly following its execution step-by-step.
 
 At first this will appear tedious, but it is <em><b>critical</b></em> to a firm understanding of how programs execute, and eventually to your own writing of programs.
@@ -502,7 +502,6 @@ Programs with nested loops can get complicated and challenging. The ultimate goa
 
 You are to only submit the working program `my_forloop_trace.py`. The tracing table need not be submitted.
 
-<!-- First, trace through the values of i and j by hand and try to figure out what gets printed. Do this painstakingly for each possible value of i and j, remembering that i is now the name of the outerloop variable. You can use the shorter “table” format. See [**this PDF for the above program**](../../../media/units/unit0/module3/TracingExample.pdf)  Then edit, compile and execute the above program in `my_forloop_trace.py`. Discuss the program with your TA if you are encountering any errors or for any questions. --> 
 :::
 
 ###### **3.15 Video** 
@@ -839,7 +838,7 @@ What to keep in mind:
 
 :::{.callout-warning}
 Before proceeding with Module 4 you would need to install `matplotlib` library. Follow these guides to learn about how to install packages in Thonny on a [**Mac**](../guides/thonny-mac-matplotlib.qmd) or [**Windows**](../guides/thonny-win-matplotlib.qmd) computer.
-:::
+::: -->
 
 <!-- <br>
 [Previous Module: **Module 0.2**](./module0.2.qmd){.button .prev} [Next Module: **Module 0.4**](./module0.4.qmd){.button .next} -->

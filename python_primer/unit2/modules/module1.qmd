@@ -623,7 +623,7 @@ print(counters)
 <!-- - In  `my_stopwords2.py`, write code that uses a dictionary to compare the relative occurrence of stopwords in `alice.txt` and `darwin.txt`. In particular, we'd like to know: what percentage of the stopword occurence can be attributed to 'the', what percentage to 'and', and so on. For `alice.txt` the output should look  <a href="../../../media/units/unit2/module2.1/alice_output.txt" download>**like this**</a> (not necessarily in the same order) using the string formatting from the previous section. In your module pdf, compare the outputs for the two texts: do the stopwords occur with similar relative frequencies across the two texts? -->
 :::
 
-## 1.3 Advanced topic: global variables 
+<!-- ## 1.3 Advanced topic: global variables 
 Suppose we have the following application:
 
 - We prompt the user to enter the parameters (the coordinates of the center, and radius) of circle that needs to be drawn.
@@ -833,7 +833,7 @@ the output should be:
 
 - **Submit your program `my_circles.py`.**
     - We are only looking for a working program i.e., `my_circles.py`.
-:::
+::: -->
 
 ## 1.4 Multiple files
 Large Python applications consists of tens of thousands of lines of code.

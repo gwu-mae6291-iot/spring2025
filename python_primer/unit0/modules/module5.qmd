@@ -31,7 +31,7 @@ By the end of this module, for simple HelloWorld-like programs, you will be able
 - Identify some syntax errors related to characters and strings.
 - Have some stress relieving fun after that long integer module.
 
-:::{.callout-tip}
+<!-- :::{.callout-tip}
 [**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
 [**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
@@ -41,7 +41,7 @@ By the end of this module, for simple HelloWorld-like programs, you will be able
 [**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
 
 [**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-:::
+::: -->
 
 ## 5.0 Strings
 About strings:
@@ -205,8 +205,8 @@ print('A pangram must have all ' + str(k) + ' letters')
 Type up the above in `my_string_example5.py` to see if the small variation in the earlier program results in an output. Submit your program.
 :::
 
-###### **5.6 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.6.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **5.6 Video**
+{{< video ../../../media/units/unit0/module5/u0-mod5.6.mp4 aspect-ratio="21x9" >}} -->
 
 ## 5.2 Fun with string concatenation
 We will occasionally introduce programs we've written to both simplify your programming and yet allow for interesting examples.
@@ -284,8 +284,8 @@ The .py part is not in the import statement
 Open `wordtool.py` and examine the functions within. Use `wordtool.py` and follow the earlier program, `my_random_sentence.py` to create a program, `my_random_sentence2.py` that generates a longer random sentence. Since you are writing this in the same folder, you won't need to download `wordtool.py` and its data, `wordsWithPOS.txt` again. Submit `my_random_sentence2.py`.
 :::
 
-###### **5.9 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.9.mp4 aspect-ratio="21x9" >}}
+<!-- ###### **5.9 Video**
+{{< video ../../../media/units/unit0/module5/u0-mod5.9.mp4 aspect-ratio="21x9" >}} -->
 
 ## 5.3 Input from the terminal
 Thus far we have printed (output) to the screen but have not taken in any input.
@@ -354,7 +354,7 @@ Improve on the above program by writing your version of a longer conversation `m
 Try out a conversation with a chatbot. For example, one of the earliest chatbots in history was <a href="https://en.wikipedia.org/wiki/ELIZA">Eliza</a>, which <a href="http://www.masswerk.at/elizabot/">you can try out</a>. **There is nothing to submit in this exercise.**
 :::
 
-## 5.4 Strings and for-loops
+<!-- ## 5.4 Strings and for-loops
 Consider this program:
 ```python
 n = 6
@@ -470,7 +470,7 @@ Fix the issue by converting the string that's in `n` and making an integer. Type
 :::
 
 ###### **5.19 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.20.mp4 aspect-ratio="21x9" >}}
+{{< video ../../../media/units/unit0/module5/u0-mod5.20.mp4 aspect-ratio="21x9" >}} -->
 
 ## 5.5 The useful relationship between characters and integers
 Consider these three strings:
@@ -563,7 +563,7 @@ Fix the program, `my_char_example3.py` to print the complete set of english alph
 **Hint: You need to change the stop-condition in the `range()` function.**
 :::
 
-## 5.6 Variable names
+<!-- ## 5.6 Variable names
 Most often, we've been using single letter <em>variable names</em>,
 for example:
 ```python
@@ -930,7 +930,7 @@ feet in ten miles = miles * feet per mile
 print(feet in ten miles)
 ```
 Fix the errors in `error6.py` and submit it.
-:::
+::: -->
 
 <!-- <br>
 [Previous Module: **Module 0.4**](./module0.4.qmd){.button .prev} [Next Module: **Module 0.6**](./module0.6.qmd){.button .next} -->

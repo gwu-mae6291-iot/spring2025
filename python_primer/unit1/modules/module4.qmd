@@ -627,7 +627,7 @@ The `break`-statement in the <em>for-loop</em> exits the <em>for-loop</em> (the 
 - **There is nothing to submit in this exercise.**
 :::
 
-## 4.5 More stats via programming
+<!-- ## 4.5 More stats via programming
 **Consider the following problem:** 
 
 - An experiment consists of flipping three coins.
@@ -707,7 +707,7 @@ print('estimate', estimate)
 
 - **In `my_dierolls.py`, estimate the average number of experiments needed to get two sixes.**
 - **Submit your program, `my_dierolls.py`.** 
-:::
+::: -->
 
 ## 4.6 New topic: reading from a file
 **Very often, data is collected and stored in files, and so it's desirable to learn how write code that plucks data right out of such files.**
@@ -875,7 +875,7 @@ print(lines)
     ```
 :::
 
-## 4.7 Extracting multiple data from each line
+<!-- ## 4.7 Extracting multiple data from each line
 **Consider a data file that looks like this, with three numbers on each line:**
 ```python
 6.0 6.0 9.0
@@ -998,7 +998,6 @@ print(lines)
 
 **Take a moment to <a href="https://gwu-csci1012.github.io/units/unit1/modules/module3.html#a-text-application"> review that section</a>**
 
-<!-- http://localhost:5578/units/unit1/module3/module3.html#finding-the-longest-sentence -->
 **Let's understand the following from the review:**
   
 - To find the longest sentence, we read the whole file into one giant list of sentences.
@@ -1155,7 +1154,6 @@ This time, **we will use a well-known idea from science called a <em>random walk
 
 - **There is nothing to submit in this exercise.**
 
-<!-- Describe what you did in your module pdf and submit a screenshot. -->
 :::
 
 **About random walks (in science):**
@@ -1211,7 +1209,7 @@ while x < 10:
     x = x + 1
 ```
 Identify and fix the error in `my_error3.py`.
-:::
+::: -->
 
 
 </body>
