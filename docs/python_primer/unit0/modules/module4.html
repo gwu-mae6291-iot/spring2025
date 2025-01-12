@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MAE 6291 - Module 4: Integers</title>
+<title>Module 4: Integers – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -73,8 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -119,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -137,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Course policies</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Getting Started</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
@@ -148,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Python Primer</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
@@ -176,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -270,21 +268,6 @@ Warning
 <li>Identify new syntactic elements related to the above.</li>
 </ul>
 <p>And, once we’ve worked with integers, we’ll also do some “number crunching”.</p>
-<!-- :::{.callout-tip}
-[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
-
-[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
-
-[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
-
-[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
-
-[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-::: -->
-<section id="lecture-video-for-for-loop-with-tracing" class="level4">
-<h4 class="anchored" data-anchor-id="lecture-video-for-for-loop-with-tracing"><strong>Lecture video for <code>for-loop</code> with tracing</strong></h4>
-<!--  -->
-</section>
 </section>
 <section id="first-an-analogy" class="level2">
 <h2 class="anchored" data-anchor-id="first-an-analogy">4.0 First, an analogy</h2>
@@ -506,8 +489,6 @@ Tip
 <p>0 is an actual value, and is not “no value” or “nothing”.</p>
 </div>
 </div>
-<!-- ###### **4.7 Video**
- -->
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -532,8 +513,6 @@ Exercise 4.8
 <p>Add some lines of code with the objective of swapping the values in variables i and j. You will need a third variable to be used as a holding place. Thus, without directly assigning the number 5 to j or the number 6 to i, write code using a third variable to achieve the desired swapping of values.</p>
 </div>
 </div>
-<!-- ###### **4.9 Video**
- -->
 </section>
 <section id="integer-operators" class="level2">
 <h2 class="anchored" data-anchor-id="integer-operators">4.2 Integer operators</h2>
@@ -689,8 +668,6 @@ Exercise 4.12
 <p>Use the PEMDAS rule to evaluate mentally or by hand the expression, <code>i*j - i+1*j-1</code> when <code>i = 7</code> and <code>j = 3</code>. Write a Python program <code>my_expression_example1.py</code> to evaluate the expression and print your answer.</p>
 </div>
 </div>
-<!-- ###### **4.13 Video**
- -->
 <!-- ## 4.4 More about expressions and assignment
 The <em>remainder</em> operator:
 
@@ -739,13 +716,6 @@ Can you mentally execute and identify what's printed? Type up the above in `my_e
 - Examples of non-prime numbers: 10 and 15
 - The notion of a prime number may seem like an esoteric topic, suitable for a dinner conversation with mathematicians. But it turns out to have immense practical value: much of cryptography is based on properties of numbers that can be cleanly divided by only two prime numbers. 
 :::
-
-###### **4.16 Video**
-
-
-
-
-
 
 
 
@@ -807,13 +777,6 @@ Review [**Section 3.3**](https://gwu-csci1012.github.io/units/unit0/modules/modu
 
 Submit a working program as `my_expression_example4.py`.
 :::
-
-###### **4.19 Video**
-
-
-
-
-
 
 
 
@@ -899,13 +862,6 @@ As a first step, let's see if we can use a loop to compute a single power of 2:
 Trace the changing values of `p` in the above program using a table in a spreadsheet or a document. It is highly recommended that you complete the tracing exercise using a spreadsheet or a document, though you are not submitting the tracing spreadsheet or document. Write up the above program in `my_powerof2.py` and submit it.
 :::
 
-###### **4.22 Video**
-
-
-
-
-
-
 
 
 - Next, let's look at pseudocode for the sum of powers (our original problem):
@@ -941,14 +897,6 @@ Trace the changing values of `p` in the above program using a table in a spreads
 
 Make a table with columns labeled `k, i, p` and `s` and trace the program, filling in the table step-by-step. It is highly recommended that you complete the tracing exercise using a spreadsheet or a document, though you are not submitting the tracing spreadsheet or document.
 :::
-
-###### **4.24 Video:**
-<div id="video-4.24"></div>
-
-
-
-
-
 
 
 
@@ -990,11 +938,7 @@ s -= i         # Same as s = s - i
 p *= 2         # Same as p = p * 2
 d /= 2         # Same as d = d / 2
 ```
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 4.26
 
-Using shortcut operators discussed above, in `my_sum_powerof2.py` rewrite the example code that computes the sum of the power of 2, as shown in the [**Video 4.24**](./module4.qmd#video-4.24) and [**Exercise 4.25**](./module4.qmd#exercise-4.25).
-:::
 
 ## 4.8 When things go wrong
 As you might imagine, there are many ways to inadvertently create errors.
@@ -1260,10 +1204,6 @@ Exercise 6.3
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
 </div>
 </div>
-<section id="video" class="level6">
-<h6 class="anchored" data-anchor-id="video"><strong>6.4 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video9" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module6/u0-mod6.4.mp4"></video></div>
-</section>
 </section>
 <section id="going-from-reals-to-integers-and-strings" class="level2">
 <h2 class="anchored" data-anchor-id="going-from-reals-to-integers-and-strings">6.1 Going from reals to integers and strings</h2>
@@ -1418,9 +1358,6 @@ Exercise 6.7
 <p>Type up the above in <code>my_string_example.py</code>, including the comments provided and submit your program.</p>
 </div>
 </div>
-<section id="video-1" class="level6">
-<h6 class="anchored" data-anchor-id="video-1"><strong>6.8 Video</strong></h6>
-<div class="quarto-video"><video id="video_shortcode_videojs_video10" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../../media/units/unit0/module6/u0-mod6.8.mp4"></video></div>
 <p>Now, back to real numbers.</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1441,7 +1378,6 @@ Exercise 6.9
 
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1472,6 +1408,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1506,7 +1460,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1794,16 +1752,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>videojs(video_shortcode_videojs_video1);</script>
-<script>videojs(video_shortcode_videojs_video2);</script>
-<script>videojs(video_shortcode_videojs_video3);</script>
-<script>videojs(video_shortcode_videojs_video4);</script>
-<script>videojs(video_shortcode_videojs_video5);</script>
-<script>videojs(video_shortcode_videojs_video6);</script>
-<script>videojs(video_shortcode_videojs_video7);</script>
-<script>videojs(video_shortcode_videojs_video8);</script>
-<script>videojs(video_shortcode_videojs_video9);</script>
-<script>videojs(video_shortcode_videojs_video10);</script>
 
 
 

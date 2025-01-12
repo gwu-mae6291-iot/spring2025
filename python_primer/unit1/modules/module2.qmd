@@ -164,8 +164,7 @@ Submit the following programs in this exercise:
 2. `my_func_example2b.py`
 :::
 
-<!-- ###### **2.4 Video**
-{{< video ../../../media/units/unit1/module1.2/u1-mod2.4.mp4 aspect-ratio="21x9" >}} -->
+
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 2.5
@@ -193,8 +192,6 @@ print_stars(1)
 - Submit your program `my_func_example3.py`.
 :::
 
-<!-- ###### **2.6 Video**
-{{< video ../../../media/units/unit1/module1.2/u1-mod2.6.mp4 aspect-ratio="21x9" >}} -->
 
 ## 2.2 Multiple parameters
 
@@ -263,8 +260,7 @@ print_profit_total(-2, -3)
 - Submit your program `my_func_example4.py`.
 :::
 
-<!-- ###### **2.8 Video**
-{{< video ../../../media/units/unit1/module1.2/u1-mod2.8.mp4 aspect-ratio="21x9" >}} -->
+
 
 ## 2.3 Return values
 So far, we've written methods that <em>take</em> values, do things and print.
@@ -352,8 +348,7 @@ print(result)            # should print 55
 ```
 :::
 
-<!-- ###### **2.11 Video**
-{{< video ../../../media/units/unit1/module1.2/u1-mod2.11.mp4 aspect-ratio="21x9" >}} -->
+
 
 Let's return to our earlier example and use the `padd()` function in different ways:
 ```python
@@ -536,8 +531,7 @@ print(add_bigger_pair(2,1,4))  # Should print 6
 - Submit your program `my_func_example9.py`.
 :::
 
-<!-- ###### **2.16 Video**
-{{< video ../../../media/units/unit1/module1.2/u1-mod2.16.mp4 aspect-ratio="21x9" >}} -->
+
 
 ## 2.5 Parameter and argument names
 Consider this example:
@@ -764,8 +758,7 @@ print(subtract(3, 13))
 **Recommended but not required for submission in this exercise:** As with other tracing exercises this is also optional and in this particular case a bit long, but worth doing because it will help your understanding. Try tracing the execution step-by-step in a separate document.
 :::
 
-<!-- ###### **2.34 Video**
-{{< video ../../../media/units/unit1/module1.2/u1-mod2.34.mp4 aspect-ratio="21x9" >}} -->
+
 
 <!-- ## 2.11 More stats via programming
 Armed with our new ability to work with functions and lists, we will see how easy it is to compute basic statistics with data.
@@ -827,8 +820,7 @@ In `my_stats.py` complete the above so that the <em>span</em> of the data is com
 - Submit your program `my_stats.py`.
 :::
 
-###### **2.37 Video**
-{{< video ../../../media/units/unit1/module1.2/u1-mod2.37.mp4 aspect-ratio="21x9" >}}
+
 
 Next, let's write some (partially complete) code for standard statistics:
 ```python
@@ -991,8 +983,7 @@ Let's point out:
 - Surprisingly, many problems are solvable elegantly and efficiently using recursion.
 - It is possible to do recursion improperly, in which case a program is set up to recurse forever. In this case, Python will give up after too many recursions.
 
-<!-- ###### **2.41 Video**
-{{< video ../../../media/units/unit1/module1.2/u1-mod2.41.mp4 aspect-ratio="21x9" >}}
+
 
 ## 2.13 Inscribed geometric figures as art
 Of course we're going to try and use functions and drawing.

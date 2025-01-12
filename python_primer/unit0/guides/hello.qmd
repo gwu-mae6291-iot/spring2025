@@ -142,16 +142,6 @@ You now have opened Thonny
 :::
 
 
-<!-- ### Step 4 (Option A): Helloworld in Thonny 
-<div id="hello-thonny-mac"></div>
-
-{{< video ../../../media/hello/u0-mod0-mac-thonny.mp4 aspect-ratio="21x9" >}}
-
-
-### Step 4 (Option B): Helloworld in Spyder 
-<div id="hello-spyder-mac"></div>
-
-{{< video ../../../media/hello/u0-mod0-mac-spyder.mp4 aspect-ratio="21x9" >}} -->
 
 
 ### Step 5: Installing Matplotlib (or any package) for Thonny Users
@@ -214,12 +204,11 @@ The following screenshots explain how to open Thonny:
 <!-- ### Step 4 (Option A): Helloworld in Thonny 
 <div id="hello-thonny-win"></div>
 
-{{< video ../../../media/hello/u0-mod0-win-spyder.mp4 aspect-ratio="21x9" >}}
 
 ### Step 4 (Option B): Helloworld in Spyder 
 <div id="hello-spyder-win"></div>
 
-{{< video ../../../media/hello/u0-mod0-win-spyder.mp4 aspect-ratio="21x9" >}} -->
+-->
 
 ### Step 5: Installing Matplotlib for Thonny Users
 <div id="install-matplotlib-win"></div>

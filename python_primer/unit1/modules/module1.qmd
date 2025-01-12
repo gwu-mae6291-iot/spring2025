@@ -231,8 +231,7 @@ Type up the above in `my_ifexample6.py` and run the program to examine the outpu
 <!-- Then try to alter the program without changing the print-statements so that it works in all cases for possible values of x,y, and z. That is, whichever of the above print-statements gets printed correctly reflects the values of x, y and z. -->
 :::
 
-###### **1.7 Video**
-{{< video ../../../media/units/unit1/module1/u1-mod1.7.mp4 aspect-ratio="21x9" >}}
+
 
 ## 1.3 Nested conditionals
 Consider this program:
@@ -398,8 +397,7 @@ In `my_smallest_of_three2.py`, fill in code to identify which of the three varia
 - There is nothing to submit for this exercise.
 :::
 
-###### **1.12 Video**
-{{< video ../../../media/units/unit1/module1/u1-mod1.12.mp4 aspect-ratio="21x9" >}}
+
 
 The counterpart to the <b>and</b> operator is the <b>or</b> operator: 
 ```python
@@ -588,8 +586,7 @@ Use conditionals to print out the absolute difference between the two numbers if
 Submit `my_boolean5.py` with `a = -3` and `b = -4`.
 :::
 
-###### **1.17 Video**
-{{< video ../../../media/units/unit1/module1/u1-mod1.17.mp4 aspect-ratio="21x9" >}}
+
 
 ## 1.5 Conditionals and loops
 Let's write a program to loop through integers and print only  the even numbers:

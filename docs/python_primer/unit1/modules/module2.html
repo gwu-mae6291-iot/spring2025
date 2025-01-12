@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MAE 6291 - Module 2: Functions</title>
+<title>Module 2: Functions – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -73,8 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -119,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -137,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Course policies</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Getting Started</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
@@ -148,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Python Primer</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
@@ -176,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -199,6 +197,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#what-can-you-do-with-parameter-variables" id="toc-what-can-you-do-with-parameter-variables" class="nav-link" data-scroll-target="#what-can-you-do-with-parameter-variables">2.6 What can you do with parameter variables?</a></li>
   <li><a href="#calling-functions-from-functions" id="toc-calling-functions-from-functions" class="nav-link" data-scroll-target="#calling-functions-from-functions">2.10 Calling functions from functions</a></li>
   <li><a href="#a-function-that-calls-itself" id="toc-a-function-that-calls-itself" class="nav-link" data-scroll-target="#a-function-that-calls-itself">2.12 A function that calls itself</a></li>
+  <li><a href="#inscribed-geometric-figures-as-art" id="toc-inscribed-geometric-figures-as-art" class="nav-link" data-scroll-target="#inscribed-geometric-figures-as-art">2.13 Inscribed geometric figures as art</a></li>
+  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">2.14 When things go wrong</a></li>
   </ul>
 </nav>
     </div>
@@ -403,8 +403,6 @@ Exercise 2.3
 </ol>
 </div>
 </div>
-<!-- ###### **2.4 Video**
- -->
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -434,8 +432,6 @@ Exercise 2.5
 </ul>
 </div>
 </div>
-<!-- ###### **2.6 Video**
- -->
 </section>
 <section id="multiple-parameters" class="level2">
 <h2 class="anchored" data-anchor-id="multiple-parameters">2.2 Multiple parameters</h2>
@@ -505,8 +501,6 @@ Exercise 2.7
 </ul>
 </div>
 </div>
-<!-- ###### **2.8 Video**
- -->
 </section>
 <section id="return-values" class="level2">
 <h2 class="anchored" data-anchor-id="return-values">2.3 Return values</h2>
@@ -585,8 +579,6 @@ Exercise 2.10
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)            <span class="co"># should print 55</span></span></code></pre></div>
 </div>
 </div>
-<!-- ###### **2.11 Video**
- -->
 <p>Let’s return to our earlier example and use the <code>padd()</code> function in different ways:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> padd(a, b):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Received values: '</span>, a, b)</span>
@@ -752,8 +744,6 @@ Exercise 2.15
 </ul>
 </div>
 </div>
-<!-- ###### **2.16 Video**
- -->
 </section>
 <section id="parameter-and-argument-names" class="level2">
 <h2 class="anchored" data-anchor-id="parameter-and-argument-names">2.5 Parameter and argument names</h2>
@@ -975,8 +965,6 @@ Exercise 2.33
 <p><strong>Recommended but not required for submission in this exercise:</strong> As with other tracing exercises this is also optional and in this particular case a bit long, but worth doing because it will help your understanding. Try tracing the execution step-by-step in a separate document.</p>
 </div>
 </div>
-<!-- ###### **2.34 Video**
- -->
 <!-- ## 2.11 More stats via programming
 Armed with our new ability to work with functions and lists, we will see how easy it is to compute basic statistics with data.
 
@@ -1036,13 +1024,6 @@ In `my_stats.py` complete the above so that the <em>span</em> of the data is com
 - Execute the program `my_stats.py` and examine the output to check if the <em>span</em> of the data is computed and printed. 
 - Submit your program `my_stats.py`.
 :::
-
-###### **2.37 Video**
-
-
-
-
-
 
 
 
@@ -1203,135 +1184,150 @@ Exercise 2.40
 <li>Surprisingly, many problems are solvable elegantly and efficiently using recursion.</li>
 <li>It is possible to do recursion improperly, in which case a program is set up to recurse forever. In this case, Python will give up after too many recursions.</li>
 </ul>
-<!-- ###### **2.41 Video**
-
-
-
-
-
-
-
-
-## 2.13 Inscribed geometric figures as art
-Of course we're going to try and use functions and drawing.
-
-Consider this program:
-```python
-import math
-from drawtool import DrawTool
-
-dt = DrawTool()
-dt.set_XY_range(-1,1, -1,1)
-dt.set_aspect('equal')
-
-def draw_circle_in_square(side):
-    radius = side/2
-    dt.set_color('r')
-    dt.draw_circle(0,0, radius)
-    return radius
-
-def draw_square_in_circle(radius):
-    side = math.sqrt(2) * radius
-    dt.set_color('b')
-    dt.draw_rectangle(-side/2, -side/2, side, side)
-    return side
-
-side = 1
-dt.draw_rectangle(-side/2, -side/2, side, side)
-
-n = 5
-for i in range(n):
-    radius = draw_circle_in_square(side)
-    side = draw_square_in_circle(radius)
-
-dt.display()
-```
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 2.42
-
-Download <a href="../../../media/useful/drawtool.py" download>**drawtool.py**</a> and <a href="../../../media/units/unit1/module1.2/circle_square.py" download>**circle_square.py**</a> and run the latter to get
-![](../../../media/units/unit1/module1.2/kepler.png)
-
-Then do the following:
-
-- Change n to `n = 20` in the program `circle_square.py`. 
-- Execute the program `circle_square.py`. 
-- Submit your program `circle_square.py` along with `drawtool.py`. 
-
-**Recommended but not required for submission in this exercise:** Perhaps experiment with colors. Try to read the functions and figure out, not so much the calculation, as what they're doing.
-:::
-
-At first, this looks like a simple exercise in geometric art, or a depiction of the "evil eye" but there's more to it:
-
-- Notice the construction:
-    - We start with a square.
-    - Then we <em>inscribe</em> the biggest possible circle that'll fit inside that square.
-    - Now we find the biggest possible square that'll fit inside the recently drawn circle.
-    - Then the square inscribed in <em>that circle</em>, and so on.
-- Instead of just using circles and squares, one can use a square first, then a pentagon, then a hexagon, and so on.
-- The result is something that Kepler worked on a long time ago. See <a href="https://en.wikipedia.org/wiki/Kepler%E2%80%93Bouwkamp_constant">**this article**</a>
-- The historical significance is this:
-    - Ever since the Greeks, polygons and circles have held special significance.
-    - So, something like this had an almost religious significance.
-    - <a href="https://en.wikipedia.org/wiki/Johannes_Kepler">**Kepler**</a> then used a similar idea for solids to expound (an entirely wrong) theory of planetary motion.
-    - To his credit, he realized he was wrong when shown higher quality data (from Tycho Brahe), and used the data to fit ellipses.
-    - This was the beginning of the modern understanding of planetary motion, later mathematically solved by Isaac Newton.
-
-## 2.14 When things go wrong
-In each of the exercises below, first try to identify the error just by reading. Then type up the program to confirm, and after that, fix the error.
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 2.43
-
-```python
-def square_it(x):
-    y = x * x
-
-a = 5
-b = square_it(a)
-print(b)
-```
-Identify and fix the error in `my_error1.py`.
-:::
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 2.44
-
-```python
-def bigger(x,y)
-    if x > y:
-        return x
-    else:
-        return y
-
-print(bigger(4,5))
-```
-Identify and fix the error in `my_error2.py`.
-:::
-
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 2.45
-
-```python
-def find_smallest(A):
-    smallest = 1000
-    for k in A:
-        if k < smallest:
-            smallest = k
-    return smallest
-
-B = [2, 1, 4, 3]
-print(find_smallest(B))
-```
-Does the above program work? What is the reasoning behind the line `smallest = 1000`? What would go wrong if you removed it altogether? Can you create a list (change the data in B) which will cause the function to fail to find the smallest number. Fix the issue in `my_error3.py`.
-::: -->
+</section>
+<section id="inscribed-geometric-figures-as-art" class="level2">
+<h2 class="anchored" data-anchor-id="inscribed-geometric-figures-as-art">2.13 Inscribed geometric figures as art</h2>
+<p>Of course we’re going to try and use functions and drawing.</p>
+<p>Consider this program:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> drawtool <span class="im">import</span> DrawTool</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> DrawTool()</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>dt.set_XY_range(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>dt.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_circle_in_square(side):</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>    radius <span class="op">=</span> side<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>    dt.set_color(<span class="st">'r'</span>)</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>    dt.draw_circle(<span class="dv">0</span>,<span class="dv">0</span>, radius)</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> radius</span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_square_in_circle(radius):</span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>    side <span class="op">=</span> math.sqrt(<span class="dv">2</span>) <span class="op">*</span> radius</span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a>    dt.set_color(<span class="st">'b'</span>)</span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>    dt.draw_rectangle(<span class="op">-</span>side<span class="op">/</span><span class="dv">2</span>, <span class="op">-</span>side<span class="op">/</span><span class="dv">2</span>, side, side)</span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> side</span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a>side <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>dt.draw_rectangle(<span class="op">-</span>side<span class="op">/</span><span class="dv">2</span>, <span class="op">-</span>side<span class="op">/</span><span class="dv">2</span>, side, side)</span>
+<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a>    radius <span class="op">=</span> draw_circle_in_square(side)</span>
+<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a>    side <span class="op">=</span> draw_square_in_circle(radius)</span>
+<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a>dt.display()</span></code></pre></div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.42
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download <a href="../../../media/useful/drawtool.py" download=""><strong>drawtool.py</strong></a> and <a href="../../../media/units/unit1/module1.2/circle_square.py" download=""><strong>circle_square.py</strong></a> and run the latter to get <img src="../../../media/units/unit1/module1.2/kepler.png" class="img-fluid"></p>
+<p>Then do the following:</p>
+<ul>
+<li>Change n to <code>n = 20</code> in the program <code>circle_square.py</code>.</li>
+<li>Execute the program <code>circle_square.py</code>.</li>
+<li>Submit your program <code>circle_square.py</code> along with <code>drawtool.py</code>.</li>
+</ul>
+<p><strong>Recommended but not required for submission in this exercise:</strong> Perhaps experiment with colors. Try to read the functions and figure out, not so much the calculation, as what they’re doing.</p>
+</div>
+</div>
+<p>At first, this looks like a simple exercise in geometric art, or a depiction of the “evil eye” but there’s more to it:</p>
+<ul>
+<li>Notice the construction:
+<ul>
+<li>We start with a square.</li>
+<li>Then we <em>inscribe</em> the biggest possible circle that’ll fit inside that square.</li>
+<li>Now we find the biggest possible square that’ll fit inside the recently drawn circle.</li>
+<li>Then the square inscribed in <em>that circle</em>, and so on.</li>
+</ul></li>
+<li>Instead of just using circles and squares, one can use a square first, then a pentagon, then a hexagon, and so on.</li>
+<li>The result is something that Kepler worked on a long time ago. See <a href="https://en.wikipedia.org/wiki/Kepler%E2%80%93Bouwkamp_constant"><strong>this article</strong></a></li>
+<li>The historical significance is this:
+<ul>
+<li>Ever since the Greeks, polygons and circles have held special significance.</li>
+<li>So, something like this had an almost religious significance.</li>
+<li><a href="https://en.wikipedia.org/wiki/Johannes_Kepler"><strong>Kepler</strong></a> then used a similar idea for solids to expound (an entirely wrong) theory of planetary motion.</li>
+<li>To his credit, he realized he was wrong when shown higher quality data (from Tycho Brahe), and used the data to fit ellipses.</li>
+<li>This was the beginning of the modern understanding of planetary motion, later mathematically solved by Isaac Newton.</li>
+</ul></li>
+</ul>
+</section>
+<section id="when-things-go-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="when-things-go-wrong">2.14 When things go wrong</h2>
+<p>In each of the exercises below, first try to identify the error just by reading. Then type up the program to confirm, and after that, fix the error.</p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.43
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square_it(x):</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">*</span> x</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> square_it(a)</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code></pre></div>
+<p>Identify and fix the error in <code>my_error1.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.44
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bigger(x,y)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">&gt;</span> y:</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> y</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bigger(<span class="dv">4</span>,<span class="dv">5</span>))</span></code></pre></div>
+<p>Identify and fix the error in <code>my_error2.py</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2.45
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_smallest(A):</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>    smallest <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> A:</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> k <span class="op">&lt;</span> smallest:</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>            smallest <span class="op">=</span> k</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> smallest</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>]</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_smallest(B))</span></code></pre></div>
+<p>Does the above program work? What is the reasoning behind the line <code>smallest = 1000</code>? What would go wrong if you removed it altogether? Can you create a list (change the data in B) which will cause the function to fail to find the smallest number. Fix the issue in <code>my_error3.py</code>. ::: –&gt;</p>
 <!-- <br>
 [Previous Module: **Module 1.1**](./module1.1.qmd){.button .prev} [Next Module: **Module 1.3**](./module1.3.qmd){.button .next} -->
 
 
 
 
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1362,6 +1358,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1396,7 +1410,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1684,14 +1702,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>videojs(video_shortcode_videojs_video1);</script>
-<script>videojs(video_shortcode_videojs_video2);</script>
-<script>videojs(video_shortcode_videojs_video3);</script>
-<script>videojs(video_shortcode_videojs_video4);</script>
-<script>videojs(video_shortcode_videojs_video5);</script>
-<script>videojs(video_shortcode_videojs_video6);</script>
-<script>videojs(video_shortcode_videojs_video7);</script>
-<script>videojs(video_shortcode_videojs_video8);</script>
 
 
 

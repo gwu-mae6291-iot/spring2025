@@ -260,8 +260,7 @@ Type up the above in `my_boolean_example2.py`.
     ![](../../../media/units/unit1/module1.3/boolean-or.png)
 
 
-<!-- ###### **3.3 Video**
-{{< video ../../../media/units/unit1/module1.3/u1-mod3.3.mp4 aspect-ratio="21x9" >}} -->
+
 
 ## 3.1 Combining Boolean operators
 Consider
@@ -288,8 +287,7 @@ Type up the above in `my_boolean_example3.py`.
 Draw an expression diagram to work out the result for the second expression (the value of v) above.
 :::
 
-<!-- ###### **3.5 Video**
-{{< video ../../../media/units/unit1/module1.3/u1-mod3.5.mp4 aspect-ratio="21x9" >}} -->
+
 
 Boolean expressions can be constructed with numeric variables and their comparison operators:
 ```python
@@ -756,8 +754,7 @@ print(find_common_prefix('river', 'rivet'))
 :::
 
 
-###### **3.23 Video**
-{{< video ../../../media/units/unit1/module1.3/u1-mod3.23.mp4 aspect-ratio="21x9" >}} -->
+
 
 ## 3.6 Built-in string functions in Python
 Python comes with many useful functions for strings.

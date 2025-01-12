@@ -38,17 +38,7 @@ By the end of this module, for simple programs with real numbers, you will be ab
 - Produce desired output using for-loops and calculations.
 - Identify new syntactic elements related to the above.
 
-:::{.callout-tip}
-[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
-[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
-
-[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
-
-[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
-
-[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-:::
 
 ## 6.0 What are real numbers?
 Let's start with some math facts:
@@ -164,8 +154,6 @@ print(x)
 ```
 :::
 
-###### **6.4 Video**
-{{< video ../../../media/units/unit0/module6/u0-mod6.4.mp4 aspect-ratio="21x9" >}}
 
 ## 6.1 Going from reals to integers and strings
 Consider this program:
@@ -297,8 +285,7 @@ Type up the above in `my_string_example.py`, including the comments provided and
 
 :::
 
-###### **6.8 Video**
-{{< video ../../../media/units/unit0/module6/u0-mod6.8.mp4 aspect-ratio="21x9" >}}
+
 
 Now, back to real numbers.
 
@@ -404,8 +391,7 @@ Zeno's paradox:
     print(total)
     ```
 
-###### **6.13 Video**
-{{< video ../../../media/units/unit0/module6/u0-mod6.13.mp4 aspect-ratio="21x9" >}}
+
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 6.14
@@ -562,8 +548,7 @@ Let's plot the well-known \(\sin\) function.
 Use a scientific calculator (included in every laptop) to calculate the sin values for the 20 input values beginning with 0, 0.5, 1, ... etc .. until 10. Then plot this by hand on paper. There is nothing to submit in this exercise
 :::
 
-###### **6.21 Video**
-{{< video ../../../media/units/unit0/module6/u0-mod6.23.mp4 aspect-ratio="21x9" >}}
+
 
 Let's now do the plotting in code:
 ```python

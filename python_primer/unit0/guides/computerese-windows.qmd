@@ -4,11 +4,7 @@ title: "**Windows**: Instructions for developing computer-usage competency"
 
 _Develop your computerese skills_
 
-###### **Video: Useful info about files**
-{{< video ../../../media/computerese-win/u0-mod0-win-files.mp4 aspect-ratio="21x9" >}}
 
-###### **Video: Useful info about editing**
-{{< video ../../../media/computerese-win/u0-mod0-win-editing.mp4 aspect-ratio="21x9" >}}
 
 Useful screenshots and step-by-step instructions for:
 

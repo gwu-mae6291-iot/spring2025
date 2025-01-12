@@ -31,17 +31,6 @@ By the end of this module, for simple HelloWorld-like programs, you will be able
 - Identify some syntax errors related to characters and strings.
 - Have some stress relieving fun after that long integer module.
 
-<!-- :::{.callout-tip}
-[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
-
-[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
-
-[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
-
-[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
-
-[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-::: -->
 
 ## 5.0 Strings
 About strings:
@@ -205,8 +194,7 @@ print('A pangram must have all ' + str(k) + ' letters')
 Type up the above in `my_string_example5.py` to see if the small variation in the earlier program results in an output. Submit your program.
 :::
 
-<!-- ###### **5.6 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.6.mp4 aspect-ratio="21x9" >}} -->
+
 
 ## 5.2 Fun with string concatenation
 We will occasionally introduce programs we've written to both simplify your programming and yet allow for interesting examples.
@@ -284,8 +272,7 @@ The .py part is not in the import statement
 Open `wordtool.py` and examine the functions within. Use `wordtool.py` and follow the earlier program, `my_random_sentence.py` to create a program, `my_random_sentence2.py` that generates a longer random sentence. Since you are writing this in the same folder, you won't need to download `wordtool.py` and its data, `wordsWithPOS.txt` again. Submit `my_random_sentence2.py`.
 :::
 
-<!-- ###### **5.9 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.9.mp4 aspect-ratio="21x9" >}} -->
+
 
 ## 5.3 Input from the terminal
 Thus far we have printed (output) to the screen but have not taken in any input.
@@ -414,8 +401,6 @@ print('A triangle with base=' + str(n))
 print(s)
 ```
 
-###### **5.15 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.16.mp4 aspect-ratio="21x9" >}}
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 5.16
@@ -469,8 +454,6 @@ print(k)
 Fix the issue by converting the string that's in `n` and making an integer. Type your code in `my_conversion.py`.
 :::
 
-###### **5.19 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.20.mp4 aspect-ratio="21x9" >}} -->
 
 ## 5.5 The useful relationship between characters and integers
 Consider these three strings:
@@ -717,8 +700,7 @@ The program, `my_variable_name4.py` will generate errors since we chose a variab
 Submit `my_variable_name4.py` even though it generates errors.
 :::
 
-###### **5.24 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.25.mp4 aspect-ratio="21x9" >}}
+
 
 
 ## 5.7 A problem solving example
@@ -837,8 +819,7 @@ Type up the above idea `my_count_problem.py`. Then, find another pangram and app
 This can be taken a step further. Instead of typing the pangram in the program itself (as was done above), ask the user to enter it as input. In `my_count_problem2.py`, read a string from the user and print the letter counts. When you test your program, use the pangram you found as input.
 :::
 
-###### **5.28 Video**
-{{< video ../../../media/units/unit0/module5/u0-mod5.29.mp4 aspect-ratio="21x9" >}}
+
 
 Lastly, we'll point out a slightly more elegant way of iterating over the 26 letters:
 

@@ -37,17 +37,7 @@ By the end of this module, for simple HelloWorld-like programs, you will be able
 - Identify and correct syntax errors related to above objectives.
 - Distinguish between syntax errors and debugging.
 
-<!-- :::{.callout-tip}
-[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
-[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
-
-[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
-
-[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
-
-[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-::: -->
 
 ## 3.0 An example 
 
@@ -198,8 +188,6 @@ Let's now use a slightly fictionalized way to explain the <em>action</em> of thi
     - In this case, there's no other code and the program completes.
 
 
-<!-- ###### **3.5 Video**
-{{< video ../../../media/units/unit0/module3/u0-mod3.5.mp4 aspect-ratio='21x9' >}} -->
 
 ## 3.1 Variations
 To explore for-loops further, we'll look at some variations of the basic for-loop:
@@ -269,8 +257,7 @@ In `count_odd_up.py`, write a loop to print the odd numbers from 1 to 25 (thus, 
 In `count_even_down.py`, write a loop to print the even numbers from 24 down to 2 (inclusive of 24 and 2).
 :::
 
-<!-- ###### **3.9 Video** 
-{{< video ../../../media/units/unit0/module3/u0-mod3.9.mp4 aspect-ratio="21x9" >}} -->
+
 
 ## 3.2 Nested for-loops
 We'll start by writing a program to print a little number triangle like this:
@@ -356,8 +343,7 @@ for j in range(2, 5):      # j iterates from 2 to 4
         print(j, end='')
     print()    
 ```
-<!-- ###### **3.12 Video** 
-{{< video ../../../media/units/unit0/module3/u0-mod3.12.mp4 aspect-ratio="21x9" >}} -->
+
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 3.13
@@ -504,8 +490,6 @@ You are to only submit the working program `my_forloop_trace.py`. The tracing ta
 
 :::
 
-###### **3.15 Video** 
-{{< video ../../../media/units/unit0/module3/u0-mod3.15.mp4 aspect-ratio='21x9' >}}
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 3.16
@@ -535,8 +519,6 @@ Use a regular `print` to print everything up to the `b`. Then, use a nested for-
 :::
 
 
-###### **3.18 Video** 
-{{< video ../../../media/units/unit0/module3/u0-mod3.18.mp4 aspect-ratio="21x9" >}}
 
 ## 3.4 Reading and writing
 Let's consider how to <em>read</em> a single for-loop, such as:
@@ -594,8 +576,7 @@ for i in range(1, 11, 2):
 What does it print? Try to figure this out by mental execution first. Then, type it up, compile and execute to confirm, writing your code in `my_execution_exercise.py`.
 :::
 
-###### **3.21 Video** 
-{{< video ../../../media/units/unit0/module3/u0-mod3.21.mp4 aspect-ratio="21x9" >}}
+
 
 ## 3.5 When things go wrong
 As code gets more complex, it gets easier to make mistakes, and harder to find them.

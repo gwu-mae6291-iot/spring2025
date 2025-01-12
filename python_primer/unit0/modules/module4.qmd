@@ -46,20 +46,9 @@ By the end of this module, for simple HelloWorld-like programs, you will be able
 
 And, once we've worked with integers, we'll also do some "number crunching".
 
-<!-- :::{.callout-tip}
-[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
-[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
 
-[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
 
-[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
-
-[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-::: -->
-
-#### **Lecture video for `for-loop` with tracing**
-<!-- {{< video ../../../media/units/unit0/module4/Tracing_Demo1_SumOfIntegers.mp4 aspect-ratio="21x9" >}} -->
 
 ## 4.0 First, an analogy
 Suppose we have boxes. Consider the following rules about "boxes":
@@ -230,8 +219,6 @@ print(j)   # j still has 5
 0 is an actual value, and is not "no value" or "nothing".
 :::
 
-<!-- ###### **4.7 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.7.mp4 aspect-ratio="21x9" >}} -->
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 4.8
@@ -253,8 +240,7 @@ print(j)   # should print 5
 Add some lines of code with the objective of swapping the  values in variables i and j. You will need a third variable to be used as a holding place. Thus, without directly assigning the  number 5 to j or the number 6 to i, write code using a third variable to achieve the desired swapping of values.
 :::
 
-<!-- ###### **4.9 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.9.mp4 aspect-ratio="21x9" >}} -->
+
 
 ## 4.2 Integer operators
 Let's examine the familiar <em>arithmetic operators</em> `+, -, *, /`
@@ -388,8 +374,6 @@ The key to working them out is to use <b>extra</b> parentheses in the right way.
 Use the PEMDAS rule to evaluate mentally or by hand the expression,  `i*j - i+1*j-1` when `i = 7` and `j = 3`. Write a Python program `my_expression_example1.py` to evaluate the expression and print your answer.
 :::
 
-<!-- ###### **4.13 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.13.mp4 aspect-ratio="21x9" >}} -->
 
 <!-- ## 4.4 More about expressions and assignment
 The <em>remainder</em> operator:
@@ -440,8 +424,7 @@ Can you mentally execute and identify what's printed? Type up the above in `my_e
 - The notion of a prime number may seem like an esoteric topic, suitable for a dinner conversation with mathematicians. But it turns out to have immense practical value: much of cryptography is based on properties of numbers that can be cleanly divided by only two prime numbers. 
 :::
 
-###### **4.16 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.16.mp4 aspect-ratio="21x9" >}}
+
 
 Now we'll look at a strange (initially) but very useful type of assignment:
 
@@ -502,8 +485,7 @@ Review [**Section 3.3**](https://gwu-csci1012.github.io/units/unit0/modules/modu
 Submit a working program as `my_expression_example4.py`.
 :::
 
-###### **4.19 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.19.mp4 aspect-ratio="21x9" >}}
+
 
 ## 4.5 Problem solving and pseudocode
 Suppose we were given the following problem: <em>write a program to print the first <i>N</i> odd numbers</em>.
@@ -587,8 +569,7 @@ As a first step, let's see if we can use a loop to compute a single power of 2:
 Trace the changing values of `p` in the above program using a table in a spreadsheet or a document. It is highly recommended that you complete the tracing exercise using a spreadsheet or a document, though you are not submitting the tracing spreadsheet or document. Write up the above program in `my_powerof2.py` and submit it.
 :::
 
-###### **4.22 Video**
-{{< video ../../../media/units/unit0/module4/u0-mod4.22.mp4 aspect-ratio="21x9" >}}
+
 
 - Next, let's look at pseudocode for the sum of powers (our original problem):
   ```python
@@ -624,9 +605,7 @@ Trace the changing values of `p` in the above program using a table in a spreads
 Make a table with columns labeled `k, i, p` and `s` and trace the program, filling in the table step-by-step. It is highly recommended that you complete the tracing exercise using a spreadsheet or a document, though you are not submitting the tracing spreadsheet or document.
 :::
 
-###### **4.24 Video:**
-<div id="video-4.24"></div>
-{{< video ../../../media/units/unit0/module4/u0-mod4.24.mp4 aspect-ratio="21x9" >}}
+
 
 <div id="exercise-4.25"></div>
 
@@ -666,11 +645,7 @@ s -= i         # Same as s = s - i
 p *= 2         # Same as p = p * 2
 d /= 2         # Same as d = d / 2
 ```
-:::{.callout-caution appearance="simple" icon=false}
-### Exercise 4.26
 
-Using shortcut operators discussed above, in `my_sum_powerof2.py` rewrite the example code that computes the sum of the power of 2, as shown in the [**Video 4.24**](./module4.qmd#video-4.24) and [**Exercise 4.25**](./module4.qmd#exercise-4.25).
-:::
 
 ## 4.8 When things go wrong
 As you might imagine, there are many ways to inadvertently create errors.
@@ -918,8 +893,7 @@ print(x)
 ```
 :::
 
-###### **6.4 Video**
-{{< video ../../../media/units/unit0/module6/u0-mod6.4.mp4 aspect-ratio="21x9" >}}
+
 
 ## 6.1 Going from reals to integers and strings
 Consider this program:
@@ -1051,8 +1025,7 @@ Type up the above in `my_string_example.py`, including the comments provided and
 
 :::
 
-###### **6.8 Video**
-{{< video ../../../media/units/unit0/module6/u0-mod6.8.mp4 aspect-ratio="21x9" >}}
+
 
 Now, back to real numbers.
 

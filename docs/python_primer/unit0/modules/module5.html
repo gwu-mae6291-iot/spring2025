@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MAE 6291 - Module 5: Strings and Characters</title>
+<title>Module 5: Strings and Characters – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -73,8 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -119,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -137,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Course policies</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Getting Started</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
@@ -148,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Python Primer</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
@@ -176,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -195,7 +193,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#string-concatenation" id="toc-string-concatenation" class="nav-link" data-scroll-target="#string-concatenation">5.1 String concatenation</a></li>
   <li><a href="#fun-with-string-concatenation" id="toc-fun-with-string-concatenation" class="nav-link" data-scroll-target="#fun-with-string-concatenation">5.2 Fun with string concatenation</a></li>
   <li><a href="#input-from-the-terminal" id="toc-input-from-the-terminal" class="nav-link" data-scroll-target="#input-from-the-terminal">5.3 Input from the terminal</a></li>
-  <li><a href="#the-useful-relationship-between-characters-and-integers" id="toc-the-useful-relationship-between-characters-and-integers" class="nav-link" data-scroll-target="#the-useful-relationship-between-characters-and-integers">5.5 The useful relationship between characters and integers</a></li>
   </ul>
 </nav>
     </div>
@@ -246,17 +243,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Identify some syntax errors related to characters and strings.</li>
 <li>Have some stress relieving fun after that long integer module.</li>
 </ul>
-<!-- :::{.callout-tip}
-[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
-
-[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
-
-[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
-
-[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
-
-[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-::: -->
 </section>
 <section id="strings" class="level2">
 <h2 class="anchored" data-anchor-id="strings">5.0 Strings</h2>
@@ -431,8 +417,6 @@ Exercise 5.5
 <p>Type up the above in <code>my_string_example5.py</code> to see if the small variation in the earlier program results in an output. Submit your program.</p>
 </div>
 </div>
-<!-- ###### **5.6 Video**
- -->
 </section>
 <section id="fun-with-string-concatenation" class="level2">
 <h2 class="anchored" data-anchor-id="fun-with-string-concatenation">5.2 Fun with string concatenation</h2>
@@ -520,8 +504,6 @@ Exercise 5.8
 <p>Open <code>wordtool.py</code> and examine the functions within. Use <code>wordtool.py</code> and follow the earlier program, <code>my_random_sentence.py</code> to create a program, <code>my_random_sentence2.py</code> that generates a longer random sentence. Since you are writing this in the same folder, you won’t need to download <code>wordtool.py</code> and its data, <code>wordsWithPOS.txt</code> again. Submit <code>my_random_sentence2.py</code>.</p>
 </div>
 </div>
-<!-- ###### **5.9 Video**
- -->
 </section>
 <section id="input-from-the-terminal" class="level2">
 <h2 class="anchored" data-anchor-id="input-from-the-terminal">5.3 Input from the terminal</h2>
@@ -668,14 +650,6 @@ print('A triangle with base=' + str(n))
 print(s)
 ```
 
-###### **5.15 Video**
-
-
-
-
-
-
-
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 5.16
@@ -729,130 +703,98 @@ print(k)
 Fix the issue by converting the string that's in `n` and making an integer. Type your code in `my_conversion.py`.
 :::
 
-###### **5.19 Video**
- -->
-</section>
-<section id="the-useful-relationship-between-characters-and-integers" class="level2">
-<h2 class="anchored" data-anchor-id="the-useful-relationship-between-characters-and-integers">5.5 The useful relationship between characters and integers</h2>
-<p>Consider these three strings:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="st">'h'</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="st">'$'</span></span></code></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>The strings in variables <code>y</code> and <code>z</code> are fundamentally different from the one in <code>x</code> in that the strings in <code>y</code> and <code>z</code> have only one letter (or symbol) in them.</li>
-<li>We call such a single-letter or single-symbol string a <em>character</em>.</li>
-</ul>
-</div>
-</div>
-<p>There is a special relationship between characters and some integers:</p>
-<ul>
-<li>For example:
-<ul>
-<li>The character ‘a’ is sometimes represented by the integer 97.</li>
-<li>The character ‘b’ is sometimes represented by the integer 98.</li>
-<li>… and there are other examples.</li>
-</ul></li>
-<li>Think of this as a “secret code” maintained by Python, with that associates a number for every letter.</li>
-<li>The technical term for this “secret code” is <em>Ascii code</em>.</li>
-<li>We often use the shorter term “char” instead of “character”.</li>
-<li>So, every char has an Ascii code (pronounced “ass-key”). Who said computer nerds don’t have a sense of humor?</li>
-</ul>
-<p>Consider this program:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>first_letter <span class="op">=</span> <span class="st">'a'</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>last_letter <span class="op">=</span> <span class="st">'z'</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">ord</span>(first_letter)</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(k)</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">ord</span>(last_letter)</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(n)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 5.20
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_char_example.py</code> and submit it.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>We’ve used longer, more descriptive variable names like <code>first_letter</code>.</li>
-<li>We’ll say more about this in a separate section below.</li>
-</ul>
-</div>
-</div>
-<ul>
-<li><p>The <code>ord</code> function takes a char and produces the corresponding Ascii code.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">ord</span>(first_letter)</span></code></pre></div></li>
-</ul>
-<p>Going the other way: from Ascii code to char</p>
-<p>Consider this program:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">97</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="bu">chr</span>(k)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)      <span class="co"># Prints the char 'a'</span></span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 5.21
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_char_example2.py</code>. Try changing the value of the variable, <code>k</code> to 98, 99 and 100 in this program. Run it for each new value of <code>k</code>. Find out what the value of <code>k</code> should be to print the character, ‘z’ (last lowercase letter) and confirm that by running the program.</p>
-<p>Submit the program, <code>my_char_example2.py</code> with the the value of <code>k</code> that prints the character ‘z’.</p>
-</div>
-</div>
-<p>The usefulness of the Ascii code:</p>
-<ul>
-<li><p>The value of knowing the code is that we can <em>iterate</em> over numbers and use that to iterate over letters.</p></li>
-<li><p>For example:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">97</span>, <span class="dv">122</span>):</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="bu">chr</span>(i)</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(s, end<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span></code></pre></div></li>
-<li><p>Inside a computer, it turns out all characters are actually stored as integers, and merely interpreted as characters when the occasion calls for it.</p></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 5.22
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above in <code>my_char_example3.py</code>. It should print the english alphabets. But notice that it may not be printing all the alphabets. What do you need do to print the complete set of english alphabets.</p>
-<p>Fix the program, <code>my_char_example3.py</code> to print the complete set of english alphabets and submit it.</p>
-<p><strong>Hint: You need to change the stop-condition in the <code>range()</code> function.</strong></p>
-</div>
-</div>
+
+## 5.5 The useful relationship between characters and integers
+Consider these three strings:
+```python
+x = 'hello'
+y = 'h'
+z = '$'
+```
+
+:::{.callout-note}
+- The strings in variables `y` and `z` are fundamentally different from the one in `x` in that the strings in `y` and `z` have only one letter (or symbol) in them.
+- We call such a single-letter or single-symbol string a <em>character</em>.
+:::
+
+There is a special relationship between characters and some integers:
+
+- For example:
+    - The character 'a' is sometimes represented by the integer 97.
+    - The character 'b' is sometimes represented by the integer 98.
+    - ... and there are other examples.
+- Think of this as a "secret code" maintained by Python, with that associates a number for every letter.
+- The technical term for this "secret code" is <em>Ascii code</em>.
+- We often use the shorter term "char" instead of "character".
+- So, every char has an Ascii code (pronounced "ass-key"). Who said computer nerds don't have a sense of humor?
+
+Consider this program:
+```python
+first_letter = 'a'
+last_letter = 'z'
+
+k = ord(first_letter)
+print(k)
+
+n = ord(last_letter)
+print(n)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 5.20
+
+Type up the above in `my_char_example.py` and submit it.
+:::
+
+:::{.callout-note}
+- We've used longer, more descriptive variable names like `first_letter`.
+- We'll say more about this in a separate section below.
+:::
+
+- The `ord` function takes a char and produces the corresponding Ascii code.
+  ```python
+  k = ord(first_letter)
+  ```
+
+Going the other way: from Ascii code to char
+
+Consider this program:
+```python
+k = 97
+s = chr(k)
+print(s)      # Prints the char 'a'
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 5.21
+
+Type up the above in `my_char_example2.py`. Try changing the value of the variable, `k` to 98, 99 and 100 in this program. Run it for each new value of `k`. Find out what the value of `k` should be to print the character, 'z' (last lowercase letter) and confirm that by running the program. 
+
+Submit the program, `my_char_example2.py` with the the value of `k` that prints the character 'z'.
+:::
+
+The usefulness of the Ascii code:
+
+- The value of knowing the code is that we can <em>iterate</em> over numbers and use that to iterate over letters.
+- For example:
+  ```python
+  for i in range(97, 122):
+      s = chr(i)
+      print(s, end='')
+  print()
+  ```
+- Inside a computer, it turns out all characters are actually stored as integers, and merely interpreted as characters when the occasion calls for it.
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 5.22
+
+Type up the above in `my_char_example3.py`. It should print the english alphabets. But notice that it may not be printing all the alphabets. What do you need do to print the complete set of english alphabets. 
+
+Fix the program, `my_char_example3.py` to print the complete set of english alphabets and submit it.
+
+**Hint: You need to change the stop-condition in the `range()` function.**
+:::
+
 <!-- ## 5.6 Variable names
 Most often, we've been using single letter <em>variable names</em>,
 for example:
@@ -1007,13 +949,6 @@ The program, `my_variable_name4.py` will generate errors since we chose a variab
 Submit `my_variable_name4.py` even though it generates errors.
 :::
 
-###### **5.24 Video**
-
-
-
-
-
-
 
 
 
@@ -1132,13 +1067,6 @@ Type up the above idea `my_count_problem.py`. Then, find another pangram and app
 
 This can be taken a step further. Instead of typing the pangram in the program itself (as was done above), ask the user to enter it as input. In `my_count_problem2.py`, read a string from the user and print the letter counts. When you test your program, use the pangram you found as input.
 :::
-
-###### **5.28 Video**
-
-
-
-
-
 
 
 
@@ -1269,6 +1197,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1303,7 +1249,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1591,12 +1541,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>videojs(video_shortcode_videojs_video1);</script>
-<script>videojs(video_shortcode_videojs_video2);</script>
-<script>videojs(video_shortcode_videojs_video3);</script>
-<script>videojs(video_shortcode_videojs_video4);</script>
-<script>videojs(video_shortcode_videojs_video5);</script>
-<script>videojs(video_shortcode_videojs_video6);</script>
 
 
 

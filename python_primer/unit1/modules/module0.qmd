@@ -154,8 +154,7 @@ In `my_list4.py`, make a list with the values 1,2,3,4,5,6,7,8,9,10. Then, set up
 ```
 :::
 
-###### **0.5 Video**
-{{< video ../../../media/units/unit1/module0/u1-mod0.5.mp4 aspect-ratio="21x9" >}}
+
 
 ## 0.1 More list examples
 Just as we can add elements to list, so can we remove elements, as in:
@@ -583,8 +582,7 @@ However, it is important for you to complete it on your own to understand the ex
 - Explain to yourself why, in this case, index-iteration is a better choice than content iteration.
 :::
 
-###### **0.17 Video**
-{{< video ../../../media/units/unit1/module0/u1-mod0.19.mp4 aspect-ratio="21x9" >}}
+
 
 ## 0.5 Moving elements around in a list
 Consider a list like:
@@ -981,8 +979,7 @@ Type up the above in `my_function_plot.py` and add code for the second function 
 ![](../../../media/units/unit1/module0/func-exercise.png){width="60%"}
 :::
 
-###### **0.29 Video**
-{{< video ../../../media/units/unit1/module0/u1-mod0.32.mp4 aspect-ratio="21x9" >}}
+
 
 Scale and axes:
 

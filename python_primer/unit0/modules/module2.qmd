@@ -33,17 +33,7 @@ programs, you will be able to:
 - Add numbered comments to show an execution trace.
 - Identify and correct syntax errors related to the above objectives.
 
-<!-- :::{.callout-tip}
-[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
-[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
-
-[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
-
-[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
-
-[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-::: -->
 
 ## 2.0 An example with function calls
 Consider the following program:
@@ -113,8 +103,7 @@ We'll later see examples where some things can go between the parens.
     - Other lines that belong to the function <em>should</em> be indented.
     - There are other forms of indentation that we'll point out as we proceed - they're all <em>important</em>.
 
-<!-- ###### **2.2 Video**
-{{< video ../../../media/units/unit0/module2/u0-mod2.2.mp4 aspect-ratio='21x9' >}} -->
+
 
 :::{.callout-caution appearance="simple" icon=false}
 ### Exercise 2.3
@@ -185,8 +174,7 @@ At which step (which step number) do we execute the last line in `print_big_O`? 
 :::
 
 
-<!-- ###### **2.6 Video**
-{{< video ../../../media/units/unit0/module2/u0-mod2.6.mp4 aspect-ratio='21x9' >}} -->
+
 
 ## 2.1 Calling functions from other functions
 Consider this program:
@@ -233,8 +221,7 @@ Use this idea to rewrite your own animal sound in a file called `my_pet_sound2.p
 Look at the example above. What step number is represented by the question mark (?) next to the second `print_big_O()` inside the `print_two_big_Os()` function? What line in the program represents step 15? Discuss the program to correctly identify “step-15” with your TAs. There is nothing to submit in this exercise.
 :::
 
-<!-- ###### **2.9 Video**
-{{< video ../../../media/units/unit0/module2/u0-mod2.9.mp4 aspect-ratio='21x9' >}} -->
+
 
 - Mental execution:
 - We will use the term <em>mental execution</em> for the above exercise of tracing through the execution without actually compiling and running the program.
@@ -397,8 +384,7 @@ About <em>control-c</em>
 - One such case is to use <em>control-c</em> (control and c together) to terminate the execution of a program.
 - However, to do this, you first need to click into wherever the program is executing. This is typically the output window (where the output appears).
 
-###### **2.14 Video**
-{{< video ../../../media/units/unit0/module2/u0-mod2.14.mp4 aspect-ratio='21x9' >}}
+
 
 ## 2.4 And now for something strange
 
@@ -442,8 +428,7 @@ The term <em>recursion</em> is used when function calls itself:
 
 - In fact, <em>recursion</em> is one of the most powerful computational problem-solving paradigms.
 
-###### **2.17 Video**
-{{< video ../../../media/units/unit0/module2/u0-mod2.17.mp4 aspect-ratio='21x9' >}}
+
 
 ## 2.5 Another reminder about computerese
 How is your computerese coming along? Are you now much more confident with folders, files, zip files and such? What about editing, and saving?

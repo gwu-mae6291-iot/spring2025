@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MAE 6291 - Module 3: Booleans, strings, built-in functions, types</title>
+<title>Module 3: Booleans, strings, built-in functions, types – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -73,8 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -119,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -137,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Course policies</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Getting Started</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
@@ -148,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-primer" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Python Primer</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-python-primer">    
@@ -176,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -196,8 +194,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#using-a-boolean-variable" id="toc-using-a-boolean-variable" class="nav-link" data-scroll-target="#using-a-boolean-variable">3.2 Using a Boolean variable</a></li>
   <li><a href="#returning-a-truefalse-value" id="toc-returning-a-truefalse-value" class="nav-link" data-scroll-target="#returning-a-truefalse-value">3.3 Returning a True/False value</a></li>
   <li><a href="#new-topic-strings-and-slicing" id="toc-new-topic-strings-and-slicing" class="nav-link" data-scroll-target="#new-topic-strings-and-slicing">3.4 New topic: strings and slicing</a></li>
-  <li><a href="#built-in-string-functions-in-python" id="toc-built-in-string-functions-in-python" class="nav-link" data-scroll-target="#built-in-string-functions-in-python">3.6 Built-in string functions in Python</a></li>
-  <li><a href="#the-concept-of-type" id="toc-the-concept-of-type" class="nav-link" data-scroll-target="#the-concept-of-type">3.7 The concept of <code>type</code></a></li>
   <li><a href="#a-different-version-of-print" id="toc-a-different-version-of-print" class="nav-link" data-scroll-target="#a-different-version-of-print">0.7 A different version of print</a></li>
   </ul>
 </nav>
@@ -516,8 +512,6 @@ Exercise 3.2
 <div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> a <span class="kw">or</span> b</span></code></pre></div>
 <p>Because <code>a</code> is now <code>False</code> and <code>b</code> is <code>True</code>, the result in y will be: <img src="../../../media/units/unit1/module1.3/boolean-or.png" class="img-fluid"></p></li>
 </ul>
-<!-- ###### **3.3 Video**
- -->
 </section>
 <section id="combining-boolean-operators" class="level2">
 <h2 class="anchored" data-anchor-id="combining-boolean-operators">3.1 Combining Boolean operators</h2>
@@ -544,8 +538,6 @@ Exercise 3.4
 <p><strong>Recommended but not required for submission in this exercise:</strong> Draw an expression diagram to work out the result for the second expression (the value of v) above.</p>
 </div>
 </div>
-<!-- ###### **3.5 Video**
- -->
 <p>Boolean expressions can be constructed with numeric variables and their comparison operators:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">3</span></span>
@@ -1060,276 +1052,281 @@ print(find_common_prefix('river', 'rivet'))
 :::
 
 
-###### **3.23 Video**
- -->
-</section>
-<section id="built-in-string-functions-in-python" class="level2">
-<h2 class="anchored" data-anchor-id="built-in-string-functions-in-python">3.6 Built-in string functions in Python</h2>
-<p>Python comes with many useful functions for strings.</p>
-<p>Here’s a sample:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="st">'to'</span>,<span class="st">'infinity'</span>,<span class="st">'and'</span>,<span class="st">'beyond'</span>,<span class="st">'and'</span>, <span class="st">'even'</span>,<span class="st">'further'</span>]</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'infinity'</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to uppercase:</span></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.upper())       </span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Count occurrences of the char 'i' in s:</span></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.count(<span class="st">'i'</span>))    </span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Locate which index 'f' first occurs in s:</span></span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.find(<span class="st">'f'</span>))     </span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Occurrences of 'and' in list A:</span></span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A.count(<span class="st">'and'</span>))  </span>
-<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Occurrences of 'i' in 2nd string in list A:</span></span>
-<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A[<span class="dv">1</span>].count(<span class="st">'i'</span>)) </span>
-<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> A[<span class="dv">3</span>].startswith(<span class="st">'be'</span>):</span>
-<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'starts with be'</span>)</span>
-<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="st">'42'</span></span>
-<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.isnumeric())</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.24
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>Type up the above in <code>my_string_functions.py</code>.</p></li>
-<li><p><strong>Submit your program <code>my_string_functions.py</code>.</strong></p></li>
-</ul>
-<p><strong>The following part of the exercise is recommended but not required for submission:</strong></p>
-<p>Examine the output to try and make sense of how the functions worked.</p>
-</div>
-</div>
-<p><strong>Explanation about how some of the string-functions work:</strong></p>
-<ul>
-<li><p>There’s a key difference, for example, between the functions <code>len()</code> and <code>upper()</code>:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">len</span>(s)</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div>
-<ul>
-<li>The function <code>len()</code> is like the ones we’ve been writing ourselves.</li>
-<li>In this case, the string s is given to it as a parameter:</li>
-</ul>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">len</span>(s)</span></code></pre></div>
-<ul>
-<li>But the function <code>upper()</code> is quite different:</li>
-</ul>
-<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div>
-<ul>
-<li>This is, in some sense, <em>attached</em> to the string variable s.</li>
-</ul></li>
-<li><p>The use of the period right after the variable followed by a function is a somewhat advanced topic: <img src="../../../media/units/unit1/module1.3/object-function.png" class="img-fluid"> We’ll just <em>use</em> the feature.</p></li>
-<li><p>The advanced topic is called: <em>objects</em>. <br> (Yes. An ordinary name, but quite an involved topic, it turns out.)</p></li>
-</ul>
-<p><strong>Let’s emphasize one more feature with this snippet of code:</strong></p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.25
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type up the above program in <code>my_string_functions2.py</code>.</p>
-<p><strong>Submit your program <code>my_string_functions2.py</code>.</strong></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>The string assigned to the variable <code>s</code> itself did not change but its uppercase version was returned by the call as shown below.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.upper()</span></code></pre></div></li>
-<li><p>This returns a new string that gets placed into <code>t</code>.</p></li>
-</ul>
-</div>
-</div>
-<p><strong>Let’s continue with the earlier example:</strong></p>
-<ul>
-<li><p>Similar “dot” functions are available for lists too, as in:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> A.count(<span class="st">'and'</span>)</span></code></pre></div>
-<ul>
-<li>This asks the list <code>A</code> to count how many times the string ‘and’ occurs in the list.</li>
-<li>The number that is returned gets stored in <code>k</code>.</li>
-</ul></li>
-<li><p>Notice how we can call a “dot” like function in a string when the string itself is an element of a list:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> A[<span class="dv">1</span>].count(<span class="st">'i'</span>)</span></code></pre></div>
-<ul>
-<li>Here, <code>A[1]</code> is the second string in the list <code>A</code>.</li>
-<li>This happens to be ‘infinity’.</li>
-<li>We’re calling its <code>count()</code>function.</li>
-<li>And giving that function the letter <code>'i'</code> to count.</li>
-<li>It returns a number, which gets stored above in <code>k</code>.</li>
-</ul></li>
-</ul>
-<p><strong>Consider the following partially completed code:</strong></p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_zipcode(A):</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Insert your code here</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="st">'my'</span>,<span class="st">'zip'</span>, <span class="st">'is'</span>, <span class="st">'20052'</span>]</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> get_zipcode(B)</span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(z<span class="op">+</span><span class="dv">1</span>)</span></code></pre></div>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.26
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>Type the above code in <code>my_string_functions3.py</code>.</p></li>
-<li><p>In <code>my_string_functions3.py</code>, note that the fourth string in the list <code>B</code> is a zipcode.</p></li>
-<li><p>In <code>my_string_functions3.py</code>, complete the function above by replace the commented text so that the program returns a the zipcode as a number not a string i.e., the print statement outputs <code>20053</code>.</p></li>
-</ul>
-<p><strong>Submit your program <code>my_string_functions3.py</code>.</strong></p>
-</div>
-</div>
-</section>
-<section id="the-concept-of-type" class="level2">
-<h2 class="anchored" data-anchor-id="the-concept-of-type">3.7 The concept of <code>type</code></h2>
-<p>So far, we’ve seen different kinds of variables:</p>
-<ul>
-<li><p><strong>Integer variables are represented as shown below:</strong></p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">435</span></span></code></pre></div></li>
-<li><p><strong>Floating-point variables for real numbers are represented as shown below:</strong></p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">3.14159</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="fl">2.718</span></span></code></pre></div></li>
-<li><p><strong>String variables are represented as shown below:</strong></p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="st">'hello'</span>    <span class="co"># String with multiple chars</span></span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">'h'</span>        <span class="co"># Single-char string</span></span></code></pre></div></li>
-<li><p><strong>Boolean variables are represented as shown below:</strong></p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="va">True</span></span></code></pre></div></li>
-<li><p><strong>We’ve also seen other kinds of <em>features</em> or “things” in Python such as:</strong></p>
-<ul>
-<li>Reserved words.</li>
-<li>Expressions, whether arithmetic, comparison, or Boolean.</li>
-<li>Lists.</li>
-<li>Functions that we write using <code>def</code>.</li>
-<li>Built-in functions like <code>len()</code>. and <code>print()</code>.</li>
-<li>Control structures like <code>for</code> and <code>if</code> that direct the flow of execution.</li>
-<li>Ways to use existing other code via <code>import</code>’s.</li>
-</ul></li>
-</ul>
-<p><strong>Python programming language has other kinds of “things”:</strong></p>
-<ul>
-<li>One of these is another kind of variable called a <code>complex</code> variable, for advanced math.</li>
-<li>Another kind of “thing” or feature is an <b>object</b> which is a kind of structure that can contain related variables and functions.</li>
-<li>Similarly, there are “things” called <b>generators</b> and <b>iterators</b> (an advanced topic)</li>
-</ul>
-<p><strong>What we want to do here is focus your attention on a concept called <em>type</em>:</strong></p>
-<ul>
-<li><p>At any given moment, a variable is said to have a <b>type</b>.</p></li>
-<li><p>What doeas this mean?</p></li>
-<li><p>What kind of value does it have at the moment? An integer? A string?</p></li>
-<li><p>Consider the following lines of code:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span>      <span class="co"># The type of x is integer</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">4.2</span>     <span class="co"># The type of y is floating point</span></span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="st">'whoa'</span>  <span class="co"># The type of z is string</span></span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="va">False</span>   <span class="co"># The type of b is Boolean</span></span></code></pre></div></li>
-<li><p>One can print the <code>type</code> of a variable as follows:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span>    </span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">4.2</span>   </span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="st">'whoa'</span></span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="va">False</span> </span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(x), <span class="bu">type</span>(y), <span class="bu">type</span>(z), <span class="bu">type</span>(v))</span></code></pre></div></li>
-<li><p><strong>The <code>type</code> information is often itself represention in a special Python feature called a <em>class</em> (intuitively, as in this “class of item”).</strong></p></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.27
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In <code>my_type.py</code>, type up the above program and find out what gets printed.</p>
-<p><strong>Submit your program <code>my_type.py</code>.</strong></p>
-</div>
-</div>
-<p>Thus, we see that:</p>
-<ul>
-<li>A variable that holds <code>42</code> is rightfully an <b>integer variable</b>.</li>
-<li>A number like <code>4.2</code> is a floating-point number (what we’ve also called a real number), and so a variable that holds such a number is a <b>floating-point variable</b>.</li>
-<li>A string variable that holds <code>'whoa'</code> is just that, a <b>string variable</b>.</li>
-<li>And a variable that holds <code>True</code> or <code>False</code> is called a <b>Boolean variable</b>.</li>
-</ul>
-<p><strong>Converting from one <code>type</code> to another:</strong></p>
-<ul>
-<li><p>It is often useful to go from one type to another.</p></li>
-<li><p>We’ve seen an example of going from single-char string to integer, and converting from int to string (and vice-versa).</p></li>
-<li><p>To review, let’s look at a few more examples:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="fl">4.2</span>)</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="bu">float</span>(<span class="dv">42</span>)</span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="bu">str</span>(b)</span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="bu">int</span>(<span class="st">'256'</span>)</span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="bu">ord</span>(<span class="st">'z'</span>)</span>
-<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">chr</span>(<span class="dv">97</span>)</span>
-<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b, c, d, e, f)</span></code></pre></div></li>
-</ul>
-<div class="callout callout-style-simple callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3.28
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Type the above in <code>my_type2.py</code>, to see how it works.</p>
-<p><strong>Submit your program <code>my_type2.py</code>.</strong></p>
-</div>
-</div>
-<p><strong>Types and <em>operators</em>:</strong></p>
-<ul>
-<li><p>Because our keyboards are limited in the number of symbol keys, we need to use some symbols for multiple purposes.</p></li>
-<li><p>The way we see this is when one operator, like <code>+</code>, has different meanings when used with different types:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b         <span class="co"># + for arithmetic</span></span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="st">'world'</span></span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> d <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> e   <span class="co"># + for string concatenation</span></span></code></pre></div></li>
-<li><p>Rather than list all possible uses of all operator symbols, we will introduce additional uses beyond the common case wherever appropriate.</p></li>
-<li><p>Generally, you should be intentional about using operators: you should know what the purpose is.</p></li>
-<li><p>For example, consider:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a <span class="op">*</span> <span class="dv">3</span></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)          <span class="co"># prints 12</span></span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> d <span class="op">*</span> <span class="dv">3</span>         <span class="co"># * for string concatenation</span></span>
-<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(e)          <span class="co"># Prints hellohellohello</span></span></code></pre></div></li>
-</ul>
+
+
+## 3.6 Built-in string functions in Python
+Python comes with many useful functions for strings.
+
+Here's a sample:
+```python
+A = ['to','infinity','and','beyond','and', 'even','further']
+s = 'infinity'
+
+# Convert to uppercase:
+print(s.upper())       
+
+# Count occurrences of the char 'i' in s:
+print(s.count('i'))    
+
+# Locate which index 'f' first occurs in s:
+print(s.find('f'))     
+
+# Occurrences of 'and' in list A:
+print(A.count('and'))  
+
+# Occurrences of 'i' in 2nd string in list A:
+print(A[1].count('i')) 
+
+if A[3].startswith('be'):
+    print('starts with be')
+
+data = '42'
+print(data.isnumeric())
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.24
+- Type up the above in `my_string_functions.py`.
+
+- **Submit your program `my_string_functions.py`.**
+
+**The following part of the exercise is recommended but not required for submission:** 
+
+Examine the output to try and make sense of how the functions worked.
+:::
+
+
+**Explanation about how some of the string-functions work:**
+
+- There's a key difference, for example, between the functions `len()` and `upper()`:
+    
+    ```python
+    s = 'hello'
+    k = len(s)
+    t = s.upper()
+    ```
+    - The function
+        `len()`
+     is like the ones we've been writing ourselves.
+    - In this case, the string s is given to it as a parameter:
+    
+    ```python
+    k = len(s)
+    ```
+    - But the function `upper()` is quite different:
+    
+    ```python
+    t = s.upper()
+    ```
+    - This is, in some sense, <em>attached</em> to the string variable s.
+- The use of the period right after the variable followed by a function is a somewhat advanced topic:
+![](../../../media/units/unit1/module1.3/object-function.png)
+We'll just <em>use</em> the feature.
+- The advanced topic is called: <em>objects</em>.
+  <br> (Yes. An ordinary name, but quite an involved topic, it turns out.)
+
+**Let's emphasize one more feature with this snippet of code:**
+```python
+s = 'hello'
+t = s.upper()
+print(s)
+print(t)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.25
+
+Type up the above program in `my_string_functions2.py`. 
+
+**Submit your program `my_string_functions2.py`.**
+:::
+
+:::{.callout-note}
+- The string assigned to the variable `s` itself did not change but its uppercase version was returned by the call as shown below. 
+    
+    ```python
+    t = s.upper()
+    ```
+- This returns a new string that gets placed into `t`.
+:::
+
+**Let's continue with the earlier example:**
+
+- Similar "dot" functions are available for lists too, as in:
+    
+     ```python
+    k = A.count('and')
+    ```
+    - This asks the list `A` to count how many times the string 'and' occurs in the list.
+    - The number that is returned gets stored in `k`.
+- Notice how we can call a "dot" like function in a string when the string itself is an element of a list:
+    
+    ```python
+    k = A[1].count('i')
+    ```
+    - Here, `A[1]` is the second string in the list `A`.
+    - This happens to be 'infinity'.
+    - We're calling its `count()`function.
+    - And giving that function the letter `'i'` to count.
+    - It returns a number, which gets stored above in `k`.
+
+
+
+**Consider the following partially completed code:**
+```python
+def get_zipcode(A):
+    # Insert your code here
+
+B = ['my','zip', 'is', '20052']
+z = get_zipcode(B)
+print(z+1)
+```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.26
+
+- Type the above code in `my_string_functions3.py`. 
+
+- In `my_string_functions3.py`, note that the fourth string in the list `B` is a zipcode. 
+
+- In `my_string_functions3.py`, complete the function above by replace the commented text so that the program returns a the zipcode as a number not a string i.e., the print statement outputs `20053`.
+
+**Submit your program `my_string_functions3.py`.**
+:::
+
+## 3.7 The concept of `type`
+So far, we've seen different kinds of variables:
+
+- **Integer variables are represented as shown below:**
+
+    ```python
+    a = 100
+    b = 435
+    ```
+- **Floating-point variables for real numbers are represented as shown below:**
+
+    ```python
+    c = 3.14159
+    d = 2.718
+    ```
+- **String variables are represented as shown below:**
+
+    ```python
+    e = 'hello'    # String with multiple chars
+    f = 'h'        # Single-char string
+    ```
+- **Boolean variables are represented as shown below:**
+
+    ```python
+    g = False
+    h = True
+    ```
+- **We've also seen other kinds of <em>features</em> or "things" in Python such as:**
+    - Reserved words.
+    - Expressions, whether arithmetic, comparison, or Boolean.
+    - Lists.
+    - Functions that we write using `def`.
+    - Built-in functions like `len()`. and `print()`.
+    - Control structures like `for` and `if` that direct the flow of execution.
+    - Ways to use existing other code via `import`'s.
+
+**Python programming language has other kinds of "things":**
+
+- One of these is another kind of variable called a `complex` variable, for advanced math.
+- Another kind of "thing" or feature is an <b>object</b> which is a kind of structure that can contain related variables and functions.
+- Similarly, there are "things" called <b>generators</b> and <b>iterators</b> (an advanced topic)
+
+**What we want to do here is focus your attention on a concept called <em>type</em>:**
+
+- At any given moment, a variable is said to have a <b>type</b>.
+- What doeas this mean?
+- What kind of value does it have at the moment? An integer? A string?
+- Consider the following lines of code:
+
+    ```python
+    x = 42      # The type of x is integer
+    y = 4.2     # The type of y is floating point
+    z = 'whoa'  # The type of z is string
+    b = False   # The type of b is Boolean
+    ```
+- One can print the `type` of a variable as follows:
+    
+    ```python
+    x = 42    
+    y = 4.2   
+    z = 'whoa'
+    v = False 
+    print(type(x), type(y), type(z), type(v))
+    ```
+- **The `type` information is often itself represention in a special Python feature called a <em>class</em> (intuitively, as in this "class of item").**
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.27
+
+In `my_type.py`, type up the above program and find out what gets printed.
+
+**Submit your program `my_type.py`.**
+:::
+
+Thus, we see that:
+
+- A variable that holds `42` is rightfully an <b>integer variable</b>.
+- A number like `4.2` is a floating-point number (what we've also called a real number), and so a variable that holds such a number is a <b>floating-point variable</b>.
+- A string variable that holds `'whoa'` is just that, a <b>string variable</b>.
+- And a variable that holds `True` or `False` is called a <b>Boolean variable</b>.
+
+**Converting from one `type` to another:**
+
+- It is often useful to go from one type to another.
+- We've seen an example of going from single-char string to integer, and converting from int to string (and vice-versa).
+- To review, let's look at a few more examples:
+    
+    ```python
+    a = int(4.2)
+    b = float(42)
+    c = str(b)
+    d = int('256')
+    e = ord('z')
+    f = chr(97)
+    print(a, b, c, d, e, f)
+    ```
+
+:::{.callout-caution appearance="simple" icon=false}
+### Exercise 3.28
+
+Type the above in `my_type2.py`, to see how it works.
+
+**Submit your program `my_type2.py`.**
+:::
+
+**Types and <em>operators</em>:**
+
+- Because our keyboards are limited in the number of symbol keys, we need to use some symbols for multiple purposes.
+- The way we see this is when one operator, like `+`, has different meanings when used with different types:
+  
+    ```python
+    a = 3
+    b = 4
+    c = a + b         # + for arithmetic
+
+    d = 'hello'
+    e = 'world'
+    f = d + ' ' + e   # + for string concatenation
+    ```
+- Rather than list all possible uses of all operator symbols, we will introduce additional uses beyond the common case wherever appropriate.
+- Generally, you should be intentional about using operators: you should know what the purpose is.
+- For example, consider:
+  
+    ```python
+    a = 4
+    b = a * 3
+    print(b)          # prints 12
+
+    d = 'hello'
+    e = d * 3         # * for string concatenation
+    print(e)          # Prints hellohellohello
+    ```
+
 <!-- ## 3.8 A text application
 Sometimes we need to go beyond what Python has to offer.
 
@@ -1489,13 +1486,13 @@ if x >= 0 and <= 5:
 <section id="a-different-version-of-print" class="level2">
 <h2 class="anchored" data-anchor-id="a-different-version-of-print">0.7 A different version of print</h2>
 <p>Consider these two variations of using print:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'eat'</span></span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.141</span></span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y))</span>
-<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'eat'</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.141</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y))</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1521,10 +1518,10 @@ Note
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>The first version above uses string concatenation to send one big string to print:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y) )</span></code></pre></div></li>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'I love '</span> <span class="op">+</span> <span class="bu">str</span>(x) <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> s <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> <span class="bu">str</span>(y) )</span></code></pre></div></li>
 <li><p>In the second version, the strings and variables given to print <code>(x, s, y)</code> are separated by commas.</p></li>
 <li><p>Here, print treats the four things as separate entities:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div></li>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I love'</span>, x, s, y)</span></code></pre></div></li>
 <li><p>And it, automatically inserts a space between the different things (that are separated by commas).</p></li>
 <li><p>Note that here, there is no need to convert numbers to strings.</p></li>
 </ul>
@@ -1564,6 +1561,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1598,7 +1613,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1886,9 +1905,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>videojs(video_shortcode_videojs_video1);</script>
-<script>videojs(video_shortcode_videojs_video2);</script>
-<script>videojs(video_shortcode_videojs_video3);</script>
 
 
 

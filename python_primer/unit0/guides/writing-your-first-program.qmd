@@ -49,13 +49,12 @@ Choose between:
 ### Option A: Helloworld in Thonny 
 <div id="hello-thonny-mac"></div>
 
-{{< video ../../../media/hello/u0-mod0-mac-thonny.mp4 aspect-ratio="21x9" >}}
+
 
 
 ### Option B: Helloworld in Spyder 
 <div id="hello-spyder-mac"></div>
 
-{{< video ../../../media/hello/u0-mod0-mac-spyder.mp4 aspect-ratio="21x9" >}}
 
 
 
@@ -63,9 +62,7 @@ Choose between:
 ### Option A: Helloworld in Thonny 
 <div id="hello-thonny-win"></div>
 
-{{< video ../../../media/hello/u0-mod0-win-spyder.mp4 aspect-ratio="21x9" >}}
+
 
 ### Option B: Helloworld in Spyder 
 <div id="hello-spyder-win"></div>
-
-{{< video ../../../media/hello/u0-mod0-win-spyder.mp4 aspect-ratio="21x9" >}}

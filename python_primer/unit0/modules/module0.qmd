@@ -30,17 +30,7 @@ By the end of this module you will be able to:
 - Experince writing a really simple program.
 - Explain the difference between command-line outputs vs GUI for programs.
 
-<!-- :::{.callout-tip}
-[**Instructor's lecture slide deck week 1**](../../additional-resources/insructor-notes/week-1.qmd)
 
-[**Instructor's lecture slide deck week 2**](../../additional-resources/insructor-notes/week-2.qmd)
-
-[**Instructor's lecture slide deck week 3**](../../additional-resources/insructor-notes/week-3.qmd)
-
-[**Instructor's lecture slide deck week 4**](../../additional-resources/insructor-notes/week-4.qmd)
-
-[**Instructor's video lectures week 5**](../../additional-resources/insructor-notes/week-5.qmd)
-::: -->
 
 ### 0.0: Our First Program
 Lets take a look at our first program as it appears in a textbook (like this one):

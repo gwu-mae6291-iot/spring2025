@@ -449,8 +449,7 @@ func2(B)
 
 
 
-###### **4.13 Video**
-{{< video ../../../media/units/unit1/module1.4/u1-mod4.13.mp4 aspect-ratio="21x9" >}}
+
 
 ## 4.3 Using `break` in loops
 **Let's return to our first example of finding the last square that's less than 1000.**

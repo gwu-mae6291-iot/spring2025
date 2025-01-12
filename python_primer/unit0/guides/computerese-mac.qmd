@@ -4,11 +4,6 @@ title: "**Mac**: Instructions for developing computer-usage competency"
 
 _Develop your computerese skills_
 
-###### **Video: Useful info about files**
-{{< video ../../../media/computerese-mac/u0-mod0-mac-files.mp4 aspect-ratio="21x9" >}}
-
-###### **Video: Useful info about editing**
-{{< video ../../../media/computerese-mac/u0-mod0-mac-editing.mp4 aspect-ratio="21x9" >}}
 
 Useful screenshots and step-by-step instructions for:
 
