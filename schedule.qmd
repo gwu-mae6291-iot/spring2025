@@ -114,7 +114,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <li>Overview of computing in IoT</li>
           <li>Differences in Cloud and Fog computing</li>
           <li>What is Edge Computing and Edge Compute device</li>
-          <li>Guest lecture: 
+          <li>Design Thinking Exercise for IoT practioners 
           <!-- **Edge Cloud** by <a href="https://www.seas.gwu.edu/timothy-wood"
           target="_blank">Prof. Tim Wood</a>, CS Department, GWU. <a href="http://faculty.cs.gwu.edu/timwood/" target="_blank">Director of GW Cloud Systems Lab</a> -->
           </li>
@@ -126,7 +126,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <li>Setting up the Edge Lab</li>
           <li>Understanding the Python installation on the Raspberry Pi</li>
           <li>Some basic Python programming constructs</li>
-          <li>First steps in Raspberry Pi programming [Blinking LEDs]</li>
+          <li style="color:black"><strong>First steps in Raspberry Pi programming: Blinking LEDs [Graded Lab Activity]</strong></li>
           <li><strong>No HW assigned in this week</strong></li>
 <!--           <li><a href="https://drive.google.com/drive/folders/1nfW_e6UMP8V1tn20zKAe9_b9Ix1DTEUw?usp=sharing" target="_blank">Lab examples</a></li> 
           <li><a href="https://drive.google.com/drive/folders/14M0NCkRZcFNnOYdubMGOuJn35kvvJhV2?usp=sharing" target="_blank">HW 1 assigned</li>  -->
@@ -144,6 +144,9 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <li style="color:black">Recap of some programming constructs</li>
           <li style="color:black">Using Thonny to blink LEDs</li>
           <li style="color:black">Using bash script to blink LEDs</li>
+          <li>Guest lecture: **Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications**
+         <!-- **Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications** by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a> -->
+          </li>          
           <!-- <li style="color:black"><a href="Week2.qmd" style="color:red;" target="_blank">Week-2 Notes</a></li> -->
         </ul>
       </td>
