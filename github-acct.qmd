@@ -1,0 +1,70 @@
+---
+title: "Create a GitHub account)"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- # Visual Studio Code Installation Guide for Windows -->
+
+## Introduction
+
+This guide will walk you through the process of creating a ``GitHub`` account.
+<!-- VS Code provides a powerful environment for coding and development across various programming languages. -->
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+1. An internet connection.
+2. Completed Git installation and version-check.
+
+## Steps to create a GitHub account
+
+### 1. Type ``https://github.com`` on your browser - Safari is shown in this example.
+- Click on the ``Sign up`` button!
+
+![Sign up](images/create-github-acct/Step0.PNG)
+
+### 2. Enter the email to be associated with your GitHub account
+
+-  Enter your email and click ``Continue``
+
+![Email entry](images/create-github-acct/Step1.PNG)
+
+### 3. Enter your password for your GitHub account
+
+-  Enter your email and click ``Continue``
+
+![Password entry](images/create-github-acct/Step2.PNG)
+
+
+
+## Conclusion
+
+Congratulations! You've successfully created a GitHub account. You are now ready to create a *repo* for collecting your files and collaborate with your peer group. 
+
+![Login page](images/create-github-acct/Step3.PNG)
+
+For more information and documentation on GitHub, visit ``get-started`` page: [https://docs.github.com/en/get-started](https://docs.github.com/en/get-started).
+
+<!-- <br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer> -->

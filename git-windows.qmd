@@ -1,0 +1,105 @@
+---
+title: "Git and GitBash Installation Guide for Windows"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+<!-- # Visual Studio Code Installation Guide for Windows -->
+
+## Introduction
+
+This guide will walk you through the process of installing Git and GitBash, on your Windows computer. 
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+1. A Windows computer.
+2. An internet connection.
+3. Adequate disk space for the installation.
+
+## Installation Steps
+
+### 1. Type ``git bash`` on your search engine - Google is shown in this example.
+
+- Go to the search engine you use on your Windows and search for ``git bash``. 
+- You will find the ``Downloads`` page on the [Git website](https://git-scm.com) 
+- Click on the ``Downloads`` link.
+
+![Click on the ``Downloads`` link](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step0.PNG)
+
+### 2. Another click to follow
+- On the page where you were navigated to, Click on the "Download for Windows". 
+
+![Click on `"Download for Windows"](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step1.PNG)
+
+### 2. Choose the "latest 64-bit version" or one from the "Standalone Installer" on the "Download for Windows" page
+- On the page where you were navigated to 
+   - Click on the link ``Click here to download`` the latest 64-bit version of Git for Windows.
+      - If your windows-computer is relatively new it should be okay to download the 64-bit version or check on your own if your WindowsOS is a 64-bit version before proceeding with the download. Otherwise,
+   - Choose one of the  "Standalone Installer" links to download either the ``32-bit Git for Windows Setup`` or the ``64-bit Git for Windows Setup``.
+
+![Click on `"Download for Windows"](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step2.PNG)
+
+### 3. Run the Installer
+
+- Locate the downloaded installer file (usually in the "Downloads" folder in your Windows computer).
+- Right-click on the installer executable (`.exe`) file.
+
+![Right-click on installer-exe file](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step3.PNG)
+
+- Click on ``Run as administrator`` if you are the administrator on your computer. This step is prefered if you want to get full access to Git-related commands.
+
+![Run as "Administrator"](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step4.PNG)
+
+### 4. Install Git
+
+- You will see the Git Setup Wizard. Click the ``Install`` button to begin the installation.
+
+![License Agreement](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step5.PNG)
+
+- The installation may take some time depending on your connectivity rate, Patience is the key :)
+
+![License Agreement](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step5_1.PNG)
+
+### 5. Complete the tnstallation 
+
+- Select the ``Finish`` button to complete the installation."
+
+![Complete the installation](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step5_2.PNG)
+
+
+
+## Conclusion
+
+Congratulations! You've successfully Git and GitBash for Windows on your Windows computer. This was necessary since Windows computer unlike MacOS or Linux-based computers do not have Git installed. Locate "GitBash" icon in your computer and clikc on it to unleash the power of Git to manage and distribute your programs.
+
+You may be pointed to the release notes as shown in the image below. Feel free to explore the content there.
+
+![Release notes](images/install_gitbash_windows_Git-2.47.0.2-64-bit/GitBash/Step6.PNG)
+
+Happy coding!
+
+
+
+<!-- <br>
+<footer>
+  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2023 All rights reserved</small></small></small></small></p>
+</footer> -->

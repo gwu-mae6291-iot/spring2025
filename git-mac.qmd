@@ -1,0 +1,57 @@
+---
+title: "Git installation-check Guide for macOS"
+format: 
+  html:
+    code-copy: false
+---
+
+<html>
+<head>
+    <style>
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+        }
+    </style>
+</head>
+<body>
+
+
+## Introduction
+
+This guide will take you through the step-by-step process of checking if Git is installed on your Mac.
+
+## Prerequisites
+
+Before you start, make sure you have the following:
+
+1. A macOS computer.
+2. An active internet connection.
+3. Adequate disk space for the installation.
+
+
+## Installation Steps
+
+### 1. Start the ``Terminal`` on your Mac
+Go to ``Spotlight`` and type ``terminal``.
+
+![Click on ``Terminal``](/images/installCheck_git_mac/Step-0.png)
+
+### 2. Check what version of Git is installed on your mac 
+Type the command line as shown in the image to check the installed version of git on your mac. 
+
+![Type the command line as shown](/images/installCheck_git_mac/Step-1.png)
+
+## Conclusion
+Congratulations! You successfully checked the installed version of Git on your macOS system.
+
+For any issues or questions, feel free to seek assistance from your instructor. If Git is not installed on your mac you will need to find instructions on how-to do a ``homebrew`` installation for git. 
+
+<!-- <footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2025 All rights reserved</p>
+</footer> -->

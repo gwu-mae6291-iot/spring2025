@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Code Installation Guide for Windows"
+title: "Create a git repository (also known as a ``git repo``)"
 format: 
   html:
     code-copy: false
@@ -22,110 +22,94 @@ format:
 
 ## Introduction
 
-This guide will walk you through the process of creating a github repo after installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer or Mac computer. 
-
+This guide will walk you through the process of creating a Git repository (or repo) after you successfully created a Github account.
 <!-- VS Code provides a powerful environment for coding and development across various programming languages. -->
+
+:::{.callout-important}
+**Some basic jargon before we start:**
+In Git or GitHub jargon,
+
+- A **repository** or *repo* is a collection of files where your work is stored.
+- A saved change is called a ``commit`` in Git and GitHub.
+- [**Git**](https://en.wikipedia.org/wiki/Git) is a command line software that handles your *repos* and its version control.
+- **GitHub** is a web interface that helps with your *repos* and faciliates collarations with version control.
+- **GitHub** uses **Git** to do everything with *repos*. 
+<!-- [Registration link](https://events.vtools.ieee.org/event/register/437187) -->
+:::
 
 ## Prerequisites
 
 Before you begin, ensure you have the following:
 
-1. A Windows computer.
-2. An internet connection.
-3. Adequate disk space for the installation.
-4. Completed Github account creation.
-4. Completed installation of VS Code.
+1. An internet connection.
+2. Completed Git installation and version-check.
+3. Completed a Github account creation.
 
 ## Steps to create a GitHub repo
 
-### 1. Login to your GitHub account 
+### 1. Login to your GitHub account, locate and click on the ``New`` button
+- Click on ``New`` button!
 
-Visit the official VS Code download page at [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
+![Click on **New** button](images/create-github-repo/Step0.png)
 
-### 2. Choose the Windows Installer
+### 2. Create a new repository
 
-Click on the "Windows" download link to download the Visual Studio Code installer for Windows.
+2.1 Enter a repository name.
 
-![Download VS Code](images/screenshots/vscode-windows/screenshot-1.png)
+2.2 Choose to write a brief description (optional).
 
-### 3. Run the Installer
+2.3 Leave the check-box for "Add a README file" empty. Note: In this example we will create a README in the subsequent steps.
 
-- Locate the downloaded installer file (usually in your "Downloads" folder).
-- Double-click the installer executable (`.exe`) file to run it.
+2.4 Click on ``Create repository``.
 
-![Run Installer](images/screenshots/vscode-windows/screenshot-2.png)
+![Create repository](images/create-github-repo/Step1.png)
 
-### 4. Start the Installation
+### 3. Create a README file
 
-- You will see the VS Code Setup Wizard. Click the "Next" button to begin the installation.
+3.1 First, save some important information for future needs
 
-![License Agreement](images/screenshots/vscode-windows/screenshot-3.png)
+- Click on the ``HTTPS`` tab, copy the url of your repo and save it a separate document.
+- Copy the git-command lines and save them in a separate document.
 
-### 5. Choose Installation Options
+3.2 Next, click on the ``README`` link to start creating a README file
 
-- Select the installation location (the default is usually fine) and click "Next."
+- Note: README files are very important for github repos, especially in a collaboration between users.
 
-![Installation Location](images/screenshots/vscode-windows/screenshot-4.png)
+![Save some important information](images/create-github-repo/Step2.png)
 
-- Choose additional tasks if desired (e.g., adding VS Code to the PATH). Then, click "Next."
+### 4. Review the ``README.md`` file that was initiated in Step-3
 
-![Additional Tasks](images/screenshots/vscode-windows/screenshot-5.png)
+- ``README.md`` file can be edited using *Markdown* language. The ``md`` file extension loosely stands for "Markdown".
+- Learn more about *Markdown* [here](https://en.wikipedia.org/wiki/Markdown) and [here](https://www.markdownguide.org)
+- *Markdown* is a very simple [markup language](https://en.wikipedia.org/wiki/Markup_language) to create a structure and format for documents. Older and similar languages are [TeX](https://en.wikipedia.org/wiki/TeX) and [LaTeX](https://en.wikipedia.org/wiki/LaTeX).  
 
-### 6. Install VS Code
+![Review the **README.md** file](images/create-github-repo/Step3.png)
 
-Click the "Install" button to begin the installation process. This may take a few moments.
+### 5. Edit the ``README.md`` file that was initiated in Step-3
 
-![Install](images/screenshots/vscode-windows/screenshot-6.png)
+5.1 Edit the ``README.md`` as shown in the image below. 
+- Note: The typed text there is in *Markdown* format.
 
-### 7. Launch Visual Studio Code
+5.2 Once done with editing, click on ``Commit changes...`` button. 
+- Note: Github requires files to be committed once changes are made.  
 
-After the installation is complete, you can leave the "Launch Visual Studio Code" option checked and click "Finish."
+![Edit the ``README.md`` file amd ``Commit changes...``](images/create-github-repo/Step4.png)
 
-![Launch VS Code](images/screenshots/vscode-windows/screenshot-7.png)
+### 6. Type a ``Commit message`` and ``Commit changes``
 
-### 8. Customize VS Code (**Optional**)
+- In Git and GitHub, it is very uesful to type up a ``Commit message`` that briefly describes the changes or the saved file. 
+- Click on ``Commit changes`` once done and the ``Commit message`` will be associated with saved or committed file.
 
-Upon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (**Optional**) 
+![``Commit message``and finally ``Commit changes``](images/create-github-repo/Step5.png)
 
-![Customize VS Code](images/screenshots/vscode-windows/screenshot-8.png)
-
-### 9. Open Extensions Tab
-
-On the sidebar click on the Extensions tab.
-
-![Extensions tab](images/screenshots/vscode-windows/screenshot-9.png)
-
-### 10. Search "Python"
-
-In the search bar type "Python" and hit Enter.
-
-![Search Python](images/screenshots/vscode-windows/screenshot-10.png)
-
-### 11. Install Python Extension
-
-On the right panel click on the install button to install the extension.
-
-![Install Python Extension](images/screenshots/vscode-windows/screenshot-12.png)
-
-### 12. Open a New File
-
-From the top-right corner click on the three-bars and open a New File.
-
-![Open New File](images/screenshots/vscode-windows/screenshot-13.png)
-
-### 13. Open a Jupyter Notebook
-
-From the drop down menu, select "Jupyter Notebook" as the file type.
-
-![Open Jupyter Notebook](images/screenshots/vscode-windows/screenshot-14.png)
 
 ## Conclusion
 
-Congratulations! You've successfully installed Visual Studio Code on your Windows computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.
+Congratulations! You've successfully created a new repository or *repo* on Git or GitHub. Your *repo* is now ready for you to use for collecting your committed files and collaborate with your peer group. 
 
-Feel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!
+![Your *repo*](images/create-github-repo/Step6.png)
 
-For more information and documentation on Visual Studio Code, visit [https://code.visualstudio.com/docs](https://code.visualstudio.com/docs).
+For more information and documentation on GitHub, visit [https://docs.github.com/en](https://docs.github.com/en).
 
 <!-- <br>
 <footer>

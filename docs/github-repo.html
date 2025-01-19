@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Visual Studio Code Installation Guide for Windows – MAE 6291</title>
+<title>Create a git repository (also known as a git repo) – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -139,19 +139,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#steps-to-create-a-github-repo" id="toc-steps-to-create-a-github-repo" class="nav-link" data-scroll-target="#steps-to-create-a-github-repo">Steps to create a GitHub repo</a>
   <ul class="collapse">
-  <li><a href="#login-to-your-github-account" id="toc-login-to-your-github-account" class="nav-link" data-scroll-target="#login-to-your-github-account">1. Login to your GitHub account</a></li>
-  <li><a href="#choose-the-windows-installer" id="toc-choose-the-windows-installer" class="nav-link" data-scroll-target="#choose-the-windows-installer">2. Choose the Windows Installer</a></li>
-  <li><a href="#run-the-installer" id="toc-run-the-installer" class="nav-link" data-scroll-target="#run-the-installer">3. Run the Installer</a></li>
-  <li><a href="#start-the-installation" id="toc-start-the-installation" class="nav-link" data-scroll-target="#start-the-installation">4. Start the Installation</a></li>
-  <li><a href="#choose-installation-options" id="toc-choose-installation-options" class="nav-link" data-scroll-target="#choose-installation-options">5. Choose Installation Options</a></li>
-  <li><a href="#install-vs-code" id="toc-install-vs-code" class="nav-link" data-scroll-target="#install-vs-code">6. Install VS Code</a></li>
-  <li><a href="#launch-visual-studio-code" id="toc-launch-visual-studio-code" class="nav-link" data-scroll-target="#launch-visual-studio-code">7. Launch Visual Studio Code</a></li>
-  <li><a href="#customize-vs-code-optional" id="toc-customize-vs-code-optional" class="nav-link" data-scroll-target="#customize-vs-code-optional">8. Customize VS Code (<strong>Optional</strong>)</a></li>
-  <li><a href="#open-extensions-tab" id="toc-open-extensions-tab" class="nav-link" data-scroll-target="#open-extensions-tab">9. Open Extensions Tab</a></li>
-  <li><a href="#search-python" id="toc-search-python" class="nav-link" data-scroll-target="#search-python">10. Search “Python”</a></li>
-  <li><a href="#install-python-extension" id="toc-install-python-extension" class="nav-link" data-scroll-target="#install-python-extension">11. Install Python Extension</a></li>
-  <li><a href="#open-a-new-file" id="toc-open-a-new-file" class="nav-link" data-scroll-target="#open-a-new-file">12. Open a New File</a></li>
-  <li><a href="#open-a-jupyter-notebook" id="toc-open-a-jupyter-notebook" class="nav-link" data-scroll-target="#open-a-jupyter-notebook">13. Open a Jupyter Notebook</a></li>
+  <li><a href="#login-to-your-github-account-locate-and-click-on-the-new-button" id="toc-login-to-your-github-account-locate-and-click-on-the-new-button" class="nav-link" data-scroll-target="#login-to-your-github-account-locate-and-click-on-the-new-button">1. Login to your GitHub account, locate and click on the <code>New</code> button</a></li>
+  <li><a href="#create-a-new-repository" id="toc-create-a-new-repository" class="nav-link" data-scroll-target="#create-a-new-repository">2. Create a new repository</a></li>
+  <li><a href="#create-a-readme-file" id="toc-create-a-readme-file" class="nav-link" data-scroll-target="#create-a-readme-file">3. Create a README file</a></li>
+  <li><a href="#review-the-readme.md-file-that-was-initiated-in-step-3" id="toc-review-the-readme.md-file-that-was-initiated-in-step-3" class="nav-link" data-scroll-target="#review-the-readme.md-file-that-was-initiated-in-step-3">4. Review the <code>README.md</code> file that was initiated in Step-3</a></li>
+  <li><a href="#edit-the-readme.md-file-that-was-initiated-in-step-3" id="toc-edit-the-readme.md-file-that-was-initiated-in-step-3" class="nav-link" data-scroll-target="#edit-the-readme.md-file-that-was-initiated-in-step-3">5. Edit the <code>README.md</code> file that was initiated in Step-3</a></li>
+  <li><a href="#type-a-commit-message-and-commit-changes" id="toc-type-a-commit-message-and-commit-changes" class="nav-link" data-scroll-target="#type-a-commit-message-and-commit-changes">6. Type a <code>Commit message</code> and <code>Commit changes</code></a></li>
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
@@ -162,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Visual Studio Code Installation Guide for Windows</h1>
+<h1 class="title">Create a git repository (also known as a <code>git repo</code>)</h1>
 </div>
 
 
@@ -194,168 +187,131 @@ ul.task-list li input[type="checkbox"] {
 <!-- # Visual Studio Code Installation Guide for Windows -->
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This guide will walk you through the process of creating a github repo after installing Visual Studio Code (VS Code), a popular and versatile code editor, on your Windows computer or Mac computer.</p>
-<!-- VS Code provides a powerful environment for coding and development across various programming languages. -->
+<p>This guide will walk you through the process of creating a Git repository (or repo) after you successfully created a Github account. <!-- VS Code provides a powerful environment for coding and development across various programming languages. --></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Some basic jargon before we start:</strong> In Git or GitHub jargon,</p>
+<ul>
+<li>A <strong>repository</strong> or <em>repo</em> is a collection of files where your work is stored.</li>
+<li>A saved change is called a <code>commit</code> in Git and GitHub.</li>
+<li><a href="https://en.wikipedia.org/wiki/Git"><strong>Git</strong></a> is a command line software that handles your <em>repos</em> and its version control.</li>
+<li><strong>GitHub</strong> is a web interface that helps with your <em>repos</em> and faciliates collarations with version control.</li>
+<li><strong>GitHub</strong> uses <strong>Git</strong> to do everything with <em>repos</em>. <!-- [Registration link](https://events.vtools.ieee.org/event/register/437187) --></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <p>Before you begin, ensure you have the following:</p>
 <ol type="1">
-<li>A Windows computer.</li>
 <li>An internet connection.</li>
-<li>Adequate disk space for the installation.</li>
-<li>Completed Github account creation.</li>
-<li>Completed installation of VS Code.</li>
+<li>Completed Git installation and version-check.</li>
+<li>Completed a Github account creation.</li>
 </ol>
 </section>
 <section id="steps-to-create-a-github-repo" class="level2">
 <h2 class="anchored" data-anchor-id="steps-to-create-a-github-repo">Steps to create a GitHub repo</h2>
-<section id="login-to-your-github-account" class="level3">
-<h3 class="anchored" data-anchor-id="login-to-your-github-account">1. Login to your GitHub account</h3>
-<p>Visit the official VS Code download page at <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>.</p>
-</section>
-<section id="choose-the-windows-installer" class="level3">
-<h3 class="anchored" data-anchor-id="choose-the-windows-installer">2. Choose the Windows Installer</h3>
-<p>Click on the “Windows” download link to download the Visual Studio Code installer for Windows.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-1.png" class="img-fluid figure-img"></p>
-<figcaption>Download VS Code</figcaption>
-</figure>
-</div>
-</section>
-<section id="run-the-installer" class="level3">
-<h3 class="anchored" data-anchor-id="run-the-installer">3. Run the Installer</h3>
+<section id="login-to-your-github-account-locate-and-click-on-the-new-button" class="level3">
+<h3 class="anchored" data-anchor-id="login-to-your-github-account-locate-and-click-on-the-new-button">1. Login to your GitHub account, locate and click on the <code>New</code> button</h3>
 <ul>
-<li>Locate the downloaded installer file (usually in your “Downloads” folder).</li>
-<li>Double-click the installer executable (<code>.exe</code>) file to run it.</li>
+<li>Click on <code>New</code> button!</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-2.png" class="img-fluid figure-img"></p>
-<figcaption>Run Installer</figcaption>
+<p><img src="images/create-github-repo/Step0.png" class="img-fluid figure-img"></p>
+<figcaption>Click on <strong>New</strong> button</figcaption>
 </figure>
 </div>
 </section>
-<section id="start-the-installation" class="level3">
-<h3 class="anchored" data-anchor-id="start-the-installation">4. Start the Installation</h3>
+<section id="create-a-new-repository" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-repository">2. Create a new repository</h3>
+<p>2.1 Enter a repository name.</p>
+<p>2.2 Choose to write a brief description (optional).</p>
+<p>2.3 Leave the check-box for “Add a README file” empty. Note: In this example we will create a README in the subsequent steps.</p>
+<p>2.4 Click on <code>Create repository</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/create-github-repo/Step1.png" class="img-fluid figure-img"></p>
+<figcaption>Create repository</figcaption>
+</figure>
+</div>
+</section>
+<section id="create-a-readme-file" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-readme-file">3. Create a README file</h3>
+<p>3.1 First, save some important information for future needs</p>
 <ul>
-<li>You will see the VS Code Setup Wizard. Click the “Next” button to begin the installation.</li>
+<li>Click on the <code>HTTPS</code> tab, copy the url of your repo and save it a separate document.</li>
+<li>Copy the git-command lines and save them in a separate document.</li>
+</ul>
+<p>3.2 Next, click on the <code>README</code> link to start creating a README file</p>
+<ul>
+<li>Note: README files are very important for github repos, especially in a collaboration between users.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-3.png" class="img-fluid figure-img"></p>
-<figcaption>License Agreement</figcaption>
+<p><img src="images/create-github-repo/Step2.png" class="img-fluid figure-img"></p>
+<figcaption>Save some important information</figcaption>
 </figure>
 </div>
 </section>
-<section id="choose-installation-options" class="level3">
-<h3 class="anchored" data-anchor-id="choose-installation-options">5. Choose Installation Options</h3>
+<section id="review-the-readme.md-file-that-was-initiated-in-step-3" class="level3">
+<h3 class="anchored" data-anchor-id="review-the-readme.md-file-that-was-initiated-in-step-3">4. Review the <code>README.md</code> file that was initiated in Step-3</h3>
 <ul>
-<li>Select the installation location (the default is usually fine) and click “Next.”</li>
+<li><code>README.md</code> file can be edited using <em>Markdown</em> language. The <code>md</code> file extension loosely stands for “Markdown”.</li>
+<li>Learn more about <em>Markdown</em> <a href="https://en.wikipedia.org/wiki/Markdown">here</a> and <a href="https://www.markdownguide.org">here</a></li>
+<li><em>Markdown</em> is a very simple <a href="https://en.wikipedia.org/wiki/Markup_language">markup language</a> to create a structure and format for documents. Older and similar languages are <a href="https://en.wikipedia.org/wiki/TeX">TeX</a> and <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-4.png" class="img-fluid figure-img"></p>
-<figcaption>Installation Location</figcaption>
+<p><img src="images/create-github-repo/Step3.png" class="img-fluid figure-img"></p>
+<figcaption>Review the <strong>README.md</strong> file</figcaption>
 </figure>
 </div>
+</section>
+<section id="edit-the-readme.md-file-that-was-initiated-in-step-3" class="level3">
+<h3 class="anchored" data-anchor-id="edit-the-readme.md-file-that-was-initiated-in-step-3">5. Edit the <code>README.md</code> file that was initiated in Step-3</h3>
+<p>5.1 Edit the <code>README.md</code> as shown in the image below. - Note: The typed text there is in <em>Markdown</em> format.</p>
+<p>5.2 Once done with editing, click on <code>Commit changes...</code> button. - Note: Github requires files to be committed once changes are made.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/create-github-repo/Step4.png" class="img-fluid figure-img"></p>
+<figcaption>Edit the <code>README.md</code> file amd <code>Commit changes...</code></figcaption>
+</figure>
+</div>
+</section>
+<section id="type-a-commit-message-and-commit-changes" class="level3">
+<h3 class="anchored" data-anchor-id="type-a-commit-message-and-commit-changes">6. Type a <code>Commit message</code> and <code>Commit changes</code></h3>
 <ul>
-<li>Choose additional tasks if desired (e.g., adding VS Code to the PATH). Then, click “Next.”</li>
+<li>In Git and GitHub, it is very uesful to type up a <code>Commit message</code> that briefly describes the changes or the saved file.</li>
+<li>Click on <code>Commit changes</code> once done and the <code>Commit message</code> will be associated with saved or committed file.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-5.png" class="img-fluid figure-img"></p>
-<figcaption>Additional Tasks</figcaption>
-</figure>
-</div>
-</section>
-<section id="install-vs-code" class="level3">
-<h3 class="anchored" data-anchor-id="install-vs-code">6. Install VS Code</h3>
-<p>Click the “Install” button to begin the installation process. This may take a few moments.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-6.png" class="img-fluid figure-img"></p>
-<figcaption>Install</figcaption>
-</figure>
-</div>
-</section>
-<section id="launch-visual-studio-code" class="level3">
-<h3 class="anchored" data-anchor-id="launch-visual-studio-code">7. Launch Visual Studio Code</h3>
-<p>After the installation is complete, you can leave the “Launch Visual Studio Code” option checked and click “Finish.”</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-7.png" class="img-fluid figure-img"></p>
-<figcaption>Launch VS Code</figcaption>
-</figure>
-</div>
-</section>
-<section id="customize-vs-code-optional" class="level3">
-<h3 class="anchored" data-anchor-id="customize-vs-code-optional">8. Customize VS Code (<strong>Optional</strong>)</h3>
-<p>Upon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (<strong>Optional</strong>)</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-8.png" class="img-fluid figure-img"></p>
-<figcaption>Customize VS Code</figcaption>
-</figure>
-</div>
-</section>
-<section id="open-extensions-tab" class="level3">
-<h3 class="anchored" data-anchor-id="open-extensions-tab">9. Open Extensions Tab</h3>
-<p>On the sidebar click on the Extensions tab.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-9.png" class="img-fluid figure-img"></p>
-<figcaption>Extensions tab</figcaption>
-</figure>
-</div>
-</section>
-<section id="search-python" class="level3">
-<h3 class="anchored" data-anchor-id="search-python">10. Search “Python”</h3>
-<p>In the search bar type “Python” and hit Enter.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-10.png" class="img-fluid figure-img"></p>
-<figcaption>Search Python</figcaption>
-</figure>
-</div>
-</section>
-<section id="install-python-extension" class="level3">
-<h3 class="anchored" data-anchor-id="install-python-extension">11. Install Python Extension</h3>
-<p>On the right panel click on the install button to install the extension.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-12.png" class="img-fluid figure-img"></p>
-<figcaption>Install Python Extension</figcaption>
-</figure>
-</div>
-</section>
-<section id="open-a-new-file" class="level3">
-<h3 class="anchored" data-anchor-id="open-a-new-file">12. Open a New File</h3>
-<p>From the top-right corner click on the three-bars and open a New File.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-13.png" class="img-fluid figure-img"></p>
-<figcaption>Open New File</figcaption>
-</figure>
-</div>
-</section>
-<section id="open-a-jupyter-notebook" class="level3">
-<h3 class="anchored" data-anchor-id="open-a-jupyter-notebook">13. Open a Jupyter Notebook</h3>
-<p>From the drop down menu, select “Jupyter Notebook” as the file type.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshots/vscode-windows/screenshot-14.png" class="img-fluid figure-img"></p>
-<figcaption>Open Jupyter Notebook</figcaption>
+<p><img src="images/create-github-repo/Step5.png" class="img-fluid figure-img"></p>
+<figcaption><code>Commit message</code>and finally <code>Commit changes</code></figcaption>
 </figure>
 </div>
 </section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Congratulations! You’ve successfully installed Visual Studio Code on your Windows computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.</p>
-<p>Feel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!</p>
-<p>For more information and documentation on Visual Studio Code, visit <a href="https://code.visualstudio.com/docs">https://code.visualstudio.com/docs</a>.</p>
+<p>Congratulations! You’ve successfully created a new repository or <em>repo</em> on Git or GitHub. Your <em>repo</em> is now ready for you to use for collecting your committed files and collaborate with your peer group.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/create-github-repo/Step6.png" class="img-fluid figure-img"></p>
+<figcaption>Your <em>repo</em></figcaption>
+</figure>
+</div>
+<p>For more information and documentation on GitHub, visit <a href="https://docs.github.com/en">https://docs.github.com/en</a>.</p>
 <!-- <br>
 <footer>
   <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
