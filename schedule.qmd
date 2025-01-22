@@ -111,11 +111,12 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row">Week 1 [01/22/2025]</th>
       <td>
         <ul>
+          <li>Sneak preview at the edge-lab and hardware</li>
+          <li>What is the thing in IoT?</li>
           <li>Overview of computing in IoT</li>
-          <li>Differences in Cloud and Fog computing</li>
-          <li>What is Edge Computing and Edge Compute device</li>
-          <li>Design Thinking Exercise for IoT practioners 
-          <!-- **Edge Cloud** by <a href="https://www.seas.gwu.edu/timothy-wood"
+          <li>What is Edge Computing?</li>
+          <!-- <li>Design Thinking Exercise for IoT practioners 
+         **Edge Cloud** by <a href="https://www.seas.gwu.edu/timothy-wood"
           target="_blank">Prof. Tim Wood</a>, CS Department, GWU. <a href="http://faculty.cs.gwu.edu/timwood/" target="_blank">Director of GW Cloud Systems Lab</a> -->
           </li>
           <!-- <li><a href="Week1.qmd" style="color:red;" target="_blank">Week-1 Notes</a></li> -->
@@ -140,6 +141,8 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row" style="color:black">Week 2 [01/29/2025]</th>
       <td>
         <ul>
+          <li>Differences in Cloud and Fog computing</li>
+          <li>What is Edge Computing and Edge Compute device</li>
           <li style="color:black">Python skelton code for running programs on the Raspberry Pi</li>
           <li style="color:black">Recap of some programming constructs</li>
           <li style="color:black">Using Thonny to blink LEDs</li>

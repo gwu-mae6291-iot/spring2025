@@ -112,11 +112,14 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row">Week 1 [01/22/2025]</th>
       <td>
         <ul>
+          <li>Sneak preview at the edge-lab and hardware</li>
+          <li>What is the thing in IoT?</li>
           <li>Overview of computing in IoT</li>
-          <li>Differences in Cloud and Fog computing</li>
-          <li>What is Edge Computing and Edge Compute device</li>
-          <li>Guest lecture: 
-          <!-- **Edge Cloud** by <a href="https://www.seas.gwu.edu/timothy-wood"
+          <li>What is Edge Computing?</li>
+
+                    <li>Guest lecture: 
+          <!-- <li>Overview of computing in IoT</li>
+          **Edge Cloud** by <a href="https://www.seas.gwu.edu/timothy-wood"
           target="_blank">Prof. Tim Wood</a>, CS Department, GWU. <a href="http://faculty.cs.gwu.edu/timwood/" target="_blank">Director of GW Cloud Systems Lab</a> -->
           </li>
           <!-- <li><a href="Week1.qmd" style="color:red;" target="_blank">Week-1 Notes</a></li> -->
@@ -141,6 +144,8 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row" style="color:black">Week 2 [01/29/2025]</th>
       <td>
         <ul>
+          <li>What is Edge Computing and Edge Compute device</li>
+          <li>Differences in Cloud and Fog computing</li>
           <li style="color:black">Python skelton code for running programs on the Raspberry Pi</li>
           <li style="color:black">Recap of some programming constructs</li>
           <li style="color:black">Using Thonny to blink LEDs</li>
@@ -227,8 +232,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row">Week 5 [02/19/2025]</th>
       <td>
         <ul>
-          <li>Guest lecture: **Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications** by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li> 
-          <li>IoT Taxonomy - 5 layer model</li>         
+          <li>Guest lecture: **Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications** by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li>      
           <!-- <li>Guest lecture: <a href="Week5-Mohammad-PrattWhitney-Lecture.qmd" target="_blank">**Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications**</a> by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li>  -->
           <li>IoT Taxonomy - 5 layer model</li>     
           <li>Service-oriented model of IoT</li>
