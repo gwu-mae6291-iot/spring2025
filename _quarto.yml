@@ -31,10 +31,10 @@ website:
             
           # - href:  ./python_primer/unt0/modules/module0.qmd
       - schedule.qmd
-      # - text: "Notes"
-      #   menu: 
-      #     - href: Week0.qmd 
-      #     - href: Week1.qmd
+      - text: "Notes"
+        menu: 
+          - href: Week0.qmd 
+          # - href: Week1.qmd
       #     - href: Week2.qmd
       #     - href: Spring2023_MidtermProjects.qmd
       #     - href: Week3.qmd
