@@ -32,13 +32,13 @@ ThingSpeak is a platform for the Internet of Things (IoT) that allows you to col
 
 Navigate to the MathWorks [sign-in page](https://thingspeak.com/login?skipSSOCheck=true). You'll see a form similar to this:
 
-![MathWorks sign-in page](images/screenshots/thingspeak/image1.png)
+![MathWorks sign-in page](screenshots/thingspeak/image1.png)
 
 ### 2. Create a New Account
 
 If you don't have an account, click on "Create one!" to start the account creation process.
 
-![Create MathWorks Account](images/screenshots/thingspeak/image2.png)
+![Create MathWorks Account](screenshots/thingspeak/image2.png)
 
 Fill in your details, including your email address, location, and name.
 
@@ -46,7 +46,7 @@ Fill in your details, including your email address, location, and name.
 
 For accessing your organization's MATLAB license, it's recommended to use your work or university email.
 
-![Personal Email Detected](images/screenshots/thingspeak/image3.png)
+![Personal Email Detected](screenshots/thingspeak/image3.png)
 
 If you entered a personal email, you may see a warning. You can choose to continue with your personal email or switch to a work/university email.
 
@@ -54,7 +54,7 @@ If you entered a personal email, you may see a warning. You can choose to contin
 
 After submitting your information, you'll need to verify your email address.
 
-![Verify Your MathWorks Account](images/screenshots/thingspeak/image4.png)
+![Verify Your MathWorks Account](screenshots/thingspeak/image4.png)
 
 Check your inbox for the verification email and follow the link provided.
 
@@ -62,7 +62,7 @@ Check your inbox for the verification email and follow the link provided.
 
 The final step is to set up your password and accept the terms of service.
 
-![Finish Your Profile](images/screenshots/thingspeak/image5.png)
+![Finish Your Profile](screenshots/thingspeak/image5.png)
 
 Create a strong password and make sure to check the box to accept the Online Services Agreement.
 

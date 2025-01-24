@@ -80,7 +80,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <li>IoT and Edge Computing [The big pictures]</li> 
           <li>Introduction to Raspberry Pi and Python programming</li> 
           <li>Course overview, policies and deliverables</li>
-          <!-- <li><a href="Week0.qmd" style="color:red;" target="_blank">Week-0 Notes</a></li> -->
+          <li><a href="Week0.qmd" style="color:red;" target="_blank">Week-0 Notes</a></li>
         </ul>  
       </td>
       <td>
@@ -119,7 +119,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
          **Edge Cloud** by <a href="https://www.seas.gwu.edu/timothy-wood"
           target="_blank">Prof. Tim Wood</a>, CS Department, GWU. <a href="http://faculty.cs.gwu.edu/timwood/" target="_blank">Director of GW Cloud Systems Lab</a> -->
           </li>
-          <!-- <li><a href="Week1.qmd" style="color:red;" target="_blank">Week-1 Notes</a></li> -->
+          <li><a href="Week1.qmd" style="color:red;" target="_blank">Week-1 Notes</a></li>
         </ul>
       </td>
       <td>
@@ -141,8 +141,8 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row" style="color:black">Week 2 [01/29/2025]</th>
       <td>
         <ul>
-          <li>Differences in Cloud and Fog computing</li>
           <li>What is Edge Computing and Edge Compute device</li>
+          <li>Differences in Cloud and Fog computing</li>
           <li style="color:black">Python skelton code for running programs on the Raspberry Pi</li>
           <li style="color:black">Recap of some programming constructs</li>
           <li style="color:black">Using Thonny to blink LEDs</li>
@@ -236,8 +236,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <!-- **Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications** by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a> -->
           </li> 
           <li>IoT Taxonomy - 5 layer model</li>         
-          <!-- <li>Guest lecture: <a href="Week5-Mohammad-PrattWhitney-Lecture.qmd" target="_blank">**Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications**</a> by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li>  -->
-          <li>IoT Taxonomy - 5 layer model</li>     
+          <!-- <li>Guest lecture: <a href="Week5-Mohammad-PrattWhitney-Lecture.qmd" target="_blank">**Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications**</a> by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li>  -->    
           <li>Service-oriented model of IoT</li>
           <li> Discussion of Midterm Projects and setting course for updates and reporting</li>
           <!-- <li style="color:black"><a href="Week5.qmd" style="color:red;" target="_blank">Week-5 Notes</a></li> -->
@@ -253,15 +252,23 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <!--- <td>Column content</td> -->
     </tr>
 
-
 <tr class="table-secondary">
+      <th scope="row"> Week 7 [03/05/2025]</th>
+      <td colspan="2" style="text-align: center">Midterm Project Presentations, Report and Live Demos due.
+      <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Midterm project report template [Download Template]</a>
+      </strong>
+      <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
+      </strong></td>
+      <!--- <td>Column content</td> -->
+    </tr>
+<!-- <tr class="table-secondary">
       <th scope="row"> [03/11/2025]</th>
       <td colspan="2" style="text-align: center">Midterm Project Report due.
       <!-- <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Midterm project report template [Download Template]</a></strong> -->
       <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
       </strong></td>
       <!--- <td>Column content</td> -->
-    </tr>
+    </tr> -->
 <tr class="table-secondary">
       <th scope="row"> [03/10/2025] to [03/15/2025]</th>
       <td colspan="2" style="text-align: center">Spring Break. 

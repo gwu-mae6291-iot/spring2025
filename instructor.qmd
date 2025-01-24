@@ -25,12 +25,12 @@ format:
 Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.
 :::
 
-## Dr. Kartik Bulusu (Instructor)
+## Prof. Kartik Bulusu (Instructor)
 <table>
   <tr>
     <td width="70%">
       
-      Dr. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC. 
+      Prof. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC. 
       
       He designed taught a cross-disciplinary course titled, Internet of Things (IoT) and Edge Computing with applications in cyber-physical systems and speech processing. 
       
@@ -44,14 +44,33 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
     <td width="30%">
       <img src="images/20160728facultybioshots_SEAS_GWU_40.jpg" alt="instructor" style="object-fit:contain width:400px;height:400px; margin-right: 10px;" />
       <!-- <small>Dr. Kartik Bulusu</small><br> -->
-      **Campus Address:** SEH 3640 
+      **Campus Address:** SEH 4614 
 
       **Email:** bulusu at email dot gwu dot edu
     </td>
   </tr>
 </table>
 
+## Vishnu Gajula (Teaching Assistant)
 
+<table>
+  <tr>
+    <td width="70%">
+      
+      I am Vishnu Gajula, a dedicated engineering professional currently pursuing my second master's degree in Industrial/Engineering Management at The George Washington University. My academic journey began with a Bachelor of Technology in Mechanical Engineering, followed by a Master of Technology in Manufacturing Systems from Jawaharlal Nehru Technological University in Hyderabad, India.
+
+      Throughout my career, I've gained valuable industry experience through roles at JSW Steel USA as an Industrial Mechanical Engineer and JSW Cements as a Cement Production Logistics Intern, where I developed expertise in project coordination, design optimization, and process improvement. My technical skills include 3D modeling, prototyping, CNC machining, and various engineering software tools. Currently, as a Graduate Assistant at The George Washington University, I am expanding my capabilities by combining technical expertise with management skills, preparing myself for future leadership roles in the engineering industry.
+    </td>
+
+    <td width="30%">
+      <img src="images/TA_VishnuGajula.jpg" alt="instructor" style="object-fit:contain width:250px;height:250px; margin-right: 10px;" />
+      <!-- <small>Vishnu Gajula</small><br> -->
+      <!-- **Campus Address:** SEH 4614  -->
+
+      **Email:** vishnu dot gajula at email dot gwu dot edu
+    </td>
+  </tr>
+</table>
 
 <!-- 
 ### Instructor contacts

@@ -4,7 +4,7 @@ project:
 
 website:
   title: "MAE 6291"
-  page-footer: "The material is sourced from **Prof. Kartik Bulusu's** course titled, 'Introduction to IoT and Edge computng applications'. <br> This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br> Contact: [Kartik Bulusu](mailto:bulusu@email.gwu.edu)<br> &copy; 2024 All rights reserved"
+  page-footer: "The material is sourced from **Prof. Kartik Bulusu's** course titled, 'Introduction to IoT and Edge computng applications'. <br> This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br> Contact: [Kartik Bulusu](mailto:bulusu@email.gwu.edu)<br> &copy; 2025 All rights reserved"
   navbar:
     background: primary
     foreground: secondary
@@ -53,7 +53,7 @@ website:
             
           # - href:  ./python_primer/unt0/modules/module0.qmd
       # - weekly.qmd
-      # - resources.qmd
+      - resources.qmd
       - instructor.qmd
 
 format:
