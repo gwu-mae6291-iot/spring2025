@@ -22,14 +22,14 @@ website:
         menu: 
           - href: Week0.qmd 
           - href: Week1.qmd
-      #     - href: Week2.qmd
+          - href: Week2.qmd
+          - href: Week2-Mohammad-PrattWhitney-Lecture.qmd
       #     - href: Spring2023_MidtermProjects.qmd
       #     - href: Week3.qmd
       #     - href: Week3-Parmer-Lecture.qmd
       #     - href: Week4.qmd
       #     - href: Week4-Yanamadala-ARM-Lecture.qmd
       #     - href: Week5.qmd
-      #     - href: Week5-Mohammad-PrattWhitney-Lecture.qmd
       #     - href: Week6.qmd          
       #     - href: Week6-Nuzum-Innovyz-Lecture.qmd
       #     - href: Week9.qmd    
