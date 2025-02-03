@@ -40,7 +40,6 @@ Course registation is NOW OPEN.
 </style>
 
 ### Course and Contact Information
-
 <div class="row">
  <div class="column">
 - **MAE 6291:** Introduction to IoT and Edge Computing Applications 
@@ -55,8 +54,7 @@ Course registation is NOW OPEN.
 
  <div class="column">
  <!-- "float: left;  -->
- <img src="/images/noun-iot-2623360_copy.png" alt="IoT icon" style="object-fit:contain width:250px;height:250px; margin-right: 10px;" /><br>
- <p><font size="1">IoT by Alla Zaleuska from <a href="https://thenounproject.com/browse/icons/term/iot/" target="_blank" title="IoT Icons">Noun Project</a></font></p>
+ <img src="/images/WorldCloudApplicationAreas.png" alt="IoT icon" style="object-fit:contain width:250px;height:250px; margin-right: 10px;" /><br>
  </div>
 </div>
 
@@ -72,9 +70,20 @@ git clone https://github.com/gwu-mae6291-iot/spring2025_codes.git
 ```
 
 ### Course description
-The Internet of Things (IoT) is perceived as a collection of smart, connected devices with the ability to send and receive data; “internet” encapsulates connectivity and “things” are devices (electronic or mechanical) that can be adapted toward connectivity. 
+<div class="row">
+ <div class="column">
+ The Internet of Things (IoT) is perceived as a collection of smart, connected devices with the ability to send and receive data; “internet” encapsulates connectivity and “things” are devices (electronic or mechanical) that can be adapted toward connectivity. 
 
-There is an alternative perception of IoT, as a design methodology that facilitates interoperability and connectivity of physical systems. Edge computing is a strategy for localized analysis of data, ahead in the pipeline of powerful data center- or cloud-based post-processing.  
+ There is an alternative perception of IoT, as a design methodology that facilitates interoperability and connectivity of physical systems. Edge computing is a strategy for localized analysis of data, ahead in the pipeline of powerful data center- or cloud-based post-processing.  
+ </div>
+ <div class="column">
+ <!-- "float: left;  -->
+ <img src="/images/noun-iot-2623360_copy.png" alt="IoT icon" style="object-fit:contain width:250px;height:250px; margin-right: 10px;" /><br>
+ <p><font size="1">IoT by Alla Zaleuska from <a href="https://thenounproject.com/browse/icons/term/iot/" target="_blank" title="IoT Icons">Noun Project</a></font></p>
+ </div>
+</div>
+
+<br>
 
 This course explores these aspects of IoT framework and expands it with edge computing ideology via practical and hands-on exposure. Students will be exposed to the IoT framework using a variety of sensors, IoT automation and connectivity in **$\mu$-labs** (micro-labs) that incorporate the Raspberry Pi (single-board computer) and Python programming language. 
 
