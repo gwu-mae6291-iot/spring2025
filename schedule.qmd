@@ -170,11 +170,8 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
         <ul>
           <li>IoT Architecture and Ecosystem</li>
           <li>Layers in IoT systems - 3 level  layer model</li>
-          <li>Sensors</li>
-          <li>Sensor types and considerations</li>
-          <li>Understanding Analog and Digital Signals</li>
-          <li>Fundamentals of signal visualization in time and frequency</li> 
           <li style="color:black">Using bash script to blink LEDs</li> 
+          <li><a href="Week3.qmd" style="color:red;" target="_blank">Week-3 Notes</a></li>
           <!-- <li>Guest lecture: 
           **Designing high-confidence embedded systems -- operating systems and real-time**</a> by <a href="https://faculty.cs.gwu.edu/gparmer/"
           target="_blank">Prof. Gabe Parmer</a>, CS Department, GWU. <a href="https://composite.seas.gwu.edu" target="_blank">Parmer Lab</a> 
@@ -190,9 +187,6 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <li style="color:black">Installing Python GPIO packages with pip in [venv]</li>
           <li style="color:black"><strong>Blinking LEDs on boot [Graded Lab Activity]</strong></li>  
           <li>In-class Raspberry Pi Lab (Ultrasound sensors)</li>
-          <li>Proxmity sensing using Thonny IDE</li>
-<!--           <li>Proxmity sensing using bash script</li>
- -->      <li style="color:black"><strong>Proxmity sensing on boot [Graded Lab Activity]</strong></li>
            <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW2.1: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW2.1 Assigned: 02/09/2024; HW2.1 Due: 02/16/2024</strong> -->
            <!-- <li><strong><a href="Downloads/Midterm_Project_Proposal_CS4907.docx" style="color:red;" target="_blank">HW2.2: Midterm Project Proposal [Download Template]</a></strong></li> <strong>HW2.2 Assigned: 02/09/2024; HW2.2 Due: 02/18/2024</strong> -->
         </ul>
@@ -204,12 +198,16 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row">Week 4 [02/12/2025]</th>
       <td>
         <ul>
-          <!-- <li>IoT Architecture and Ecosystem</li>
+          <li>IoT Architecture and Ecosystem</li>
           <li>Layers in IoT systems - 3 level  layer model</li>
           <li>Sensors</li>
           <li>Sensor types and considerations</li>
           <li>Understanding Analog and Digital Signals</li>
-          <li>Fundamentals of signal visualization in time and frequency</li>       -->
+          <li>Fundamentals of signal visualization in time and frequency</li> 
+          <li>Sensors</li>
+          <li>Sensor types and considerations</li>
+          <li>Understanding Analog and Digital Signals</li>
+          <li>Fundamentals of signal visualization in time and frequency</li> 
           <li>Guest lecture: 
           <!-- **Anatomy of a real life IoT attack - Side Channel Attack (SCA) Analysis** by <a href="/Lectures_Speakers/Chowdary-bio-Feb162024.pdf"
           target="_blank">Chowdary  Yanamadala</a>, Technology Strategist <a href="https://arm.com" target="_blank">ARM</a> -->
@@ -221,6 +219,9 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       </td>
       <td>
         <ul>
+        <li>Proxmity sensing using Thonny IDE</li>
+        <li>Proxmity sensing using bash script</li>
+        <li style="color:black"><strong>Proxmity sensing on boot [Graded Lab Activity]</strong></li>
           <li>dweet.io - it's like the Twitter of Things <a href="https://dweet.io"target="_blank"> dweet</a></li>
           <li>Fetching data from dweet</li>
           <li style="color:black"><strong>dweet an LED - Your first IoT program [Graded Lab Activity]</strong></li>
