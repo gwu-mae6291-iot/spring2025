@@ -1,0 +1,20 @@
+---
+title: "Week-4: Jitish Kolanjery's Guest Lecture"
+format html:
+---
+**This presentation for internal viewing and referencing only. Redistribution of the presentation is not permitted.**
+
+Kolanjery, Jitish (2025, February 12). Protocol for point-to-point communication between two devices, MAE6291: Internet of Things for Engineers. Department of Mechanical and Aerospace Engineering, The George Washington University.[https://gwu-mae6291-iot.github.io/spring2025/](https://gwu-mae6291-iot.github.io/spring2025/)
+
+
+::: {.callout-note appearance="simple"}
+**This presentation was made by Jitish Kolanjery, Senior Software Engineer, Google Inc., for MAE 6291-Spring 2025.**
+:::
+![](Notes/Protocol Design_GWU_presentation_02132025.pdf){width="100%" height="800px"}
+
+<!-- <footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</p>
+</footer> -->

@@ -221,13 +221,10 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       </td>
       <td>
         <ul>
-        <li>Proxmity sensing using Thonny IDE</li>
-        <li>Proxmity sensing using bash script</li>
-        <li style="color:black"><strong>Proxmity sensing on boot [Graded Lab Activity]</strong></li>
           <li>dweet.io - it's like the Twitter of Things <a href="https://dweet.io"target="_blank"> dweet</a></li>
           <li>Fetching data from dweet</li>
-          <li style="color:black"><strong>dweet an LED - Your first IoT program [Graded Lab Activity]</strong></li>
-          <li style="color:black"><strong>Raspberry Pi messaging with Python scripts [Graded Lab Activity]</strong></li>
+          <li style="color:black"><strong>dweet an LED - Your first IoT program [Demo]</strong></li>
+          <li><strong>Due to snow-related university closure we will meet on Zoom and postpone all graded lab activities to next week<strong></li>
          <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW3: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW3 Assigned: 02/16/2024; HW3 Due: 02/23/2024</strong> -->
         </ul>
       </td>
@@ -236,10 +233,10 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row"> Week 4 [02/12/2025]</th>
       <td colspan="2" style="text-align: center">
           **Guest lecture:** *Protocol for point-to-point communication between two devices* by <a href="/Lectures_Speakers/JitishKolanjery-bio-Feb122025.pdf" target="_blank"> Jitish Kolanjery</a> 
-          <br>
-          <a href="https://www.linkedin.com/in/jitish-kolanjery/" target="_blank">Speaker's LinkedIn Profile</a>  
+          <br>Sr. Software Engineer at Google
+          <br><a href="https://www.linkedin.com/in/jitish-kolanjery/" target="_blank">Speaker's LinkedIn Profile</a>  
           
-          <!-- **Slide deck:** <a href="Week2-Mohammad-PrattWhitney-Lecture.qmd" style="color:red;" target="_blank">Week2-Mohammad-PrattWhitney-Lecture</a></li> -->
+         **Slide deck:** <a href="Week4-JitishKolanjery-Google-Lecture.qmd" style="color:red;" target="_blank">Week4-JitishKolanjery-Google-Lecture</a></li>
       </td>
     </tr>
 <tr class="table-secondary">
@@ -261,6 +258,11 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       </td>
       <td>
         <ul>
+          <li>Proxmity sensing using Thonny IDE</li>
+          <li>Proxmity sensing using bash script</li>    
+          <li style="color:black"><strong>Proxmity sensing on boot [Graded Lab Activity]</strong></li>   
+          <li style="color:black"><strong>dweet an LED - Your first IoT program [Graded Lab Activity]</strong></li>
+          <li style="color:black"><strong>Raspberry Pi messaging with Python scripts [Graded Lab Activity]</strong></li> 
           <li style="color:black"><strong>In-class Flask API development [Graded Lab Activity]</strong></li>       
          <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW4: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW4 Assigned: 02/23/2024; HW4 Due: 03/01/2024</strong> -->
         </ul>
