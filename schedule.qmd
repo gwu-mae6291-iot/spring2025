@@ -224,7 +224,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <li>dweet.io - it's like the Twitter of Things <a href="https://dweet.io"target="_blank"> dweet</a></li>
           <li>Fetching data from dweet</li>
           <li style="color:black"><strong>dweet an LED - Your first IoT program [Demo]</strong></li>
-          <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW2: Guest Lecture Summary [Download Template]</a></strong></li> <strong style="color:black">HW1 Assigned: 02/12/2025; HW1 Due: 02/19/2025</strong>
+          <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW2: Guest Lecture Summary [Download Template]</a></strong></li> <strong style="color:black">HW2 Assigned: 02/12/2025; HW1 Due: 02/19/2025</strong>
           <li><strong>Due to snow-related university closure we will meet on Zoom and postpone all graded lab activities to next week<strong></li>
          <!-- <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW3: Guest Lecture Summary [Download Template]</a></strong></li> <strong>HW3 Assigned: 02/16/2024; HW3 Due: 02/23/2024</strong> -->
         </ul>
