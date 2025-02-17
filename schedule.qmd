@@ -237,7 +237,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <br>Sr. Software Engineer at Google
           <br><a href="https://www.linkedin.com/in/jitish-kolanjery/" target="_blank">Speaker's LinkedIn Profile</a>  
           
-         **Slide deck:** <a href="Week4-JitishKolanjery-Google-Lecture.qmd" style="color:red;" target="_blank">Week4-JitishKolanjery-Google-Lecture</a></li>
+         **Slide deck and recording:** <a href="Week4-JitishKolanjery-Google-Lecture.qmd" style="color:red;" target="_blank">Week4-JitishKolanjery-Google-Lecture</a></li>
       </td>
     </tr>
 <tr class="table-secondary">
