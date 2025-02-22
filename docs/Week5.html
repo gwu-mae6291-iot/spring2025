@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Thonny Package Installation Guide for macOS – MAE 6291</title>
+<title>Week-5 – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,59 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-c6adf494e6fbaf3d47decdd29f4d387d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-81614ab069825c88230828899d70674a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -102,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -112,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">MAE 6291</span>
     </a>
   </div>
@@ -123,15 +89,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../policies.html"> 
+    <a class="nav-link" href="./policies.html"> 
 <span class="menu-text">Course policies</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -140,13 +106,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
         <li>
-    <a class="dropdown-item" href="../../../install-editor.html">
+    <a class="dropdown-item" href="./install-editor.html">
  <span class="dropdown-text">Much Needed Software Installations</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../schedule.html"> 
+    <a class="nav-link" href="./schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -155,45 +121,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li>
-    <a class="dropdown-item" href="../../../Week0.html">
+    <a class="dropdown-item" href="./Week0.html">
  <span class="dropdown-text">Week-0</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../Week1.html">
+    <a class="dropdown-item" href="./Week1.html">
  <span class="dropdown-text">Week-1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../Week2.html">
+    <a class="dropdown-item" href="./Week2.html">
  <span class="dropdown-text">Week-2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../Week2-Mohammad-PrattWhitney-Lecture.html">
+    <a class="dropdown-item" href="./Week2-Mohammad-PrattWhitney-Lecture.html">
  <span class="dropdown-text">Week-2: Hadi Mohammad’s Guest Lecture</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../Week3.html">
+    <a class="dropdown-item" href="./Week3.html">
  <span class="dropdown-text">Week-3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../Week4.html">
+    <a class="dropdown-item" href="./Week4.html">
  <span class="dropdown-text">Week-4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../Week4-JitishKolanjery-Google-Lecture.html">
+    <a class="dropdown-item" href="./Week4-JitishKolanjery-Google-Lecture.html">
  <span class="dropdown-text">Week-4: Jitish Kolanjery’s Guest Lecture</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../Week5.html">
+    <a class="dropdown-item" href="./Week5.html">
  <span class="dropdown-text">Week-5</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../resources.html"> 
+    <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../instructor.html"> 
+    <a class="nav-link" href="./instructor.html"> 
 <span class="menu-text">Instructor</span></a>
   </li>  
 </ul>
@@ -207,35 +173,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#package-installation-steps" id="toc-package-installation-steps" class="nav-link" data-scroll-target="#package-installation-steps">Package Installation Steps</a>
-  <ul class="collapse">
-  <li><a href="#open-thonny" id="toc-open-thonny" class="nav-link" data-scroll-target="#open-thonny">1. Open Thonny</a></li>
-  <li><a href="#open-the-manage-packages-window" id="toc-open-the-manage-packages-window" class="nav-link" data-scroll-target="#open-the-manage-packages-window">2. Open the Manage Packages Window</a></li>
-  <li><a href="#search-for-matplotlib" id="toc-search-for-matplotlib" class="nav-link" data-scroll-target="#search-for-matplotlib">3. Search for Matplotlib</a></li>
-  <li><a href="#select-matplotlib-package" id="toc-select-matplotlib-package" class="nav-link" data-scroll-target="#select-matplotlib-package">4. Select Matplotlib Package</a></li>
-  <li><a href="#click-install-package" id="toc-click-install-package" class="nav-link" data-scroll-target="#click-install-package">5. Click “Install Package”</a></li>
-  <li><a href="#monitor-installation-progress" id="toc-monitor-installation-progress" class="nav-link" data-scroll-target="#monitor-installation-progress">6. Monitor Installation Progress</a></li>
-  <li><a href="#confirm-installation" id="toc-confirm-installation" class="nav-link" data-scroll-target="#confirm-installation">7. Confirm Installation</a></li>
-  <li><a href="#verify-matplotlib-installation" id="toc-verify-matplotlib-installation" class="nav-link" data-scroll-target="#verify-matplotlib-installation">8. Verify Matplotlib Installation</a></li>
-  <li><a href="#additional-packages" id="toc-additional-packages" class="nav-link" data-scroll-target="#additional-packages">9. Additional Packages</a></li>
-  </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Thonny Package Installation Guide for macOS</h1>
+<h1 class="title">Week-5</h1>
 </div>
 
 
@@ -252,72 +198,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This guide will walk you through the process of installing Python packages, such as <strong>Matplotlib</strong>, using <em>Thonny</em> on your macOS computer. Thonny is a user-friendly Python IDE, and managing packages is an essential part of the development process.</p>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure you have the following:</p>
-<ul>
-<li>Thonny IDE installed on your macOS computer.</li>
-<li>An internet connection.</li>
-</ul>
-</section>
-<section id="package-installation-steps" class="level2">
-<h2 class="anchored" data-anchor-id="package-installation-steps">Package Installation Steps</h2>
-<section id="open-thonny" class="level3">
-<h3 class="anchored" data-anchor-id="open-thonny">1. Open Thonny</h3>
-<p>Launch Thonny on your macOS computer.</p>
-<p><img src="../../../media/hello/spotlight-thonny-1.png" class="img-fluid"></p>
-<p><img src="../../../media/hello/spotlight-thonny-2.png" class="img-fluid"></p>
-<p><img src="../../../media/hello/spotlight-thonny-3.png" class="img-fluid"></p>
-</section>
-<section id="open-the-manage-packages-window" class="level3">
-<h3 class="anchored" data-anchor-id="open-the-manage-packages-window">2. Open the Manage Packages Window</h3>
-<p>Click on the “<strong>Tools</strong>” menu at the top. Select “<strong>Manage Packages…</strong>” from the dropdown menu.</p>
-<p><img src="../../../media/hello/matplotlib/step1mac.jpg" class="img-fluid"></p>
-</section>
-<section id="search-for-matplotlib" class="level3">
-<h3 class="anchored" data-anchor-id="search-for-matplotlib">3. Search for Matplotlib</h3>
-<p>In the “<strong>Manage Packages</strong>” window, type “<em><strong>matplotlib</strong></em>” into the search bar.</p>
-<p><img src="../../../media/hello/matplotlib/step2.png" class="img-fluid"></p>
-</section>
-<section id="select-matplotlib-package" class="level3">
-<h3 class="anchored" data-anchor-id="select-matplotlib-package">4. Select Matplotlib Package</h3>
-<p>Find the “<em><strong>matplotlib</strong></em>” package in the search results. Click on it to select it. If multiple versions of Matplotlib are available, choose the desired version from the list.</p>
-</section>
-<section id="click-install-package" class="level3">
-<h3 class="anchored" data-anchor-id="click-install-package">5. Click “Install Package”</h3>
-<p>Click the “Install Package” button to begin the installation process.</p>
-<p><img src="../../../media/hello/matplotlib/step3add.png" class="img-fluid"></p>
-</section>
-<section id="monitor-installation-progress" class="level3">
-<h3 class="anchored" data-anchor-id="monitor-installation-progress">6. Monitor Installation Progress</h3>
-<p>Thonny will display the progress of the installation in the console window. Wait for the process to complete.</p>
-</section>
-<section id="confirm-installation" class="level3">
-<h3 class="anchored" data-anchor-id="confirm-installation">7. Confirm Installation</h3>
-<p>Once the installation is complete, you should see a confirmation message in the console window.</p>
-</section>
-<section id="verify-matplotlib-installation" class="level3">
-<h3 class="anchored" data-anchor-id="verify-matplotlib-installation">8. Verify Matplotlib Installation</h3>
-<p>To confirm the successful installation of Matplotlib, you can open a new Python script or interactive console in Thonny and try importing the library:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
-</section>
-<section id="additional-packages" class="level3">
-<h3 class="anchored" data-anchor-id="additional-packages">9. Additional Packages</h3>
-<p>Repeat the above steps to install any other packages you need, such as <strong>NumPy</strong> or <strong>Pandas</strong>.</p>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Congratulations! You’ve successfully installed Matplotlib and other packages using Thonny on your macOS computer. Managing packages with Thonny is a straightforward process, enabling you to enhance your Python development environment.</p>
-<p>For more information on managing packages with Thonny, refer to the official documentation at https://thonny.org/.</p>
-<p>If you encounter any issues or have questions, don’t hesitate to seek help from the Thonny community or consult the documentation for troubleshooting tips.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Referencing this presentation:</strong></p>
+<p>Bulusu, Kartik V. (2025, February). Week-5 Preseantion: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.<a href="https://gwu-mae6291-iot.github.io/spring2025/">https://gwu-mae6291-iot.github.io/spring2025/</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Course materials developed by Prof.&nbsp;Kartik Bulusu for CSCI 4907-Spring 2024.</strong></p>
+</div>
+</div>
+</div>
+<p><embed src="Notes/MAE6291_IoT_Week5.pdf" style="width:100.0%" height="800"></p>
+<!-- <footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+  Author: Kartik Bulusu<br>
+  Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
+  &copy; 2024 All rights reserved</p>
+</footer> -->
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -347,6 +260,67 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');

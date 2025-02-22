@@ -28,9 +28,9 @@ website:
           - href: Week3.qmd
           - href: Week4.qmd
           - href: Week4-JitishKolanjery-Google-Lecture.qmd
-      #     - href: Week4-Yanamadala-ARM-Lecture.qmd
-      #     - href: Week5.qmd
-      #     - href: Week6.qmd          
+          - href: Week5.qmd
+      #     - href: Week6.qmd  
+      #     - href: Week4-Yanamadala-ARM-Lecture.qmd  
       #     - href: Week6-Nuzum-Innovyz-Lecture.qmd
       #     - href: Week9.qmd    
       #     - href: Week10.qmd    
