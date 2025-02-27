@@ -267,6 +267,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row">Week 6 [02/26/2025]</th>
       <td>
         <ul>
+          <li>Localhost</li>
           <li>Understanding Analog and Digital Signals</li>
           <li>Fundamentals of signal visualization in time and frequency</li> 
           <li>Guest lecture: 
@@ -276,12 +277,16 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <!-- <li>Guest lecture: <a href="Week5-Mohammad-PrattWhitney-Lecture.qmd" target="_blank">**Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications**</a> by <a href="/Lectures_Speakers/HadiImran-bio-Feb232024.pdf" target="_blank">Hadi Mohammed</a>, Digital Technologies Director of Factory 4.0 <a href="https://prattwhitney.com" target="_blank">Pratt and Whitney</a></li>  -->    
           <li>Service-oriented model of IoT</li>
           <li> Discussion of Midterm Projects and setting course for updates and reporting</li>
-          <!-- <li style="color:black"><a href="Week5.qmd" style="color:red;" target="_blank">Week-5 Notes</a></li> -->
+          <li style="color:black"><a href="Week6.qmd" style="color:red;" target="_blank">Week-6 Notes</a></li>
 
         </ul>
       </td>
       <td>
         <ul>
+          <li>In-class: run the Flask API code and create a localhost</li>
+          <li>Install Cloudflare localhost tunnelling software</li>
+          <li>Expose localhost to the internet by a tunnel</li>
+          <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW2: Guest Lecture Summary [Download Template]</a></strong></li> <strong style="color:black">HW2 Assigned: 02/26/2025; HW2 Due: 03/05/2025</strong>        
           <!-- <li>Proxmity sensing using Thonny IDE</li>
           <li>Proxmity sensing using bash script</li>    
           <li style="color:black"><strong>Proxmity sensing on boot [Graded Lab Activity]</strong></li>   
