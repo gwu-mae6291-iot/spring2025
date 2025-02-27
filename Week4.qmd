@@ -9,7 +9,7 @@ Bulusu, Kartik V. (2025, February). Week-4 Preseantion: MAE 6291 Internet-of-Thi
 :::
 
 ::: {.callout-note appearance="simple"}
-**Course materials developed by Prof. Kartik Bulusu for CSCI 4907-Spring 2024.**
+**Course materials developed by Prof. Kartik Bulusu for MAE 6291-Spring 2025 and CSCI 4907-Spring 2024.**
 :::
 ![](Notes/MAE6291_IoT_Week4.pdf){width="100%" height="800px"}
 

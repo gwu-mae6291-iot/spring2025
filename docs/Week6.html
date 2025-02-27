@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RealVNC Installation Guide for Windows – MAE 6291</title>
+<title>Week-6 – MAE 6291</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c6adf494e6fbaf3d47decdd29f4d387d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-81614ab069825c88230828899d70674a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -177,29 +177,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#installation-steps" id="toc-installation-steps" class="nav-link" data-scroll-target="#installation-steps">Installation Steps</a>
-  <ul class="collapse">
-  <li><a href="#download-the-installation-file-here" id="toc-download-the-installation-file-here" class="nav-link" data-scroll-target="#download-the-installation-file-here">0. Download the installation file <strong>here</strong></a></li>
-  <li><a href="#install-vnc-viewer" id="toc-install-vnc-viewer" class="nav-link" data-scroll-target="#install-vnc-viewer">1. Install VNC Viewer</a></li>
-  <li><a href="#follow-installation-wizard" id="toc-follow-installation-wizard" class="nav-link" data-scroll-target="#follow-installation-wizard">3. Follow Installation Wizard</a></li>
-  <li><a href="#launch-realvnc-viewer" id="toc-launch-realvnc-viewer" class="nav-link" data-scroll-target="#launch-realvnc-viewer">4. Launch RealVNC Viewer</a></li>
-  </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">RealVNC Installation Guide for Windows</h1>
+<h1 class="title">Week-6</h1>
 </div>
 
 
@@ -216,18 +202,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-
-
-<style>
-        body {
-            -webkit-user-select: none; /* Safari */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* IE10+/Edge */
-            user-select: none; /* Standard */
-        }
-    </style>
-
-
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -238,128 +212,29 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Referencing the content in this workshop:</strong></p>
-<p>Bulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.</p>
+<p><strong>Referencing this presentation:</strong></p>
+<p>Bulusu, Kartik V. (2025, February). Week-6 Preseantion: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.<a href="https://gwu-mae6291-iot.github.io/spring2025/">https://gwu-mae6291-iot.github.io/spring2025/</a></p>
 </div>
 </div>
-<!-- # RealVNC Installation Guide for Windows -->
-<p>This guide will walk you through the process of installing and setting up RealVNC on your Windows computer to enable remote desktop access.</p>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure you meet the following requirements:</p>
-<ul>
-<li>A Windows computer running a supported version of Windows (e.g., Windows 10, Windows 8, Windows 7).</li>
-<li>Internet access.</li>
-</ul>
-<!-- ### 1. Download RealVNC
-
-Open your web browser and go to the RealVNC website at [https://www.realvnc.com/en/connect/download/combined/](https://www.realvnc.com/en/connect/download/combined/). Click on the "Download VNC Viewer" button.
-
-![Download VNC Viewer](images/screenshots/realvnc-windows/screenshot-1.png) -->
-</section>
-<section id="installation-steps" class="level2">
-<h2 class="anchored" data-anchor-id="installation-steps">Installation Steps</h2>
-<section id="download-the-installation-file-here" class="level3">
-<h3 class="anchored" data-anchor-id="download-the-installation-file-here">0. Download the installation file <strong><a href="./Downloads/VNC-Viewer-7.12.1-Windows.exe">here</a></strong></h3>
-</section>
-<section id="install-vnc-viewer" class="level3">
-<h3 class="anchored" data-anchor-id="install-vnc-viewer">1. Install VNC Viewer</h3>
-<p>Locate the downloaded installer file (e.g., <code>VNC-Viewer-*.exe</code>) and double-click it to run the installer. Once the installation is complete, click “Finish” to exit the installer.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_1.png" class="img-fluid figure-img"></p>
-<figcaption>Open Installer</figcaption>
-</figure>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/realvnc-windows/screenshot-2.png" class="img-fluid figure-img"></p>
-<figcaption>Run Installer</figcaption>
-</figure>
+<div class="callout-body-container">
+<p><strong>Course materials developed by Prof.&nbsp;Kartik Bulusu for MAE 6291-Spring 2025 and CSCI 4907-Spring 2024.</strong></p>
 </div>
-</section>
-<section id="follow-installation-wizard" class="level3">
-<h3 class="anchored" data-anchor-id="follow-installation-wizard">3. Follow Installation Wizard</h3>
-<p>The installation wizard will guide you through the installation process. Click on “Customize installation” and “Deselect RealVNC Server” and hit “Install”.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_2.png" class="img-fluid figure-img"></p>
-<figcaption>Select English as the peferred language</figcaption>
-</figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_3.png" class="img-fluid figure-img"></p>
-<figcaption>Click on Next</figcaption>
-</figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_4.png" class="img-fluid figure-img"></p>
-<figcaption>Accept terms and conditions, and click Next.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_5.png" class="img-fluid figure-img"></p>
-<figcaption>Select installation location</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_6.png" class="img-fluid figure-img"></p>
-<figcaption>Click on Install</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_7.png" class="img-fluid figure-img"></p>
-<figcaption>Finish installation</figcaption>
-</figure>
-</div>
-<!-- ![Customize Installation](images/screenshots/realvnc-windows/screenshot-3.png) -->
-<!-- ![Deselect RealVNC Server](images/screenshots/realvnc-windows/screenshot-4.png) -->
-</section>
-<section id="launch-realvnc-viewer" class="level3">
-<h3 class="anchored" data-anchor-id="launch-realvnc-viewer">4. Launch RealVNC Viewer</h3>
-<p>Once the installation is complete, you can launch RealVNC Viewer from Start.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_8.png" class="img-fluid figure-img"></p>
-<figcaption>Open RealVNC</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="screenshots/real_vnc_winOS_2024/step_9.png" class="img-fluid figure-img"></p>
-<figcaption>When prompted click on “Sign in to get Started and hit cancel button</figcaption>
-</figure>
-</div>
-<p>If prompted to Log in/Sign Up hit “Cancel”, you’re <strong><u>NOT REQUIRED</u></strong> to sign up.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./screenshots/real_vnc_winOS_2024/step_10.png" class="img-fluid figure-img"></p>
-<figcaption>Hit Cancel button</figcaption>
-</figure>
-</div>
-<!-- ![Don't Sign up](images/screenshots/realvnc-windows/screenshot-6.png) -->
-</section>
-</section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
-<p>Congratulations! You have successfully installed and set up RealVNC Viewer on your Windows machine, allowing you to access and control remote computers with ease.</p>
-<p>For more information and support, you can visit the <a href="https://www.realvnc.com/en/connect/download/viewer/?lai_vid=pXE00z561iP1&amp;lai_sr=0-4&amp;lai_sl=l&amp;lai_p=1">RealVNC FAQa</a>.</p>
-<p>If you encounter any issues or have questions, please refer to the RealVNC support resources for assistance.</p>
-<!-- <br><br>
-<footer>
-  <p><small><small><small><small>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
+<p><embed src="Notes/MAE6291_IoT_Week6.pdf" style="width:100.0%" height="800"></p>
+<!-- <footer>
+  <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
   Author: Kartik Bulusu<br>
   Contact: <a href="mailto:bulusu@gwu.edu">bulusu</a><br>
-  &copy; 2023 All rights reserved</small></small></small></small></p>
+  &copy; 2024 All rights reserved</p>
 </footer> -->
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -389,6 +264,67 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');

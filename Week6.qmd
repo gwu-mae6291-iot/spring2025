@@ -1,17 +1,17 @@
 ---
-title: "Week-5"
+title: "Week-6"
 format html:
 ---
 :::{.callout-note}
 **Referencing this presentation:**
 
-Bulusu, Kartik V. (2025, February). Week-5 Preseantion: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.[https://gwu-mae6291-iot.github.io/spring2025/](https://gwu-mae6291-iot.github.io/spring2025/)
+Bulusu, Kartik V. (2025, February). Week-6 Preseantion: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.[https://gwu-mae6291-iot.github.io/spring2025/](https://gwu-mae6291-iot.github.io/spring2025/)
 :::
 
 ::: {.callout-note appearance="simple"}
 **Course materials developed by Prof. Kartik Bulusu for MAE 6291-Spring 2025 and CSCI 4907-Spring 2024.**
 :::
-![](Notes/MAE6291_IoT_Week5.pdf){width="100%" height="800px"}
+![](Notes/MAE6291_IoT_Week6.pdf){width="100%" height="800px"}
 
 <!-- <footer>
   <p>This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.<br>
