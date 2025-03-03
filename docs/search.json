@@ -294,109 +294,109 @@
     "text": "Note\n\n\n\nReferencing this presentation:\nBulusu, Kartik V. (2025, January). Week-1 Presentation: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.https://gwu-mae6291-iot.github.io/spring2025/\n\n\n\n\n\n\n\n\nCourse materials developed by Prof. Kartik Bulusu for MAE 6291-Spring 2025 and CSCI 4907-Spring 2024. Note: Slides cannot be viewed on mobile and handheld devives (such as phones and notebooks)"
   },
   {
-    "objectID": "policies.html",
-    "href": "policies.html",
-    "title": "Course policies",
+    "objectID": "vscode-mac.html",
+    "href": "vscode-mac.html",
+    "title": "Visual Studio Code Installation Guide for macOS",
     "section": "",
-    "text": "Note\n\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University."
+    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages."
   },
   {
-    "objectID": "policies.html#hardware-and-software-requirements",
-    "href": "policies.html#hardware-and-software-requirements",
-    "title": "Course policies",
-    "section": "Hardware and Software requirements",
-    "text": "Hardware and Software requirements\nThe attendees will be expected to bring their own laptops with the following requirements: \n\nPersonal machines or laptops (only) with:\n\nMac OS 12+ or Windows 10+ operating system\nOne USB A or USB C port that is available for use during the workshop\nWiFi connectivity\nA free version of RealVNC® Viewer software downloaded and installed (See instructions for details).\nChrome web browser downloaded and installed\n\n\nThe attendees will be expected to work  - in small groups using a limited number of hardware components and WiFi connectivity that will be provided."
-  },
-  {
-    "objectID": "policies.html#assignments-and-grades",
-    "href": "policies.html#assignments-and-grades",
-    "title": "Course policies",
-    "section": "Assignments and Grades",
-    "text": "Assignments and Grades\n\nGrading - List of what will be counted and percentages (as used in Spring 2024 and can be changed in Spring 2025).\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample of grade breakdown for undergraduate students\n\n\nExample of grade breakdown for graduate students\n\n\n\n\n\n\n\n\nexam by pongsakorn from Noun Project\n\n\n\n\n\n\nIn-class lab work and/or Weekly Quizzes 10%\n\n\nPython programming and other Homework 10%\n\n\nGuest lecture reports 20%\n\n\nProjects (including code, demo, written report and presentation) 50%\n\n\n\n20% Midterm project (Groups of two undergrads at most)\n\n\n30% Final project (Individial)\n\n\n\n\n\n\n\n\nIn-class lab work and/or Weekly Quizzes 10%\n\n\nPython programming and other Homework 10%\n\n\nIn-class or offline presentations 10%\n\n\nGuest lecture reports 10%\n\n\nPaper reviews of selected archival journals will be required in formats provided 10%\n\n\nProjects (including code, demo, written report and presentation) 50%\n\n\n\n20% Midterm project (Individual)\n\n\n30% Final project (Individual)"
-  },
-  {
-    "objectID": "policies.html#grading-scale-subject-to-change-during-spring-2025",
-    "href": "policies.html#grading-scale-subject-to-change-during-spring-2025",
-    "title": "Course policies",
-    "section": "Grading Scale (subject to change during Spring 2025)",
-    "text": "Grading Scale (subject to change during Spring 2025)\nThe following grading scale will be applied at the end of the semester to calculate letter grades: 90-100: A, 84-89: A-, 78-83: B+, 72-77: B, 66-71: B-, 60-65: C+, 56-59: C, 52-55: C-, 46-51: D, 0-45: F.\nGrades are “rounded up” to the nearest integer."
-  },
-  {
-    "objectID": "policies.html#additional-important-information-about-grading-policy",
-    "href": "policies.html#additional-important-information-about-grading-policy",
-    "title": "Course policies",
-    "section": "Additional important information about grading policy:",
-    "text": "Additional important information about grading policy:\n\nLate submissions on Homework and projects will not be acceptable.\nThere is no required final exam.\nThere may be instances in the presentations where peer-evaluations may be introduced at the discretion of the instructor.\nThe instructor will seeks inputs from the class and decide if course projects will be done individfually, in groups or in a combination."
-  },
-  {
-    "objectID": "policies.html#classroom-policies-and-student-responsibilities",
-    "href": "policies.html#classroom-policies-and-student-responsibilities",
-    "title": "Course policies",
-    "section": "Classroom Policies and Student responsibilities",
-    "text": "Classroom Policies and Student responsibilities\n\n\n\n\nThe course is designed with experiential learning modules provided in each session.\n\n\nThis course requires a combination of individual and group work entailing hands-on activities and frequent interactions with the instructional team.\n\n\nThe lectures, labs and office hours are available for interacting with your group and the instructor. We ask that all students adhere to the course policies throughout the duration of the semester.\n\n\n\n\n\nclassroom by Chattapat from Noun Project\n\n\n\n\n\nBe respectful:\n\nListen to the instructor. Keep an open mind to the course material presented.\nLimit the use of personal devices.\nBe aware that you are working in a group.\nRespect each other’s opinion during dicusssions.\n\nBe responsible:\n\nArrive on time.\nSubmit the course deliverables on time.\nHelp your team members\n\nBe a communicator:\n\nObserve, Ask questions and Try out the materials presented during the course.\nCommunicate with your team effectively and politely.\nAn email informing the instructor about your absence is necessary, if you are not planning to attend the lecture and lab session during the course.\n\nThe requests about making up graded-labs or any in-class activities will be considered but with prior initmation and time constraints of the course.\n\n\nBe a problem solver:\n\nExplore options to complete hands-on tasks.\nMake your own notes.\nStay positive about the course outcomes."
-  },
-  {
-    "objectID": "policies.html#communication-during-extenuating-circumstances",
-    "href": "policies.html#communication-during-extenuating-circumstances",
-    "title": "Course policies",
-    "section": "Communication during extenuating circumstances",
-    "text": "Communication during extenuating circumstances\nWhen you need to communicate with us directly regarding extenuating circumstances, please use Blackboard to send email or email the instructor directly.\n\nThe instructor will check emails on Mondays and may respond at their earliest convenience."
-  },
-  {
-    "objectID": "policies.html#late-work-policy",
-    "href": "policies.html#late-work-policy",
-    "title": "Course policies",
-    "section": "Late work policy",
-    "text": "Late work policy\nLate work is not accepted, with the following exceptions:\n\nExtensions will be granted should there arise due to circumstances beyond your control that impede your ability to complete coursework and turn in a deliverable on time.\nNotify your professor as soon as feasible in these cases. Examples of such circumstances include (but are not limited to) illness, death in the family, and loss of housing.\nTo ensure fairness toward all students, the instructor will request documentation of such circumstances."
-  },
-  {
-    "objectID": "policies.html#justice-equity-diversity-inclusion-jedi-statement",
-    "href": "policies.html#justice-equity-diversity-inclusion-jedi-statement",
-    "title": "Course policies",
-    "section": "Justice, Equity, Diversity, Inclusion (JEDI) statement",
-    "text": "Justice, Equity, Diversity, Inclusion (JEDI) statement\n\n\n\n\nThe instructor intends to support the course needs of all students with diverse backgrounds and perspectives in this course.\n\n\nThe instructor believes that the diversity that the students bring to this class is a resource, strength, and an asset.\n\n\nThe instructor will strive to present material that is respectful of the diverse backgrounds and characteristics of the student body and the instructional team.\n\n\nThe course materials and activities presented in this course are intended to be respectful of: age, race, ethnicity, country of origin, language, religion, spiritual practice, sexual orientation, gender identity or expression, introversion/extroversion personality dimensions, and socioeconomic and mental/physical status.\n\n\nEach of us, whether student or instructional team member, is expected to treat all others with respect.\n\n\nDisrespect in any form will not be tolerated.\n\n\n\n\n\nemployee diversity by Bold Yellow from Noun Project\n\n\n\n\n\n\nPlease let the instructor know ways to improve the effectiveness of the course. See JEDI resources for student resources."
-  },
-  {
-    "objectID": "policies.html#use-of-chatgpt-or-any-other-ai-based-models-for-in-class-work-and-deliverables",
-    "href": "policies.html#use-of-chatgpt-or-any-other-ai-based-models-for-in-class-work-and-deliverables",
-    "title": "Course policies",
-    "section": "Use of chatGPT or any other AI-based models for in-class work and deliverables",
-    "text": "Use of chatGPT or any other AI-based models for in-class work and deliverables\nThe use of chatGPT or any other generative AI-based models is not permitted by the instructor.\n\nIf there are instances where chatGPT or any other generative AI-based models are allowed they will be explicitly communicated by the instructor on select assignments and programming projects.\nIn all other instances where a course deliverable does not entail permitted use of chatGPT or any other AI-based models, the instructors will have the students sign a disclosure form. This form will require that the students document specific prompts used and the outputs generated.\nAny violations of the aforementioned policy will be reviewed under the Academic Integrity Code and Student Rights and Responsibities\n\nFurthermore, the ethical issues regarding the use of chatGPT or any other AI-based models will be discussed in-class and course policy will be ammended according to the findings. The findings of any such discussions will be summarized and placed in-context of the Academic Integrity Code\n Resources that will guide the course policy changes during the course: \n\n\nchatGPT Course policy formulation\n\n\nchatGPT chatbot\n\n\nHow ChatGPT Could Transform Higher Education"
-  },
-  {
-    "objectID": "policies.html#use-of-electronic-course-materials-and-class-recordings",
-    "href": "policies.html#use-of-electronic-course-materials-and-class-recordings",
-    "title": "Course policies",
-    "section": "Use of Electronic Course Materials and Class Recordings",
-    "text": "Use of Electronic Course Materials and Class Recordings\nStudents are encouraged to use electronic course materials, including recorded class sessions (if any), for private personal use in connection with their academic program of study. Electronic course materials and recorded class sessions should not be shared or used for non-course related purposes unless express permission has been granted by the instructor. Students who impermissibly share any electronic course materials are subject to discipline under the Student Code of Conduct. Please contact the instructor if you have questions regarding what constitutes permissible or impermissible use of electronic course materials and/or recorded class sessions. Please contact Disability Support Services if you have questions or need assistance in accessing electronic course materials."
-  },
-  {
-    "objectID": "policies.html#university-policy-on-religious-holidays",
-    "href": "policies.html#university-policy-on-religious-holidays",
-    "title": "Course policies",
-    "section": "University Policy on Religious Holidays",
-    "text": "University Policy on Religious Holidays\n\nStudents should notify faculty during the first week of the semester of their intention to be absent from class on their day(s) of religious observance.\nFaculty should extend to these students the courtesy of absence without penalty on such occasions, including permission to make up examinations.\nFaculty who intend to observe a religious holiday should arrange at the beginning of the semester to reschedule missed classes or to make other provisions for their course‐related activities. For details and policy, see “Religious Holidays” at https://provost.gwu.edu/policies-procedures-and-guidelines"
-  },
-  {
-    "objectID": "policies.html#support-for-students-outside-the-classroom",
-    "href": "policies.html#support-for-students-outside-the-classroom",
-    "title": "Course policies",
-    "section": "Support for Students Outside the Classroom",
-    "text": "Support for Students Outside the Classroom\nDisability Support Services (DSS) Any student who may need an accommodation based on the potential impact of a disability should contact the Disability Support Services office at 202‐994‐8250 in the Rome Hall, Suite 102, to establish eligibility and to coordinate reasonable accommodations. For additional information please refer to: https://disabilitysupport.gwu.edu/\nMental Health Services 202‐994‐5300 The University’s Mental Health Services offers 24/7 assistance and referral to address students’ personal, social, career, and study skills problems. Services for students include: crisis and emergency mental health consultations confidential assessment, counseling services (individual and small group), and referrals. https://healthcenter.gwu.edu/counseling-and-psychological-services"
-  },
-  {
-    "objectID": "policies.html#academic-integrity-code",
-    "href": "policies.html#academic-integrity-code",
-    "title": "Course policies",
-    "section": "Academic Integrity Code",
-    "text": "Academic Integrity Code\nAcademic dishonesty is defined as cheating of any kind, including misrepresenting one’s own work, taking credit for the work of others without crediting them and without appropriate authorization, and the fabrication of information. You are not allowed to collaborate on the home works and lab assignments; for programming projects and hardware lab assignments, you can work in teams only if they are designated as team projects (labs). Unless otherwise specified, you cannot search for solutions or code on the web – but you can use any code that is included in the textbook or lecture notes (but please cite them). I will be using a SW tool that checks for program code similarities – any pair of programs or written reports with greater than 10% similarity will be closely examined.\nThe Office of Academic Integrity maintains a permanent record of the violation. More information is available from the Office of Academic Integrity at https://studentconduct.gwu.edu/academic-integrity. The University’s “Guide of Academic Integrity in Online Learning Environments” is available at https://studentconduct.gwu.edu/guide-academic-integrity-online-learning-environments. Contact information: rights@gwu.edu or 202-994-6757."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Internet-of-Things for Engineers",
+    "objectID": "vscode-mac.html#introduction",
+    "href": "vscode-mac.html#introduction",
+    "title": "Visual Studio Code Installation Guide for macOS",
     "section": "",
-    "text": "From introduction to interface with the physical world\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n\n\nImportant\n\n\n\nRegistartion: Course registation is NOW OPEN. \n\n\n\n\nCourse and Contact Information\n\n\n\nMAE 6291: Introduction to IoT and Edge Computing Applications\nSemester: Spring 2025\nCredits: 3\nMeeting times: Wednesday 3:30 PM — 6:00 PM (Lectures and Laboratory every session)\nLocation: SEH B2020\nCourse website \nInstructor information can be found here\n\n\n\n \n\n\n\n\nGithub Repo (updated weekly)\n\ngit clone https://github.com/gwu-mae6291-iot/spring2025_codes.git\n\n\nCourse description\n\n\nThe Internet of Things (IoT) is perceived as a collection of smart, connected devices with the ability to send and receive data; “internet” encapsulates connectivity and “things” are devices (electronic or mechanical) that can be adapted toward connectivity.\nThere is an alternative perception of IoT, as a design methodology that facilitates interoperability and connectivity of physical systems. Edge computing is a strategy for localized analysis of data, ahead in the pipeline of powerful data center- or cloud-based post-processing.\n\n\n\n \n\nIoT by Alla Zaleuska from Noun Project\n\n\n\n\nThis course explores these aspects of IoT framework and expands it with edge computing ideology via practical and hands-on exposure. Students will be exposed to the IoT framework using a variety of sensors, IoT automation and connectivity in \\(\\mu\\)-labs (micro-labs) that incorporate the Raspberry Pi (single-board computer) and Python programming language.\nThe students will learn about how IoT with edge computing capability is going to be the backbone of the Industry 4.0."
+    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages."
+  },
+  {
+    "objectID": "vscode-mac.html#prerequisites",
+    "href": "vscode-mac.html#prerequisites",
+    "title": "Visual Studio Code Installation Guide for macOS",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nAdequate disk space for the installation."
+  },
+  {
+    "objectID": "vscode-mac.html#installation-steps",
+    "href": "vscode-mac.html#installation-steps",
+    "title": "Visual Studio Code Installation Guide for macOS",
+    "section": "Installation Steps",
+    "text": "Installation Steps\n\n1. Download Visual Studio Code\nVisit the official VS Code download page at https://code.visualstudio.com/download.\n\n\n2. Choose the macOS Installer\nClick on the “macOS” download link to download the Visual Studio Code for macOS.\n\n\n\nDownload VS Code\n\n\n\n\n\nAllow Download\n\n\n\n\n3. Install Visual Studio Code\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the VS Code disk image (.dmg) file to open it.\n\n\n\n\nLocate file\n\n\n\n\n\nOpen DMG\n\n\n\n\n\n4. Launch Visual Studio Code\nOpen your “Launchpad” and locate the “Visual Studio Code” application. Double-click it to launch the editor.\n\n\n\nLaunch VS Code\n\n\n\n\n5. Customize VS Code (Optional)\nUpon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (Optional)\n\n\n\nCustomize VS Code\n\n\n\n\n6. Open Extensions Tab\nOn the sidebar click on the Extensions tab.\n\n\n\nExtensions tab\n\n\n\n\n7. Select “Python” Extension\nUnder the “Popular” select “Python”.\n\n\n\nSearch Python\n\n\n\n\n8. Install Python Extension\nOn the right panel click on the install button to install the extension.\n\n\n\nInstall Python Extension\n\n\n\n\n9. Open a New File\nClick on the File tab from the toolbar and open a New File.\n\n\n\nOpen New File\n\n\n\n\n10. Open a Jupyter Notebook\nFrom the drop down menu, select “Jupyter Notebook” as the file type.\n\n\n\nOpen Jupyter Notebook"
+  },
+  {
+    "objectID": "vscode-mac.html#conclusion",
+    "href": "vscode-mac.html#conclusion",
+    "title": "Visual Studio Code Installation Guide for macOS",
+    "section": "Conclusion",
+    "text": "Conclusion\nCongratulations! You’ve successfully installed Visual Studio Code on your macOS computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.\nFeel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!\nFor more information and documentation on Visual Studio Code, visit https://code.visualstudio.com/docs."
+  },
+  {
+    "objectID": "instructor.html#prof.-kartik-bulusu-instructor",
+    "href": "instructor.html#prof.-kartik-bulusu-instructor",
+    "title": "Instructor",
+    "section": "Prof. Kartik Bulusu (Instructor)",
+    "text": "Prof. Kartik Bulusu (Instructor)\n\n\n\nProf. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC.\nHe designed taught a cross-disciplinary course titled, Internet of Things (IoT) and Edge Computing with applications in cyber-physical systems and speech processing.\nIn addition, he developed courses for first year engineering students on the engineering applications of Raspberry Pi, Python programming and mobile App development inspired by social innovation potential during the COVID-19 pandemic.\nHis research interests span the areas of human health and sustainable energy with focus on mechanics of biological fluids, low-cost energy technologies and applications of wavelet transforms. His current research work on biofluid dynamics of the cardiovasculature, rheology of biological fluids and applications of wavelet transforms has been supported by NSF and the Center for Biomimetics and Bioinspired Engineering (CBBE), GWU.\nHe developed a wavelet transform-based computational code (PIVlet) for the analysis of complex vortical patterns encountered in arterial blood flow. He has extensive knowledge of experimental fluid mechanics and non-invasive measurement techniques such as laser Doppler velocimetry (LDV), particle image velocimetry (PIV), schlieren imagery, magnetic resonance velocimetry (MRV) and molecular tagging velocimetry (MTV). Dr. Bulusu was recognized with the ASME Best Paper Award by the Advanced Energy Systems Division (AESD) Heat Pump Technical Committee and William and Louise Corcoron Award for contributing to the intellectual and social life of the School of Engineering and Applied Science, GWU.\n\n\n  Campus Address: SEH 4614\nEmail: bulusu at email dot gwu dot edu"
+  },
+  {
+    "objectID": "instructor.html#vishnu-gajula-teaching-assistant",
+    "href": "instructor.html#vishnu-gajula-teaching-assistant",
+    "title": "Instructor",
+    "section": "Vishnu Gajula (Teaching Assistant)",
+    "text": "Vishnu Gajula (Teaching Assistant)\n\n\n\nI am Vishnu Gajula, a dedicated engineering professional currently pursuing my second master’s degree in Industrial/Engineering Management at The George Washington University. My academic journey began with a Bachelor of Technology in Mechanical Engineering, followed by a Master of Technology in Manufacturing Systems from Jawaharlal Nehru Technological University in Hyderabad, India.\nThroughout my career, I’ve gained valuable industry experience through roles at JSW Steel USA as an Industrial Mechanical Engineer and JSW Cements as a Cement Production Logistics Intern, where I developed expertise in project coordination, design optimization, and process improvement. My technical skills include 3D modeling, prototyping, CNC machining, and various engineering software tools. Currently, as a Graduate Assistant at The George Washington University, I am expanding my capabilities by combining technical expertise with management skills, preparing myself for future leadership roles in the engineering industry.\n\n\n  \nEmail: vishnu dot gajula at email dot gwu dot edu"
+  },
+  {
+    "objectID": "python3-windows.html",
+    "href": "python3-windows.html",
+    "title": "Installing Python on Windows",
+    "section": "",
+    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
+  },
+  {
+    "objectID": "python3-windows.html#prerequisites",
+    "href": "python3-windows.html#prerequisites",
+    "title": "Installing Python on Windows",
+    "section": "",
+    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
+  },
+  {
+    "objectID": "python3-windows.html#step-1-download-and-install-python",
+    "href": "python3-windows.html#step-1-download-and-install-python",
+    "title": "Installing Python on Windows",
+    "section": "Step 1: Download and Install Python",
+    "text": "Step 1: Download and Install Python\n\nVisit the official Python website: https://www.python.org/downloads/windows/.\nDownload the latest version of Python for Windows by clicking on the “Download Windows installer” button.\nOpen the downloaded installer (e.g., python-X.Y.Z-amd64.exe), where X.Y.Z represents the Python version, and follow the installation instructions. Make sure to check the box that says “Add Python X.Y to PATH.”"
+  },
+  {
+    "objectID": "python3-windows.html#step-2-verify-python-installation",
+    "href": "python3-windows.html#step-2-verify-python-installation",
+    "title": "Installing Python on Windows",
+    "section": "Step 2: Verify Python Installation",
+    "text": "Step 2: Verify Python Installation\nTo ensure that Python is installed correctly, open your Command Prompt and run the following command:\npython --version\nThis command will display the Python version, confirming that it’s successfully installed."
+  },
+  {
+    "objectID": "python3-windows.html#step-3-install-jupyter-notebook",
+    "href": "python3-windows.html#step-3-install-jupyter-notebook",
+    "title": "Installing Python on Windows",
+    "section": "Step 3: Install Jupyter Notebook",
+    "text": "Step 3: Install Jupyter Notebook\nTo install Jupyter Notebook, open your Command Prompt and run the following command:\npip install jupyter\nThis command will download and install Jupyter Notebook, a powerful tool for interactive Python development."
+  },
+  {
+    "objectID": "python3-windows.html#step-4-find-the-path-to-python-scripts-folder",
+    "href": "python3-windows.html#step-4-find-the-path-to-python-scripts-folder",
+    "title": "Installing Python on Windows",
+    "section": "Step 4: Find the Path to Python Scripts Folder",
+    "text": "Step 4: Find the Path to Python Scripts Folder\nTo locate the path to the Python scripts folder through the Command Prompt, follow these steps:\n\nOpen your Command Prompt.\nRun the following command to find the Python scripts folder:\n\npython -m site --user-site\nThis command will display the path to your user-specific Python libraries, including the scripts folder."
+  },
+  {
+    "objectID": "python3-windows.html#step-5-configure-python-bin-path",
+    "href": "python3-windows.html#step-5-configure-python-bin-path",
+    "title": "Installing Python on Windows",
+    "section": "Step 5: Configure Python Bin Path",
+    "text": "Step 5: Configure Python Bin Path\nNow that you have the path to the Python scripts folder, you can set up the Python bin path and add it to your system environment variables. Follow these steps:\n\nOpen the Start menu and search for “Environment Variables.”\nClick on “Edit the system environment variables.”\nIn the System Properties window, click the “Environment Variables” button.\nUnder the “System Variables” section, find and select the “Path” variable, then click the “Edit” button.\nClick “New” and add the path to your Python scripts folder that you obtained in Step 4.\nClick “OK” to save the changes."
+  },
+  {
+    "objectID": "python3-windows.html#step-6-launch-jupyter-notebook",
+    "href": "python3-windows.html#step-6-launch-jupyter-notebook",
+    "title": "Installing Python on Windows",
+    "section": "Step 6: Launch Jupyter Notebook",
+    "text": "Step 6: Launch Jupyter Notebook\nTo start Jupyter Notebook, open your Command Prompt and run the following command:\njupyter notebook\nThis command will launch the Jupyter Notebook in your default web browser, allowing you to create and run Python notebooks for interactive coding and data analysis.\nConclusion You have successfully installed Python, configured the user-specific Python bin path, and set up your system environment variables on your Windows system. You can now use Jupyter Notebook for interactive coding and data analysis.\nHappy coding!\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
   },
   {
     "objectID": "thingspeak.html",
@@ -1974,109 +1974,137 @@
     "text": "Note\n\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\nSchedule [week-by-week]\n\n\n\n\n\n\nThe course schedule below will be updated on a weekly basis during the Spring 2025 semester.\n\n\n\n\n\n    &lt;ul&gt;\n      &lt;li&gt;Getting familiar with the Raspberry Pi 4B&lt;/li&gt;\n      &lt;li&gt;Python programming using Thonny&lt;/li&gt; \n      &lt;li&gt;&lt;strong&gt;No HW assigned in this week&lt;/strong&gt;&lt;/li&gt;    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;td&gt;\n  &lt;/td&gt;\n  &lt;!--- &lt;td&gt;Column content&lt;/td&gt; --&gt;\n&lt;/tr&gt;\n\n&lt;tr class=\"table-secondary\"&gt;\n  &lt;th scope=\"row\"&gt;Week 1 [01/22/2025]&lt;/th&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;Sneak preview at the edge-lab and hardware&lt;/li&gt;\n      &lt;li&gt;What is the thing in IoT?&lt;/li&gt;\n      &lt;li&gt;Overview of computing in IoT&lt;/li&gt;\n      &lt;li&gt;What is Edge Computing?&lt;/li&gt;\n\n                &lt;li&gt;Guest lecture: \n      &lt;!-- &lt;li&gt;Overview of computing in IoT&lt;/li&gt;\n      **Edge Cloud** by &lt;a href=\"https://www.seas.gwu.edu/timothy-wood\"\n      target=\"_blank\"&gt;Prof. Tim Wood&lt;/a&gt;, CS Department, GWU. &lt;a href=\"http://faculty.cs.gwu.edu/timwood/\" target=\"_blank\"&gt;Director of GW Cloud Systems Lab&lt;/a&gt; --&gt;\n      &lt;/li&gt;\n      &lt;!-- &lt;li&gt;&lt;a href=\"Week1.qmd\" style=\"color:red;\" target=\"_blank\"&gt;Week-1 Notes&lt;/a&gt;&lt;/li&gt; --&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;Setting up the Edge Lab&lt;/li&gt;\n      &lt;li&gt;Understanding the Python installation on the Raspberry Pi&lt;/li&gt;\n      &lt;li&gt;Some basic Python programming constructs&lt;/li&gt;\n      &lt;li&gt;First steps in Raspberry Pi programming [Blinking LEDs]&lt;/li&gt;\n      &lt;li&gt;&lt;strong&gt;No HW assigned in this week&lt;/strong&gt;&lt;/li&gt;    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;td&gt;\n  &lt;/td&gt;\n  &lt;!--- &lt;td&gt;Column content&lt;/td&gt; --&gt;\n&lt;/tr&gt;\n&lt;tr class=\"table-secondary\"&gt;\n  &lt;th scope=\"row\" style=\"color:black\"&gt;Week 2 [01/29/2025]&lt;/th&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;What is Edge Computing and Edge Compute device&lt;/li&gt;\n      &lt;li&gt;Differences in Cloud and Fog computing&lt;/li&gt;\n      &lt;li style=\"color:black\"&gt;Python skelton code for running programs on the Raspberry Pi&lt;/li&gt;\n      &lt;li style=\"color:black\"&gt;Recap of some programming constructs&lt;/li&gt;\n      &lt;li style=\"color:black\"&gt;Using Thonny to blink LEDs&lt;/li&gt;\n      &lt;li style=\"color:black\"&gt;Using bash script to blink LEDs&lt;/li&gt;\n      &lt;!-- &lt;li style=\"color:black\"&gt;&lt;a href=\"Week2.qmd\" style=\"color:red;\" target=\"_blank\"&gt;Week-2 Notes&lt;/a&gt;&lt;/li&gt; --&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li style=\"color:black\"&gt;Configuring the GPIO interface on your Raspberry Pi&lt;/li&gt;\n      &lt;li style=\"color:black\"&gt;In-class Raspberry Pi Lab (Blinking LEDs)&lt;/li&gt; \n      &lt;li style=\"color:black\"&gt;Setting up a Python virtual environment [venv] and it's benefits&lt;/li&gt;\n      &lt;li style=\"color:black\"&gt;Installing Python GPIO packages with pip in [venv]&lt;/li&gt;\n      &lt;li style=\"color:black\"&gt;&lt;strong&gt;Blinking LEDs on boot [Graded Lab Activity]&lt;/strong&gt;&lt;/li&gt;\n      &lt;!-- &lt;li&gt;&lt;strong&gt;&lt;a href=\"Downloads/LastName_ExecutiveSummary.docx\" style=\"color:red;\" target=\"_blank\"&gt;HW1: Guest Lecture Summary [Download Template]&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt; &lt;strong style=\"color:black\"&gt;HW1 Assigned: 02/04/2024; HW1 Due: 02/09/2024&lt;/strong&gt; --&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;!--- &lt;td&gt;Column content&lt;/td&gt; --&gt;\n&lt;/tr&gt;\n\n&lt;tr class=\"table-secondary\"&gt;\n  &lt;th scope=\"row\"&gt;Week 3 [02/05/2025]&lt;/th&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;IoT Architecture and Ecosystem&lt;/li&gt;\n      &lt;li&gt;Layers in IoT systems - 3 level  layer model&lt;/li&gt;\n      &lt;li&gt;Sensors&lt;/li&gt;\n      &lt;li&gt;Sensor types and considerations&lt;/li&gt;\n      &lt;li&gt;Understanding Analog and Digital Signals&lt;/li&gt;\n      &lt;li&gt;Fundamentals of signal visualization in time and frequency&lt;/li&gt;  \n      &lt;li&gt;Guest lecture: \n      &lt;!-- **Designing high-confidence embedded systems -- operating systems and real-time**&lt;/a&gt; by &lt;a href=\"https://faculty.cs.gwu.edu/gparmer/\"\n      target=\"_blank\"&gt;Prof. Gabe Parmer&lt;/a&gt;, CS Department, GWU. &lt;a href=\"https://composite.seas.gwu.edu\" target=\"_blank\"&gt;Parmer Lab&lt;/a&gt; --&gt;\n      &lt;/li&gt;     \n      &lt;!-- &lt;li&gt;Guest lecture: &lt;a href=\"Week3-Parmer-Lecture.qmd\" target=\"_blank\"&gt;**Designing high-confidence embedded systems -- operating systems and real-time**&lt;/a&gt; by &lt;a href=\"https://faculty.cs.gwu.edu/gparmer/\" target=\"_blank\"&gt;Prof. Gabe Parmer&lt;/a&gt;, CS Department, GWU. &lt;a href=\"https://composite.seas.gwu.edu\" target=\"_blank\"&gt;Parmer Lab&lt;/a&gt;&lt;/li&gt;      --&gt;\n      &lt;!-- &lt;li&gt;&lt;a href=\"Spring2023_MidtermProjects.qmd\" style=\"color:red;\" target=\"_blank\"&gt;Spring 2023 Midterm Project for Review&lt;/a&gt;&lt;/li&gt; --&gt;\n      &lt;!-- &lt;li style=\"color:black\"&gt;&lt;a href=\"Week3.qmd\" style=\"color:red;\" target=\"_blank\"&gt;Week-3 Notes&lt;/a&gt;&lt;/li&gt; --&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;In-class Raspberry Pi Lab (Ultrasound sensors)&lt;/li&gt;\n      &lt;li&gt;Proxmity sensing using Thonny IDE&lt;/li&gt;\nProxmity sensing on boot [Graded Lab Activity]\n       &lt;!-- &lt;li&gt;&lt;strong&gt;&lt;a href=\"Downloads/LastName_ExecutiveSummary.docx\" style=\"color:red;\" target=\"_blank\"&gt;HW2.1: Guest Lecture Summary [Download Template]&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt; &lt;strong&gt;HW2.1 Assigned: 02/09/2024; HW2.1 Due: 02/16/2024&lt;/strong&gt; --&gt;\n       &lt;!-- &lt;li&gt;&lt;strong&gt;&lt;a href=\"Downloads/Midterm_Project_Proposal_CS4907.docx\" style=\"color:red;\" target=\"_blank\"&gt;HW2.2: Midterm Project Proposal [Download Template]&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt; &lt;strong&gt;HW2.2 Assigned: 02/09/2024; HW2.2 Due: 02/18/2024&lt;/strong&gt; --&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;!--- &lt;td&gt;Column content&lt;/td&gt; --&gt;\n&lt;/tr&gt;&lt;tr class=\"table-light\"&gt;\n  &lt;th scope=\"row\"&gt;Week 9 [03/26/2025]&lt;/th&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;Guest lecture: **Introduction to the Internet of Things** by  &lt;a href=\"/Lectures_Speakers/RemyPottier-bio-March2024.pdf\" target=\"_blank\"&gt;Remy Pottier&lt;/a&gt;, Director of Innovation, &lt;a href=\"https://arm.com\" target=\"_blank\"&gt;ARM&lt;/a&gt;&lt;/li&gt;\n      &lt;!-- &lt;li&gt;Guest lecture: &lt;a href=\"Week10-Pottier-ARM-Lecture.qmd\" target=\"_blank\"&gt; **Introduction to the Internet of Things**&lt;/a&gt; by  &lt;a href=\"/Lectures_Speakers/RemyPottier-bio-March2024.pdf\" target=\"_blank\"&gt;Remy Pottier&lt;/a&gt;, Director of Innovation, &lt;a href=\"https://arm.com\" target=\"_blank\"&gt;ARM&lt;/a&gt;&lt;/li&gt; --&gt;\n      &lt;li&gt;Review: Set up ESP32 microcontroller and Micropython interpreter&lt;/li&gt;\n      &lt;li&gt;Review: Flashing the ESP32 microcontroller&lt;/li&gt;\n      &lt;!-- &lt;li style=\"color:black\"&gt;&lt;a href=\"Week10.qmd\" style=\"color:red;\" target=\"_blank\"&gt;Week-10 Notes&lt;/a&gt;&lt;/li&gt; --&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;In-class Raspberry Pi Lab with ESP32&lt;/li&gt;\n      &lt;li&gt;Push-botton LEDs with ESP32 and Raspberry Pi 4B&lt;/li&gt;\n      &lt;li&gt;&lt;strong&gt;Webserver Accesspoint with ESP32 and Raspberry Pi 4B [Graded Lab Activity]&lt;/strong&gt;&lt;/li&gt;\n      &lt;!-- &lt;li&gt;&lt;strong&gt;&lt;a href=\"Downloads/LastName_ExecutiveSummary.docx\" style=\"color:red;\" target=\"_blank\"&gt;HW7: Guest Lecture Summary [Download Template]&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt; &lt;strong&gt;HW7 Assigned: 03/29/2024; HW7 Due: 04/05/2024&lt;/strong&gt; --&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;!--- &lt;td&gt;Column content&lt;/td&gt; --&gt;\n&lt;/tr&gt;\n\n&lt;tr class=\"table-light\"&gt;\n  &lt;th scope=\"row\"&gt;Week 10 [04/02/2025]&lt;/th&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;Working with SciPy&lt;/li&gt;\n      &lt;li&gt;Practical introduction to Mosquitto MQTT&lt;/li&gt;\n      &lt;li&gt;Practical introduction to linear algebra in the Edge compute framework&lt;/li&gt;\n      &lt;!-- &lt;li style=\"color:black\"&gt;&lt;a href=\"Week11.qmd\" style=\"color:red;\" target=\"_blank\"&gt;Week-11 Notes&lt;/a&gt;&lt;/li&gt; --&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;td&gt;\n    &lt;ul&gt;\n      &lt;li&gt;&lt;strong&gt;In-class Raspberry Pi Lab - Mosquitto MQTT with the Raspberry Pi 4B [Graded Lab Activity]&lt;/strong&gt;&lt;/li&gt;\n      &lt;li&gt;Data smoothing with Scipy library in Python&lt;/li&gt;\n      &lt;li&gt;Examples: Moving average and Savitzky-Golay filters&lt;/li&gt;      &lt;li&gt;&lt;strong&gt;No HW announced and nothing is due on 04/12/2024&lt;/strong&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/td&gt;\n  &lt;!--- &lt;td&gt;Column content&lt;/td&gt; --&gt;\n&lt;/tr&gt;\n\n\n\n\n\n\n\n\n\nDate\n\n\nTopic(s) and readings\n\n\n\\(\\mu\\)-LABs and Assignment(s) due\n\n\n\n\n\n\n\nWeek 0 [01/15/2025]\n\n\n\n\nIoT and Edge Computing [The big pictures]\n\n\nIntroduction to Raspberry Pi and Python programming\n\n\nCourse overview, policies and deliverables\n\n\n\n\n\n\n\n[01/20/2025]\n\n\nMartin Luther King Jr. Day  Inauguration Day No Classes \n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4 [02/12/2025]\n\n\n\n\n\nGuest lecture: \n\n\n\nDiscussion of Midterm Projects and setting course for updates and reporting\n\n\n\n\n\n\n\ndweet.io - it’s like the Twitter of Things  dweet\n\n\nFetching data from dweet\n\n\ndweet an LED - Your first IoT program [Graded Lab Activity]\n\n\nRaspberry Pi messaging with Python scripts [Graded Lab Activity]\n\n\n\n\n\n\n\nWeek 5 [02/19/2025]\n\n\n\n\nGuest lecture: Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications by Hadi Mohammed, Digital Technologies Director of Factory 4.0 Pratt and Whitney\n\n\n\nIoT Taxonomy - 5 layer model\n\n\nService-oriented model of IoT\n\n\nDiscussion of Midterm Projects and setting course for updates and reporting\n\n\n\n\n\n\n\nIn-class Flask API development [Graded Lab Activity]\n\n\n\n\n\n\n\n\nWeek 6 [02/26/2025]\n\n\n\n\nGuest lecture: Empowering IoT and Edge Computing with Design Thinking by Scott Nuzum, Senior Leader, Innovyz USA\n\n\n\nPractical Introduction to Image processing for Edge Compute Applications\n\n\n\n\n\n\n\nPractical Introduction to Picamera2 OpenCV libraries in Python on the Raspberry Pi 4B\n\n\nSobel, Laplacian, Guassian filtering on Raspberry Pi 4B\n\n\nEdge detection using thresholding and Otsu’s method on Raspberry Pi 4B\n\n\nIn-class Raspberry Pi Lab with PiCamera using OpenCV library [Graded Lab Activity]\n\n\n\n\n\n\n\n\nWeek 7 [03/05/2025]\n\n\nMidterm Project Presentations and Live Demos due. \n\n\n\n\n\n[03/11/2025]\n\n\nMidterm Project Report due.  Sample project report \n\n\n\n\n\n[03/10/2025] to [03/15/2025]\n\n\nSpring Break. No class this week\n\n\n\n\n\nWeek 8 [03/19/2025]\n\n\n\n\nGuest lecture: The Science of Predictive Wisdom by Rob Shaughnessy, CEO, Psymetis Inc.\n\n\nDiscussion on Final Projects and setting course for updates and reporting\n\n\nPending midterm project demos\n\n\nUnderstand key differences between Microprocessors and Microcontrollers\n\n\nIntroduction to Micropython\n\n \n\n\n\n\n\nIntroduction to the ESP32 microcontroller\n\n\nSetting up Micropython interpreter in Thonny IDE\n\n\nFlashing the ESP32 microcontroller\n\n\nIn-class lab set-up of ESP32 microcontroller with the Raspberry Pi 4B [Graded Lab Activity]\n\n   \n\n\n\n\n\n\n\n\n\nWeek 11 [04/09/2025]\n\n\n\n\nImplementation of MQTT using ThingSpeak\n\n\n\n\n\n\n\n\nIn-class Raspberry Pi Lab - Installation of Paho MQTT\n\n\nDemonstration of SenseHat sensor module\n\n\nIn-class Raspberry Pi Lab - Implementation of ThingSpeak MQTT with SenseHat[Graded Lab Activity]\n\n\nNo HW announced and nothing is due on 04/19/2024\n\n\n\n\n\n\n\n\nWeek 12 [04/16/2025]\n\n\n\n\nGuest lecture: Post model Edge AI for Fisheries management by Chris Rodley, CEO and Founder, Snap Information Technologies Ltd., SnapCore\n\n\n\nImplementation of MQTT using Paho\n\n \n\n\n\n\n\nInstallation checks for Paho MQTT\n\n\nDemonstration MQTT using Paho-MQTT\n\n\nIn-class Raspberry Pi Lab – Publish and Subscribe Messages using Paho MQTT [Graded Lab Activity]\n\n\n\n\n\n\nWeek 13 [04/23/2025]\n\n\nFinal Project Presentations and Live Demos due. \n\n\n\n\n\n[04/30/2025]\n\n\nFinal Project Report due.  Sample project report \n\n\n\n\n\n[04/28/2025]\n\n\nLast Day of Classes \n\n\n\n\n\n[04/29/2025]\n\n\nMake-Up Day \n\n\n\n\n\n[04/30/2025]\n\n\nDesignated Monday \n\n\n\n\n\n[05/01/2025] to [05/02/2025]\n\n\nReading Days \n\n\n\n\n\n[05/03/2025] to [05/09/2025]\n\n\nFinal Examinations \n\n\n\n\n\n[05/15/2025] to [05/18/2025]\n\n\nCommencement Weekend"
   },
   {
-    "objectID": "python3-windows.html",
-    "href": "python3-windows.html",
-    "title": "Installing Python on Windows",
+    "objectID": "Week6-ChowdaryYanamadala-ARM-Lecture.html",
+    "href": "Week6-ChowdaryYanamadala-ARM-Lecture.html",
+    "title": "Week-6: Chowdary Yanamadala’s Guest Lecture",
     "section": "",
-    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
+    "text": "This presentation for internal viewing and referencing only. Redistribution of the presentation is not permitted.\nYanamadala, Chowdary (2025, February 26). IoT and Silicon Security: Dissecting a Real-Life IoT Attack, MAE6291: Internet of Things for Engineers. Department of Mechanical and Aerospace Engineering, The George Washington University.https://gwu-mae6291-iot.github.io/spring2025/"
   },
   {
-    "objectID": "python3-windows.html#prerequisites",
-    "href": "python3-windows.html#prerequisites",
-    "title": "Installing Python on Windows",
+    "objectID": "Week6-ChowdaryYanamadala-ARM-Lecture.html#presentation-slide-deck",
+    "href": "Week6-ChowdaryYanamadala-ARM-Lecture.html#presentation-slide-deck",
+    "title": "Week-6: Chowdary Yanamadala’s Guest Lecture",
+    "section": "Presentation slide deck",
+    "text": "Presentation slide deck\n\n\n\n\n\n\nThis presentation was made by Chowdary Yanamadala, Technology Strategist, ARM, for MAE 6291-Spring 2025."
+  },
+  {
+    "objectID": "Week6-ChowdaryYanamadala-ARM-Lecture.html#video-recording",
+    "href": "Week6-ChowdaryYanamadala-ARM-Lecture.html#video-recording",
+    "title": "Week-6: Chowdary Yanamadala’s Guest Lecture",
+    "section": "Video recording",
+    "text": "Video recording\n\n\n\n\n\n\nThis link has the recording of the presentation was made by Chowdary Yanamadala, Technology Strategist, ARM, for MAE 6291-Spring 2025.\nIoT and Silicon Security: Dissecting a Real-Life IoT Attack"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Internet-of-Things for Engineers",
     "section": "",
-    "text": "Before you begin, ensure you have the following:\n\nA Windows computer.\nAn internet connection.\nAdequate disk space for the installation."
+    "text": "From introduction to interface with the physical world\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n\n\nImportant\n\n\n\nRegistartion: Course registation is NOW OPEN. \n\n\n\n\nCourse and Contact Information\n\n\n\nMAE 6291: Introduction to IoT and Edge Computing Applications\nSemester: Spring 2025\nCredits: 3\nMeeting times: Wednesday 3:30 PM — 6:00 PM (Lectures and Laboratory every session)\nLocation: SEH B2020\nCourse website \nInstructor information can be found here\n\n\n\n \n\n\n\n\nGithub Repo (updated weekly)\n\ngit clone https://github.com/gwu-mae6291-iot/spring2025_codes.git\n\n\nCourse description\n\n\nThe Internet of Things (IoT) is perceived as a collection of smart, connected devices with the ability to send and receive data; “internet” encapsulates connectivity and “things” are devices (electronic or mechanical) that can be adapted toward connectivity.\nThere is an alternative perception of IoT, as a design methodology that facilitates interoperability and connectivity of physical systems. Edge computing is a strategy for localized analysis of data, ahead in the pipeline of powerful data center- or cloud-based post-processing.\n\n\n\n \n\nIoT by Alla Zaleuska from Noun Project\n\n\n\n\nThis course explores these aspects of IoT framework and expands it with edge computing ideology via practical and hands-on exposure. Students will be exposed to the IoT framework using a variety of sensors, IoT automation and connectivity in \\(\\mu\\)-labs (micro-labs) that incorporate the Raspberry Pi (single-board computer) and Python programming language.\nThe students will learn about how IoT with edge computing capability is going to be the backbone of the Industry 4.0."
   },
   {
-    "objectID": "python3-windows.html#step-1-download-and-install-python",
-    "href": "python3-windows.html#step-1-download-and-install-python",
-    "title": "Installing Python on Windows",
-    "section": "Step 1: Download and Install Python",
-    "text": "Step 1: Download and Install Python\n\nVisit the official Python website: https://www.python.org/downloads/windows/.\nDownload the latest version of Python for Windows by clicking on the “Download Windows installer” button.\nOpen the downloaded installer (e.g., python-X.Y.Z-amd64.exe), where X.Y.Z represents the Python version, and follow the installation instructions. Make sure to check the box that says “Add Python X.Y to PATH.”"
-  },
-  {
-    "objectID": "python3-windows.html#step-2-verify-python-installation",
-    "href": "python3-windows.html#step-2-verify-python-installation",
-    "title": "Installing Python on Windows",
-    "section": "Step 2: Verify Python Installation",
-    "text": "Step 2: Verify Python Installation\nTo ensure that Python is installed correctly, open your Command Prompt and run the following command:\npython --version\nThis command will display the Python version, confirming that it’s successfully installed."
-  },
-  {
-    "objectID": "python3-windows.html#step-3-install-jupyter-notebook",
-    "href": "python3-windows.html#step-3-install-jupyter-notebook",
-    "title": "Installing Python on Windows",
-    "section": "Step 3: Install Jupyter Notebook",
-    "text": "Step 3: Install Jupyter Notebook\nTo install Jupyter Notebook, open your Command Prompt and run the following command:\npip install jupyter\nThis command will download and install Jupyter Notebook, a powerful tool for interactive Python development."
-  },
-  {
-    "objectID": "python3-windows.html#step-4-find-the-path-to-python-scripts-folder",
-    "href": "python3-windows.html#step-4-find-the-path-to-python-scripts-folder",
-    "title": "Installing Python on Windows",
-    "section": "Step 4: Find the Path to Python Scripts Folder",
-    "text": "Step 4: Find the Path to Python Scripts Folder\nTo locate the path to the Python scripts folder through the Command Prompt, follow these steps:\n\nOpen your Command Prompt.\nRun the following command to find the Python scripts folder:\n\npython -m site --user-site\nThis command will display the path to your user-specific Python libraries, including the scripts folder."
-  },
-  {
-    "objectID": "python3-windows.html#step-5-configure-python-bin-path",
-    "href": "python3-windows.html#step-5-configure-python-bin-path",
-    "title": "Installing Python on Windows",
-    "section": "Step 5: Configure Python Bin Path",
-    "text": "Step 5: Configure Python Bin Path\nNow that you have the path to the Python scripts folder, you can set up the Python bin path and add it to your system environment variables. Follow these steps:\n\nOpen the Start menu and search for “Environment Variables.”\nClick on “Edit the system environment variables.”\nIn the System Properties window, click the “Environment Variables” button.\nUnder the “System Variables” section, find and select the “Path” variable, then click the “Edit” button.\nClick “New” and add the path to your Python scripts folder that you obtained in Step 4.\nClick “OK” to save the changes."
-  },
-  {
-    "objectID": "python3-windows.html#step-6-launch-jupyter-notebook",
-    "href": "python3-windows.html#step-6-launch-jupyter-notebook",
-    "title": "Installing Python on Windows",
-    "section": "Step 6: Launch Jupyter Notebook",
-    "text": "Step 6: Launch Jupyter Notebook\nTo start Jupyter Notebook, open your Command Prompt and run the following command:\njupyter notebook\nThis command will launch the Jupyter Notebook in your default web browser, allowing you to create and run Python notebooks for interactive coding and data analysis.\nConclusion You have successfully installed Python, configured the user-specific Python bin path, and set up your system environment variables on your Windows system. You can now use Jupyter Notebook for interactive coding and data analysis.\nHappy coding!\n\n\n\nThis is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites. Author: Kartik Bulusu Contact: bulusu © 2023 All rights reserved"
-  },
-  {
-    "objectID": "instructor.html#prof.-kartik-bulusu-instructor",
-    "href": "instructor.html#prof.-kartik-bulusu-instructor",
-    "title": "Instructor",
-    "section": "Prof. Kartik Bulusu (Instructor)",
-    "text": "Prof. Kartik Bulusu (Instructor)\n\n\n\nProf. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC.\nHe designed taught a cross-disciplinary course titled, Internet of Things (IoT) and Edge Computing with applications in cyber-physical systems and speech processing.\nIn addition, he developed courses for first year engineering students on the engineering applications of Raspberry Pi, Python programming and mobile App development inspired by social innovation potential during the COVID-19 pandemic.\nHis research interests span the areas of human health and sustainable energy with focus on mechanics of biological fluids, low-cost energy technologies and applications of wavelet transforms. His current research work on biofluid dynamics of the cardiovasculature, rheology of biological fluids and applications of wavelet transforms has been supported by NSF and the Center for Biomimetics and Bioinspired Engineering (CBBE), GWU.\nHe developed a wavelet transform-based computational code (PIVlet) for the analysis of complex vortical patterns encountered in arterial blood flow. He has extensive knowledge of experimental fluid mechanics and non-invasive measurement techniques such as laser Doppler velocimetry (LDV), particle image velocimetry (PIV), schlieren imagery, magnetic resonance velocimetry (MRV) and molecular tagging velocimetry (MTV). Dr. Bulusu was recognized with the ASME Best Paper Award by the Advanced Energy Systems Division (AESD) Heat Pump Technical Committee and William and Louise Corcoron Award for contributing to the intellectual and social life of the School of Engineering and Applied Science, GWU.\n\n\n  Campus Address: SEH 4614\nEmail: bulusu at email dot gwu dot edu"
-  },
-  {
-    "objectID": "instructor.html#vishnu-gajula-teaching-assistant",
-    "href": "instructor.html#vishnu-gajula-teaching-assistant",
-    "title": "Instructor",
-    "section": "Vishnu Gajula (Teaching Assistant)",
-    "text": "Vishnu Gajula (Teaching Assistant)\n\n\n\nI am Vishnu Gajula, a dedicated engineering professional currently pursuing my second master’s degree in Industrial/Engineering Management at The George Washington University. My academic journey began with a Bachelor of Technology in Mechanical Engineering, followed by a Master of Technology in Manufacturing Systems from Jawaharlal Nehru Technological University in Hyderabad, India.\nThroughout my career, I’ve gained valuable industry experience through roles at JSW Steel USA as an Industrial Mechanical Engineer and JSW Cements as a Cement Production Logistics Intern, where I developed expertise in project coordination, design optimization, and process improvement. My technical skills include 3D modeling, prototyping, CNC machining, and various engineering software tools. Currently, as a Graduate Assistant at The George Washington University, I am expanding my capabilities by combining technical expertise with management skills, preparing myself for future leadership roles in the engineering industry.\n\n\n  \nEmail: vishnu dot gajula at email dot gwu dot edu"
-  },
-  {
-    "objectID": "vscode-mac.html",
-    "href": "vscode-mac.html",
-    "title": "Visual Studio Code Installation Guide for macOS",
+    "objectID": "policies.html",
+    "href": "policies.html",
+    "title": "Course policies",
     "section": "",
-    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages."
+    "text": "Note\n\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University."
   },
   {
-    "objectID": "vscode-mac.html#introduction",
-    "href": "vscode-mac.html#introduction",
-    "title": "Visual Studio Code Installation Guide for macOS",
+    "objectID": "policies.html#hardware-and-software-requirements",
+    "href": "policies.html#hardware-and-software-requirements",
+    "title": "Course policies",
+    "section": "Hardware and Software requirements",
+    "text": "Hardware and Software requirements\nThe attendees will be expected to bring their own laptops with the following requirements: \n\nPersonal machines or laptops (only) with:\n\nMac OS 12+ or Windows 10+ operating system\nOne USB A or USB C port that is available for use during the workshop\nWiFi connectivity\nA free version of RealVNC® Viewer software downloaded and installed (See instructions for details).\nChrome web browser downloaded and installed\n\n\nThe attendees will be expected to work  - in small groups using a limited number of hardware components and WiFi connectivity that will be provided."
+  },
+  {
+    "objectID": "policies.html#assignments-and-grades",
+    "href": "policies.html#assignments-and-grades",
+    "title": "Course policies",
+    "section": "Assignments and Grades",
+    "text": "Assignments and Grades\n\nGrading - List of what will be counted and percentages (as used in Spring 2024 and can be changed in Spring 2025).\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample of grade breakdown for undergraduate students\n\n\nExample of grade breakdown for graduate students\n\n\n\n\n\n\n\n\nexam by pongsakorn from Noun Project\n\n\n\n\n\n\nIn-class lab work and/or Weekly Quizzes 10%\n\n\nPython programming and other Homework 10%\n\n\nGuest lecture reports 20%\n\n\nProjects (including code, demo, written report and presentation) 50%\n\n\n\n20% Midterm project (Groups of two undergrads at most)\n\n\n30% Final project (Individial)\n\n\n\n\n\n\n\n\nIn-class lab work and/or Weekly Quizzes 10%\n\n\nPython programming and other Homework 10%\n\n\nIn-class or offline presentations 10%\n\n\nGuest lecture reports 10%\n\n\nPaper reviews of selected archival journals will be required in formats provided 10%\n\n\nProjects (including code, demo, written report and presentation) 50%\n\n\n\n20% Midterm project (Individual)\n\n\n30% Final project (Individual)"
+  },
+  {
+    "objectID": "policies.html#grading-scale-subject-to-change-during-spring-2025",
+    "href": "policies.html#grading-scale-subject-to-change-during-spring-2025",
+    "title": "Course policies",
+    "section": "Grading Scale (subject to change during Spring 2025)",
+    "text": "Grading Scale (subject to change during Spring 2025)\nThe following grading scale will be applied at the end of the semester to calculate letter grades: 90-100: A, 84-89: A-, 78-83: B+, 72-77: B, 66-71: B-, 60-65: C+, 56-59: C, 52-55: C-, 46-51: D, 0-45: F.\nGrades are “rounded up” to the nearest integer."
+  },
+  {
+    "objectID": "policies.html#additional-important-information-about-grading-policy",
+    "href": "policies.html#additional-important-information-about-grading-policy",
+    "title": "Course policies",
+    "section": "Additional important information about grading policy:",
+    "text": "Additional important information about grading policy:\n\nLate submissions on Homework and projects will not be acceptable.\nThere is no required final exam.\nThere may be instances in the presentations where peer-evaluations may be introduced at the discretion of the instructor.\nThe instructor will seeks inputs from the class and decide if course projects will be done individfually, in groups or in a combination."
+  },
+  {
+    "objectID": "policies.html#classroom-policies-and-student-responsibilities",
+    "href": "policies.html#classroom-policies-and-student-responsibilities",
+    "title": "Course policies",
+    "section": "Classroom Policies and Student responsibilities",
+    "text": "Classroom Policies and Student responsibilities\n\n\n\n\nThe course is designed with experiential learning modules provided in each session.\n\n\nThis course requires a combination of individual and group work entailing hands-on activities and frequent interactions with the instructional team.\n\n\nThe lectures, labs and office hours are available for interacting with your group and the instructor. We ask that all students adhere to the course policies throughout the duration of the semester.\n\n\n\n\n\nclassroom by Chattapat from Noun Project\n\n\n\n\n\nBe respectful:\n\nListen to the instructor. Keep an open mind to the course material presented.\nLimit the use of personal devices.\nBe aware that you are working in a group.\nRespect each other’s opinion during dicusssions.\n\nBe responsible:\n\nArrive on time.\nSubmit the course deliverables on time.\nHelp your team members\n\nBe a communicator:\n\nObserve, Ask questions and Try out the materials presented during the course.\nCommunicate with your team effectively and politely.\nAn email informing the instructor about your absence is necessary, if you are not planning to attend the lecture and lab session during the course.\n\nThe requests about making up graded-labs or any in-class activities will be considered but with prior initmation and time constraints of the course.\n\n\nBe a problem solver:\n\nExplore options to complete hands-on tasks.\nMake your own notes.\nStay positive about the course outcomes."
+  },
+  {
+    "objectID": "policies.html#communication-during-extenuating-circumstances",
+    "href": "policies.html#communication-during-extenuating-circumstances",
+    "title": "Course policies",
+    "section": "Communication during extenuating circumstances",
+    "text": "Communication during extenuating circumstances\nWhen you need to communicate with us directly regarding extenuating circumstances, please use Blackboard to send email or email the instructor directly.\n\nThe instructor will check emails on Mondays and may respond at their earliest convenience."
+  },
+  {
+    "objectID": "policies.html#late-work-policy",
+    "href": "policies.html#late-work-policy",
+    "title": "Course policies",
+    "section": "Late work policy",
+    "text": "Late work policy\nLate work is not accepted, with the following exceptions:\n\nExtensions will be granted should there arise due to circumstances beyond your control that impede your ability to complete coursework and turn in a deliverable on time.\nNotify your professor as soon as feasible in these cases. Examples of such circumstances include (but are not limited to) illness, death in the family, and loss of housing.\nTo ensure fairness toward all students, the instructor will request documentation of such circumstances."
+  },
+  {
+    "objectID": "policies.html#justice-equity-diversity-inclusion-jedi-statement",
+    "href": "policies.html#justice-equity-diversity-inclusion-jedi-statement",
+    "title": "Course policies",
+    "section": "Justice, Equity, Diversity, Inclusion (JEDI) statement",
+    "text": "Justice, Equity, Diversity, Inclusion (JEDI) statement\n\n\n\n\nThe instructor intends to support the course needs of all students with diverse backgrounds and perspectives in this course.\n\n\nThe instructor believes that the diversity that the students bring to this class is a resource, strength, and an asset.\n\n\nThe instructor will strive to present material that is respectful of the diverse backgrounds and characteristics of the student body and the instructional team.\n\n\nThe course materials and activities presented in this course are intended to be respectful of: age, race, ethnicity, country of origin, language, religion, spiritual practice, sexual orientation, gender identity or expression, introversion/extroversion personality dimensions, and socioeconomic and mental/physical status.\n\n\nEach of us, whether student or instructional team member, is expected to treat all others with respect.\n\n\nDisrespect in any form will not be tolerated.\n\n\n\n\n\nemployee diversity by Bold Yellow from Noun Project\n\n\n\n\n\n\nPlease let the instructor know ways to improve the effectiveness of the course. See JEDI resources for student resources."
+  },
+  {
+    "objectID": "policies.html#use-of-chatgpt-or-any-other-ai-based-models-for-in-class-work-and-deliverables",
+    "href": "policies.html#use-of-chatgpt-or-any-other-ai-based-models-for-in-class-work-and-deliverables",
+    "title": "Course policies",
+    "section": "Use of chatGPT or any other AI-based models for in-class work and deliverables",
+    "text": "Use of chatGPT or any other AI-based models for in-class work and deliverables\nThe use of chatGPT or any other generative AI-based models is not permitted by the instructor.\n\nIf there are instances where chatGPT or any other generative AI-based models are allowed they will be explicitly communicated by the instructor on select assignments and programming projects.\nIn all other instances where a course deliverable does not entail permitted use of chatGPT or any other AI-based models, the instructors will have the students sign a disclosure form. This form will require that the students document specific prompts used and the outputs generated.\nAny violations of the aforementioned policy will be reviewed under the Academic Integrity Code and Student Rights and Responsibities\n\nFurthermore, the ethical issues regarding the use of chatGPT or any other AI-based models will be discussed in-class and course policy will be ammended according to the findings. The findings of any such discussions will be summarized and placed in-context of the Academic Integrity Code\n Resources that will guide the course policy changes during the course: \n\n\nchatGPT Course policy formulation\n\n\nchatGPT chatbot\n\n\nHow ChatGPT Could Transform Higher Education"
+  },
+  {
+    "objectID": "policies.html#use-of-electronic-course-materials-and-class-recordings",
+    "href": "policies.html#use-of-electronic-course-materials-and-class-recordings",
+    "title": "Course policies",
+    "section": "Use of Electronic Course Materials and Class Recordings",
+    "text": "Use of Electronic Course Materials and Class Recordings\nStudents are encouraged to use electronic course materials, including recorded class sessions (if any), for private personal use in connection with their academic program of study. Electronic course materials and recorded class sessions should not be shared or used for non-course related purposes unless express permission has been granted by the instructor. Students who impermissibly share any electronic course materials are subject to discipline under the Student Code of Conduct. Please contact the instructor if you have questions regarding what constitutes permissible or impermissible use of electronic course materials and/or recorded class sessions. Please contact Disability Support Services if you have questions or need assistance in accessing electronic course materials."
+  },
+  {
+    "objectID": "policies.html#university-policy-on-religious-holidays",
+    "href": "policies.html#university-policy-on-religious-holidays",
+    "title": "Course policies",
+    "section": "University Policy on Religious Holidays",
+    "text": "University Policy on Religious Holidays\n\nStudents should notify faculty during the first week of the semester of their intention to be absent from class on their day(s) of religious observance.\nFaculty should extend to these students the courtesy of absence without penalty on such occasions, including permission to make up examinations.\nFaculty who intend to observe a religious holiday should arrange at the beginning of the semester to reschedule missed classes or to make other provisions for their course‐related activities. For details and policy, see “Religious Holidays” at https://provost.gwu.edu/policies-procedures-and-guidelines"
+  },
+  {
+    "objectID": "policies.html#support-for-students-outside-the-classroom",
+    "href": "policies.html#support-for-students-outside-the-classroom",
+    "title": "Course policies",
+    "section": "Support for Students Outside the Classroom",
+    "text": "Support for Students Outside the Classroom\nDisability Support Services (DSS) Any student who may need an accommodation based on the potential impact of a disability should contact the Disability Support Services office at 202‐994‐8250 in the Rome Hall, Suite 102, to establish eligibility and to coordinate reasonable accommodations. For additional information please refer to: https://disabilitysupport.gwu.edu/\nMental Health Services 202‐994‐5300 The University’s Mental Health Services offers 24/7 assistance and referral to address students’ personal, social, career, and study skills problems. Services for students include: crisis and emergency mental health consultations confidential assessment, counseling services (individual and small group), and referrals. https://healthcenter.gwu.edu/counseling-and-psychological-services"
+  },
+  {
+    "objectID": "policies.html#academic-integrity-code",
+    "href": "policies.html#academic-integrity-code",
+    "title": "Course policies",
+    "section": "Academic Integrity Code",
+    "text": "Academic Integrity Code\nAcademic dishonesty is defined as cheating of any kind, including misrepresenting one’s own work, taking credit for the work of others without crediting them and without appropriate authorization, and the fabrication of information. You are not allowed to collaborate on the home works and lab assignments; for programming projects and hardware lab assignments, you can work in teams only if they are designated as team projects (labs). Unless otherwise specified, you cannot search for solutions or code on the web – but you can use any code that is included in the textbook or lecture notes (but please cite them). I will be using a SW tool that checks for program code similarities – any pair of programs or written reports with greater than 10% similarity will be closely examined.\nThe Office of Academic Integrity maintains a permanent record of the violation. More information is available from the Office of Academic Integrity at https://studentconduct.gwu.edu/academic-integrity. The University’s “Guide of Academic Integrity in Online Learning Environments” is available at https://studentconduct.gwu.edu/guide-academic-integrity-online-learning-environments. Contact information: rights@gwu.edu or 202-994-6757."
+  },
+  {
+    "objectID": "Midterm_Presentations_Spring2024.html",
+    "href": "Midterm_Presentations_Spring2024.html",
+    "title": "Midterm Presentations from Spring 2024",
     "section": "",
-    "text": "This guide will walk you through the process of installing Visual Studio Code (VS Code), a popular and versatile code editor, on your macOS computer. VS Code provides a powerful environment for coding and development across various programming languages."
-  },
-  {
-    "objectID": "vscode-mac.html#prerequisites",
-    "href": "vscode-mac.html#prerequisites",
-    "title": "Visual Studio Code Installation Guide for macOS",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure you have the following:\n\nA macOS computer.\nAn internet connection.\nAdequate disk space for the installation."
-  },
-  {
-    "objectID": "vscode-mac.html#installation-steps",
-    "href": "vscode-mac.html#installation-steps",
-    "title": "Visual Studio Code Installation Guide for macOS",
-    "section": "Installation Steps",
-    "text": "Installation Steps\n\n1. Download Visual Studio Code\nVisit the official VS Code download page at https://code.visualstudio.com/download.\n\n\n2. Choose the macOS Installer\nClick on the “macOS” download link to download the Visual Studio Code for macOS.\n\n\n\nDownload VS Code\n\n\n\n\n\nAllow Download\n\n\n\n\n3. Install Visual Studio Code\n\nLocate the downloaded file (usually in your “Downloads” folder).\nDouble-click the VS Code disk image (.dmg) file to open it.\n\n\n\n\nLocate file\n\n\n\n\n\nOpen DMG\n\n\n\n\n\n4. Launch Visual Studio Code\nOpen your “Launchpad” and locate the “Visual Studio Code” application. Double-click it to launch the editor.\n\n\n\nLaunch VS Code\n\n\n\n\n5. Customize VS Code (Optional)\nUpon launching, you can customize Visual Studio Code by installing extensions, themes, and configuring settings to suit your development needs. (Optional)\n\n\n\nCustomize VS Code\n\n\n\n\n6. Open Extensions Tab\nOn the sidebar click on the Extensions tab.\n\n\n\nExtensions tab\n\n\n\n\n7. Select “Python” Extension\nUnder the “Popular” select “Python”.\n\n\n\nSearch Python\n\n\n\n\n8. Install Python Extension\nOn the right panel click on the install button to install the extension.\n\n\n\nInstall Python Extension\n\n\n\n\n9. Open a New File\nClick on the File tab from the toolbar and open a New File.\n\n\n\nOpen New File\n\n\n\n\n10. Open a Jupyter Notebook\nFrom the drop down menu, select “Jupyter Notebook” as the file type.\n\n\n\nOpen Jupyter Notebook"
-  },
-  {
-    "objectID": "vscode-mac.html#conclusion",
-    "href": "vscode-mac.html#conclusion",
-    "title": "Visual Studio Code Installation Guide for macOS",
-    "section": "Conclusion",
-    "text": "Conclusion\nCongratulations! You’ve successfully installed Visual Studio Code on your macOS computer. VS Code is now ready for you to use as a powerful code editor for various programming languages.\nFeel free to explore the extensions marketplace and customize VS Code to enhance your coding experience. Happy coding!\nFor more information and documentation on Visual Studio Code, visit https://code.visualstudio.com/docs."
+    "text": "Note\n\n\n\nReferencing this presentation:\nBulusu, Kartik V. (2025, March). Midterm Presentations from Spring 2024 semester: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.https://gwu-mae6291-iot.github.io/spring2025/\n\n\n\n\n\n\n\n\nCourse materials developed by Prof. Kartik Bulusu for MAE 6291-Spring 2025 and CSCI 4907-Spring 2024."
   },
   {
     "objectID": "about.html",
@@ -2287,54 +2315,5 @@
     "title": "Schedule",
     "section": "",
     "text": "Note\n\n\n\nReferencing the content on this webpage:\nBulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\nSchedule [week-by-week]\n\n\n\n\n\n\nThe course schedule below will be updated on a weekly basis during the Spring 2025 semester.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDate\n\n\nTopic(s) and readings\n\n\n\\(\\mu\\)-LABs and Assignment(s) due\n\n\n\n\n\n\n\nWeek 0 [01/15/2025]\n\n\n\n\nIoT and Edge Computing [The big pictures]\n\n\nIntroduction to Raspberry Pi and Python programming\n\n\nCourse overview, policies and deliverables\n\n\nWeek-0 Notes\n\n\n\n\n\n\nGetting familiar with the Raspberry Pi 4B\n\n\nPython programming using Thonny\n\n\nNo HW assigned in this week\n\n\n\n\n\n\n\n\n\n\n[01/20/2025]\n\n\nMartin Luther King Jr. Day  Inauguration Day No Classes \n\n\n\n\n\nWeek 1 [01/22/2025]\n\n\n\n\nSneak preview at the edge-lab and hardware\n\n\nWhat is the thing in IoT?\n\n\nOverview of computing in IoT\n\n\nWhat is Edge Computing?\n\n\n\n\nWeek-1 Notes\n\n\n\n\n\n\nSetting up the Edge Lab\n\n\nUnderstanding the Python installation on the Raspberry Pi\n\n\nSome basic Python programming constructs\n\n\nFirst steps in Raspberry Pi programming: Blinking LEDs [Graded Lab Activity]\n\n\nNo HW assigned in this week\n\n\n\n\n\n\n\n\n\n\nWeek 2 [01/29/2025]\n\n\n\n\nWhat is Edge Computing and Edge Compute device\n\n\nDifferences in Cloud and Fog computing\n\n\nPython skelton code for running programs on the Raspberry Pi\n\n\nRecap of some programming constructs\n\n\nUsing Thonny to blink LEDs\n\n\n\n\n\n\n\nConfiguring the GPIO interface on your Raspberry Pi\n\n\nIn-class Raspberry Pi Lab (Blinking LEDs)\n\n\nHW1: Guest Lecture Summary [Download Template]\n\nHW1 Assigned: 01/29/2025; HW1 Due: 02/05/2025\n\nMidterm Project Proposal [Download Template]\n\nMidterm Proposal Assigned: 01/29/2025; Midterm Proposal Due: 02/12/2025\n\n\n\n\n\n\nWeek 2 [01/29/2025]\n\n\nGuest lecture: Intersection of Industry 4.0 and Technology for Manufacturing in day-to-day applications by  Hadi Mohammed,  Business Relations Manager and Former Digital Technologies Director of Factory 4.0, Pratt and Whitney\n Slide deck: Week2-Mohammad-PrattWhitney-Lecture\n\n\n\n\n\n\nWeek 3 [02/05/2025]\n\n\n\n\nIoT Architecture and Ecosystem\n\n\nLayers in IoT systems - 3 level layer model\n\n\nUsing bash script to blink LEDs\n\n\nWeek-3 Notes\n\n\n\n\n\n\n\n\n\n\nSetting up a Python virtual environment [venv] and it’s benefits\n\n\nInstalling Python GPIO packages with pip in [venv]\n\n\nBlinking LEDs on boot [Graded Lab Activity]\n\n\n \n\n\n\n\n\n\nWeek 4 [02/12/2025]\n\n\n\n\nIoT Architecture and Ecosystem\n\n\nLayers in IoT systems - 3 level layer model\n\n\nSensors\n\n\nSensor types and considerations\n\n\n\n\n\nDiscussion of Midterm Projects and setting course for updates and reporting\n\n\nWeek-4 Notes\n\n\n\n\n\n\ndweet.io - it’s like the Twitter of Things  dweet\n\n\nFetching data from dweet\n\n\ndweet an LED - Your first IoT program [Graded Lab Activity]\n\n\nHW2: Guest Lecture Summary [Download Template]\n\nHW2 Assigned: 02/12/2025; HW2 Due: 02/19/2025\n\nDue to snow-related university closure we will meet on Zoom and postpone all graded lab activities to next week\n\n\n\n\n\n\nWeek 4 [02/12/2025]\n\n\nGuest lecture: Protocol for point-to-point communication between two devices by  Jitish Kolanjery Sr. Software Engineer at Google Speaker’s LinkedIn Profile\nSlide deck and recording: Week4-JitishKolanjery-Google-Lecture\n\n\n\n\n\nWeek 5 [02/19/2025]\n\n\n\n\nRecap: Layers in IoT - 3 layer model\n\n\nAutomating an email feature - Minimalist application layer in your IoT product design\n\n\nDiscussion of Midterm Projects and setting course for updates and reporting\n\n\nWeek-5 Notes\n\n\n\n\n\n\ndweet an LED - Your first IoT program [Graded Lab Activity]\n\n\nRaspberry Pi messaging with Python scripts [Graded Lab Activity]\n\n\nIn-class Flask API development [Graded Lab Activity]\n\n\n HW3: Proximity sensing using Ultrasound sensor on boot\n\n\nHW3 Assigned: 02/19/2025; HW3 Due: 02/26/2025\n\n\n HW4: Flask API output\n\n\nHW4 Assigned: 02/21/2025; HW4 Due: 02/26/2025\n\n\n\n\n\n\nWeek 6 [02/26/2025]\n\n\n\n\nLocalhost\n\n\nUnderstanding Analog and Digital Signals\n\n\nFundamentals of signal visualization in time and frequency\n\n\nGuest lecture: \n\n\nIoT Taxonomy - 5 layer model\n\n\n\nService-oriented model of IoT\n\n\nDiscussion of Midterm Projects and setting course for updates and reporting\n\n\nWeek-6 Notes\n\n\n\n\n\n\nIn-class: run the Flask API code and create a localhost\n\n\nInstall Cloudflare localhost tunnelling software\n\n\nExpose localhost to the internet by a tunnel\n\n\nHW5: Guest Lecture Summary [Download Template]\n\nHW5 Assigned: 02/26/2025; HW5 Due: 03/05/2025\n \n\n\n\n\n\n\nWeek 6 [02/26/2025]\n\n\nGuest lecture: IoT and Silicon Security: Dissecting a Real-Life IoT Attack by Chowdary Yanamadala, Technology Strategist ARM\n\nSlide deck and recording: Week6-ChowdaryYanamadala-ARM-Lecture\n\n\n\n\n\nWeek 7 [03/05/2025]\n\n\nMidterm Project Presentations and Live Demos due.\nSpring 2024 Midterm presentations: Check them out and get inspired!\nDownload: Midterm presentation template\n\n\n\n\n[03/11/2025]\n\n\nMidterm Project Report due. Midterm project report template [Download Template]  Sample project report \n\n\n\n\n\n\n[03/10/2025] to [03/15/2025]\n\n\nSpring Break. No class this week\n\n\n\n\n\n\n\n[04/28/2025]\n\n\nLast Day of Classes \n\n\n\n\n\n[04/29/2025]\n\n\nMake-Up Day \n\n\n\n\n\n[04/30/2025]\n\n\nDesignated Monday \n\n\n\n\n\n[05/01/2025] to [05/02/2025]\n\n\nReading Days \n\n\n\n\n\n[05/03/2025] to [05/09/2025]\n\n\nFinal Examinations  \n\n\n\n\n\n[05/15/2025] to [05/18/2025]\n\n\nCommencement Weekend"
-  },
-  {
-    "objectID": "Week6-ChowdaryYanamadal-ARM-Lecture.html",
-    "href": "Week6-ChowdaryYanamadal-ARM-Lecture.html",
-    "title": "Week-4: Jitish Kolanjery’s Guest Lecture",
-    "section": "",
-    "text": "This presentation for internal viewing and referencing only. Redistribution of the presentation is not permitted.\nYanamadala, Chowdary (2025, February 26). IoT and Silicon Security: Dissecting a Real-Life IoT Attack, MAE6291: Internet of Things for Engineers. Department of Mechanical and Aerospace Engineering, The George Washington University.https://gwu-mae6291-iot.github.io/spring2025/"
-  },
-  {
-    "objectID": "Week6-ChowdaryYanamadal-ARM-Lecture.html#presentation-slide-deck",
-    "href": "Week6-ChowdaryYanamadal-ARM-Lecture.html#presentation-slide-deck",
-    "title": "Week-4: Jitish Kolanjery’s Guest Lecture",
-    "section": "Presentation slide deck",
-    "text": "Presentation slide deck\n\n\n\n\n\n\nThis presentation was made by Chowdary Yanamadala, Technology Strategist, ARM, for MAE 6291-Spring 2025."
-  },
-  {
-    "objectID": "Week6-ChowdaryYanamadal-ARM-Lecture.html#video-recording",
-    "href": "Week6-ChowdaryYanamadal-ARM-Lecture.html#video-recording",
-    "title": "Week-4: Jitish Kolanjery’s Guest Lecture",
-    "section": "Video recording",
-    "text": "Video recording\n\n\n\n\n\n\nThis link has the recording of the presentation was made by Chowdary Yanamadala, Technology Strategist, ARM, for MAE 6291-Spring 2025.\nIoT and Silicon Security: Dissecting a Real-Life IoT Attack"
-  },
-  {
-    "objectID": "Week6-ChowdaryYanamadala-ARM-Lecture.html",
-    "href": "Week6-ChowdaryYanamadala-ARM-Lecture.html",
-    "title": "Week-6: Chowdary Yanamadala’s Guest Lecture",
-    "section": "",
-    "text": "This presentation for internal viewing and referencing only. Redistribution of the presentation is not permitted.\nYanamadala, Chowdary (2025, February 26). IoT and Silicon Security: Dissecting a Real-Life IoT Attack, MAE6291: Internet of Things for Engineers. Department of Mechanical and Aerospace Engineering, The George Washington University.https://gwu-mae6291-iot.github.io/spring2025/"
-  },
-  {
-    "objectID": "Week6-ChowdaryYanamadala-ARM-Lecture.html#presentation-slide-deck",
-    "href": "Week6-ChowdaryYanamadala-ARM-Lecture.html#presentation-slide-deck",
-    "title": "Week-6: Chowdary Yanamadala’s Guest Lecture",
-    "section": "Presentation slide deck",
-    "text": "Presentation slide deck\n\n\n\n\n\n\nThis presentation was made by Chowdary Yanamadala, Technology Strategist, ARM, for MAE 6291-Spring 2025."
-  },
-  {
-    "objectID": "Week6-ChowdaryYanamadala-ARM-Lecture.html#video-recording",
-    "href": "Week6-ChowdaryYanamadala-ARM-Lecture.html#video-recording",
-    "title": "Week-6: Chowdary Yanamadala’s Guest Lecture",
-    "section": "Video recording",
-    "text": "Video recording\n\n\n\n\n\n\nThis link has the recording of the presentation was made by Chowdary Yanamadala, Technology Strategist, ARM, for MAE 6291-Spring 2025.\nIoT and Silicon Security: Dissecting a Real-Life IoT Attack"
-  },
-  {
-    "objectID": "Midterm_Presentations_Spring2024.html",
-    "href": "Midterm_Presentations_Spring2024.html",
-    "title": "Midterm Presentations from Spring 2024",
-    "section": "",
-    "text": "Note\n\n\n\nReferencing this presentation:\nBulusu, Kartik V. (2025, March). Midterm Presentations from Spring 2024 semester: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.https://gwu-mae6291-iot.github.io/spring2025/\n\n\n\n\n\n\n\n\nCourse materials developed by Prof. Kartik Bulusu for MAE 6291-Spring 2025 and CSCI 4907-Spring 2024."
   }
 ]
