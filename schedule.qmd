@@ -214,7 +214,6 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <!-- <li>Guest lecture: <a href="Week4-Yanamadala-ARM-Lecture.qmd" target="_blank">**Anatomy of a real life IoT attack - Side Channel Attack (SCA) Analysis**</a> by <a href="/Lectures_Speakers/Chowdary-bio-Feb162024.pdf" target="_blank">Chowdary  Yanamadala</a>, Technology Strategist <a href="https://arm.com" target="_blank">ARM</a></li>      -->  
           <!--<li>   **Anatomy of a real life IoT attack - Side Channel Attack (SCA) Analysis** by <a href="/Lectures_Speakers/Chowdary-bio-Feb162024.pdf"
           target="_blank">Chowdary  Yanamadala</a>, Technology Strategist <a href="https://arm.com" target="_blank">ARM</a> --></li>        
-          <!-- <li>Guest lecture: <a href="Week4-Yanamadala-ARM-Lecture.qmd" target="_blank">**Anatomy of a real life IoT attack - Side Channel Attack (SCA) Analysis**</a> by <a href="/Lectures_Speakers/Chowdary-bio-Feb162024.pdf" target="_blank">Chowdary  Yanamadala</a>, Technology Strategist <a href="https://arm.com" target="_blank">ARM</a></li>      -->
           <li> Discussion of Midterm Projects and setting course for updates and reporting</li>
           <li style="color:black"><a href="Week4.qmd" style="color:red;" target="_blank">Week-4 Notes</a></li>
         </ul>
@@ -286,7 +285,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <li>In-class: run the Flask API code and create a localhost</li>
           <li>Install Cloudflare localhost tunnelling software</li>
           <li>Expose localhost to the internet by a tunnel</li>
-          <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW2: Guest Lecture Summary [Download Template]</a></strong></li> <strong style="color:black">HW2 Assigned: 02/26/2025; HW2 Due: 03/05/2025</strong>        
+          <li><strong><a href="Downloads/LastName_ExecutiveSummary.docx" style="color:red;" target="_blank">HW5: Guest Lecture Summary [Download Template]</a></strong></li> <strong style="color:black">HW5 Assigned: 02/26/2025; HW5 Due: 03/05/2025</strong>        
           <!-- <li>Proxmity sensing using Thonny IDE</li>
           <li>Proxmity sensing using bash script</li>    
           <li style="color:black"><strong>Proxmity sensing on boot [Graded Lab Activity]</strong></li>   
@@ -300,17 +299,31 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
     </tr>
 
 <tr class="table-secondary">
+      <th scope="row"> Week 6 [02/26/2025]</th>
+      <td colspan="2" style="text-align: center">
+          **Guest lecture:** *IoT and Silicon Security: Dissecting a Real-Life IoT Attack* by <a href="/Lectures_Speakers/Chowdary-bio-Feb262025.pdf" target="_blank">Chowdary  Yanamadala</a>, Technology Strategist <a href="https://arm.com" target="_blank">ARM</a>
+          
+          <!-- <li>Guest lecture: <a href="Week4-Yanamadala-ARM-Lecture.qmd" target="_blank">**Anatomy of a real life IoT attack - Side Channel Attack (SCA) Analysis**</a> by <a href="/Lectures_Speakers/Chowdary-bio-Feb262025.pdf" target="_blank">Chowdary  Yanamadala</a>, Technology Strategist <a href="https://arm.com" target="_blank">ARM</a></li>      -->
+
+         **Slide deck and recording:** <a href="Week6-ChowdaryYanamadala-ARM-Lecture.qmd" style="color:red;" target="_blank">Week6-ChowdaryYanamadala-ARM-Lecture</a></li>
+      </td>
+    </tr>
+
+<tr class="table-secondary">
       <th scope="row"> Week 7 [03/05/2025]</th>
-      <td colspan="2" style="text-align: center">Midterm Project Presentations, Report and Live Demos due.
-      <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Midterm project report template [Download Template]</a>
-      </strong>
-      <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
-      </strong></td>
-      <!--- <td>Column content</td> -->
+      <td colspan="2" style="text-align: center">Midterm Project Presentations and Live Demos due.
+
+**Spring 2024 Midterm presentations:** <a href="Midterm_Presentations_Spring2024.qmd" style="color:red;" target="_blank">Check them out and get inspired!</a>         
+<br><strong>Download: <a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Midterm presentation template</a></strong>
+      </td>
     </tr>
 <tr class="table-secondary">
       <th scope="row"> [03/11/2025]</th>
       <td colspan="2" style="text-align: center"><strong>Midterm Project Report due.</strong>
+            <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Midterm project report template [Download Template]</a>
+      </strong>
+      <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
+      </strong></td>
       <!-- <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Midterm project report template [Download Template]</a></strong> -->
       <!-- <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
       </strong></td> -->

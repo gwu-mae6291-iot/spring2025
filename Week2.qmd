@@ -5,7 +5,7 @@ format html:
 :::{.callout-note}
 **Referencing this presentation:**
 
-Bulusu, Kartik V. (2025, January). Week-2 Preseantion: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.[https://gwu-mae6291-iot.github.io/spring2025/](https://gwu-mae6291-iot.github.io/spring2025/)
+Bulusu, Kartik V. (2025, January). Week-2 Presentation: MAE 6291 Internet-of-Things for Engineers. [Course lecture notes, codes and presentations]. Department of Mechanical and Aerospace Engineering, The George Washington University.[https://gwu-mae6291-iot.github.io/spring2025/](https://gwu-mae6291-iot.github.io/spring2025/)
 
 :::
 
