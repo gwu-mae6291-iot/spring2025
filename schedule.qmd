@@ -317,8 +317,23 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
 <br><strong>Download: <a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Midterm presentation template</a></strong>
       </td>
     </tr>
+
 <tr class="table-secondary">
-      <th scope="row"> [03/11/2025]</th>
+      <th scope="row"> [03/10/2025] to [03/15/2025]</th>
+      <td colspan="2" style="text-align: center">Spring Break. 
+      <br><strong>No class this week</strong></td> 
+      <!--- <td>Column content</td> -->
+</tr>
+
+<tr class="table-secondary">
+      <th scope="row"> [03/20/2025]</th>
+      <td colspan="2" style="text-align: center"><strong>Final Project Proposal due.</strong>
+            <br><strong><a href="Downloads/Final_Project_Proposal_MAE6291.docx" style="color:red;"  target="_blank">Final Project Proposal template [Download Template]</a>
+      </strong>
+</tr>
+
+<tr class="table-secondary">
+      <th scope="row"> [03/24/2025]</th>
       <td colspan="2" style="text-align: center"><strong>Midterm Project Report due.</strong>
             <br><strong><a href="Downloads/LastName_HW_paper_review.docx" style="color:red;" target="_blank">Midterm project report template [Download Template]</a>
       </strong>
@@ -328,14 +343,6 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <!-- <br><strong><a href="Downloads/AlZaabi_AlmayoofSpring2023_ProjectReport.pdf" style="color:red;" target="_blank">Sample project report</a>
       </strong></td> -->
 </tr>
-<tr class="table-secondary">
-      <th scope="row"> [03/10/2025] to [03/15/2025]</th>
-      <td colspan="2" style="text-align: center">Spring Break. 
-      <br><strong>No class this week</strong></td> 
-      <!--- <td>Column content</td> -->
-</tr>
-
-
   
 <!-- <tr class="table-secondary">
       <th scope="row"> Week 13 [04/23/2025]</th>
