@@ -329,11 +329,9 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       <th scope="row">Week 8 [03/19/2025]</th>
       <td>
         <ul>
-          <li>Guest lecture: **Designing Hardware to Improve Your Software--A Use Case in Sound
-** by <a href="https://www.linkedin.com/in/jakewhitton/" target="_blank">Jacob Whitton</a>, Software Engineer, Jump Trading Corp.</li> 
           <!-- <li>Guest lecture: <a href="Week6-Nuzum-Innovyz-Lecture.qmd" target="_blank">**Empowering IoT and Edge Computing with Design Thinking**</a> by <a href="/Lectures_Speakers/Nuzum-bio-Feb2024.pdf" target="_blank">Scott Nuzum</a>, Senior Leader, <a href="https://www.innovyzusa.com" target="_blank">Innovyz USA</a></ li>  -->
            <li>Practical Introduction to Image processing for Edge Compute Applications</li>
-            <!-- <li style="color:black"><a href="Week6.qmd" style="color:red;" target="_blank">Week-6 Notes</a></li> -->
+          <li style="color:black"><a href="Week8.qmd" style="color:red;" target="_blank">Week-8 Notes</a></li>
         </ul>
       </td>
       <td>
@@ -346,6 +344,15 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
         </ul>
       </td>
       <!--- <td>Column content</td> -->
+    </tr>
+
+<tr class="table-secondary">
+      <th scope="row"> Week 8 [03/19/2025]</th>
+      <td colspan="2" style="text-align: center">
+          **Guest lecture:** **Designing Hardware to Improve Your Software--A Use Case in Sound** by <a href="https://www.linkedin.com/in/jakewhitton/" target="_blank">Jacob Whitton</a>, Software Engineer, Jump Trading Corp.</li> <br>
+
+          **Slide deck:** <a href="Week8-JakeWhitton-Demo-Lecture.qmd" style="color:red;" target="_blank">Week8-JakeWhitton-Demo-Lecture</a></li>
+      </td>
     </tr>
 
 <tr class="table-secondary">
