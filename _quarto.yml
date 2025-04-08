@@ -35,7 +35,7 @@ website:
           - href: Week8-JakeWhitton-Demo-Lecture.qmd           
       #     - href: Week6-Nuzum-Innovyz-Lecture.qmd
           - href: Week9.qmd    
-      #     - href: Week10.qmd    
+          - href: Week10.qmd    
       #     - href: Week10-Pottier-ARM-Lecture.qmd   
       #     - href: Week11.qmd    
       #     - href: Week12.qmd  
