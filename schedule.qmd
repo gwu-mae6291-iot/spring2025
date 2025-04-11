@@ -438,7 +438,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           <li>Discussion on Final Projects and setting course for updates and reporting</li>
           <li>Understand key differences between Microprocessors and Microcontrollers</li>
           <li>Introduction to Micropython</li>  
-          <!-- <li style="color:black"><a href="Week11.qmd" style="color:red;" target="_blank">Week-11 Notes</a></li> -->
+          <li style="color:black"><a href="Week11.qmd" style="color:red;" target="_blank">Week-11 Notes</a></li>
         </ul>
       </td>
       <td>
@@ -460,7 +460,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           
           by <a href="/Lectures_Speakers/TomFarmer-bio-April2025.pdf" target="_blank">Professor Thomas Farmer</a>, Associate Professor of Practice, Director, MCIT Online Master’s Degree Program, <a href="https://directory.seas.upenn.edu/thomas-farmer/" target="_blank">University of Pennsylvania.</a><br> 
 
-          <!-- **Slide deck:** <a href="Week10-ChrisRodley-Lecture.qmd" style="color:red;" target="_blank">Week8-JakeWhitton-Demo-Lecture</a> -->
+          **Slide deck:** <a href="Week11-ThomasFarmer-UPenn-Lecture.qmd" style="color:red;" target="_blank">Week11-ThomasFarmer-UPenn-Lecture</a>
       </td>
     </tr>
 
