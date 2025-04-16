@@ -40,7 +40,8 @@ website:
           - href: Week11.qmd    
           - href: Week11-ThomasFarmer-UPenn-Lecture.qmd             
       #   - href: Week10-Pottier-ARM-Lecture.qmd   
-      #     - href: Week12.qmd  
+          - href: Week12.qmd  
+          - href: Week12-AnuragBhatnagar-ShiftAltCap-Lecture.qmd
       #     - href: Week13.qmd  
       #     - href: Week14-FinalProject_Gallery.qmd          
       # - text: "Python Primer"  
