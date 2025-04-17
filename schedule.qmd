@@ -428,7 +428,7 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
           
           by  <a href="/Lectures_Speakers/ChrisRodley-bio-April2025.pdf" target="_blank">Chris Rodley</a>, CEO and Founder, Snap Information Technologies Ltd., <a href="https://www.snapcore.co" target="_blank">SnapCore</a><br> 
 
-          <!-- **Slide deck:** <a href="Week10-ChrisRodley-Lecture.qmd" style="color:red;" target="_blank">Week8-JakeWhitton-Demo-Lecture</a> -->
+          **Slide deck:** <a href="Week10-ChrisRodley-Lecture.qmd" style="color:red;" target="_blank">Week10-ChrisRodley-Lecture</a>
       </td>
     </tr>
 <tr class="table-secondary">

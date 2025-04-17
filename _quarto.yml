@@ -36,7 +36,7 @@ website:
       #     - href: Week6-Nuzum-Innovyz-Lecture.qmd
           - href: Week9.qmd    
           - href: Week10.qmd    
-      #     - href: Week10-Rodley-SnapCore-Lecture.qmd            
+          - href: Week10-ChrisRodley-SnapGroup-Lecture.qmd            
           - href: Week11.qmd    
           - href: Week11-ThomasFarmer-UPenn-Lecture.qmd             
       #   - href: Week10-Pottier-ARM-Lecture.qmd   

@@ -1,0 +1,13 @@
+---
+title: "Week-10: Chris Rodley's Guest Lecture"
+format html:
+---
+**This presentation for internal viewing and referencing only. Redistribution of the presentation is not permitted.**
+
+Rodley, Chris (2025, April). Post model Edge AI for Fisheries management, MAE6291: Internet of Things for Engineers. Department of Mechanical and Aerospace Engineering, The George Washington University.[https://gwu-mae6291-iot.github.io/spring2025/](https://gwu-mae6291-iot.github.io/spring2025/)
+
+## Presentation slide deck
+::: {.callout-note appearance="simple"}
+**This presentation was made by Chris Rodley, CEO and Founder, Snap Information Technologies Ltd., for MAE 6291-Spring 2025.**
+:::
+![](Notes/SnapGroup_GWU_presentation_2024.pdf){width="100%" height="800px"}
