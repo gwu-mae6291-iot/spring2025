@@ -19,9 +19,9 @@ Course registation is NOW OPEN. -->
 <!-- [Registration link](https://events.vtools.ieee.org/event/register/437187) -->
 **Expectations on students' final deliverables:**
 
-1. **[Upload by 11:00 AM on April 23, 2025]** Final project presentation **[25 points]**
-2. **[Upload by 11:00 AM on April 23, 2025]** Final project 2-minute video **[25 points]**
-3. **[April 23, 2025]** Final project demo **[Tied to #1]**
+1. ~~**[Upload by 11:00 AM on April 23, 2025]** Final project presentation **[25 points]**~~
+2. ~~**[Upload by 11:00 AM on April 23, 2025]** Final project 2-minute video **[25 points]**~~
+3. ~~**[April 23, 2025]** Final project demo **[Tied to #1]**~~
 4. **[Upload by April 24, 2025]** Executive summary **[10 points]** 
 5. **[Upload on April 28, 2025]** Final project written report **[25 points]**
 6. **[Upload on April 30, 2025]** Journal paper reviews by Grad students **[10 points]**  
@@ -70,14 +70,14 @@ Course registation is NOW OPEN. -->
 
 <br>
 
-### Github Repo (updated weekly)
+<!-- ### Github Repo (updated weekly) -->
 <!-- ```python
 TBA
 ``` -->
 
-```python
-git clone https://github.com/gwu-mae6291-iot/spring2025_codes.git
-```
+<!-- ```python -->
+<!-- git clone https://github.com/gwu-mae6291-iot/spring2025_codes.git -->
+<!-- ``` -->
 
 ### Course description
 <div class="row">

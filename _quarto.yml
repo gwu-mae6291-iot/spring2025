@@ -17,7 +17,7 @@ website:
       - text: "Getting Started"
         menu:
           - href: install-editor.qmd
-      - schedule.qmd
+      - schedule.qmd       
       - text: "Notes"
         menu: 
           - href: Week0.qmd 
@@ -57,7 +57,7 @@ website:
             
           # - href:  ./python_primer/unt0/modules/module0.qmd
       # - weekly.qmd
-      - resources.qmd
+      - resources.qmd      
       - instructor.qmd
 
 format:
