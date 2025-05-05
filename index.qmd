@@ -14,6 +14,30 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
 :::
 
 :::{.callout-important}
+**Exciting news from MAE6291: Internet of Things [Spring 2025]**
+
+* **Anurag Bhatnagar, CEO and Co-founder, ShiftAltCap - A boutique tech-investment banking firm from New Delhi, India** delivered a guest lecture titled, "Innovation @ IOT + Human Behaviour + Finance" on April 16, 2025.
+  + Anurag Bhatnagar gave the class a unique perspective of behavioural economics using concepts like 'nudge' that will continue to inform the IoT practioners and users to design and promote IoT applications. 
+  + See [Anurag Bhatnagar's lecture](Week12-AnuragBhatnagar-ShiftAltCap-Lecture.qmd) for details.
+  + See [Anurag Bhatnagar's LinkedIn profile](https://www.linkedin.com/in/leobhatnagar/)
+  + **Thank you, Anurag. We hope to see you again next year!**
+
+<br>
+
+* **Miya Liu, from the Department of Biomedical Engineering (BME), GWU,** and her colleagues **won the Best Senior Design Award at the NEBEC 2025 conference held in the NYU Tandon School of Engineering**
+  + Their project titled, "Self-regulating Warming System for Dorrance Hook Prosthetic" incorparted an IoT system to measure temperature associated with the prosthetic with increased accuracy and access to data. 
+  + Miya Liu graciously acknowldeged MAE6291: IoT for Engineers on the poster.
+  + **Thank you, Miya Liu. I hope to see more BME students in the successive offerrings on MAE6291: IoT for Engineers!**
+
+::: {layout-ncol=2}
+  ![The initial spike is the prosthetic warming system heating up with temperature regulation around 33°C for 3 hours until the battery dies](images/Miya_award/newplot_test1.png){width=400}
+
+  ![Miya Liu (L) with her team](images/Miya_award/image-8.png){width=400}  
+:::
+
+:::
+
+:::{.callout-important}
 <!-- **Registartion:**
 Course registation is NOW OPEN. -->
 <!-- [Registration link](https://events.vtools.ieee.org/event/register/437187) -->
@@ -23,10 +47,9 @@ Course registation is NOW OPEN. -->
 2. ~~**[Upload by 11:00 AM on April 23, 2025]** Final project 2-minute video **[25 points]**~~
 3. ~~**[April 23, 2025]** Final project demo **[Tied to #1]**~~
 4. ~~**[Upload by April 24, 2025]** Executive summary **[10 points]**~~
-5. **[Upload on April 30, 2025]** Final project written report **[25 points]**
-6. **[Upload on April 30, 2025]** Journal paper reviews by Grad students **[10 points]**  
+5. ~~**[Upload on April 30, 2025]** Final project written report **[25 points]**~~
+6. ~~**[Upload on April 30, 2025]** Journal paper reviews by Grad students **[10 points]**~~  
 7. **[On Google form]** Share the Github repo of midterm and final projects **[Tied to #1]**
-8. **Attendance and no extensions**
 :::
 
 <style>
@@ -68,7 +91,6 @@ Course registation is NOW OPEN. -->
  </div>
 </div>
 
-<br>
 
 <!-- ### Github Repo (updated weekly) -->
 <!-- ```python

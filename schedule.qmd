@@ -495,13 +495,15 @@ The Final Project deliverables are due on **December 05, 2023, 11:59 PM**. Check
       </td>
     </tr>
 
-<!-- <tr class="table-secondary">
+<tr class="table-secondary">
       <th scope="row"> Week 13 [04/23/2025]</th>
-      <td colspan="2" style="text-align: center">Final Project Presentations and Live Demos due.
+      <td colspan="2" style="text-align: center"><strong>Final Project Presentations and Live Demos due.</strong>
       <br><strong><a href="Downloads/Midterm_presentation_template.pptx" style="color:red;" target="_blank">Final project presentation template [Download Template]</a>
       </strong>
+
+  **Slide deck:** <a href="Week13-Thoughts_FutureDirections.qmd" style="color:red;" target="_blank">Week13-Thoughts_FutureDirections</a>
       </td> 
-</tr>     -->
+</tr>    
 
 <!-- <tr class="table-secondary">
       <th scope="row"> [04/30/2025]</th>

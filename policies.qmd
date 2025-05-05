@@ -67,7 +67,7 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
         <ul>
           <!-- <li>Attendance and/or peer-to-peer and instructor interactions 10% </li> -->
           <li>In-class lab work and/or Weekly Quizzes 10% </li> 
-          <li>Python programming and other Homework 10% </li>
+          <li>Python programming and other Homework 20% </li>
           <li>Guest lecture reports 20% </li> 
           <li>Projects (including code, demo, written report and presentation) 50% </li> 
           <ul>
@@ -80,8 +80,8 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
         <ul>
          <!-- <li>Attendance and/or peer-to-peer and instructor interactions 10% </li>  -->
          <li>In-class lab work and/or Weekly Quizzes 10% </li>  
-         <li>Python programming and other Homework 10% </li>
-         <li>In-class or offline presentations 10% </li>           
+         <li>Python programming and other Homework 20% </li>
+         <!-- <li>In-class or offline presentations 10% </li>            -->
          <li>Guest lecture reports 10% </li> 
          <li>Paper reviews of selected archival journals will be required in formats provided 10% </li> 
          <li>Projects (including code, demo, written report and presentation) 50% </li>  
@@ -104,6 +104,8 @@ Bulusu, Kartik V. (2025, January). MAE 6291: Internet-of-Things for Engineers. [
 The following grading scale will be applied at the end of the semester to calculate letter grades: 90-100: A, 84-89: A-, 78-83: B+, 72-77: B, 66-71: B-, 60-65: C+, 56-59: C, 52-55: C-, 46-51: D, 0-45: F.
 
 Grades are "rounded up" to the nearest integer.
+
+<!-- 95-100: A, 90-94: A-, 85-89: B+, 80-84: B, 75-79: B-, 70-74: C+, 65-69: C, 60-64: C-, 50-59: D, < 50: F. -->
 
 <br><br>
 
